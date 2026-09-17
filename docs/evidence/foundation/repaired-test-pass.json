@@ -1,0 +1,34 @@
+{
+  "kind": "LUMA_REVIEW_RESULT",
+  "schema_version": 1,
+  "status": "PASS",
+  "iteration": null,
+  "auto_review_max_iterations": 3,
+  "automatic_dispatch": false,
+  "pr": 3,
+  "head_sha": "4102cabe2f910f7db2312259d2fb9b2f453ff66a",
+  "base_sha": "28b149fb723c10baab817af2d064e06bf478c2a1",
+  "run_id": "35181877413",
+  "findings": [],
+  "required_actions": [],
+  "human_review_required": true,
+  "protected_paths": [],
+  "next_action": "READY_FOR_HUMAN_REVIEW",
+  "checks": [
+    {
+      "name": "desktop-static",
+      "classification": "AUTOMATED",
+      "status": "success"
+    },
+    {
+      "name": "AppKit compile / Rust deterministic tests",
+      "classification": "PLATFORM_REQUIRED",
+      "status": "success"
+    },
+    {
+      "name": "Real desktop focus / mouse / typing / visual overlay",
+      "classification": "MANUAL_REQUIRED",
+      "status": "NOT_RUN"
+    }
+  ]
+}

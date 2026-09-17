@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "kind",
+    "schema_version",
+    "status",
+    "iteration",
+    "auto_review_max_iterations",
+    "automatic_dispatch",
+    "pr",
+    "head_sha",
+    "base_sha",
+    "run_id",
+    "human_review_required",
+    "next_action",
+    "protected_paths",
+    "required_actions",
+    "findings",
+    "checks"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "kind": {
+      "const": "LUMA_REVIEW_RESULT"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ]
+    },
+    "iteration": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 3
+    },
+    "auto_review_max_iterations": {
+      "const": 3
+    },
+    "automatic_dispatch": {
+      "const": false
+    },
+    "pr": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "head_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "base_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "human_review_required": {
+      "const": true
+    },
+    "next_action": {
+      "enum": [
+        "FIX_REQUIRED",
+        "READY_FOR_HUMAN_REVIEW",
+        "HUMAN_REVIEW_REQUIRED"
+      ]
+    },
+    "protected_paths": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "severity",
+          "message"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "severity": {
+            "enum": [
+              "BLOCKER",
+              "MAJOR",
+              "MINOR"
+            ]
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "classification",
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "classification": {
+            "enum": [
+              "AUTOMATED",
+              "PLATFORM_REQUIRED",
+              "MANUAL_REQUIRED"
+            ]
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

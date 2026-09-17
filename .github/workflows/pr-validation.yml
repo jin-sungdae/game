@@ -1,0 +1,79 @@
+name: LUMA PR Validation
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+permissions:
+  contents: read
+concurrency:
+  group: luma-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+env:
+  AUTO_REVIEW_MAX_ITERATIONS: '3'
+jobs:
+  desktop-static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: python3 -m unittest discover -s tests/automation -v
+      - run: python3 scripts/check_tao_patch.py
+      - run: git diff --check
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: desktop-dist
+          path: dist/
+          retention-days: 7
+          if-no-files-found: error
+  macos-native:
+    needs: desktop-static
+    runs-on: macos-14
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: desktop-dist
+          path: dist/
+      - name: Rust toolchain
+        run: rustup toolchain install stable --profile minimal --component clippy,rustfmt
+      - name: App formatting (do not rewrite vendor)
+        run: cargo +stable fmt --manifest-path src-tauri/Cargo.toml -p luma-spike -- --check
+      - name: Deterministic regression and native link
+        run: cargo +stable test --locked --manifest-path src-tauri/Cargo.toml
+      - name: App clippy (upstream vendor warnings remain visible)
+        run: cargo +stable clippy --locked --manifest-path src-tauri/Cargo.toml --no-deps -- -D warnings
+      - name: Compile native focus observer harness
+        run: clang -fobjc-arc -framework AppKit scripts/launch_audit.m -o /tmp/luma-launch-audit
+      - name: Runtime boundary
+        run: echo 'PLATFORM_REQUIRED native compile passed; real desktop launch/mouse/typing is MANUAL_REQUIRED, NOT_RUN on hosted CI.'
+  review-result:
+    if: always()
+    needs: [desktop-static, macos-native]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Produce read-only review contract
+        env:
+          NEEDS_JSON: ${{ toJSON(needs) }}
+        run: python3 scripts/ci/review_result.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: luma-review-result
+          path: review-result.json
+          if-no-files-found: error
+          retention-days: 14

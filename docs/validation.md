@@ -2,7 +2,7 @@
 
 2026-09-17, macOS 26.5 (25F71), Apple Silicon. 이전 누적 결과는 [초기 검증 기록](validation-01.1-initial.md)에 분리 보존한다. 이 문서는 새로 빌드한 단일 debug artifact만 다룬다.
 
-**판정: CONDITIONAL GO.** 동일 최종 bundle에서 **Codex foreground 기준 50/50 PASS**. 자동 regression/runtime 검사는 통과했다. **Chrome/IntelliJ/VS Code에서의 실제 mouse/typing 및 startup 재확인은 MANUAL REQUIRED**이므로 GO로 승격하지 않는다. 요청된 편집기 기준 자동 batch는 아래처럼 실패/간섭으로 보존하며 Codex 결과를 편집기 PASS로 표시하지 않는다.
+**최종 판정: GO (사용자 승인).** 사용자가 실제 macOS 환경에서 LUMA 실행 / MOA interaction 중 기존 작업 application의 keyboard focus가 유지됨을 확인하고 Technical Spike 01.1을 최종 GO로 확정했다(2026-09-17). 이는 사용자 제공 수동 검증 결과이며 아래 자동 측정 원본을 변경하지 않는다. 이전 CONDITIONAL GO와 미실시 세부 체크리스트는 당시의 증거 기록이다. Chrome/IntelliJ/VS Code 각각의 모든 버튼별 결과까지 사용자가 보고했다고 확대 해석하지 않는다.
 
 ## 동일 최종 bundle 반복 결과
 

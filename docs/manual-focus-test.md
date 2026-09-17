@@ -1,6 +1,6 @@
 # 수동 focus 검증 — Technical Spike 01.1
 
-현재 상태: **MANUAL REQUIRED**. 자동 상태 전이/launch 검사로 실제 mouse/typing PASS를 대신하지 않는다.
+사용자 최종 확인(2026-09-17): 실제 macOS에서 launch/MOA interaction의 keyboard focus 유지 PASS로 Spike GO 확정. 아래 앱별 세부 표는 별도 입력이 없으므로 임의로 채우지 않는다. 다음 회귀 검증에서는 **MANUAL REQUIRED**. 자동 상태 전이/launch 검사로 실제 mouse/typing PASS를 대신하지 않는다.
 
 1. Chrome 빈 입력란, IntelliJ 임시 문서, VS Code 임시 문서 중 하나를 열고 계속 타이핑한다. 비밀정보는 사용하지 않는다.
 2. 아래 명령을 터미널에서 시작하고 120초 안에 대상 문서로 돌아간다. 검증기는 대상 앱 foreground를 기다린 후 LUMA를 실행하며 포커스를 복구하지 않는다.
