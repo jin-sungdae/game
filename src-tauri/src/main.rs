@@ -39,12 +39,12 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
         .map_err(|e| e.to_string())
 }
 fn main() {
+    unsafe { overlay::luma_focus_audit_start() };
     let stopped = Arc::new(AtomicBool::new(false));
     let stop_setup = stopped.clone();
     let mut app = tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![snapshot, action])
         .setup(move |app| {
-            app.set_activation_policy(tauri::ActivationPolicy::Accessory);
             unsafe { overlay::luma_init() };
             for (index, label, w, h) in [
                 (0, "moa", 96.0, 104.0),
@@ -196,13 +196,16 @@ fn main() {
         })
         .build(tauri::generate_context!())
         .expect("LUMA initialization failed");
-    // Experimental launch mitigation, NOT a Never Steal Focus guarantee:
-    // startup activation still reproduced; see docs/validation.md.
-    app.set_activation_policy(tauri::ActivationPolicy::Prohibited);
+    // Official pre-run API: policy is applied by Tao before launch handling.
+    // The opt-in Tao patch removes startup activation requests (not restoration).
+    app.set_activation_policy(tauri::ActivationPolicy::Accessory);
     app.run(move |_, event| {
         if let tauri::RunEvent::Exit = event {
             stopped.store(true, Ordering::Relaxed);
-            unsafe { overlay::luma_cleanup() };
+            unsafe {
+                overlay::luma_cleanup();
+                overlay::luma_focus_audit_end();
+            };
             eprintln!("[LUMA EXIT] panels and status item cleaned");
         }
     });

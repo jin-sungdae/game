@@ -1,0 +1,47 @@
+{
+  "candidate_binary_sha256": "d3cbb6a2ed8e2934ad75b54521e3c62413bc9a4f8e20b0f5fdabcbd8ae8cee48",
+  "date": "2026-09-17",
+  "final_bundle_valid_passes": 16,
+  "manual_test": "not completed",
+  "os": "macOS 26.5 (25F71), Apple Silicon",
+  "patched_all_builds_valid_passes": 34,
+  "reports": {
+    "final-launchservices-batch1": {
+      "attempts": 16,
+      "key_windows": 0,
+      "luma_activations": 0,
+      "valid_passes": 15
+    },
+    "final-launchservices-batch2": {
+      "attempts": 2,
+      "key_windows": 0,
+      "luma_activations": 0,
+      "valid_passes": 1
+    },
+    "final-launchservices-batch3": {
+      "attempts": 1,
+      "key_windows": 0,
+      "luma_activations": 0,
+      "valid_passes": 0
+    },
+    "old-prohibited-control": {
+      "attempts": 1,
+      "key_windows": 0,
+      "luma_activations": 0,
+      "valid_passes": 1
+    },
+    "patched-direct": {
+      "attempts": 19,
+      "key_windows": 0,
+      "luma_activations": 0,
+      "valid_passes": 18
+    },
+    "stock-accessory-control": {
+      "attempts": 1,
+      "key_windows": 0,
+      "luma_activations": 1,
+      "valid_passes": 0
+    }
+  },
+  "verdict": "CONDITIONAL GO"
+}

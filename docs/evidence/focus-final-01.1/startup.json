@@ -1,0 +1,169 @@
+{
+  "binary": "<fixed-final-bundle>/LUMA Spike.app",
+  "expectedBundle": "com.microsoft.VSCode",
+  "requestedRuns": 50,
+  "runs": [
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 65923,
+          "seconds": 0.0029540061950683594
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 65923,
+          "seconds": 2.109584927558899
+        }
+      ],
+      "keyWindows": 0,
+      "launcherPid": 65922,
+      "launchServices": true,
+      "lumaPid": 65923,
+      "pass": true,
+      "ready": true,
+      "run": 1,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 65940,
+          "seconds": 0.0025380849838256836
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 65940,
+          "seconds": 2.11257004737854
+        }
+      ],
+      "keyWindows": 0,
+      "launcherPid": 65939,
+      "launchServices": true,
+      "lumaPid": 65940,
+      "pass": true,
+      "ready": true,
+      "run": 2,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 65951,
+          "seconds": 0.003175020217895508
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 65951,
+          "seconds": 2.127146005630493
+        }
+      ],
+      "keyWindows": 0,
+      "launcherPid": 65948,
+      "launchServices": true,
+      "lumaPid": 65951,
+      "pass": true,
+      "ready": true,
+      "run": 3,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [
+        {
+          "bundle": "com.apple.finder",
+          "pid": 691,
+          "seconds": 0.609947919845581,
+          "source": "notification"
+        },
+        {
+          "bundle": "com.apple.finder",
+          "pid": 691,
+          "seconds": 0.6119089126586914,
+          "source": "poll-10ms"
+        }
+      ],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": true,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 65961,
+          "seconds": 0.002781987190246582
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.apple.finder",
+          "frontPid": 691,
+          "keyWindows": 0,
+          "pid": 65961,
+          "seconds": 2.0172770023345947
+        }
+      ],
+      "keyWindows": 0,
+      "launcherPid": 65960,
+      "launchServices": true,
+      "lumaPid": 65961,
+      "pass": false,
+      "ready": true,
+      "run": 4,
+      "timedOut": false
+    }
+  ],
+  "secondsPerRun": 2
+}

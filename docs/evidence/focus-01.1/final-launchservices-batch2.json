@@ -1,0 +1,95 @@
+{
+  "binary": "<workspace>/src-tauri/target/debug/bundle/macos/LUMA Spike.app",
+  "expectedBundle": "com.microsoft.VSCode",
+  "requestedRuns": 5,
+  "runs": [
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 28582,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 28582,
+          "keyWindows": 0,
+          "pid": 61583,
+          "seconds": 0.0021009445190429688
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 28582,
+          "keyWindows": 0,
+          "pid": 61583,
+          "seconds": 2.1087419986724854
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 61582,
+      "lumaPid": 61583,
+      "pass": true,
+      "ready": true,
+      "run": 1,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 28582,
+      "events": [
+        {
+          "bundle": "com.openai.codex",
+          "pid": 85083,
+          "seconds": 0.922855019569397,
+          "source": "poll-10ms"
+        },
+        {
+          "bundle": "com.openai.codex",
+          "pid": 85083,
+          "seconds": 0.9232720136642456,
+          "source": "notification"
+        }
+      ],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": true,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 28582,
+          "keyWindows": 0,
+          "pid": 61594,
+          "seconds": 0.0025290250778198242
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.openai.codex",
+          "frontPid": 85083,
+          "keyWindows": 0,
+          "pid": 61594,
+          "seconds": 2.109274983406067
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 61592,
+      "lumaPid": 61594,
+      "pass": false,
+      "ready": true,
+      "run": 2,
+      "timedOut": false
+    }
+  ],
+  "secondsPerRun": 2
+}

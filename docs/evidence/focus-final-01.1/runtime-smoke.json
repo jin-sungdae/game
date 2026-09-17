@@ -1,0 +1,47 @@
+{
+  "binary": "<fixed-final-bundle>/LUMA Spike.app",
+  "expectedBundle": "com.openai.chat",
+  "mode": "existing-smoke",
+  "requestedRuns": 1,
+  "runs": [
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.openai.chat",
+      "baselinePid": 80714,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.openai.chat",
+          "frontPid": 80714,
+          "keyWindows": 0,
+          "pid": 66865,
+          "seconds": 0.0020859241485595703
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.openai.chat",
+          "frontPid": 80714,
+          "keyWindows": 0,
+          "pid": 66865,
+          "seconds": 10.253968954086304
+        }
+      ],
+      "keyWindows": 0,
+      "launcherPid": 66864,
+      "launchServices": true,
+      "lumaPid": 66865,
+      "pass": true,
+      "ready": true,
+      "run": 1,
+      "terminationReason": 1,
+      "timedOut": false
+    }
+  ],
+  "secondsPerRun": 12
+}

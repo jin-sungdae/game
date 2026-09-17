@@ -1,0 +1,58 @@
+{
+  "binary": "<fixed-final-bundle>/LUMA Spike.app",
+  "expectedBundle": "com.microsoft.VSCode",
+  "requestedRuns": 50,
+  "runs": [
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 28582,
+      "events": [
+        {
+          "bundle": "com.jetbrains.datagrip",
+          "pid": 22709,
+          "seconds": 0.7402119636535645,
+          "source": "poll-10ms"
+        },
+        {
+          "bundle": "com.jetbrains.datagrip",
+          "pid": 22709,
+          "seconds": 0.740447998046875,
+          "source": "notification"
+        }
+      ],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": true,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 28582,
+          "keyWindows": 0,
+          "pid": 66286,
+          "seconds": 0.0025489330291748047
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.jetbrains.datagrip",
+          "frontPid": 22709,
+          "keyWindows": 0,
+          "pid": 66286,
+          "seconds": 2.0689339637756348
+        }
+      ],
+      "keyWindows": 0,
+      "launcherPid": 66285,
+      "launchServices": true,
+      "lumaPid": 66286,
+      "pass": false,
+      "ready": true,
+      "run": 1,
+      "timedOut": false
+    }
+  ],
+  "secondsPerRun": 2
+}

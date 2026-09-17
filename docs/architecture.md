@@ -51,3 +51,41 @@ NSFloatingWindowLevel은 일반 창 위에 둔다. 보안 UI, 잠금 화면, 독
 ## 시작 시 활성화 검증에서 발견한 문제
 
 Tao 0.35.3의 `AppState::launched`는 NSApplication activateIgnoringOtherApps를 호출한다. 첫 실행 로그에서 startup activation을 확인했다. event loop 실행 전에 Prohibited, setup에서 Accessory로 바꾸는 완화책을 시도했지만 **최종 재실행에서 시작 활성화가 재현되어 신뢰 가능한 해결책이 아니다. Never Steal Focus는 미충족**이다. 이전 앱에 focus를 되돌리는 hack은 사용하지 않았다. Tao 시작 경로와 Finder/로그인 자동 실행 등 launch 경로를 추가 조사해야 한다.
+
+# Technical Spike 01.1 — startup focus 수정
+
+위 Spike 01의 NO-GO 기록은 당시 결과다. 01.1은 entity/behavior를 변경하지 않고 startup 경계만 수정한다.
+
+## 정확한 호출 순서
+
+1. Tao `TaoAppDelegateParent`가 `applicationDidFinishLaunching:`을 수신한다.
+2. `AppState::launched`가 `apply_activation_policy`를 호출한다.
+3. stock Tao는 visible window에 대한 `window_activation_hack` (`makeKeyAndOrderFront`) 후 `NSApplication.activateIgnoringOtherApps(ignore)`를 실행한다. 기본 ignore는 true.
+4. 그 후 `HANDLER.set_ready`, `StartCause::Init`가 전달된다.
+5. Tauri runtime의 Ready 처리에서 사용자 `setup`이 실행된다.
+
+즉 setup의 focusable/Accessory 설정은 단계 3의 application-level activation 요청을 제거할 수 없다. non-key NSPanel은 window-level key 자격을 제어할 뿐 이 application-level 호출과 별개다. 이전 Prohibited-before-run → Accessory-in-setup 전환은 제거했다.
+
+## 채택한 수정
+
+- `App::set_activation_policy(Accessory)`를 `Builder::build()` 후, `App::run()` **이전**에 한 번만 호출한다. 이 공식 API는 runtime의 Tao event loop policy에 전달되어 launch 처리 첫 단계에 적용된다.
+- opt-in `macos-no-activate-on-launch` Tao feature로 위 두 startup activation 경로를 컴파일에서 제외한다. [범위/원본 hash/diff](tao-patch.md).
+- `Info.plist`의 `LSUIElement=true`로 main 이전 LaunchServices에도 agent 앱임을 선언한다. runtime API 호출과 별도 경계다.
+- 로컬 `.app`을 재현 가능하게 검증하도록 macOS ad-hoc signingIdentity `-`를 설정한다. notarized 배포 패키지는 아니다.
+- `native/panel.m`, entity, behavior 및 React 컴포넌트는 그대로다. 새로운 `native/focus_audit.m`은 환경변수를 켰을 때만 동작하는 알림 observer다.
+
+## 공식 API / upstream 조사 (2026-09-17)
+
+Tao 자체 `set_activate_ignoring_other_apps`는 존재하지만 Tauri 2.11.5의 App/RuntimeInitArgs/runtime에는 노출되어 있지 않다. `App::wry_plugin`도 이미 만들어진 window target의 event callback이며, mutable startup EventLoop를 받는 공식 우회 경로가 아니다.
+
+- [Tauri 요청 #15017](https://github.com/tauri-apps/tauri/issues/15017): 해당 Tao API 노출 요청, 조사 시 open.
+- [Tao PR #1210](https://github.com/tauri-apps/tao/pull/1210): open / merged=false, head `bc16c5fd1c8f5dc86a949e10ccf67f4edead4cc3`. window.rs의 orderFront → orderBack 변경이며 AppState::launched의 activation 호출은 수정하지 않음.
+- [Tao 0.37.0 startup 소스](https://github.com/tauri-apps/tao/blob/tao-v0.37.0/src/platform_impl/macos/app_state.rs): 2026-08-21 최신 Tao 릴리스에서도 같은 activation 호출 유지. 버전 변경만으로 이 원인을 제거할 수 없다는 것은 **소스 비교 결과**이며 0.37으로 LUMA 전체를 이식해서 실행했다는 뜻은 아니다.
+- [Tauri 2.11.5 App API](https://docs.rs/tauri/2.11.5/tauri/struct.App.html#method.set_activation_policy)
+- [Apple LSUIElement](https://developer.apple.com/documentation/bundleresources/information-property-list/lsuielement)
+
+Tauri는 `=2.11.5`로 고정했다. Tao는 같은 `0.35.3`의 local patch이며, Wry 0.55.1 / tauri-runtime-wry 2.11.4는 변경하지 않았다. 전체 framework 교체는 하지 않는다.
+
+## 최종 검증 후 architecture 유지
+
+이번 최종 검증에서는 Tauri/Rust behavior/state, entity-sized native nonactivating NSPanel, WKWebView, startup opt-in patch를 변경하지 않았다. 검증 도구에 기존 smoke 실행 옵션과 foreground 대기 로그, 종료 원인 검사를 추가했다. artifact별 해시와 결과는 [최종 validation](validation.md), 실제 mouse/typing은 [수동 체크리스트](manual-focus-test.md)에서 관리한다. 자동 상태 전이 검증은 실제 DOM hit testing이나 사람의 입력 검증을 대신하지 않는다.

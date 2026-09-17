@@ -1,0 +1,79 @@
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -57,6 +57,8 @@
+ ]
+ 
+ [features]
++# LUMA opt-in: never request application/window activation during startup.
++macos-no-activate-on-launch = []
+ dbus = ["dep:dbus"]
+ default = [
+     "rwh_06",
+--- a/Cargo.toml.orig
++++ b/Cargo.toml.orig
+@@ -28,6 +28,7 @@
+ ]
+ 
+ [features]
++macos-no-activate-on-launch = []
+ default = ["rwh_06", "x11", "dbus"]
+ serde = ["dep:serde", "dpi/serde"]
+ rwh_04 = ["dep:rwh_04"]
+--- a/src/platform_impl/macos/app_state.rs
++++ b/src/platform_impl/macos/app_state.rs
+@@ -16,8 +16,8 @@
+   time::Instant,
+ };
+ 
+-use objc2::{msg_send, rc::Retained, runtime::AnyObject as Object};
+-use objc2_app_kit::{NSApp, NSApplication, NSApplicationActivationPolicy, NSWindow};
++use objc2::{msg_send, runtime::AnyObject as Object};
++use objc2_app_kit::{NSApp, NSApplicationActivationPolicy, NSWindow};
+ use objc2_foundation::{MainThreadMarker, NSAutoreleasePool, NSSize};
+ use once_cell::sync::Lazy;
+ 
+@@ -31,7 +31,7 @@
+     platform::{
+       event::{EventProxy, EventWrapper},
+       event_loop::{post_dummy_event, PanicInfo},
+-      ffi::{id, nil},
++      ffi::nil,
+       observer::{CFRunLoopGetMain, CFRunLoopWakeUp, EventLoopWaker},
+       util::{self, Never},
+       window::get_window_id,
+@@ -285,12 +285,17 @@
+     apply_activation_policy(app_delegate);
+ 
+     unsafe {
+-      let mtm = MainThreadMarker::new().unwrap();
+-      let ns_app = NSApp(mtm);
+-      window_activation_hack(&ns_app);
+-      let ignore = get_aux_state_mut(app_delegate).activate_ignoring_other_apps;
+-      #[allow(deprecated)]
+-      ns_app.activateIgnoringOtherApps(ignore);
++      // LUMA: an opt-in nonactivating host must not request activation at all.
++      // Passing false to activateIgnoringOtherApps still calls the activation API.
++      #[cfg(not(feature = "macos-no-activate-on-launch"))]
++      {
++        let mtm = MainThreadMarker::new().unwrap();
++        let ns_app = NSApp(mtm);
++        window_activation_hack(&ns_app);
++        let ignore = get_aux_state_mut(app_delegate).activate_ignoring_other_apps;
++        #[allow(deprecated)]
++        ns_app.activateIgnoringOtherApps(ignore);
++      }
+ 
+       let dock_visible = get_aux_state_mut(app_delegate).dock_visibility;
+       if !dock_visible {
+@@ -429,7 +434,10 @@
+ ///
+ /// If this becomes too bothersome to maintain, it can probably be removed
+ /// without too much damage.
+-unsafe fn window_activation_hack(ns_app: &NSApplication) {
++#[cfg(not(feature = "macos-no-activate-on-launch"))]
++unsafe fn window_activation_hack(ns_app: &objc2_app_kit::NSApplication) {
++  use objc2::rc::Retained;
++  use crate::platform_impl::platform::ffi::id;
+   // Get the application's windows
+   // TODO: Proper ordering of the windows
+   let ns_windows: id = msg_send![ns_app, windows];

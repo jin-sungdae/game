@@ -6,5 +6,12 @@ edition = "2021"
 tauri-build = { version = "2", features = [] }
 cc = "1"
 [dependencies]
-tauri = { version = "2", features = ["macos-private-api"] }
+tauri = { version = "=2.11.5", features = ["macos-private-api"] }
 serde = { version = "1", features = ["derive"] }
+
+# Feature unification enables the opt-in on Tauri's existing Tao dependency.
+[target.'cfg(target_os = "macos")'.dependencies]
+tao = { version = "=0.35.3", default-features = false, features = ["macos-no-activate-on-launch"] }
+
+[patch.crates-io]
+tao = { path = "vendor/tao" }

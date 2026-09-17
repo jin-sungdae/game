@@ -1,0 +1,58 @@
+{
+  "binary": "<workspace>/src-tauri/target/debug/bundle/macos/LUMA Spike.app",
+  "expectedBundle": "com.microsoft.VSCode",
+  "requestedRuns": 4,
+  "runs": [
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [
+        {
+          "bundle": "com.apple.finder",
+          "pid": 691,
+          "seconds": 1.715716004371643,
+          "source": "notification"
+        },
+        {
+          "bundle": "com.apple.finder",
+          "pid": 691,
+          "seconds": 1.7179570198059082,
+          "source": "poll-10ms"
+        }
+      ],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": true,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 62308,
+          "seconds": 0.002317070960998535
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.apple.finder",
+          "frontPid": 691,
+          "keyWindows": 0,
+          "pid": 62308,
+          "seconds": 2.111307978630066
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 62307,
+      "lumaPid": 62308,
+      "pass": false,
+      "ready": true,
+      "run": 1,
+      "timedOut": false
+    }
+  ],
+  "secondsPerRun": 2
+}

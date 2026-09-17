@@ -1,0 +1,43 @@
+{
+  "binary": "/private/tmp/luma-baseline-audited",
+  "expectedBundle": "com.microsoft.VSCode",
+  "requestedRuns": 1,
+  "runs": [
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 57384,
+          "seconds": 0.0035730600357055664
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 57384,
+          "seconds": 3.160984992980957
+        }
+      ],
+      "keyWindows": 0,
+      "lumaPid": 57384,
+      "pass": true,
+      "ready": true,
+      "run": 1,
+      "timedOut": false
+    }
+  ],
+  "secondsPerRun": 3
+}

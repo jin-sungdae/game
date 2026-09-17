@@ -2,7 +2,7 @@
 
 macOS에서 작업 앱을 방해하지 않는 Ambient Desktop Creature UX 검증용. **게임 구현이 아니라 native overlay 실험**이다.
 
-현재 판정은 **조건부 NO-GO**: 시작 직후 앱 활성화가 재현되어 Never Steal Focus는 아직 미충족이다. 확인된 동작과 검증 한계를 보고서에 구분했다.
+현재 Spike 01.1 판정은 **CONDITIONAL GO**: 새 최종 debug bundle에서 Codex foreground 기준 **50/50 PASS**, activation/foreground 변경/key window/비정상 종료 모두 0입니다. VS Code batch는 외부 앱 전환으로 중단됐습니다. 편집기에서 실제 mouse/typing 및 startup 재확인은 [수동 검증](docs/manual-focus-test.md)이 필요합니다. [최종 결과](docs/validation.md).
 
 ## 실행
 
@@ -19,7 +19,7 @@ npm run tauri -- dev
 npm run tauri -- build --debug --bundles app
 ```
 
-`src-tauri/target/debug/bundle/macos/LUMA Spike.app`을 실행한다. unsigned 로컬 빌드이다. `npm run dev`만으로 브라우저를 열면 native overlay는 동작하지 않는다.
+`src-tauri/target/debug/bundle/macos/LUMA Spike.app`을 실행한다. ad-hoc 서명한 로컬 빌드이며 notarization은 하지 않았다. `npm run dev`만으로 브라우저를 열면 native overlay는 동작하지 않는다.
 
 이 작업에서 Rust가 없어서 사용자 PATH를 변경하지 않고 `/private/tmp`에 설치했다. 현재 머신에서 해당 임시 툴체인을 쓰려면:
 
@@ -72,3 +72,11 @@ Smoke 모드는 약 10초 동안 spawn → interaction → close → despawn →
 | `scripts/measure.py` | CPU/RSS 측정 |
 
 [Window 결정과 OS 제한](docs/architecture.md) · [검증 결과](docs/validation.md)
+
+## Spike 01.1 focus audit
+
+[현재 검증 결과](docs/validation.md) · [최소 Tao patch 범위](docs/tao-patch.md) · [실행 증거](docs/evidence/focus-01.1/summary.json)
+
+`src-tauri/vendor/tao`는 기존 Tao 0.35.3의 opt-in startup 수정입니다. Tauri/Wry/entity/behavior 구조는 유지합니다. `Info.plist`의 LSUIElement와 pre-run Accessory를 사용하며, 다른 앱을 다시 activate하는 포커스 복구 코드는 없습니다.
+
+반복 실행 도구는 `scripts/launch_audit.m`이며 컴파일/실행법은 검증 보고서에 있습니다. 기본 실행은 audit가 꺼져 있고, `LUMA_FOCUS_AUDIT=1`을 설정할 때만 activation/key-window notification을 기록합니다. `LUMA_AUDIT_EXIT_SECONDS=120`으로 검증용 자동 정상 종료를 설정할 수 있습니다.
