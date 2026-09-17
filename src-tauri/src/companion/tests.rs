@@ -265,3 +265,82 @@ fn transition_policy_rejects_autonomous_drag_and_non_idle_decisions() {
         None
     );
 }
+
+fn excursion(profile: MovementProfile) -> CompanionController {
+    let mut c = controller(forced(Behavior::Walking));
+    c.movement_config.weights = if profile == MovementProfile::Jump {
+        [0, 1, 0]
+    } else {
+        [0, 0, 1]
+    };
+    c.movement_ready_at = 0.0;
+    c.set_movement_windows(Some(vec![]));
+    c.tick(1.0, 0.1, area(), FAR, false);
+    assert_eq!(c.movement.profile(), Some(profile));
+    c
+}
+#[test]
+fn jump_and_free2d_are_walking_intents_then_idle_on_ground() {
+    for profile in [MovementProfile::Jump, MovementProfile::Free2d] {
+        let mut c = excursion(profile);
+        c.tick(1.1, 0.1, area(), FAR, false);
+        assert_eq!(c.entity.state, CompanionState::Walking);
+        assert!(c.entity.y > area().ground_y());
+        for i in 2..24 {
+            c.tick(1.0 + f64::from(i) * 0.1, 0.1, area(), FAR, false);
+        }
+        assert_eq!(c.entity.state, CompanionState::Idle);
+        assert_eq!(c.entity.y, area().ground_y());
+    }
+}
+#[test]
+fn excursions_cancel_on_drag_cursor_and_windows() {
+    for profile in [MovementProfile::Jump, MovementProfile::Free2d] {
+        let mut c = excursion(profile);
+        c.tick(1.1, 0.1, area(), FAR, false);
+        let p = (c.entity.x, c.entity.y);
+        c.begin_drag(1.2, area(), p);
+        assert_eq!(c.movement.profile(), None);
+        c.tick(1.3, 0.1, area(), (p.0 + 30.0, p.1 + 30.0), true);
+        assert_eq!(c.entity.state, CompanionState::Dragging);
+        c.tick(1.4, 0.1, area(), (p.0 + 30.0, p.1 + 30.0), false);
+        assert_eq!(c.entity.state, CompanionState::Idle);
+        assert_eq!(c.entity.y, area().ground_y());
+        let mut c = excursion(profile);
+        let p = (c.entity.x, c.entity.y);
+        c.tick(1.1, 0.1, area(), p, false);
+        assert_eq!(c.entity.state, CompanionState::Idle);
+        let mut c = excursion(profile);
+        c.set_movement_windows(Some(vec![area()]));
+        c.tick(1.1, 0.1, area(), FAR, false);
+        assert_eq!(c.entity.state, CompanionState::Idle);
+    }
+}
+#[test]
+fn seeded_excursions_repeat_and_cooldown_prevents_continuous_airborne_motion() {
+    let (mut a, mut b) = (
+        excursion(MovementProfile::Free2d),
+        excursion(MovementProfile::Free2d),
+    );
+    for i in 1..200 {
+        let now = 1.0 + f64::from(i) * 0.1;
+        a.tick(now, 0.1, area(), FAR, false);
+        b.tick(now, 0.1, area(), FAR, false);
+        assert_eq!((a.entity.x, a.entity.y), (b.entity.x, b.entity.y));
+        if now > 3.2 {
+            assert_eq!(a.entity.y, area().ground_y());
+        }
+    }
+}
+
+#[test]
+fn unknown_windows_keep_ground_and_movement_rng_does_not_consume_behavior_rng() {
+    let mut c = controller(forced(Behavior::Walking));
+    c.movement_config.weights = [0, 1, 0];
+    c.movement_ready_at = 0.0;
+    let mut baseline = controller(forced(Behavior::Walking));
+    c.tick(1.0, 0.1, area(), FAR, false);
+    baseline.tick(1.0, 0.1, area(), FAR, false);
+    assert_eq!(c.movement.profile(), Some(MovementProfile::Ground));
+    assert_eq!(c.rng, baseline.rng);
+}

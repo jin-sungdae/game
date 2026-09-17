@@ -99,6 +99,21 @@ void luma_set_safe_area(const DesktopRect *safe,const DesktopRect *docks,int cou
         @"rejectedDockCandidates":@(rejected),@"dockWindowCandidates":dockWindowCandidates?:@[],
         @"dockBoundsStatus":count>0?@"EDGE_CANDIDATE":@"FALLBACK_UNVERIFIED",@"visualVerification":@"MANUAL_REQUIRED"};
 }
+// Read-only movement exclusion rectangles. Never activate/focus or request permissions.
+void luma_movement_windows(DesktopRect *out, int *count) {
+    int capacity=*count; *count=0;
+    NSScreen *screen=NSScreen.screens.firstObject;
+    NSArray *windows=CFBridgingRelease(CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly|kCGWindowListExcludeDesktopElements,kCGNullWindowID));
+    if(!screen || !windows) { *count=-1; return; }
+    for(NSDictionary *w in windows) {
+        if([w[(id)kCGWindowOwnerPID] intValue]==NSProcessInfo.processInfo.processIdentifier) continue;
+        if([w[(id)kCGWindowLayer] intValue]!=0) continue;
+        CGRect r;
+        if(!w[(id)kCGWindowBounds] || !CGRectMakeWithDictionaryRepresentation((__bridge CFDictionaryRef)w[(id)kCGWindowBounds],&r) || *count>=capacity) { *count=-1; return; }
+        if(CGRectIsEmpty(r)) continue;
+        out[(*count)++]=(DesktopRect){r.origin.x,NSMaxY(screen.frame)-r.origin.y-r.size.height,r.size.width,r.size.height};
+    }
+}
 void luma_cursor(double *x, double *y, int *down) {
     NSPoint p=NSEvent.mouseLocation; *x=p.x; *y=p.y;
     *down=(NSEvent.pressedMouseButtons & 1) != 0;

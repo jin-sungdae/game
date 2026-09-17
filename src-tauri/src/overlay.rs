@@ -39,12 +39,14 @@ extern "C" {
         panel_y: f64,
         visible: i32,
     );
+    fn luma_movement_windows(out: *mut Area, count: *mut i32);
     fn luma_cursor(x: *mut f64, y: *mut f64, down: *mut i32);
 }
 // All bridge calls must run on AppKit's main thread.
 #[derive(Default)]
 struct DesktopCache {
     tracker: SafeAreaTracker,
+    window_sample: Option<(Instant, Option<Vec<Area>>)>,
     last: Option<(Instant, DesktopSafeArea)>,
 }
 thread_local! { static DESKTOP: RefCell<DesktopCache> = RefCell::new(DesktopCache::default()); }
@@ -113,4 +115,28 @@ pub unsafe fn place_entity<S>(index: i32, entity: &crate::entities::Entity<S>, a
         bounds.y,
         visible as i32,
     );
+}
+
+/// Metadata only, sampled once per second on the main thread. None suppresses excursions.
+pub fn movement_windows() -> Option<Vec<Area>> {
+    DESKTOP.with(|cache| {
+        let mut cache = cache.borrow_mut();
+        if let Some((time, sample)) = &cache.window_sample {
+            if time.elapsed().as_secs_f64() < crate::movement::WINDOW_POLL_SECONDS {
+                return sample.clone();
+            }
+        }
+        let mut windows = [Area::default(); 64];
+        let mut count = windows.len() as i32;
+        unsafe {
+            luma_movement_windows(windows.as_mut_ptr(), &mut count);
+        }
+        let result = if count < 0 {
+            None
+        } else {
+            Some(windows[..(count as usize).min(windows.len())].to_vec())
+        };
+        cache.window_sample = Some((Instant::now(), result.clone()));
+        result
+    })
 }

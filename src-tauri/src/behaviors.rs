@@ -73,6 +73,9 @@ impl World {
             }
         }
     }
+    pub fn set_movement_windows(&mut self, windows: Option<Vec<Area>>) {
+        self.companion.set_movement_windows(windows);
+    }
     pub fn tick(&mut self, now: f64, dt: f64, cursor: (f64, f64), down: bool) {
         let dt = dt.clamp(0.0, 0.1);
         let was_dragging = self.companion.entity().state == CompanionState::Dragging;
