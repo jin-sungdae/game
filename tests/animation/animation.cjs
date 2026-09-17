@@ -63,3 +63,23 @@ test('manifest rejects incompatible anchor or invalid timing',()=>{
  assert.throws(()=>parseManifest({...manifest,anchor:{x:0,y:1}},'moa',1));
  assert.throws(()=>parseManifest({...manifest,animations:{idle:{...idle,frameDuration:0}}},'moa',1));
 });
+const {resolveCompanion}=require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'entities/registry.js'));
+for(const species of ['moa','ruu','nox']) {
+ test(`${species} stage01 manifest resolves`,()=>{
+  assert.deepEqual(resolveCompanion(species,1),{species,evolutionStage:1,assetManifest:`/assets/creatures/${species}/stage01/manifest.json`,name:species.toUpperCase()});
+  const m=require(`../../public/assets/creatures/${species}/stage01/manifest.json`);
+  assert.equal(parseManifest(m,species,1).species,species);
+ });
+ test(`${species} missing assets fall back and failure is cached`,async()=>{
+  let attempts=0;const m=require(`../../public/assets/creatures/${species}/stage01/manifest.json`);
+  const loader=new AssetLoader({json:async()=>m,image:async()=>{attempts++;throw Error('not supplied');}});
+  assert.equal(await loader.load(species,1,'idle'),null);
+  assert.equal(await loader.load(species,1,'idle'),null);assert.equal(attempts,6);
+ });
+}
+test('unknown species/stage returns fallback without IO or throwing',async()=>{
+ const loader=new AssetLoader({json:async()=>{assert.fail('unexpected IO');},image:async()=>{assert.fail('unexpected IO');}});
+ for(const [species,stage] of [['unknown',1],['../moa',1],['constructor',1],['moa',2],['ruu',5],['nox',0],['moa',NaN]]) {
+  assert.equal(resolveCompanion(species,stage),null);assert.equal(await loader.load(species,stage,'idle'),null);
+ }
+});

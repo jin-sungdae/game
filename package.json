@@ -8,7 +8,9 @@
     "build": "tsc --noEmit && vite build",
     "tauri": "tauri",
     "test": "cargo test --manifest-path src-tauri/Cargo.toml",
-    "test:animation": "sh scripts/test-animation.sh"
+    "test:animation": "sh scripts/test-animation.sh",
+    "validate:assets": "python3 scripts/validate_assets.py",
+    "test:assets": "python3 -m unittest discover -s tests/assets -v"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.10.0",

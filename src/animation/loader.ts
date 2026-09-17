@@ -1,4 +1,5 @@
-import { assetBase, frameUrls, parseManifest, type Manifest, type Clip } from './model';
+import { resolveCompanion } from '../entities/registry';
+import { frameUrls, parseManifest, type Manifest, type Clip } from './model';
 export interface LoadedClip { manifest:Manifest; clip:Clip; urls:string[] }
 export interface AssetIO { json:(url:string)=>Promise<unknown>; image:(url:string)=>Promise<{width:number;height:number}> }
 export const browserIO:AssetIO = {
@@ -13,9 +14,11 @@ export class AssetLoader {
   private clips=new Map<string,Promise<LoadedClip|null>>();
   constructor(private io:AssetIO = browserIO) {}
   load(species:string, stage:number, name:string):Promise<LoadedClip|null> {
-    const base=assetBase(species,stage), key=`${base}/${name}`;
+    const companion=resolveCompanion(species,stage);
+    if(!companion) return Promise.resolve(null);
+    const base=companion.assetManifest.slice(0,-'/manifest.json'.length), key=`${base}/${name}`;
     if(!this.manifests.has(base)) this.manifests.set(base,
-      this.io.json(`${base}/manifest.json`).then(m=>parseManifest(m,species,stage)).catch(()=>null));
+      this.io.json(companion.assetManifest).then(m=>parseManifest(m,species,stage)).catch(()=>null));
     if(!this.clips.has(key)) this.clips.set(key, this.manifests.get(base)!.then(async manifest => {
       const clip=manifest?.animations[name];
       if(!manifest || !clip) return null;

@@ -24,6 +24,8 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run test:animation
+      - run: npm run test:assets
+      - run: npm run validate:assets -- --allow-missing
       - run: python3 -m unittest discover -s tests/automation -v
       - run: python3 scripts/check_tao_patch.py
       - run: git diff --check
