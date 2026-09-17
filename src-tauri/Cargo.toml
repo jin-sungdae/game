@@ -11,6 +11,7 @@ serde = { version = "1", features = ["derive"] }
 
 # Feature unification enables the opt-in on Tauri's existing Tao dependency.
 [target.'cfg(target_os = "macos")'.dependencies]
+tauri-plugin-single-instance = "=2.4.4"
 tao = { version = "=0.35.3", default-features = false, features = ["macos-no-activate-on-launch"] }
 
 [patch.crates-io]
