@@ -2,7 +2,9 @@
 
 macOS에서 작업 앱을 방해하지 않는 Ambient Desktop Creature UX 검증용. **게임 구현이 아니라 native overlay 실험**이다.
 
-현재 Spike 01.1 판정은 **CONDITIONAL GO**: 새 최종 debug bundle에서 Codex foreground 기준 **50/50 PASS**, activation/foreground 변경/key window/비정상 종료 모두 0입니다. VS Code batch는 외부 앱 전환으로 중단됐습니다. 편집기에서 실제 mouse/typing 및 startup 재확인은 [수동 검증](docs/manual-focus-test.md)이 필요합니다. [최종 결과](docs/validation.md).
+현재 Technical Spike 01.1은 **GO**입니다. 동일 bundle의 Codex foreground 50/50 자동 검사와 사용자의 실제 macOS launch/MOA interaction focus 유지 확인을 근거로 확정했습니다. [검증 기록](docs/validation.md).
+
+개발 기반: [규칙](AGENTS.md), [설계](docs/GAME_DESIGN.md), [Architecture](docs/ARCHITECTURE.md), [Review](docs/REVIEW_RULES.md), [Workflow](docs/DEVELOPMENT_WORKFLOW.md).
 
 ## 실행
 
@@ -71,7 +73,7 @@ Smoke 모드는 약 10초 동안 spawn → interaction → close → despawn →
 | `src-tauri/{Cargo.toml,Cargo.lock,build.rs,tauri.conf.json,capabilities/}` | Rust/Tauri 빌드와 최소 event 권한 |
 | `scripts/measure.py` | CPU/RSS 측정 |
 
-[Window 결정과 OS 제한](docs/architecture.md) · [검증 결과](docs/validation.md)
+[Window 결정과 OS 제한](docs/ARCHITECTURE.md) · [검증 결과](docs/validation.md)
 
 ## Spike 01.1 focus audit
 
