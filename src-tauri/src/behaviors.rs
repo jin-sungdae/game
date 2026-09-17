@@ -36,10 +36,11 @@ impl World {
         }
         let (x, y) = self
             .area
-            .clamp(self.area.x + self.area.w - SIZE, self.area.y + 12.0);
+            .ground(self.area.x + self.area.w - PIP_SIZE.width / 2.0, PIP_SIZE);
         self.view.pip = Some(Entity {
             x,
             y,
+            size: PIP_SIZE,
             state: PipState::Spawning,
             facing: -1,
         });
@@ -89,7 +90,7 @@ impl World {
                 }
                 PipState::Roaming => {
                     p.x += p.facing as f64 * 24.0 * dt;
-                    let (x, y) = self.area.clamp(p.x, p.y);
+                    let (x, y) = self.area.ground(p.x, p.size);
                     if x != p.x {
                         p.facing *= -1;
                     }
@@ -114,18 +115,15 @@ impl World {
             }
         }
         if react {
-            self.companion.react(
-                now,
-                self.area,
-                self.view.pip.as_ref().map(|p| p.x + SIZE / 2.0),
-            );
+            self.companion
+                .react(now, self.area, self.view.pip.as_ref().map(|p| p.x));
             self.view.moa = self.companion.entity().clone();
         }
         if remove {
             self.view.pip = None;
         }
         if let Some(p) = &mut self.view.pip {
-            let (x, y) = self.area.clamp(p.x, p.y);
+            let (x, y) = self.area.ground(p.x, p.size);
             p.x = x;
             p.y = y;
         }
@@ -151,8 +149,8 @@ mod tests {
         let mut w = world();
         w.drag(0.0, (w.view.moa.x, w.view.moa.y));
         w.tick(1.0, 0.03, (9000.0, -9000.0), true);
-        assert_eq!(w.view.moa.x, -96.0);
-        assert_eq!(w.view.moa.y, 60.0);
+        assert_eq!(w.view.moa.x, -56.0);
+        assert_eq!(w.view.moa.y, 68.0);
         w.tick(2.0, 0.03, (9000.0, -9000.0), false);
         assert_eq!(w.view.moa.state, CompanionState::Idle);
     }
@@ -202,6 +200,41 @@ mod tests {
         assert_eq!(w.view.pip.as_ref().unwrap().state, PipState::Engaged);
         w.tick(4.4, 0.03, end, false);
         assert_eq!(w.view.moa.state, CompanionState::Idle);
+    }
+    #[test]
+    fn ground_alignment_after_drag_and_visible_frame_change() {
+        let mut w = world();
+        w.spawn(0.0);
+        w.view.pip.as_mut().unwrap().size = Size {
+            width: 120.0,
+            height: 180.0,
+        };
+        let start = (w.view.moa.x, w.view.moa.y);
+        w.drag(0.0, start);
+        w.tick(0.1, 0.03, (start.0, 10000.0), true);
+        assert_eq!(
+            w.view.moa.y + w.view.moa.size.height,
+            w.area.y + w.area.h - crate::geometry::LAYOUT.margin
+        );
+        w.tick(0.2, 0.03, (start.0, 10000.0), false);
+        assert_eq!(w.view.moa.y, w.view.pip.as_ref().unwrap().y);
+        w.area = Area {
+            x: -1200.0,
+            y: -600.0,
+            w: 1000.0,
+            h: 500.0,
+        };
+        w.tick(0.3, 0.03, (0.0, 0.0), false);
+        assert_eq!(w.view.moa.y, w.area.ground_y());
+        assert_eq!(w.view.pip.as_ref().unwrap().y, w.area.ground_y());
+        for (x, y, size) in [(w.view.moa.x, w.view.moa.y, w.view.moa.size), {
+            let p = w.view.pip.as_ref().unwrap();
+            (p.x, p.y, p.size)
+        }] {
+            let b = size.bounds(x, y);
+            assert!(b.x >= w.area.x && b.x + b.w <= w.area.x + w.area.w);
+            assert!(b.y >= w.area.y && b.y + b.h <= w.area.y + w.area.h);
+        }
     }
     #[test]
     fn area_change_and_sleep() {

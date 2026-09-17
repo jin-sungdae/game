@@ -2,6 +2,7 @@
 mod behaviors;
 mod companion;
 mod entities;
+mod geometry;
 mod overlay;
 use behaviors::{Snapshot, World};
 use std::{
@@ -48,9 +49,24 @@ fn main() {
         .setup(move |app| {
             unsafe { overlay::luma_init() };
             for (index, label, w, h) in [
-                (0, "moa", 96.0, 104.0),
-                (1, "pip", 96.0, 104.0),
-                (2, "interaction", 160.0, 140.0),
+                (
+                    0,
+                    "moa",
+                    geometry::MOA_SIZE.width,
+                    geometry::MOA_SIZE.height,
+                ),
+                (
+                    1,
+                    "pip",
+                    geometry::PIP_SIZE.width,
+                    geometry::PIP_SIZE.height,
+                ),
+                (
+                    2,
+                    "interaction",
+                    geometry::MENU_SIZE.width,
+                    geometry::MENU_SIZE.height,
+                ),
             ] {
                 let window = tauri::WebviewWindowBuilder::new(
                     app,
@@ -144,13 +160,23 @@ fn main() {
                             world.tick(now, dt, cursor, down);
                             let view = &world.view;
                             unsafe {
-                                overlay::luma_place(0, view.moa.x, view.moa.y, 1);
+                                overlay::place_entity(0, &view.moa, world.area);
                                 if let Some(p) = &view.pip {
-                                    overlay::luma_place(1, p.x, p.y, 1);
+                                    overlay::place_entity(1, p, world.area);
                                     let a = world.area;
-                                    let x = p.x.clamp(a.x, (a.x + a.w - 160.0).max(a.x));
-                                    let y = (p.y + 110.0).min(a.y + a.h - 140.0).max(a.y);
-                                    overlay::luma_place(2, x, y, view.menu as i32);
+                                    let size = geometry::MENU_SIZE;
+                                    let (x, y) = a.clamp(
+                                        p.x,
+                                        p.y + p.size.height + geometry::LAYOUT.menu_gap,
+                                        size,
+                                    );
+                                    let bounds = a.panel_bounds(x, y, size);
+                                    overlay::luma_place(
+                                        2,
+                                        bounds.x,
+                                        bounds.y,
+                                        (view.menu && a.fits(size)) as i32,
+                                    );
                                 } else {
                                     overlay::luma_place(1, 0.0, 0.0, 0);
                                     overlay::luma_place(2, 0.0, 0.0, 0);

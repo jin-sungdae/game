@@ -1,0 +1,120 @@
+{
+  "date": "2026-09-17",
+  "baseMain": "08c60c81e33ea6177107400db00a923161402d00",
+  "executableSha256": "0132c262d4e9e4075dd742fb140c219e43f28fb6f474a01f5788a753e47b1aa1",
+  "pid": 96391,
+  "mode": "existing-smoke LaunchServices debug bundle",
+  "samples": 17,
+  "allBoundsInside": true,
+  "allProjectedFramesMatchActual": true,
+  "maximumReservedIntersectionArea": 0,
+  "allGroundAligned": true,
+  "representative": {
+    "MOA": {
+      "computedGroundLine": 8,
+      "entity": "MOA",
+      "expectedPanelFrame": {
+        "h": 104,
+        "w": 96,
+        "x": 1776,
+        "y": 8
+      },
+      "fitsUsableBounds": true,
+      "matchesWorldBounds": true,
+      "panelFrame": {
+        "h": 104,
+        "w": 96,
+        "x": 1776,
+        "y": 8
+      },
+      "pid": 96391,
+      "reservedIntersectionArea": 0,
+      "screenFrame": {
+        "h": 1329,
+        "w": 2056,
+        "x": 0,
+        "y": 0
+      },
+      "uptime": 1302595.7788370417,
+      "visible": 1,
+      "visibleFrame": {
+        "h": 1290,
+        "w": 2056,
+        "x": 0,
+        "y": 0
+      },
+      "world": {
+        "x": 1824,
+        "y": 8
+      }
+    },
+    "PIP": {
+      "computedGroundLine": 8,
+      "entity": "PIP",
+      "expectedPanelFrame": {
+        "h": 104,
+        "w": 96,
+        "x": 1950,
+        "y": 8
+      },
+      "fitsUsableBounds": true,
+      "matchesWorldBounds": true,
+      "panelFrame": {
+        "h": 104,
+        "w": 96,
+        "x": 1950,
+        "y": 8
+      },
+      "pid": 96391,
+      "reservedIntersectionArea": 0,
+      "screenFrame": {
+        "h": 1329,
+        "w": 2056,
+        "x": 0,
+        "y": 0
+      },
+      "uptime": 1302597.7348537084,
+      "visible": 1,
+      "visibleFrame": {
+        "h": 1290,
+        "w": 2056,
+        "x": 0,
+        "y": 0
+      },
+      "world": {
+        "x": 1998.23029585,
+        "y": 8
+      }
+    }
+  },
+  "focusAudit": [
+    {
+      "activations": 0,
+      "event": "before-tauri",
+      "frontBundle": "com.jetbrains.datagrip",
+      "frontPid": 22709,
+      "keyWindows": 0,
+      "pid": 96391,
+      "seconds": 0.002095937728881836
+    },
+    {
+      "activations": 0,
+      "event": "exit",
+      "frontBundle": "com.jetbrains.datagrip",
+      "frontPid": 22709,
+      "keyWindows": 0,
+      "pid": 96391,
+      "seconds": 10.278391003608704
+    }
+  ],
+  "externalForegroundObserver": "NOT_RUN; before/exit snapshots only",
+  "tests": {
+    "rust": 23,
+    "foundation": 8,
+    "clippy": "PASS",
+    "npmBuild": "PASS",
+    "debugBundle": "PASS",
+    "taoIntegrity": "PASS"
+  },
+  "manualDockOrientationTests": "NOT_RUN"
+}

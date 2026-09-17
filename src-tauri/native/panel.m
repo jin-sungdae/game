@@ -60,7 +60,7 @@ void luma_attach(void *window, int index, double width, double height) {
 // Use AppKit bottom-left point coordinates end-to-end: no Retina conversion.
 void luma_work_area(double *x, double *y, double *width, double *height) {
     NSScreen *screen = NSScreen.screens.firstObject;
-    NSRect r = screen.visibleFrame;
+    NSRect r = NSIntersectionRect(screen.frame, screen.visibleFrame);
     *x=r.origin.x; *y=r.origin.y; *width=r.size.width; *height=r.size.height;
 }
 void luma_cursor(double *x, double *y, int *down) {
@@ -81,4 +81,34 @@ void luma_cleanup(void) {
     [panels removeAllObjects];
     [NSStatusBar.systemStatusBar removeStatusItem:statusItem];
     statusItem=nil;
+}
+
+// Opt-in measurements only; no activation or event taps. At most one row/sec/entity.
+static NSDictionary *rectJSON(NSRect r) {
+    return @{ @"x":@(r.origin.x), @"y":@(r.origin.y), @"w":@(r.size.width), @"h":@(r.size.height) };
+}
+void luma_trace_geometry(int index, double x, double y, double ground, double width, double height,
+                         double margin, double groundMargin, double panelX, double panelY, int visible) {
+    static int enabled = -1;
+    static double last[2] = {-1,-1};
+    if(enabled < 0) enabled = getenv("LUMA_GEOMETRY_AUDIT") != NULL;
+    if(!enabled || index < 0 || index > 1) return;
+    double now = NSProcessInfo.processInfo.systemUptime;
+    if(now-last[index] < 1.0) return;
+    last[index]=now;
+    NSScreen *screen=NSScreen.screens.firstObject;
+    NSRect usable=NSIntersectionRect(screen.frame,screen.visibleFrame);
+    NSRect actual=panels[@(index)].frame;
+    NSRect expected=NSMakeRect(panelX,panelY,width,height);
+    BOOL contained=NSMinX(actual)>=NSMinX(usable)+margin && NSMaxX(actual)<=NSMaxX(usable)-margin
+        && NSMinY(actual)>=NSMinY(usable)+groundMargin && NSMaxY(actual)<=NSMaxY(usable)-margin;
+    NSDictionary *row=@{@"entity":index==0?@"MOA":@"PIP", @"pid":@(getpid()), @"uptime":@(now),
+        @"screenFrame":rectJSON(screen.frame), @"visibleFrame":rectJSON(screen.visibleFrame),
+        @"computedGroundLine":@(ground), @"world":@{@"x":@(x),@"y":@(y)},
+        @"panelFrame":rectJSON(actual), @"expectedPanelFrame":rectJSON(expected),
+        @"visible":@(visible), @"fitsUsableBounds":@(contained),
+        @"reservedIntersectionArea":@(MAX(0.0,actual.size.width*actual.size.height-NSIntersectionRect(actual,usable).size.width*NSIntersectionRect(actual,usable).size.height)),
+        @"matchesWorldBounds":@(NSEqualRects(actual,expected))};
+    NSData *data=[NSJSONSerialization dataWithJSONObject:row options:NSJSONWritingSortedKeys error:nil];
+    fprintf(stderr,"LUMA_GEOMETRY %s\n",[[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] UTF8String]);
 }

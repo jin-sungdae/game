@@ -163,10 +163,22 @@ fn cumulative_choice_boundaries_and_zero_weights() {
 fn cursor_nearby_looks_and_tracks_direction_with_cooldown() {
     let mut c = controller(MOA_BEHAVIOR);
     let (x, y) = (c.entity().x, c.entity().y);
-    c.tick(16.0, 0.03, area(), (x + SIZE, y + HEIGHT / 2.0), false);
+    c.tick(
+        16.0,
+        0.03,
+        area(),
+        (x + MOA_SIZE.width / 2.0, y + MOA_SIZE.height / 2.0),
+        false,
+    );
     assert_eq!(c.entity().state, CompanionState::Looking);
     assert_eq!(c.entity().facing, 1);
-    c.tick(16.1, 0.03, area(), (x, y + HEIGHT / 2.0), false);
+    c.tick(
+        16.1,
+        0.03,
+        area(),
+        (x - MOA_SIZE.width / 2.0, y + MOA_SIZE.height / 2.0),
+        false,
+    );
     assert_eq!(c.entity().facing, -1);
     c.tick(23.0, 0.03, area(), (x, y), false);
     assert_eq!(c.entity().state, CompanionState::Idle);
@@ -177,7 +189,11 @@ fn cursor_nearby_looks_and_tracks_direction_with_cooldown() {
 fn walking_and_drag_clamp_to_negative_and_changed_work_area() {
     let mut c = controller(forced(Behavior::Walking));
     c.tick(1.0, 0.03, area(), FAR, false);
-    assert!(c.target >= area().x && c.target <= area().x + area().w - SIZE);
+    assert!(
+        c.target >= area().x
+            && c.target
+                <= area().x + area().w - MOA_SIZE.width / 2.0 - crate::geometry::LAYOUT.margin
+    );
     let x = c.entity().x;
     c.tick(1.1, 1000.0, area(), FAR, false);
     assert!((c.entity().x - x).abs() <= MOA_BEHAVIOR.walk_speed * 0.1 + f64::EPSILON);
@@ -188,10 +204,10 @@ fn walking_and_drag_clamp_to_negative_and_changed_work_area() {
         h: 50.0,
     };
     c.tick(1.2, 0.03, small, FAR, false);
-    assert_eq!((c.entity().x, c.entity().y), (100.0, 50.0));
-    c.begin_drag(2.0, area(), (100.0, 50.0));
+    assert_eq!((c.entity().x, c.entity().y), (156.0, 58.0));
+    c.begin_drag(2.0, area(), (156.0, 58.0));
     c.tick(3.0, 0.03, area(), (-9000.0, 9000.0), true);
-    assert_eq!((c.entity().x, c.entity().y), (-800.0, 176.0));
+    assert_eq!((c.entity().x, c.entity().y), (-744.0, 548.0));
 }
 #[test]
 fn seeded_replay_and_idle_interval_are_deterministic() {
@@ -215,6 +231,19 @@ fn seeded_replay_and_idle_interval_are_deterministic() {
                 b.entity().facing
             )
         );
+    }
+}
+#[test]
+fn movement_target_clamps_both_edges_with_center_anchor() {
+    for target in [-10000.0, 10000.0] {
+        let mut c = controller(forced(Behavior::Walking));
+        c.tick(1.0, 0.03, area(), FAR, false);
+        c.target = target;
+        c.tick(1.1, 0.03, area(), FAR, false);
+        let bounds = c.entity.size.bounds(c.target, c.entity.y);
+        assert!(bounds.x >= area().x + crate::geometry::LAYOUT.margin);
+        assert!(bounds.x + bounds.w <= area().x + area().w - crate::geometry::LAYOUT.margin);
+        assert_eq!(c.entity.y, area().ground_y());
     }
 }
 #[test]
