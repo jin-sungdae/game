@@ -85,3 +85,7 @@ Tao 자체 `set_activate_ignoring_other_apps`는 존재하지만 Tauri 2.11.5의
 - [Apple LSUIElement](https://developer.apple.com/documentation/bundleresources/information-property-list/lsuielement)
 
 Tauri는 `=2.11.5`로 고정했다. Tao는 같은 `0.35.3`의 local patch이며, Wry 0.55.1 / tauri-runtime-wry 2.11.4는 변경하지 않았다. 전체 framework 교체는 하지 않는다.
+
+## 최종 검증 후 architecture 유지
+
+이번 최종 검증에서는 Tauri/Rust behavior/state, entity-sized native nonactivating NSPanel, WKWebView, startup opt-in patch를 변경하지 않았다. 검증 도구에 기존 smoke 실행 옵션과 foreground 대기 로그, 종료 원인 검사를 추가했다. artifact별 해시와 결과는 [최종 validation](validation.md), 실제 mouse/typing은 [수동 체크리스트](manual-focus-test.md)에서 관리한다. 자동 상태 전이 검증은 실제 DOM hit testing이나 사람의 입력 검증을 대신하지 않는다.

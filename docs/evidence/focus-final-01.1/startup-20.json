@@ -1,0 +1,58 @@
+{
+  "binary": "<fixed-final-bundle>/LUMA Spike.app",
+  "expectedBundle": "com.microsoft.VSCode",
+  "requestedRuns": 20,
+  "runs": [
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 28582,
+      "events": [
+        {
+          "bundle": "com.apple.Preview",
+          "pid": 13985,
+          "seconds": 0.5626610517501831,
+          "source": "notification"
+        },
+        {
+          "bundle": "com.apple.Preview",
+          "pid": 13985,
+          "seconds": 0.5669620037078857,
+          "source": "poll-10ms"
+        }
+      ],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": true,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 28582,
+          "keyWindows": 0,
+          "pid": 66549,
+          "seconds": 0.0034519433975219727
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.apple.Preview",
+          "frontPid": 13985,
+          "keyWindows": 0,
+          "pid": 66549,
+          "seconds": 2.1065399646759033
+        }
+      ],
+      "keyWindows": 0,
+      "launcherPid": 66548,
+      "launchServices": true,
+      "lumaPid": 66549,
+      "pass": false,
+      "ready": true,
+      "run": 1,
+      "timedOut": false
+    }
+  ],
+  "secondsPerRun": 2
+}

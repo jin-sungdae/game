@@ -1,0 +1,18 @@
+LUMA_AUDIT {"activations":0,"event":"before-tauri","frontBundle":"com.openai.chat","frontPid":80714,"keyWindows":0,"pid":66865,"seconds":0.0020859241485595703}
+2026-09-17 12:32:24.701 luma-spike[66865:48268420] [LUMA PANEL] moa opaque=0 level=3 keyAllowed=0 mainAllowed=0
+2026-09-17 12:32:24.734 luma-spike[66865:48268420] [LUMA PANEL] pip opaque=0 level=3 keyAllowed=0 mainAllowed=0
+2026-09-17 12:32:24.763 luma-spike[66865:48268420] [LUMA PANEL] interaction opaque=0 level=3 keyAllowed=0 mainAllowed=0
+[LUMA STATE] t=0.04 Idle:None:-1:false moa=(1776.0,82.0) pip=None
+[LUMA FOCUS] app active=0 t=0.04
+[LUMA STATE] t=2.01 Idle:Some((Spawning, -1)):-1:false moa=(1776.0,82.0) pip=Some((1958.10775205, 82.0))
+[LUMA STATE] t=2.63 Idle:Some((Roaming, -1)):-1:false moa=(1776.0,82.0) pip=Some((1927.2882249000004, 82.0))
+[LUMA STATE] t=3.53 Reacting:Some((Engaged, -1)):1:false moa=(1776.0,82.0) pip=Some((1905.5995668600003, 82.0))
+[LUMA STATE] t=4.00 Reacting:Some((Engaged, -1)):1:true moa=(1776.0,82.0) pip=Some((1905.5995668600003, 82.0))
+[LUMA STATE] t=4.75 Idle:Some((Engaged, -1)):1:true moa=(1776.0,82.0) pip=Some((1905.5995668600003, 82.0))
+[LUMA STATE] t=6.02 Reacting:Some((Engaged, -1)):1:false moa=(1776.0,82.0) pip=Some((1904.7918788520003, 82.0))
+[LUMA STATE] t=7.25 Idle:Some((Engaged, -1)):1:false moa=(1776.0,82.0) pip=Some((1904.7918788520003, 82.0))
+[LUMA STATE] t=8.02 Idle:Some((Despawning, -1)):1:false moa=(1776.0,82.0) pip=Some((1904.7918788520003, 82.0))
+[LUMA STATE] t=8.53 Idle:None:1:false moa=(1776.0,82.0) pip=None
+[LUMA SMOKE] normal exit
+LUMA_AUDIT {"activations":0,"event":"exit","frontBundle":"com.openai.chat","frontPid":80714,"keyWindows":0,"pid":66865,"seconds":10.253968954086304}
+[LUMA EXIT] panels and status item cleaned
