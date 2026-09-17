@@ -46,6 +46,9 @@ fn main() {
     let stopped = Arc::new(AtomicBool::new(false));
     let stop_setup = stopped.clone();
     let mut app = tauri::Builder::default()
+        // Register first: a secondary exits before setup creates any entities/panels.
+        // Deliberately ignore args/cwd; never focus, activate or reopen the primary.
+        .plugin(tauri_plugin_single_instance::init(|_, _, _| {}))
         .invoke_handler(tauri::generate_handler![snapshot, action])
         .setup(move |app| {
             unsafe { overlay::luma_init() };
