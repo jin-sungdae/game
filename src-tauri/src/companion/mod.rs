@@ -1,3 +1,6 @@
+use crate::movement::{
+    self, MovementConfig, MovementController, MovementIntent, MovementProfile, MOA_MOVEMENT,
+};
 pub mod config;
 mod selection;
 mod transitions;
@@ -5,6 +8,12 @@ use crate::entities::{Area, CompanionState, Entity, MOA_SIZE};
 use config::{BehaviorConfig, CompanionPersonality};
 use transitions::Event;
 
+#[derive(Clone, Copy)]
+struct Excursion {
+    start: (f64, f64),
+    target: (f64, f64),
+    height: f64,
+}
 struct DragGesture {
     offset: (f64, f64),
     start: (f64, f64),
@@ -20,7 +29,13 @@ pub struct CompanionController {
     quiet_since: f64,
     cursor_ready_at: f64,
     target: f64,
+    movement: MovementController,
+    movement_config: MovementConfig,
+    movement_ready_at: f64,
+    windows: Option<Vec<Area>>,
+    excursion: Option<Excursion>,
     rng: u64,
+    movement_rng: u64,
     drag: Option<DragGesture>,
 }
 impl CompanionController {
@@ -47,7 +62,14 @@ impl CompanionController {
             quiet_since: now,
             cursor_ready_at: now + config.cursor_cooldown,
             target: x,
+            movement: MovementController::default(),
+            movement_config: MOA_MOVEMENT,
+            movement_ready_at: now + MOA_MOVEMENT.cooldown,
+            windows: None,
+            excursion: None,
             rng: seed.max(1),
+            // Separate deterministic stream; movement choices do not consume behavior randomness.
+            movement_rng: (seed ^ 0x6c756d615f6d6f76).max(1),
             drag: None,
         };
         s.duration = config.idle.sample(s.random());
@@ -56,17 +78,31 @@ impl CompanionController {
     pub fn entity(&self) -> &Entity<CompanionState> {
         &self.entity
     }
+    pub fn set_movement_windows(&mut self, windows: Option<Vec<Area>>) {
+        self.windows = windows;
+    }
     fn random(&mut self) -> f64 {
         self.rng ^= self.rng << 13;
         self.rng ^= self.rng >> 7;
         self.rng ^= self.rng << 17;
         (self.rng >> 11) as f64 / ((1u64 << 53) as f64)
     }
+    fn movement_random(&mut self) -> f64 {
+        self.movement_rng ^= self.movement_rng << 13;
+        self.movement_rng ^= self.movement_rng >> 7;
+        self.movement_rng ^= self.movement_rng << 17;
+        (self.movement_rng >> 11) as f64 / ((1u64 << 53) as f64)
+    }
     fn apply(&mut self, event: Event, now: f64, area: Area, cursor: (f64, f64)) {
         let Some(state) = transitions::next(self.entity.state, event) else {
             return;
         };
         let previous = self.entity.state;
+        self.movement.cancel();
+        self.excursion = None;
+        if state != CompanionState::Dragging {
+            (self.entity.x, self.entity.y) = area.ground(self.entity.x, self.entity.size);
+        }
         self.entity.state = state;
         self.entered_at = now;
         self.duration = match state {
@@ -74,6 +110,64 @@ impl CompanionController {
             CompanionState::Walking => {
                 let offset = (self.random() * 2.0 - 1.0) * self.config.walk_radius;
                 self.target = area.ground(self.entity.x + offset, self.entity.size).0;
+                let config = self.movement_config;
+                let mut intent = MovementIntent {
+                    profile: config.default,
+                    target: area.ground(self.target, self.entity.size),
+                    duration: self.config.walk_duration,
+                    height: 0.0,
+                };
+                if now >= self.movement_ready_at {
+                    let profile = config.choose(self.movement_random());
+                    if matches!(profile, MovementProfile::Jump | MovementProfile::Free2d) {
+                        let target = movement::bounded_target(
+                            (self.entity.x, self.entity.y),
+                            self.movement_random(),
+                            area,
+                            self.entity.size,
+                            config,
+                        );
+                        let target = if profile == MovementProfile::Jump {
+                            area.ground(target.0, self.entity.size)
+                        } else {
+                            target
+                        };
+                        let height = if profile == MovementProfile::Jump {
+                            config.height
+                        } else {
+                            0.0
+                        };
+                        if movement::unobstructed(
+                            (self.entity.x, self.entity.y),
+                            target,
+                            height,
+                            self.entity.size,
+                            cursor,
+                            self.windows.as_deref(),
+                            config.cursor_clearance,
+                        ) {
+                            intent = MovementIntent {
+                                profile,
+                                target,
+                                duration: config.duration,
+                                height,
+                            };
+                            self.excursion = Some(Excursion {
+                                start: (self.entity.x, self.entity.y),
+                                target,
+                                height,
+                            });
+                            self.movement_ready_at = now + config.cooldown;
+                            self.target = target.0;
+                        }
+                    }
+                }
+                self.movement.start(
+                    intent,
+                    (self.entity.x, self.entity.y),
+                    area,
+                    self.entity.size,
+                );
                 self.entity.facing = if self.target >= self.entity.x { 1 } else { -1 };
                 self.quiet_since = now;
                 self.config.walk_duration
@@ -130,7 +224,7 @@ impl CompanionController {
     }
     pub fn tick(&mut self, now: f64, dt: f64, area: Area, cursor: (f64, f64), down: bool) {
         let dt = dt.clamp(0.0, 0.1); // Existing sleep/busy-main-thread protection.
-        (self.entity.x, self.entity.y) = area.ground(self.entity.x, self.entity.size);
+        (self.entity.x, self.entity.y) = area.clamp(self.entity.x, self.entity.y, self.entity.size);
         if let Some(gesture) = &mut self.drag {
             (self.entity.x, self.entity.y) = area.clamp(
                 cursor.0 - gesture.offset.0,
@@ -177,9 +271,38 @@ impl CompanionController {
         match self.entity.state {
             CompanionState::Walking => {
                 self.target = area.ground(self.target, self.entity.size).0;
-                let d = self.target - self.entity.x;
-                self.entity.x += d.signum() * d.abs().min(self.config.walk_speed * dt);
-                if d.abs() <= self.config.walk_speed * dt {
+                if let Some(Excursion {
+                    start,
+                    target,
+                    height,
+                }) = self.excursion
+                {
+                    if !movement::unobstructed(
+                        start,
+                        target,
+                        height,
+                        self.entity.size,
+                        cursor,
+                        self.windows.as_deref(),
+                        self.movement_config.cursor_clearance,
+                    ) {
+                        self.apply(Event::Finished, now, area, cursor);
+                        return;
+                    }
+                }
+                if self.movement.profile() == Some(MovementProfile::Ground) {
+                    self.movement
+                        .retarget_ground(self.target, area, self.entity.size);
+                }
+                let (position, complete) = self.movement.tick(
+                    (self.entity.x, self.entity.y),
+                    dt,
+                    area,
+                    self.entity.size,
+                    self.config.walk_speed,
+                );
+                (self.entity.x, self.entity.y) = position;
+                if complete {
                     self.apply(Event::Finished, now, area, cursor);
                 }
             }
@@ -191,7 +314,11 @@ impl CompanionController {
             }
             _ => {} // SITTING/SLEEPING/REACTING never move.
         }
-        (self.entity.x, self.entity.y) = area.ground(self.entity.x, self.entity.size);
+        (self.entity.x, self.entity.y) = if self.entity.state == CompanionState::Walking {
+            area.clamp(self.entity.x, self.entity.y, self.entity.size)
+        } else {
+            area.ground(self.entity.x, self.entity.size)
+        };
     }
 }
 #[cfg(test)]

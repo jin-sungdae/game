@@ -4,6 +4,7 @@ mod companion;
 mod desktop;
 mod entities;
 mod geometry;
+mod movement;
 mod overlay;
 use behaviors::{Snapshot, World};
 use std::{
@@ -161,6 +162,7 @@ fn main() {
                                 }
                                 _ => {}
                             }
+                            world.set_movement_windows(overlay::movement_windows());
                             world.tick(now, dt, cursor, down);
                             let view = &world.view;
                             unsafe {
