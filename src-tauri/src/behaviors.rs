@@ -1,56 +1,34 @@
+use crate::companion::{
+    config::{MOA_BEHAVIOR, MOA_PERSONALITY},
+    CompanionController,
+};
 use crate::entities::*;
 use serde::Serialize;
 #[derive(Clone, Serialize)]
 pub struct Snapshot {
-    pub moa: Entity<MoaState>,
+    pub moa: Entity<CompanionState>,
     pub pip: Option<Entity<PipState>>,
     pub menu: bool,
 }
 pub struct World {
     pub view: Snapshot,
     pub area: Area,
-    next_walk: f64,
-    walk_end: f64,
-    reaction_end: f64,
+    companion: CompanionController,
     pip_deadline: f64,
-    target: f64,
-    rng: u64,
-    drag: Option<(f64, f64, f64, f64)>,
 }
 impl World {
     pub fn new(area: Area, now: f64, seed: u64) -> Self {
-        let (x, y) = area.clamp(area.x + area.w - 280.0, area.y + 12.0);
-        let mut s = Self {
+        let companion = CompanionController::new(area, now, seed, MOA_PERSONALITY, MOA_BEHAVIOR);
+        Self {
             view: Snapshot {
-                moa: Entity {
-                    x,
-                    y,
-                    state: MoaState::Idle,
-                    facing: -1,
-                },
+                moa: companion.entity().clone(),
                 pip: None,
                 menu: false,
             },
             area,
-            next_walk: now,
-            walk_end: 0.0,
-            reaction_end: 0.0,
+            companion,
             pip_deadline: 0.0,
-            target: x,
-            rng: seed.max(1),
-            drag: None,
-        };
-        s.schedule(now);
-        s
-    }
-    fn random(&mut self) -> f64 {
-        self.rng ^= self.rng << 13;
-        self.rng ^= self.rng >> 7;
-        self.rng ^= self.rng << 17;
-        (self.rng >> 11) as f64 / ((1u64 << 53) as f64)
-    }
-    fn schedule(&mut self, now: f64) {
-        self.next_walk = now + 30.0 + self.random() * 30.0;
+        }
     }
     pub fn spawn(&mut self, now: f64) {
         if self.view.pip.is_some() {
@@ -74,16 +52,9 @@ impl World {
         }
         self.view.menu = false;
     }
-    pub fn react(&mut self, now: f64) {
-        if self.view.moa.state != MoaState::Dragging {
-            self.view.moa.state = MoaState::Reacting;
-            self.reaction_end = now + 1.2;
-        }
-    }
-    pub fn drag(&mut self, cursor: (f64, f64)) {
-        let m = &mut self.view.moa;
-        self.drag = Some((cursor.0 - m.x, cursor.1 - m.y, cursor.0, cursor.1));
-        m.state = MoaState::Dragging;
+    pub fn drag(&mut self, now: f64, cursor: (f64, f64)) {
+        self.companion.begin_drag(now, self.area, cursor);
+        self.view.moa = self.companion.entity().clone();
     }
     pub fn interact(&mut self) {
         if let Some(p) = &mut self.view.pip {
@@ -102,47 +73,10 @@ impl World {
         }
     }
     pub fn tick(&mut self, now: f64, dt: f64, cursor: (f64, f64), down: bool) {
-        let dt = dt.clamp(0.0, 0.1); // No jump after sleep or a busy main thread.
-        if let Some((ox, oy, sx, sy)) = self.drag {
-            let (x, y) = self.area.clamp(cursor.0 - ox, cursor.1 - oy);
-            self.view.moa.x = x;
-            self.view.moa.y = y;
-            if !down {
-                self.drag = None;
-                self.view.moa.state = MoaState::Idle;
-                self.schedule(now);
-                if (cursor.0 - sx).hypot(cursor.1 - sy) < 5.0 {
-                    self.react(now);
-                }
-            }
-        } else {
-            match self.view.moa.state {
-                MoaState::Idle if now >= self.next_walk => {
-                    let offset = (self.random() - 0.5) * 360.0;
-                    self.target = self.area.clamp(self.view.moa.x + offset, self.view.moa.y).0;
-                    self.view.moa.facing = if self.target >= self.view.moa.x {
-                        1
-                    } else {
-                        -1
-                    };
-                    self.view.moa.state = MoaState::Walking;
-                    self.walk_end = now + 5.0;
-                }
-                MoaState::Walking => {
-                    let d = self.target - self.view.moa.x;
-                    self.view.moa.x += d.signum() * d.abs().min(40.0 * dt);
-                    if d.abs() < 1.0 || now >= self.walk_end {
-                        self.view.moa.state = MoaState::Idle;
-                        self.schedule(now);
-                    }
-                }
-                MoaState::Reacting if now >= self.reaction_end => {
-                    self.view.moa.state = MoaState::Idle;
-                    self.schedule(now);
-                }
-                _ => {}
-            }
-        }
+        let dt = dt.clamp(0.0, 0.1);
+        let was_dragging = self.companion.entity().state == CompanionState::Dragging;
+        self.companion.tick(now, dt, self.area, cursor, down);
+        self.view.moa = self.companion.entity().clone();
         let mut remove = false;
         let mut react = false;
         if let Some(p) = &mut self.view.pip {
@@ -162,7 +96,7 @@ impl World {
                     p.x = x;
                     p.y = y;
                     let distance = (p.x - self.view.moa.x).hypot(p.y - self.view.moa.y);
-                    if distance < 130.0 && self.view.moa.state != MoaState::Dragging {
+                    if distance < 130.0 && !was_dragging {
                         p.state = PipState::Engaged;
                         react = true;
                     }
@@ -180,19 +114,16 @@ impl World {
             }
         }
         if react {
-            self.view.moa.facing = if self.view.pip.as_ref().unwrap().x >= self.view.moa.x {
-                1
-            } else {
-                -1
-            };
-            self.react(now);
+            self.companion.react(
+                now,
+                self.area,
+                self.view.pip.as_ref().map(|p| p.x + SIZE / 2.0),
+            );
+            self.view.moa = self.companion.entity().clone();
         }
         if remove {
             self.view.pip = None;
         }
-        let (x, y) = self.area.clamp(self.view.moa.x, self.view.moa.y);
-        self.view.moa.x = x;
-        self.view.moa.y = y;
         if let Some(p) = &mut self.view.pip {
             let (x, y) = self.area.clamp(p.x, p.y);
             p.x = x;
@@ -216,40 +147,24 @@ mod tests {
         )
     }
     #[test]
-    fn walk_interval() {
-        let mut w = world();
-        for _ in 0..1000 {
-            w.schedule(10.0);
-            assert!((40.0..=70.0).contains(&w.next_walk));
-        }
-    }
-    #[test]
-    fn walk_cycle() {
-        let mut w = world();
-        w.tick(61.0, 0.03, (0.0, 0.0), false);
-        assert_eq!(w.view.moa.state, MoaState::Walking);
-        w.tick(67.0, 0.03, (0.0, 0.0), false);
-        assert_eq!(w.view.moa.state, MoaState::Idle);
-    }
-    #[test]
     fn drag_clamps_and_recovers() {
         let mut w = world();
-        w.drag((w.view.moa.x, w.view.moa.y));
+        w.drag(0.0, (w.view.moa.x, w.view.moa.y));
         w.tick(1.0, 0.03, (9000.0, -9000.0), true);
         assert_eq!(w.view.moa.x, -96.0);
         assert_eq!(w.view.moa.y, 60.0);
         w.tick(2.0, 0.03, (9000.0, -9000.0), false);
-        assert_eq!(w.view.moa.state, MoaState::Idle);
+        assert_eq!(w.view.moa.state, CompanionState::Idle);
     }
     #[test]
     fn click_reaction() {
         let mut w = world();
         let p = (w.view.moa.x, w.view.moa.y);
-        w.drag(p);
+        w.drag(0.0, p);
         w.tick(0.1, 0.03, p, false);
-        assert_eq!(w.view.moa.state, MoaState::Reacting);
+        assert_eq!(w.view.moa.state, CompanionState::Reacting);
         w.tick(2.0, 0.03, p, false);
-        assert_eq!(w.view.moa.state, MoaState::Idle);
+        assert_eq!(w.view.moa.state, CompanionState::Idle);
     }
     #[test]
     fn pip_lifecycle() {
@@ -259,7 +174,7 @@ mod tests {
         w.tick(1.0, 0.03, (0.0, 0.0), false);
         w.view.pip.as_mut().unwrap().x = w.view.moa.x + 110.0;
         w.tick(1.1, 0.03, (0.0, 0.0), false);
-        assert_eq!(w.view.moa.state, MoaState::Reacting);
+        assert_eq!(w.view.moa.state, CompanionState::Reacting);
         w.interact();
         assert!(w.view.menu);
         w.close();
@@ -267,6 +182,26 @@ mod tests {
         w.despawn(2.0);
         w.tick(3.0, 0.03, (0.0, 0.0), false);
         assert!(w.view.pip.is_none());
+    }
+    #[test]
+    fn pip_waits_for_drag_release_then_reaction_expires() {
+        let mut w = world();
+        w.spawn(0.0);
+        w.tick(1.0, 0.03, (0.0, 0.0), false);
+        let start = (w.view.moa.x, w.view.moa.y);
+        w.view.pip.as_mut().unwrap().x = start.0 + 80.0;
+        w.drag(1.0, start);
+        let end = (start.0 + 50.0, start.1);
+        w.tick(2.0, 0.03, end, true);
+        assert_eq!(w.view.moa.state, CompanionState::Dragging);
+        assert_eq!(w.view.pip.as_ref().unwrap().state, PipState::Roaming);
+        w.tick(3.0, 0.03, end, false);
+        assert_eq!(w.view.moa.state, CompanionState::Idle);
+        w.tick(3.1, 0.03, end, false);
+        assert_eq!(w.view.moa.state, CompanionState::Reacting);
+        assert_eq!(w.view.pip.as_ref().unwrap().state, PipState::Engaged);
+        w.tick(4.4, 0.03, end, false);
+        assert_eq!(w.view.moa.state, CompanionState::Idle);
     }
     #[test]
     fn area_change_and_sleep() {

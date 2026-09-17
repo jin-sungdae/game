@@ -1,0 +1,113 @@
+{
+  "date": "2026-09-17",
+  "executableSha256": "9d9a9c3e71563ca950d0008ec5d223bac454193cc85359976485d8d23c9bc600",
+  "reports": {
+    "smoke": {
+      "binary": "/Users/jinseongdae/Documents/ChatGPT/New project/src-tauri/target/debug/bundle/macos/LUMA Spike.app",
+      "expectedBundle": "com.openai.codex",
+      "mode": "existing-smoke",
+      "requestedRuns": 1,
+      "runs": [
+        {
+          "appActivations": 0,
+          "baselineBundle": "com.openai.codex",
+          "baselinePid": 85083,
+          "events": [],
+          "exitCode": 0,
+          "exitSeen": true,
+          "foregroundChanged": false,
+          "internal": [
+            {
+              "activations": 0,
+              "event": "before-tauri",
+              "frontBundle": "com.openai.codex",
+              "frontPid": 85083,
+              "keyWindows": 0,
+              "pid": 82225,
+              "seconds": 0.0034009218215942383
+            },
+            {
+              "activations": 0,
+              "event": "exit",
+              "frontBundle": "com.openai.codex",
+              "frontPid": 85083,
+              "keyWindows": 0,
+              "pid": 82225,
+              "seconds": 10.303748965263367
+            }
+          ],
+          "keyWindows": 0,
+          "launcherPid": 82224,
+          "launchServices": true,
+          "lumaPid": 82225,
+          "pass": true,
+          "ready": true,
+          "run": 1,
+          "terminationReason": 1,
+          "timedOut": false
+        }
+      ],
+      "secondsPerRun": 12
+    },
+    "normal": {
+      "binary": "/Users/jinseongdae/Documents/ChatGPT/New project/src-tauri/target/debug/bundle/macos/LUMA Spike.app",
+      "expectedBundle": "com.openai.codex",
+      "mode": "normal",
+      "requestedRuns": 1,
+      "runs": [
+        {
+          "appActivations": 0,
+          "baselineBundle": "com.openai.codex",
+          "baselinePid": 85083,
+          "events": [
+            {
+              "bundle": "com.openai.chat",
+              "pid": 80714,
+              "seconds": 71.42361795902252,
+              "source": "notification"
+            },
+            {
+              "bundle": "com.openai.chat",
+              "pid": 80714,
+              "seconds": 71.43278992176056,
+              "source": "poll-10ms"
+            }
+          ],
+          "exitCode": 0,
+          "exitSeen": true,
+          "foregroundChanged": true,
+          "internal": [
+            {
+              "activations": 0,
+              "event": "before-tauri",
+              "frontBundle": "com.openai.codex",
+              "frontPid": 85083,
+              "keyWindows": 0,
+              "pid": 82404,
+              "seconds": 0.0019559860229492188
+            },
+            {
+              "activations": 0,
+              "event": "exit",
+              "frontBundle": "com.openai.chat",
+              "frontPid": 80714,
+              "keyWindows": 0,
+              "pid": 82404,
+              "seconds": 71.51913094520569
+            }
+          ],
+          "keyWindows": 0,
+          "launcherPid": 82403,
+          "launchServices": true,
+          "lumaPid": 82404,
+          "pass": false,
+          "ready": true,
+          "run": 1,
+          "terminationReason": 1,
+          "timedOut": false
+        }
+      ],
+      "secondsPerRun": 70
+    }
+  }
+}

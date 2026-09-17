@@ -3,9 +3,12 @@ pub const SIZE: f64 = 96.0;
 pub const HEIGHT: f64 = 104.0;
 #[derive(Clone, Copy, Debug, PartialEq, Serialize)]
 #[serde(rename_all = "SCREAMING_SNAKE_CASE")]
-pub enum MoaState {
+pub enum CompanionState {
     Idle,
     Walking,
+    Sitting,
+    Looking,
+    Sleeping,
     Dragging,
     Reacting,
 }

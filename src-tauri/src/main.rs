@@ -1,5 +1,6 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 mod behaviors;
+mod companion;
 mod entities;
 mod overlay;
 use behaviors::{Snapshot, World};
@@ -29,7 +30,7 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
             eprintln!("[LUMA INPUT] {kind}");
             match kind.as_str() {
                 "spawn" => world.spawn(now),
-                "drag" => world.drag(overlay::cursor().0),
+                "drag" => world.drag(now, overlay::cursor().0),
                 "interact" => world.interact(),
                 "close" => world.close(),
                 "battle" | "capture" => eprintln!("[LUMA DEBUG] PIP {} (no game logic)", kind),
