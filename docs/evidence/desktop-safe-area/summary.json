@@ -1,0 +1,194 @@
+{
+  "date": "2026-09-17",
+  "verdict": "MANUAL_REQUIRED",
+  "previousVisualVerdict": "FAIL_USER_REPORTED",
+  "executableSha256": "852b1992d6ff20a9fbba379122507b77fd82ff2603a486902efcd14724a33ef9",
+  "mode": "debug bundle, existing PIP smoke",
+  "pid": 2288,
+  "samples": 17,
+  "safeAreaContainment": "PASS",
+  "panelProjection": "PASS",
+  "physicalDockOverlap": "NOT_VERIFIED",
+  "detectedDockBounds": [],
+  "fallbackSafeInsets": {
+    "bottom": 192,
+    "left": 192,
+    "right": 192,
+    "top": 0
+  },
+  "finalLumaSafeArea": {
+    "h": 1098,
+    "w": 1672,
+    "x": 192,
+    "y": 192
+  },
+  "representative": {
+    "MOA": {
+      "computedGroundLine": 200,
+      "detectedDockBounds": [],
+      "detectedDockIntersectionArea": null,
+      "dockBoundsStatus": "FALLBACK_UNVERIFIED",
+      "dockWindowCandidates": [
+        {
+          "h": 1329,
+          "w": 2056,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "entity": "MOA",
+      "expectedPanelFrame": {
+        "h": 104,
+        "w": 96,
+        "x": 1584,
+        "y": 200
+      },
+      "fallbackSafeInsets": {
+        "bottom": 192,
+        "left": 192,
+        "right": 192,
+        "top": 0
+      },
+      "finalLumaSafeArea": {
+        "h": 1098,
+        "w": 1672,
+        "x": 192,
+        "y": 192
+      },
+      "fitsUsableBounds": true,
+      "matchesWorldBounds": true,
+      "panelFrame": {
+        "h": 104,
+        "w": 96,
+        "x": 1584,
+        "y": 200
+      },
+      "pid": 2288,
+      "rejectedDockCandidates": 1,
+      "reservedIntersectionArea": 0,
+      "retainedSafeInsets": {
+        "bottom": 192,
+        "left": 192,
+        "right": 192,
+        "top": 39
+      },
+      "screenFrame": {
+        "h": 1329,
+        "w": 2056,
+        "x": 0,
+        "y": 0
+      },
+      "uptime": 1303874.930445625,
+      "visible": 1,
+      "visibleFrame": {
+        "h": 1290,
+        "w": 2056,
+        "x": 0,
+        "y": 0
+      },
+      "visualVerification": "MANUAL_REQUIRED",
+      "world": {
+        "x": 1632,
+        "y": 200
+      }
+    },
+    "PIP": {
+      "computedGroundLine": 200,
+      "detectedDockBounds": [],
+      "detectedDockIntersectionArea": null,
+      "dockBoundsStatus": "FALLBACK_UNVERIFIED",
+      "dockWindowCandidates": [
+        {
+          "h": 1329,
+          "w": 2056,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "entity": "PIP",
+      "expectedPanelFrame": {
+        "h": 104,
+        "w": 96,
+        "x": 1758,
+        "y": 200
+      },
+      "fallbackSafeInsets": {
+        "bottom": 192,
+        "left": 192,
+        "right": 192,
+        "top": 0
+      },
+      "finalLumaSafeArea": {
+        "h": 1098,
+        "w": 1672,
+        "x": 192,
+        "y": 192
+      },
+      "fitsUsableBounds": true,
+      "matchesWorldBounds": true,
+      "panelFrame": {
+        "h": 104,
+        "w": 96,
+        "x": 1758,
+        "y": 200
+      },
+      "pid": 2288,
+      "rejectedDockCandidates": 1,
+      "reservedIntersectionArea": 0,
+      "retainedSafeInsets": {
+        "bottom": 192,
+        "left": 192,
+        "right": 192,
+        "top": 39
+      },
+      "screenFrame": {
+        "h": 1329,
+        "w": 2056,
+        "x": 0,
+        "y": 0
+      },
+      "uptime": 1303876.9182367085,
+      "visible": 1,
+      "visibleFrame": {
+        "h": 1290,
+        "w": 2056,
+        "x": 0,
+        "y": 0
+      },
+      "visualVerification": "MANUAL_REQUIRED",
+      "world": {
+        "x": 1806.29799165,
+        "y": 200
+      }
+    }
+  },
+  "focusAudit": [
+    {
+      "activations": 0,
+      "event": "before-tauri",
+      "frontBundle": "com.openai.codex",
+      "frontPid": 85083,
+      "keyWindows": 0,
+      "pid": 2288,
+      "seconds": 0.002382040023803711
+    },
+    {
+      "activations": 0,
+      "event": "exit",
+      "frontBundle": "com.openai.codex",
+      "frontPid": 85083,
+      "keyWindows": 0,
+      "pid": 2288,
+      "seconds": 10.267063975334167
+    }
+  ],
+  "continuousExternalForegroundObserver": "NOT_RUN",
+  "rustTests": 30,
+  "previousRustTestsRetained": 23,
+  "clippy": "PASS",
+  "npmBuild": "PASS",
+  "debugBundle": "PASS",
+  "manualMouseTyping": "PENDING_USER",
+  "screenshot": "Dock CUA inspection timed out; not obtained",
+  "merge": "NOT_AUTHORIZED"
+}

@@ -1,7 +1,7 @@
 pub mod config;
 mod selection;
 mod transitions;
-use crate::entities::{Area, CompanionState, Entity, HEIGHT, SIZE};
+use crate::entities::{Area, CompanionState, Entity, MOA_SIZE};
 use config::{BehaviorConfig, CompanionPersonality};
 use transitions::Event;
 
@@ -31,11 +31,12 @@ impl CompanionController {
         personality: CompanionPersonality,
         config: BehaviorConfig,
     ) -> Self {
-        let (x, y) = area.clamp(area.x + area.w - 280.0, area.y + 12.0);
+        let (x, y) = area.ground(area.x + area.w - 280.0 + MOA_SIZE.width / 2.0, MOA_SIZE);
         let mut s = Self {
             entity: Entity {
                 x,
                 y,
+                size: MOA_SIZE,
                 state: CompanionState::Idle,
                 facing: -1,
             },
@@ -72,7 +73,7 @@ impl CompanionController {
             CompanionState::Idle => self.config.idle.sample(self.random()),
             CompanionState::Walking => {
                 let offset = (self.random() * 2.0 - 1.0) * self.config.walk_radius;
-                self.target = area.clamp(self.entity.x + offset, self.entity.y).0;
+                self.target = area.ground(self.entity.x + offset, self.entity.size).0;
                 self.entity.facing = if self.target >= self.entity.x { 1 } else { -1 };
                 self.quiet_since = now;
                 self.config.walk_duration
@@ -102,7 +103,7 @@ impl CompanionController {
         }
     }
     fn face(&mut self, x: f64) {
-        let delta = x - (self.entity.x + SIZE / 2.0);
+        let delta = x - self.entity.x;
         if delta != 0.0 {
             self.entity.facing = if delta > 0.0 { 1 } else { -1 };
         }
@@ -129,16 +130,20 @@ impl CompanionController {
     }
     pub fn tick(&mut self, now: f64, dt: f64, area: Area, cursor: (f64, f64), down: bool) {
         let dt = dt.clamp(0.0, 0.1); // Existing sleep/busy-main-thread protection.
-        (self.entity.x, self.entity.y) = area.clamp(self.entity.x, self.entity.y);
+        (self.entity.x, self.entity.y) = area.ground(self.entity.x, self.entity.size);
         if let Some(gesture) = &mut self.drag {
-            (self.entity.x, self.entity.y) =
-                area.clamp(cursor.0 - gesture.offset.0, cursor.1 - gesture.offset.1);
+            (self.entity.x, self.entity.y) = area.clamp(
+                cursor.0 - gesture.offset.0,
+                cursor.1 - gesture.offset.1,
+                self.entity.size,
+            );
             gesture.max_distance = gesture
                 .max_distance
                 .max((cursor.0 - gesture.start.0).hypot(cursor.1 - gesture.start.1));
             if !down {
                 let clicked = gesture.max_distance < self.config.click_distance;
                 self.drag = None;
+                (self.entity.x, self.entity.y) = area.ground(self.entity.x, self.entity.size);
                 self.apply(Event::DragReleased, now, area, cursor);
                 // Preserve the spike's native mouse gesture classification: click is a separate reaction.
                 if clicked {
@@ -147,8 +152,8 @@ impl CompanionController {
             }
             return; // No automatic decision or cursor awareness during/releasing a drag.
         }
-        let nearby = (cursor.0 - self.entity.x - SIZE / 2.0)
-            .hypot(cursor.1 - self.entity.y - HEIGHT / 2.0)
+        let nearby = (cursor.0 - self.entity.x)
+            .hypot(cursor.1 - self.entity.y - self.entity.size.height / 2.0)
             <= self.config.cursor_radius;
         if now - self.entered_at >= self.duration {
             if self.entity.state == CompanionState::Idle {
@@ -171,7 +176,7 @@ impl CompanionController {
         }
         match self.entity.state {
             CompanionState::Walking => {
-                self.target = area.clamp(self.target, self.entity.y).0;
+                self.target = area.ground(self.target, self.entity.size).0;
                 let d = self.target - self.entity.x;
                 self.entity.x += d.signum() * d.abs().min(self.config.walk_speed * dt);
                 if d.abs() <= self.config.walk_speed * dt {
@@ -186,7 +191,7 @@ impl CompanionController {
             }
             _ => {} // SITTING/SLEEPING/REACTING never move.
         }
-        (self.entity.x, self.entity.y) = area.clamp(self.entity.x, self.entity.y);
+        (self.entity.x, self.entity.y) = area.ground(self.entity.x, self.entity.size);
     }
 }
 #[cfg(test)]

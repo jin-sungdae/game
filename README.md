@@ -83,3 +83,9 @@ Smoke 모드는 약 10초 동안 spawn → interaction → close → despawn →
 `src-tauri/vendor/tao`는 기존 Tao 0.35.3의 opt-in startup 수정입니다. Tauri/Wry/entity/behavior 구조는 유지합니다. `Info.plist`의 LSUIElement와 pre-run Accessory를 사용하며, 다른 앱을 다시 activate하는 포커스 복구 코드는 없습니다.
 
 반복 실행 도구는 `scripts/launch_audit.m`이며 컴파일/실행법은 검증 보고서에 있습니다. 기본 실행은 audit가 꺼져 있고, `LUMA_FOCUS_AUDIT=1`을 설정할 때만 activation/key-window notification을 기록합니다. `LUMA_AUDIT_EXIT_SECONDS=120`으로 검증용 자동 정상 종료를 설정할 수 있습니다.
+
+## Desktop ground coordinate
+
+GROUND entity는 bottom-center world anchor와 visibleFrame 기반 공통 ground line을 사용한다. 드래그 중에는 전체 panel bounds를 제한하고 release 시 ground로 정렬한다. [좌표 계약·진단·검증](docs/desktop-ground-coordinate.md).
+
+Dock overlay가 visibleFrame에 포함되는 사용자 FAIL을 반영하여 [DesktopSafeArea 정책](docs/desktop-safe-area.md)을 추가했습니다. 현재 PR #5는 실제 사용자 재검증 대기이며 geometry PASS만으로 merge하지 않습니다.
