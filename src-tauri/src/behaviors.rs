@@ -214,7 +214,7 @@ mod tests {
         w.tick(0.1, 0.03, (start.0, 10000.0), true);
         assert_eq!(
             w.view.moa.y + w.view.moa.size.height,
-            w.area.y + w.area.h - crate::geometry::LAYOUT.margin
+            w.area.y + w.area.h - crate::geometry::LAYOUT.side_margin
         );
         w.tick(0.2, 0.03, (start.0, 10000.0), false);
         assert_eq!(w.view.moa.y, w.view.pip.as_ref().unwrap().y);

@@ -1,5 +1,7 @@
 # Desktop Ground Coordinate bug fix
 
+> **SUPERSEDED UX VERDICT:** 사용자가 실제 Dock 뒤로 MOA가 가려지는 FAIL을 확인했습니다. 아래 수치 PASS는 역사적 visibleFrame 검사일 뿐 UX PASS가 아닙니다. 현재 수정과 검증 기준은 [DesktopSafeArea](desktop-safe-area.md)를 따릅니다. PR #5는 병합하지 않습니다.
+
 ## Root cause와 수정 전 실측
 
 수정 전 AppKit과 Rust는 모두 논리 point, bottom-left 원점, 위쪽 +Y였다. Retina 배율을 곱하거나 Y를 뒤집는 코드는 없었다. 따라서 좌표계 반전/배율 오류가 입증된 것은 아니다.

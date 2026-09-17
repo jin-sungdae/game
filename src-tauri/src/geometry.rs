@@ -17,18 +17,9 @@ pub const MENU_SIZE: Size = Size {
     width: 160.0,
     height: 140.0,
 };
-pub struct DesktopLayout {
-    pub margin: f64,
-    pub ground_margin: f64,
-    pub menu_gap: f64,
-}
-// Visual padding, not a Dock height estimate. Shared by every ground entity.
-pub const LAYOUT: DesktopLayout = DesktopLayout {
-    margin: 8.0,
-    ground_margin: 8.0,
-    menu_gap: 6.0,
-};
-#[derive(Clone, Copy, Debug, PartialEq, Serialize)]
+pub use crate::desktop::CONFIG as LAYOUT;
+#[repr(C)]
+#[derive(Clone, Copy, Debug, Default, PartialEq, Serialize)]
 pub struct Area {
     pub x: f64,
     pub y: f64,
@@ -50,15 +41,16 @@ impl Area {
         self.y + LAYOUT.ground_margin
     }
     pub fn fits(self, size: Size) -> bool {
-        (self.x + LAYOUT.margin).ceil() <= (self.x + self.w - LAYOUT.margin - size.width).floor()
-            && self.ground_y().ceil() <= (self.y + self.h - LAYOUT.margin - size.height).floor()
+        (self.x + LAYOUT.side_margin).ceil()
+            <= (self.x + self.w - LAYOUT.side_margin - size.width).floor()
+            && self.ground_y().ceil() <= (self.y + self.h - LAYOUT.top_margin - size.height).floor()
     }
     /// Clamp the whole panel. If it cannot fit, caller hides it (never claims containment).
     pub fn clamp(self, x: f64, y: f64, size: Size) -> (f64, f64) {
-        let left = self.x + LAYOUT.margin + size.width / 2.0;
-        let right = self.x + self.w - LAYOUT.margin - size.width / 2.0;
+        let left = self.x + LAYOUT.side_margin + size.width / 2.0;
+        let right = self.x + self.w - LAYOUT.side_margin - size.width / 2.0;
         let bottom = self.ground_y();
-        let top = self.y + self.h - LAYOUT.margin - size.height;
+        let top = self.y + self.h - LAYOUT.top_margin - size.height;
         (
             x.clamp(left, right.max(left)),
             y.clamp(bottom, top.max(bottom)),
@@ -71,17 +63,17 @@ impl Area {
     /// Project only presentation; keep simulation/subpixel movement continuous.
     pub fn panel_bounds(self, x: f64, y: f64, size: Size) -> Area {
         let mut b = size.bounds(x, y);
-        let left = (self.x + LAYOUT.margin).ceil();
+        let left = (self.x + LAYOUT.side_margin).ceil();
         let bottom = self.ground_y().ceil();
         b.x = b.x.round().clamp(
             left,
-            (self.x + self.w - LAYOUT.margin - size.width)
+            (self.x + self.w - LAYOUT.side_margin - size.width)
                 .floor()
                 .max(left),
         );
         b.y = b.y.round().clamp(
             bottom,
-            (self.y + self.h - LAYOUT.margin - size.height)
+            (self.y + self.h - LAYOUT.top_margin - size.height)
                 .floor()
                 .max(bottom),
         );
@@ -94,10 +86,10 @@ mod tests {
     fn check(a: Area, size: Size, p: (f64, f64)) {
         assert!(a.fits(size));
         let b = size.bounds(p.0, p.1);
-        assert!(b.x >= a.x + LAYOUT.margin);
-        assert!(b.x + b.w <= a.x + a.w - LAYOUT.margin);
+        assert!(b.x >= a.x + LAYOUT.side_margin);
+        assert!(b.x + b.w <= a.x + a.w - LAYOUT.side_margin);
         assert!(b.y >= a.ground_y());
-        assert!(b.y + b.h <= a.y + a.h - LAYOUT.margin);
+        assert!(b.y + b.h <= a.y + a.h - LAYOUT.top_margin);
     }
     #[test]
     fn dock_sides_negative_monitors_and_all_edges() {

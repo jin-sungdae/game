@@ -87,3 +87,5 @@ Smoke 모드는 약 10초 동안 spawn → interaction → close → despawn →
 ## Desktop ground coordinate
 
 GROUND entity는 bottom-center world anchor와 visibleFrame 기반 공통 ground line을 사용한다. 드래그 중에는 전체 panel bounds를 제한하고 release 시 ground로 정렬한다. [좌표 계약·진단·검증](docs/desktop-ground-coordinate.md).
+
+Dock overlay가 visibleFrame에 포함되는 사용자 FAIL을 반영하여 [DesktopSafeArea 정책](docs/desktop-safe-area.md)을 추가했습니다. 현재 PR #5는 실제 사용자 재검증 대기이며 geometry PASS만으로 merge하지 않습니다.

@@ -1,6 +1,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 mod behaviors;
 mod companion;
+mod desktop;
 mod entities;
 mod geometry;
 mod overlay;

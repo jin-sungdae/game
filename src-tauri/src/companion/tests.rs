@@ -192,7 +192,7 @@ fn walking_and_drag_clamp_to_negative_and_changed_work_area() {
     assert!(
         c.target >= area().x
             && c.target
-                <= area().x + area().w - MOA_SIZE.width / 2.0 - crate::geometry::LAYOUT.margin
+                <= area().x + area().w - MOA_SIZE.width / 2.0 - crate::geometry::LAYOUT.side_margin
     );
     let x = c.entity().x;
     c.tick(1.1, 1000.0, area(), FAR, false);
@@ -241,8 +241,8 @@ fn movement_target_clamps_both_edges_with_center_anchor() {
         c.target = target;
         c.tick(1.1, 0.03, area(), FAR, false);
         let bounds = c.entity.size.bounds(c.target, c.entity.y);
-        assert!(bounds.x >= area().x + crate::geometry::LAYOUT.margin);
-        assert!(bounds.x + bounds.w <= area().x + area().w - crate::geometry::LAYOUT.margin);
+        assert!(bounds.x >= area().x + crate::geometry::LAYOUT.side_margin);
+        assert!(bounds.x + bounds.w <= area().x + area().w - crate::geometry::LAYOUT.side_margin);
         assert_eq!(c.entity.y, area().ground_y());
     }
 }
