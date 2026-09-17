@@ -44,7 +44,7 @@ class PolicyTests(unittest.TestCase):
             data = review.result({'desktop-static': {'result': 'success'}, 'macos-native': {'result': state}}, [], event, '1')
             self.assertEqual(data['status'], 'FAIL')
             self.assertFalse(data['automatic_dispatch'])
-        data = review.result({j: {'result': 'success'} for j in ['desktop-static', 'macos-native']}, [], event, '1')
+        data = review.result({j: {'result': 'success'} for j in ['desktop-static', 'macos-native', 'server-java']}, [], event, '1')
         self.assertEqual(data['next_action'], 'READY_FOR_HUMAN_REVIEW')
         self.assertEqual(data['checks'][-1]['status'], 'NOT_RUN')
         self.assertIsNone(data['iteration'])
@@ -52,7 +52,7 @@ class PolicyTests(unittest.TestCase):
     def test_machine_contract_and_head_binding(self):
         schema = json.loads((ROOT / '.github/codex/review-result.schema.json').read_text())
         event = {'pull_request': {'number': 3, 'head': {'sha': 'a' * 40}, 'base': {'sha': 'b' * 40}}}
-        data = review.result({j: {'result': 'success'} for j in ['desktop-static', 'macos-native']}, [], event, '123')
+        data = review.result({j: {'result': 'success'} for j in ['desktop-static', 'macos-native', 'server-java']}, [], event, '123')
         self.assertEqual(set(data), set(schema['required']))
         self.assertEqual(data['head_sha'], event['pull_request']['head']['sha'])
         self.assertEqual(data['base_sha'], event['pull_request']['base']['sha'])
@@ -61,6 +61,13 @@ class PolicyTests(unittest.TestCase):
                 self.assertEqual(data[key], rule['const'])
             if 'enum' in rule:
                 self.assertIn(data[key], rule['enum'])
+
+    def test_server_failure_is_not_hidden_by_desktop_success(self):
+        event = {'pull_request': {'number': 10, 'head': {'sha': 'a' * 40}, 'base': {'sha': 'b' * 40}}}
+        needs = {j: {'result': 'success'} for j in ['desktop-static', 'macos-native']}
+        for status in ['failure', 'skipped', 'cancelled', 'missing']:
+            needs['server-java'] = {'result': status}
+            self.assertEqual(review.result(needs, [], event, '1')['status'], 'FAIL')
 
     def test_ci_fixture(self):
         data = json.loads((ROOT / "tests/automation/fixture.json").read_text())

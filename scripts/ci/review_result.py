@@ -18,7 +18,7 @@ def human_paths(changes):
 
 
 def result(needs, changes, event, run_id):
-    jobs = ['desktop-static', 'macos-native']
+    jobs = ['desktop-static', 'macos-native', 'server-java']
     failed = [j for j in jobs if needs.get(j, {}).get('result') != 'success']
     pr = event['pull_request']
     flags = human_paths(changes)
@@ -35,6 +35,7 @@ def result(needs, changes, event, run_id):
         'checks': [
             {'name': 'desktop-static', 'classification': 'AUTOMATED', 'status': needs.get('desktop-static', {}).get('result', 'missing')},
             {'name': 'AppKit compile / Rust deterministic tests', 'classification': 'PLATFORM_REQUIRED', 'status': needs.get('macos-native', {}).get('result', 'missing')},
+            {'name': 'Java 21 / PostgreSQL integration', 'classification': 'AUTOMATED', 'status': needs.get('server-java', {}).get('result', 'missing')},
             {'name': 'Real desktop focus / mouse / typing / visual overlay', 'classification': 'MANUAL_REQUIRED', 'status': 'NOT_RUN'},
         ],
     }

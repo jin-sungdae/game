@@ -8,6 +8,10 @@ cc = "1"
 [dependencies]
 tauri = { version = "=2.11.5", features = ["macos-private-api"] }
 serde = { version = "1", features = ["derive"] }
+reqwest = { version = "=0.13.5", default-features = false, features = ["blocking"] }
+serde_json = "1"
+chrono = { version = "=0.4.45", features = ["serde"] }
+uuid = { version = "=1.26.1", features = ["serde"] }
 
 # Feature unification enables the opt-in on Tauri's existing Tao dependency.
 [target.'cfg(target_os = "macos")'.dependencies]
