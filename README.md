@@ -1,6 +1,6 @@
-# Project LUMA · Technical Spike 01
+# Project LUMA · Companion Engine v0.1
 
-macOS에서 작업 앱을 방해하지 않는 Ambient Desktop Creature UX 검증용. **게임 구현이 아니라 native overlay 실험**이다.
+macOS에서 작업 앱을 방해하지 않는 Ambient Desktop Creature RPG. 현재 Milestone 1은 Companion의 상태·성격·기본 행동만 구현하며 서버나 실제 전투는 포함하지 않는다. [Companion Engine 설계와 검증](docs/companion-engine-v01.md).
 
 현재 Technical Spike 01.1은 **GO**입니다. 동일 bundle의 Codex foreground 50/50 자동 검사와 사용자의 실제 macOS launch/MOA interaction focus 유지 확인을 근거로 확정했습니다. [검증 기록](docs/validation.md).
 
@@ -66,7 +66,8 @@ Smoke 모드는 약 10초 동안 spawn → interaction → close → despawn →
 | `src/overlay/bridge.ts` | IPC 입력 전달 |
 | `src/behaviors/README.md` | Rust 행동 계층 위치 설명 |
 | `src-tauri/src/entities.rs` | 상태 enum, entity, boundary |
-| `src-tauri/src/behaviors.rs` | timer/random/movement/state 전이 및 테스트 |
+| `src-tauri/src/behaviors.rs` | World snapshot, PIP lifecycle/proximity 및 통합 테스트 |
+| `src-tauri/src/companion/` | Companion controller, 전이 규칙, personality master, weighted selection 및 테스트 |
 | `src-tauri/src/overlay.rs` | AppKit FFI |
 | `src-tauri/src/main.rs` | scheduler/IPC/lifecycle/진단 |
 | `src-tauri/native/panel.m` | 실제 nonactivating NSPanel, work area, 메뉴바 |
