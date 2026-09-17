@@ -1,0 +1,1 @@
+Authoritative behavior lives in src-tauri/src/behaviors.rs. There is one Rust clock for all windows, so no React timer or multi-webview leader election is needed. This directory deliberately contains no duplicate simulation.
