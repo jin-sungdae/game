@@ -1,0 +1,79 @@
+{
+  "binary": "/private/tmp/luma-stock-control",
+  "expectedBundle": "com.openai.codex",
+  "requestedRuns": 1,
+  "runs": [
+    {
+      "appActivations": 1,
+      "baselineBundle": "com.openai.codex",
+      "baselinePid": 85083,
+      "events": [
+        {
+          "bundle": "",
+          "pid": 63267,
+          "seconds": 0.7693079710006714,
+          "source": "notification"
+        },
+        {
+          "bundle": "",
+          "pid": 63267,
+          "seconds": 0.7766289710998535,
+          "source": "poll-10ms"
+        },
+        {
+          "bundle": "com.apple.loginwindow",
+          "pid": 401,
+          "seconds": 2.8039430379867554,
+          "source": "notification"
+        },
+        {
+          "bundle": "com.openai.codex",
+          "pid": 85083,
+          "seconds": 2.8097469806671143,
+          "source": "notification"
+        }
+      ],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": true,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.openai.codex",
+          "frontPid": 85083,
+          "keyWindows": 0,
+          "pid": 63267,
+          "seconds": 0.0035660266876220703
+        },
+        {
+          "activations": 1,
+          "event": "app-active",
+          "frontBundle": "",
+          "frontPid": 63267,
+          "keyWindows": 0,
+          "pid": 63267,
+          "seconds": 0.3269829750061035
+        },
+        {
+          "activations": 1,
+          "event": "exit",
+          "frontBundle": "",
+          "frontPid": 63267,
+          "keyWindows": 0,
+          "pid": 63267,
+          "seconds": 2.107893943786621
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": false,
+      "launcherPid": 63267,
+      "lumaPid": 63267,
+      "pass": false,
+      "ready": true,
+      "run": 1,
+      "timedOut": false
+    }
+  ],
+  "secondsPerRun": 2
+}

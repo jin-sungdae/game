@@ -1,0 +1,613 @@
+{
+  "binary": "<workspace>/src-tauri/target/debug/bundle/macos/LUMA Spike.app",
+  "expectedBundle": "com.microsoft.VSCode",
+  "requestedRuns": 20,
+  "runs": [
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60705,
+          "seconds": 0.0026971101760864258
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60705,
+          "seconds": 2.1119080781936646
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60704,
+      "lumaPid": 60705,
+      "pass": true,
+      "ready": true,
+      "run": 1,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60717,
+          "seconds": 0.0021170377731323242
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60717,
+          "seconds": 2.1081050634384155
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60714,
+      "lumaPid": 60717,
+      "pass": true,
+      "ready": true,
+      "run": 2,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60728,
+          "seconds": 0.002588033676147461
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60728,
+          "seconds": 2.126554012298584
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60727,
+      "lumaPid": 60728,
+      "pass": true,
+      "ready": true,
+      "run": 3,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60748,
+          "seconds": 0.002189040184020996
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60748,
+          "seconds": 2.1097640991210938
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60747,
+      "lumaPid": 60748,
+      "pass": true,
+      "ready": true,
+      "run": 4,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60759,
+          "seconds": 0.0019059181213378906
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60759,
+          "seconds": 2.109941005706787
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60756,
+      "lumaPid": 60759,
+      "pass": true,
+      "ready": true,
+      "run": 5,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60774,
+          "seconds": 0.0030020475387573242
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60774,
+          "seconds": 2.1102659702301025
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60773,
+      "lumaPid": 60774,
+      "pass": true,
+      "ready": true,
+      "run": 6,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60783,
+          "seconds": 0.0020819902420043945
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60783,
+          "seconds": 2.10966694355011
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60782,
+      "lumaPid": 60783,
+      "pass": true,
+      "ready": true,
+      "run": 7,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60795,
+          "seconds": 0.0029549598693847656
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60795,
+          "seconds": 2.1201579570770264
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60792,
+      "lumaPid": 60795,
+      "pass": true,
+      "ready": true,
+      "run": 8,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60810,
+          "seconds": 0.0025238990783691406
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60810,
+          "seconds": 2.110603928565979
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60809,
+      "lumaPid": 60810,
+      "pass": true,
+      "ready": true,
+      "run": 9,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60820,
+          "seconds": 0.0030488967895507812
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60820,
+          "seconds": 2.1089649200439453
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60819,
+      "lumaPid": 60820,
+      "pass": true,
+      "ready": true,
+      "run": 10,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60833,
+          "seconds": 0.0023990869522094727
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60833,
+          "seconds": 2.1083050966262817
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60832,
+      "lumaPid": 60833,
+      "pass": true,
+      "ready": true,
+      "run": 11,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60842,
+          "seconds": 0.0026259422302246094
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60842,
+          "seconds": 2.1105979681015015
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60841,
+      "lumaPid": 60842,
+      "pass": true,
+      "ready": true,
+      "run": 12,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60857,
+          "seconds": 0.0028879642486572266
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60857,
+          "seconds": 2.1232320070266724
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60856,
+      "lumaPid": 60857,
+      "pass": true,
+      "ready": true,
+      "run": 13,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60867,
+          "seconds": 0.0024919509887695312
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60867,
+          "seconds": 2.1090348958969116
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60866,
+      "lumaPid": 60867,
+      "pass": true,
+      "ready": true,
+      "run": 14,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": false,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60880,
+          "seconds": 0.0019620656967163086
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 60880,
+          "seconds": 2.113816976547241
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 60877,
+      "lumaPid": 60880,
+      "pass": true,
+      "ready": true,
+      "run": 15,
+      "timedOut": false
+    },
+    {
+      "appActivations": 0,
+      "baselineBundle": "com.microsoft.VSCode",
+      "baselinePid": 70437,
+      "events": [
+        {
+          "bundle": "com.openai.codex",
+          "pid": 85083,
+          "seconds": 0.4058849811553955,
+          "source": "notification"
+        },
+        {
+          "bundle": "com.openai.codex",
+          "pid": 85083,
+          "seconds": 0.4127819538116455,
+          "source": "poll-10ms"
+        }
+      ],
+      "exitCode": 0,
+      "exitSeen": true,
+      "foregroundChanged": true,
+      "internal": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.VSCode",
+          "frontPid": 70437,
+          "keyWindows": 0,
+          "pid": 61003,
+          "seconds": 0.0029239654541015625
+        },
+        {
+          "activations": 0,
+          "event": "exit",
+          "frontBundle": "com.openai.codex",
+          "frontPid": 85083,
+          "keyWindows": 0,
+          "pid": 61003,
+          "seconds": 2.0296239852905273
+        }
+      ],
+      "keyWindows": 0,
+      "launchServices": true,
+      "launcherPid": 61002,
+      "lumaPid": 61003,
+      "pass": false,
+      "ready": true,
+      "run": 16,
+      "timedOut": false
+    }
+  ],
+  "secondsPerRun": 2
+}
