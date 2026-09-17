@@ -1,0 +1,46 @@
+{
+  "kind": "LUMA_REVIEW_RESULT",
+  "schema_version": 1,
+  "status": "FAIL",
+  "iteration": null,
+  "auto_review_max_iterations": 3,
+  "automatic_dispatch": false,
+  "pr": 3,
+  "head_sha": "cc0f47c9fb9ddc744270b6ce57771991fa3b5bb5",
+  "base_sha": "28b149fb723c10baab817af2d064e06bf478c2a1",
+  "run_id": "35181659767",
+  "findings": [
+    {
+      "severity": "BLOCKER",
+      "message": "desktop-static did not succeed"
+    },
+    {
+      "severity": "BLOCKER",
+      "message": "macos-native did not succeed"
+    }
+  ],
+  "required_actions": [
+    "Inspect failed job logs: desktop-static",
+    "Inspect failed job logs: macos-native"
+  ],
+  "human_review_required": true,
+  "protected_paths": [],
+  "next_action": "FIX_REQUIRED",
+  "checks": [
+    {
+      "name": "desktop-static",
+      "classification": "AUTOMATED",
+      "status": "failure"
+    },
+    {
+      "name": "AppKit compile / Rust deterministic tests",
+      "classification": "PLATFORM_REQUIRED",
+      "status": "skipped"
+    },
+    {
+      "name": "Real desktop focus / mouse / typing / visual overlay",
+      "classification": "MANUAL_REQUIRED",
+      "status": "NOT_RUN"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "LUMA_REVIEW_RESULT",
+  "schema_version": 1,
+  "status": "PASS",
+  "iteration": null,
+  "auto_review_max_iterations": 3,
+  "automatic_dispatch": false,
+  "pr": 2,
+  "head_sha": "28b149fb723c10baab817af2d064e06bf478c2a1",
+  "base_sha": "dcf1e72208dd7014c82f338442c6070ca9b05528",
+  "run_id": "35181638072",
+  "findings": [],
+  "required_actions": [],
+  "human_review_required": true,
+  "protected_paths": [
+    ".github/codex/review-result.schema.json",
+    ".github/pull_request_template.md",
+    ".github/workflows/pr-validation.yml",
+    "AGENTS.md",
+    "docs/ARCHITECTURE.md",
+    "docs/GAME_DESIGN.md",
+    "docs/REVIEW_RULES.md",
+    "scripts/ci/repair_gate.py",
+    "scripts/ci/review_result.py"
+  ],
+  "next_action": "HUMAN_REVIEW_REQUIRED",
+  "checks": [
+    {
+      "name": "desktop-static",
+      "classification": "AUTOMATED",
+      "status": "success"
+    },
+    {
+      "name": "AppKit compile / Rust deterministic tests",
+      "classification": "PLATFORM_REQUIRED",
+      "status": "success"
+    },
+    {
+      "name": "Real desktop focus / mouse / typing / visual overlay",
+      "classification": "MANUAL_REQUIRED",
+      "status": "NOT_RUN"
+    }
+  ]
+}

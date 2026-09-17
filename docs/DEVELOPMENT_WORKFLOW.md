@@ -33,7 +33,7 @@ Rust는 stable toolchain이며 runner 버전과 toolchain 업데이트는 별도
 3. latest PR HEAD, 발신자 권한, fork 여부, 허용 경로, protected changes를 신뢰하는 base 코드로 재검증한다. PR에서 만든 JSON을 권한 있는 명령으로 바로 실행하지 않는다.
 4. HUMAN_REVIEW_REQUIRED 영역과 3회 이후 FAIL은 호출하지 않는다. PASS도 READY_FOR_HUMAN_REVIEW까지만 간다.
 5. PR 코드 실행과 secret/write credential 단계를 분리한다. 승인된 좁은 patch만 동일 PR branch에 반영하는 설계를 별도 human review한다. main은 대상에서 제외한다.
-6. `GITHUB_TOKEN`으로 만든 push는 일반적으로 다른 workflow를 트리거하지 않으므로 synchronize 연쇄를 가정하지 않는다. 필요 시 최소 권한 GitHub App installation token 등 공식 지원 인증을 선택하고 실제 event를 검증한다. [GitHub token 문서](https://docs.github.com/en/actions/concepts/security/github_token).
+6. 현재 GitHub 문서상 `GITHUB_TOKEN`으로 PR을 생성/업데이트하면 opened/synchronize/reopened workflow가 **승인 대기 상태**로 생성될 수 있다. 일반 push-trigger workflow 재귀는 억제된다. 따라서 무인 synchronize 실행을 가정하지 않는다. 승인 없는 연쇄가 필요하면 별도 최소 권한 GitHub App installation token 등 공식 지원 인증을 선택하고 실제 event/승인 상태를 검증한다. [GitHub token 문서](https://docs.github.com/en/actions/concepts/security/github_token).
 
 현재 순수 gate 테스트는 한 process 안의 정책을 검증한다. 영속/동시성 보장이나 실제 Codex task 성공을 증명하지 않는다. 연결 전에는 `automatic_dispatch=false`, `iteration=null`이다.
 

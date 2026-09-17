@@ -14,4 +14,5 @@
 
 - Focus regression, build/test failure, security/data integrity, architecture 위반은 BLOCKER다. 이전 앱을 재활성화하는 focus 복구는 해결책이 아니다.
 - state machine 우회, React에 domain logic 집중, responsibility 위반, 불필요한 dependency, 테스트 누락은 MAJOR다.
+- 자동 review 결과는 `.github/codex/review-result.schema.json` 계약으로 제공하고, 실제 실행하지 않은 검증과 원격 task는 NOT_RUN/NOT_VERIFIED로 명시한다.
 - 상세 severity 및 자동화 한계: docs/REVIEW_RULES.md, docs/DEVELOPMENT_WORKFLOW.md.

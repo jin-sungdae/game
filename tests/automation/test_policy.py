@@ -21,6 +21,7 @@ class PolicyTests(unittest.TestCase):
     def test_only_three_reservations(self):
         for iteration in range(3):
             self.assertEqual(gate.decide('FAIL', iteration)['reserved_iteration'], iteration + 1)
+        self.assertEqual(gate.decide('FAIL', 3, human_gate=True)['status'], 'BLOCKED')
         self.assertEqual(gate.decide('FAIL', 3), {
             'status': 'BLOCKED', 'next_action': 'HUMAN_REVIEW_REQUIRED', 'dispatch': False})
 
@@ -47,6 +48,19 @@ class PolicyTests(unittest.TestCase):
         self.assertEqual(data['next_action'], 'READY_FOR_HUMAN_REVIEW')
         self.assertEqual(data['checks'][-1]['status'], 'NOT_RUN')
         self.assertIsNone(data['iteration'])
+
+    def test_machine_contract_and_head_binding(self):
+        schema = json.loads((ROOT / '.github/codex/review-result.schema.json').read_text())
+        event = {'pull_request': {'number': 3, 'head': {'sha': 'a' * 40}, 'base': {'sha': 'b' * 40}}}
+        data = review.result({j: {'result': 'success'} for j in ['desktop-static', 'macos-native']}, [], event, '123')
+        self.assertEqual(set(data), set(schema['required']))
+        self.assertEqual(data['head_sha'], event['pull_request']['head']['sha'])
+        self.assertEqual(data['base_sha'], event['pull_request']['base']['sha'])
+        for key, rule in schema['properties'].items():
+            if 'const' in rule:
+                self.assertEqual(data[key], rule['const'])
+            if 'enum' in rule:
+                self.assertIn(data[key], rule['enum'])
 
     def test_ci_fixture(self):
         data = json.loads((ROOT / "tests/automation/fixture.json").read_text())
