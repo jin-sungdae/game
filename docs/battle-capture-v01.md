@@ -98,7 +98,7 @@ Final test/CI counts and native launch evidence are appended after verification.
 ## Final local results
 
 - AUTOMATED server: 34 PASS (22 BattleIntegration + 9 existing GameIntegration + 3 selector), actual PostgreSQL 17.10 with fresh V1/V2/V3, no H2. bootJar PASS.
-- AUTOMATED Rust: 56 PASS; 3 explicit live tests separately executed PASS (normal test run marks these ignored because a dedicated live server is required).
+- AUTOMATED Rust: 57 PASS; 3 explicit live tests separately executed PASS (normal test run marks these ignored because a dedicated live server is required).
 - Animation 27 PASS, asset validator tests 12 PASS, policy 9 PASS; npm build, cargo clippy, Tao integrity PASS. Existing 18 upstream Tao warnings remain unchanged.
 - PLATFORM_REQUIRED actual `tauri dev` launched with server on 18081 and bootstrap/PIP reconciliation. Non-interactive focus audit: PID 53265, Chrome foreground start/end, 31.27 seconds, activation=0/keyWindows=0, normal panel cleanup. This sample is not a mouse/typing test or 20-launch acceptance run.
 - Environment-only initial failures: duplicated node_modules type directories fixed with npm ci; localhost fixture tests needed sandbox network permission and were rerun. No tests removed/relaxed.
@@ -106,3 +106,5 @@ Final test/CI counts and native launch evidence are appended after verification.
 - New dependencies: none; Tauri/Tao and server dependency versions unchanged. Existing architecture retained; only popup size and API/presentation integration changed.
 
 Changed areas: additive SQL V3; CombatRules/BattleDtos/BattleService/BattleController/GameFault plus existing encounter repository DTO/errors; test-only live harness and Gradle task; Rust backend DTO/commands/worker/presentation and World lease adapter; compact React popup/types/styles/menu size; server/Rust tests; AGENTS scope and this document. No PNG, animation timing, personality, movement controller, native panel or Tao patch edits.
+
+Review correction iteration 1: reset only developer PIP presentation when spawning after a resolved server battle, preventing a debug PIP click from reusing an old authoritative battle. Added deterministic regression; native/engine architecture unchanged.

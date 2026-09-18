@@ -91,6 +91,12 @@ impl World {
         }
         self.server_encounter = Some((encounter.encounter_id, now + remaining));
     }
+    pub fn debug_spawn(&mut self, now: f64) {
+        if self.server_encounter.is_none() && self.view.pip.is_none() {
+            self.view.game = Default::default();
+            self.spawn(now);
+        }
+    }
     pub fn spawn(&mut self, now: f64) {
         if self.view.pip.is_some() {
             return;

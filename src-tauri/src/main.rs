@@ -34,7 +34,7 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
             let mut world = state.world.lock().unwrap();
             eprintln!("[LUMA INPUT] {kind}");
             match kind.as_str() {
-                "spawn" => world.spawn(now), // explicit developer-only path
+                "spawn" => world.debug_spawn(now), // explicit developer-only path
 
                 "drag" => world.drag(now, overlay::cursor().0),
                 "interact" => world.interact(),
@@ -196,7 +196,7 @@ fn main() {
                             world.area = overlay::area();
                             let (cursor, down) = overlay::cursor();
                             match unsafe { overlay::luma_action() } {
-                                1 => world.spawn(now),
+                                1 => world.debug_spawn(now),
                                 2 => world.despawn(now),
                                 3 => {
                                     app.exit(0);
@@ -204,7 +204,7 @@ fn main() {
                                 _ => {}
                             }
                             match phase {
-                                1 => world.spawn(now),
+                                1 => world.debug_spawn(now),
                                 2 => world.interact(),
                                 3 => world.close(),
                                 4 => world.despawn(now),

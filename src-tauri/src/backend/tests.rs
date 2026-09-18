@@ -452,3 +452,27 @@ fn battle_response_suspends_original_lease_before_reconciliation() {
     w.tick(61.0, 0.033, (0.0, 0.0), false);
     assert!(w.view.pip.is_some());
 }
+
+#[test]
+fn debug_pip_cannot_reuse_a_resolved_server_battle() {
+    let mut w = World::new(
+        Area {
+            x: 0.0,
+            y: 0.0,
+            w: 1200.0,
+            h: 800.0,
+        },
+        0.0,
+        7,
+    );
+    w.apply_server_encounter(0.0, Some(encounter()), 1.0);
+    w.view
+        .game
+        .apply_battle(serde_json::from_str(&battle_json("VICTORY")).unwrap());
+    w.apply_server_encounter(2.0, None, 0.0);
+    w.tick(3.0, 0.033, (0.0, 0.0), false);
+    w.debug_spawn(4.0);
+    assert!(w.view.pip.is_some());
+    assert!(w.view.game.encounter_id.is_none());
+    assert!(w.view.game.command("interact").is_none());
+}
