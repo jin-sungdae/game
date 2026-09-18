@@ -29,7 +29,9 @@ class AssetTests(unittest.TestCase):
         (self.root/'src/entities').mkdir(parents=True)
         shutil.copy(ROOT/'src/entities/companions.json', self.root/'src/entities/companions.json')
         shutil.copy(ROOT/'src/entities/monsters.json', self.root/'src/entities/monsters.json')
-        shutil.copytree(ROOT/'public/assets', self.root/'public/assets')
+        # Missing-base cases must stay independent of delivered production files.
+        shutil.copytree(ROOT/'public/assets', self.root/'public/assets',
+                        ignore=shutil.ignore_patterns('base.png'))
         self.stage = self.root/'public/assets/creatures/moa/stage01'
 
     def errors(self, allow=True):
