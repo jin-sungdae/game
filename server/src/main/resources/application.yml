@@ -1,0 +1,18 @@
+server:
+  address: 127.0.0.1
+  port: ${LUMA_SERVER_PORT:8081}
+spring:
+  datasource:
+    url: ${LUMA_DB_URL:jdbc:postgresql://127.0.0.1:55432/luma_game}
+    username: ${LUMA_DB_USER:luma}
+    password: ${LUMA_DB_PASSWORD:}
+    hikari:
+      maximum-pool-size: 6
+      connection-timeout: 3000
+  flyway:
+    default-schema: game
+    schemas: game
+    create-schemas: true
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true

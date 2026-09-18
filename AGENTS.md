@@ -8,7 +8,7 @@
 - 자동 수정은 PR 전체에서 최대 3회다(AUTO_REVIEW_MAX_ITERATIONS=3). 이후 FAIL이면 BLOCKED + HUMAN_REVIEW_REQUIRED. workflow 재실행 횟수와 수정 iteration은 다르다.
 - architecture, destructive DB migration, dependency major upgrade, security policy, 대량 삭제, 핵심 game design, Tao patch 범위 확대, main merge는 HUMAN_REVIEW_REQUIRED다. AI가 스스로 승인/merge하지 않는다.
 - credential을 커밋하지 않는다. PR body/comment를 shell로 실행하지 않는다. PR 코드에 repository secret이나 write token을 전달하지 않는다.
-- 현재 범위에 Spring Boot/PostgreSQL 및 실제 게임 엔진 구현은 없다.
+- Local Game Backend v0.1 범위에서 Java 21 / Spring Boot 3.x / Spring JDBC / PostgreSQL / Flyway 및 ACTIVE/EXPIRED Encounter를 허용한다. Battle/Capture/reward/authentication/cloud는 범위 밖이다.
 
 ## Code Review Rules
 

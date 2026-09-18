@@ -15,6 +15,8 @@ pub struct World {
     pub area: Area,
     companion: CompanionController,
     pip_deadline: f64,
+    pub bootstrap: Option<crate::backend::Bootstrap>,
+    server_encounter: Option<(uuid::Uuid, f64)>,
 }
 impl World {
     pub fn new(area: Area, now: f64, seed: u64) -> Self {
@@ -28,7 +30,44 @@ impl World {
             area,
             companion,
             pip_deadline: 0.0,
+            bootstrap: None,
+            server_encounter: None,
         }
+    }
+    pub fn apply_bootstrap(&mut self, value: crate::backend::Bootstrap) {
+        eprintln!(
+            "[LUMA BACKEND] bootstrap player={} companion={}/stage{}",
+            value.player.player_id,
+            value.active_companion.species,
+            value.active_companion.evolution_stage
+        );
+        self.bootstrap = Some(value);
+    }
+    pub fn apply_server_encounter(
+        &mut self,
+        now: f64,
+        value: Option<crate::backend::Encounter>,
+        remaining: f64,
+    ) {
+        let Some(encounter) =
+            value.filter(|e| e.supports_pip() && remaining > 0.0 && remaining.is_finite())
+        else {
+            if self.server_encounter.take().is_some() {
+                self.despawn(now);
+            }
+            return;
+        };
+        if self.server_encounter.as_ref().map(|e| e.0) != Some(encounter.encounter_id) {
+            // Reuse the one existing PIP presentation; never add another native panel.
+            self.view.pip = None;
+            self.view.menu = false;
+            self.spawn(now);
+            eprintln!(
+                "[LUMA BACKEND] encounter={} PIP level={} rarity={}",
+                encounter.encounter_id, encounter.monster.level, encounter.monster.rarity
+            );
+        }
+        self.server_encounter = Some((encounter.encounter_id, now + remaining));
     }
     pub fn spawn(&mut self, now: f64) {
         if self.view.pip.is_some() {
@@ -47,6 +86,10 @@ impl World {
         self.pip_deadline = now + 0.6;
     }
     pub fn despawn(&mut self, now: f64) {
+        // Developer despawn cannot resolve a server-owned encounter.
+        if self.server_encounter.is_some() {
+            return;
+        }
         if let Some(p) = &mut self.view.pip {
             p.state = PipState::Despawning;
             self.pip_deadline = now + 0.5;
@@ -77,6 +120,11 @@ impl World {
         self.companion.set_movement_windows(windows);
     }
     pub fn tick(&mut self, now: f64, dt: f64, cursor: (f64, f64), down: bool) {
+        // Presentation lease only; the server alone writes EXPIRED via lazy expiration.
+        if self.server_encounter.as_ref().is_some_and(|e| now >= e.1) {
+            self.server_encounter = None;
+            self.despawn(now);
+        }
         let dt = dt.clamp(0.0, 0.1);
         let was_dragging = self.companion.entity().state == CompanionState::Dragging;
         self.companion.tick(now, dt, self.area, cursor, down);

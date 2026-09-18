@@ -59,9 +59,35 @@ jobs:
         run: clang -fobjc-arc -framework AppKit scripts/launch_audit.m -o /tmp/luma-launch-audit
       - name: Runtime boundary
         run: echo 'PLATFORM_REQUIRED native compile passed; real desktop launch/mouse/typing is MANUAL_REQUIRED, NOT_RUN on hosted CI.'
+  server-java:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Isolated PostgreSQL with ephemeral password
+        run: |
+          db_password="$(openssl rand -hex 24)"
+          echo "::add-mask::$db_password"
+          echo "LUMA_TEST_DB_PASSWORD=$db_password" >> "$GITHUB_ENV"
+          docker run -d --name luma-ci-db -e POSTGRES_USER=luma -e POSTGRES_DB=luma_game_test -e POSTGRES_PASSWORD="$db_password" -p 127.0.0.1:55439:5432 postgres:17-alpine
+          for attempt in $(seq 1 30); do
+            if docker exec luma-ci-db pg_isready -U luma -d luma_game_test; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Java 21 tests and bootJar
+        run: |
+          export JAVA_HOME="$JAVA_HOME_21_X64"
+          "$JAVA_HOME/bin/java" -version
+          ./server/gradlew -p server test bootJar --no-daemon
+      - name: Stop isolated test database
+        if: always()
+        run: docker rm -f luma-ci-db
   review-result:
     if: always()
-    needs: [desktop-static, macos-native]
+    needs: [desktop-static, macos-native, server-java]
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

@@ -1,4 +1,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+mod backend;
 mod behaviors;
 mod companion;
 mod desktop;
@@ -18,6 +19,7 @@ use tauri::{Emitter, Manager};
 struct State {
     world: Mutex<World>,
     start: Instant,
+    backend: Mutex<backend::Backend>,
 }
 #[tauri::command]
 fn snapshot(state: tauri::State<State>) -> Snapshot {
@@ -32,7 +34,8 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
             let mut world = state.world.lock().unwrap();
             eprintln!("[LUMA INPUT] {kind}");
             match kind.as_str() {
-                "spawn" => world.spawn(now),
+                "spawn" => world.spawn(now), // explicit developer-only path
+                "encounter" => state.backend.lock().unwrap().request_encounter(),
                 "drag" => world.drag(now, overlay::cursor().0),
                 "interact" => world.interact(),
                 "close" => world.close(),
@@ -100,6 +103,7 @@ fn main() {
                     SystemTime::now().duration_since(UNIX_EPOCH)?.as_nanos() as u64,
                 )),
                 start,
+                backend: Mutex::new(backend::Backend::start(stop_setup.clone())),
             });
             let handle = app.handle().clone();
             // Bounded dispatch: at most one outstanding tick even if AppKit is busy.
@@ -141,6 +145,20 @@ fn main() {
                             let state = app.state::<State>();
                             let now = state.start.elapsed().as_secs_f64();
                             let mut world = state.world.lock().unwrap();
+                            while let Some(event) = state.backend.lock().unwrap().event() {
+                                match event {
+                                    backend::Event::Bootstrap(value) => {
+                                        world.apply_bootstrap(value)
+                                    }
+                                    backend::Event::Encounter(value) => {
+                                        // Compute from the server timestamp when consumed, not when queued.
+                                        let remaining = value
+                                            .as_ref()
+                                            .map_or(0.0, |e| e.remaining_at(chrono::Utc::now()));
+                                        world.apply_server_encounter(now, value, remaining)
+                                    }
+                                }
+                            }
                             world.area = overlay::area();
                             let (cursor, down) = overlay::cursor();
                             match unsafe { overlay::luma_action() } {

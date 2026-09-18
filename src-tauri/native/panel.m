@@ -27,7 +27,7 @@ void luma_init(void) {
     statusItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
     statusItem.button.title = @"LUMA";
     NSMenu *menu = [NSMenu new];
-    NSArray *titles = @[@"Spawn PIP", @"Despawn PIP", @"Quit LUMA"];
+    NSArray *titles = @[@"Debug: Spawn PIP", @"Debug: Despawn PIP", @"Quit LUMA"];
     SEL actions[] = {@selector(spawn:), @selector(despawn:), @selector(quit:)};
     for (NSUInteger i=0; i<3; i++) {
         NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:titles[i] action:actions[i] keyEquivalent:@""];
