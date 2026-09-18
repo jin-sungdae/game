@@ -4,6 +4,7 @@ import { Creature } from './components/Creature';
 import { Interaction } from './components/Interaction';
 import './style.css';
 import './presentation/gameplay.css';
+import './presentation/baseMotion.css';
 const kind = new URLSearchParams(location.search).get('entity') ?? 'moa';
 function App() {
   const world = useEntities();

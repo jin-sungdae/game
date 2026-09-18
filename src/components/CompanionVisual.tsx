@@ -21,6 +21,6 @@ export const CompanionVisual=memo(function CompanionVisual({state,facing,species
   return <div ref={container} className={`companion-visual ${source.kind!=='css'?'has-sprite':'has-placeholder'}`}>
     {sprite && size ? <img className="sprite-frame" alt={name} draggable={false}
       src={sprite.asset.urls[sprite.frame]} style={{...size,transform:`scaleX(${directionScale(facing)})`}}
-      onError={()=>setFailed(sprite.identity)}/> : source.kind==='base' ? <BaseSprite url={source.url} name={name} facing={facing} bounds={bounds} onError={base.fail}/> : <><PlaceholderRenderer facing={facing}/><span className="name">{name}</span><span className="state">{state}</span></>}
+      onError={()=>setFailed(sprite.identity)}/> : source.kind==='base' ? <BaseSprite character={species} state={state} url={source.url} name={name} facing={facing} bounds={bounds} onError={base.fail}/> : <><PlaceholderRenderer facing={facing}/><span className="name">{name}</span><span className="state">{state}</span></>}
   </div>;
 });
