@@ -11,6 +11,8 @@ import org.springframework.transaction.TransactionException;
 @RestControllerAdvice
 public class GameErrors {
     private static final Logger LOG=LoggerFactory.getLogger(GameErrors.class);
+    @ExceptionHandler(GameFault.class)
+    ResponseEntity<ErrorBody> fault(GameFault e) {return ResponseEntity.status(e.status).body(new ErrorBody(e.code,e.code));}
     record ErrorBody(String code,String message) {}
     @ExceptionHandler({GameUnavailable.class,DataAccessException.class,TransactionException.class})
     ResponseEntity<ErrorBody> unavailable(RuntimeException error) {

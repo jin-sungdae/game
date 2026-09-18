@@ -10,5 +10,5 @@ public final class GameDtos {
                             String evolutionName, int level, long exp, int bond) {}
     public record Bootstrap(Player player, Companion activeCompanion) {}
     public record Monster(String code, String name, int level, String rarity, String movementProfile) {}
-    public record Encounter(UUID encounterId, Monster monster, Instant spawnedAt, Instant expiresAt) {}
+    public record Encounter(UUID encounterId, Monster monster, Instant spawnedAt, Instant expiresAt, UUID battleId, boolean expirationSuspended) {}
 }

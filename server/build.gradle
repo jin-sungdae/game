@@ -18,3 +18,9 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 test { useJUnitPlatform() }
+// Explicit local validation only. Fixture RNG is test code and absent from bootJar.
+tasks.register('liveValidation', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.luma.game.LiveValidationServer'
+}

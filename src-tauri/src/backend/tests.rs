@@ -36,6 +36,8 @@ fn bootstrap_json() -> &'static str {
 fn encounter() -> Encounter {
     Encounter {
         encounter_id: uuid::Uuid::from_u128(1),
+        battle_id: None,
+        expiration_suspended: false,
         monster: Monster {
             code: "PIP".into(),
             name: "PIP".into(),
@@ -182,4 +184,295 @@ fn live_postgres_server_to_desktop_world_vertical_slice() {
     assert_eq!(w.view.pip.as_ref().unwrap().state, PipState::Despawning);
     w.tick(remaining + 0.6, 0.03, (9999.0, 9999.0), false);
     assert!(w.view.pip.is_none());
+}
+
+fn battle_json(status: &str) -> String {
+    format!(
+        r#"{{"battleId":"00000000-0000-0000-0000-000000000002","encounterId":"00000000-0000-0000-0000-000000000001","turn":1,"status":"{status}","encounterStatus":"ACTIVE","companion":{{"hp":95,"maxHp":100}},"monster":{{"hp":18,"maxHp":30}},"events":["PLAYER_ATTACK","MONSTER_ATTACK"],"reward":null}}"#
+    )
+}
+#[test]
+fn battle_start_and_attack_mapping_use_empty_body() {
+    for (id, action) in [(1, "start"), (2, "attack")] {
+        let (base, t) = endpoint("200 OK", &battle_json("ACTIVE"));
+        let b = Api::new(&base)
+            .unwrap()
+            .battle(uuid::Uuid::from_u128(id), Some(action))
+            .unwrap();
+        assert_eq!(b.monster.hp, 18);
+        assert_eq!(b.companion.hp, 95);
+        let request = t.join().unwrap();
+        assert!(request.starts_with("POST "));
+        assert!(request.ends_with("\r\n\r\n"));
+    }
+}
+#[test]
+fn capture_collection_and_ignore_mapping() {
+    let id = uuid::Uuid::from_u128(2);
+    let body = format!(
+        r#"{{"battleId":"{id}","encounterId":"00000000-0000-0000-0000-000000000001","success":false,"chance":0.55,"battle":{},"collection":null}}"#,
+        battle_json("ACTIVE")
+    );
+    let (base, t) = endpoint("200 OK", &body);
+    assert!(!Api::new(&base).unwrap().capture(id).unwrap().success);
+    t.join().unwrap();
+    let (base, t) = endpoint(
+        "200 OK",
+        r#"[{"monsterCode":"PIP","monsterName":"PIP","captureCount":2,"firstCapturedAt":"2026-01-01T00:00:00Z","lastCapturedAt":"2026-01-02T00:00:00Z"}]"#,
+    );
+    assert_eq!(
+        Api::new(&base).unwrap().collection().unwrap()[0].capture_count,
+        2
+    );
+    t.join().unwrap();
+    let (base, t) = endpoint(
+        "200 OK",
+        r#"{"encounterId":"00000000-0000-0000-0000-000000000001","encounterStatus":"ESCAPED"}"#,
+    );
+    assert_eq!(
+        Api::new(&base)
+            .unwrap()
+            .ignore(uuid::Uuid::from_u128(1))
+            .unwrap()
+            .encounter_status,
+        "ESCAPED"
+    );
+    t.join().unwrap();
+}
+#[test]
+fn loading_guard_server_wins_and_terminal_presentation() {
+    use super::battle::*;
+    let mut p = Presentation {
+        encounter_id: Some(uuid::Uuid::from_u128(1)),
+        ..Default::default()
+    };
+    assert!(p.command("battle").is_some());
+    assert!(p.command("battle").is_none());
+    let b: Battle = serde_json::from_str(&battle_json("ACTIVE")).unwrap();
+    p.apply_battle(b.clone());
+    assert_eq!(p.battle.as_ref().unwrap().companion.hp, 95);
+    p.finish(Some("network error".into()));
+    assert!(!p.busy);
+    assert_eq!(p.error.as_deref(), Some("network error"));
+    assert!(p.command("attack").is_some());
+    assert!(p.error.is_none());
+    let mut terminal = b;
+    terminal.status = Status::Victory;
+    terminal.monster.hp = 0;
+    terminal.events = vec!["VICTORY".into()];
+    p.apply_battle(terminal);
+    assert_eq!(p.battle.unwrap().monster.hp, 0);
+    assert_eq!(p.feedback.as_deref(), Some("VICTORY"));
+}
+#[test]
+fn unknown_invalid_and_network_response_do_not_mutate_presentation() {
+    for text in [
+        battle_json("UNKNOWN"),
+        battle_json("ACTIVE").replace("\"hp\":95", "\"hp\":999"),
+    ] {
+        let (base, t) = endpoint("200 OK", &text);
+        assert!(Api::new(&base)
+            .unwrap()
+            .battle(uuid::Uuid::from_u128(2), None)
+            .is_err());
+        t.join().unwrap();
+    }
+    let (base, t) = endpoint("503 Unavailable", "{}");
+    assert!(Api::new(&base)
+        .unwrap()
+        .battle(uuid::Uuid::from_u128(2), Some("attack"))
+        .is_err());
+    t.join().unwrap();
+}
+#[test]
+fn active_battle_suspends_visual_ttl_and_server_resolution_wins() {
+    let mut e = encounter();
+    e.battle_id = Some(uuid::Uuid::from_u128(2));
+    e.expiration_suspended = true;
+    let mut w = World::new(
+        Area {
+            x: 0.0,
+            y: 0.0,
+            w: 1200.0,
+            h: 800.0,
+        },
+        0.0,
+        7,
+    );
+    let remaining = e.remaining_at(e.expires_at + chrono::Duration::seconds(100));
+    w.apply_server_encounter(0.0, Some(e), remaining);
+    w.tick(100.0, 0.033, (0.0, 0.0), false);
+    assert!(w.view.pip.is_some());
+    w.apply_server_encounter(101.0, None, 0.0);
+    w.tick(102.0, 0.033, (0.0, 0.0), false);
+    assert!(w.view.pip.is_none());
+}
+
+#[test]
+#[ignore = "requires isolated live Spring Boot/PostgreSQL, LUMA_LIVE_TEST_URL"]
+fn live_battle_capture_reward_world_slice() {
+    let base = std::env::var("LUMA_LIVE_TEST_URL").expect("explicit isolated server URL");
+    let api = Api::new(&base).unwrap();
+    let before = api.bootstrap().unwrap();
+    if let Some(old) = api.encounter(false).unwrap() {
+        api.ignore(old.encounter_id).unwrap();
+    }
+    let e = api.encounter(true).unwrap().unwrap();
+    let mut w = World::new(
+        Area {
+            x: 0.0,
+            y: 0.0,
+            w: 1200.0,
+            h: 800.0,
+        },
+        0.0,
+        7,
+    );
+    w.apply_bootstrap(before.clone());
+    w.apply_server_encounter(0.0, Some(e.clone()), 60.0);
+    assert!(w.view.pip.is_some());
+    let mut b = api.battle(e.encounter_id, Some("start")).unwrap();
+    assert_eq!(
+        api.battle(e.encounter_id, Some("start")).unwrap().battle_id,
+        b.battle_id
+    );
+    let suspended = api.encounter(false).unwrap().unwrap();
+    assert!(suspended.expiration_suspended);
+    while b.status == battle::Status::Active {
+        b = api.battle(b.battle_id, Some("attack")).unwrap();
+        w.view.game.apply_battle(b.clone());
+    }
+    assert_eq!(b.status, battle::Status::Victory);
+    let reward = b.reward.clone().unwrap();
+    let c = api.capture(b.battle_id).unwrap();
+    let collection = api.collection().unwrap();
+    if c.success {
+        assert!(collection
+            .iter()
+            .any(|x| x.monster_code == "PIP" && x.capture_count > 0));
+    }
+    let after = api.bootstrap().unwrap();
+    assert_eq!(after.player.gold, before.player.gold + reward.gold);
+    assert_eq!(
+        after.active_companion.exp,
+        before.active_companion.exp + reward.exp
+    );
+    assert_eq!(
+        after.active_companion.bond,
+        before.active_companion.bond + reward.bond
+    );
+    assert!(api.encounter(false).unwrap().is_none());
+    w.apply_server_encounter(5.0, None, 0.0);
+    w.tick(6.0, 0.033, (0.0, 0.0), false);
+    assert!(w.view.pip.is_none());
+    eprintln!(
+        "LIVE battle={} encounter={} capture={} gold={} exp={} bond={} level={} collection={}",
+        b.battle_id,
+        e.encounter_id,
+        c.success,
+        after.player.gold,
+        after.active_companion.exp,
+        after.active_companion.bond,
+        after.active_companion.level,
+        collection.len()
+    );
+    let e = api.encounter(true).unwrap().unwrap();
+    assert_eq!(
+        api.ignore(e.encounter_id).unwrap().encounter_status,
+        "ESCAPED"
+    );
+}
+
+#[test]
+#[ignore = "requires test-only LiveValidationServer with failure RNG"]
+fn live_capture_failure_defeat_world_slice() {
+    let api = Api::new(&std::env::var("LUMA_LIVE_TEST_URL").unwrap()).unwrap();
+    let before = api.bootstrap().unwrap();
+    if let Some(e) = api.encounter(false).unwrap() {
+        api.ignore(e.encounter_id).unwrap();
+    }
+    let e = api.encounter(true).unwrap().unwrap();
+    let mut b = api.battle(e.encounter_id, Some("start")).unwrap();
+    let mut w = World::new(
+        Area {
+            x: 0.0,
+            y: 0.0,
+            w: 1200.0,
+            h: 800.0,
+        },
+        0.0,
+        42,
+    );
+    w.apply_server_encounter(0.0, Some(e.clone()), 60.0);
+    while b.status == battle::Status::Active {
+        let c = api.capture(b.battle_id).unwrap();
+        assert!(!c.success);
+        b = c.battle;
+        w.view.game.apply_battle(b.clone());
+        assert!(b.turn <= 100);
+    }
+    assert_eq!(b.status, battle::Status::Defeat);
+    assert_eq!(b.encounter_status, "PLAYER_DEFEATED");
+    assert_eq!(b.companion.hp, 0);
+    assert_eq!(api.bootstrap().unwrap().player.gold, before.player.gold);
+    w.apply_server_encounter(3.0, None, 0.0);
+    w.tick(4.0, 0.033, (0.0, 0.0), false);
+    assert!(w.view.pip.is_none());
+    let e = api.encounter(true).unwrap().unwrap();
+    let mut v = api.battle(e.encounter_id, Some("start")).unwrap();
+    while v.status == battle::Status::Active {
+        v = api.battle(v.battle_id, Some("attack")).unwrap();
+    }
+    let hp = v.companion.hp;
+    let c = api.capture(v.battle_id).unwrap();
+    assert!(!c.success);
+    assert_eq!(c.battle.companion.hp, hp);
+    assert_eq!(c.battle.encounter_status, "DEFEATED");
+    assert!(api.capture(v.battle_id).is_err());
+    eprintln!(
+        "LIVE FAILURE defeat={} turns={} victory_capture_failure={} no_counter_hp={hp}",
+        b.battle_id, b.turn, v.battle_id
+    );
+}
+
+#[test]
+fn battle_response_suspends_original_lease_before_reconciliation() {
+    let mut w = World::new(
+        Area {
+            x: 0.0,
+            y: 0.0,
+            w: 1200.0,
+            h: 800.0,
+        },
+        0.0,
+        7,
+    );
+    w.apply_server_encounter(0.0, Some(encounter()), 1.0);
+    w.apply_battle(serde_json::from_str(&battle_json("ACTIVE")).unwrap());
+    w.tick(61.0, 0.033, (0.0, 0.0), false);
+    assert!(w.view.pip.is_some());
+}
+
+#[test]
+fn debug_pip_cannot_reuse_a_resolved_server_battle() {
+    let mut w = World::new(
+        Area {
+            x: 0.0,
+            y: 0.0,
+            w: 1200.0,
+            h: 800.0,
+        },
+        0.0,
+        7,
+    );
+    w.apply_server_encounter(0.0, Some(encounter()), 1.0);
+    w.view
+        .game
+        .apply_battle(serde_json::from_str(&battle_json("VICTORY")).unwrap());
+    w.apply_server_encounter(2.0, None, 0.0);
+    w.tick(3.0, 0.033, (0.0, 0.0), false);
+    w.debug_spawn(4.0);
+    assert!(w.view.pip.is_some());
+    assert!(w.view.game.encounter_id.is_none());
+    assert!(w.view.game.command("interact").is_none());
 }
