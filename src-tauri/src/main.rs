@@ -259,14 +259,15 @@ fn main() {
                                     overlay::luma_place(1, 0.0, 0.0, 0);
                                 }
                                 // Keep a compact terminal result available until Close, even after PIP despawns.
-                                let (anchor_x, anchor_y, anchor_w) =
-                                    view.pip.as_ref().map_or(
-                                        (view.moa.x, view.moa.y, view.moa.size.width),
-                                        |p| (p.x, p.y, p.size.width),
-                                    );
+                                let (anchor_x, anchor_y, anchor_size) = view
+                                    .pip
+                                    .as_ref()
+                                    .map_or((view.moa.x, view.moa.y, view.moa.size), |p| {
+                                        (p.x, p.y, p.size)
+                                    });
                                 let a = world.area;
                                 let size = geometry::MENU_SIZE;
-                                let (x, y) = a.menu_anchor(anchor_x, anchor_y, anchor_w);
+                                let (x, y) = a.menu_anchor(anchor_x, anchor_y, anchor_size);
                                 let bounds = a.panel_bounds(x, y, size);
                                 overlay::luma_place(
                                     2,

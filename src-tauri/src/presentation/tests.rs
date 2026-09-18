@@ -161,11 +161,11 @@ fn bounded_queue_and_adaptive_panel_clamp() {
         },
     ] {
         for x in [area.x, area.x + area.w] {
-            let (a, y) = area.menu_anchor(x, area.y, 96.0);
+            let (a, y) = area.menu_anchor(x, area.y, PIP_SIZE);
             let bounds = area.panel_bounds(a, y, MENU_SIZE);
             assert!(bounds.x >= area.x);
             assert!(bounds.x + bounds.w <= area.x + area.w);
-            assert!(bounds.y >= area.y);
+            assert!(bounds.y >= area.y + PIP_SIZE.height);
             assert!(bounds.y + bounds.h <= area.y + area.h);
             if x == area.x {
                 assert!(a > x);

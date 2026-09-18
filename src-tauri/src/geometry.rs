@@ -37,14 +37,18 @@ impl Size {
     }
 }
 impl Area {
-    pub fn menu_anchor(self, x: f64, y: f64, entity_width: f64) -> (f64, f64) {
-        let offset = entity_width / 2.0 + LAYOUT.menu_gap + MENU_SIZE.width / 2.0;
+    pub fn menu_anchor(self, x: f64, y: f64, entity_size: Size) -> (f64, f64) {
+        let offset = entity_size.width / 2.0 + LAYOUT.menu_gap + MENU_SIZE.width / 2.0;
         let preferred = if x > self.x + self.w / 2.0 {
             x - offset
         } else {
             x + offset
         };
-        self.clamp(preferred, y, MENU_SIZE)
+        self.clamp(
+            preferred,
+            y + entity_size.height + LAYOUT.menu_gap,
+            MENU_SIZE,
+        )
     }
     pub fn ground_y(self) -> f64 {
         self.y + LAYOUT.ground_margin

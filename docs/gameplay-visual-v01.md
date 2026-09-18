@@ -34,7 +34,7 @@ Debug PIP remains unable to start a server battle. Existing request loading guar
 
 ## Placement, motion and focus
 
-The panel prefers the opposite horizontal side of its entity relative to the safe-area midpoint, then passes through the existing full-bounds clamp and integer panel projection. Panel size, entity window sizes, DesktopSafeArea, Dock policy and native NSPanel class/style remain unchanged. Negative monitor coordinates and edge positions are tested.
+The panel prefers the opposite horizontal side of its entity relative to the safe-area midpoint and starts above the entity top to avoid covering ground companions when space permits, then passes through the existing full-bounds clamp and integer panel projection. Panel size, entity window sizes, DesktopSafeArea, Dock policy and native NSPanel class/style remain unchanged. Negative monitor coordinates and edge positions are tested.
 
 `prefers-reduced-motion: reduce` centrally disables shake, translations, pulse/ring, appearance animations and HP transitions. Static damage numbers, numerical HP, result text and the same authoritative states remain. No focus/activate/makeKey/bringToFront calls were introduced. No keyboard hooks or permission changes.
 
@@ -67,3 +67,6 @@ Current explicit commands may supersede pending attack feedback while preserving
 Local node_modules repeatedly contained duplicate `react 2` / `react-dom 2` directories and caused one bundle build failure. npm ci restored the lockfile installation; no source workaround. An older bundle launched after that failed build was stopped and excluded from final visual evidence; successful latest builds were used for smoke runs.
 
 No new dependencies, schema, formula, transaction/locking, collection, level, encounter, native panel or Tao implementation changes. BattleService changes are response-only presentation assembly from already-resolved values. All isolated validation processes/containers are stopped afterward; user processes, files and LUMA development volume preserved. No automatic merge.
+
+Review correction iteration 1: retain adaptive left/right placement but use entity-top plus existing menu gap before clamping, rather than ground-height popup placement that could obscure MOA. Added non-overlap assertion.
+Native smoke measurements above precede this final placement-only correction; its final geometry is covered by deterministic clamp/non-overlap tests, while physical popup placement remains MANUAL_REQUIRED.
