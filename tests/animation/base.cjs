@@ -7,7 +7,7 @@ const {resolveMonster}=require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'en
 const {directionScale}=require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'animation/model.js'));
 test('registered species/stage base resolution and unknown fallback',()=>{
  for(const species of ['moa','ruu','nox']) assert.equal(companionBase(species,1),`/assets/creatures/${species}/stage01/base.png`);
- assert.equal(companionBase('unknown',1),null);assert.equal(companionBase('moa',2),null);
+ assert.equal(companionBase('unknown',1),null);assert.equal(companionBase('moa',2),'/assets/creatures/moa/stage02/base.png');
 });
 test('animation > base > CSS priority',()=>{
  assert.deepEqual(rendererSource('clip','base'),{kind:'animation',url:'clip'});
@@ -49,4 +49,10 @@ test('base is static, uses common bottom anchor and remains inside gameplay wrap
  assert.match(base,/className="sprite-frame base-sprite"/);assert.doesNotMatch(base,/requestAnimationFrame|setInterval/);
  assert.match(gp,/@media\(prefers-reduced-motion:reduce\)[\s\S]*\.gp-impulse/);
  assert.match(gp,/\.gp-pip\{transform:scale\(\.8\)/);
+});
+
+test('missing MOKORI base is cached CSS fallback, never stage01',async()=>{
+ const calls=[];const loader=new BaseAssetLoader(async url=>{calls.push(url);throw Error('not supplied');});
+ const url=companionBase('moa',2);assert.equal(rendererSource(null,await loader.load(url)).kind,'css');
+ assert.equal(await loader.load(url),null);assert.deepEqual(calls,['/assets/creatures/moa/stage02/base.png']);
 });

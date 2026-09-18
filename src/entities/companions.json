@@ -1,5 +1,30 @@
 {
-  "moa": {"name":"MOA","identity":"Nature / Balance","palette":"Cream + Green","stages":{"1":"/assets/creatures/moa/stage01/manifest.json"}},
-  "ruu": {"name":"RUU","identity":"Sky / Explorer","palette":"White + Blue","stages":{"1":"/assets/creatures/ruu/stage01/manifest.json"}},
-  "nox": {"name":"NOX","identity":"Night / Mystic","palette":"Dark + Purple","stages":{"1":"/assets/creatures/nox/stage01/manifest.json"}}
+  "moa": {
+    "name": "MOA",
+    "identity": "Nature / Balance",
+    "palette": "Cream + Green",
+    "stages": {
+      "1": "/assets/creatures/moa/stage01/manifest.json",
+      "2": "/assets/creatures/moa/stage02/manifest.json"
+    },
+    "stageNames": {
+      "2": "MOKORI"
+    }
+  },
+  "ruu": {
+    "name": "RUU",
+    "identity": "Sky / Explorer",
+    "palette": "White + Blue",
+    "stages": {
+      "1": "/assets/creatures/ruu/stage01/manifest.json"
+    }
+  },
+  "nox": {
+    "name": "NOX",
+    "identity": "Night / Mystic",
+    "palette": "Dark + Purple",
+    "stages": {
+      "1": "/assets/creatures/nox/stage01/manifest.json"
+    }
+  }
 }

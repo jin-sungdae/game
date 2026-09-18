@@ -79,7 +79,15 @@ for(const species of ['moa','ruu','nox']) {
 }
 test('unknown species/stage returns fallback without IO or throwing',async()=>{
  const loader=new AssetLoader({json:async()=>{assert.fail('unexpected IO');},image:async()=>{assert.fail('unexpected IO');}});
- for(const [species,stage] of [['unknown',1],['../moa',1],['constructor',1],['moa',2],['ruu',5],['nox',0],['moa',NaN]]) {
+ for(const [species,stage] of [['unknown',1],['../moa',1],['constructor',1],['moa',3],['ruu',5],['nox',0],['moa',NaN]]) {
   assert.equal(resolveCompanion(species,stage),null);assert.equal(await loader.load(species,stage,'idle'),null);
  }
+});
+
+test('MOKORI resolves stage02; missing frames never load stage01',async()=>{
+ assert.equal(resolveCompanion('moa',2).name,'MOKORI');
+ const manifest=require('../../public/assets/creatures/moa/stage02/manifest.json');const calls=[];
+ const loader=new AssetLoader({json:async url=>{calls.push(url);return manifest;},image:async url=>{calls.push(url);throw Error('missing');}});
+ assert.equal(await loader.load('moa',2,'idle'),null);assert.equal(await loader.load('moa',2,'idle'),null);
+ assert.ok(calls.length>1);assert.ok(calls.every(url=>url.includes('/stage02/')));
 });

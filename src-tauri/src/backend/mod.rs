@@ -1,4 +1,5 @@
 pub mod battle;
+pub mod evolution;
 use battle::{Battle, Capture, Collected, Command};
 // Local HTTP client, DTO validation and bounded worker. No AppKit/React calls.
 use chrono::{DateTime, Utc};
@@ -151,6 +152,8 @@ impl Api {
                     Some("ENCOUNTER_EXPIRED") => "Encounter expired",
                     Some("BATTLE_ALREADY_TERMINAL") => "Battle already terminal; refresh state",
                     Some("CAPTURE_ALREADY_RESOLVED") => "Capture already resolved; refresh state",
+                    Some("NOT_ELIGIBLE") => "Evolution not eligible; refresh status",
+                    Some("MAX_STAGE") => "Maximum evolution stage",
                     Some("INVALID_STATE") => "Invalid game state; refresh state",
                     Some("GAME_UNAVAILABLE") => "Game unavailable",
                     _ => "server returned non-success status",
@@ -188,6 +191,10 @@ impl Api {
     }
 }
 pub enum Event {
+    Evolution(evolution::Eligibility),
+    Evolved(evolution::Result),
+    EvolutionFailed(String),
+    EvolutionUnavailable(String),
     Bootstrap(Bootstrap),
     Encounter(Option<Encounter>),
     Battle(Battle),
@@ -217,19 +224,31 @@ impl Backend {
                 }
             };
             let mut bootstrapped = false;
+            let mut identity: Option<(String, u32)> = None;
             let mut command = None;
             let mut last_error = None;
             let mut last_battle = None;
             while !stopped.load(Ordering::Relaxed) {
                 let explicit = command.is_some();
+                let evolving = matches!(command, Some(Command::Evolve));
                 let result = (|| {
                     if !bootstrapped {
+                        let bootstrap = api.bootstrap()?;
+                        identity = Some((
+                            bootstrap.active_companion.species.clone(),
+                            bootstrap.active_companion.evolution_stage,
+                        ));
                         events
-                            .send(Event::Bootstrap(api.bootstrap()?))
+                            .send(Event::Bootstrap(bootstrap))
                             .map_err(|_| "closed")?;
                         bootstrapped = true;
                     }
                     match command.take() {
+                        Some(Command::Evolve) => {
+                            events
+                                .send(Event::Evolved(api.evolve()?))
+                                .map_err(|_| "closed")?;
+                        }
                         Some(Command::StartBattle(id)) => {
                             events
                                 .send(Event::Battle(api.battle(id, Some("start"))?))
@@ -283,12 +302,48 @@ impl Backend {
                     }
                     events.send(Event::Encounter(e)).map_err(|_| "closed")?;
                     if explicit {
+                        let bootstrap = api.bootstrap()?;
+                        identity = Some((
+                            bootstrap.active_companion.species.clone(),
+                            bootstrap.active_companion.evolution_stage,
+                        ));
                         events
-                            .send(Event::Bootstrap(api.bootstrap()?))
+                            .send(Event::Bootstrap(bootstrap))
                             .map_err(|_| "closed")?;
+                    }
+                    // Status failure cannot discard an acknowledged battle/evolution result.
+                    match api.evolution() {
+                        Ok(value) => {
+                            // Reconcile a committed evolution even when its POST response was lost.
+                            if identity.as_ref()
+                                != Some(&(value.species.clone(), value.current_stage))
+                            {
+                                let bootstrap = api.bootstrap()?;
+                                identity = Some((
+                                    bootstrap.active_companion.species.clone(),
+                                    bootstrap.active_companion.evolution_stage,
+                                ));
+                                events
+                                    .send(Event::Bootstrap(bootstrap))
+                                    .map_err(|_| "closed")?;
+                            }
+                            events.send(Event::Evolution(value)).map_err(|_| "closed")?;
+                        }
+                        Err(e) => {
+                            events
+                                .send(Event::EvolutionUnavailable(e.into()))
+                                .map_err(|_| "closed")?;
+                        }
                     }
                     Ok::<(), &'static str>(())
                 })();
+                if let Err(error) = &result {
+                    let _ = events.send(if evolving {
+                        Event::EvolutionFailed((*error).into())
+                    } else {
+                        Event::EvolutionUnavailable((*error).into())
+                    });
+                }
                 if explicit {
                     let _ =
                         events.send(Event::Finished(result.as_ref().err().map(|e| (*e).into())));
