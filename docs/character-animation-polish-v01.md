@@ -26,3 +26,42 @@ animation and retains that indicator without changing world movement.
 Acceptance results and native observations will be recorded after implementation.
 Aesthetic naturalness and physical mouse/typing focus remain MANUAL_REQUIRED.
 No automatic merge.
+
+## Implemented behavior
+
+- MOA idle: 2.6s anchored breathing, scaleX .997–1, scaleY 1–1.012.
+- MOA walk: .48s cadence, 1.5pt bob, ±.5° tilt, tiny squash/stretch.
+- Look: 3.2s, .3° tilt/1.003 scaleY; sit: .975–.98 scaleY/3.6s.
+- Sleep: 4.6s breathing and static in-canvas Zz; react: one .32s/2pt hop.
+- PIP idle: 1.9s mostly still with a short ≤.8° twitch; roam: .34s/1.8pt bob.
+- Dragging/despawning/unknown states stay still. Unknown species do not acquire
+  MOA behavior. PIP defeat remains driven only by server VICTORY.
+- Capture ring/pulse/success and despawn remain the existing authoritative pipeline.
+- During gameplay impulses base animation yields to the existing outer effect;
+  afterward it restarts from neutral. Ordinary same-state snapshots do not restart it.
+- `prefers-reduced-motion: reduce` removes all base movement. Existing gameplay
+  reduced-motion rules suppress hit shake. Static sleep text remains available.
+
+## Automated checks
+
+Build PASS; animation 27 + base 7 PASS; existing gameplay 4 + polish 18 PASS;
+asset validator 16 PASS; strict production-base gate PASS; policy 9 PASS;
+Rust 66 PASS (4 opt-in live tests not part of the default suite); clippy/fmt and
+Tao integrity PASS. Native/CI/server final evidence is recorded on the PR.
+
+Tests cover mappings, source priority, state/snapshot stability, separate facing
+and gameplay nodes, capture/defeat authority, reduced motion and bounded cadence.
+Wrapper/no-remount assertions are source-contract tests, not a simulated React DOM
+reconciliation benchmark. Physical naturalness/focus remains MANUAL_REQUIRED.
+
+## Performance / known limits
+
+No new JS tick, RAF, interval, dependency, window or game state. Transform-only CSS
+animations reuse the existing sprite; sleep adds one small span. CPU/RSS impact is
+not numerically benchmarked. Composite layers can cost GPU memory/energy while idle;
+no permanent will-change is used. Art is still a single whole-body image, not a
+skeletal/ear deformation or frame animation. Production PNG hashes are unchanged.
+Native dimensions remain 96×104, base canvas 82pt, PIP effective 65.6pt. During
+ordinary motion the supplied bottom transparent padding accommodates tiny tilts;
+future art with different padding needs a new clipping review. Gameplay defeat's
+existing tilt/scale behavior is preserved, not redesigned.

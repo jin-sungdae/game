@@ -1,0 +1,26 @@
+/* Only BaseSprite owns this node. Frame clips and diagnostic CSS never enter it. */
+.base-motion{position:relative;display:flex;flex:none;align-items:flex-end;justify-content:center;transform-origin:50% 100%;pointer-events:none}
+.bm-moa-idle{animation:bm-breathe 2.6s ease-in-out infinite}
+.bm-moa-walk{animation:bm-walk .48s ease-in-out infinite}
+.bm-moa-look{animation:bm-look 3.2s ease-in-out infinite}
+.bm-moa-sit{animation:bm-sit 3.6s ease-in-out infinite}
+.bm-moa-sleep{animation:bm-sleep 4.6s ease-in-out infinite}
+.bm-moa-react{animation:bm-react .32s ease-out both}
+.bm-pip-idle{animation:bm-twitch 1.9s ease-in-out infinite}
+.bm-pip-walk{animation:bm-scamper .34s ease-in-out infinite}
+.base-sleep{position:absolute;top:4px;right:8px;font-size:9px;line-height:12px;color:#53784d;text-shadow:0 1px 1px #fff;pointer-events:none}
+@keyframes bm-breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(.997,1.012)}}
+@keyframes bm-walk{0%,100%{transform:rotate(-.5deg) scale(1,.995)}50%{transform:translateY(-1.5px) rotate(.5deg) scale(.997,1.008)}}
+@keyframes bm-look{0%,100%{transform:none}50%{transform:rotate(.3deg) scaleY(1.003)}}
+@keyframes bm-sit{0%,100%{transform:scaleY(.975)}50%{transform:scaleY(.98)}}
+@keyframes bm-sleep{0%,100%{transform:scaleY(.99)}50%{transform:scaleY(1.004)}}
+@keyframes bm-react{0%,100%{transform:none}45%{transform:translateY(-2px) scale(1.012)}}
+@keyframes bm-twitch{0%,80%,100%{transform:none}87%{transform:rotate(-.8deg)}94%{transform:rotate(.6deg)}}
+@keyframes bm-scamper{0%,100%{transform:rotate(-.7deg)}50%{transform:translateY(-1.8px) rotate(.7deg)}}
+/* Existing gameplay nodes keep their transforms; base motion yields temporarily.
+   Reset, rather than pause mid-hop, to keep attack/capture within the old bounds. */
+.gp-attack .base-motion,.gp-hit .base-motion,.gp-capturing .base-motion,
+.gp-capture-success .base-motion,.gp-capture-fail .base-motion,
+.gp-defeated .base-motion,.DESPAWNING .base-motion{animation:none;transform:none}
+.gp-defeated .base-sleep,.gp-capture-success .base-sleep{display:none}
+@media(prefers-reduced-motion:reduce){.base-motion{animation:none!important;transform:none!important}}
