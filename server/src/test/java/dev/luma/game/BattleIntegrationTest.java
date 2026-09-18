@@ -1,0 +1,56 @@
+package dev.luma.game;
+import org.junit.jupiter.api.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.http.*;
+import java.util.*;
+import java.util.concurrent.*;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+@SpringBootTest(webEnvironment=SpringBootTest.WebEnvironment.RANDOM_PORT)
+class BattleIntegrationTest {
+ @DynamicPropertySource static void database(DynamicPropertyRegistry r) {GameIntegrationTest.database(r);}
+ @Autowired TestRestTemplate http;@Autowired JdbcTemplate db;@LocalServerPort int port;
+ @MockitoBean RandomSource random;
+ String url(String p){return "http://127.0.0.1:"+port+"/api/v1"+p;}
+ @BeforeEach void reset(){clean();when(random.nextLong(anyLong())).thenReturn(0L);}
+ @AfterEach void clean(){db.update("DELETE FROM game.t_reward");db.update("DELETE FROM game.t_collection");db.update("DELETE FROM game.t_battle");db.update("DELETE FROM game.t_encounter");db.update("UPDATE game.m_monster SET use_yn=true");db.update("UPDATE game.t_player SET gold=0");db.update("UPDATE game.t_player_companion SET exp=0,level=1,bond=0,active=true");}
+ UUID encounter(){return http.postForObject(url("/encounters"),null,GameDtos.Encounter.class).encounterId();}
+ BattleDtos.Battle start(UUID e){return http.postForObject(url("/encounters/"+e+"/battle"),null,BattleDtos.Battle.class);}
+ BattleDtos.Battle battle(){return start(encounter());}
+ BattleDtos.Battle attack(UUID id){return http.postForObject(url("/battles/"+id+"/attack"),null,BattleDtos.Battle.class);}
+ BattleDtos.Capture capture(UUID id){return http.postForObject(url("/battles/"+id+"/capture"),null,BattleDtos.Capture.class);}
+ BattleDtos.Battle win(){var b=battle();while(b.status().equals("ACTIVE"))b=attack(b.battleId());return b;}
+ String status(UUID id){return db.queryForObject("SELECT status FROM game.t_encounter WHERE encounter_id=?",String.class,id);}
+ int count(String table){return db.queryForObject("SELECT count(*) FROM game."+table,Integer.class);}
+ int postStatus(String p){return http.postForEntity(url(p),null,String.class).getStatusCode().value();}
+ @Test void startRetryAndDamage(){var b=battle();assertEquals(b.battleId(),start(b.encounterId()).battleId());assertEquals(100,b.companion().hp());assertEquals(30,b.monster().hp());var a=attack(b.battleId());assertEquals(1,a.turn());assertEquals(18,a.monster().hp());assertEquals(95,a.companion().hp());assertEquals(List.of("PLAYER_ATTACK","MONSTER_ATTACK"),a.events());}
+ @Test void victoryRewardAndTerminalRejection(){var b=win();assertEquals("VICTORY",b.status());assertEquals(0,b.monster().hp());assertEquals(90,b.companion().hp());assertEquals("ACTIVE",status(b.encounterId()));assertEquals(10,b.reward().gold());assertEquals(20,b.reward().exp());assertEquals(1,b.reward().bond());assertEquals(409,postStatus("/battles/"+b.battleId()+"/attack"));assertEquals(1,count("t_reward"));var boot=http.getForObject(url("/game/bootstrap"),GameDtos.Bootstrap.class);assertEquals(10,boot.player().gold());assertEquals(20,boot.activeCompanion().exp());assertEquals(1,boot.activeCompanion().bond());}
+ @Test void levelUpAndCap(){db.update("UPDATE game.t_player_companion SET exp=90");var b=win();var c=http.getForObject(url("/game/bootstrap"),GameDtos.Bootstrap.class).activeCompanion();assertEquals(110,c.exp());assertEquals(2,c.level());assertTrue(b.events().contains("LEVEL_UP"));}
+ @Test void fullHalfZeroChance(){assertEquals(.35,CombatRules.captureChance(30,30,"COMMON"),1e-9);assertEquals(.60,CombatRules.captureChance(15,30,"COMMON"),1e-9);assertEquals(.85,CombatRules.captureChance(0,30,"COMMON"),1e-9);long[] exp={0,99,100,299,300,599,600,999,1000,Long.MAX_VALUE};int[] levels={1,1,2,2,3,3,4,4,5,5};for(int i=0;i<exp.length;i++)assertEquals(levels[i],CombatRules.level(exp[i]));}
+ @Test void captureSuccessNoReward(){var b=battle();var c=capture(b.battleId());assertTrue(c.success());assertEquals("CAPTURED",c.battleStatus());assertEquals("CAPTURED",status(b.encounterId()));assertEquals(1,c.collection().captureCount());assertEquals(0,count("t_reward"));assertEquals(409,postStatus("/battles/"+b.battleId()+"/capture"));assertEquals(409,postStatus("/battles/"+b.battleId()+"/attack"));}
+ @Test void repeatedCollectionPreservesFirstTime(){var first=capture(battle().battleId()).collection();var second=capture(battle().battleId()).collection();assertEquals(2,second.captureCount());assertEquals(first.firstCapturedAt(),second.firstCapturedAt());assertFalse(second.lastCapturedAt().isBefore(first.lastCapturedAt()));assertEquals(1,http.getForObject(url("/collection"),BattleDtos.Collected[].class).length);}
+ @Test void activeCaptureFailureAndDefeat(){var b=battle();when(random.nextLong(anyLong())).thenReturn(999999L);var c=capture(b.battleId());assertFalse(c.success());assertEquals(95,c.battle().companion().hp());assertEquals(30,c.battle().monster().hp());for(int i=1;i<20;i++)c=capture(b.battleId());assertEquals("DEFEAT",c.battleStatus());assertEquals("PLAYER_DEFEATED",c.encounterStatus());assertEquals(0,c.battle().companion().hp());assertEquals(0,count("t_reward"));}
+ @Test void attackDefeat(){var b=battle();db.update("UPDATE game.t_battle SET companion_hp=1 WHERE battle_id=?",b.battleId());var a=attack(b.battleId());assertEquals("DEFEAT",a.status());assertEquals("PLAYER_DEFEATED",a.encounterStatus());assertEquals(0,count("t_reward"));}
+ @Test void victoryFailureNoCounterOrRetry(){var b=win();when(random.nextLong(anyLong())).thenReturn(999999L);var c=capture(b.battleId());assertFalse(c.success());assertEquals(b.companion(),c.battle().companion());assertEquals("DEFEATED",c.encounterStatus());assertEquals(409,postStatus("/battles/"+b.battleId()+"/capture"));assertEquals(1,count("t_reward"));}
+ @Test void victoryCaptureKeepsOneReward(){var b=win();var c=capture(b.battleId());assertTrue(c.success());assertEquals(1,count("t_reward"));assertEquals(1,count("t_collection"));assertEquals(10,db.queryForObject("SELECT gold FROM game.t_player WHERE player_id=1",Long.class));}
+ List<Integer> concurrent(String p)throws Exception{var pool=Executors.newFixedThreadPool(2);try{var gate=new CountDownLatch(1);Callable<Integer> job=()->{gate.await();return postStatus(p);};var a=pool.submit(job);var b=pool.submit(job);gate.countDown();return List.of(a.get(10,TimeUnit.SECONDS),b.get(10,TimeUnit.SECONDS));}finally{pool.shutdownNow();}}
+ @Test void concurrentAttackSerialTurns()throws Exception{var b=battle();assertEquals(List.of(200,200),concurrent("/battles/"+b.battleId()+"/attack"));var r=http.getForObject(url("/battles/"+b.battleId()),BattleDtos.Battle.class);assertEquals(2,r.turn());assertEquals(6,r.monster().hp());assertEquals(90,r.companion().hp());}
+ @Test void concurrentVictoryPaysOnce()throws Exception{var b=battle();attack(b.battleId());attack(b.battleId());var codes=concurrent("/battles/"+b.battleId()+"/attack");assertTrue(codes.contains(200));assertTrue(codes.contains(409));assertEquals(1,count("t_reward"));assertEquals(10,db.queryForObject("SELECT gold FROM game.t_player WHERE player_id=1",Long.class));}
+ @Test void concurrentCaptureExactlyOnce()throws Exception{var b=battle();var codes=concurrent("/battles/"+b.battleId()+"/capture");assertTrue(codes.contains(200));assertTrue(codes.contains(409));assertEquals(1,db.queryForObject("SELECT capture_count FROM game.t_collection",Long.class));}
+ @Test void ignoreAndRetryRejection(){var b=battle();assertEquals(200,postStatus("/encounters/"+b.encounterId()+"/ignore"));assertEquals("ESCAPED",status(b.encounterId()));assertEquals(409,postStatus("/battles/"+b.battleId()+"/attack"));assertEquals(0,count("t_reward"));}
+ @Test void invalidMissingAndBody(){assertEquals(404,postStatus("/encounters/"+UUID.randomUUID()+"/battle"));assertEquals(404,postStatus("/battles/"+UUID.randomUUID()+"/attack"));var b=battle();assertEquals(400,http.postForEntity(url("/battles/"+b.battleId()+"/capture"),Map.of("success",true),String.class).getStatusCode().value());assertEquals(400,postStatus("/battles/"+b.battleId()+"/attack?damage=100"));}
+ @Test void expiredEncounter(){var e=encounter();db.update("UPDATE game.t_encounter SET spawned_at=clock_timestamp()-interval '2 minutes',expires_at=clock_timestamp()-interval '1 second' WHERE encounter_id=?",e);assertEquals(409,postStatus("/encounters/"+e+"/battle"));assertEquals("EXPIRED",status(e));}
+ @Test void activeBattleSuspendsTtlVictoryWindowExpires(){var b=battle();db.update("UPDATE game.t_encounter SET spawned_at=clock_timestamp()-interval '2 minutes',expires_at=clock_timestamp()-interval '1 second' WHERE encounter_id=?",b.encounterId());var e=http.getForObject(url("/encounters/active"),GameDtos.Encounter.class);assertTrue(e.expirationSuspended());assertEquals(b.battleId(),e.battleId());while(b.status().equals("ACTIVE"))b=attack(b.battleId());db.update("UPDATE game.t_encounter SET expires_at=clock_timestamp()-interval '1 second' WHERE encounter_id=?",b.encounterId());assertEquals(204,http.getForEntity(url("/encounters/active"),String.class).getStatusCode().value());assertEquals("DEFEATED",status(b.encounterId()));assertEquals(409,postStatus("/battles/"+b.battleId()+"/capture"));}
+ @Test void databaseHpAndUniqueConstraints(){var b=battle();assertThrows(org.springframework.dao.DataIntegrityViolationException.class,()->db.update("UPDATE game.t_battle SET monster_hp=monster_max_hp+1 WHERE battle_id=?",b.battleId()));assertThrows(org.springframework.dao.DataIntegrityViolationException.class,()->db.update("UPDATE game.t_battle SET companion_hp=-1 WHERE battle_id=?",b.battleId()));}
+ @Test void rewardFailureRollsBackWholeTurn(){var b=battle();attack(b.battleId());attack(b.battleId());db.update("UPDATE game.t_player SET gold=9223372036854775807 WHERE player_id=1");assertEquals(503,postStatus("/battles/"+b.battleId()+"/attack"));assertEquals(0,count("t_reward"));var a=http.getForObject(url("/battles/"+b.battleId()),BattleDtos.Battle.class);assertEquals(2,a.turn());assertEquals(6,a.monster().hp());assertEquals("ACTIVE",a.status());}
+ @Test void maxLevelInBootstrap(){db.update("UPDATE game.t_player_companion SET exp=990,level=4");win();var c=http.getForObject(url("/game/bootstrap"),GameDtos.Bootstrap.class).activeCompanion();assertEquals(1010,c.exp());assertEquals(5,c.level());}
+ @Test void simultaneousStartReturnsOneBattle()throws Exception{var e=encounter();assertEquals(List.of(200,200),concurrent("/encounters/"+e+"/battle"));assertEquals(1,count("t_battle"));assertEquals(start(e).battleId(),start(e).battleId());}
+ @Test void preciseErrors(){var missing=http.postForEntity(url("/battles/"+UUID.randomUUID()+"/capture"),null,Map.class);assertEquals("BATTLE_NOT_FOUND",missing.getBody().get("code"));var b=win();var terminal=http.postForEntity(url("/battles/"+b.battleId()+"/attack"),null,Map.class);assertEquals("BATTLE_ALREADY_TERMINAL",terminal.getBody().get("code"));}
+}

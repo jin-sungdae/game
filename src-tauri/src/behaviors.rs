@@ -9,6 +9,7 @@ pub struct Snapshot {
     pub moa: Entity<CompanionState>,
     pub pip: Option<Entity<PipState>>,
     pub menu: bool,
+    pub game: crate::backend::battle::Presentation,
 }
 pub struct World {
     pub view: Snapshot,
@@ -26,6 +27,7 @@ impl World {
                 moa: companion.entity().clone(),
                 pip: None,
                 menu: false,
+                game: Default::default(),
             },
             area,
             companion,
@@ -33,6 +35,20 @@ impl World {
             bootstrap: None,
             server_encounter: None,
         }
+    }
+    pub fn apply_battle(&mut self, value: crate::backend::battle::Battle) {
+        // An authoritative ACTIVE battle response suspends the old spawn lease immediately,
+        // even if the following encounter reconciliation HTTP request is delayed.
+        if value.status == crate::backend::battle::Status::Active
+            && value.encounter_status == "ACTIVE"
+        {
+            if let Some((id, deadline)) = &mut self.server_encounter {
+                if *id == value.encounter_id {
+                    *deadline = f64::MAX / 2.0;
+                }
+            }
+        }
+        self.view.game.apply_battle(value);
     }
     pub fn apply_bootstrap(&mut self, value: crate::backend::Bootstrap) {
         eprintln!(
@@ -57,6 +73,12 @@ impl World {
             }
             return;
         };
+        if self.view.game.encounter_id != Some(encounter.encounter_id) {
+            self.view.game.battle = None;
+            self.view.game.feedback = None;
+        }
+        self.view.game.encounter_id = Some(encounter.encounter_id);
+        self.view.game.monster_level = encounter.monster.level;
         if self.server_encounter.as_ref().map(|e| e.0) != Some(encounter.encounter_id) {
             // Reuse the one existing PIP presentation; never add another native panel.
             self.view.pip = None;
@@ -94,7 +116,9 @@ impl World {
             p.state = PipState::Despawning;
             self.pip_deadline = now + 0.5;
         }
-        self.view.menu = false;
+        if self.view.game.battle.is_none() {
+            self.view.menu = false;
+        }
     }
     pub fn drag(&mut self, now: f64, cursor: (f64, f64)) {
         self.companion.begin_drag(now, self.area, cursor);

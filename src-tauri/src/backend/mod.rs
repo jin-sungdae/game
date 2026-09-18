@@ -1,4 +1,6 @@
-//! Local HTTP client, DTO validation and bounded worker. No AppKit/React calls.
+pub mod battle;
+use battle::{Battle, Capture, Collected, Command};
+// Local HTTP client, DTO validation and bounded worker. No AppKit/React calls.
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
 use std::{
@@ -60,6 +62,10 @@ pub struct Encounter {
     pub monster: Monster,
     pub spawned_at: DateTime<Utc>,
     pub expires_at: DateTime<Utc>,
+    #[serde(default)]
+    pub battle_id: Option<uuid::Uuid>,
+    #[serde(default)]
+    pub expiration_suspended: bool,
 }
 impl Encounter {
     pub fn supports_pip(&self) -> bool {
@@ -70,6 +76,9 @@ impl Encounter {
             && !self.encounter_id.is_nil()
     }
     pub fn remaining_at(&self, now: DateTime<Utc>) -> f64 {
+        if self.expiration_suspended {
+            return f64::MAX / 2.0;
+        }
         (self.expires_at - now).num_milliseconds().max(0) as f64 / 1000.0
     }
 }
@@ -118,9 +127,7 @@ impl Api {
         if response.status() == reqwest::StatusCode::NO_CONTENT {
             return Ok(None);
         }
-        if response.status() != reqwest::StatusCode::OK {
-            return Err("server returned non-success status");
-        }
+        let status = response.status();
         // Bound local-server response allocation, and reject malformed JSON without mutating the world.
         use std::io::Read;
         let mut bytes = Vec::new();
@@ -130,6 +137,25 @@ impl Api {
             .map_err(|_| "response read failed")?;
         if bytes.len() > 65536 {
             return Err("response exceeds limit");
+        }
+        if status != reqwest::StatusCode::OK {
+            let code = serde_json::from_slice::<serde_json::Value>(&bytes).ok();
+            return Err(
+                match code
+                    .as_ref()
+                    .and_then(|v| v.get("code"))
+                    .and_then(|v| v.as_str())
+                {
+                    Some("ENCOUNTER_NOT_FOUND") => "Encounter not found",
+                    Some("BATTLE_NOT_FOUND") => "Battle not found",
+                    Some("ENCOUNTER_EXPIRED") => "Encounter expired",
+                    Some("BATTLE_ALREADY_TERMINAL") => "Battle already terminal; refresh state",
+                    Some("CAPTURE_ALREADY_RESOLVED") => "Capture already resolved; refresh state",
+                    Some("INVALID_STATE") => "Invalid game state; refresh state",
+                    Some("GAME_UNAVAILABLE") => "Game unavailable",
+                    _ => "server returned non-success status",
+                },
+            );
         }
         serde_json::from_slice(&bytes)
             .map(Some)
@@ -164,69 +190,138 @@ impl Api {
 pub enum Event {
     Bootstrap(Bootstrap),
     Encounter(Option<Encounter>),
+    Battle(Battle),
+    Capture(Capture),
+    Collection(Vec<Collected>),
+    Finished(Option<String>),
 }
 pub struct Backend {
-    requests: SyncSender<()>,
+    requests: SyncSender<Command>,
     events: Receiver<Event>,
+    open: Arc<AtomicBool>,
 }
 impl Backend {
     pub fn start(stopped: Arc<AtomicBool>) -> Self {
         let (requests, rx) = mpsc::sync_channel(1);
         let (events, receiver) = mpsc::sync_channel(8);
+        let open = Arc::new(AtomicBool::new(false));
+        let visible = open.clone();
         std::thread::spawn(move || {
             let base = std::env::var("LUMA_GAME_SERVER_URL")
                 .unwrap_or_else(|_| "http://127.0.0.1:8081".into());
             let api = match Api::new(&base) {
-                Ok(api) => api,
+                Ok(a) => a,
                 Err(e) => {
-                    eprintln!("[LUMA BACKEND] {e}; local Companion continues");
+                    let _ = events.send(Event::Finished(Some(e.into())));
                     return;
                 }
             };
             let mut bootstrapped = false;
-            let mut create = false;
+            let mut command = None;
             let mut last_error = None;
+            let mut last_battle = None;
             while !stopped.load(Ordering::Relaxed) {
+                let explicit = command.is_some();
                 let result = (|| {
                     if !bootstrapped {
-                        let b = api.bootstrap()?;
-                        let _ = events.try_send(Event::Bootstrap(b));
+                        events
+                            .send(Event::Bootstrap(api.bootstrap()?))
+                            .map_err(|_| "closed")?;
                         bootstrapped = true;
                     }
-                    let encounter = api.encounter(create)?;
-                    if encounter.as_ref().is_some_and(|e| !e.supports_pip()) {
-                        let _ = events.try_send(Event::Encounter(None));
+                    match command.take() {
+                        Some(Command::StartBattle(id)) => {
+                            events
+                                .send(Event::Battle(api.battle(id, Some("start"))?))
+                                .map_err(|_| "closed")?;
+                        }
+                        Some(Command::Attack(id)) => {
+                            events
+                                .send(Event::Battle(api.battle(id, Some("attack"))?))
+                                .map_err(|_| "closed")?;
+                        }
+                        Some(Command::Capture(id)) => {
+                            events
+                                .send(Event::Capture(api.capture(id)?))
+                                .map_err(|_| "closed")?;
+                        }
+                        Some(Command::Ignore(id)) => {
+                            api.ignore(id)?;
+                        }
+                        Some(Command::LoadCollection) => {
+                            events
+                                .send(Event::Collection(api.collection()?))
+                                .map_err(|_| "closed")?;
+                        }
+                        Some(Command::Refresh(id)) => {
+                            events
+                                .send(Event::Battle(api.battle(id, None)?))
+                                .map_err(|_| "closed")?;
+                        }
+                        Some(Command::Encounter) => {
+                            events
+                                .send(Event::Encounter(api.encounter(true)?))
+                                .map_err(|_| "closed")?;
+                        }
+                        None => {}
+                    }
+                    let e = api.encounter(false)?;
+                    if let Some(id) = e.as_ref().and_then(|e| e.battle_id) {
+                        last_battle = Some(id);
+                    }
+                    if visible.load(Ordering::Relaxed) {
+                        if let Some(id) = e.as_ref().and_then(|e| e.battle_id).or(last_battle) {
+                            last_battle = Some(id);
+                            events
+                                .send(Event::Battle(api.battle(id, None)?))
+                                .map_err(|_| "closed")?;
+                        }
+                    }
+                    if e.as_ref().is_some_and(|e| !e.supports_pip()) {
+                        events.send(Event::Encounter(None)).map_err(|_| "closed")?;
                         return Err("unsupported monster/profile; presentation skipped");
                     }
-                    let _ = events.try_send(Event::Encounter(encounter));
+                    events.send(Event::Encounter(e)).map_err(|_| "closed")?;
+                    if explicit {
+                        events
+                            .send(Event::Bootstrap(api.bootstrap()?))
+                            .map_err(|_| "closed")?;
+                    }
                     Ok::<(), &'static str>(())
                 })();
+                if explicit {
+                    let _ =
+                        events.send(Event::Finished(result.as_ref().err().map(|e| (*e).into())));
+                }
                 match result {
-                    Err(error) if last_error != Some(error) => {
-                        eprintln!("[LUMA BACKEND] {error}; local Companion continues");
-                        last_error = Some(error);
+                    Err(e) if last_error != Some(e) => {
+                        eprintln!("[LUMA BACKEND] {e}; local Companion continues");
+                        last_error = Some(e);
                     }
                     Ok(()) if last_error.take().is_some() => {
-                        eprintln!("[LUMA BACKEND] connection restored");
+                        eprintln!("[LUMA BACKEND] connection restored")
                     }
                     _ => {}
                 }
-                match rx.recv_timeout(Duration::from_secs(5)) {
-                    Ok(()) => create = true,
-                    Err(mpsc::RecvTimeoutError::Timeout) => create = false,
-                    Err(mpsc::RecvTimeoutError::Disconnected) => break,
-                }
+                // Discard a failed mutation; only a new explicit command may retry it.
+                command = match rx.recv_timeout(Duration::from_secs(5)) {
+                    Ok(c) => Some(c),
+                    Err(mpsc::RecvTimeoutError::Timeout) => None,
+                    Err(_) => break,
+                };
             }
         });
         Self {
             requests,
             events: receiver,
+            open,
         }
     }
-    pub fn request_encounter(&self) {
-        if let Err(e) = self.requests.try_send(()) {
-            eprintln!("[LUMA BACKEND] request not queued: {e}");
-        }
+    pub fn set_open(&self, open: bool) {
+        self.open.store(open, Ordering::Relaxed);
+    }
+    pub fn request(&self, c: Command) -> bool {
+        self.requests.try_send(c).is_ok()
     }
     pub fn event(&self) -> Option<Event> {
         self.events.try_recv().ok()

@@ -31,16 +31,21 @@ public class GameRepository {
     public Instant now() { return jdbc.queryForObject("SELECT clock_timestamp()",OffsetDateTime.class).toInstant(); }
     public void expire(long playerId, Instant now) {
         var time=OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC);
-        jdbc.update("UPDATE game.t_encounter SET status='EXPIRED',resolved_at=?,updated_at=? WHERE player_id=? AND status='ACTIVE' AND expires_at<=?",time,time,playerId,time);
+        jdbc.update("""
+            UPDATE game.t_encounter e SET status=CASE WHEN EXISTS
+              (SELECT 1 FROM game.t_battle b WHERE b.encounter_id=e.encounter_id AND b.status='VICTORY') THEN 'DEFEATED' ELSE 'EXPIRED' END,
+              resolved_at=?,updated_at=? WHERE player_id=? AND status='ACTIVE' AND expires_at<=?
+              AND NOT EXISTS (SELECT 1 FROM game.t_battle b WHERE b.encounter_id=e.encounter_id AND b.status='ACTIVE')
+            """,time,time,playerId,time);
     }
     public Optional<GameDtos.Encounter> active(long playerId) {
         var rows=jdbc.query("""
-            SELECT e.encounter_id,m.code,m.name,e.monster_level,e.rarity,m.movement_profile,e.spawned_at,e.expires_at
-            FROM game.t_encounter e JOIN game.m_monster m USING(monster_id)
+            SELECT e.encounter_id,m.code,m.name,e.monster_level,e.rarity,m.movement_profile,e.spawned_at,e.expires_at,b.battle_id,COALESCE(b.status='ACTIVE',false)
+            FROM game.t_encounter e JOIN game.m_monster m USING(monster_id) LEFT JOIN game.t_battle b ON b.encounter_id=e.encounter_id
             WHERE e.player_id=? AND e.status='ACTIVE'
             """,(r,n)->new GameDtos.Encounter(r.getObject(1,UUID.class),
                 new GameDtos.Monster(r.getString(2),r.getString(3),r.getInt(4),r.getString(5),r.getString(6)),
-                r.getObject(7,OffsetDateTime.class).toInstant(),r.getObject(8,OffsetDateTime.class).toInstant()),playerId);
+                r.getObject(7,OffsetDateTime.class).toInstant(),r.getObject(8,OffsetDateTime.class).toInstant(),r.getObject(9,UUID.class),r.getBoolean(10)),playerId);
         if(rows.size()>1) throw new GameUnavailable("Multiple active encounters");
         return rows.stream().findFirst();
     }
@@ -56,6 +61,6 @@ public class GameRepository {
             """,id,playerId,m.id(),selection.level(),m.rarity(),
             OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC),OffsetDateTime.ofInstant(expires,java.time.ZoneOffset.UTC),
             OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC),OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC));
-        return new GameDtos.Encounter(id,new GameDtos.Monster(m.code(),m.name(),selection.level(),m.rarity(),m.movementProfile()),now,expires);
+        return new GameDtos.Encounter(id,new GameDtos.Monster(m.code(),m.name(),selection.level(),m.rarity(),m.movementProfile()),now,expires,null,false);
     }
 }

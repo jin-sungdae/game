@@ -14,8 +14,8 @@ pub const PIP_SIZE: Size = Size {
     height: 104.0,
 };
 pub const MENU_SIZE: Size = Size {
-    width: 160.0,
-    height: 140.0,
+    width: 240.0,
+    height: 300.0,
 };
 pub use crate::desktop::CONFIG as LAYOUT;
 #[repr(C)]

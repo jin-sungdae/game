@@ -35,13 +35,21 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
             eprintln!("[LUMA INPUT] {kind}");
             match kind.as_str() {
                 "spawn" => world.spawn(now), // explicit developer-only path
-                "encounter" => state.backend.lock().unwrap().request_encounter(),
+
                 "drag" => world.drag(now, overlay::cursor().0),
                 "interact" => world.interact(),
                 "close" => world.close(),
-                "battle" | "capture" => eprintln!("[LUMA DEBUG] PIP {} (no game logic)", kind),
+
                 _ => {}
             }
+            if let Some(command) = world.view.game.command(&kind) {
+                if !state.backend.lock().unwrap().request(command) {
+                    world.view.game.busy = false;
+                    world.view.game.error = Some("Request queue unavailable".into());
+                }
+            }
+            state.backend.lock().unwrap().set_open(world.view.menu);
+            let _ = app.emit("world", &world.view);
         })
         .map_err(|e| e.to_string())
 }
@@ -145,8 +153,31 @@ fn main() {
                             let state = app.state::<State>();
                             let now = state.start.elapsed().as_secs_f64();
                             let mut world = state.world.lock().unwrap();
+                            let mut backend_changed = false;
                             while let Some(event) = state.backend.lock().unwrap().event() {
+                                backend_changed = true;
                                 match event {
+                                    backend::Event::Battle(value) => world.apply_battle(value),
+                                    backend::Event::Capture(value) => {
+                                        world.apply_battle(value.battle);
+                                        world.view.game.feedback = Some(
+                                            if value.success {
+                                                "Captured"
+                                            } else {
+                                                "Capture failed"
+                                            }
+                                            .into(),
+                                        );
+                                        if let Some(c) = value.collection {
+                                            world.view.game.collection = vec![c];
+                                        }
+                                    }
+                                    backend::Event::Collection(value) => {
+                                        world.view.game.collection = value
+                                    }
+                                    backend::Event::Finished(error) => {
+                                        world.view.game.finish(error);
+                                    }
                                     backend::Event::Bootstrap(value) => {
                                         world.apply_bootstrap(value)
                                     }
@@ -158,6 +189,9 @@ fn main() {
                                         world.apply_server_encounter(now, value, remaining)
                                     }
                                 }
+                            }
+                            if backend_changed {
+                                let _ = app.emit("world", &world.view);
                             }
                             world.area = overlay::area();
                             let (cursor, down) = overlay::cursor();
@@ -187,25 +221,31 @@ fn main() {
                                 overlay::place_entity(0, &view.moa, world.area);
                                 if let Some(p) = &view.pip {
                                     overlay::place_entity(1, p, world.area);
-                                    let a = world.area;
-                                    let size = geometry::MENU_SIZE;
-                                    let (x, y) = a.clamp(
-                                        p.x,
-                                        p.y + p.size.height + geometry::LAYOUT.menu_gap,
-                                        size,
-                                    );
-                                    let bounds = a.panel_bounds(x, y, size);
-                                    overlay::luma_place(
-                                        2,
-                                        bounds.x,
-                                        bounds.y,
-                                        (view.menu && a.fits(size)) as i32,
-                                    );
                                 } else {
                                     overlay::luma_place(1, 0.0, 0.0, 0);
-                                    overlay::luma_place(2, 0.0, 0.0, 0);
                                 }
+                                // Keep a compact terminal result available until Close, even after PIP despawns.
+                                let (anchor_x, anchor_y, anchor_h) =
+                                    view.pip.as_ref().map_or(
+                                        (view.moa.x, view.moa.y, view.moa.size.height),
+                                        |p| (p.x, p.y, p.size.height),
+                                    );
+                                let a = world.area;
+                                let size = geometry::MENU_SIZE;
+                                let (x, y) = a.clamp(
+                                    anchor_x,
+                                    anchor_y + anchor_h + geometry::LAYOUT.menu_gap,
+                                    size,
+                                );
+                                let bounds = a.panel_bounds(x, y, size);
+                                overlay::luma_place(
+                                    2,
+                                    bounds.x,
+                                    bounds.y,
+                                    (view.menu && a.fits(size)) as i32,
+                                );
                             }
+                            state.backend.lock().unwrap().set_open(view.menu);
                             // State events only: positions are native; no 30Hz React rendering.
                             let key = format!(
                                 "{:?}:{:?}:{}:{}",
