@@ -111,14 +111,45 @@ def validate(root=ROOT, allow_missing=False):
     return errors, pending
 
 
+def validate_bases(root=ROOT, strict=False):
+    """Independent optional contract; strict delivery requires MOA and PIP only."""
+    errors, pending = [], []
+    companions = json.loads((root/'src/entities/companions.json').read_text())
+    monsters = json.loads((root/'src/entities/monsters.json').read_text())
+    paths = [(root/'public'/url.lstrip('/')).parent/'base.png'
+             for definition in companions.values() for url in definition['stages'].values()]
+    required = {root/'public/assets/creatures/moa/stage01/base.png'}
+    for definition in monsters.values():
+        path = root/'public'/definition['baseAsset'].lstrip('/')
+        paths.append(path)
+        required.add(path)
+    for path in paths:
+        if path.name != 'base.png':
+            errors.append(f'{path}: filename must be base.png')
+        if path.parent.is_dir():
+            for entry in path.parent.iterdir():
+                if entry.stem.lower() == 'base' and entry.name != 'base.png':
+                    errors.append(f'{entry}: filename must be base.png')
+        if not path.is_file():
+            message = f'{path.relative_to(root)}: base NOT_SUPPLIED'
+            (errors if strict and path in required else pending).append(message)
+        else:
+            errors.extend(f'{path.relative_to(root)}: {error}' for error in png_errors(path))
+    return errors, pending
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--allow-missing', action='store_true')
+    parser.add_argument('--strict-base', action='store_true', help='require MOA and PIP base delivery; frame policy unchanged')
     args = parser.parse_args()
     failures, pending = validate(allow_missing=args.allow_missing)
+    base_failures, base_pending = validate_bases(strict=args.strict_base)
+    failures.extend(base_failures)
+    pending.extend(base_pending)
     for line in failures:
         print('FAIL:', line)
     for line in pending:
         print('PENDING:', line)
-    print(f'{len(failures)} errors; {len(pending)} unprovided clips')
+    print(f'{len(failures)} errors; {len(pending)} unprovided assets')
     raise SystemExit(bool(failures))
