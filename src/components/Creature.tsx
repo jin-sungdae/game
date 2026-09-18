@@ -1,8 +1,9 @@
+import { MonsterVisual } from './MonsterVisual';
 import { useEntities } from '../stores/entities';
 import { effectFor, damageFor } from '../presentation/model';
 import { action } from '../overlay/bridge';
 import { assets } from '../entities/assets';
-import { CompanionVisual, PlaceholderRenderer } from './CompanionVisual';
+import { CompanionVisual } from './CompanionVisual';
 import type { CompanionState, Entity } from '../types/entity';
 export function Creature({ kind, entity }: { kind:'moa'|'pip'; entity:Entity }) {
   const {visual,game}=useEntities();
@@ -13,7 +14,7 @@ export function Creature({ kind, entity }: { kind:'moa'|'pip'; entity:Entity }) 
     onPointerDown={e => { if(e.button === 0 && kind === 'moa') void action('drag'); }}
     onClick={() => { if(kind === 'pip') void action('interact'); }}
     onContextMenu={e => { e.preventDefault(); void action('encounter'); }}>
-      <div className={`gp-pose ${defeated?'gp-defeated':''}`}><div className={`gp-impulse gp-${effect}`}><div className={`gp-visual gp-${kind}`}>{kind === 'moa' ? <CompanionVisual state={entity.state as CompanionState} facing={entity.facing}/> : <><PlaceholderRenderer facing={entity.facing}/><span className="name">{assets[kind].name}</span><span className="state">{entity.state}</span></>}</div></div></div>
+      <div className={`gp-pose ${defeated?'gp-defeated':''}`}><div className={`gp-impulse gp-${effect}`}><div className={`gp-visual gp-${kind}`}>{kind === 'moa' ? <CompanionVisual state={entity.state as CompanionState} facing={entity.facing}/> : <MonsterVisual code="PIP" state={entity.state} facing={entity.facing}/>}</div></div></div>
       {effect==='capturing' && <span className="gp-capture-ring" aria-hidden="true"/>}
       {damage!=null && <span key={visual?.serial} className="gp-damage" aria-label={`Damage ${damage}`}>−{damage}</span>}
   </div>;

@@ -28,6 +28,7 @@ class AssetTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         (self.root/'src/entities').mkdir(parents=True)
         shutil.copy(ROOT/'src/entities/companions.json', self.root/'src/entities/companions.json')
+        shutil.copy(ROOT/'src/entities/monsters.json', self.root/'src/entities/monsters.json')
         shutil.copytree(ROOT/'public/assets', self.root/'public/assets')
         self.stage = self.root/'public/assets/creatures/moa/stage01'
 
