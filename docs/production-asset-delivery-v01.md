@@ -43,5 +43,30 @@ fixture copy; preserve production files and all validator/runtime behavior.
 
 ## Validation
 
-Runtime and final CI evidence pending. Do not treat unobserved animation, mouse,
-or focus scenarios as PASS. No automatic merge.
+Automated: strict-base gate PASS; frontend build PASS; animation 27 + base 7,
+presentation 4, asset validator 16, policy 9, Rust 66 PASS; clippy/fmt and Tao
+integrity PASS (18 pre-existing Tao warnings). Java/PostgreSQL 37 tests + bootJar
+PASS after Gradle clean removed a duplicated generated `GameApplication 2.class`.
+No application source workaround. Isolated test DB only; no production DB changes.
+
+Local macOS: the delivered MOA was visibly rendered as an image in the actual
+`tauri://localhost/index.html?entity=moa` WKWebView (AX image MOA), facing LEFT.
+Captured panel image was 96×104; no stationary MOA sprite clipping observed.
+CUA drag recorded DRAGGING → IDLE and world position (1632,200) → (1618.97,200),
+with native frame (1571,200,96,104), groundY=200, reserved intersection=0.
+NSPanel remained transparent/nonactivating by configuration; alpha data is verified.
+
+The native UI tool exposed only the MOA window, not PIP/interaction windows.
+PIP rendered rectangle, runtime RIGHT view, moving JUMP/FREE_2D foot placement,
+and the actual attack/hit/damage/capture/defeat/reward pixels are NOT_VERIFIED,
+MANUAL_REQUIRED. Automated movement/presentation tests do not replace those checks.
+Native panel bounds are measured; visible sprite dimensions above are calculated
+from alpha bounds and existing transforms, not DOM getBoundingClientRect results.
+
+Focus audit during tool-driven drag: activation=1, keyWindows=0 (PID 77851,
+182.38-second run, normal cleanup). Never Steal Focus is NOT requalified as PASS.
+The notification coincides with CUA drag; tool-versus-native causality is unresolved.
+No focus/native patch is attempted in this asset-only delivery. HUMAN_REVIEW_REQUIRED.
+
+CI and additional live smoke evidence are linked on the PR against its head.
+No automatic merge. Final visual acceptance remains with the user.
