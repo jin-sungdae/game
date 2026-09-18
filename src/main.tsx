@@ -3,6 +3,7 @@ import { useEntities, connect } from './stores/entities';
 import { Creature } from './components/Creature';
 import { Interaction } from './components/Interaction';
 import './style.css';
+import './presentation/gameplay.css';
 const kind = new URLSearchParams(location.search).get('entity') ?? 'moa';
 function App() {
   const world = useEntities();

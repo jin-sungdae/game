@@ -1,5 +1,10 @@
 use super::*;
 #[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
+pub struct DamageEvent {
+    pub r#type: String,
+    pub damage: u32,
+}
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct Hp {
     pub hp: u32,
@@ -31,6 +36,8 @@ pub struct Battle {
     pub companion: Hp,
     pub monster: Hp,
     pub events: Vec<String>,
+    #[serde(default)]
+    pub presentation_events: Vec<DamageEvent>,
     pub reward: Option<Reward>,
 }
 impl Battle {
@@ -92,6 +99,7 @@ pub struct Presentation {
     pub error: Option<String>,
     pub feedback: Option<String>,
     pub collection: Vec<Collected>,
+    pub capture_chance: Option<f64>,
 }
 impl Presentation {
     pub fn command(&mut self, action: &str) -> Option<Command> {
