@@ -40,12 +40,13 @@ public class BattleService {
     private void active(Encounter e) {
         if(!e.status.equals("ACTIVE")) throw new GameFault(409,e.status.equals("EXPIRED")?"ENCOUNTER_EXPIRED":"INVALID_STATE");
     }
-    private BattleDtos.Battle dto(Row b,List<String> events) {
+    private BattleDtos.Battle dto(Row b,List<String> events) {return dto(b,events,List.of());}
+    private BattleDtos.Battle dto(Row b,List<String> events,List<BattleDtos.PresentationEvent> presentation) {
         var rewards=db.query("SELECT gold_reward,exp_reward,bond_reward FROM game.t_reward WHERE encounter_id=?",
             (r,n)->new BattleDtos.Reward(r.getLong(1),r.getLong(2),r.getInt(3)),b.encounter);
         String status=db.queryForObject("SELECT status FROM game.t_encounter WHERE encounter_id=?",String.class,b.encounter);
         return new BattleDtos.Battle(b.id,b.encounter,b.turn,b.status,status,new BattleDtos.Hp(b.hp,b.maxHp),
-            new BattleDtos.Hp(b.monsterHp,b.monsterMax),events,rewards.isEmpty()?null:rewards.getFirst());
+            new BattleDtos.Hp(b.monsterHp,b.monsterMax),events,rewards.isEmpty()?null:rewards.getFirst(),presentation);
     }
     public BattleDtos.Battle start(UUID id) {
         playerLock();var e=encounter(id);
@@ -85,7 +86,11 @@ public class BattleService {
             status="VICTORY";events.add("VICTORY");reward(b,e,events);
             db.update("UPDATE game.t_encounter SET expires_at=clock_timestamp()+interval '60 seconds',updated_at=clock_timestamp() WHERE encounter_id=?",e.id);
         } else {hp=Math.max(0,hp-b.counter);events.add("MONSTER_ATTACK");if(hp==0) {status="DEFEAT";events.add("DEFEAT");resolve(e.id,"PLAYER_DEFEATED");}}
-        save(b,hp,monster,status);return dto(row(id),events);
+        save(b,hp,monster,status);
+        var presentation=new ArrayList<BattleDtos.PresentationEvent>();
+        presentation.add(new BattleDtos.PresentationEvent("PLAYER_ATTACK",b.monsterHp-monster));
+        if(events.contains("MONSTER_ATTACK")) presentation.add(new BattleDtos.PresentationEvent("MONSTER_ATTACK",b.hp-hp));
+        return dto(row(id),events,presentation);
     }
     public BattleDtos.Capture capture(UUID id) {
         var e=lockBattleEncounter(id);var b=row(id);
@@ -109,7 +114,9 @@ public class BattleService {
             if(hp==0) {events.add("DEFEAT");resolve(e.id,"PLAYER_DEFEATED");}
             save(b,hp,b.monsterHp,hp==0?"DEFEAT":"ACTIVE");
         }
-        var result=dto(row(id),events);
+        var current=row(id);
+        var presentation=events.contains("MONSTER_ATTACK")?List.of(new BattleDtos.PresentationEvent("MONSTER_ATTACK",b.hp-current.hp)):List.<BattleDtos.PresentationEvent>of();
+        var result=dto(current,events,presentation);
         return new BattleDtos.Capture(id,e.id,success,chance,new BattleDtos.Monster(e.code,e.name),result.status(),result.encounterStatus(),collection,result);
     }
     public BattleDtos.Resolution ignore(UUID id) {

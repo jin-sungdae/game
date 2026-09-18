@@ -10,6 +10,7 @@ pub struct Snapshot {
     pub pip: Option<Entity<PipState>>,
     pub menu: bool,
     pub game: crate::backend::battle::Presentation,
+    pub visual: crate::presentation::Visual,
 }
 pub struct World {
     pub view: Snapshot,
@@ -17,6 +18,7 @@ pub struct World {
     companion: CompanionController,
     pip_deadline: f64,
     pub bootstrap: Option<crate::backend::Bootstrap>,
+    pub presentation: crate::presentation::Controller,
     server_encounter: Option<(uuid::Uuid, f64)>,
 }
 impl World {
@@ -28,15 +30,20 @@ impl World {
                 pip: None,
                 menu: false,
                 game: Default::default(),
+                visual: Default::default(),
             },
             area,
             companion,
             pip_deadline: 0.0,
             bootstrap: None,
+            presentation: Default::default(),
             server_encounter: None,
         }
     }
     pub fn apply_battle(&mut self, value: crate::backend::battle::Battle) {
+        if self.view.game.encounter_id != Some(value.encounter_id) {
+            return;
+        }
         // An authoritative ACTIVE battle response suspends the old spawn lease immediately,
         // even if the following encounter reconciliation HTTP request is delayed.
         if value.status == crate::backend::battle::Status::Active
@@ -48,6 +55,7 @@ impl World {
                 }
             }
         }
+        self.presentation.battle(&value);
         self.view.game.apply_battle(value);
     }
     pub fn apply_bootstrap(&mut self, value: crate::backend::Bootstrap) {
@@ -57,6 +65,7 @@ impl World {
             value.active_companion.species,
             value.active_companion.evolution_stage
         );
+        self.presentation.bootstrap(&value);
         self.bootstrap = Some(value);
     }
     pub fn apply_server_encounter(
@@ -76,6 +85,7 @@ impl World {
         if self.view.game.encounter_id != Some(encounter.encounter_id) {
             self.view.game.battle = None;
             self.view.game.feedback = None;
+            self.view.game.capture_chance = None;
         }
         self.view.game.encounter_id = Some(encounter.encounter_id);
         self.view.game.monster_level = encounter.monster.level;
@@ -94,6 +104,7 @@ impl World {
     pub fn debug_spawn(&mut self, now: f64) {
         if self.server_encounter.is_none() && self.view.pip.is_none() {
             self.view.game = Default::default();
+            self.presentation = Default::default();
             self.spawn(now);
         }
     }

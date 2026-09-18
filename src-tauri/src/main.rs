@@ -7,6 +7,7 @@ mod entities;
 mod geometry;
 mod movement;
 mod overlay;
+mod presentation;
 use behaviors::{Snapshot, World};
 use std::{
     sync::{
@@ -20,6 +21,8 @@ struct State {
     world: Mutex<World>,
     start: Instant,
     backend: Mutex<backend::Backend>,
+    #[cfg(debug_assertions)]
+    visual_smoke: Mutex<Option<presentation::smoke::Driver>>,
 }
 #[tauri::command]
 fn snapshot(state: tauri::State<State>) -> Snapshot {
@@ -43,12 +46,15 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
                 _ => {}
             }
             if let Some(command) = world.view.game.command(&kind) {
+                world.presentation.request(&kind, now);
                 if !state.backend.lock().unwrap().request(command) {
                     world.view.game.busy = false;
                     world.view.game.error = Some("Request queue unavailable".into());
+                    world.presentation.finish(true, now);
                 }
             }
             state.backend.lock().unwrap().set_open(world.view.menu);
+            world.view.visual = world.presentation.view.clone();
             let _ = app.emit("world", &world.view);
         })
         .map_err(|e| e.to_string())
@@ -112,6 +118,10 @@ fn main() {
                 )),
                 start,
                 backend: Mutex::new(backend::Backend::start(stop_setup.clone())),
+                #[cfg(debug_assertions)]
+                visual_smoke: Mutex::new(
+                    std::env::var_os("LUMA_VISUAL_SMOKE").map(|_| Default::default()),
+                ),
             });
             let handle = app.handle().clone();
             // Bounded dispatch: at most one outstanding tick even if AppKit is busy.
@@ -120,6 +130,7 @@ fn main() {
                 let mut last = Instant::now();
                 let smoke = std::env::var_os("LUMA_SMOKE").is_some();
                 let mut smoke_phase = 0;
+                let visual_audit = std::env::var_os("LUMA_VISUAL_AUDIT").is_some();
                 while !stop_setup.load(Ordering::Relaxed) {
                     std::thread::sleep(Duration::from_millis(33));
                     if pending.swap(true, Ordering::SeqCst) {
@@ -159,6 +170,8 @@ fn main() {
                                 match event {
                                     backend::Event::Battle(value) => world.apply_battle(value),
                                     backend::Event::Capture(value) => {
+                                        world.presentation.capture(&value, now);
+                                        world.view.game.capture_chance = Some(value.chance);
                                         world.apply_battle(value.battle);
                                         world.view.game.feedback = Some(
                                             if value.success {
@@ -176,6 +189,7 @@ fn main() {
                                         world.view.game.collection = value
                                     }
                                     backend::Event::Finished(error) => {
+                                        world.presentation.finish(error.is_some(), now);
                                         world.view.game.finish(error);
                                     }
                                     backend::Event::Bootstrap(value) => {
@@ -190,7 +204,27 @@ fn main() {
                                     }
                                 }
                             }
-                            if backend_changed {
+                            let previous_visual = world.view.visual.serial;
+                            #[cfg(debug_assertions)]
+                            if let Some(driver) = state.visual_smoke.lock().unwrap().as_mut() {
+                                if driver.tick(&mut world, &state.backend.lock().unwrap(), now) {
+                                    app.exit(0);
+                                }
+                            }
+                            let visual_changed = world.presentation.tick(now);
+                            world.view.visual = world.presentation.view.clone();
+                            if backend_changed
+                                || visual_changed
+                                || world.view.visual.serial != previous_visual
+                            {
+                                if visual_audit {
+                                    eprintln!(
+                                        "[LUMA VISUAL] phase={:?} serial={} damage={:?}",
+                                        world.view.visual.phase,
+                                        world.view.visual.serial,
+                                        world.view.visual.damage
+                                    );
+                                }
                                 let _ = app.emit("world", &world.view);
                             }
                             world.area = overlay::area();
@@ -225,18 +259,15 @@ fn main() {
                                     overlay::luma_place(1, 0.0, 0.0, 0);
                                 }
                                 // Keep a compact terminal result available until Close, even after PIP despawns.
-                                let (anchor_x, anchor_y, anchor_h) =
-                                    view.pip.as_ref().map_or(
-                                        (view.moa.x, view.moa.y, view.moa.size.height),
-                                        |p| (p.x, p.y, p.size.height),
-                                    );
+                                let (anchor_x, anchor_y, anchor_size) = view
+                                    .pip
+                                    .as_ref()
+                                    .map_or((view.moa.x, view.moa.y, view.moa.size), |p| {
+                                        (p.x, p.y, p.size)
+                                    });
                                 let a = world.area;
                                 let size = geometry::MENU_SIZE;
-                                let (x, y) = a.clamp(
-                                    anchor_x,
-                                    anchor_y + anchor_h + geometry::LAYOUT.menu_gap,
-                                    size,
-                                );
+                                let (x, y) = a.menu_anchor(anchor_x, anchor_y, anchor_size);
                                 let bounds = a.panel_bounds(x, y, size);
                                 overlay::luma_place(
                                     2,
