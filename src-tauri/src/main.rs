@@ -42,15 +42,32 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
                 "drag" => world.drag(now, overlay::cursor().0),
                 "interact" => world.interact(),
                 "close" => world.close(),
+                "evolution" => world.open_evolution(),
 
                 _ => {}
             }
-            if let Some(command) = world.view.game.command(&kind) {
-                world.presentation.request(&kind, now);
-                if !state.backend.lock().unwrap().request(command) {
-                    world.view.game.busy = false;
-                    world.view.game.error = Some("Request queue unavailable".into());
-                    world.presentation.finish(true, now);
+            if kind == "evolve"
+                && !world.view.game.busy
+                && world.view.evolution.request()
+                && !state
+                    .backend
+                    .lock()
+                    .unwrap()
+                    .request(backend::battle::Command::Evolve)
+            {
+                world
+                    .view
+                    .evolution
+                    .fail("Request queue unavailable".into());
+            }
+            if !world.view.evolution.busy {
+                if let Some(command) = world.view.game.command(&kind) {
+                    world.presentation.request(&kind, now);
+                    if !state.backend.lock().unwrap().request(command) {
+                        world.view.game.busy = false;
+                        world.view.game.error = Some("Request queue unavailable".into());
+                        world.presentation.finish(true, now);
+                    }
                 }
             }
             state.backend.lock().unwrap().set_open(world.view.menu);
@@ -168,6 +185,22 @@ fn main() {
                             while let Some(event) = state.backend.lock().unwrap().event() {
                                 backend_changed = true;
                                 match event {
+                                    backend::Event::Evolution(value) => {
+                                        world.view.evolution.eligibility = Some(value);
+                                        if !world.view.evolution.busy {
+                                            world.view.evolution.error = None;
+                                        }
+                                    }
+                                    backend::Event::Evolved(value) => {
+                                        world.apply_evolved(value, now)
+                                    }
+                                    backend::Event::EvolutionUnavailable(error) => {
+                                        world.view.evolution.eligibility = None;
+                                        world.view.evolution.error = Some(error);
+                                    }
+                                    backend::Event::EvolutionFailed(error) => {
+                                        world.view.evolution.fail(error)
+                                    }
                                     backend::Event::Battle(value) => world.apply_battle(value),
                                     backend::Event::Capture(value) => {
                                         world.presentation.capture(&value, now);
@@ -212,9 +245,11 @@ fn main() {
                                 }
                             }
                             let visual_changed = world.presentation.tick(now);
+                            let evolution_changed = world.view.evolution.tick(now);
                             world.view.visual = world.presentation.view.clone();
                             if backend_changed
                                 || visual_changed
+                                || evolution_changed
                                 || world.view.visual.serial != previous_visual
                             {
                                 if visual_audit {
@@ -262,6 +297,9 @@ fn main() {
                                 let (anchor_x, anchor_y, anchor_size) = view
                                     .pip
                                     .as_ref()
+                                    .filter(|_| {
+                                        view.interaction == behaviors::InteractionMode::Encounter
+                                    })
                                     .map_or((view.moa.x, view.moa.y, view.moa.size), |p| {
                                         (p.x, p.y, p.size)
                                     });

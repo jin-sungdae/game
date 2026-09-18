@@ -1,3 +1,4 @@
+import { EvolutionInteraction } from './EvolutionInteraction';
 import { action } from '../overlay/bridge';
 import { useEntities } from '../stores/entities';
 import { hpModel } from '../presentation/model';
@@ -6,11 +7,12 @@ function HpBar({name,hp,max}:{name:string;hp:number;max:number}) {
  return <div className={`gp-hp gp-${h.tone}`}><div className="gp-hp-label"><span>{name} · {h.tone}</span><b>{h.text}</b></div><div className="gp-hp-track" role="progressbar" aria-label={`${name} HP`} aria-valuenow={hp} aria-valuemin={0} aria-valuemax={max}><span style={{width:`${h.percent}%`}}/></div></div>;
 }
 export function Interaction() {
- const {game:g,visual:v}=useEntities();const b=g?.battle;const active=b?.encounterStatus==='ACTIVE';
+ const {game:g,visual:v,interaction,evolution,identity}=useEntities();
+ if(interaction==='EVOLUTION') return <EvolutionInteraction view={evolution} gameBusy={g?.busy}/>;const b=g?.battle;const active=b?.encounterStatus==='ACTIVE';
  const result=v?.phase==='CAPTURE_SUCCESS'?'Captured!':v?.phase==='CAPTURE_FAIL'?'Capture failed':b?.status==='VICTORY'?(active?'PIP defeated · Capture opportunity':'Battle complete'):b?.status==='DEFEAT'?'MOA needs a rest':b?.encounterStatus==='CAPTURED'?'Added to Collection':b?.status??'A small encounter';
  return <section className="interaction gp-panel" aria-label="PIP encounter">
  <header className="gp-header"><div><small>WILD ENCOUNTER</small><strong>PIP <span>{g?.monsterLevel?`Lv.${g.monsterLevel}`:'DEBUG'}</span></strong></div><button className="gp-close" aria-label="Close panel" onClick={()=>void action('close')}>×</button></header>
- {b && <><HpBar name="PIP" hp={b.monster.hp} max={b.monster.maxHp}/><HpBar name="MOA" hp={b.companion.hp} max={b.companion.maxHp}/></>}
+ {b && <><HpBar name="PIP" hp={b.monster.hp} max={b.monster.maxHp}/><HpBar name={identity?.evolutionName ?? "MOA"} hp={b.companion.hp} max={b.companion.maxHp}/></>}
  <p className="gp-status" role="status">{g?.busy?(v?.phase==='CAPTURING'?'Capturing…':'Connecting…'):result}</p>
  {g?.error && <p className="gp-error" role="alert">{g.error}. Refresh to check the result.</p>}
  <div className="gp-actions">

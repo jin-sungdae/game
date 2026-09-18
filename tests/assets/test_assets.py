@@ -38,18 +38,21 @@ class AssetTests(unittest.TestCase):
         return validator.validate(self.root, allow)[0]
 
     def fill(self):
-        for species in ('moa','ruu','nox'):
-            for clip,count in validator.COUNTS.items():
-                for i in range(count):
-                    (self.root/f'public/assets/creatures/{species}/stage01/{clip}/{clip}_{i:02}.png').write_bytes(png())
+        registry=json.loads((self.root/'src/entities/companions.json').read_text())
+        for definition in registry.values():
+            for url in definition['stages'].values():
+                stage=(self.root/'public'/url.lstrip('/')).parent
+                for clip,count in validator.COUNTS.items():
+                    for i in range(count):
+                        (stage/clip/f'{clip}_{i:02}.png').write_bytes(png())
 
     def test_scaffold_pending_not_production_pass(self):
         errors,pending = validator.validate(self.root,True)
         self.assertEqual(errors,[])
-        self.assertEqual(len(pending),18)
+        self.assertEqual(len(pending),24)
         self.assertTrue(self.errors(False))
 
-    def test_complete_102_frame_fixture(self):
+    def test_complete_registered_frame_fixture(self):
         self.fill()
         self.assertEqual(validator.validate(self.root),([],[]))
 

@@ -4,11 +4,21 @@ use crate::companion::{
 };
 use crate::entities::*;
 use serde::Serialize;
+#[derive(Clone, Copy, Default, PartialEq, Serialize)]
+#[serde(rename_all = "SCREAMING_SNAKE_CASE")]
+pub enum InteractionMode {
+    #[default]
+    Encounter,
+    Evolution,
+}
 #[derive(Clone, Serialize)]
 pub struct Snapshot {
     pub moa: Entity<CompanionState>,
     pub pip: Option<Entity<PipState>>,
     pub menu: bool,
+    pub interaction: InteractionMode,
+    pub identity: Option<crate::backend::Companion>,
+    pub evolution: crate::backend::evolution::Presentation,
     pub game: crate::backend::battle::Presentation,
     pub visual: crate::presentation::Visual,
 }
@@ -29,6 +39,9 @@ impl World {
                 moa: companion.entity().clone(),
                 pip: None,
                 menu: false,
+                interaction: Default::default(),
+                identity: None,
+                evolution: Default::default(),
                 game: Default::default(),
                 visual: Default::default(),
             },
@@ -66,7 +79,18 @@ impl World {
             value.active_companion.evolution_stage
         );
         self.presentation.bootstrap(&value);
+        self.view.identity = Some(value.active_companion.clone());
         self.bootstrap = Some(value);
+    }
+    pub fn apply_evolved(&mut self, value: crate::backend::evolution::Result, now: f64) {
+        self.view
+            .evolution
+            .acknowledge(&value, self.view.identity.clone(), now);
+        self.apply_bootstrap(value.bootstrap);
+    }
+    pub fn open_evolution(&mut self) {
+        self.view.interaction = InteractionMode::Evolution;
+        self.view.menu = true;
     }
     pub fn apply_server_encounter(
         &mut self,
@@ -92,7 +116,9 @@ impl World {
         if self.server_encounter.as_ref().map(|e| e.0) != Some(encounter.encounter_id) {
             // Reuse the one existing PIP presentation; never add another native panel.
             self.view.pip = None;
-            self.view.menu = false;
+            if self.view.interaction == InteractionMode::Encounter {
+                self.view.menu = false;
+            }
             self.spawn(now);
             eprintln!(
                 "[LUMA BACKEND] encounter={} PIP level={} rarity={}",
@@ -133,7 +159,7 @@ impl World {
             p.state = PipState::Despawning;
             self.pip_deadline = now + 0.5;
         }
-        if self.view.game.battle.is_none() {
+        if self.view.game.battle.is_none() && self.view.interaction == InteractionMode::Encounter {
             self.view.menu = false;
         }
     }
@@ -146,6 +172,7 @@ impl World {
             if p.state != PipState::Despawning {
                 p.state = PipState::Engaged;
                 self.view.menu = true;
+                self.view.interaction = InteractionMode::Encounter;
             }
         }
     }

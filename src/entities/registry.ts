@@ -1,6 +1,6 @@
 import data from './companions.json';
 interface CompanionDefinition {
-  name:string; identity:string; palette:string; stages:Record<string,string>;
+  name:string; identity:string; palette:string; stages:Record<string,string>; stageNames?:Record<string,string>;
 }
 export const companionRegistry:Readonly<Record<string,CompanionDefinition>> = data;
 export function resolveCompanion(species:string, evolutionStage:number) {
@@ -8,5 +8,5 @@ export function resolveCompanion(species:string, evolutionStage:number) {
   const definition=companionRegistry[species];
   const assetManifest=definition.stages[String(evolutionStage)];
   if(typeof assetManifest !== 'string') return null;
-  return {species,evolutionStage,assetManifest,name:definition.name};
+  return {species,evolutionStage,assetManifest,name:definition.stageNames?.[String(evolutionStage)] ?? definition.name};
 }

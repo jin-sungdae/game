@@ -1,0 +1,11 @@
+.evolution-pose { width:100%;height:100%;transform-origin:50% 100%; }
+.evolution-entry { position:absolute;right:2px;top:2px;width:19px;height:19px;padding:0;font-size:13px;background:#263d38bb;opacity:.65; }
+.evolution-entry.available { opacity:1;color:#f9efae;background:#376a54; }
+.evo-GLOW { animation:evolution-glow .8s ease-in forwards; }
+.evo-REVEAL { animation:evolution-reveal .8s ease-out; }
+.stage-diagnostic.has-placeholder .body { border-style:dashed;box-shadow:none; }
+.stage-label { font-size:6px;color:#244c43;background:#f0f7e9cc; }
+.stage-diagnostic .name {letter-spacing:.5px;}
+@keyframes evolution-glow {0%{opacity:1}45%{filter:brightness(1.3);scale:1.04 .96}100%{opacity:0;scale:.96}}
+@keyframes evolution-reveal {from{opacity:0;filter:brightness(1.3)}to{opacity:1;filter:none}}
+@media (prefers-reduced-motion:reduce) { .evo-GLOW,.evo-REVEAL {animation:none;filter:none;scale:1;opacity:1;} }

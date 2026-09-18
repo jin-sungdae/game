@@ -81,6 +81,7 @@ pub struct Resolution {
 }
 #[derive(Clone, Debug)]
 pub enum Command {
+    Evolve,
     Encounter,
     StartBattle(uuid::Uuid),
     Attack(uuid::Uuid),
