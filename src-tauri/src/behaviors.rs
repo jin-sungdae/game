@@ -251,8 +251,8 @@ impl World {
                     now,
                 )
             });
+        self.pip_deadline = now + crate::presentation::spawn::hold_seconds(&identity.rarity);
         self.view.monster = Some(identity);
-        self.pip_deadline = now + 0.6;
     }
     pub fn spawn_action(&mut self, now: f64) -> Option<crate::spawn::runtime::Action> {
         self.spawn_runtime.action(now)

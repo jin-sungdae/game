@@ -17,3 +17,5 @@ connect().then(stop => window.addEventListener('beforeunload', stop, { once:true
 createRoot(document.getElementById('root')!).render(<App/>);
 
 import './presentation/collectionDex.css';
+
+import './presentation/spawn.css';

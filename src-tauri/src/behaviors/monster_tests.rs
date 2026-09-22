@@ -300,3 +300,42 @@ fn curious_jump_lands_before_pausing_in_stop_radius() {
     );
     assert!((w.view.pip.as_ref().unwrap().y - w.area.ground_y()).abs() < 1e-6);
 }
+
+#[test]
+fn rarity_arrival_holds_behavior_preserves_identity_and_yields_to_battle() {
+    for code in [
+        "PIP", "MELLO", "MOSSY", "CHIRP", "BUBU", "PEBB", "PUFF", "TIKKI", "MIMI", "WISP", "SHADE",
+        "EMBER", "LUNET", "NOVA", "NOCT",
+    ] {
+        let mut w = world(code);
+        let id = w.view.monster.as_ref().unwrap().clone();
+        let hold = crate::presentation::spawn::hold_seconds(&id.rarity);
+        assert!((0.6..=1.0).contains(&hold));
+        let p = w.view.pip.as_ref().unwrap();
+        let start = (p.x, p.y);
+        w.tick(hold - 0.001, 0.1, FAR, false);
+        let p = w.view.pip.as_ref().unwrap();
+        assert_eq!(p.state, PipState::Spawning);
+        assert_eq!((p.x, p.y), start);
+        w.tick(hold, 0.001, FAR, false);
+        assert_eq!(w.view.pip.as_ref().unwrap().state, PipState::Roaming);
+        assert_eq!(
+            w.view.monster.as_ref().unwrap().encounter_id,
+            id.encounter_id
+        );
+        for at in [0.1, hold + 0.1] {
+            let mut b = world(code);
+            b.tick(at, 0.1, FAR, false);
+            battle(&mut b, crate::backend::battle::Status::Active, "ACTIVE");
+            b.tick(at + 0.1, 0.1, FAR, false);
+            assert_eq!(
+                b.view.monster.as_ref().unwrap().encounter_id,
+                id.encounter_id
+            );
+            battle(&mut b, crate::backend::battle::Status::Captured, "CAPTURED");
+            b.apply_server_encounter(at + 0.2, None, 0.);
+            b.tick(at + 2., 0.1, FAR, false);
+            assert!(b.view.pip.is_none());
+        }
+    }
+}
