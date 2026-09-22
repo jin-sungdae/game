@@ -53,8 +53,8 @@ test('all rarity filters preserve full counts and exact distribution',()=>{
 test('asset failure and unproduced captured slots remain diagnostic with server counts',()=>{
  assetFailure=true; const html=render({records:[record]}); assetFailure=false;
  assert.doesNotMatch(html,/<img/); assert.match(html,/dex-silhouette/); assert.match(html,/Captured ×7/);
- const m=collectionDexModel({...view,records:[{...record,monsterCode:'MONSTER_002'}]});
- assert.equal(m.slots[1].asset,null); assert.equal(m.slots[1].name,'???'); assert.equal(m.slots[1].captureCount,7);
+ const m=collectionDexModel({...view,records:[{...record,monsterCode:'MONSTER_005'}]});
+ assert.equal(m.slots[4].asset,null); assert.equal(m.slots[4].name,'???'); assert.equal(m.slots[4].captureCount,7);
 });
 test('empty, unloaded, loading and failed refresh remain distinct',()=>{
  assert.match(render(),/아직 포획한 Monster가 없습니다/);
