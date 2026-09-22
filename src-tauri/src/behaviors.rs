@@ -23,6 +23,7 @@ pub struct Snapshot {
     pub visual: crate::presentation::Visual,
 }
 pub struct World {
+    spawn_director: crate::spawn::Director,
     pub view: Snapshot,
     pub area: Area,
     companion: CompanionController,
@@ -51,6 +52,7 @@ impl World {
             bootstrap: None,
             presentation: Default::default(),
             server_encounter: None,
+            spawn_director: crate::spawn::Director::disabled(seed),
         }
     }
     pub fn apply_battle(&mut self, value: crate::backend::battle::Battle) {
@@ -188,6 +190,12 @@ impl World {
         self.companion.set_movement_windows(windows);
     }
     pub fn tick(&mut self, now: f64, dt: f64, cursor: (f64, f64), down: bool) {
+        // Foundation is disabled: no automatic backend requests or debug entity creation.
+        let _ = self.spawn_director.tick(
+            &crate::spawn::WorldClock(now),
+            usize::from(self.view.pip.is_some()),
+            self.server_encounter.is_some(),
+        );
         // Presentation lease only; the server alone writes EXPIRED via lazy expiration.
         if self.server_encounter.as_ref().is_some_and(|e| now >= e.1) {
             self.server_encounter = None;

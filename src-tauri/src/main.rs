@@ -8,6 +8,7 @@ mod geometry;
 mod movement;
 mod overlay;
 mod presentation;
+pub mod spawn;
 use behaviors::{Snapshot, World};
 use std::{
     sync::{
