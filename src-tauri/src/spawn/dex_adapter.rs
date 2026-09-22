@@ -20,7 +20,8 @@ fn zone(profile: &str) -> Option<SpawnZone> {
     Some(match profile {
         "BOTTOM" => SpawnZone::Bottom,
         "TOP" => SpawnZone::Top,
-        "EDGE" | "NEAR_DESKTOP_EDGE" | "LOWER_CORNER" => SpawnZone::LowerCorner,
+        "EDGE" | "NEAR_DESKTOP_EDGE" => SpawnZone::Edge,
+        "LOWER_CORNER" => SpawnZone::LowerCorner,
         "FREE_AREA" | "FLOATING_AREA" => SpawnZone::FreeArea,
         "NEAR_DOCK" => SpawnZone::NearDock,
         _ => return None,
@@ -31,16 +32,15 @@ pub(super) fn content_candidate(code: &str) -> Option<Candidate> {
         serde_json::from_str(include_str!("../../../src/entities/monster-dex.json")).ok()?;
     let mut matches = records.into_iter().filter(|m| m.monster_code == code);
     let metadata = matches.next()?;
-    let supported = matches!(
-        (code, metadata.movement_profile),
-        ("PIP" | "MOSSY", MovementProfile::Ground)
-            | ("MELLO" | "BUBU", MovementProfile::Jump)
-            | ("CHIRP", MovementProfile::Flying)
-    );
-    if !supported
-        || metadata.asset_identity != code.to_lowercase()
-        || metadata.rarity != "COMMON"
-        || matches.next().is_some()
+    if matches.next().is_some() {
+        return None;
+    }
+    from_metadata(code, metadata)
+}
+fn from_metadata(code: &str, metadata: Metadata) -> Option<Candidate> {
+    // MovementProfile deserialization rejects unknown engine profiles.
+    if metadata.asset_identity != code.to_lowercase()
+        || !["COMMON", "UNCOMMON", "RARE", "EPIC", "SPECIAL"].contains(&metadata.rarity.as_str())
         || !metadata.enabled
         || !metadata.content_ready
         || metadata.production_status != "PRODUCTION"
@@ -148,6 +148,45 @@ mod integration_tests {
                 serde_json::from_value::<MovementProfile>(serde_json::json!(name)).unwrap(),
                 profile
             );
+        }
+    }
+}
+
+#[cfg(test)]
+pub(super) fn fixture_zone(profile: &str) -> Option<SpawnZone> {
+    zone(profile)
+}
+
+#[cfg(test)]
+mod advanced_contract {
+    use super::*;
+    #[test]
+    fn readiness_gate_is_independent_of_supported_profiles_and_rarities() {
+        let records: Vec<serde_json::Value> =
+            serde_json::from_str(include_str!("../../../src/entities/monster-dex.json")).unwrap();
+        for code in ["SHADE", "EMBER", "LUNET", "NOVA", "NOCT"] {
+            let mut fixture = records
+                .iter()
+                .find(|m| m["monsterCode"] == code)
+                .unwrap()
+                .clone();
+            assert!(content_candidate(code).is_none());
+            fixture["enabled"] = true.into();
+            fixture["contentReady"] = true.into();
+            fixture["productionStatus"] = "PRODUCTION".into();
+            let candidate =
+                from_metadata(code, serde_json::from_value(fixture.clone()).unwrap()).unwrap();
+            assert_eq!(candidate.monster_code, code);
+            for rarity in ["COMMON", "UNCOMMON", "RARE", "EPIC", "SPECIAL"] {
+                fixture["rarity"] = rarity.into();
+                let other =
+                    from_metadata(code, serde_json::from_value(fixture.clone()).unwrap()).unwrap();
+                assert_eq!(candidate.zone, other.zone);
+                assert_eq!(candidate.movement_profile, other.movement_profile);
+                assert_eq!(candidate.condition, other.condition);
+            }
+            fixture["spawnCondition"] = "SPECIAL_EVENT".into();
+            assert!(from_metadata(code, serde_json::from_value(fixture).unwrap()).is_none());
         }
     }
 }

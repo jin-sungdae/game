@@ -281,13 +281,14 @@ fn provider_authority_lifetime_and_inactive_conditions() {
         "spawnedAt":"2026-09-22T00:00:00Z","expiresAt":"2026-09-22T00:01:00Z"
     })).unwrap();
     let remaining = Duration::from_secs(10);
-    let intent = intent_for_encounter(
+    let intent = intent_for_encounter_at(
         &encounter,
         remaining,
         Duration::from_secs(3),
         &ContentProvider,
         &env,
         42,
+        chrono::NaiveTime::from_hms_opt(12, 0, 0).unwrap(),
     )
     .unwrap();
     assert_eq!(intent.lifetime, remaining);
@@ -303,25 +304,39 @@ fn provider_authority_lifetime_and_inactive_conditions() {
             condition,
             ..fixture(SpawnZone::Top, crate::geometry::PIP_SIZE)
         });
-        assert!(
-            intent_for_encounter(&encounter, remaining, Duration::ZERO, &provider, &env, 42)
-                .is_none()
-        );
+        assert!(intent_for_encounter_at(
+            &encounter,
+            remaining,
+            Duration::ZERO,
+            &provider,
+            &env,
+            42,
+            chrono::NaiveTime::from_hms_opt(12, 0, 0).unwrap()
+        )
+        .is_none());
     }
     let provider = FixtureProvider(Candidate {
         monster_code: "TEST_ONLY".into(),
         ..fixture(SpawnZone::Top, crate::geometry::PIP_SIZE)
     });
-    assert!(
-        intent_for_encounter(&encounter, remaining, Duration::ZERO, &provider, &env, 42).is_none()
-    );
-    assert!(intent_for_encounter(
+    assert!(intent_for_encounter_at(
+        &encounter,
+        remaining,
+        Duration::ZERO,
+        &provider,
+        &env,
+        42,
+        chrono::NaiveTime::from_hms_opt(12, 0, 0).unwrap()
+    )
+    .is_none());
+    assert!(intent_for_encounter_at(
         &encounter,
         Duration::ZERO,
         Duration::ZERO,
         &ContentProvider,
         &env,
-        42
+        42,
+        chrono::NaiveTime::from_hms_opt(12, 0, 0).unwrap()
     )
     .is_none());
 }

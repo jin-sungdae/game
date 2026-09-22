@@ -215,7 +215,7 @@ impl World {
             .encounter
             .as_ref()
             .expect("placement has authority");
-        let Some(mut identity) = crate::spawn::identity(&encounter.monster.code) else {
+        let Some(mut identity) = self.spawn_runtime.identity(&encounter.monster.code) else {
             return;
         };
         identity.level = encounter.monster.level;
@@ -307,29 +307,76 @@ impl World {
                     if let Some(identity) = &self.view.monster {
                         use crate::movement::{MovementIntent, MovementProfile};
                         if self.monster_movement.profile().is_none() {
-                            let target =
+                            let mut target =
                                 self.area
                                     .clamp(p.x + p.facing as f64 * 100.0, p.y + 32.0, p.size);
-                            if (target.0 - p.x).abs() < 1.0 {
+                            if identity.movement_profile == MovementProfile::Edge {
+                                target = self.area.clamp(p.x, p.y + p.facing as f64 * 80.0, p.size);
+                                if (target.1 - p.y).abs() < 1.0 {
+                                    p.facing *= -1;
+                                }
+                            } else if (target.0 - p.x).abs() < 1.0 {
                                 p.facing *= -1;
                             }
-                            self.monster_movement.start(
-                                MovementIntent {
-                                    profile: identity.movement_profile,
-                                    target,
-                                    duration: 4.0,
-                                    height: 24.0,
-                                },
-                                (p.x, p.y),
-                                self.area,
-                                p.size,
+                            let advanced = matches!(
+                                identity.movement_profile,
+                                MovementProfile::Edge
+                                    | MovementProfile::Free2d
+                                    | MovementProfile::Floating
                             );
+                            let clear = !advanced
+                                || crate::movement::unobstructed(
+                                    (p.x, p.y),
+                                    target,
+                                    24.0,
+                                    p.size,
+                                    cursor,
+                                    self.spawn_environment
+                                        .as_ref()
+                                        .and_then(|e| e.windows.as_deref()),
+                                    100.0,
+                                );
+                            if clear {
+                                self.monster_movement.start(
+                                    MovementIntent {
+                                        profile: identity.movement_profile,
+                                        target,
+                                        duration: 4.0,
+                                        height: 24.0,
+                                    },
+                                    (p.x, p.y),
+                                    self.area,
+                                    p.size,
+                                );
+                            }
                         }
                         let (position, _) =
                             self.monster_movement
                                 .tick((p.x, p.y), dt, self.area, p.size, 24.0);
-                        p.x = position.0;
-                        p.y = position.1;
+                        let advanced = matches!(
+                            identity.movement_profile,
+                            MovementProfile::Edge
+                                | MovementProfile::Free2d
+                                | MovementProfile::Floating
+                        );
+                        if !advanced
+                            || crate::movement::unobstructed(
+                                (p.x, p.y),
+                                position,
+                                0.0,
+                                p.size,
+                                cursor,
+                                self.spawn_environment
+                                    .as_ref()
+                                    .and_then(|e| e.windows.as_deref()),
+                                100.0,
+                            )
+                        {
+                            p.x = position.0;
+                            p.y = position.1;
+                        } else {
+                            self.monster_movement.cancel();
+                        }
                         if identity.movement_profile == MovementProfile::Ground {
                             p.y = self.area.ground_y();
                         }
