@@ -72,7 +72,10 @@ mod tests {
             } else {
                 assert!(zone(&metadata.spawn_profile).is_some());
             }
-            if !["PIP", "MELLO", "MOSSY", "CHIRP", "BUBU"].contains(&metadata.monster_code.as_str())
+            if ![
+                "PIP", "MELLO", "MOSSY", "CHIRP", "BUBU", "PEBB", "PUFF", "TIKKI", "MIMI", "WISP",
+            ]
+            .contains(&metadata.monster_code.as_str())
             {
                 assert!(content_candidate(&metadata.monster_code).is_none());
             }

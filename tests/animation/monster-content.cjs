@@ -1,4 +1,4 @@
-const batch1 = ['PIP','MELLO','MOSSY','CHIRP','BUBU'];
+const activeCodes = ['PIP','MELLO','MOSSY','CHIRP','BUBU','PEBB','PUFF','TIKKI','MIMI','WISP'];
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
@@ -39,13 +39,13 @@ test('static economic projections exactly match single server Domain defaults',(
  }
 });
 test('only validated Batch 1 is ready and enabled; other Alpha remains diagnostic',()=>{
- assert.deepEqual(monsterDex.filter(m=>m.contentReady).map(m=>m.monsterCode),batch1);
- assert.deepEqual(monsterDex.filter(m=>m.enabled).map(m=>m.monsterCode),batch1);
+ assert.deepEqual(monsterDex.filter(m=>m.contentReady).map(m=>m.monsterCode),activeCodes);
+ assert.deepEqual(monsterDex.filter(m=>m.enabled).map(m=>m.monsterCode),activeCodes);
  for(const m of alpha) {
   assert.equal(m.visualScale,m.monsterCode==='PIP'?.8:1);
   assert.equal(m.assetIdentity,m.monsterCode.toLowerCase());
   assert.equal(resolveMonster(m.monsterCode).assetRoot,`/assets/monsters/${m.assetIdentity}`);
-  if(!batch1.includes(m.monsterCode)) {
+  if(!activeCodes.includes(m.monsterCode)) {
    // A canonical delivery URL is not evidence of delivered art or gameplay readiness.
    assert.equal(resolveMonster(m.monsterCode).baseAsset,`/assets/monsters/${m.assetIdentity}/base.png`);
    assert.throws(()=>parseMonsterDefinitions([{...m,enabled:true}]));

@@ -7,6 +7,11 @@ pub fn approved_bytes(code: &str) -> Option<&'static [u8]> {
         "MOSSY" => include_bytes!("../../../public/assets/monsters/mossy/base.png"),
         "CHIRP" => include_bytes!("../../../public/assets/monsters/chirp/base.png"),
         "BUBU" => include_bytes!("../../../public/assets/monsters/bubu/base.png"),
+        "PEBB" => include_bytes!("../../../public/assets/monsters/pebb/base.png"),
+        "PUFF" => include_bytes!("../../../public/assets/monsters/puff/base.png"),
+        "TIKKI" => include_bytes!("../../../public/assets/monsters/tikki/base.png"),
+        "MIMI" => include_bytes!("../../../public/assets/monsters/mimi/base.png"),
+        "WISP" => include_bytes!("../../../public/assets/monsters/wisp/base.png"),
         _ => return None,
     })
 }
@@ -20,7 +25,9 @@ mod tests {
     use super::*;
     #[test]
     fn missing_corrupt_wrong_species_and_unknown_assets_fail_closed() {
-        for code in ["PIP", "MELLO", "MOSSY", "CHIRP", "BUBU"] {
+        for code in [
+            "PIP", "MELLO", "MOSSY", "CHIRP", "BUBU", "PEBB", "PUFF", "TIKKI", "MIMI", "WISP",
+        ] {
             assert!(available(code, approved_bytes(code)));
             assert!(!available(code, None));
             assert!(!available(code, Some(b"broken")));

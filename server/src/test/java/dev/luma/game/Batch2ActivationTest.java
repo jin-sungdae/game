@@ -16,13 +16,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest(webEnvironment=SpringBootTest.WebEnvironment.RANDOM_PORT)
-class Batch1ActivationTest {
- static final List<String> CODES=List.of("PIP","MELLO","MOSSY","CHIRP","BUBU");
+class Batch2ActivationTest {
+ static final List<String> CODES=List.of("PEBB","PUFF","TIKKI","MIMI","WISP");
  @DynamicPropertySource static void database(DynamicPropertyRegistry r){GameIntegrationTest.database(r);}
  @Autowired JdbcTemplate db; @Autowired GameRepository repository; @Autowired TestRestTemplate http; @LocalServerPort int port;
  @MockitoBean RandomSource random;
  String url(String p){return "http://127.0.0.1:"+port+"/api/v1"+p;}
- @BeforeEach void reset(){clean();db.update("UPDATE game.m_monster SET use_yn=(code IN ('PIP','MELLO','MOSSY','CHIRP','BUBU'))");db.update("UPDATE game.t_player SET gold=10000");when(random.nextLong(anyLong())).thenReturn(0L);}
+ @BeforeEach void reset(){clean();db.update("UPDATE game.t_player SET gold=10000");when(random.nextLong(anyLong())).thenReturn(0L);}
  @AfterEach void clean(){
   for(String table:List.of("t_battle_item_effect","t_item_purchase","t_inventory","t_companion_evolution_history","t_reward","t_collection","t_battle","t_encounter")) db.update("DELETE FROM game."+table);
   db.update("UPDATE game.m_monster SET use_yn=true");
@@ -30,24 +30,36 @@ class Batch1ActivationTest {
   db.update("UPDATE game.t_player_companion SET evolution_stage=1,level=1,exp=0,bond=0,active=true");
  }
  GameDtos.Encounter create(String code){
-  when(random.nextLong(anyLong())).thenAnswer(c->(Long)c.getArgument(0)==500?CODES.indexOf(code)*100L:0L);
+  when(random.nextLong(anyLong())).thenAnswer(c->(Long)c.getArgument(0)==850?new long[]{500,600,700,750,800}[CODES.indexOf(code)]:0L);
   var e=http.postForObject(url("/encounters"),null,GameDtos.Encounter.class);assertEquals(code,e.monster().code());return e;
  }
  BattleDtos.Battle start(GameDtos.Encounter e){return http.postForObject(url("/encounters/"+e.encounterId()+"/battle"),null,BattleDtos.Battle.class);}
- @Test void exactMastersAndEqualWeightedSelectionIncludingSeededReplay(){
-  var masters=repository.monsters();assertEquals(CODES,masters.stream().map(MonsterSelector.Monster::code).toList());
-  for(var m:masters){assertEquals(100,m.weight());assertEquals(1,m.minLevel());assertEquals(3,m.maxLevel());assertTrue(MonsterContent.eligible(m));}
-  int[] counts=new int[5];
-  for(int point=0;point<500;point++){
-   final int selected=point;var selector=new MonsterSelector(bound->bound==500?selected:0);
-   var result=selector.select(masters);counts[CODES.indexOf(result.monster().code())]++;assertEquals(1,result.level());
+ @Test void tenMastersAndRarityWeightedSelectionIncludingSeededReplay(){
+  var codes=List.of("PIP","MELLO","MOSSY","CHIRP","BUBU","PEBB","PUFF","TIKKI","MIMI","WISP");
+  var masters=repository.monsters();assertEquals(codes,masters.stream().map(MonsterSelector.Monster::code).toList());
+  for(var m:masters){
+   var d=MonsterContent.find(m.code()).orElseThrow();
+   assertEquals(d.displayName(),m.name());assertEquals(d.rarity(),m.rarity());assertEquals(d.movementProfile(),m.movementProfile());
+   assertEquals(MonsterContent.rarity(m.rarity()).encounterWeight(),m.weight());
+   assertEquals(1,m.minLevel());assertEquals(3,m.maxLevel());assertTrue(MonsterContent.eligible(m));
   }
-  assertArrayEquals(new int[]{100,100,100,100,100},counts);
+  int[] counts=new int[10];
+  for(int point=0;point<850;point++){
+   final int selected=point;var result=new MonsterSelector(bound->bound==850?selected:0).select(masters);
+   counts[codes.indexOf(result.monster().code())]++;assertEquals(1,result.level());
+  }
+  assertArrayEquals(new int[]{100,100,100,100,100,100,100,50,50,50},counts);
   var rng=new Random(42);var selector=new MonsterSelector(rng::nextLong);var seen=new HashSet<String>();
-  for(int i=0;i<1000;i++)seen.add(selector.select(masters).monster().code());assertEquals(new HashSet<>(CODES),seen);
+  for(int i=0;i<2000;i++)seen.add(selector.select(masters).monster().code());assertEquals(new HashSet<>(codes),seen);
  }
- @ParameterizedTest @ValueSource(strings={"PIP","MELLO","MOSSY","CHIRP","BUBU"})
+ @Test void uncommonCaptureUsesServerDefaultAndExistingHpTerm(){
+  assertEquals(.25,CombatRules.captureChance(30,30,"UNCOMMON"),1e-9);
+  assertEquals(.50,CombatRules.captureChance(15,30,"UNCOMMON"),1e-9);
+  assertEquals(.75,CombatRules.captureChance(0,30,"UNCOMMON"),1e-9);
+ }
+ @ParameterizedTest @ValueSource(strings={"PEBB","PUFF","TIKKI","MIMI","WISP"})
  void capturePersistenceCharmPotionAndRestart(String code){
+  double base=MonsterContent.rarity(MonsterContent.find(code).orElseThrow().rarity()).baseCaptureRate();
   var e=create(code); var restored=http.getForObject(url("/encounters/active"),GameDtos.Encounter.class);
   assertEquals(e.encounterId(),restored.encounterId());assertEquals(code,restored.monster().code());
   assertEquals(1,db.queryForObject("SELECT count(*) FROM game.t_encounter",Integer.class));
@@ -59,16 +71,16 @@ class Batch1ActivationTest {
   assertEquals(5,potion.healedAmount());assertEquals(100,potion.currentHp());
   http.postForObject(url("/inventory/items/CAPTURE_CHARM/use"),new ItemDtos.UseRequest(b.battleId()),ItemDtos.Use.class);
   var c=http.postForObject(url("/battles/"+b.battleId()+"/capture"),null,BattleDtos.Capture.class);
-  assertTrue(c.success());assertEquals(.55,c.baseChance(),1e-9);assertEquals(.1,c.itemBonus(),1e-9);assertEquals(.65,c.finalChance(),1e-9);
+  assertTrue(c.success());assertEquals(base+.20,c.baseChance(),1e-9);assertEquals(.1,c.itemBonus(),1e-9);assertEquals(base+.30,c.finalChance(),1e-9);
   assertEquals(code,c.collection().monsterCode());assertEquals(1,c.collection().captureCount());assertNotNull(c.collection().firstCapturedAt());
   assertEquals(204,http.getForEntity(url("/encounters/active"),String.class).getStatusCode().value());
   var second=start(create(code));var again=http.postForObject(url("/battles/"+second.battleId()+"/capture"),null,BattleDtos.Capture.class);
-  assertTrue(again.success());assertEquals(.35,again.baseChance(),1e-9);assertEquals(2,again.collection().captureCount());
+  assertTrue(again.success());assertEquals(base,again.baseChance(),1e-9);assertEquals(2,again.collection().captureCount());
   assertEquals(c.collection().firstCapturedAt(),again.collection().firstCapturedAt());
   var collection=http.getForObject(url("/collection"),BattleDtos.Collected[].class);
   assertEquals(1,collection.length);assertEquals(code,collection[0].monsterCode());assertEquals(2,collection[0].captureCount());
  }
- @ParameterizedTest @ValueSource(strings={"PIP","MELLO","MOSSY","CHIRP","BUBU"})
+ @ParameterizedTest @ValueSource(strings={"PEBB","PUFF","TIKKI","MIMI","WISP"})
  void victoryDefeatAndMismatchGates(String code){
   var b=start(create(code));while(b.status().equals("ACTIVE"))b=http.postForObject(url("/battles/"+b.battleId()+"/attack"),null,BattleDtos.Battle.class);
   assertEquals("VICTORY",b.status());assertEquals(10,b.reward().gold());assertEquals(20,b.reward().exp());
@@ -76,7 +88,12 @@ class Batch1ActivationTest {
   b=start(create(code));db.update("UPDATE game.t_battle SET companion_hp=1 WHERE battle_id=?",b.battleId());
   b=http.postForObject(url("/battles/"+b.battleId()+"/attack"),null,BattleDtos.Battle.class);assertEquals("DEFEAT",b.status());
   db.update("UPDATE game.m_monster SET use_yn=false WHERE code=?",code);assertFalse(repository.monsters().stream().anyMatch(m->m.code().equals(code)));
-  db.update("UPDATE game.m_monster SET use_yn=true,encounter_weight=99 WHERE code=?",code);
-  try{assertThrows(GameUnavailable.class,()->repository.monsters());}finally{db.update("UPDATE game.m_monster SET encounter_weight=100 WHERE code=?",code);}
+  db.update("UPDATE game.m_monster SET use_yn=true WHERE code=?",code);
+  var d=MonsterContent.find(code).orElseThrow();
+  for(String assignment:List.of("encounter_weight=99","name='Wrong'","rarity='RARE'","movement_profile='FLYING'")) {
+   db.update("UPDATE game.m_monster SET "+assignment+" WHERE code=?",code);
+   try{assertThrows(GameUnavailable.class,()->repository.monsters());}
+   finally{db.update("UPDATE game.m_monster SET name=?,rarity=?,movement_profile=?,encounter_weight=? WHERE code=?",d.displayName(),d.rarity(),d.movementProfile(),d.encounterWeight(),code);}
+  }
  }
 }

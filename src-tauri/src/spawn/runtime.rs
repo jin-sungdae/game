@@ -42,7 +42,9 @@ impl Runtime {
     }
     pub fn load_assets(&mut self, mut load: impl FnMut(&str) -> Option<Vec<u8>>) {
         self.available_assets.clear();
-        for code in ["PIP", "MELLO", "MOSSY", "CHIRP", "BUBU"] {
+        for code in [
+            "PIP", "MELLO", "MOSSY", "CHIRP", "BUBU", "PEBB", "PUFF", "TIKKI", "MIMI", "WISP",
+        ] {
             let bytes = load(&format!("assets/monsters/{}/base.png", code.to_lowercase()));
             if assets::available(code, bytes.as_deref()) {
                 self.available_assets.insert(code.into());
@@ -209,3 +211,6 @@ mod batch1;
 
 #[cfg(test)]
 mod advanced;
+
+#[cfg(test)]
+mod batch2;
