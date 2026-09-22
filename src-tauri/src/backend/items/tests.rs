@@ -242,6 +242,7 @@ fn live_item_economy_world_slice() {
         .items
         .purchase(api.purchase("SMALL_POTION", 1).unwrap());
     let e = api.encounter(true).unwrap().unwrap();
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(0.0, Some(e.clone()), 60.0);
     let b = api.battle(e.encounter_id, Some("start")).unwrap();
     let damaged = api.battle(b.battle_id, Some("attack")).unwrap();

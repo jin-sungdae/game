@@ -216,10 +216,20 @@ fn main() {
                             let state = app.state::<State>();
                             let now = state.start.elapsed().as_secs_f64();
                             let mut world = state.world.lock().unwrap();
+                            world.area = overlay::area();
+                            let (spawn_cursor, _) = overlay::cursor();
+                            world.set_spawn_environment(
+                                overlay::desktop_sample(),
+                                spawn_cursor,
+                                overlay::movement_windows(),
+                            );
                             let mut backend_changed = false;
                             while let Some(event) = state.backend.lock().unwrap().event() {
                                 backend_changed = true;
                                 match event {
+                                    backend::Event::SpawnCompleted(action, result) => {
+                                        world.complete_spawn(now, action, result)
+                                    }
                                     backend::Event::Items(value) => {
                                         world.view.items.inventory = Some(value);
                                     }
@@ -338,6 +348,20 @@ fn main() {
                             }
                             world.set_movement_windows(overlay::movement_windows());
                             world.tick(now, dt, cursor, down);
+                            if let Some(action) = world.spawn_action(now) {
+                                if !state
+                                    .backend
+                                    .lock()
+                                    .unwrap()
+                                    .request(backend::battle::Command::Spawn(action))
+                                {
+                                    world.complete_spawn(
+                                        now,
+                                        action,
+                                        Err("backend queue busy".into()),
+                                    );
+                                }
+                            }
                             let view = &world.view;
                             unsafe {
                                 overlay::place_entity(0, &view.moa, world.area);

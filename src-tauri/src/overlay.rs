@@ -91,6 +91,18 @@ pub fn area() -> Area {
         area
     })
 }
+pub fn desktop_sample() -> DesktopSafeArea {
+    area();
+    DESKTOP.with(|cache| {
+        cache
+            .borrow()
+            .last
+            .as_ref()
+            .expect("desktop sampled")
+            .1
+            .clone()
+    })
+}
 pub fn cursor() -> ((f64, f64), bool) {
     let (mut x, mut y, mut down) = (0.0, 0.0, 0);
     unsafe { luma_cursor(&mut x, &mut y, &mut down) };

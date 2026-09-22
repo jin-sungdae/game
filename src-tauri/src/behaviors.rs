@@ -19,6 +19,7 @@ pub enum InteractionMode {
 pub struct Snapshot {
     pub moa: Entity<CompanionState>,
     pub pip: Option<Entity<PipState>>,
+    pub monster: Option<crate::spawn::MonsterIdentity>,
     pub menu: bool,
     pub interaction: InteractionMode,
     pub identity: Option<crate::backend::Companion>,
@@ -28,8 +29,15 @@ pub struct Snapshot {
     pub dex: crate::collection_dex::Presentation,
     pub visual: crate::presentation::Visual,
 }
+struct SpawnEnvironment {
+    safe: crate::desktop::DesktopSafeArea,
+    cursor: (f64, f64),
+    windows: Option<Vec<Area>>,
+}
 pub struct World {
-    spawn_director: crate::spawn::Director,
+    pub spawn_runtime: crate::spawn::runtime::Runtime,
+    spawn_environment: Option<SpawnEnvironment>,
+    monster_movement: crate::movement::MovementController,
     pub view: Snapshot,
     pub area: Area,
     companion: CompanionController,
@@ -45,6 +53,7 @@ impl World {
             view: Snapshot {
                 moa: companion.entity().clone(),
                 pip: None,
+                monster: None,
                 menu: false,
                 interaction: Default::default(),
                 identity: None,
@@ -60,7 +69,9 @@ impl World {
             bootstrap: None,
             presentation: Default::default(),
             server_encounter: None,
-            spawn_director: crate::spawn::Director::disabled(seed),
+            spawn_runtime: crate::spawn::runtime::Runtime::new(seed),
+            spawn_environment: None,
+            monster_movement: Default::default(),
         }
     }
     pub fn apply_battle(&mut self, value: crate::backend::battle::Battle) {
@@ -75,6 +86,7 @@ impl World {
             if let Some((id, deadline)) = &mut self.server_encounter {
                 if *id == value.encounter_id {
                     *deadline = f64::MAX / 2.0;
+                    self.spawn_runtime.deadline = f64::MAX / 2.0;
                 }
             }
         }
@@ -108,12 +120,8 @@ impl World {
         value: Option<crate::backend::Encounter>,
         remaining: f64,
     ) {
-        if let Some(encounter) = &value {
-            self.view.dex.discover(&encounter.monster.code);
-        }
-        let Some(encounter) =
-            value.filter(|e| e.supports_pip() && remaining > 0.0 && remaining.is_finite())
-        else {
+        self.spawn_runtime.observe(now, value.clone(), remaining);
+        let Some(encounter) = value else {
             if self.server_encounter.take().is_some() {
                 self.despawn(now);
             }
@@ -135,13 +143,11 @@ impl World {
             if self.view.interaction == InteractionMode::Encounter {
                 self.view.menu = false;
             }
-            self.spawn(now);
-            eprintln!(
-                "[LUMA BACKEND] encounter={} PIP level={} rarity={}",
-                encounter.encounter_id, encounter.monster.level, encounter.monster.rarity
-            );
+            self.view.monster = None;
+            self.monster_movement.cancel();
         }
         self.server_encounter = Some((encounter.encounter_id, now + remaining));
+        self.place_server_monster(now);
     }
     pub fn debug_spawn(&mut self, now: f64) {
         if self.server_encounter.is_none() && self.view.pip.is_none() {
@@ -157,6 +163,7 @@ impl World {
         let (x, y) = self
             .area
             .ground(self.area.x + self.area.w - PIP_SIZE.width / 2.0, PIP_SIZE);
+        self.view.monster = None; // explicit debug identity, never server/discovery
         self.view.pip = Some(Entity {
             x,
             y,
@@ -177,6 +184,72 @@ impl World {
         }
         if self.view.game.battle.is_none() && self.view.interaction == InteractionMode::Encounter {
             self.view.menu = false;
+        }
+    }
+    pub fn set_spawn_environment(
+        &mut self,
+        safe: crate::desktop::DesktopSafeArea,
+        cursor: (f64, f64),
+        windows: Option<Vec<Area>>,
+    ) {
+        self.spawn_environment = Some(SpawnEnvironment {
+            safe,
+            cursor,
+            windows,
+        });
+    }
+    fn place_server_monster(&mut self, now: f64) {
+        let Some(context) = &self.spawn_environment else {
+            return;
+        };
+        let environment = crate::spawn::Environment {
+            safe_area: &context.safe,
+            cursor: Some(context.cursor),
+            windows: context.windows.as_deref(),
+        };
+        let Some(intent) = self.spawn_runtime.place(now, &environment) else {
+            return;
+        };
+        let encounter = self
+            .spawn_runtime
+            .encounter
+            .as_ref()
+            .expect("placement has authority");
+        let Some(mut identity) = crate::spawn::identity(&encounter.monster.code) else {
+            return;
+        };
+        identity.level = encounter.monster.level;
+        identity.encounter_id = Some(encounter.encounter_id);
+        self.view.pip = Some(Entity {
+            x: intent.position.0,
+            y: intent.position.1,
+            size: PIP_SIZE,
+            state: PipState::Spawning,
+            facing: -1,
+        });
+        self.view.dex.discover(&identity.monster_code);
+        eprintln!(
+            "[LUMA SPAWN] placed {} encounter={} at={:?}",
+            identity.monster_code, encounter.encounter_id, intent.position
+        );
+        self.view.monster = Some(identity);
+        self.pip_deadline = now + 0.6;
+    }
+    pub fn spawn_action(&mut self, now: f64) -> Option<crate::spawn::runtime::Action> {
+        self.spawn_runtime.action(now)
+    }
+    pub fn complete_spawn(
+        &mut self,
+        now: f64,
+        action: crate::spawn::runtime::Action,
+        result: Result<Option<crate::backend::Encounter>, String>,
+    ) {
+        let accepted = result.is_ok();
+        self.spawn_runtime.complete(now, action, result);
+        if accepted {
+            let value = self.spawn_runtime.encounter.clone();
+            let remaining = (self.spawn_runtime.deadline - now).max(0.0);
+            self.apply_server_encounter(now, value, remaining);
         }
     }
     pub fn drag(&mut self, now: f64, cursor: (f64, f64)) {
@@ -204,16 +277,15 @@ impl World {
         self.companion.set_movement_windows(windows);
     }
     pub fn tick(&mut self, now: f64, dt: f64, cursor: (f64, f64), down: bool) {
-        // Foundation is disabled: no automatic backend requests or debug entity creation.
-        let _ = self.spawn_director.tick(
-            &crate::spawn::WorldClock(now),
-            usize::from(self.view.pip.is_some()),
-            self.server_encounter.is_some(),
-        );
-        // Presentation lease only; the server alone writes EXPIRED via lazy expiration.
+        self.place_server_monster(now);
+        // Hide an expired lease, but keep authority/budget until server reconciliation.
         if self.server_encounter.as_ref().is_some_and(|e| now >= e.1) {
-            self.server_encounter = None;
-            self.despawn(now);
+            if let Some(p) = &mut self.view.pip {
+                if p.state != PipState::Despawning {
+                    p.state = PipState::Despawning;
+                    self.pip_deadline = now + 0.5;
+                }
+            }
         }
         let dt = dt.clamp(0.0, 0.1);
         let was_dragging = self.companion.entity().state == CompanionState::Dragging;
@@ -224,14 +296,47 @@ impl World {
         if let Some(p) = &mut self.view.pip {
             match p.state {
                 PipState::Spawning => {
-                    p.x -= 50.0 * dt;
+                    if self.view.monster.is_none() {
+                        p.x -= 50.0 * dt;
+                    }
                     if now >= self.pip_deadline {
                         p.state = PipState::Roaming;
                     }
                 }
                 PipState::Roaming => {
-                    p.x += p.facing as f64 * 24.0 * dt;
-                    let (x, y) = self.area.ground(p.x, p.size);
+                    if let Some(identity) = &self.view.monster {
+                        use crate::movement::{MovementIntent, MovementProfile};
+                        if self.monster_movement.profile().is_none() {
+                            let target =
+                                self.area
+                                    .clamp(p.x + p.facing as f64 * 100.0, p.y + 32.0, p.size);
+                            if (target.0 - p.x).abs() < 1.0 {
+                                p.facing *= -1;
+                            }
+                            self.monster_movement.start(
+                                MovementIntent {
+                                    profile: identity.movement_profile,
+                                    target,
+                                    duration: 4.0,
+                                    height: 24.0,
+                                },
+                                (p.x, p.y),
+                                self.area,
+                                p.size,
+                            );
+                        }
+                        let (position, _) =
+                            self.monster_movement
+                                .tick((p.x, p.y), dt, self.area, p.size, 24.0);
+                        p.x = position.0;
+                        p.y = position.1;
+                        if identity.movement_profile == MovementProfile::Ground {
+                            p.y = self.area.ground_y();
+                        }
+                    } else {
+                        p.x += p.facing as f64 * 24.0 * dt;
+                    }
+                    let (x, y) = self.area.clamp(p.x, p.y, p.size);
                     if x != p.x {
                         p.facing *= -1;
                     }
@@ -261,10 +366,15 @@ impl World {
             self.view.moa = self.companion.entity().clone();
         }
         if remove {
+            self.spawn_runtime.hidden();
             self.view.pip = None;
         }
         if let Some(p) = &mut self.view.pip {
-            let (x, y) = self.area.ground(p.x, p.size);
+            let (x, y) = if self.view.monster.is_some() {
+                self.area.clamp(p.x, p.y, p.size)
+            } else {
+                self.area.ground(p.x, p.size)
+            };
             p.x = x;
             p.y = y;
         }

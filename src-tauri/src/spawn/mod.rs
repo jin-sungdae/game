@@ -2,6 +2,7 @@
 use crate::{desktop::DesktopSafeArea, geometry::Size, movement::MovementProfile};
 use std::time::{Duration, Instant};
 mod dex_adapter;
+pub mod runtime;
 
 pub trait Clock {
     fn now(&self) -> Duration;
@@ -62,10 +63,10 @@ pub struct Candidate {
 pub trait SpawnCandidateProvider {
     fn candidate(&self, server_monster_code: &str) -> Option<Candidate>;
 }
-pub struct PipProvider;
-impl SpawnCandidateProvider for PipProvider {
+pub struct ContentProvider;
+impl SpawnCandidateProvider for ContentProvider {
     fn candidate(&self, code: &str) -> Option<Candidate> {
-        dex_adapter::pip_candidate(code)
+        dex_adapter::content_candidate(code)
     }
 }
 #[derive(Clone, Debug)]
@@ -154,6 +155,10 @@ impl Director {
     pub fn disabled(seed: u64) -> Self {
         Self::new(false, seed, Config::default()).expect("valid defaults")
     }
+    pub fn adopt(&mut self) {
+        self.state = SpawnState::Active;
+        self.reconciliation = Reconciliation::Complete;
+    }
     pub fn state(&self) -> SpawnState {
         self.state
     }
@@ -167,7 +172,7 @@ impl Director {
         self.state = SpawnState::Cooldown;
     }
     /// Call from the existing World tick. No RNG, provider, allocation or OS calls before due.
-    /// occupied includes debug PIP; server_active includes encounters with no visible entity.
+    /// occupied counts server entities only, including encounters with no visible entity.
     pub fn tick(
         &mut self,
         clock: &impl Clock,
@@ -203,11 +208,18 @@ impl Director {
         if self.state != SpawnState::Requesting {
             return;
         }
+        let was_reconcile = self.pending == Some(Opportunity::Reconcile);
         self.pending = None;
         self.failures = 0;
         self.reconciliation = Reconciliation::Complete;
         if active {
             self.state = SpawnState::Active;
+        } else if was_reconcile
+            && !self.next_spawn_at.is_zero()
+            && clock.now() >= self.next_spawn_at
+        {
+            // Cooldown/backoff was already paid before reconciliation. Do not double it.
+            self.state = SpawnState::Waiting;
         } else {
             self.cooldown(clock.now());
         }
@@ -301,13 +313,13 @@ pub fn intent_for_encounter(
     environment: &Environment<'_>,
     seed: u64,
 ) -> Option<SpawnIntent> {
-    if !encounter.supports_pip() || remaining.is_zero() {
+    if encounter.encounter_id.is_nil() || remaining.is_zero() {
         return None;
     }
     let candidate = provider.candidate(&encounter.monster.code)?;
     if candidate.monster_code != encounter.monster.code
         || !candidate.condition.enabled()
-        || candidate.movement_profile != MovementProfile::Ground
+        || !metadata_matches(encounter, &candidate)
         || candidate.lifetime.is_zero()
     {
         return None;
@@ -324,3 +336,14 @@ pub fn intent_for_encounter(
 }
 #[cfg(test)]
 mod tests;
+
+pub fn metadata_matches(encounter: &crate::backend::Encounter, candidate: &Candidate) -> bool {
+    serde_json::from_value::<MovementProfile>(serde_json::Value::String(
+        encounter.monster.movement_profile.clone(),
+    ))
+    .ok()
+        == Some(candidate.movement_profile)
+        && dex_adapter::identity(&encounter.monster.code)
+            .is_some_and(|m| m.rarity == encounter.monster.rarity)
+}
+pub use dex_adapter::{identity, MonsterIdentity};

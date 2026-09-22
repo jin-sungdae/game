@@ -1,7 +1,8 @@
 export type CompanionState = 'IDLE' | 'WALKING' | 'SITTING' | 'LOOKING' | 'SLEEPING' | 'DRAGGING' | 'REACTING';
 export type PipState = 'SPAWNING' | 'ROAMING' | 'ENGAGED' | 'DESPAWNING';
 export interface Entity { x: number; y: number; state: CompanionState | PipState; facing: number }
-export interface Snapshot { moa: Entity; pip: Entity | null; menu: boolean; game?: GamePresentation; visual?: Visual; identity?: CompanionIdentity|null; evolution?: EvolutionPresentation; items?: ItemPresentation; dex?:CollectionDexPresentation; interaction?:'DEX'|'ENCOUNTER'|'EVOLUTION'|'SHOP'|'INVENTORY'|'BATTLE_ITEMS' }
+export interface MonsterIdentity {monsterCode:string;assetIdentity:string;rarity:string;level:number;encounterId:string|null;movementProfile:string}
+export interface Snapshot { monster?:MonsterIdentity|null; moa: Entity; pip: Entity | null; menu: boolean; game?: GamePresentation; visual?: Visual; identity?: CompanionIdentity|null; evolution?: EvolutionPresentation; items?: ItemPresentation; dex?:CollectionDexPresentation; interaction?:'DEX'|'ENCOUNTER'|'EVOLUTION'|'SHOP'|'INVENTORY'|'BATTLE_ITEMS' }
 
 export interface Battle { battleId:string;encounterId:string;turn:number;status:string;encounterStatus:string;companion:{hp:number;maxHp:number};monster:{hp:number;maxHp:number};events:string[];reward:{gold:number;exp:number;bond:number}|null }
 export interface GamePresentation { encounterId:string|null;monsterLevel:number;battle:Battle|null;busy:boolean;error:string|null;feedback:string|null;collection:{monsterCode:string;captureCount:number}[]; captureChance?:number|null;captureBaseChance?:number|null;captureItemBonus?:number|null;captureFinalChance?:number|null }
