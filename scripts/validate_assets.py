@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 COUNTS = dict(idle=6, walk=8, sit=4, look=4, sleep=6, react=6)
 
 
-def png_errors(path):
+def png_errors(path, require_transparency=False):
     errors = []
     try:
         data = path.read_bytes()
@@ -54,6 +54,33 @@ def png_errors(path):
                 raise ValueError('invalid PNG pixel data length')
             if any(raw[i] > 4 for i in range(0, len(raw), 1025)):
                 raise ValueError('invalid PNG row filter')
+            if require_transparency:
+                previous = bytearray(1024)
+                transparent = False
+                for start in range(0, len(raw), 1025):
+                    filtering = raw[start]
+                    row = bytearray(raw[start+1:start+1025])
+                    for i in range(1024):
+                        left = row[i-4] if i >= 4 else 0
+                        above = previous[i]
+                        upper_left = previous[i-4] if i >= 4 else 0
+                        if filtering == 1:
+                            predictor = left
+                        elif filtering == 2:
+                            predictor = above
+                        elif filtering == 3:
+                            predictor = (left+above)//2
+                        elif filtering == 4:
+                            p = left+above-upper_left
+                            distances = (abs(p-left),abs(p-above),abs(p-upper_left))
+                            predictor = (left,above,upper_left)[distances.index(min(distances))]
+                        else:
+                            predictor = 0
+                        row[i] = (row[i]+predictor) & 255
+                    transparent |= any(alpha < 255 for alpha in row[3::4])
+                    previous = row
+                if not transparent:
+                    errors.append('transparent pixels required; fully opaque RGBA is invalid')
     except (OSError, ValueError, struct.error, zlib.error) as exc:
         errors.append(str(exc))
     return errors
@@ -120,9 +147,12 @@ def validate_bases(root=ROOT, strict=False):
              for definition in companions.values() for url in definition['stages'].values()]
     required = {root/'public/assets/creatures/moa/stage01/base.png'}
     for definition in monsters.values():
+        if definition.get("alphaDelivery") is True and definition["baseAsset"] != "/assets/monsters/pip/base.png":
+            continue  # Optional/strict alpha gate owns these deliveries, not Companion strict-base.
         path = root/'public'/definition['baseAsset'].lstrip('/')
         paths.append(path)
-        required.add(path)
+        if definition.get("alphaDelivery") is not True or path == root/"public/assets/monsters/pip/base.png":
+            required.add(path)
     for path in paths:
         if path.name != 'base.png':
             errors.append(f'{path}: filename must be base.png')
@@ -138,15 +168,77 @@ def validate_bases(root=ROOT, strict=False):
     return errors, pending
 
 
+ALPHA_CODES = 'pip mello mossy chirp bubu pebb puff tikki mimi wisp shade ember lunet nova noct'.split()
+
+
+def validate_alpha(root=ROOT, strict=False):
+    """Monster-only delivery gate; does not require Companion frames or bases."""
+    errors, pending = [], []
+    registry_path = root/'src/entities/monsters.json'
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f'duplicate registry key: {key}')
+            result[key] = value
+        return result
+    try:
+        registry = json.loads(registry_path.read_text(), object_pairs_hook=unique)
+        alpha = {code: value for code, value in registry.items() if value.get('alphaDelivery') is True}
+        if set(alpha) != {code.upper() for code in ALPHA_CODES}:
+            errors.append('alpha delivery must define exactly the fifteen canonical codes')
+        parent = root/'public/assets/monsters'
+        for slug in ALPHA_CODES:
+            code = slug.upper()
+            definition = registry.get(code, {})
+            url = f'/assets/monsters/{slug}/base.png'
+            scale = definition.get('visualScale')
+            if definition.get('assetRoot') != f'/assets/monsters/{slug}' or definition.get('baseAsset') != url:
+                errors.append(f'{code}: canonical asset path mismatch')
+            if type(scale) not in (int, float) or not .5 <= scale <= 1.5:
+                errors.append(f'{code}: visualScale must be within 0.5..1.5')
+            if code == 'PIP' and scale != .8:
+                errors.append('PIP: preserve legacy visualScale 0.8')
+            if parent.is_dir():
+                for entry in parent.iterdir():
+                    if entry.name.casefold() == slug and entry.name != slug:
+                        errors.append(f'{entry}: duplicate/case mismatch monster directory')
+            directory = parent/slug
+            entries = list(directory.iterdir()) if directory.is_dir() else []
+            for entry in entries:
+                # Future animation directories are independent. Every root delivery file must be canonical.
+                if entry.name in ('.gitkeep', '.DS_Store', 'README.md'):
+                    continue
+                if entry.is_dir():
+                    if entry.name.casefold().startswith('base.'):
+                        errors.append(f'{entry}: base must be a regular PNG file')
+                    continue
+                if entry.name != 'base.png':
+                    errors.append(f'{entry}: invalid filename/duplicate/case mismatch; expected base.png')
+            canonical = next((entry for entry in entries if entry.name == 'base.png' and entry.is_file()), None)
+            if canonical is None:
+                (errors if strict else pending).append(f'{url}: alpha base NOT_SUPPLIED')
+            else:
+                errors.extend(f'{url}: {error}' for error in png_errors(canonical, require_transparency=True))
+    except (OSError, ValueError, TypeError, AttributeError) as exc:
+        errors.append(f'alpha registry: {exc}')
+    return errors, pending
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--allow-missing', action='store_true')
     parser.add_argument('--strict-base', action='store_true', help='require MOA and PIP base delivery; frame policy unchanged')
+    parser.add_argument('--strict-alpha', action='store_true', help='require all fifteen Monster bases; independent of Companion delivery')
+    parser.add_argument('--alpha-only', action='store_true', help='validate only optional Alpha Monster delivery')
+    parser.add_argument('--root', type=Path, default=ROOT, help='repository/delivery staging root')
     args = parser.parse_args()
-    failures, pending = validate(allow_missing=args.allow_missing)
-    base_failures, base_pending = validate_bases(strict=args.strict_base)
-    failures.extend(base_failures)
-    pending.extend(base_pending)
+    failures, pending = validate_alpha(args.root, strict=args.strict_alpha)
+    if not (args.alpha_only or args.strict_alpha):
+        frame_failures, frame_pending = validate(args.root, allow_missing=args.allow_missing)
+        base_failures, base_pending = validate_bases(args.root, strict=args.strict_base)
+        failures.extend(frame_failures + base_failures)
+        pending.extend(frame_pending + base_pending)
     for line in failures:
         print('FAIL:', line)
     for line in pending:

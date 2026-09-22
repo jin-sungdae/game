@@ -27,7 +27,7 @@ test('same snapshot keeps class and existing nodes; state transitions only chang
 });
 test('only base branch receives motion; frame and CSS fallback retain existing priority',()=>{
  assert.match(companion,/sprite && size \? <img[\s\S]+source.kind==='base' \? <BaseSprite[\s\S]+PlaceholderRenderer/);
- assert.match(monster,/base.url \? <BaseSprite[\s\S]+PlaceholderRenderer/);
+ assert.match(monster,/source.kind==='animation' \? <img[\s\S]+source.kind==='base' \? <BaseSprite[\s\S]+PlaceholderRenderer/);
  assert.doesNotMatch(companion,/className=\{motion/);
  assert.match(base,/className=\{motion.className\}[\s\S]*<img/);
 });

@@ -39,7 +39,7 @@ test('PIP metadata and production asset stay compatible with existing gameplay',
  const pip = dex.resolveMonsterDefinition('PIP');
  assert.deepEqual([pip.rarity,pip.archetype,pip.movementProfile,pip.encounterWeight,pip.baseCaptureRate,pip.visualScale], ['COMMON','BEAST','GROUND',100,.35,.8]);
  assert.deepEqual(dex.enabledMonsterDefinitions().map(m => m.monsterCode), ['PIP']);
- assert.deepEqual(resolveMonster('PIP'), {name:'PIP',assetRoot:'/assets/monsters/pip',baseAsset:'/assets/monsters/pip/base.png'});
+ assert.deepEqual(resolveMonster('PIP'), {name:'PIP',assetRoot:'/assets/monsters/pip',baseAsset:'/assets/monsters/pip/base.png',visualScale:.8,alphaDelivery:true});
  const seed = fs.readFileSync('server/src/main/resources/db/migration/V2__local_master_seed.sql','utf8');
  assert.ok(seed.includes("('PIP','PIP','COMMON','GROUND',1,3,100,true)"));
 });

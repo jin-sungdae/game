@@ -11,7 +11,9 @@
     "test:animation": "sh scripts/test-animation.sh",
     "validate:assets": "python3 scripts/validate_assets.py",
     "test:assets": "python3 -m unittest discover -s tests/assets -v",
-    "test:presentation": "sh scripts/test-presentation.sh"
+    "test:presentation": "sh scripts/test-presentation.sh",
+    "validate:alpha": "python3 scripts/validate_assets.py --alpha-only",
+    "validate:alpha:strict": "python3 scripts/validate_assets.py --strict-alpha"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.10.0",
