@@ -32,9 +32,9 @@ public class EvolutionService {
     public Result evolve() {
         var player=game.lockPlayer(LOCAL_PLAYER);
         var current=repository.lockActive(LOCAL_PLAYER);
-        if (repository.completedFirstEvolution(current))
+        var before=status(current); // Revalidate the approved next transition under the existing lock.
+        if (before.status()!=State.AVAILABLE && repository.completedCurrentEvolution(current))
             return new Result("ALREADY_EVOLVED",status(current),new GameDtos.Bootstrap(player,current));
-        var before=status(current); // Verifies the next master before mutation.
         if (before.status()==State.MAX_STAGE) throw new GameFault(409,"MAX_STAGE");
         if (before.status()!=State.AVAILABLE) throw new GameFault(409,"NOT_ELIGIBLE");
         var rule=EvolutionRules.next(current).orElseThrow();

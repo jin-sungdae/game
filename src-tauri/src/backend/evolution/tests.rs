@@ -205,10 +205,73 @@ fn live_evolution_world_slice() {
             assert_eq!(w.view.identity.as_ref().unwrap().evolution_name, "MOKORI");
             assert_eq!(status.current_stage, 2);
         }
+        "stage3-available" => {
+            assert_eq!(status.current_stage, 2);
+            assert_eq!(status.status, Status::Available);
+            let before = api.bootstrap().unwrap();
+            let position = (w.view.moa.x, w.view.moa.y);
+            w.view.evolution.eligibility = Some(status);
+            assert!(w.view.evolution.request());
+            assert_eq!(w.view.identity.as_ref().unwrap().evolution_stage, 2);
+            let response = api.evolve().unwrap();
+            assert_eq!(response.result, Outcome::Evolved);
+            let after = &response.bootstrap;
+            assert_eq!(after.active_companion.evolution_name, "NEBLA");
+            assert_eq!(before.player.gold, after.player.gold);
+            assert_eq!(before.active_companion.level, after.active_companion.level);
+            assert_eq!(before.active_companion.exp, after.active_companion.exp);
+            assert_eq!(before.active_companion.bond, after.active_companion.bond);
+            w.apply_evolved(response, 1.0);
+            assert_eq!(w.view.evolution.phase, Phase::Glow);
+            assert_eq!(
+                w.view.evolution.previous.as_ref().unwrap().evolution_stage,
+                2
+            );
+            w.view.evolution.tick(1.9);
+            assert_eq!(w.view.evolution.phase, Phase::Reveal);
+            assert_eq!(position, (w.view.moa.x, w.view.moa.y));
+            assert_eq!(api.evolve().unwrap().result, Outcome::AlreadyEvolved);
+        }
+        "stage3-restored" => {
+            assert_eq!(status.current_stage, 3);
+            assert_eq!(status.current_name, "NEBLA");
+            assert_eq!(status.next_stage, None);
+            assert_eq!(w.view.identity.as_ref().unwrap().evolution_stage, 3);
+            assert_eq!(w.view.evolution.phase, Phase::Idle);
+            assert_eq!(api.evolve().unwrap().result, Outcome::AlreadyEvolved);
+        }
         _ => panic!("unknown fixture"),
     }
     eprintln!(
         "[EVOLUTION LIVE] {mode} PASS identity={:?}",
         w.view.identity
     );
+}
+#[test]
+fn stage_three_acknowledgement_transition_restart_and_retry() {
+    let mut w = world();
+    w.apply_bootstrap(bootstrap(2));
+    let position = (w.view.moa.x, w.view.moa.y);
+    let mut r = result(Outcome::Evolved);
+    r.bootstrap.active_companion.evolution_stage = 3;
+    r.bootstrap.active_companion.evolution_name = "NEBLA".into();
+    r.evolution.current_stage = 3;
+    r.evolution.current_name = "NEBLA".into();
+    assert_eq!(w.view.identity.as_ref().unwrap().evolution_stage, 2);
+    w.apply_evolved(r.clone(), 1.0);
+    assert_eq!(w.view.identity.as_ref().unwrap().evolution_name, "NEBLA");
+    assert_eq!(w.view.evolution.phase, Phase::Glow);
+    assert_eq!(
+        w.view.evolution.previous.as_ref().unwrap().evolution_stage,
+        2
+    );
+    w.view.evolution.tick(1.9);
+    assert_eq!(w.view.evolution.phase, Phase::Reveal);
+    assert_eq!(position, (w.view.moa.x, w.view.moa.y));
+    let mut restored = world();
+    restored.apply_bootstrap(r.bootstrap.clone());
+    assert_eq!(restored.view.identity.as_ref().unwrap().evolution_stage, 3);
+    r.result = Outcome::AlreadyEvolved;
+    restored.apply_evolved(r, 3.0);
+    assert_eq!(restored.view.evolution.phase, Phase::Idle);
 }

@@ -42,6 +42,7 @@ class AssetTests(unittest.TestCase):
         for definition in registry.values():
             for url in definition['stages'].values():
                 stage=(self.root/'public'/url.lstrip('/')).parent
+                if not (stage/'manifest.json').exists(): continue
                 for clip,count in validator.COUNTS.items():
                     for i in range(count):
                         (stage/clip/f'{clip}_{i:02}.png').write_bytes(png())
@@ -49,12 +50,13 @@ class AssetTests(unittest.TestCase):
     def test_scaffold_pending_not_production_pass(self):
         errors,pending = validator.validate(self.root,True)
         self.assertEqual(errors,[])
-        self.assertEqual(len(pending),24)
+        self.assertEqual(len(pending),25)
         self.assertTrue(self.errors(False))
 
     def test_complete_registered_frame_fixture(self):
         self.fill()
-        self.assertEqual(validator.validate(self.root),([],[]))
+        self.assertEqual(validator.validate(self.root,True),([],["moa/stage03: asset not supplied"]))
+        self.assertEqual(validator.validate(self.root)[0],["moa/stage03: asset not supplied"])
 
     def test_missing_manifest(self):
         (self.stage/'manifest.json').unlink()

@@ -74,7 +74,10 @@ impl Api {
         if !value.bootstrap.valid()
             || !value.evolution.valid()
             || c.species != "MOA"
-            || c.evolution_stage != 2
+            || !matches!(
+                (c.evolution_stage, c.evolution_name.as_str()),
+                (2, "MOKORI") | (3, "NEBLA")
+            )
             || c.species != value.evolution.species
             || c.evolution_stage != value.evolution.current_stage
             || c.evolution_name != value.evolution.current_name

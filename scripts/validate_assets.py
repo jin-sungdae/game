@@ -93,6 +93,9 @@ def validate(root=ROOT, allow_missing=False):
         for stage, url in definition['stages'].items():
             manifest_path = root/'public'/url.lstrip('/')
             prefix = f'{species}/stage{int(stage):02}'
+            if not manifest_path.exists() and definition.get('stageAssetStatus', {}).get(stage) == 'NOT_SUPPLIED':
+                (pending if allow_missing else errors).append(f'{prefix}: asset not supplied')
+                continue
             try:
                 m = json.loads(manifest_path.read_text())
                 if (m['species'], m['stage'], m['canvas'], m['anchor']) != (species, int(stage), {'width':256,'height':256}, {'x':.5,'y':1}):

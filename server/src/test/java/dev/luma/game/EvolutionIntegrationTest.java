@@ -62,7 +62,7 @@ class EvolutionIntegrationTest {
     @Test void repeatedRequestsNeverReachStageThree() {
         progress(5,100); evolve();
         for(int i=0;i<5;i++) { var r=evolve(); assertEquals("ALREADY_EVOLVED",r.result()); assertEquals(2,r.bootstrap().activeCompanion().evolutionStage()); }
-        assertEquals(1,histories()); assertEquals(State.LOCKED,status().status()); assertNull(status().nextStage());
+        assertEquals(1,histories()); assertEquals(State.LOCKED,status().status()); assertEquals(3,status().nextStage());
     }
     @Test void simultaneousEvolveExactlyOnce() throws Exception {
         progress(3,5); var pool=Executors.newFixedThreadPool(4); var gate=new CountDownLatch(1);
@@ -121,5 +121,30 @@ class EvolutionIntegrationTest {
         assertEquals(CombatRules.companionHp(),b.companion().maxHp());
         var a=http.postForObject(url("/battles/"+b.battleId()+"/attack"),null,BattleDtos.Battle.class);
         assertEquals(1,a.turn()); assertEquals(2,bootstrap().activeCompanion().evolutionStage()); assertEquals(1,histories());
+    }
+
+    @Test void stageThreeBoundariesHistoryConcurrencyAndProgress() throws Exception {
+        progress(3,5);evolve();
+        for(var pair:List.of(new int[]{5,12},new int[]{6,11})) {progress(pair[0],pair[1]);assertEquals(State.LOCKED,status().status());assertEquals(2,bootstrap().activeCompanion().evolutionStage());}
+        progress(6,12);var before=bootstrap();assertEquals(State.AVAILABLE,status().status());assertEquals("NEBLA",status().nextName());
+        try(var pool=Executors.newFixedThreadPool(4)) {
+            var gate=new CountDownLatch(1);var futures=new ArrayList<Future<Result>>();
+            for(int i=0;i<4;i++)futures.add(pool.submit(()->{gate.await();return evolve();}));gate.countDown();
+            var outcomes=new ArrayList<String>();
+            for(var f:futures){var r=f.get(20,TimeUnit.SECONDS);outcomes.add(r.result());assertEquals(3,r.bootstrap().activeCompanion().evolutionStage());}
+            assertEquals(1,Collections.frequency(outcomes,"EVOLVED"));assertEquals(3,Collections.frequency(outcomes,"ALREADY_EVOLVED"));
+        }
+        var after=bootstrap();assertEquals("NEBLA",after.activeCompanion().evolutionName());
+        assertEquals(before.player(),after.player());assertEquals(before.activeCompanion().level(),after.activeCompanion().level());
+        assertEquals(before.activeCompanion().exp(),after.activeCompanion().exp());assertEquals(before.activeCompanion().bond(),after.activeCompanion().bond());
+        assertEquals(List.of(2,3),db.queryForList("SELECT to_stage FROM game.t_companion_evolution_history ORDER BY evolution_history_id",Integer.class));
+        assertEquals("ALREADY_EVOLVED",evolve().result());assertEquals(2,histories());assertNull(status().nextStage());
+        var fresh=new EvolutionService(new GameRepository(db),new EvolutionRepository(db));assertEquals("NEBLA",fresh.status().currentName());
+    }
+    @Test void stageThreeHistoryFailureRollsBackStageUpdate() {
+        progress(3,5);evolve();progress(6,12);evolve();
+        db.update("UPDATE game.t_player_companion SET evolution_stage=2");
+        assertEquals(503,http.postForEntity(url("/companions/active/evolve"),null,String.class).getStatusCode().value());
+        assertEquals(2,bootstrap().activeCompanion().evolutionStage());assertEquals(2,histories());
     }
 }

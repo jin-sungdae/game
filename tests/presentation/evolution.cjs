@@ -27,3 +27,9 @@ test('explicit interaction, reduced motion, diagnostic identity and focus policy
  assert.match(fs.readFileSync('src/components/CompanionVisual.tsx','utf8'),/Stage \{evolutionStage\} · asset pending/);
  for(const source of [creature,panel,fs.readFileSync('src/presentation/evolution.ts','utf8')])assert.doesNotMatch(source,/setFocus|\.focus\(|activateIgnoringOtherApps|WebviewWindow/);
 });
+test('NEBLA keeps MOKORI during acknowledged glow then reveals Stage3 diagnostic identity',()=>{
+ const old={species:'MOA',evolutionStage:2,evolutionName:'MOKORI'},next={species:'MOA',evolutionStage:3,evolutionName:'NEBLA'};
+ assert.equal(renderIdentity(next,{phase:'GLOW',previous:old}),old);
+ assert.equal(renderIdentity(next,{phase:'REVEAL',previous:old}),next);
+ assert.equal(renderIdentity(next),next);
+});

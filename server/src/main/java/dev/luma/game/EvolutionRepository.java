@@ -26,12 +26,12 @@ public class EvolutionRepository {
         if (rows.size()!=1) throw new GameUnavailable("Evolution master missing");
         return rows.getFirst();
     }
-    public boolean completedFirstEvolution(GameDtos.Companion c) {
-        return "MOA".equals(c.species()) && c.evolutionStage()==2 && Boolean.TRUE.equals(jdbc.queryForObject("""
+    public boolean completedCurrentEvolution(GameDtos.Companion c) {
+        return "MOA".equals(c.species()) && (c.evolutionStage()==2 || c.evolutionStage()==3) && Boolean.TRUE.equals(jdbc.queryForObject("""
             SELECT EXISTS(SELECT 1 FROM game.t_companion_evolution_history h
             JOIN game.m_species s USING(species_id)
-            WHERE h.player_companion_id=? AND s.code=? AND from_stage=1 AND to_stage=2)
-            """, Boolean.class, c.playerCompanionId(), c.species()));
+            WHERE h.player_companion_id=? AND s.code=? AND from_stage=? AND to_stage=?)
+            """, Boolean.class, c.playerCompanionId(), c.species(), c.evolutionStage()-1, c.evolutionStage()));
     }
     public void evolve(GameDtos.Companion c, EvolutionRules.Rule rule) {
         int updated = jdbc.update("""
