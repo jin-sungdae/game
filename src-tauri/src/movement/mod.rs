@@ -138,13 +138,19 @@ impl MovementController {
         let mut start = area.clamp(position.0, position.1, size);
         intent.target = area.clamp(intent.target.0, intent.target.1, size);
         match intent.profile {
-            MovementProfile::Ground | MovementProfile::Jump | MovementProfile::Free2d => {
+            MovementProfile::Ground | MovementProfile::Jump => {
                 start = area.ground(start.0, size);
             }
             MovementProfile::Edge => {
-                // Foundation: one straight segment on the lower usable edge.
-                start = area.ground(start.0, size);
-                intent.target = area.ground(intent.target.0, size);
+                // Follow the nearest safe side without teleporting to the bottom edge.
+                let left = area.clamp(f64::MIN, start.1, size).0;
+                let right = area.clamp(f64::MAX, start.1, size).0;
+                start.0 = if (start.0 - left).abs() <= (start.0 - right).abs() {
+                    left
+                } else {
+                    right
+                };
+                intent.target.0 = start.0;
             }
             _ => {}
         }

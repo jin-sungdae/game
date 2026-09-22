@@ -9,6 +9,8 @@ pub enum Action {
 }
 pub struct Runtime {
     pub director: Director,
+    calendar: Box<dyn conditions::CalendarClock>,
+    provider: Box<dyn SpawnCandidateProvider + Send>,
     pub encounter: Option<Encounter>,
     pub deadline: f64,
     pending: Option<Action>,
@@ -24,6 +26,8 @@ impl Runtime {
     pub fn new(seed: u64) -> Self {
         Self {
             director: Director::new(true, seed, Config::default()).expect("valid spawn defaults"),
+            calendar: Box::new(conditions::LocalClock),
+            provider: Box::new(ContentProvider),
             encounter: None,
             deadline: 0.0,
             pending: None,
@@ -44,6 +48,9 @@ impl Runtime {
                 self.available_assets.insert(code.into());
             }
         }
+    }
+    pub fn identity(&self, code: &str) -> Option<MonsterIdentity> {
+        self.provider.identity(code)
     }
     pub fn hidden(&mut self) {
         self.placed = false;
@@ -101,9 +108,9 @@ impl Runtime {
         self.pending = None;
         match result {
             Ok(value) => {
-                let remaining = value
-                    .as_ref()
-                    .map_or(0.0, |e| e.remaining_at(chrono::Utc::now()));
+                let remaining = value.as_ref().map_or(0.0, |e| {
+                    e.remaining_at(self.calendar.local_now().with_timezone(&chrono::Utc))
+                });
                 self.director.resolved(&WorldClock(now), value.is_some());
                 self.observe(now, value, remaining);
                 self.failures = 0;
@@ -129,12 +136,15 @@ impl Runtime {
             self.resolution_at = now;
             return None;
         }
-        let Some(candidate) = ContentProvider.candidate(&encounter.monster.code) else {
+        let Some(candidate) = self.provider.candidate(&encounter.monster.code) else {
             self.resolving = true;
             self.resolution_at = now;
             return None;
         };
-        if !metadata_matches(encounter, &candidate) || !candidate.condition.enabled() {
+        let local_time = self.calendar.local_now().time();
+        if !metadata_matches_with(encounter, &candidate, self.provider.as_ref())
+            || !candidate.condition.eligible(local_time)
+        {
             self.resolving = true;
             self.resolution_at = now;
             return None;
@@ -142,13 +152,14 @@ impl Runtime {
         if self.deadline <= now {
             return None;
         } // existing GET-active performs authoritative expiry
-        let intent = intent_for_encounter(
+        let intent = intent_for_encounter_at(
             encounter,
             Duration::from_secs_f64((self.deadline - now).min(86400.0)),
             WorldClock(now).now(),
-            &ContentProvider,
+            self.provider.as_ref(),
             environment,
             (encounter.encounter_id.as_u128() as u64).wrapping_add(self.attempts as u64),
+            local_time,
         );
         if intent.is_some() {
             self.placed = true;
@@ -195,3 +206,6 @@ mod tests;
 
 #[cfg(test)]
 mod batch1;
+
+#[cfg(test)]
+mod advanced;

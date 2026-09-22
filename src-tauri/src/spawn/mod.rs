@@ -1,5 +1,6 @@
 //! Desktop orchestration only. No HTTP, OS tracking, monster selection or entity mutation.
 pub mod assets;
+pub mod conditions;
 use crate::{desktop::DesktopSafeArea, geometry::Size, movement::MovementProfile};
 use std::time::{Duration, Instant};
 mod dex_adapter;
@@ -35,6 +36,7 @@ pub enum SpawnZone {
     FreeArea,
     NearDock,
     LowerCorner,
+    Edge,
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, serde::Deserialize)]
 #[serde(rename_all = "SCREAMING_SNAKE_CASE")]
@@ -46,9 +48,12 @@ pub enum SpawnCondition {
     SpecialEvent,
 }
 impl SpawnCondition {
-    /// Only ANY_TIME is enabled in v0.1; no inferred OS/user activity.
+    /// Supported condition contract; eligibility is evaluated separately with local time.
     pub fn enabled(self) -> bool {
-        self == Self::AnyTime
+        matches!(self, Self::AnyTime | Self::Night)
+    }
+    pub fn eligible(self, local_time: chrono::NaiveTime) -> bool {
+        self == Self::AnyTime || (self == Self::Night && conditions::night(local_time))
     }
 }
 #[derive(Clone, Debug)]
@@ -63,6 +68,9 @@ pub struct Candidate {
 /// Metadata lookup AFTER authoritative selection. Must not select a server monster.
 pub trait SpawnCandidateProvider {
     fn candidate(&self, server_monster_code: &str) -> Option<Candidate>;
+    fn identity(&self, code: &str) -> Option<MonsterIdentity> {
+        identity(code)
+    }
 }
 pub struct ContentProvider;
 impl SpawnCandidateProvider for ContentProvider {
@@ -276,7 +284,7 @@ pub fn placement(
     let (left, bottom) = a.clamp(f64::MIN, f64::MIN, s);
     let (right, top) = a.clamp(f64::MAX, f64::MAX, s);
     let mut rng = SeededRandom::new(seed);
-    for _ in 0..16 {
+    for attempt in 0..16 {
         let u = rng.unit();
         let v = rng.unit();
         let x = left + (right - left) * u;
@@ -284,6 +292,14 @@ pub fn placement(
         let p = match candidate.zone {
             SpawnZone::Bottom | SpawnZone::NearDock => (x, bottom),
             SpawnZone::Top => (x, top),
+            SpawnZone::Edge => (
+                if (seed.wrapping_add(attempt) & 1) == 0 {
+                    left
+                } else {
+                    right
+                },
+                y,
+            ),
             SpawnZone::LeftEdge => (left, y),
             SpawnZone::RightEdge => (right, y),
             SpawnZone::FreeArea => (x, y),
@@ -314,13 +330,33 @@ pub fn intent_for_encounter(
     environment: &Environment<'_>,
     seed: u64,
 ) -> Option<SpawnIntent> {
+    use conditions::CalendarClock;
+    intent_for_encounter_at(
+        encounter,
+        remaining,
+        requested_at,
+        provider,
+        environment,
+        seed,
+        conditions::LocalClock.local_now().time(),
+    )
+}
+pub fn intent_for_encounter_at(
+    encounter: &crate::backend::Encounter,
+    remaining: Duration,
+    requested_at: Duration,
+    provider: &(impl SpawnCandidateProvider + ?Sized),
+    environment: &Environment<'_>,
+    seed: u64,
+    local_time: chrono::NaiveTime,
+) -> Option<SpawnIntent> {
     if encounter.encounter_id.is_nil() || remaining.is_zero() {
         return None;
     }
     let candidate = provider.candidate(&encounter.monster.code)?;
     if candidate.monster_code != encounter.monster.code
-        || !candidate.condition.enabled()
-        || !metadata_matches(encounter, &candidate)
+        || !candidate.condition.eligible(local_time)
+        || !metadata_matches_with(encounter, &candidate, provider)
         || candidate.lifetime.is_zero()
     {
         return None;
@@ -339,6 +375,13 @@ pub fn intent_for_encounter(
 mod tests;
 
 pub fn metadata_matches(encounter: &crate::backend::Encounter, candidate: &Candidate) -> bool {
+    metadata_matches_with(encounter, candidate, &ContentProvider)
+}
+pub fn metadata_matches_with(
+    encounter: &crate::backend::Encounter,
+    candidate: &Candidate,
+    provider: &(impl SpawnCandidateProvider + ?Sized),
+) -> bool {
     encounter.monster.name == encounter.monster.code
         && (1..=3).contains(&encounter.monster.level)
         && serde_json::from_value::<MovementProfile>(serde_json::Value::String(
@@ -346,7 +389,8 @@ pub fn metadata_matches(encounter: &crate::backend::Encounter, candidate: &Candi
         ))
         .ok()
             == Some(candidate.movement_profile)
-        && dex_adapter::identity(&encounter.monster.code)
+        && provider
+            .identity(&encounter.monster.code)
             .is_some_and(|m| m.rarity == encounter.monster.rarity)
 }
 pub use dex_adapter::{identity, MonsterIdentity};

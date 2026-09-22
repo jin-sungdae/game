@@ -115,7 +115,9 @@ fn completion_static_float_flying_edge_are_deterministic() {
             MovementProfile::Static => assert_eq!(p, start),
             MovementProfile::Floating => assert!((p.1 - start.1).abs() < 1e-9),
             MovementProfile::Flying => assert_eq!(p, intent(profile).target),
-            MovementProfile::Edge => assert_eq!(p, a.ground(-500.0, SIZE)),
+            MovementProfile::Edge => {
+                assert_eq!(p, a.clamp(f64::MIN, intent(profile).target.1, SIZE))
+            }
             _ => unreachable!(),
         }
     }
