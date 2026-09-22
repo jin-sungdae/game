@@ -1,10 +1,12 @@
-//! Read-only Collection projection. Discovery is session evidence from server encounters.
+//! Read-only Collection projection. Discovery is acknowledged by the server after accepted placement.
 use crate::backend::battle::Collected;
 use serde::Serialize;
 #[derive(Clone, Default, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct Presentation {
     pub records: Option<Vec<Collected>>,
+    #[serde(skip)]
+    confirmed_captures: Vec<Collected>,
     pub discovered_codes: Vec<String>,
     pub busy: bool,
     pub error: Option<String>,
@@ -26,17 +28,49 @@ impl Presentation {
         }
     }
     pub fn loaded(&mut self, records: Vec<Collected>) {
+        let mut old = self.records.take().unwrap_or_default();
+        old.extend(self.confirmed_captures.clone());
         self.records = Some(records);
+        for record in old {
+            self.captured(&record);
+        }
+    }
+    pub fn acknowledged(&mut self, row: &crate::backend::discovery::Entry) {
+        if let Some(code) = &row.monster_code {
+            self.discover(code);
+        }
+        if let Some(record) = row.collected() {
+            self.captured(&record);
+        }
+    }
+    pub fn loaded_dex(&mut self, rows: &[crate::backend::discovery::Entry]) {
+        self.loaded(rows.iter().filter_map(|r| r.collected()).collect());
+        for row in rows {
+            self.acknowledged(row);
+        }
     }
     pub fn captured(&mut self, record: &Collected) {
         self.discover(&record.monster_code);
+        if let Some(old) = self
+            .confirmed_captures
+            .iter_mut()
+            .find(|r| r.monster_code == record.monster_code)
+        {
+            if record.capture_count > old.capture_count {
+                *old = record.clone();
+            }
+        } else {
+            self.confirmed_captures.push(record.clone());
+        }
         // A single capture response is not a complete Collection snapshot.
         if let Some(records) = &mut self.records {
             if let Some(old) = records
                 .iter_mut()
                 .find(|r| r.monster_code == record.monster_code)
             {
-                *old = record.clone();
+                if record.capture_count > old.capture_count {
+                    *old = record.clone();
+                }
             } else {
                 records.push(record.clone());
             }
@@ -110,7 +144,8 @@ mod tests {
         })).unwrap();
         crate::spawn::runtime::test_environment(&mut world);
         world.apply_server_encounter(0.0, Some(encounter), 60.0);
-        assert_eq!(world.view.dex.discovered_codes, vec!["PIP"]);
+        assert!(world.view.dex.discovered_codes.is_empty());
+        assert!(world.discovery.contains("PIP"));
         world.view.menu = true;
         world.view.interaction = crate::behaviors::InteractionMode::Dex;
         world.despawn(1.0);

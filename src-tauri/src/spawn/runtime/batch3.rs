@@ -131,7 +131,8 @@ fn batch3_assets_metadata_motion_night_and_restart() {
             w.apply_server_encounter(0., Some(e.clone()), 120.);
             let allowed = condition == "ANY_TIME" || night;
             assert_eq!(w.view.pip.is_some(), allowed, "{code} {h}:{m}");
-            assert_eq!(!w.view.dex.discovered_codes.is_empty(), allowed);
+            assert!(w.view.dex.discovered_codes.is_empty());
+            assert_eq!(w.discovery.contains(code), allowed);
             if allowed {
                 motion(&mut w, code);
                 let (mut restored, _) = fixture(code, &clock, 8);
@@ -250,7 +251,8 @@ fn live_batch3_production() {
         let (mut w, _) = fixture(code, &clock, 8);
         assert_eq!(w.spawn_action(0.), Some(Action::Reconcile));
         w.complete_spawn(0., Action::Reconcile, Ok(Some(e.clone())));
-        assert_eq!(w.view.dex.discovered_codes, vec![code]);
+        assert!(w.view.dex.discovered_codes.is_empty());
+        assert!(w.discovery.contains(code));
         let identity = w.view.monster.as_ref().unwrap();
         assert_eq!(identity.asset_identity, code.to_lowercase());
         assert_eq!(identity.rarity, e.monster.rarity);

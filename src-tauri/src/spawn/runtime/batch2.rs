@@ -82,7 +82,8 @@ fn all_five_production_placement_movement_identity_and_restart() {
         let id = w.view.monster.as_ref().unwrap();
         assert_eq!(id.monster_code, code);
         assert_eq!(id.asset_identity, code.to_lowercase());
-        assert_eq!(w.view.dex.discovered_codes, vec![code]);
+        assert!(w.view.dex.discovered_codes.is_empty());
+        assert!(w.discovery.contains(code));
         motion(&mut w, code);
         let mut restored = world();
         assert_eq!(restored.spawn_action(0.0), Some(Action::Reconcile));

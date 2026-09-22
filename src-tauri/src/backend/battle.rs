@@ -87,6 +87,7 @@ pub struct Resolution {
 }
 #[derive(Clone, Debug)]
 pub enum Command {
+    Discover(super::discovery::Job),
     Spawn(crate::spawn::runtime::Action),
     LoadItems(Option<uuid::Uuid>),
     Purchase(String),
@@ -181,6 +182,7 @@ impl Api {
         }
         Ok(c)
     }
+    #[cfg(test)]
     pub fn collection(&self) -> Result<Vec<Collected>, &'static str> {
         let c: Vec<Collected> = self
             .request("/api/v1/collection", false)?
