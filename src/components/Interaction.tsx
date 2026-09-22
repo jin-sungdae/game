@@ -1,3 +1,4 @@
+import { CollectionDex } from './CollectionDex';
 import { ItemInteraction } from './ItemInteraction';
 import { EvolutionInteraction } from './EvolutionInteraction';
 import { action } from '../overlay/bridge';
@@ -8,7 +9,8 @@ function HpBar({name,hp,max}:{name:string;hp:number;max:number}) {
  return <div className={`gp-hp gp-${h.tone}`}><div className="gp-hp-label"><span>{name} · {h.tone}</span><b>{h.text}</b></div><div className="gp-hp-track" role="progressbar" aria-label={`${name} HP`} aria-valuenow={hp} aria-valuemin={0} aria-valuemax={max}><span style={{width:`${h.percent}%`}}/></div></div>;
 }
 export function Interaction() {
- const {game:g,visual:v,interaction,evolution,identity,items}=useEntities();
+ const {game:g,visual:v,interaction,evolution,identity,items,dex}=useEntities();
+ if(interaction==='DEX') return <CollectionDex view={dex} otherBusy={Boolean(g?.busy||items?.busy||evolution?.busy)}/>;
  if(interaction==='SHOP'||interaction==='INVENTORY'||interaction==='BATTLE_ITEMS') return <ItemInteraction view={items} mode={interaction} battleActive={g?.battle?.status==='ACTIVE'&&g.battle.encounterStatus==='ACTIVE'} otherBusy={Boolean(g?.busy||evolution?.busy)}/>;
  if(interaction==='EVOLUTION') return <EvolutionInteraction view={evolution} gameBusy={Boolean(g?.busy||items?.busy)}/>;const b=g?.battle;const active=b?.encounterStatus==='ACTIVE';
  const result=v?.phase==='CAPTURE_SUCCESS'?'Captured!':v?.phase==='CAPTURE_FAIL'?'Capture failed':b?.status==='VICTORY'?(active?'PIP defeated · Capture opportunity':'Battle complete'):b?.status==='DEFEAT'?'MOA needs a rest':b?.encounterStatus==='CAPTURED'?'Added to Collection':b?.status??'A small encounter';
@@ -22,7 +24,7 @@ export function Interaction() {
  {!b&&g?.encounterId&&<button disabled={g.busy||items?.busy} onClick={()=>void action('battle')}>Start battle</button>}
  {active&&<><button className="gp-primary" disabled={g?.busy||items?.busy||b?.status!=='ACTIVE'} onClick={()=>void action('attack')}>ATTACK</button><button className="gp-capture-button" disabled={g?.busy||items?.busy} onClick={()=>void action('capture')}>CAPTURE</button><button className="gp-quiet" disabled={g?.busy||items?.busy} onClick={()=>void action('ignore')}>Ignore</button></>}
  {b&&<button className="gp-quiet" disabled={g?.busy||items?.busy} onClick={()=>void action('refresh')}>Refresh</button>}
- <button className="gp-quiet" disabled={g?.busy||items?.busy} onClick={()=>void action('collection')}>Collection</button>
+ <button className="gp-quiet" disabled={g?.busy||items?.busy} onClick={()=>void action('dex')}>DEX</button>
  </div>
  {g?.captureItemBonus!=null&&g.captureItemBonus>0&&<small>Charm +{Math.round(g.captureItemBonus*100)}% · Base {Math.round((g.captureBaseChance??0)*100)}% → Final {Math.round((g.captureFinalChance??0)*100)}%</small>}
  {g?.captureChance!=null&&<small className="gp-note">Last server capture chance: {Math.round(g.captureChance*100)}%</small>}

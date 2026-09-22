@@ -1,6 +1,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 mod backend;
 mod behaviors;
+mod collection_dex;
 mod companion;
 mod desktop;
 mod entities;
@@ -44,6 +45,10 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
                 "interact" => world.interact(),
                 "close" => world.close(),
                 "evolution" => world.open_evolution(),
+                "dex" | "dex-refresh" => {
+                    world.view.menu = true;
+                    world.view.interaction = behaviors::InteractionMode::Dex;
+                }
                 "shop" | "inventory" | "battle-items" => {
                     world.view.menu = true;
                     world.view.interaction = match kind.as_str() {
@@ -82,11 +87,20 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
                     .fail("Request queue unavailable".into());
             }
             if !world.view.evolution.busy && !world.view.items.busy {
-                if let Some(command) = world.view.game.command(&kind) {
+                let dex_request = matches!(kind.as_str(), "dex" | "dex-refresh");
+                let game_action = if dex_request { "collection" } else { &kind };
+                if let Some(command) = world.view.game.command(game_action) {
+                    if dex_request {
+                        world.view.dex.begin();
+                    }
                     world.presentation.request(&kind, now);
                     if !state.backend.lock().unwrap().request(command) {
                         world.view.game.busy = false;
                         world.view.game.error = Some("Request queue unavailable".into());
+                        world
+                            .view
+                            .dex
+                            .finish(Some("Request queue unavailable".into()));
                         world.presentation.finish(true, now);
                     }
                 }
@@ -251,14 +265,17 @@ fn main() {
                                             .into(),
                                         );
                                         if let Some(c) = value.collection {
+                                            world.view.dex.captured(&c);
                                             world.view.game.collection = vec![c];
                                         }
                                     }
                                     backend::Event::Collection(value) => {
+                                        world.view.dex.loaded(value.clone());
                                         world.view.game.collection = value
                                     }
                                     backend::Event::Finished(error) => {
                                         world.presentation.finish(error.is_some(), now);
+                                        world.view.dex.finish(error.clone());
                                         world.view.game.finish(error);
                                     }
                                     backend::Event::Bootstrap(value) => {

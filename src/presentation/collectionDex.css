@@ -1,0 +1,14 @@
+.dex-panel{overflow:hidden;min-height:0;padding:9px;gap:5px}
+.dex-panel .gp-header strong{font-size:15px;letter-spacing:1.4px}.dex-panel .gp-header button{padding:2px 7px}
+.dex-counts{display:flex;justify-content:space-between;font-size:9px;font-variant-numeric:tabular-nums}
+.dex-filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px}
+.dex-panel .dex-filters button{padding:4px 1px;font-size:8px;min-width:0}.dex-panel button[aria-pressed=true]{background:#657c51;color:white}
+.dex-toolbar{display:flex;align-items:center;justify-content:space-between;gap:3px}.dex-toolbar small{font-size:8px}.dex-panel .dex-toolbar button{padding:3px 6px;font-size:9px}
+.dex-status{margin:0;font-size:9px;line-height:1.3}.dex-status[role=alert]{color:#923e30}
+.dex-list{list-style:none;margin:0;padding:0;flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable}
+.dex-slot{display:flex;align-items:center;gap:7px;padding:7px 1px;border-top:1px solid #d5d9c9;min-height:66px}
+.dex-art{width:42px;height:48px;flex:0 0 42px;display:flex;align-items:flex-end;justify-content:center}
+.dex-art img{width:42px;height:42px;object-fit:contain;object-position:bottom center}
+.dex-silhouette{display:grid;place-items:center;width:30px;height:32px;border-radius:48% 48% 38% 38%;background:#9ba394;color:#f5f4ec;font-weight:700;font-size:17px}
+.dex-details{display:flex;flex-direction:column;gap:2px;min-width:0;overflow-wrap:anywhere}.dex-details strong{font-size:11px;letter-spacing:.5px}.dex-details small,.dex-details span,.dex-details time{font-size:8px;line-height:1.3}
+@media(prefers-reduced-motion:reduce){.dex-panel,.dex-panel *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
