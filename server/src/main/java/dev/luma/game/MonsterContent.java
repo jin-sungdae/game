@@ -28,12 +28,13 @@ public final class MonsterContent {
         var d=DEFINITIONS.get(code);
         return d!=null && d.enabled() && d.contentReady() && "PRODUCTION".equals(d.productionStatus());
     }
-    /** A DB enable flag alone cannot authorize unfinished content. Existing level ranges remain DB-owned. */
+    /** A DB enable flag alone cannot authorize unfinished content. Approved Alpha level ranges must match the desktop 1–3 contract. */
     public static boolean eligible(MonsterSelector.Monster master) {
         if(!productionReady(master.code())) return false;
         var d=DEFINITIONS.get(master.code());
         if(!d.displayName().equals(master.name()) || !d.rarity().equals(master.rarity())
-            || !d.movementProfile().equals(master.movementProfile()) || d.encounterWeight()!=master.weight())
+            || !d.movementProfile().equals(master.movementProfile()) || d.encounterWeight()!=master.weight()
+            || (d.alphaCandidate() && (master.minLevel()!=1 || master.maxLevel()!=3)))
             throw new GameUnavailable("Production monster master differs from approved content");
         return true;
     }

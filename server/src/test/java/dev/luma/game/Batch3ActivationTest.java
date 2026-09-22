@@ -12,14 +12,12 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import java.util.*;
-import java.nio.file.Path;
-import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-/** Disabled rows in a disposable *_test database only, never production seeding. */
+/** Final production selection through real HTTP and migrated masters, in a disposable *_test DB. */
 @SpringBootTest(webEnvironment=SpringBootTest.WebEnvironment.RANDOM_PORT)
-class Batch3PreparationTest {
+class Batch3ActivationTest {
  static final List<String> CODES=List.of("SHADE","EMBER","LUNET","NOVA","NOCT");
  @DynamicPropertySource static void database(DynamicPropertyRegistry r){GameIntegrationTest.database(r);}
  @Autowired JdbcTemplate db; @Autowired GameRepository repository; @Autowired TestRestTemplate http;
@@ -28,20 +26,18 @@ class Batch3PreparationTest {
  @BeforeEach void reset(){clean();db.update("UPDATE game.t_player SET gold=10000");when(random.nextLong(anyLong())).thenReturn(0L);}
  @AfterEach void clean(){
   for(String table:List.of("t_battle_item_effect","t_item_purchase","t_inventory","t_companion_evolution_history","t_reward","t_collection","t_battle","t_encounter"))db.update("DELETE FROM game."+table);
-  for(String code:CODES)db.update("DELETE FROM game.m_monster WHERE code=?",code);
+  db.update("UPDATE game.m_monster SET use_yn=true");
   db.update("UPDATE game.t_player SET gold=0");
   db.update("UPDATE game.t_player_companion SET evolution_stage=1,level=1,exp=0,bond=0,active=true");
  }
  GameDtos.Encounter fixture(String code){
-  var d=MonsterContent.find(code).orElseThrow();
-  assertFalse(d.enabled());assertFalse(d.contentReady());assertEquals("PROVISIONAL",d.productionStatus());
-  db.update("INSERT INTO game.m_monster(code,name,rarity,movement_profile,min_level,max_level,encounter_weight,use_yn) VALUES (?,?,?,?,1,3,?,false)",code,d.displayName(),d.rarity(),d.movementProfile(),d.encounterWeight());
-  long id=db.queryForObject("SELECT monster_id FROM game.m_monster WHERE code=?",Long.class,code);
-  var master=new MonsterSelector.Monster(id,code,d.displayName(),d.rarity(),d.movementProfile(),1,3,d.encounterWeight());
-  assertFalse(MonsterContent.eligible(master));
-  assertTrue(repository.monsters().stream().noneMatch(m->CODES.contains(m.code())));
-  // Explicit fixture bypass of selection, never a production candidate/readiness switch.
-  return repository.create(1,new MonsterSelector.Selection(master,1),repository.now());
+  var masters=repository.monsters();
+  long total=masters.stream().mapToLong(MonsterSelector.Monster::weight).sum();
+  long point=0;for(var m:masters){if(m.code().equals(code))break;point+=m.weight();}
+  final long selected=point;
+  when(random.nextLong(total)).thenReturn(selected);
+  var e=http.postForObject(url("/encounters"),null,GameDtos.Encounter.class);
+  assertEquals(code,e.monster().code());return e;
  }
  BattleDtos.Battle start(GameDtos.Encounter e){return http.postForObject(url("/encounters/"+e.encounterId()+"/battle"),null,BattleDtos.Battle.class);}
  @ParameterizedTest @ValueSource(strings={"SHADE","EMBER","LUNET","NOVA","NOCT"})
@@ -65,19 +61,11 @@ class Batch3PreparationTest {
   assertTrue(c.success());assertEquals(base+.2,c.baseChance(),1e-9);assertEquals(.10,c.itemBonus(),1e-9);assertEquals(base+.3,c.finalChance(),1e-9);
   assertEquals(code,c.collection().monsterCode());assertEquals(1,c.collection().captureCount());
   assertNotNull(c.collection().firstCapturedAt());assertEquals(204,http.getForEntity(url("/encounters/active"),String.class).getStatusCode().value());
-  // Fresh encounter references the same disabled test master, proving repeat count and first timestamp.
-  var m=new MonsterSelector.Monster(db.queryForObject("SELECT monster_id FROM game.m_monster WHERE code=?",Long.class,code),code,code,d.rarity(),d.movementProfile(),1,3,weight);
-  var next=repository.create(1,new MonsterSelector.Selection(m,1),repository.now());
+  var next=fixture(code);
   var again=start(next);var second=http.postForObject(url("/battles/"+again.battleId()+"/capture"),null,BattleDtos.Capture.class);
   assertEquals(base,second.baseChance(),1e-9);assertEquals(0,second.itemBonus());assertEquals(2,second.collection().captureCount());assertEquals(c.collection().firstCapturedAt(),second.collection().firstCapturedAt());
-  if("1".equals(System.getenv("LUMA_BATCH3_LIVE"))){
-   repository.create(1,new MonsterSelector.Selection(m,1),repository.now());
-   var root=Path.of(System.getProperty("user.dir")).getParent();
-   var pb=new ProcessBuilder("cargo","test","--locked","--manifest-path",root.resolve("src-tauri/Cargo.toml").toString(),"live_batch3_fixture","--","--ignored","--nocapture").directory(root.toFile()).inheritIO();
-   pb.environment().put("LUMA_GAME_SERVER_URL","http://127.0.0.1:"+port);pb.environment().put("LUMA_BATCH3_CODE",code);
-   var process=pb.start();if(!process.waitFor(240,TimeUnit.SECONDS)){process.destroyForcibly();fail("Desktop fixture timeout");}assertEquals(0,process.exitValue());
-  }
  }
+
  @ParameterizedTest @ValueSource(strings={"SHADE","EMBER","LUNET","NOVA","NOCT"})
  void victoryDefeatAndFailedCapture(String code){
   var e=fixture(code);var b=start(e);
@@ -87,10 +75,43 @@ class Batch3PreparationTest {
   while(b.status().equals("ACTIVE"))b=http.postForObject(url("/battles/"+b.battleId()+"/attack"),null,BattleDtos.Battle.class);
   assertEquals("VICTORY",b.status());assertEquals(10,b.reward().gold());
   http.postForObject(url("/encounters/"+e.encounterId()+"/ignore"),null,String.class);
-  var d=MonsterContent.find(code).orElseThrow();long id=db.queryForObject("SELECT monster_id FROM game.m_monster WHERE code=?",Long.class,code);
-  b=start(repository.create(1,new MonsterSelector.Selection(new MonsterSelector.Monster(id,code,code,d.rarity(),d.movementProfile(),1,3,d.encounterWeight()),1),repository.now()));
+  b=start(fixture(code));
   db.update("UPDATE game.t_battle SET companion_hp=1 WHERE battle_id=?",b.battleId());
   b=http.postForObject(url("/battles/"+b.battleId()+"/attack"),null,BattleDtos.Battle.class);assertEquals("DEFEAT",b.status());
+ }
+ @Test void finalFifteenProductionMastersAndEveryWeightedBoundary(){
+  var codes=List.of("PIP","MELLO","MOSSY","CHIRP","BUBU","PEBB","PUFF","TIKKI","MIMI","WISP","SHADE","EMBER","LUNET","NOVA","NOCT");
+  var masters=repository.monsters();assertEquals(codes,masters.stream().map(MonsterSelector.Monster::code).toList());
+  assertEquals(961,masters.stream().mapToInt(MonsterSelector.Monster::weight).sum());
+  assertEquals(15,db.queryForObject("SELECT count(*) FROM game.m_monster WHERE use_yn",Integer.class));
+  assertEquals(List.of(7L,4L,3L,1L),List.of("COMMON","UNCOMMON","RARE","SPECIAL").stream().map(r->masters.stream().filter(m->m.rarity().equals(r)).count()).toList());
+  for(var m:masters){
+   var d=MonsterContent.find(m.code()).orElseThrow();
+   assertTrue(d.enabled());assertTrue(d.contentReady());assertEquals("PRODUCTION",d.productionStatus());
+   assertEquals(d.displayName(),m.name());assertEquals(d.rarity(),m.rarity());assertEquals(d.movementProfile(),m.movementProfile());
+   assertEquals(d.encounterWeight(),m.weight());assertEquals(1,m.minLevel());assertEquals(3,m.maxLevel());assertTrue(MonsterContent.eligible(m));
+  }
+  for(int level:List.of(1,3)){
+   int[] counts=new int[15];
+   for(int point=0;point<961;point++){
+    final int selected=point;var result=new MonsterSelector(bound->bound==961?selected:level-1).select(masters);
+    counts[codes.indexOf(result.monster().code())]++;assertEquals(level,result.level());
+   }
+   assertArrayEquals(new int[]{100,100,100,100,100,100,100,50,50,50,50,20,20,20,1},counts);
+  }
+  assertEquals("NIGHT",MonsterContent.find("NOCT").orElseThrow().spawnCondition());
+ }
+ @ParameterizedTest @ValueSource(strings={"SHADE","EMBER","LUNET","NOVA","NOCT"})
+ void mismatchedMasterFailsClosedAndDisabledRowsAreExcluded(String code){
+  var d=MonsterContent.find(code).orElseThrow();
+  db.update("UPDATE game.m_monster SET use_yn=false WHERE code=?",code);
+  assertEquals(14,repository.monsters().size());assertTrue(repository.monsters().stream().noneMatch(m->m.code().equals(code)));
+  db.update("UPDATE game.m_monster SET use_yn=true WHERE code=?",code);
+  for(String assignment:List.of("name='Wrong'","rarity='EPIC'","movement_profile='GROUND'","encounter_weight=99","min_level=2","max_level=4")){
+   db.update("UPDATE game.m_monster SET "+assignment+" WHERE code=?",code);
+   try{assertThrows(GameUnavailable.class,()->repository.monsters());}
+   finally{db.update("UPDATE game.m_monster SET name=?,rarity=?,movement_profile=?,encounter_weight=?,min_level=1,max_level=3 WHERE code=?",d.displayName(),d.rarity(),d.movementProfile(),d.encounterWeight(),code);}
+  }
  }
  @Test void invalidCaptureInputFailsClosed(){
   assertThrows(GameFault.class,()->CombatRules.captureChance(30,30,null));

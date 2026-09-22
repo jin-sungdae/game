@@ -44,6 +44,7 @@ impl Runtime {
         self.available_assets.clear();
         for code in [
             "PIP", "MELLO", "MOSSY", "CHIRP", "BUBU", "PEBB", "PUFF", "TIKKI", "MIMI", "WISP",
+            "SHADE", "EMBER", "LUNET", "NOVA", "NOCT",
         ] {
             let bytes = load(&format!("assets/monsters/{}/base.png", code.to_lowercase()));
             if assets::available(code, bytes.as_deref()) {

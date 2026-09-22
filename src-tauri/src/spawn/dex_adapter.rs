@@ -74,6 +74,7 @@ mod tests {
             }
             if ![
                 "PIP", "MELLO", "MOSSY", "CHIRP", "BUBU", "PEBB", "PUFF", "TIKKI", "MIMI", "WISP",
+                "SHADE", "EMBER", "LUNET", "NOVA", "NOCT",
             ]
             .contains(&metadata.monster_code.as_str())
             {
@@ -128,7 +129,7 @@ mod integration_tests {
             content_candidate("MOSSY").unwrap().zone,
             SpawnZone::LowerCorner
         );
-        assert!(content_candidate("SHADE").is_none());
+        assert!(content_candidate("SHADE").is_some());
         assert!(content_candidate("constructor").is_none());
         assert_eq!(identity("PIP").unwrap().asset_identity, "pip");
     }
@@ -173,7 +174,16 @@ mod advanced_contract {
                 .find(|m| m["monsterCode"] == code)
                 .unwrap()
                 .clone();
-            assert!(content_candidate(code).is_none());
+            assert!(content_candidate(code).is_some());
+            for (key, value) in [
+                ("enabled", false.into()),
+                ("contentReady", false.into()),
+                ("productionStatus", "PROVISIONAL".into()),
+            ] {
+                let mut rejected = fixture.clone();
+                rejected[key] = value;
+                assert!(from_metadata(code, serde_json::from_value(rejected).unwrap()).is_none());
+            }
             fixture["enabled"] = true.into();
             fixture["contentReady"] = true.into();
             fixture["productionStatus"] = "PRODUCTION".into();

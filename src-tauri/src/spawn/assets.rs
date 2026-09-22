@@ -12,6 +12,11 @@ pub fn approved_bytes(code: &str) -> Option<&'static [u8]> {
         "TIKKI" => include_bytes!("../../../public/assets/monsters/tikki/base.png"),
         "MIMI" => include_bytes!("../../../public/assets/monsters/mimi/base.png"),
         "WISP" => include_bytes!("../../../public/assets/monsters/wisp/base.png"),
+        "SHADE" => include_bytes!("../../../public/assets/monsters/shade/base.png"),
+        "EMBER" => include_bytes!("../../../public/assets/monsters/ember/base.png"),
+        "LUNET" => include_bytes!("../../../public/assets/monsters/lunet/base.png"),
+        "NOVA" => include_bytes!("../../../public/assets/monsters/nova/base.png"),
+        "NOCT" => include_bytes!("../../../public/assets/monsters/noct/base.png"),
         _ => return None,
     })
 }
@@ -27,6 +32,7 @@ mod tests {
     fn missing_corrupt_wrong_species_and_unknown_assets_fail_closed() {
         for code in [
             "PIP", "MELLO", "MOSSY", "CHIRP", "BUBU", "PEBB", "PUFF", "TIKKI", "MIMI", "WISP",
+            "SHADE", "EMBER", "LUNET", "NOVA", "NOCT",
         ] {
             assert!(available(code, approved_bytes(code)));
             assert!(!available(code, None));

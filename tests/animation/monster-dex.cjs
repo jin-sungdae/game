@@ -1,4 +1,4 @@
-const activeCodes = ['PIP','MELLO','MOSSY','CHIRP','BUBU','PEBB','PUFF','TIKKI','MIMI','WISP'];
+const activeCodes = ['PIP','MELLO','MOSSY','CHIRP','BUBU','PEBB','PUFF','TIKKI','MIMI','WISP','SHADE','EMBER','LUNET','NOVA','NOCT'];
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -92,8 +92,8 @@ test('Dex masks undiscovered names/assets and capture supersedes discovery', () 
  assert.equal(provisional.visual,'BASE');
  assert.equal(provisional.baseAsset,'/assets/monsters/mello/base.png');
  assert.equal(dex.monsterDex[1].contentReady,true);
- assert.equal(dex.monsterDex.find(m=>m.monsterCode==='SHADE').enabled,false);
- assert.equal(dexEntries(progress([],dex.monsterDex.map(m => m.monsterCode))).length,10);
+ assert.equal(dex.monsterDex.find(m=>m.monsterCode==='MONSTER_005').enabled,false);
+ assert.equal(dexEntries(progress([],dex.monsterDex.map(m => m.monsterCode))).length,15);
  assert.equal(dexEntries(progress(['unknown']))[0].state,'UNDISCOVERED');
 });
 test('documentation includes exactly the same 30 design slots and Alpha flags', () => {

@@ -114,3 +114,21 @@ test(process.env.LUMA_TEST_COLLECTION_OUTPUT ? 'Batch2 live HTTP Collection proj
   assert.equal(slot.asset,`/assets/monsters/${code.toLowerCase()}/base.png`);
  }
 });
+
+test(process.env.LUMA_TEST_BATCH3_COLLECTION_OUTPUT ? 'Batch3 actual HTTP captures project to Dex with independent assets and rarity' : 'final Batch3 discovery and capture projection retains identity and timestamps',()=>{
+ const codes=['SHADE','EMBER','LUNET','NOVA','NOCT'];const numbers=[15,16,19,21,28];
+ const records=process.env.LUMA_TEST_BATCH3_COLLECTION_OUTPUT
+  ? JSON.parse(fs.readFileSync(process.env.LUMA_TEST_BATCH3_COLLECTION_OUTPUT,'utf8'))
+  : codes.map(monsterCode=>({...record,monsterCode,monsterName:monsterCode,captureCount:1}));
+ const discovered=collectionDexModel({...view,discoveredCodes:codes});
+ const captured=collectionDexModel({...view,records});
+ assert.equal(discovered.discovered,5);assert.equal(captured.captured,5);
+ for(const [i,code] of codes.entries()){
+  assert.equal(discovered.slots.find(s=>s.dexNo===numbers[i]).state,'DISCOVERED');
+  const slot=captured.slots.find(s=>s.dexNo===numbers[i]);const row=records.find(r=>r.monsterCode===code);
+  assert.equal(slot.state,'CAPTURED');assert.equal(slot.name,code);assert.equal(slot.captureCount,1);
+  assert.equal(slot.firstCapturedAt,row.firstCapturedAt);
+  assert.equal(slot.rarity,code==='SHADE'?'UNCOMMON':code==='NOCT'?'SPECIAL':'RARE');
+  assert.equal(slot.asset,`/assets/monsters/${code.toLowerCase()}/base.png`);
+ }
+});
