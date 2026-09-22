@@ -1,0 +1,13 @@
+# Monster Discovery Persistence v0.1
+
+## Design before implementation
+
+Base origin/main a113be1, inspected migrations V1–V8. Add V9 only: separate game.t_monster_discovery aggregate (unique player/monster) and an Encounter-ID receipt ledger. Do not change t_collection or old migrations. A PostgreSQL transaction uses the existing player FOR UPDATE lock, validates server-owned encounter/code/master, inserts the unique receipt, then upserts count/last_seen only for a newly acknowledged encounter. Preserve first timestamp. Lock order matches existing Capture; no JVM mutex. Terminal encounters may acknowledge late placement retries; server can verify ownership/identity, not pixels. Loopback client remains responsible for calling only after accepted World placement.
+
+POST /api/v1/monsters/{code}/discoveries accepts only encounterId. Server resolves LOCAL_PLAYER/master and timestamps; reject unknown/disabled/unready/mismatched content or foreign encounters. GET /api/v1/dex returns30 slots with persisted UNDISCOVERED/DISCOVERED/CAPTURED precedence. Undiscovered slots omit code/name/assets; existing captures remain CAPTURED without discovery migration/backfill. Capture and discovery are independent.
+
+World placement enqueues a bounded notification instead of marking session discovery. Existing backend worker handles it independently, with no new polling loop/thread and no gameplay busy/error/despawn effect. World tick schedules four attempts with5/15/30-second backoff; exhausted jobs park until explicit Dex refresh, capped32 pending encounters. Confirmed server responses/GET alone update discovery. Queue is volatile before acknowledgement; a restart restores committed state. Capture evidence merges monotonically so late discovery or stale snapshots cannot downgrade CAPTURED.
+
+Reuse the existing Collection/Dex UI and Collection API compatibility; load persistent Dex through its refresh path. No Behavior/Movement/asset/weight/formula/Inventory/Evolution changes. Alternatives rejected: counting every retry corrupts counts; adding discovery to t_collection conflates domains; DTO receipt is not placement evidence; localStorage/JVM locking is not server persistence.
+
+Validate constraints, rollback, duplicate/concurrent requests, all15 identities, disabled/invalid policy, capture race and masking. Run real isolated PostgreSQL + Spring + compiled World WISP placement/ack, stop/restart Spring and reconstruct World without capture, confirm persisted DISCOVERED, then a new encounter/capture→CAPTURED. Preserve native focus/UI manual boundary. Architecture approval and merge remain human decisions; no auto merge.
