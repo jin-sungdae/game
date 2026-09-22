@@ -1,5 +1,7 @@
 # Monster Dex Foundation v0.1
 
+Current activation: PIP, MELLO, MOSSY, CHIRP and BUBU are ready/enabled PRODUCTION after [Batch1 validation](alpha-monster-activation-batch1.md). The foundation-only descriptions below are historical unless superseded by this activation.
+
 > Historical proposal below describes PR #19. The table is the current catalog; [Monster Content Integration](monster-content-v01.md) supersedes provisional Alpha names, diversity assumptions, rarity references and authority/readiness rules. The thirty Dex numbers and projection contract remain.
 
 ## Architecture proposal before implementation
@@ -39,11 +41,11 @@ All names/themes except PIP are provisional and require visual design approval. 
 | Dex No | Code | Working Name | Rarity | Archetype | Movement | Behavior | Spawn Profile | Spawn Condition | Capture Direction | Visual Theme | Production Status | Alpha |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | PIP | PIP | COMMON | BEAST | GROUND | PLAYFUL | NEAR_DOCK | ANY_TIME | server rarity default | small grounded beast | PRODUCTION | candidate |
-| 2 | MELLO | MELLO | COMMON | SLIME | JUMP | CURIOUS | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
-| 3 | MOSSY | MOSSY | COMMON | PLANT | GROUND | SLEEPY | LOWER_CORNER | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
-| 4 | CHIRP | CHIRP | COMMON | BIRD | FLYING | CURIOUS | TOP | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 2 | MELLO | MELLO | COMMON | SLIME | JUMP | CURIOUS | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
+| 3 | MOSSY | MOSSY | COMMON | PLANT | GROUND | SLEEPY | LOWER_CORNER | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
+| 4 | CHIRP | CHIRP | COMMON | BIRD | FLYING | CURIOUS | TOP | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 5 | MONSTER_005 | Button beetle | COMMON | INSECT | EDGE | CURIOUS | EDGE | DAY | TBD | round shell and antennae | PROVISIONAL | — |
-| 6 | BUBU | BUBU | COMMON | AQUATIC | JUMP | PLAYFUL | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 6 | BUBU | BUBU | COMMON | AQUATIC | JUMP | PLAYFUL | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 7 | PEBB | PEBB | COMMON | ROCK | GROUND | PASSIVE | NEAR_DOCK | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
 | 8 | PUFF | PUFF | COMMON | SPIRIT | FLOATING | CURIOUS | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
 | 9 | MONSTER_009 | Lantern wisp | UNCOMMON | SPIRIT | FLOATING | TIMID | FLOATING_AREA | NIGHT | TBD | hollow flame | PROVISIONAL | — |

@@ -87,3 +87,13 @@ test('Dex reuses nonactivating panel with explicit actions and no focus APIs',()
  assert.match(main,/world\.view\.dex\.loaded\(value\.clone\(\)\)/);
  assert.match(main,/world\.view\.dex\.captured\(&c\)/);
 });
+
+test('all five activated species project their own Dex identity, rarity, asset and server count',()=>{
+ const codes=['PIP','MELLO','MOSSY','CHIRP','BUBU'];const numbers=[1,2,3,4,6];
+ const records=codes.map((monsterCode,i)=>({...record,monsterCode,monsterName:monsterCode,captureCount:i+1}));
+ const m=collectionDexModel({...view,records});assert.equal(m.captured,5);assert.equal(m.discovered,5);
+ for(const [i,code] of codes.entries()){
+  const slot=m.slots.find(s=>s.dexNo===numbers[i]);assert.equal(slot.name,code);assert.equal(slot.rarity,'COMMON');
+  assert.equal(slot.asset,`/assets/monsters/${code.toLowerCase()}/base.png`);assert.equal(slot.captureCount,i+1);
+ }
+});

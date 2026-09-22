@@ -31,7 +31,16 @@ pub(super) fn content_candidate(code: &str) -> Option<Candidate> {
         serde_json::from_str(include_str!("../../../src/entities/monster-dex.json")).ok()?;
     let mut matches = records.into_iter().filter(|m| m.monster_code == code);
     let metadata = matches.next()?;
-    if matches.next().is_some()
+    let supported = matches!(
+        (code, metadata.movement_profile),
+        ("PIP" | "MOSSY", MovementProfile::Ground)
+            | ("MELLO" | "BUBU", MovementProfile::Jump)
+            | ("CHIRP", MovementProfile::Flying)
+    );
+    if !supported
+        || metadata.asset_identity != code.to_lowercase()
+        || metadata.rarity != "COMMON"
+        || matches.next().is_some()
         || !metadata.enabled
         || !metadata.content_ready
         || metadata.production_status != "PRODUCTION"
@@ -63,7 +72,8 @@ mod tests {
             } else {
                 assert!(zone(&metadata.spawn_profile).is_some());
             }
-            if metadata.monster_code != "PIP" {
+            if !["PIP", "MELLO", "MOSSY", "CHIRP", "BUBU"].contains(&metadata.monster_code.as_str())
+            {
                 assert!(content_candidate(&metadata.monster_code).is_none());
             }
         }
@@ -111,7 +121,10 @@ mod integration_tests {
     fn unsupported_zone_fails_closed_and_lower_corner_has_explicit_mapping() {
         assert!(zone("UNSUPPORTED").is_none());
         assert_eq!(zone("LOWER_CORNER"), Some(SpawnZone::LowerCorner));
-        assert!(content_candidate("MOSSY").is_none());
+        assert_eq!(
+            content_candidate("MOSSY").unwrap().zone,
+            SpawnZone::LowerCorner
+        );
         assert!(content_candidate("SHADE").is_none());
         assert!(content_candidate("constructor").is_none());
         assert_eq!(identity("PIP").unwrap().asset_identity, "pip");

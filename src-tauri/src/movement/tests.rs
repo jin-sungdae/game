@@ -239,7 +239,7 @@ fn movement_uses_final_desktop_safe_area_not_raw_screen() {
 }
 
 #[test]
-fn batch1_profiles_fit_existing_entity_bounds_without_activation() {
+fn batch1_profiles_fit_existing_entity_bounds() {
     let definitions: Vec<serde_json::Value> =
         serde_json::from_str(include_str!("../../../src/entities/monster-dex.json")).unwrap();
     for (code, expected, zone) in [
@@ -256,7 +256,7 @@ fn batch1_profiles_fit_existing_entity_bounds_without_activation() {
             serde_json::from_value(metadata["movementProfile"].clone()).unwrap();
         assert_eq!(profile, expected);
         assert_eq!(metadata["spawnProfile"], zone);
-        assert_eq!(metadata["enabled"], false);
+        assert_eq!(metadata["enabled"], true);
         let a = area();
         let mut position = a.clamp(-700.0, a.ground_y() + 80.0, SIZE);
         let mut controller = MovementController::default();

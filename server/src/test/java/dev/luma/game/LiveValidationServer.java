@@ -10,7 +10,9 @@ public class LiveValidationServer {
     @TestConfiguration
     static class FixedRandom {
         @Bean @Primary RandomSource captureFixtureRandom() {
-            return bound -> bound==1_000_000 && "failure".equals(System.getenv("LUMA_TEST_CAPTURE_MODE")) ? bound-1 : 0;
+            var index = new java.util.concurrent.atomic.AtomicInteger();
+            return bound -> bound==500 && "1".equals(System.getenv("LUMA_TEST_BATCH1"))
+                ? (index.getAndIncrement()%5)*100L : bound==1_000_000 && "failure".equals(System.getenv("LUMA_TEST_CAPTURE_MODE")) ? bound-1 : 0;
         }
     }
     public static void main(String[] args) {

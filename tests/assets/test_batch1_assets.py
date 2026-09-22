@@ -30,10 +30,10 @@ class Batch1Assets(unittest.TestCase):
                 m=next(m for m in content if m['monsterCode']==code)
                 self.assertEqual([m[k] for k in ['rarity','archetype','movementProfile','behaviorProfile','spawnProfile']],['COMMON',archetype,movement,behavior,zone])
                 self.assertEqual(m['assetIdentity'],code.lower())
-                self.assertFalse(m['enabled'])
-                self.assertFalse(m['contentReady'])
-                self.assertEqual(m['productionStatus'],'PROVISIONAL')
-        self.assertEqual([m['monsterCode'] for m in content if m['enabled']],['PIP'])
+                self.assertTrue(m['enabled'])
+                self.assertTrue(m['contentReady'])
+                self.assertEqual(m['productionStatus'],'PRODUCTION')
+        self.assertEqual([m['monsterCode'] for m in content if m['enabled']],['PIP','MELLO','MOSSY','CHIRP','BUBU'])
 
     def test_delivered_four_and_pip_never_missing(self):
         errors,pending=test_assets.validator.validate_alpha(ROOT)
