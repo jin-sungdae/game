@@ -47,10 +47,11 @@ class MonsterContentTest {
             new MonsterSelector.Monster(1,"PIP","PIP","COMMON","GROUND",1,3,999)))
             assertThrows(GameUnavailable.class,()->MonsterContent.eligible(master));
     }
-    @Test void pipCaptureFormulaIsUnchangedAndUnconnectedRaritiesRemainUnsupported() {
+    @Test void pipCaptureFormulaIsUnchangedAndBatch3UsesRarityDefaults() {
         assertEquals(.35,CombatRules.captureChance(30,30,"COMMON"),1e-9);
         assertEquals(.60,CombatRules.captureChance(15,30,"COMMON"),1e-9);
         assertEquals(.85,CombatRules.captureChance(0,30,"COMMON"),1e-9);
-        for(var rarity:List.of("UNCOMMON","RARE","EPIC","SPECIAL")) assertThrows(GameFault.class,()->CombatRules.captureChance(30,30,rarity));
+        for(var rarity:List.of("UNCOMMON","RARE","SPECIAL")) assertEquals(MonsterContent.rarity(rarity).baseCaptureRate(),CombatRules.captureChance(30,30,rarity),1e-9);
+        assertThrows(GameFault.class,()->CombatRules.captureChance(30,30,"EPIC"));
     }
 }
