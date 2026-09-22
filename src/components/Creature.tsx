@@ -1,3 +1,4 @@
+import { spawnPresentation } from '../presentation/spawn';
 import { evolutionModel, renderIdentity } from '../presentation/evolution';
 import { MonsterVisual } from './MonsterVisual';
 import { useEntities } from '../stores/entities';
@@ -11,12 +12,14 @@ export function Creature({ kind, entity }: { kind:'moa'|'pip'; entity:Entity }) 
   const companion=renderIdentity(identity,evolution);
   const evo=evolutionModel(evolution,game?.busy);
   const effect=effectFor(visual?.phase,kind);const damage=damageFor(visual,kind);
+  const arrival=kind==='pip' ? spawnPresentation(monster?.rarity,entity.state,Boolean(game?.battle)||Boolean(game?.busy)||effect!=='none') : null;
   const defeated=kind==='pip' && game?.battle?.status==='VICTORY';
-  return <div className={`creature gp-creature ${kind} ${entity.state}`} style={{'--skin':assets[kind].color,'--gp-direction':entity.facing} as React.CSSProperties}
+  return <div className={`creature gp-creature ${kind} ${entity.state} ${arrival?'spawn-enhanced':''}`} style={{'--skin':assets[kind].color,'--gp-direction':entity.facing} as React.CSSProperties}
     title={kind === 'moa' ? `${identity?.evolutionName ?? 'MOA'} · drag / click · right-click for server encounter` : `${monster?.monsterCode ?? 'Debug PIP'} · click to interact`}
     onPointerDown={e => { if(e.button === 0 && kind === 'moa') void action('drag'); }}
     onClick={() => { if(kind === 'pip') void action('interact'); }}
     onContextMenu={e => { e.preventDefault(); void action('encounter'); }}>
+      {arrival && <span className={`spawn-highlight spawn-${arrival.tier}`} style={{'--spawn-duration':`${arrival.duration}ms`} as React.CSSProperties} aria-hidden="true"/>}
       <div className={`gp-pose ${defeated?'gp-defeated':''}`}><div className={`gp-impulse gp-${effect}`}><div className={`gp-visual gp-${kind}`}>{kind === 'moa' ? <div className={`evolution-pose evo-${evolution?.phase ?? 'IDLE'}`}><CompanionVisual species={companion?.species.toLowerCase() ?? 'moa'} evolutionStage={companion?.evolutionStage ?? 1} displayName={companion?.evolutionName} state={entity.state as CompanionState} facing={entity.facing}/></div> : <MonsterVisual code={monster?.monsterCode ?? "PIP"} state={entity.state} facing={entity.facing}/>}</div></div></div>
       {kind==='moa' && <button className={`evolution-entry ${evo.available?'available':''}`} aria-label={evo.available?'Evolution available':'Companion evolution'} title={evo.available?'Evolution Available':'Companion evolution'} onPointerDown={e=>e.stopPropagation()} onClick={e=>{e.stopPropagation();void action('evolution');}} onContextMenu={e=>{e.preventDefault();e.stopPropagation();}}>✦</button>}
       {effect==='capturing'  && <span className="gp-capture-ring" aria-hidden="true"/>}

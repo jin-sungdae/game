@@ -1,5 +1,6 @@
 #[cfg(debug_assertions)]
 pub mod smoke;
+pub mod spawn;
 // Transient visual timeline only. Never writes server HP, world position or entity state.
 use crate::backend::{
     battle::{Battle, Capture, Reward},

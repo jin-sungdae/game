@@ -1,0 +1,11 @@
+/* Inset, pointer-transparent layer inside the existing entity-sized panel. */
+.spawn-highlight{position:absolute;inset:12px 9px 7px;pointer-events:none;border-radius:45%;opacity:0;background:radial-gradient(ellipse,#c2d9b85c,transparent 68%);animation:spawn-soft var(--spawn-duration) ease-out both}
+.spawn-rare{background:radial-gradient(ellipse,#a9ccf277,transparent 68%)}
+.spawn-special{background:radial-gradient(ellipse,#c4a3f58a,transparent 70%)}
+.spawn-rare::after,.spawn-special::after{content:'✧';position:absolute;right:8px;top:9px;color:#d0dff5;font-size:12px;line-height:1}
+.spawn-special::after{color:#d5baf6;font-size:15px}
+/* Enhanced tiers replace only legacy arrival animation, never battle/facing layers. */
+.gp-creature.pip.SPAWNING.spawn-enhanced{animation:none}
+@keyframes spawn-soft{0%{opacity:0}25%{opacity:.8}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.spawn-highlight{animation-name:spawn-minimal}.spawn-highlight::after{display:none}}
+@keyframes spawn-minimal{0%,100%{opacity:0}35%{opacity:.25}}
