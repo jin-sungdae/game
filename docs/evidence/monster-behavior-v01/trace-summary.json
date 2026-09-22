@@ -1,0 +1,324 @@
+{
+  "worldSeed": 42,
+  "encounterId": "00000000-0000-0000-0000-000000000008",
+  "seconds": 60,
+  "ticksPerSpecies": 1800,
+  "species": [
+    {
+      "code": "PIP",
+      "profile": "Playful",
+      "decisionCount": 20,
+      "intents": {
+        "Wander": 12,
+        "ShortBurst": 1,
+        "ApproachCompanion": 2,
+        "Pause": 5
+      },
+      "firstDecision": {
+        "intent": "Wander",
+        "t": 0.6333333333333333,
+        "x": -1153.4666666666667,
+        "y": -800.0
+      },
+      "lastDecision": {
+        "intent": "Wander",
+        "t": 59.43333333333333,
+        "x": -984.5333333333333,
+        "y": -800.0
+      }
+    },
+    {
+      "code": "MELLO",
+      "profile": "Curious",
+      "decisionCount": 20,
+      "intents": {
+        "ApproachCompanion": 4,
+        "Pause": 16
+      },
+      "firstDecision": {
+        "intent": "ApproachCompanion",
+        "t": 0.6333333333333333,
+        "x": -1152.5333333333333,
+        "y": -799.2620444444444
+      },
+      "lastDecision": {
+        "intent": "Pause",
+        "t": 58.03333333333333,
+        "x": -993.0,
+        "y": -800.0
+      }
+    },
+    {
+      "code": "MOSSY",
+      "profile": "Sleepy",
+      "decisionCount": 21,
+      "intents": {
+        "Pause": 15,
+        "Wander": 6
+      },
+      "firstDecision": {
+        "intent": "Pause",
+        "t": 0.6333333333333333,
+        "x": -648.0,
+        "y": -800.0
+      },
+      "lastDecision": {
+        "intent": "Wander",
+        "t": 58.9,
+        "x": -727.7333333333333,
+        "y": -800.0
+      }
+    },
+    {
+      "code": "CHIRP",
+      "profile": "Curious",
+      "decisionCount": 19,
+      "intents": {
+        "ApproachCompanion": 19
+      },
+      "firstDecision": {
+        "intent": "ApproachCompanion",
+        "t": 0.6333333333333333,
+        "x": -1152.8332578213408,
+        "y": 59.564138985875395
+      },
+      "lastDecision": {
+        "intent": "ApproachCompanion",
+        "t": 57.666666666666664,
+        "x": -948.1568796134924,
+        "y": -92.0
+      }
+    },
+    {
+      "code": "BUBU",
+      "profile": "Playful",
+      "decisionCount": 20,
+      "intents": {
+        "Wander": 12,
+        "ShortBurst": 1,
+        "ApproachCompanion": 2,
+        "Pause": 5
+      },
+      "firstDecision": {
+        "intent": "Wander",
+        "t": 0.6333333333333333,
+        "x": -1153.4666666666667,
+        "y": -799.2620444444444
+      },
+      "lastDecision": {
+        "intent": "Wander",
+        "t": 59.43333333333333,
+        "x": -984.5333333333333,
+        "y": -799.2620444444444
+      }
+    },
+    {
+      "code": "PEBB",
+      "profile": "Passive",
+      "decisionCount": 21,
+      "intents": {
+        "Wander": 9,
+        "Idle": 12
+      },
+      "firstDecision": {
+        "intent": "Wander",
+        "t": 0.6333333333333333,
+        "x": -1153.3333333333333,
+        "y": -800.0
+      },
+      "lastDecision": {
+        "intent": "Wander",
+        "t": 58.9,
+        "x": -1248.6666666666667,
+        "y": -800.0
+      }
+    },
+    {
+      "code": "PUFF",
+      "profile": "Curious",
+      "decisionCount": 19,
+      "intents": {
+        "ApproachCompanion": 19
+      },
+      "firstDecision": {
+        "intent": "ApproachCompanion",
+        "t": 0.6333333333333333,
+        "x": -1152.7511732992234,
+        "y": -277.4137006606951
+      },
+      "lastDecision": {
+        "intent": "ApproachCompanion",
+        "t": 57.666666666666664,
+        "x": -910.3420733110606,
+        "y": -277.4137006606951
+      }
+    },
+    {
+      "code": "TIKKI",
+      "profile": "Curious",
+      "decisionCount": 21,
+      "intents": {
+        "ApproachCompanion": 4,
+        "Pause": 17
+      },
+      "firstDecision": {
+        "intent": "ApproachCompanion",
+        "t": 0.6333333333333333,
+        "x": -1152.5333333333333,
+        "y": -800.0
+      },
+      "lastDecision": {
+        "intent": "Pause",
+        "t": 59.9,
+        "x": -1003.5999999999981,
+        "y": -800.0
+      }
+    },
+    {
+      "code": "MIMI",
+      "profile": "Trickster",
+      "decisionCount": 21,
+      "intents": {
+        "Pause": 21
+      },
+      "firstDecision": {
+        "intent": "Pause",
+        "t": 0.6333333333333333,
+        "x": -2752.0,
+        "y": -278.0
+      },
+      "lastDecision": {
+        "intent": "Pause",
+        "t": 58.9,
+        "x": -2752.0,
+        "y": -278.0
+      }
+    },
+    {
+      "code": "WISP",
+      "profile": "Timid",
+      "decisionCount": 21,
+      "intents": {
+        "Wander": 9,
+        "Pause": 12
+      },
+      "firstDecision": {
+        "intent": "Wander",
+        "t": 0.6333333333333333,
+        "x": -1153.4666666666667,
+        "y": -277.4137006606951
+      },
+      "lastDecision": {
+        "intent": "Wander",
+        "t": 59.86666666666667,
+        "x": -1312.5333333333333,
+        "y": -277.4137006606951
+      }
+    },
+    {
+      "code": "SHADE",
+      "profile": "Trickster",
+      "decisionCount": 21,
+      "intents": {
+        "EdgeShift": 9,
+        "Pause": 12
+      },
+      "firstDecision": {
+        "intent": "EdgeShift",
+        "t": 0.6333333333333333,
+        "x": -2752.0,
+        "y": -278.46666666666664
+      },
+      "lastDecision": {
+        "intent": "EdgeShift",
+        "t": 59.86666666666667,
+        "x": -2752.0,
+        "y": -437.53333333333336
+      }
+    },
+    {
+      "code": "EMBER",
+      "profile": "Aggressive",
+      "decisionCount": 20,
+      "intents": {
+        "ApproachCompanion": 5,
+        "Pause": 15
+      },
+      "firstDecision": {
+        "intent": "ApproachCompanion",
+        "t": 0.6333333333333333,
+        "x": -1152.5023465984468,
+        "y": -278.7895898954734
+      },
+      "lastDecision": {
+        "intent": "Pause",
+        "t": 58.03333333333333,
+        "x": -1003.2719970762934,
+        "y": -800.0
+      }
+    },
+    {
+      "code": "LUNET",
+      "profile": "Timid",
+      "decisionCount": 21,
+      "intents": {
+        "Wander": 9,
+        "Pause": 12
+      },
+      "firstDecision": {
+        "intent": "Wander",
+        "t": 0.6333333333333333,
+        "x": -1153.4666666666667,
+        "y": -277.4137006606951
+      },
+      "lastDecision": {
+        "intent": "Wander",
+        "t": 59.86666666666667,
+        "x": -1312.5333333333333,
+        "y": -277.4137006606951
+      }
+    },
+    {
+      "code": "NOVA",
+      "profile": "Curious",
+      "decisionCount": 20,
+      "intents": {
+        "ApproachCompanion": 5,
+        "Pause": 15
+      },
+      "firstDecision": {
+        "intent": "ApproachCompanion",
+        "t": 0.6333333333333333,
+        "x": -1152.5023465984468,
+        "y": -278.7895898954734
+      },
+      "lastDecision": {
+        "intent": "Pause",
+        "t": 58.03333333333333,
+        "x": -1003.2719970762934,
+        "y": -800.0
+      }
+    },
+    {
+      "code": "NOCT",
+      "profile": "Timid",
+      "decisionCount": 21,
+      "intents": {
+        "Wander": 9,
+        "Pause": 12
+      },
+      "firstDecision": {
+        "intent": "Wander",
+        "t": 0.6333333333333333,
+        "x": -2752.0,
+        "y": -278.46666666666664
+      },
+      "lastDecision": {
+        "intent": "Wander",
+        "t": 59.86666666666667,
+        "x": -2752.0,
+        "y": -437.53333333333336
+      }
+    }
+  ]
+}

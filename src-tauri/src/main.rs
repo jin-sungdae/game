@@ -6,6 +6,7 @@ mod companion;
 mod desktop;
 mod entities;
 mod geometry;
+mod monster_behavior;
 mod movement;
 mod overlay;
 mod presentation;
