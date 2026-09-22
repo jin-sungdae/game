@@ -45,7 +45,8 @@ test('PIP is the only enabled and asset-ready Alpha; other 14 are diagnostic',()
   assert.equal(m.assetIdentity,m.monsterCode.toLowerCase());
   assert.equal(resolveMonster(m.monsterCode).assetRoot,`/assets/monsters/${m.assetIdentity}`);
   if(m.monsterCode!=='PIP') {
-   assert.equal(resolveMonster(m.monsterCode).baseAsset,null);
+   // A canonical delivery URL is not evidence of delivered art or gameplay readiness.
+   assert.equal(resolveMonster(m.monsterCode).baseAsset,`/assets/monsters/${m.assetIdentity}/base.png`);
    assert.throws(()=>parseMonsterDefinitions([{...m,enabled:true}]));
    assert.throws(()=>parseMonsterDefinitions([{...m,contentReady:true}]));
   }

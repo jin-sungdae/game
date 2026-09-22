@@ -40,16 +40,16 @@ test('PIP metadata and production asset stay compatible with existing gameplay',
  const pip = dex.resolveMonsterDefinition('PIP');
  assert.deepEqual([pip.rarity,pip.archetype,pip.movementProfile,pip.encounterWeight,pip.baseCaptureRate,pip.visualScale], ['COMMON','BEAST','GROUND',100,.35,.8]);
  assert.deepEqual(dex.enabledMonsterDefinitions().map(m => m.monsterCode), ['PIP']);
- assert.deepEqual(resolveMonster('PIP'), {name:'PIP',assetRoot:'/assets/monsters/pip',baseAsset:'/assets/monsters/pip/base.png'});
+ assert.deepEqual(resolveMonster('PIP'), {name:'PIP',assetRoot:'/assets/monsters/pip',baseAsset:'/assets/monsters/pip/base.png',visualScale:.8,alphaDelivery:true});
  const seed = fs.readFileSync('server/src/main/resources/db/migration/V2__local_master_seed.sql','utf8');
  assert.ok(seed.includes("('PIP','PIP','COMMON','GROUND',1,3,100,true)"));
 });
-test('unknown/prototype names and all unproduced slots have diagnostic fallback', () => {
+test('unknown/prototype names and canonical Alpha versus provisional delivery paths', () => {
  for (const code of ['unknown','constructor','__proto__','toString']) {
   assert.equal(resolveMonster(code),null); assert.equal(dex.resolveMonsterDefinition(code),null);
  }
  for (const m of dex.monsterDex.slice(1)) {
-  assert.equal(resolveMonster(m.monsterCode).baseAsset,null);
+  assert.equal(resolveMonster(m.monsterCode).baseAsset,m.alphaCandidate ? `/assets/monsters/${m.assetIdentity}/base.png` : null);
   assert.equal(resolveMonster(m.monsterCode).assetRoot,`/assets/monsters/${m.assetIdentity}`);
  }
 });
@@ -87,7 +87,11 @@ test('Dex masks undiscovered names/assets and capture supersedes discovery', () 
  const captured = dexEntry(pip,progress([],['PIP']));
  assert.equal(captured.state,'CAPTURED'); assert.equal(captured.visual,'BASE'); assert.equal(captured.displayName,'PIP');
  const provisional = dexEntry(dex.monsterDex[1],progress(['MELLO']));
- assert.equal(provisional.displayName,'MELLO'); assert.equal(provisional.visual,'DIAGNOSTIC');
+ assert.equal(provisional.displayName,'MELLO'); // BASE is a source intent; the existing image loader still diagnoses missing files.
+ assert.equal(provisional.visual,'BASE');
+ assert.equal(provisional.baseAsset,'/assets/monsters/mello/base.png');
+ assert.equal(dex.monsterDex[1].contentReady,false);
+ assert.equal(dex.monsterDex[1].enabled,false);
  assert.equal(dexEntries(progress([],dex.monsterDex.map(m => m.monsterCode))).length,1);
  assert.equal(dexEntries(progress(['unknown']))[0].state,'UNDISCOVERED');
 });
