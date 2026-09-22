@@ -24,3 +24,8 @@ tasks.register('liveValidation', JavaExec) {
     classpath = sourceSets.test.runtimeClasspath
     mainClass = 'dev.luma.game.LiveValidationServer'
 }
+
+// One versioned Dex definition is shared with the server, not copied manually.
+tasks.named('processResources') {
+    from('../src/entities/monster-dex.json') { into 'content' }
+}
