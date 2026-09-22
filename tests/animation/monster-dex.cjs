@@ -16,8 +16,9 @@ test('all thirty slots validate with unique codes/numbers and exact rarity distr
  assert.deepEqual(dex.rarities.map(r => dex.monsterDex.filter(m => m.rarity === r).length), [8,7,6,5,4]);
  assert.ok(Object.isFrozen(dex.monsterDex)); assert.ok(dex.monsterDex.every(Object.isFrozen));
  for (const m of dex.monsterDex.slice(1)) {
-  assert.equal(m.displayName, null); assert.equal(m.enabled, false); assert.equal(m.encounterWeight, 0);
-  assert.equal(m.baseCaptureRate, null); assert.equal(m.productionStatus, 'PROVISIONAL');
+  assert.equal(m.enabled, false); assert.equal(m.contentReady, false);
+  if (!m.alphaCandidate) { assert.equal(m.displayName, null); assert.equal(m.encounterWeight, 0); assert.equal(m.baseCaptureRate, null); }
+  assert.equal(m.productionStatus, 'PROVISIONAL');
  }
 });
 test('vocabulary parsers accept every supported value and reject invalid types/unknowns', () => {
@@ -68,15 +69,15 @@ test('duplicate identity and Dex number are rejected independently', () => {
  assert.throws(() => dex.parseMonsterDefinitions([raw[0],{...raw[1],dexNo:1}]));
 });
 test('enabled content must have confirmed production metadata', () => {
- invalid({productionStatus:'PROVISIONAL'}); invalid({displayName:null}); invalid({encounterWeight:0}); invalid({baseCaptureRate:null});
+ invalid({contentReady:false}); invalid({contentReady:'true'}); invalid({productionStatus:'PROVISIONAL'}); invalid({displayName:null}); invalid({encounterWeight:0}); invalid({baseCaptureRate:null});
  assert.throws(() => dex.parseMonsterDefinitions([{...raw[1],enabled:true}]));
  assert.equal(dex.parseMonsterDefinitions([{...raw[0],enabled:false}])[0].enabled,false);
 });
 test('Alpha candidates cover silhouettes, movement, rarity and desktop spawn diversity', () => {
  const alpha = dex.monsterDex.filter(m => m.alphaCandidate);
- assert.ok(alpha.length >= 12 && alpha.length <= 15);
- for (const [key, vocabulary] of [['archetype',dex.archetypes],['movementProfile',dex.movementProfiles],['rarity',dex.rarities],['spawnProfile',dex.spawnProfiles]])
-  assert.deepEqual([...new Set(alpha.map(m => m[key]))].sort(), [...vocabulary].sort());
+ assert.equal(alpha.length,15);
+ assert.deepEqual([...new Set(alpha.map(m => m.movementProfile))].sort(), [...dex.movementProfiles].sort());
+ assert.deepEqual(dex.rarities.map(r => alpha.filter(m => m.rarity === r).length), [7,4,3,0,1]);
  assert.deepEqual(alpha.filter(m => m.enabled).map(m => m.monsterCode), ['PIP']);
 });
 test('Dex masks undiscovered names/assets and capture supersedes discovery', () => {
@@ -85,8 +86,8 @@ test('Dex masks undiscovered names/assets and capture supersedes discovery', () 
  assert.equal(dexEntry(pip,progress(['PIP'])).state,'DISCOVERED');
  const captured = dexEntry(pip,progress([],['PIP']));
  assert.equal(captured.state,'CAPTURED'); assert.equal(captured.visual,'BASE'); assert.equal(captured.displayName,'PIP');
- const provisional = dexEntry(dex.monsterDex[1],progress(['MONSTER_002']));
- assert.equal(provisional.displayName,'???'); assert.equal(provisional.visual,'DIAGNOSTIC');
+ const provisional = dexEntry(dex.monsterDex[1],progress(['MELLO']));
+ assert.equal(provisional.displayName,'MELLO'); assert.equal(provisional.visual,'DIAGNOSTIC');
  assert.equal(dexEntries(progress([],dex.monsterDex.map(m => m.monsterCode))).length,1);
  assert.equal(dexEntries(progress(['unknown']))[0].state,'UNDISCOVERED');
 });

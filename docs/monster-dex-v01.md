@@ -1,5 +1,7 @@
 # Monster Dex Foundation v0.1
 
+> Historical proposal below describes PR #19. The table is the current catalog; [Monster Content Integration](monster-content-v01.md) supersedes provisional Alpha names, diversity assumptions, rarity references and authority/readiness rules. The thirty Dex numbers and projection contract remain.
+
 ## Architecture proposal before implementation
 
 Base: origin/main c482fec. Isolated branch: feature/monster-dex-foundation-v01.
@@ -36,34 +38,34 @@ All names/themes except PIP are provisional and require visual design approval. 
 
 | Dex No | Code | Working Name | Rarity | Archetype | Movement | Behavior | Spawn Profile | Spawn Condition | Capture Direction | Visual Theme | Production Status | Alpha |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | PIP | PIP | COMMON | BEAST | GROUND | CURIOUS | BOTTOM | ANY_TIME | existing COMMON formula | small grounded beast | PRODUCTION | candidate |
-| 2 | MONSTER_002 | Spring blob | COMMON | SLIME | JUMP | PLAYFUL | BOTTOM | ANY_TIME | TBD | elastic droplet | PROVISIONAL | candidate |
-| 3 | MONSTER_003 | Desk sprout | COMMON | PLANT | STATIC | PASSIVE | NEAR_DOCK | DAY | TBD | two broad leaves | PROVISIONAL | candidate |
-| 4 | MONSTER_004 | Paper wing | COMMON | BIRD | FLYING | TIMID | TOP | DAY | TBD | folded wide wings | PROVISIONAL | candidate |
-| 5 | MONSTER_005 | Button beetle | COMMON | INSECT | EDGE | CURIOUS | EDGE | DAY | TBD | round shell and antennae | PROVISIONAL | candidate |
-| 6 | MONSTER_006 | Pebble stack | COMMON | ROCK | GROUND | SLEEPY | BOTTOM | ANY_TIME | TBD | stacked stones | PROVISIONAL | candidate |
-| 7 | MONSTER_007 | Bubble fin | COMMON | AQUATIC | FREE_2D | PLAYFUL | FREE_AREA | ANY_TIME | TBD | fin and bubble tail | PROVISIONAL | candidate |
-| 8 | MONSTER_008 | Cup mimic | COMMON | MIMIC | STATIC | TRICKSTER | NEAR_DOCK | ANY_TIME | TBD | cup shaped object | PROVISIONAL | candidate |
-| 9 | MONSTER_009 | Lantern wisp | UNCOMMON | SPIRIT | FLOATING | TIMID | FLOATING_AREA | NIGHT | TBD | hollow flame | PROVISIONAL | candidate |
-| 10 | MONSTER_010 | Ribbon shade | UNCOMMON | SHADOW | EDGE | TIMID | NEAR_DESKTOP_EDGE | NIGHT | TBD | thin ribbon | PROVISIONAL | candidate |
-| 11 | MONSTER_011 | Clock crawler | UNCOMMON | MECHANICAL | GROUND | CURIOUS | BOTTOM | FOCUS_SESSION | TBD | gears and short legs | PROVISIONAL | candidate |
-| 12 | MONSTER_012 | Orbit mote | UNCOMMON | COSMIC | FLOATING | PASSIVE | FLOATING_AREA | NIGHT | TBD | ringed sphere | PROVISIONAL | candidate |
-| 13 | MONSTER_013 | Seed hopper | UNCOMMON | PLANT | JUMP | PLAYFUL | BOTTOM | DAY | TBD | winged seed | PROVISIONAL | — |
-| 14 | MONSTER_014 | Prism moth | UNCOMMON | INSECT | FLYING | CURIOUS | TOP | NIGHT | TBD | triangular wings | PROVISIONAL | — |
-| 15 | MONSTER_015 | Cloud jelly | UNCOMMON | SLIME | FREE_2D | SLEEPY | FREE_AREA | ANY_TIME | TBD | flat jelly bell | PROVISIONAL | — |
-| 16 | MONSTER_016 | Moon ray | RARE | AQUATIC | FLOATING | PASSIVE | FLOATING_AREA | NIGHT | TBD | diamond fins | PROVISIONAL | candidate |
+| 1 | PIP | PIP | COMMON | BEAST | GROUND | PLAYFUL | NEAR_DOCK | ANY_TIME | server rarity default | small grounded beast | PRODUCTION | candidate |
+| 2 | MELLO | MELLO | COMMON | SLIME | JUMP | CURIOUS | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 3 | MOSSY | MOSSY | COMMON | PLANT | GROUND | SLEEPY | LOWER_CORNER | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 4 | CHIRP | CHIRP | COMMON | BIRD | FLYING | CURIOUS | TOP | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 5 | MONSTER_005 | Button beetle | COMMON | INSECT | EDGE | CURIOUS | EDGE | DAY | TBD | round shell and antennae | PROVISIONAL | — |
+| 6 | BUBU | BUBU | COMMON | AQUATIC | JUMP | PLAYFUL | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 7 | PEBB | PEBB | COMMON | ROCK | GROUND | PASSIVE | NEAR_DOCK | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 8 | PUFF | PUFF | COMMON | SPIRIT | FLOATING | CURIOUS | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 9 | MONSTER_009 | Lantern wisp | UNCOMMON | SPIRIT | FLOATING | TIMID | FLOATING_AREA | NIGHT | TBD | hollow flame | PROVISIONAL | — |
+| 10 | TIKKI | TIKKI | UNCOMMON | MECHANICAL | GROUND | CURIOUS | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 11 | MONSTER_011 | Clock crawler | UNCOMMON | MECHANICAL | GROUND | CURIOUS | BOTTOM | FOCUS_SESSION | TBD | gears and short legs | PROVISIONAL | — |
+| 12 | MONSTER_012 | Orbit mote | UNCOMMON | COSMIC | FLOATING | PASSIVE | FLOATING_AREA | NIGHT | TBD | ringed sphere | PROVISIONAL | — |
+| 13 | MIMI | MIMI | UNCOMMON | MIMIC | STATIC | TRICKSTER | EDGE | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 14 | WISP | WISP | UNCOMMON | SPIRIT | FLOATING | TIMID | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 15 | SHADE | SHADE | UNCOMMON | SHADOW | EDGE | TRICKSTER | EDGE | NIGHT | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 16 | EMBER | EMBER | RARE | FIRE | FREE_2D | AGGRESSIVE | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
 | 17 | MONSTER_017 | Arch golem | RARE | ROCK | STATIC | SLEEPY | NEAR_DESKTOP_EDGE | ANY_TIME | TBD | stone arch | PROVISIONAL | — |
 | 18 | MONSTER_018 | Storm crest | RARE | BIRD | FLYING | AGGRESSIVE | TOP | DAY | TBD | forked crest | PROVISIONAL | — |
-| 19 | MONSTER_019 | Bookmark mimic | RARE | MIMIC | JUMP | TRICKSTER | NEAR_DOCK | FOCUS_SESSION | TBD | folded book | PROVISIONAL | — |
+| 19 | LUNET | LUNET | RARE | MOON | FLOATING | TIMID | FREE_AREA | NIGHT | server rarity default | Production visual design pending | PROVISIONAL | candidate |
 | 20 | MONSTER_020 | Long ear | RARE | BEAST | GROUND | TIMID | BOTTOM | NIGHT | TBD | upright ears | PROVISIONAL | — |
-| 21 | MONSTER_021 | Rail wheel | RARE | MECHANICAL | EDGE | PASSIVE | EDGE | FOCUS_SESSION | TBD | single large wheel | PROVISIONAL | — |
-| 22 | MONSTER_022 | Veil spirit | EPIC | SPIRIT | FLOATING | SLEEPY | FLOATING_AREA | NIGHT | TBD | layered veil | PROVISIONAL | candidate |
+| 21 | NOVA | NOVA | RARE | COSMIC | FREE_2D | CURIOUS | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 22 | MONSTER_022 | Veil spirit | EPIC | SPIRIT | FLOATING | SLEEPY | FLOATING_AREA | NIGHT | TBD | layered veil | PROVISIONAL | — |
 | 23 | MONSTER_023 | Ink vortex | EPIC | SHADOW | FREE_2D | TRICKSTER | FREE_AREA | NIGHT | TBD | spiral ink | PROVISIONAL | — |
 | 24 | MONSTER_024 | Comet sail | EPIC | COSMIC | FLYING | CURIOUS | TOP | NIGHT | TBD | crescent sail | PROVISIONAL | — |
 | 25 | MONSTER_025 | Thorn crown | EPIC | PLANT | STATIC | AGGRESSIVE | NEAR_DOCK | DAY | TBD | radial petals | PROVISIONAL | — |
 | 26 | MONSTER_026 | Crystal wedge | EPIC | ROCK | JUMP | AGGRESSIVE | BOTTOM | ANY_TIME | TBD | angular wedge | PROVISIONAL | — |
-| 27 | MONSTER_027 | Eclipse halo | SPECIAL | COSMIC | FLOATING | PASSIVE | FLOATING_AREA | SPECIAL_EVENT | TBD | concentric halo | PROVISIONAL | candidate |
-| 28 | MONSTER_028 | Gift mimic | SPECIAL | MIMIC | STATIC | TRICKSTER | NEAR_DOCK | SPECIAL_EVENT | TBD | ribbon box | PROVISIONAL | — |
+| 27 | MONSTER_027 | Eclipse halo | SPECIAL | COSMIC | FLOATING | PASSIVE | FLOATING_AREA | SPECIAL_EVENT | TBD | concentric halo | PROVISIONAL | — |
+| 28 | NOCT | NOCT | SPECIAL | NIGHT | EDGE | TIMID | EDGE | NIGHT | server rarity default | Production visual design pending | PROVISIONAL | candidate |
 | 29 | MONSTER_029 | Aurora ribbon | SPECIAL | AQUATIC | FREE_2D | PLAYFUL | FREE_AREA | SPECIAL_EVENT | TBD | flowing fins | PROVISIONAL | — |
 | 30 | MONSTER_030 | Satellite seed | SPECIAL | MECHANICAL | EDGE | CURIOUS | NEAR_DESKTOP_EDGE | SPECIAL_EVENT | TBD | antenna disk | PROVISIONAL | — |
 

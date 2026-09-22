@@ -1,0 +1,22 @@
+{
+  "COMMON": {
+    "encounterWeight": 100,
+    "baseCaptureRate": 0.35
+  },
+  "UNCOMMON": {
+    "encounterWeight": 50,
+    "baseCaptureRate": 0.25
+  },
+  "RARE": {
+    "encounterWeight": 20,
+    "baseCaptureRate": 0.15
+  },
+  "EPIC": {
+    "encounterWeight": 5,
+    "baseCaptureRate": 0.1
+  },
+  "SPECIAL": {
+    "encounterWeight": 1,
+    "baseCaptureRate": 0.05
+  }
+}

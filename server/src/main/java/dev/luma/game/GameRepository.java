@@ -51,7 +51,7 @@ public class GameRepository {
     }
     public List<MonsterSelector.Monster> monsters() {
         return jdbc.query("SELECT monster_id,code,name,rarity,movement_profile,min_level,max_level,encounter_weight FROM game.m_monster WHERE use_yn AND encounter_weight>0 ORDER BY monster_id",
-            (r,n)->new MonsterSelector.Monster(r.getLong(1),r.getString(2),r.getString(3),r.getString(4),r.getString(5),r.getInt(6),r.getInt(7),r.getInt(8)));
+            (r,n)->new MonsterSelector.Monster(r.getLong(1),r.getString(2),r.getString(3),r.getString(4),r.getString(5),r.getInt(6),r.getInt(7),r.getInt(8))).stream().filter(MonsterContent::eligible).toList();
     }
     public GameDtos.Encounter create(long playerId, MonsterSelector.Selection selection, Instant now) {
         var m=selection.monster(); var id=UUID.randomUUID(); var expires=now.plusSeconds(60);
