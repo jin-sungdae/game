@@ -84,7 +84,7 @@ test('Dex reuses nonactivating panel with explicit actions and no focus APIs',()
  const main=fs.readFileSync('src-tauri/src/main.rs','utf8');
  assert.match(main,/\.focused\(false\)[^]*\.focusable\(false\)/);
  assert.match(main,/"dex" \| "dex-refresh"/);
- assert.match(main,/world\.view\.dex\.loaded\(value\.clone\(\)\)/);
+ assert.match(main,/world\.view\.dex\.loaded_dex\(&value\)/);
  assert.match(main,/world\.view\.dex\.captured\(&c\)/);
 });
 

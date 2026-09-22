@@ -1,7 +1,8 @@
 pub mod battle;
+pub mod discovery;
 pub mod evolution;
 pub mod items;
-use battle::{Battle, Capture, Collected, Command};
+use battle::{Battle, Capture, Command};
 // Local HTTP client, DTO validation and bounded worker. No AppKit/React calls.
 use chrono::{DateTime, Utc};
 use serde::{Deserialize, Serialize};
@@ -238,7 +239,8 @@ pub enum Event {
     Encounter(Option<Encounter>),
     Battle(Battle),
     Capture(Capture),
-    Collection(Vec<Collected>),
+    Dex(Vec<discovery::Entry>),
+    DiscoveryCompleted(discovery::Job, Result<discovery::Entry, String>),
     Finished(Option<String>),
 }
 pub struct Backend {
@@ -270,6 +272,21 @@ impl Backend {
             let mut tracking_encounter = false;
             let mut poll_failures = 0usize;
             while !stopped.load(Ordering::Relaxed) {
+                if matches!(command, Some(Command::Discover(_))) {
+                    let Some(Command::Discover(job)) = command.take() else {
+                        unreachable!()
+                    };
+                    let result = api.discover(&job).map_err(str::to_owned);
+                    if events.send(Event::DiscoveryCompleted(job, result)).is_err() {
+                        break;
+                    }
+                    command = match rx.recv_timeout(Duration::from_secs(5)) {
+                        Ok(c) => Some(c),
+                        Err(mpsc::RecvTimeoutError::Timeout) => None,
+                        Err(_) => break,
+                    };
+                    continue;
+                }
                 if matches!(command, Some(Command::Spawn(_))) {
                     let Some(Command::Spawn(action)) = command.take() else {
                         unreachable!()
@@ -306,9 +323,17 @@ impl Backend {
                             .send(Event::Bootstrap(bootstrap))
                             .map_err(|_| "closed")?;
                         bootstrapped = true;
+                        match api.dex() {
+                            Ok(rows) => {
+                                events.send(Event::Dex(rows)).map_err(|_| "closed")?;
+                            }
+                            Err(error) => eprintln!(
+                                "[LUMA DISCOVERY] Dex load failed: {error}; refresh to retry"
+                            ),
+                        }
                     }
                     match command.take() {
-                        Some(Command::Spawn(_)) => unreachable!(),
+                        Some(Command::Spawn(_) | Command::Discover(_)) => unreachable!(),
                         Some(Command::LoadItems(id)) => {
                             last_battle = id;
                         }
@@ -352,9 +377,7 @@ impl Backend {
                             api.ignore(id)?;
                         }
                         Some(Command::LoadCollection) => {
-                            events
-                                .send(Event::Collection(api.collection()?))
-                                .map_err(|_| "closed")?;
+                            events.send(Event::Dex(api.dex()?)).map_err(|_| "closed")?;
                         }
                         Some(Command::Refresh(id)) => {
                             events

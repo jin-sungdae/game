@@ -35,6 +35,7 @@ struct SpawnEnvironment {
     windows: Option<Vec<Area>>,
 }
 pub struct World {
+    pub discovery: crate::discovery_sync::Sync,
     pub spawn_runtime: crate::spawn::runtime::Runtime,
     spawn_environment: Option<SpawnEnvironment>,
     monster_movement: crate::movement::MovementController,
@@ -72,6 +73,7 @@ impl World {
             presentation: Default::default(),
             server_encounter: None,
             spawn_runtime: crate::spawn::runtime::Runtime::new(seed),
+            discovery: crate::discovery_sync::Sync::default(),
             spawn_environment: None,
             monster_movement: Default::default(),
             monster_behavior: None,
@@ -232,7 +234,8 @@ impl World {
             state: PipState::Spawning,
             facing: -1,
         });
-        self.view.dex.discover(&identity.monster_code);
+        self.discovery
+            .placed(encounter.encounter_id, &identity.monster_code, now);
         eprintln!(
             "[LUMA SPAWN] placed {} encounter={} at={:?}",
             identity.monster_code, encounter.encounter_id, intent.position

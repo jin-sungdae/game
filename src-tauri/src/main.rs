@@ -4,6 +4,7 @@ mod behaviors;
 mod collection_dex;
 mod companion;
 mod desktop;
+mod discovery_sync;
 mod entities;
 mod geometry;
 mod monster_behavior;
@@ -290,9 +291,17 @@ fn main() {
                                             world.view.game.collection = vec![c];
                                         }
                                     }
-                                    backend::Event::Collection(value) => {
-                                        world.view.dex.loaded(value.clone());
-                                        world.view.game.collection = value
+                                    backend::Event::Dex(value) => {
+                                        world.view.dex.loaded_dex(&value);
+                                        world.view.game.collection = world.view.dex.records.clone().unwrap_or_default();
+                                        world.discovery.refresh();
+                                    }
+                                    backend::Event::DiscoveryCompleted(job, result) => {
+                                        world.discovery.complete(&job, now, result.is_ok(), true);
+                                        match result {
+                                            Ok(entry) => world.view.dex.acknowledged(&entry),
+                                            Err(error) => eprintln!("[LUMA DISCOVERY] {error}; retained for bounded retry"),
+                                        }
                                     }
                                     backend::Event::Finished(error) => {
                                         world.presentation.finish(error.is_some(), now);
@@ -371,6 +380,13 @@ fn main() {
                                         action,
                                         Err("backend queue busy".into()),
                                     );
+                                }
+                            }
+                            if !world.view.game.busy {
+                                if let Some(job) = world.discovery.next(now) {
+                                    if !state.backend.lock().unwrap().request(backend::battle::Command::Discover(job.clone())) {
+                                        world.discovery.complete(&job, now, false, false);
+                                    }
                                 }
                             }
                             let view = &world.view;

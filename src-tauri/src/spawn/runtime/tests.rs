@@ -59,7 +59,8 @@ fn startup_empty_schedule_one_opportunity_and_no_duplicate() {
     assert_eq!(identity.asset_identity, "pip");
     assert_eq!(identity.level, 2);
     assert_eq!(identity.movement_profile, MovementProfile::Ground);
-    assert_eq!(w.view.dex.discovered_codes, vec!["PIP"]);
+    assert!(w.view.dex.discovered_codes.is_empty());
+    assert!(w.discovery.contains("PIP"));
 }
 #[test]
 fn startup_existing_and_restart_restore_without_post() {
@@ -172,7 +173,8 @@ fn debug_is_not_budget_or_discovery_and_authority_replaces_one_visual() {
     assert_eq!(w.spawn_action(0.0), Some(Action::Reconcile));
     w.complete_spawn(0.0, Action::Reconcile, Ok(Some(encounter())));
     assert!(w.view.monster.as_ref().unwrap().encounter_id.is_some());
-    assert_eq!(w.view.dex.discovered_codes, vec!["PIP"]);
+    assert!(w.view.dex.discovered_codes.is_empty());
+    assert!(w.discovery.contains("PIP"));
     w.debug_spawn(2.0);
     assert!(w.view.monster.is_some());
 }
@@ -295,7 +297,8 @@ fn live_spawn_encounter_world_slice() {
     w.tick(t + 2.0, 0.1, (9999.0, 9999.0), false);
     assert!(w.view.pip.is_none());
     assert_eq!(w.spawn_runtime.director.state(), SpawnState::Cooldown);
-    assert_eq!(w.view.dex.discovered_codes, vec!["PIP"]);
+    assert!(w.view.dex.discovered_codes.is_empty());
+    assert!(w.discovery.contains("PIP"));
     eprintln!("LIVE SPAWN PASS first={id} second={second} automatic_create=2 restore_create=0 capture=1 ignore=1 cooldown={:?}",w.spawn_runtime.director.next_spawn_at());
 }
 
