@@ -10,3 +10,5 @@ node --test tests/presentation/evolution.cjs
 node --test tests/presentation/items.cjs
 ./node_modules/.bin/tsc src/components/ItemInteraction.tsx --outDir "$LUMA_PRESENTATION_TEST_DIR" --module commonjs --target ES2022 --jsx react-jsx --strict --skipLibCheck
 NODE_PATH="$PWD/node_modules" node --test tests/presentation/item-ui.cjs
+./node_modules/.bin/tsc src/components/CollectionDex.tsx --outDir "$LUMA_PRESENTATION_TEST_DIR" --resolveJsonModule --esModuleInterop --module commonjs --target ES2022 --jsx react-jsx --strict --skipLibCheck
+NODE_PATH="$PWD/node_modules" node --test tests/presentation/collection-dex.cjs

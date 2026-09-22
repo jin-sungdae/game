@@ -1,7 +1,7 @@
 export type CompanionState = 'IDLE' | 'WALKING' | 'SITTING' | 'LOOKING' | 'SLEEPING' | 'DRAGGING' | 'REACTING';
 export type PipState = 'SPAWNING' | 'ROAMING' | 'ENGAGED' | 'DESPAWNING';
 export interface Entity { x: number; y: number; state: CompanionState | PipState; facing: number }
-export interface Snapshot { moa: Entity; pip: Entity | null; menu: boolean; game?: GamePresentation; visual?: Visual; identity?: CompanionIdentity|null; evolution?: EvolutionPresentation; items?: ItemPresentation; interaction?:'ENCOUNTER'|'EVOLUTION'|'SHOP'|'INVENTORY'|'BATTLE_ITEMS' }
+export interface Snapshot { moa: Entity; pip: Entity | null; menu: boolean; game?: GamePresentation; visual?: Visual; identity?: CompanionIdentity|null; evolution?: EvolutionPresentation; items?: ItemPresentation; dex?:CollectionDexPresentation; interaction?:'DEX'|'ENCOUNTER'|'EVOLUTION'|'SHOP'|'INVENTORY'|'BATTLE_ITEMS' }
 
 export interface Battle { battleId:string;encounterId:string;turn:number;status:string;encounterStatus:string;companion:{hp:number;maxHp:number};monster:{hp:number;maxHp:number};events:string[];reward:{gold:number;exp:number;bond:number}|null }
 export interface GamePresentation { encounterId:string|null;monsterLevel:number;battle:Battle|null;busy:boolean;error:string|null;feedback:string|null;collection:{monsterCode:string;captureCount:number}[]; captureChance?:number|null;captureBaseChance?:number|null;captureItemBonus?:number|null;captureFinalChance?:number|null }
@@ -16,3 +16,6 @@ export interface ShopItem {itemCode:string;itemName:string;itemType:string;price
 export interface OwnedItem {itemCode:string;itemName:string;itemType:string;quantity:number}
 export interface ItemEffect {battleId:string;effectType:string;value:number;armed:boolean;consumedAt:string|null}
 export interface ItemPresentation {inventory:{gold:number;shop:ShopItem[];owned:OwnedItem[];effects:ItemEffect[]}|null;busy:boolean;error:string|null;feedback:string|null}
+
+export interface CollectionRecord {monsterCode:string;monsterName:string;captureCount:number;firstCapturedAt:string;lastCapturedAt:string}
+export interface CollectionDexPresentation {records:CollectionRecord[]|null;discoveredCodes:string[];busy:boolean;error:string|null}

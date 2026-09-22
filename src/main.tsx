@@ -15,3 +15,5 @@ function App() {
 }
 connect().then(stop => window.addEventListener('beforeunload', stop, { once:true })).catch(console.error);
 createRoot(document.getElementById('root')!).render(<App/>);
+
+import './presentation/collectionDex.css';

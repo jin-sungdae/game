@@ -13,6 +13,7 @@ pub enum InteractionMode {
     Shop,
     Inventory,
     BattleItems,
+    Dex,
 }
 #[derive(Clone, Serialize)]
 pub struct Snapshot {
@@ -24,6 +25,7 @@ pub struct Snapshot {
     pub evolution: crate::backend::evolution::Presentation,
     pub items: crate::backend::items::Presentation,
     pub game: crate::backend::battle::Presentation,
+    pub dex: crate::collection_dex::Presentation,
     pub visual: crate::presentation::Visual,
 }
 pub struct World {
@@ -49,6 +51,7 @@ impl World {
                 evolution: Default::default(),
                 items: Default::default(),
                 game: Default::default(),
+                dex: Default::default(),
                 visual: Default::default(),
             },
             area,
@@ -105,6 +108,9 @@ impl World {
         value: Option<crate::backend::Encounter>,
         remaining: f64,
     ) {
+        if let Some(encounter) = &value {
+            self.view.dex.discover(&encounter.monster.code);
+        }
         let Some(encounter) =
             value.filter(|e| e.supports_pip() && remaining > 0.0 && remaining.is_finite())
         else {
