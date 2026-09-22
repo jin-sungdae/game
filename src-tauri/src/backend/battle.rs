@@ -70,6 +70,12 @@ pub struct Capture {
     pub encounter_id: uuid::Uuid,
     pub success: bool,
     pub chance: f64,
+    #[serde(default)]
+    pub base_chance: Option<f64>,
+    #[serde(default)]
+    pub item_bonus: Option<f64>,
+    #[serde(default)]
+    pub final_chance: Option<f64>,
     pub battle: Battle,
     pub collection: Option<Collected>,
 }
@@ -81,6 +87,9 @@ pub struct Resolution {
 }
 #[derive(Clone, Debug)]
 pub enum Command {
+    LoadItems(Option<uuid::Uuid>),
+    Purchase(String),
+    UseItem(String, Option<uuid::Uuid>),
     Evolve,
     Encounter,
     StartBattle(uuid::Uuid),
@@ -101,6 +110,9 @@ pub struct Presentation {
     pub feedback: Option<String>,
     pub collection: Vec<Collected>,
     pub capture_chance: Option<f64>,
+    pub capture_base_chance: Option<f64>,
+    pub capture_item_bonus: Option<f64>,
+    pub capture_final_chance: Option<f64>,
 }
 impl Presentation {
     pub fn command(&mut self, action: &str) -> Option<Command> {
