@@ -12,7 +12,7 @@ public final class MonsterContent {
         String archetype, String movementProfile, String behaviorProfile, String spawnProfile,
         String spawnCondition, int encounterWeight, Double baseCaptureRate, double visualScale,
         String assetIdentity, boolean enabled, boolean contentReady, boolean alphaCandidate,
-        String productionStatus) {}
+        String productionStatus, BattlePersonality battlePersonality) {}
     private static final Map<String,RarityDefaults> DEFAULTS = loadDefaults();
     private static final Map<String,Definition> DEFINITIONS = loadDefinitions();
     private MonsterContent() {}
@@ -63,7 +63,7 @@ public final class MonsterContent {
             var d=new Definition(integer(n,"dexNo"),text(n,"monsterCode"),n.required("displayName").isNull()?null:text(n,"displayName"),
                 text(n,"rarity"),text(n,"archetype"),text(n,"movementProfile"),text(n,"behaviorProfile"),text(n,"spawnProfile"),text(n,"spawnCondition"),
                 integer(n,"encounterWeight"),n.required("baseCaptureRate").isNull()?null:decimal(n,"baseCaptureRate"),decimal(n,"visualScale"),text(n,"assetIdentity"),
-                flag(n,"enabled"),flag(n,"contentReady"),flag(n,"alphaCandidate"),text(n,"productionStatus"));
+                flag(n,"enabled"),flag(n,"contentReady"),flag(n,"alphaCandidate"),text(n,"productionStatus"),n.required("battlePersonality").isNull()?null:BattlePersonality.valueOf(text(n,"battlePersonality")));
             if(d.dexNo()<1 || values.putIfAbsent(d.monsterCode(),d)!=null || !numbers.add(d.dexNo())) throw new IllegalStateException("Duplicate content identity");
             if(!d.monsterCode().matches("[A-Z][A-Z0-9_]*") || !d.assetIdentity().matches("[a-z][a-z0-9_]*")
                 || d.visualScale()<.5 || d.visualScale()>1.5 || d.encounterWeight()<0
@@ -71,6 +71,7 @@ public final class MonsterContent {
             var defaults=rarity(d.rarity());
             if(d.alphaCandidate() && (d.encounterWeight()!=defaults.encounterWeight() || !Objects.equals(d.baseCaptureRate(),defaults.baseCaptureRate())))
                 throw new IllegalStateException("Stale rarity projection: "+d.monsterCode());
+            if(d.alphaCandidate() && d.battlePersonality()==null) throw new IllegalStateException("Alpha requires battle personality");
             if(d.enabled() && !d.contentReady()) throw new IllegalStateException("Enabled unfinished content");
             if(d.contentReady() && (!"PRODUCTION".equals(d.productionStatus()) || d.displayName()==null || d.encounterWeight()==0 || d.baseCaptureRate()==null))
                 throw new IllegalStateException("Unconfirmed production metadata");

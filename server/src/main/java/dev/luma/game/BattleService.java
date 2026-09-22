@@ -78,6 +78,14 @@ public class BattleService {
         db.update("UPDATE game.t_player_companion SET exp=?,level=?,bond=bond+1,updated_at=clock_timestamp() WHERE player_companion_id=?",exp,level,b.companionId);
         events.add("REWARD");if(level>CombatRules.level(oldExp)) events.add("LEVEL_UP");
     }
+    private int counter(Row b,Encounter e,List<String> events) {
+        var personality=MonsterContent.find(e.code).map(MonsterContent.Definition::battlePersonality)
+            .orElseThrow(()->new GameUnavailable("Missing battle personality"));
+        if(BattleDecision.choose(personality,b.turn,random)==BattleDecision.Action.WAIT) {
+            events.add("MONSTER_WAIT");return b.hp;
+        }
+        events.add("MONSTER_ATTACK");return Math.max(0,b.hp-b.counter);
+    }
     public BattleDtos.Battle attack(UUID id) {
         var e=lockBattleEncounter(id);var b=row(id);
         if(!b.status.equals("ACTIVE")) throw new GameFault(409,"BATTLE_ALREADY_TERMINAL");active(e);
@@ -85,7 +93,7 @@ public class BattleService {
         if(monster==0) {
             status="VICTORY";events.add("VICTORY");reward(b,e,events);
             db.update("UPDATE game.t_encounter SET expires_at=clock_timestamp()+interval '60 seconds',updated_at=clock_timestamp() WHERE encounter_id=?",e.id);
-        } else {hp=Math.max(0,hp-b.counter);events.add("MONSTER_ATTACK");if(hp==0) {status="DEFEAT";events.add("DEFEAT");resolve(e.id,"PLAYER_DEFEATED");}}
+        } else {hp=counter(b,e,events);if(hp==0) {status="DEFEAT";events.add("DEFEAT");resolve(e.id,"PLAYER_DEFEATED");}}
         save(b,hp,monster,status);
         var presentation=new ArrayList<BattleDtos.PresentationEvent>();
         presentation.add(new BattleDtos.PresentationEvent("PLAYER_ATTACK",b.monsterHp-monster));
@@ -114,7 +122,7 @@ public class BattleService {
             collection=collection().stream().filter(c->c.monsterCode().equals(e.code)).findFirst().orElseThrow();
         } else if(b.status.equals("VICTORY")) {resolve(e.id,"DEFEATED");}
         else {
-            int hp=Math.max(0,b.hp-b.counter);events.add("MONSTER_ATTACK");
+            int hp=counter(b,e,events);
             if(hp==0) {events.add("DEFEAT");resolve(e.id,"PLAYER_DEFEATED");}
             save(b,hp,b.monsterHp,hp==0?"DEFEAT":"ACTIVE");
         }

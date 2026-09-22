@@ -57,3 +57,9 @@ test('the other fifteen stable slots remain provisional non-Alpha and not playab
  const slots=monsterDex.filter(m=>!m.alphaCandidate);assert.equal(slots.length,15);
  for(const m of slots) {assert.equal(m.monsterCode,`MONSTER_${String(m.dexNo).padStart(3,'0')}`);assert.equal(m.displayName,null);assert.equal(m.encounterWeight,0);assert.equal(m.contentReady,false);}
 });
+
+test('battle personality is required for Alpha and separate from ambient behavior',()=>{
+ const raw=JSON.parse(fs.readFileSync('src/entities/monster-dex.json','utf8'));
+ assert.equal(monsterDex.find(m=>m.monsterCode==='MOSSY').battlePersonality,'DEFENSIVE');
+ for(const value of [null,'TIMID','UNKNOWN']){const copy=structuredClone(raw);copy[0].battlePersonality=value;assert.throws(()=>parseMonsterDefinitions(copy));}
+});
