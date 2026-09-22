@@ -30,9 +30,9 @@ class MonsterContentTest {
     }
     @Test void productionGateCannotBeBypassedByPositiveDatabaseWeight() {
         for(var d:MonsterContent.definitions()) {
-            boolean pip=List.of("PIP","MELLO","MOSSY","CHIRP","BUBU").contains(d.monsterCode());
+            boolean pip=List.of("PIP","MELLO","MOSSY","CHIRP","BUBU","PEBB","PUFF","TIKKI","MIMI","WISP").contains(d.monsterCode());
             assertEquals(pip,MonsterContent.productionReady(d.monsterCode()));
-            var master=new MonsterSelector.Monster(d.dexNo(),d.monsterCode(),d.displayName(),d.rarity(),d.movementProfile(),1,3,100);
+            var master=new MonsterSelector.Monster(d.dexNo(),d.monsterCode(),d.displayName(),d.rarity(),d.movementProfile(),1,3,d.encounterWeight());
             assertEquals(pip,MonsterContent.eligible(master));
             if(d.alphaCandidate()) {assertEquals(d.monsterCode().toLowerCase(),d.assetIdentity());assertEquals(d.monsterCode().equals("PIP")?.8:1,d.visualScale());}
         }
@@ -51,7 +51,14 @@ class MonsterContentTest {
         assertEquals(.35,CombatRules.captureChance(30,30,"COMMON"),1e-9);
         assertEquals(.60,CombatRules.captureChance(15,30,"COMMON"),1e-9);
         assertEquals(.85,CombatRules.captureChance(0,30,"COMMON"),1e-9);
-        for(var rarity:List.of("UNCOMMON","RARE","SPECIAL")) assertEquals(MonsterContent.rarity(rarity).baseCaptureRate(),CombatRules.captureChance(30,30,rarity),1e-9);
-        assertThrows(GameFault.class,()->CombatRules.captureChance(30,30,"EPIC"));
+        // Batch2 production UNCOMMON and Batch3 fixture rarities share the server defaults.
+        for(var rarity:List.of("UNCOMMON","RARE","SPECIAL")) {
+            double base=MonsterContent.rarity(rarity).baseCaptureRate();
+            assertEquals(base,CombatRules.captureChance(30,30,rarity),1e-9);
+            assertEquals(base+.25,CombatRules.captureChance(15,30,rarity),1e-9);
+            assertEquals(base+.50,CombatRules.captureChance(0,30,rarity),1e-9);
+        }
+        for(var rarity:List.of("EPIC","UNKNOWN")) assertThrows(GameFault.class,()->CombatRules.captureChance(30,30,rarity));
+        assertThrows(GameFault.class,()->CombatRules.captureChance(30,30,null));
     }
 }

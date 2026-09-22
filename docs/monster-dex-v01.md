@@ -46,14 +46,14 @@ All names/themes except PIP are provisional and require visual design approval. 
 | 4 | CHIRP | CHIRP | COMMON | BIRD | FLYING | CURIOUS | TOP | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 5 | MONSTER_005 | Button beetle | COMMON | INSECT | EDGE | CURIOUS | EDGE | DAY | TBD | round shell and antennae | PROVISIONAL | — |
 | 6 | BUBU | BUBU | COMMON | AQUATIC | JUMP | PLAYFUL | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
-| 7 | PEBB | PEBB | COMMON | ROCK | GROUND | PASSIVE | NEAR_DOCK | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
-| 8 | PUFF | PUFF | COMMON | SPIRIT | FLOATING | CURIOUS | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 7 | PEBB | PEBB | COMMON | ROCK | GROUND | PASSIVE | NEAR_DOCK | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
+| 8 | PUFF | PUFF | COMMON | SPIRIT | FLOATING | CURIOUS | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 9 | MONSTER_009 | Lantern wisp | UNCOMMON | SPIRIT | FLOATING | TIMID | FLOATING_AREA | NIGHT | TBD | hollow flame | PROVISIONAL | — |
-| 10 | TIKKI | TIKKI | UNCOMMON | MECHANICAL | GROUND | CURIOUS | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 10 | TIKKI | TIKKI | UNCOMMON | MECHANICAL | GROUND | CURIOUS | BOTTOM | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 11 | MONSTER_011 | Clock crawler | UNCOMMON | MECHANICAL | GROUND | CURIOUS | BOTTOM | FOCUS_SESSION | TBD | gears and short legs | PROVISIONAL | — |
 | 12 | MONSTER_012 | Orbit mote | UNCOMMON | COSMIC | FLOATING | PASSIVE | FLOATING_AREA | NIGHT | TBD | ringed sphere | PROVISIONAL | — |
-| 13 | MIMI | MIMI | UNCOMMON | MIMIC | STATIC | TRICKSTER | EDGE | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
-| 14 | WISP | WISP | UNCOMMON | SPIRIT | FLOATING | TIMID | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 13 | MIMI | MIMI | UNCOMMON | MIMIC | STATIC | TRICKSTER | EDGE | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
+| 14 | WISP | WISP | UNCOMMON | SPIRIT | FLOATING | TIMID | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 15 | SHADE | SHADE | UNCOMMON | SHADOW | EDGE | TRICKSTER | EDGE | NIGHT | server rarity default | Production visual design pending | PROVISIONAL | candidate |
 | 16 | EMBER | EMBER | RARE | FIRE | FREE_2D | AGGRESSIVE | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
 | 17 | MONSTER_017 | Arch golem | RARE | ROCK | STATIC | SLEEPY | NEAR_DESKTOP_EDGE | ANY_TIME | TBD | stone arch | PROVISIONAL | — |

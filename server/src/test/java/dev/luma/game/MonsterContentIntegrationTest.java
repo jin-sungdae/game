@@ -21,7 +21,7 @@ class MonsterContentIntegrationTest {
         for(var d:MonsterContent.definitions()) if(d.alphaCandidate() && !d.contentReady())
             jdbc.update("INSERT INTO game.m_monster(code,name,rarity,movement_profile,min_level,max_level,encounter_weight,use_yn) VALUES (?,?,?,?,1,3,?,true)",d.monsterCode(),d.displayName(),d.rarity(),d.movementProfile(),d.encounterWeight());
         jdbc.update("INSERT INTO game.m_monster(code,name,rarity,movement_profile,min_level,max_level,encounter_weight,use_yn) VALUES ('UNKNOWN','Unknown','COMMON','GROUND',1,3,100,true)");
-        assertEquals(List.of("PIP","MELLO","MOSSY","CHIRP","BUBU"),repository.monsters().stream().map(MonsterSelector.Monster::code).toList());
+        assertEquals(List.of("PIP","MELLO","MOSSY","CHIRP","BUBU","PEBB","PUFF","TIKKI","MIMI","WISP"),repository.monsters().stream().map(MonsterSelector.Monster::code).toList());
         jdbc.update("UPDATE game.m_monster SET use_yn=false");
         assertTrue(repository.monsters().isEmpty());
     }

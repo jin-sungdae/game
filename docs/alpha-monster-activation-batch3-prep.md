@@ -47,3 +47,16 @@ MANUAL_REQUIRED / NOT_RUN: visible WKWebView movement/timing, real focus/typing/
 ## Executed local evidence
 
 AUTOMATED PASS: frontend build;58 animation/content tests;50 presentation tests;27 asset tests;9 automation tests; strict-alpha15/15; Tao integrity; Rust124 deterministic tests (11 opt-in ignored by default), fmt/clippy; Java113 tests and bootJar against fresh isolated PostgreSQL16 on loopback55463. The new ignored live fixture was explicitly run once for each of the five species via LUMA_BATCH3_LIVE=1, all PASS. The other ten opt-in Rust fixtures were NOT_RUN. Existing Batch1 and #27 deterministic regression tests passed. No native visible UI launch was performed.
+
+## PR #29 main integration
+
+Merged origin/main 3dc5e5a into the existing PR #30 branch without rewriting history. This supersedes the pre-Batch2 baseline notes above: ten production candidates and unchanged V7 now come from main. No migration is added or modified relative to main.
+
+Three expected conflicts were resolved semantically:
+- CombatRules: combine Batch2 COMMON/UNCOMMON with Batch3 RARE/SPECIAL; preserve null/unknown/EPIC rejection and unchanged HP term, server defaults, ItemRules/Charm and clamp.
+- MonsterContentTest: retain main's ten-species production assertions and rarity-specific master weights; keep COMMON assertions, extend full/half/zero HP checks for UNCOMMON/RARE/SPECIAL, retain EPIC/unknown/null rejection. Batch2ActivationTest is byte-identical to main.
+- Runtime test modules: register batch2 AND batch3 alongside batch1/advanced; retain main's ten-species startup assets and all existing runtime behavior. Batch2 World tests are byte-identical to main.
+
+Post-merge local AUTOMATED PASS: Java/PostgreSQL125 tests (Batch1 11, Batch2 12, Batch3 11, MonsterContent 5), zero failures/errors/skips, bootJar; Rust126 deterministic tests, fmt/clippy; frontend build,58 animation/content,51 presentation,27 asset and9 automation tests; strict-alpha15/15; Tao integrity and whitespace. All five Batch3 HTTP→Desktop World live fixtures were explicitly rerun and passed. Batch2 production TIKKI/MIMI/WISP capture, repeat persistence, HP rates and Charm are exercised through real Spring HTTP/PostgreSQL tests. Twelve Rust fixtures are ignored by default; the Batch3 fixture was explicitly executed for all five species; other opt-in live tests NOT_RUN in this integration turn.
+
+Verified current content: PIP/MELLO/MOSSY/CHIRP/BUBU/PEBB/PUFF/TIKKI/MIMI/WISP remain ready/PRODUCTION/enabled. SHADE/EMBER/LUNET/NOVA/NOCT remain false/PROVISIONAL/false. V1–V7, content JSON and Batch2-specific tests match main exactly. Isolated PostgreSQL was stopped after validation. Final merge HEAD CI and GitHub mergeability are recorded on PR #30. Manual native acceptance boundary remains unchanged.

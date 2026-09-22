@@ -33,7 +33,7 @@ class Batch1Assets(unittest.TestCase):
                 self.assertTrue(m['enabled'])
                 self.assertTrue(m['contentReady'])
                 self.assertEqual(m['productionStatus'],'PRODUCTION')
-        self.assertEqual([m['monsterCode'] for m in content if m['enabled']],['PIP','MELLO','MOSSY','CHIRP','BUBU'])
+        self.assertEqual([m['monsterCode'] for m in content if m['enabled']],['PIP','MELLO','MOSSY','CHIRP','BUBU','PEBB','PUFF','TIKKI','MIMI','WISP'])
 
     def test_delivered_four_and_pip_never_missing(self):
         errors,pending=test_assets.validator.validate_alpha(ROOT)

@@ -1,4 +1,4 @@
-const batch1 = ['PIP','MELLO','MOSSY','CHIRP','BUBU'];
+const activeCodes = ['PIP','MELLO','MOSSY','CHIRP','BUBU','PEBB','PUFF','TIKKI','MIMI','WISP'];
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -16,7 +16,7 @@ test('all thirty slots validate with unique codes/numbers and exact rarity distr
  assert.deepEqual(dex.monsterDex.map(m => m.dexNo), Array.from({length:30}, (_,i) => i+1));
  assert.deepEqual(dex.rarities.map(r => dex.monsterDex.filter(m => m.rarity === r).length), [8,7,6,5,4]);
  assert.ok(Object.isFrozen(dex.monsterDex)); assert.ok(dex.monsterDex.every(Object.isFrozen));
- for (const m of dex.monsterDex.filter(m => !batch1.includes(m.monsterCode))) {
+ for (const m of dex.monsterDex.filter(m => !activeCodes.includes(m.monsterCode))) {
   assert.equal(m.enabled, false); assert.equal(m.contentReady, false);
   if (!m.alphaCandidate) { assert.equal(m.displayName, null); assert.equal(m.encounterWeight, 0); assert.equal(m.baseCaptureRate, null); }
   assert.equal(m.productionStatus, 'PROVISIONAL');
@@ -40,7 +40,7 @@ test('movement wire vocabulary matches existing Rust serde enum, including FREE_
 test('PIP metadata and production asset stay compatible with existing gameplay', () => {
  const pip = dex.resolveMonsterDefinition('PIP');
  assert.deepEqual([pip.rarity,pip.archetype,pip.movementProfile,pip.encounterWeight,pip.baseCaptureRate,pip.visualScale], ['COMMON','BEAST','GROUND',100,.35,.8]);
- assert.deepEqual(dex.enabledMonsterDefinitions().map(m => m.monsterCode), batch1);
+ assert.deepEqual(dex.enabledMonsterDefinitions().map(m => m.monsterCode), activeCodes);
  assert.deepEqual(resolveMonster('PIP'), {name:'PIP',assetRoot:'/assets/monsters/pip',baseAsset:'/assets/monsters/pip/base.png',visualScale:.8,alphaDelivery:true});
  const seed = fs.readFileSync('server/src/main/resources/db/migration/V2__local_master_seed.sql','utf8');
  assert.ok(seed.includes("('PIP','PIP','COMMON','GROUND',1,3,100,true)"));
@@ -49,7 +49,7 @@ test('unknown/prototype names and canonical Alpha versus provisional delivery pa
  for (const code of ['unknown','constructor','__proto__','toString']) {
   assert.equal(resolveMonster(code),null); assert.equal(dex.resolveMonsterDefinition(code),null);
  }
- for (const m of dex.monsterDex.filter(m => !batch1.includes(m.monsterCode))) {
+ for (const m of dex.monsterDex.filter(m => !activeCodes.includes(m.monsterCode))) {
   assert.equal(resolveMonster(m.monsterCode).baseAsset,m.alphaCandidate ? `/assets/monsters/${m.assetIdentity}/base.png` : null);
   assert.equal(resolveMonster(m.monsterCode).assetRoot,`/assets/monsters/${m.assetIdentity}`);
  }
@@ -79,7 +79,7 @@ test('Alpha candidates cover silhouettes, movement, rarity and desktop spawn div
  assert.equal(alpha.length,15);
  assert.deepEqual([...new Set(alpha.map(m => m.movementProfile))].sort(), [...dex.movementProfiles].sort());
  assert.deepEqual(dex.rarities.map(r => alpha.filter(m => m.rarity === r).length), [7,4,3,0,1]);
- assert.deepEqual(alpha.filter(m => m.enabled).map(m => m.monsterCode), batch1);
+ assert.deepEqual(alpha.filter(m => m.enabled).map(m => m.monsterCode), activeCodes);
 });
 test('Dex masks undiscovered names/assets and capture supersedes discovery', () => {
  const pip = dex.monsterDex[0];
@@ -92,8 +92,8 @@ test('Dex masks undiscovered names/assets and capture supersedes discovery', () 
  assert.equal(provisional.visual,'BASE');
  assert.equal(provisional.baseAsset,'/assets/monsters/mello/base.png');
  assert.equal(dex.monsterDex[1].contentReady,true);
- assert.equal(dex.monsterDex.find(m=>m.monsterCode==='PEBB').enabled,false);
- assert.equal(dexEntries(progress([],dex.monsterDex.map(m => m.monsterCode))).length,5);
+ assert.equal(dex.monsterDex.find(m=>m.monsterCode==='SHADE').enabled,false);
+ assert.equal(dexEntries(progress([],dex.monsterDex.map(m => m.monsterCode))).length,10);
  assert.equal(dexEntries(progress(['unknown']))[0].state,'UNDISCOVERED');
 });
 test('documentation includes exactly the same 30 design slots and Alpha flags', () => {

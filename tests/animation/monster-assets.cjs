@@ -1,4 +1,4 @@
-const batch1 = ['PIP','MELLO','MOSSY','CHIRP','BUBU'];
+const activeCodes = ['PIP','MELLO','MOSSY','CHIRP','BUBU','PEBB','PUFF','TIKKI','MIMI','WISP'];
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
@@ -84,9 +84,9 @@ test('confirmed content and delivery identities match; successful image loads ne
   assert.equal(asset.baseAsset,`${asset.assetRoot}/base.png`);
   assert.equal(asset.visualScale,m.visualScale);
   assert.equal(await loader.load(asset.baseAsset),asset.baseAsset);
-  assert.equal(m.contentReady,batch1.includes(m.monsterCode));
-  assert.equal(m.enabled,batch1.includes(m.monsterCode));
-  assert.equal(m.productionStatus,batch1.includes(m.monsterCode)?'PRODUCTION':'PROVISIONAL');
+  assert.equal(m.contentReady,activeCodes.includes(m.monsterCode));
+  assert.equal(m.enabled,activeCodes.includes(m.monsterCode));
+  assert.equal(m.productionStatus,activeCodes.includes(m.monsterCode)?'PRODUCTION':'PROVISIONAL');
  }
  assert.equal(JSON.stringify(monsterDex),before);
 });

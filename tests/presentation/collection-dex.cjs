@@ -97,3 +97,20 @@ test('all five activated species project their own Dex identity, rarity, asset a
   assert.equal(slot.asset,`/assets/monsters/${code.toLowerCase()}/base.png`);assert.equal(slot.captureCount,i+1);
  }
 });
+
+test(process.env.LUMA_TEST_COLLECTION_OUTPUT ? 'Batch2 live HTTP Collection projects into the real Dex' : 'Batch2 captures preserve independent Dex assets, rarity and timestamps',()=>{
+ const codes=['PEBB','PUFF','TIKKI','MIMI','WISP'];
+ const records=process.env.LUMA_TEST_COLLECTION_OUTPUT
+  ? JSON.parse(fs.readFileSync(process.env.LUMA_TEST_COLLECTION_OUTPUT,'utf8'))
+  : codes.map(monsterCode=>({...record,monsterCode,monsterName:monsterCode,captureCount:1}));
+ const model=collectionDexModel({...view,records});
+ assert.equal(model.captured,5);
+ for(const code of codes){
+  const slot=model.slots.find(s=>s.name===code);
+  const row=records.find(r=>r.monsterCode===code);
+  assert.equal(slot.state,'CAPTURED');assert.equal(slot.captureCount,1);
+  assert.equal(slot.firstCapturedAt,row.firstCapturedAt);
+  assert.equal(slot.rarity,['PEBB','PUFF'].includes(code)?'COMMON':'UNCOMMON');
+  assert.equal(slot.asset,`/assets/monsters/${code.toLowerCase()}/base.png`);
+ }
+});
