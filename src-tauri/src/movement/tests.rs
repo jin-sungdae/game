@@ -237,3 +237,43 @@ fn movement_uses_final_desktop_safe_area_not_raw_screen() {
         }
     }
 }
+
+#[test]
+fn batch1_profiles_fit_existing_entity_bounds_without_activation() {
+    let definitions: Vec<serde_json::Value> =
+        serde_json::from_str(include_str!("../../../src/entities/monster-dex.json")).unwrap();
+    for (code, expected, zone) in [
+        ("MELLO", MovementProfile::Jump, "BOTTOM"),
+        ("MOSSY", MovementProfile::Ground, "LOWER_CORNER"),
+        ("CHIRP", MovementProfile::Flying, "TOP"),
+        ("BUBU", MovementProfile::Jump, "BOTTOM"),
+    ] {
+        let metadata = definitions
+            .iter()
+            .find(|m| m["monsterCode"] == code)
+            .unwrap();
+        let profile: MovementProfile =
+            serde_json::from_value(metadata["movementProfile"].clone()).unwrap();
+        assert_eq!(profile, expected);
+        assert_eq!(metadata["spawnProfile"], zone);
+        assert_eq!(metadata["enabled"], false);
+        let a = area();
+        let mut position = a.clamp(-700.0, a.ground_y() + 80.0, SIZE);
+        let mut controller = MovementController::default();
+        controller.start(intent(profile), position, a, SIZE);
+        assert_eq!(controller.profile(), Some(expected));
+        for _ in 0..120 {
+            let (next, done) = controller.tick(position, 0.1, a, SIZE, 40.0);
+            inside(next, a, SIZE);
+            position = next;
+            if done {
+                break;
+            }
+        }
+        assert_eq!(
+            controller.profile(),
+            None,
+            "{code}: finite motion completes"
+        );
+    }
+}
