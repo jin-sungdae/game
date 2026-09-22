@@ -47,10 +47,18 @@ class MonsterContentTest {
             new MonsterSelector.Monster(1,"PIP","PIP","COMMON","GROUND",1,3,999)))
             assertThrows(GameUnavailable.class,()->MonsterContent.eligible(master));
     }
-    @Test void pipCaptureFormulaIsUnchangedAndUnconnectedRaritiesRemainUnsupported() {
+    @Test void pipCaptureFormulaIsUnchangedAndBatch3UsesRarityDefaults() {
         assertEquals(.35,CombatRules.captureChance(30,30,"COMMON"),1e-9);
         assertEquals(.60,CombatRules.captureChance(15,30,"COMMON"),1e-9);
         assertEquals(.85,CombatRules.captureChance(0,30,"COMMON"),1e-9);
-        for(var rarity:List.of("RARE","EPIC","SPECIAL")) assertThrows(GameFault.class,()->CombatRules.captureChance(30,30,rarity));
+        // Batch2 production UNCOMMON and Batch3 fixture rarities share the server defaults.
+        for(var rarity:List.of("UNCOMMON","RARE","SPECIAL")) {
+            double base=MonsterContent.rarity(rarity).baseCaptureRate();
+            assertEquals(base,CombatRules.captureChance(30,30,rarity),1e-9);
+            assertEquals(base+.25,CombatRules.captureChance(15,30,rarity),1e-9);
+            assertEquals(base+.50,CombatRules.captureChance(0,30,rarity),1e-9);
+        }
+        for(var rarity:List.of("EPIC","UNKNOWN")) assertThrows(GameFault.class,()->CombatRules.captureChance(30,30,rarity));
+        assertThrows(GameFault.class,()->CombatRules.captureChance(30,30,null));
     }
 }

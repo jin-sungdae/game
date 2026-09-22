@@ -214,3 +214,6 @@ mod advanced;
 
 #[cfg(test)]
 mod batch2;
+
+#[cfg(test)]
+mod batch3;
