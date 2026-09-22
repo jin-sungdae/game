@@ -56,3 +56,11 @@ test('missing MOKORI base is cached CSS fallback, never stage01',async()=>{
  const url=companionBase('moa',2);assert.equal(rendererSource(null,await loader.load(url)).kind,'css');
  assert.equal(await loader.load(url),null);assert.deepEqual(calls,['/assets/creatures/moa/stage02/base.png']);
 });
+test('NEBLA stage03 missing asset stays diagnostic and never borrows MOKORI',async()=>{
+ const {resolveCompanion}=require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'entities/registry.js'));
+ assert.equal(resolveCompanion('moa',3).name,'NEBLA');
+ const url=companionBase('moa',3);assert.equal(url,'/assets/creatures/moa/stage03/base.png');
+ const calls=[];const loader=new BaseAssetLoader(async u=>{calls.push(u);throw Error('not supplied');});
+ assert.equal(rendererSource(null,await loader.load(url)).kind,'css');assert.equal(await loader.load(url),null);
+ assert.deepEqual(calls,[url]);assert.equal(fs.existsSync('public'+url),false);
+});
