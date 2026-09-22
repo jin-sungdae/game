@@ -156,7 +156,7 @@ fn fixture(zone: SpawnZone, size: Size) -> Candidate {
     Candidate {
         zone,
         size,
-        ..PipProvider.candidate("PIP").unwrap()
+        ..ContentProvider.candidate("PIP").unwrap()
     }
 }
 #[test]
@@ -285,14 +285,14 @@ fn provider_authority_lifetime_and_inactive_conditions() {
         &encounter,
         remaining,
         Duration::from_secs(3),
-        &PipProvider,
+        &ContentProvider,
         &env,
         42,
     )
     .unwrap();
     assert_eq!(intent.lifetime, remaining);
     assert_eq!(intent.requested_at, Duration::from_secs(3));
-    assert!(PipProvider.candidate("TEST_ONLY").is_none());
+    assert!(ContentProvider.candidate("TEST_ONLY").is_none());
     for condition in [
         SpawnCondition::Day,
         SpawnCondition::Night,
@@ -319,7 +319,7 @@ fn provider_authority_lifetime_and_inactive_conditions() {
         &encounter,
         Duration::ZERO,
         Duration::ZERO,
-        &PipProvider,
+        &ContentProvider,
         &env,
         42
     )

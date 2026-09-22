@@ -104,10 +104,12 @@ fn post_has_no_client_selection_fields_and_maps_response() {
 fn pip_mapping_reuse_expiry_and_debug_separation() {
     let mut w = world();
     let value = encounter();
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(0.0, Some(value.clone()), 60.0);
     assert_eq!(w.view.pip.as_ref().unwrap().state, PipState::Spawning);
     w.tick(1.0, 0.03, (9999.0, 9999.0), false);
     let x = w.view.pip.as_ref().unwrap().x;
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(1.0, Some(value), 59.0);
     assert_eq!(w.view.pip.as_ref().unwrap().x, x);
     w.despawn(2.0);
@@ -117,6 +119,7 @@ fn pip_mapping_reuse_expiry_and_debug_separation() {
     w.tick(60.6, 0.03, (9999.0, 9999.0), false);
     assert!(w.view.pip.is_none());
     w.spawn(61.0);
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(61.1, None, 0.0);
     assert!(w.view.pip.is_some());
 }
@@ -131,6 +134,7 @@ fn unknown_monster_profile_and_expired_lease_do_not_spawn() {
         e.monster.code = code.into();
         e.monster.movement_profile = profile.into();
         let mut w = world();
+        crate::spawn::runtime::test_environment(&mut w);
         w.apply_server_encounter(0.0, Some(e), remaining);
         assert!(w.view.pip.is_none());
     }
@@ -142,7 +146,9 @@ fn active_lookup_no_content_expires_server_visual() {
     assert!(response.is_none());
     thread.join().unwrap();
     let mut w = world();
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(0.0, Some(encounter()), 60.0);
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(1.0, response, 0.0);
     assert_eq!(w.view.pip.unwrap().state, PipState::Despawning);
 }
@@ -176,6 +182,7 @@ fn live_postgres_server_to_desktop_world_vertical_slice() {
     assert_eq!(first.encounter_id, active.encounter_id);
     let remaining = first.remaining_at(Utc::now());
     assert!(remaining > 0.0 && remaining <= 60.0);
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(0.0, Some(first), remaining);
     assert_eq!(w.view.pip.as_ref().unwrap().state, PipState::Spawning);
     w.tick(0.7, 0.03, (9999.0, 9999.0), false);
@@ -300,9 +307,11 @@ fn active_battle_suspends_visual_ttl_and_server_resolution_wins() {
         7,
     );
     let remaining = e.remaining_at(e.expires_at + chrono::Duration::seconds(100));
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(0.0, Some(e), remaining);
     w.tick(100.0, 0.033, (0.0, 0.0), false);
     assert!(w.view.pip.is_some());
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(101.0, None, 0.0);
     w.tick(102.0, 0.033, (0.0, 0.0), false);
     assert!(w.view.pip.is_none());
@@ -329,6 +338,7 @@ fn live_battle_capture_reward_world_slice() {
         7,
     );
     w.apply_bootstrap(before.clone());
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(0.0, Some(e.clone()), 60.0);
     assert!(w.view.pip.is_some());
     let mut b = api.battle(e.encounter_id, Some("start")).unwrap();
@@ -362,6 +372,7 @@ fn live_battle_capture_reward_world_slice() {
         before.active_companion.bond + reward.bond
     );
     assert!(api.encounter(false).unwrap().is_none());
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(5.0, None, 0.0);
     w.tick(6.0, 0.033, (0.0, 0.0), false);
     assert!(w.view.pip.is_none());
@@ -403,6 +414,7 @@ fn live_capture_failure_defeat_world_slice() {
         0.0,
         42,
     );
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(0.0, Some(e.clone()), 60.0);
     while b.status == battle::Status::Active {
         let c = api.capture(b.battle_id).unwrap();
@@ -415,6 +427,7 @@ fn live_capture_failure_defeat_world_slice() {
     assert_eq!(b.encounter_status, "PLAYER_DEFEATED");
     assert_eq!(b.companion.hp, 0);
     assert_eq!(api.bootstrap().unwrap().player.gold, before.player.gold);
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(3.0, None, 0.0);
     w.tick(4.0, 0.033, (0.0, 0.0), false);
     assert!(w.view.pip.is_none());
@@ -447,6 +460,7 @@ fn battle_response_suspends_original_lease_before_reconciliation() {
         0.0,
         7,
     );
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(0.0, Some(encounter()), 1.0);
     w.apply_battle(serde_json::from_str(&battle_json("ACTIVE")).unwrap());
     w.tick(61.0, 0.033, (0.0, 0.0), false);
@@ -465,14 +479,78 @@ fn debug_pip_cannot_reuse_a_resolved_server_battle() {
         0.0,
         7,
     );
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(0.0, Some(encounter()), 1.0);
     w.view
         .game
         .apply_battle(serde_json::from_str(&battle_json("VICTORY")).unwrap());
+    crate::spawn::runtime::test_environment(&mut w);
     w.apply_server_encounter(2.0, None, 0.0);
     w.tick(3.0, 0.033, (0.0, 0.0), false);
     w.debug_spawn(4.0);
     assert!(w.view.pip.is_some());
     assert!(w.view.game.encounter_id.is_none());
     assert!(w.view.game.command("interact").is_none());
+}
+
+#[test]
+fn spawn_create_one_empty_post_and_reconcile_is_get_only() {
+    use crate::spawn::runtime::Action;
+    for (action, method, path) in [
+        (Action::Create, "POST", "/api/v1/encounters"),
+        (Action::Reconcile, "GET", "/api/v1/encounters/active"),
+    ] {
+        let (url, thread) = endpoint("200 OK", &serde_json::to_string(&encounter()).unwrap());
+        assert!(Api::new(&url)
+            .unwrap()
+            .spawn_action(action)
+            .unwrap()
+            .is_some());
+        let request = thread.join().unwrap();
+        assert!(request.starts_with(&format!("{method} {path} HTTP/1.1")));
+        assert_eq!(request.split("\r\n\r\n").nth(1), Some(""));
+        assert!(!request.contains("monsterCode"));
+        assert!(!request.contains("rarity"));
+    }
+}
+#[test]
+fn resolution_reconciles_terminal_before_retrying_lost_ignore() {
+    let (url, thread) = endpoint("204 No Content", "");
+    assert!(Api::new(&url)
+        .unwrap()
+        .spawn_action(crate::spawn::runtime::Action::Resolve(
+            uuid::Uuid::from_u128(1)
+        ))
+        .unwrap()
+        .is_none());
+    assert!(thread
+        .join()
+        .unwrap()
+        .starts_with("GET /api/v1/encounters/active "));
+}
+
+#[test]
+fn resolution_does_not_ignore_a_different_current_encounter() {
+    let (url, thread) = endpoint("200 OK", &serde_json::to_string(&encounter()).unwrap());
+    let result = Api::new(&url)
+        .unwrap()
+        .spawn_action(crate::spawn::runtime::Action::Resolve(
+            uuid::Uuid::from_u128(99),
+        ))
+        .unwrap()
+        .unwrap();
+    assert_eq!(result.encounter_id, encounter().encounter_id);
+    assert!(thread
+        .join()
+        .unwrap()
+        .starts_with("GET /api/v1/encounters/active "));
+}
+#[test]
+fn passive_worker_error_backoff_is_bounded_and_success_restores_existing_poll_interval() {
+    let mut failures = 0;
+    for expected in [5, 10, 30, 30] {
+        assert_eq!(poll_delay(false, &mut failures).as_secs(), expected);
+    }
+    assert_eq!(poll_delay(true, &mut failures).as_secs(), 5);
+    assert_eq!(failures, 0);
 }

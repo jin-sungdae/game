@@ -6,6 +6,9 @@ use serde::Deserialize;
 struct Metadata {
     monster_code: String,
     enabled: bool,
+    content_ready: bool,
+    rarity: String,
+    asset_identity: String,
     production_status: String,
     spawn_profile: String,
     spawn_condition: SpawnCondition,
@@ -17,24 +20,21 @@ fn zone(profile: &str) -> Option<SpawnZone> {
     Some(match profile {
         "BOTTOM" => SpawnZone::Bottom,
         "TOP" => SpawnZone::Top,
-        "EDGE" | "NEAR_DESKTOP_EDGE" => SpawnZone::LowerCorner,
+        "EDGE" | "NEAR_DESKTOP_EDGE" | "LOWER_CORNER" => SpawnZone::LowerCorner,
         "FREE_AREA" | "FLOATING_AREA" => SpawnZone::FreeArea,
         "NEAR_DOCK" => SpawnZone::NearDock,
         _ => return None,
     })
 }
-pub(super) fn pip_candidate(code: &str) -> Option<Candidate> {
-    if code != "PIP" {
-        return None;
-    }
+pub(super) fn content_candidate(code: &str) -> Option<Candidate> {
     let records: Vec<Metadata> =
         serde_json::from_str(include_str!("../../../src/entities/monster-dex.json")).ok()?;
     let mut matches = records.into_iter().filter(|m| m.monster_code == code);
     let metadata = matches.next()?;
     if matches.next().is_some()
         || !metadata.enabled
+        || !metadata.content_ready
         || metadata.production_status != "PRODUCTION"
-        || metadata.movement_profile != MovementProfile::Ground
         || !metadata.spawn_condition.enabled()
     {
         return None;
@@ -59,18 +59,82 @@ mod tests {
             if metadata.enabled {
                 assert!(zone(&metadata.spawn_profile).is_some());
             } else if metadata.spawn_profile == "LOWER_CORNER" {
-                assert!(zone(&metadata.spawn_profile).is_none());
+                assert_eq!(zone(&metadata.spawn_profile), Some(SpawnZone::LowerCorner));
             } else {
                 assert!(zone(&metadata.spawn_profile).is_some());
             }
             if metadata.monster_code != "PIP" {
-                assert!(pip_candidate(&metadata.monster_code).is_none());
+                assert!(content_candidate(&metadata.monster_code).is_none());
             }
         }
         assert!(zone("UNREVIEWED_PROFILE").is_none());
-        let pip = pip_candidate("PIP").unwrap();
+        let pip = content_candidate("PIP").unwrap();
         assert_eq!(pip.zone, SpawnZone::NearDock);
         assert_eq!(pip.movement_profile, MovementProfile::Ground);
         assert_eq!(pip.condition, SpawnCondition::AnyTime);
+    }
+}
+
+#[derive(Clone, serde::Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct MonsterIdentity {
+    pub monster_code: String,
+    pub asset_identity: String,
+    pub rarity: String,
+    pub level: u32,
+    pub encounter_id: Option<uuid::Uuid>,
+    pub movement_profile: MovementProfile,
+}
+pub fn identity(code: &str) -> Option<MonsterIdentity> {
+    let records: Vec<Metadata> =
+        serde_json::from_str(include_str!("../../../src/entities/monster-dex.json")).ok()?;
+    let m = records.into_iter().find(|m| {
+        m.monster_code == code
+            && m.enabled
+            && m.content_ready
+            && m.production_status == "PRODUCTION"
+    })?;
+    Some(MonsterIdentity {
+        monster_code: m.monster_code,
+        asset_identity: m.asset_identity,
+        rarity: m.rarity,
+        level: 0,
+        encounter_id: None,
+        movement_profile: m.movement_profile,
+    })
+}
+
+#[cfg(test)]
+mod integration_tests {
+    use super::*;
+    #[test]
+    fn unsupported_zone_fails_closed_and_lower_corner_has_explicit_mapping() {
+        assert!(zone("UNSUPPORTED").is_none());
+        assert_eq!(zone("LOWER_CORNER"), Some(SpawnZone::LowerCorner));
+        assert!(content_candidate("MOSSY").is_none());
+        assert!(content_candidate("SHADE").is_none());
+        assert!(content_candidate("constructor").is_none());
+        assert_eq!(identity("PIP").unwrap().asset_identity, "pip");
+    }
+    #[test]
+    fn all_movement_wire_profiles_reuse_the_existing_engine_enum() {
+        let names = [
+            "GROUND", "JUMP", "FREE_2D", "FLOATING", "FLYING", "EDGE", "STATIC",
+        ];
+        let expected = [
+            MovementProfile::Ground,
+            MovementProfile::Jump,
+            MovementProfile::Free2d,
+            MovementProfile::Floating,
+            MovementProfile::Flying,
+            MovementProfile::Edge,
+            MovementProfile::Static,
+        ];
+        for (name, profile) in names.into_iter().zip(expected) {
+            assert_eq!(
+                serde_json::from_value::<MovementProfile>(serde_json::json!(name)).unwrap(),
+                profile
+            );
+        }
     }
 }

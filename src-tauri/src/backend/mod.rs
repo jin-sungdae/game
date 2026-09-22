@@ -70,12 +70,11 @@ pub struct Encounter {
     pub expiration_suspended: bool,
 }
 impl Encounter {
-    pub fn supports_pip(&self) -> bool {
-        self.monster.code == "PIP"
-            && self.monster.movement_profile == "GROUND"
-            && self.monster.level > 0
-            && self.expires_at > self.spawned_at
-            && !self.encounter_id.is_nil()
+    pub fn supports_content(&self) -> bool {
+        use crate::spawn::SpawnCandidateProvider;
+        crate::spawn::ContentProvider
+            .candidate(&self.monster.code)
+            .is_some_and(|c| crate::spawn::metadata_matches(self, &c))
     }
     pub fn remaining_at(&self, now: DateTime<Utc>) -> f64 {
         if self.expiration_suspended {
@@ -223,6 +222,10 @@ impl Api {
     }
 }
 pub enum Event {
+    SpawnCompleted(
+        crate::spawn::runtime::Action,
+        Result<Option<Encounter>, String>,
+    ),
     Items(items::Inventory),
     Purchased(items::Purchase),
     ItemUsed(items::Used),
@@ -264,7 +267,28 @@ impl Backend {
             let mut command = None;
             let mut last_error = None;
             let mut last_battle = None;
+            let mut tracking_encounter = false;
+            let mut poll_failures = 0usize;
             while !stopped.load(Ordering::Relaxed) {
+                if matches!(command, Some(Command::Spawn(_))) {
+                    let Some(Command::Spawn(action)) = command.take() else {
+                        unreachable!()
+                    };
+                    let result = api.spawn_action(action).map_err(str::to_owned);
+                    let delay = poll_delay(result.is_ok(), &mut poll_failures);
+                    if let Ok(value) = &result {
+                        tracking_encounter = value.is_some();
+                    }
+                    if events.send(Event::SpawnCompleted(action, result)).is_err() {
+                        break;
+                    }
+                    command = match rx.recv_timeout(delay) {
+                        Ok(c) => Some(c),
+                        Err(mpsc::RecvTimeoutError::Timeout) => None,
+                        Err(_) => break,
+                    };
+                    continue;
+                }
                 let explicit = command.is_some();
                 let evolving = matches!(command, Some(Command::Evolve));
                 let item_request = matches!(
@@ -284,6 +308,7 @@ impl Backend {
                         bootstrapped = true;
                     }
                     match command.take() {
+                        Some(Command::Spawn(_)) => unreachable!(),
                         Some(Command::LoadItems(id)) => {
                             last_battle = id;
                         }
@@ -337,13 +362,20 @@ impl Backend {
                                 .map_err(|_| "closed")?;
                         }
                         Some(Command::Encounter) => {
+                            tracking_encounter = true;
                             events
                                 .send(Event::Encounter(api.encounter(true)?))
                                 .map_err(|_| "closed")?;
                         }
                         None => {}
                     }
-                    let e = api.encounter(false)?;
+                    let looked_up = tracking_encounter;
+                    let e = if looked_up {
+                        api.encounter(false)?
+                    } else {
+                        None
+                    };
+                    tracking_encounter = e.is_some();
                     if let Some(id) = e.as_ref().and_then(|e| e.battle_id) {
                         last_battle = Some(id);
                     }
@@ -355,11 +387,9 @@ impl Backend {
                                 .map_err(|_| "closed")?;
                         }
                     }
-                    if e.as_ref().is_some_and(|e| !e.supports_pip()) {
-                        events.send(Event::Encounter(None)).map_err(|_| "closed")?;
-                        return Err("unsupported monster/profile; presentation skipped");
+                    if looked_up {
+                        events.send(Event::Encounter(e)).map_err(|_| "closed")?;
                     }
-                    events.send(Event::Encounter(e)).map_err(|_| "closed")?;
                     if explicit {
                         let bootstrap = api.bootstrap()?;
                         identity = Some((
@@ -417,6 +447,7 @@ impl Backend {
                     let _ =
                         events.send(Event::Finished(result.as_ref().err().map(|e| (*e).into())));
                 }
+                let delay = poll_delay(result.is_ok(), &mut poll_failures);
                 match result {
                     Err(e) if last_error != Some(e) => {
                         eprintln!("[LUMA BACKEND] {e}; local Companion continues");
@@ -428,7 +459,7 @@ impl Backend {
                     _ => {}
                 }
                 // Discard a failed mutation; only a new explicit command may retry it.
-                command = match rx.recv_timeout(Duration::from_secs(5)) {
+                command = match rx.recv_timeout(delay) {
                     Ok(c) => Some(c),
                     Err(mpsc::RecvTimeoutError::Timeout) => None,
                     Err(_) => break,
@@ -453,3 +484,36 @@ impl Backend {
 }
 #[cfg(test)]
 mod tests;
+
+impl Api {
+    pub fn spawn_action(
+        &self,
+        action: crate::spawn::runtime::Action,
+    ) -> Result<Option<Encounter>, &'static str> {
+        use crate::spawn::runtime::Action;
+        match action {
+            Action::Reconcile => self.encounter(false),
+            Action::Create => self.encounter(true),
+            Action::Resolve(id) => {
+                // Reconcile first: ignore response may have been lost after commit.
+                let current = self.encounter(false)?;
+                if current.as_ref().is_some_and(|e| e.encounter_id == id) {
+                    self.ignore(id)?;
+                    self.encounter(false)
+                } else {
+                    Ok(current)
+                }
+            }
+        }
+    }
+}
+
+fn poll_delay(success: bool, failures: &mut usize) -> Duration {
+    if success {
+        *failures = 0;
+        return Duration::from_secs(5);
+    }
+    let delay = [5, 10, 30][(*failures).min(2)];
+    *failures = (*failures + 1).min(3);
+    Duration::from_secs(delay)
+}

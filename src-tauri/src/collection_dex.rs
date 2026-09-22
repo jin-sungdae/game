@@ -108,6 +108,7 @@ mod tests {
             "monster":{"code":"PIP","name":"PIP","rarity":"COMMON","movementProfile":"GROUND","level":1},
             "spawnedAt":"2026-09-22T00:00:00Z","expiresAt":"2026-09-22T00:01:00Z"
         })).unwrap();
+        crate::spawn::runtime::test_environment(&mut world);
         world.apply_server_encounter(0.0, Some(encounter), 60.0);
         assert_eq!(world.view.dex.discovered_codes, vec!["PIP"]);
         world.view.menu = true;

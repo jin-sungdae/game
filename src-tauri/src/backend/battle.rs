@@ -87,6 +87,7 @@ pub struct Resolution {
 }
 #[derive(Clone, Debug)]
 pub enum Command {
+    Spawn(crate::spawn::runtime::Action),
     LoadItems(Option<uuid::Uuid>),
     Purchase(String),
     UseItem(String, Option<uuid::Uuid>),
