@@ -54,20 +54,20 @@ All names/themes except PIP are provisional and require visual design approval. 
 | 12 | MONSTER_012 | Orbit mote | UNCOMMON | COSMIC | FLOATING | PASSIVE | FLOATING_AREA | NIGHT | TBD | ringed sphere | PROVISIONAL | — |
 | 13 | MIMI | MIMI | UNCOMMON | MIMIC | STATIC | TRICKSTER | EDGE | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 14 | WISP | WISP | UNCOMMON | SPIRIT | FLOATING | TIMID | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
-| 15 | SHADE | SHADE | UNCOMMON | SHADOW | EDGE | TRICKSTER | EDGE | NIGHT | server rarity default | Production visual design pending | PROVISIONAL | candidate |
-| 16 | EMBER | EMBER | RARE | FIRE | FREE_2D | AGGRESSIVE | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 15 | SHADE | SHADE | UNCOMMON | SHADOW | EDGE | TRICKSTER | EDGE | NIGHT | server rarity default | Production visual design pending | PRODUCTION | candidate |
+| 16 | EMBER | EMBER | RARE | FIRE | FREE_2D | AGGRESSIVE | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 17 | MONSTER_017 | Arch golem | RARE | ROCK | STATIC | SLEEPY | NEAR_DESKTOP_EDGE | ANY_TIME | TBD | stone arch | PROVISIONAL | — |
 | 18 | MONSTER_018 | Storm crest | RARE | BIRD | FLYING | AGGRESSIVE | TOP | DAY | TBD | forked crest | PROVISIONAL | — |
-| 19 | LUNET | LUNET | RARE | MOON | FLOATING | TIMID | FREE_AREA | NIGHT | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 19 | LUNET | LUNET | RARE | MOON | FLOATING | TIMID | FREE_AREA | NIGHT | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 20 | MONSTER_020 | Long ear | RARE | BEAST | GROUND | TIMID | BOTTOM | NIGHT | TBD | upright ears | PROVISIONAL | — |
-| 21 | NOVA | NOVA | RARE | COSMIC | FREE_2D | CURIOUS | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 21 | NOVA | NOVA | RARE | COSMIC | FREE_2D | CURIOUS | FREE_AREA | ANY_TIME | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 22 | MONSTER_022 | Veil spirit | EPIC | SPIRIT | FLOATING | SLEEPY | FLOATING_AREA | NIGHT | TBD | layered veil | PROVISIONAL | — |
 | 23 | MONSTER_023 | Ink vortex | EPIC | SHADOW | FREE_2D | TRICKSTER | FREE_AREA | NIGHT | TBD | spiral ink | PROVISIONAL | — |
 | 24 | MONSTER_024 | Comet sail | EPIC | COSMIC | FLYING | CURIOUS | TOP | NIGHT | TBD | crescent sail | PROVISIONAL | — |
 | 25 | MONSTER_025 | Thorn crown | EPIC | PLANT | STATIC | AGGRESSIVE | NEAR_DOCK | DAY | TBD | radial petals | PROVISIONAL | — |
 | 26 | MONSTER_026 | Crystal wedge | EPIC | ROCK | JUMP | AGGRESSIVE | BOTTOM | ANY_TIME | TBD | angular wedge | PROVISIONAL | — |
 | 27 | MONSTER_027 | Eclipse halo | SPECIAL | COSMIC | FLOATING | PASSIVE | FLOATING_AREA | SPECIAL_EVENT | TBD | concentric halo | PROVISIONAL | — |
-| 28 | NOCT | NOCT | SPECIAL | NIGHT | EDGE | TIMID | EDGE | NIGHT | server rarity default | Production visual design pending | PROVISIONAL | candidate |
+| 28 | NOCT | NOCT | SPECIAL | NIGHT | EDGE | TIMID | EDGE | NIGHT | server rarity default | Production visual design pending | PRODUCTION | candidate |
 | 29 | MONSTER_029 | Aurora ribbon | SPECIAL | AQUATIC | FREE_2D | PLAYFUL | FREE_AREA | SPECIAL_EVENT | TBD | flowing fins | PROVISIONAL | — |
 | 30 | MONSTER_030 | Satellite seed | SPECIAL | MECHANICAL | EDGE | CURIOUS | NEAR_DESKTOP_EDGE | SPECIAL_EVENT | TBD | antenna disk | PROVISIONAL | — |
 

@@ -1,7 +1,7 @@
-//! Batch3 fixtures reuse #27 provider/clock injection; production flags stay closed.
+//! Final Batch3 acceptance uses production provider/assets; only local time/environment are injected.
 use super::*;
 use crate::{behaviors::World, desktop::SafeAreaTracker, geometry::Area};
-use chrono::{DateTime, FixedOffset};
+use chrono::{DateTime, FixedOffset, Timelike};
 use std::sync::{
     atomic::{AtomicUsize, Ordering},
     Arc, Mutex,
@@ -28,7 +28,6 @@ impl conditions::CalendarClock for FakeClock {
         *self.value.lock().unwrap()
     }
 }
-struct FixtureProvider;
 fn definition(code: &str) -> serde_json::Value {
     let records: Vec<serde_json::Value> =
         serde_json::from_str(include_str!("../../../../src/entities/monster-dex.json")).unwrap();
@@ -36,30 +35,6 @@ fn definition(code: &str) -> serde_json::Value {
         .into_iter()
         .find(|m| m["monsterCode"] == code)
         .unwrap()
-}
-impl SpawnCandidateProvider for FixtureProvider {
-    fn candidate(&self, code: &str) -> Option<Candidate> {
-        let d = definition(code);
-        Some(Candidate {
-            monster_code: code.into(),
-            zone: super::super::dex_adapter::fixture_zone(d["spawnProfile"].as_str()?)?,
-            movement_profile: serde_json::from_value(d["movementProfile"].clone()).ok()?,
-            size: crate::geometry::PIP_SIZE,
-            lifetime: Duration::from_secs(60),
-            condition: serde_json::from_value(d["spawnCondition"].clone()).ok()?,
-        })
-    }
-    fn identity(&self, code: &str) -> Option<MonsterIdentity> {
-        let d = definition(code);
-        Some(MonsterIdentity {
-            monster_code: code.into(),
-            asset_identity: code.to_lowercase(),
-            rarity: d["rarity"].as_str()?.into(),
-            level: 0,
-            encounter_id: None,
-            movement_profile: serde_json::from_value(d["movementProfile"].clone()).ok()?,
-        })
-    }
 }
 fn fixture(code: &str, clock: &FakeClock, id: u128) -> (World, Encounter) {
     let screen = Area {
@@ -72,17 +47,17 @@ fn fixture(code: &str, clock: &FakeClock, id: u128) -> (World, Encounter) {
     let mut w = World::new(safe.final_luma_safe_area, 0.0, 42);
     w.set_spawn_environment(safe, (-9999.0, -9999.0), Some(vec![]));
     w.spawn_runtime.calendar = Box::new(clock.clone());
-    w.spawn_runtime.provider = Box::new(FixtureProvider);
-    let bytes = std::fs::read(format!(
-        "{}/../public/assets/monsters/{}/base.png",
-        env!("CARGO_MANIFEST_DIR"),
-        code.to_lowercase()
-    ))
-    .unwrap();
-    assert_eq!(bytes, approved(code));
+    w.spawn_runtime.load_assets(|path| {
+        std::fs::read(
+            std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+                .join("../public")
+                .join(path),
+        )
+        .ok()
+    });
+    assert!(w.spawn_runtime.available_assets.contains(code));
     assert_eq!(definition(code)["assetIdentity"], code.to_lowercase());
-    w.spawn_runtime.available_assets.insert(code.into()); // validated real asset; test-only readiness
-    let m = FixtureProvider.identity(code).unwrap();
+    let m = ContentProvider.identity(code).unwrap();
     let date = *clock.value.lock().unwrap();
     let e = Encounter {
         encounter_id: uuid::Uuid::from_u128(id),
@@ -105,16 +80,6 @@ fn fixture(code: &str, clock: &FakeClock, id: u128) -> (World, Encounter) {
     (w, e)
 }
 const CODES: [&str; 5] = ["SHADE", "EMBER", "LUNET", "NOVA", "NOCT"];
-fn approved(code: &str) -> &'static [u8] {
-    match code {
-        "SHADE" => include_bytes!("../../../../public/assets/monsters/shade/base.png"),
-        "EMBER" => include_bytes!("../../../../public/assets/monsters/ember/base.png"),
-        "LUNET" => include_bytes!("../../../../public/assets/monsters/lunet/base.png"),
-        "NOVA" => include_bytes!("../../../../public/assets/monsters/nova/base.png"),
-        "NOCT" => include_bytes!("../../../../public/assets/monsters/noct/base.png"),
-        _ => panic!("not a Batch3 fixture"),
-    }
-}
 fn motion(w: &mut World, code: &str) {
     let start = w.view.pip.as_ref().unwrap().clone();
     let (mut dx, mut dy) = (false, false);
@@ -154,12 +119,19 @@ fn batch3_assets_metadata_motion_night_and_restart() {
         ] {
             assert_eq!(d[key], value);
         }
-        assert_eq!(d["enabled"], false);
-        assert_eq!(d["contentReady"], false);
-        assert_eq!(d["productionStatus"], "PROVISIONAL");
-        assert!(ContentProvider.candidate(code).is_none());
-        assert!(ContentProvider.identity(code).is_none());
-        for (h, m, night) in [(21, 59, false), (22, 0, true), (5, 59, true), (6, 0, false)] {
+        assert_eq!(d["enabled"], true);
+        assert_eq!(d["contentReady"], true);
+        assert_eq!(d["productionStatus"], "PRODUCTION");
+        assert!(ContentProvider.candidate(code).is_some());
+        assert!(ContentProvider.identity(code).is_some());
+        for (h, m, night) in [
+            (21, 59, false),
+            (22, 0, true),
+            (23, 59, true),
+            (0, 0, true),
+            (5, 59, true),
+            (6, 0, false),
+        ] {
             let clock = FakeClock::at(h, m);
             let (mut w, e) = fixture(code, &clock, 8);
             w.apply_server_encounter(0., Some(e.clone()), 120.);
@@ -203,14 +175,7 @@ fn batch3_both_edges_and_fail_closed_per_species() {
                 motion(&mut w, code);
             }
         }
-        for failure in [
-            "asset",
-            "rarity",
-            "movement",
-            "name",
-            "windows",
-            "production",
-        ] {
+        for failure in ["asset", "rarity", "movement", "name", "windows", "unknown"] {
             let (mut w, mut e) = fixture(code, &clock, 8);
             match failure {
                 "asset" => w.spawn_runtime.available_assets.clear(),
@@ -222,7 +187,7 @@ fn batch3_both_edges_and_fail_closed_per_species() {
                     let safe = SafeAreaTracker::default().update(1, a, a, &[]);
                     w.set_spawn_environment(safe, (-9999., -9999.), None);
                 }
-                "production" => w.spawn_runtime.provider = Box::new(ContentProvider),
+                "unknown" => e.monster.code = "MONSTER_005".into(),
                 _ => unreachable!(),
             }
             w.apply_server_encounter(0., Some(e), 120.);
@@ -232,42 +197,119 @@ fn batch3_both_edges_and_fail_closed_per_species() {
     }
 }
 #[test]
-#[ignore = "launched by Batch3PreparationTest with LUMA_BATCH3_LIVE=1 and isolated test DB"]
-fn live_batch3_fixture() {
-    let code = std::env::var("LUMA_BATCH3_CODE").unwrap();
-    assert!(CODES.contains(&code.as_str()));
-    let api = crate::backend::Api::new(&std::env::var("LUMA_GAME_SERVER_URL").unwrap()).unwrap();
-    let e = api.encounter(false).unwrap().unwrap();
-    assert_eq!(e.monster.code, code);
-    // Fixed local night with current server date; authoritative remaining lease stays explicit.
+fn daytime_night_restore_resolves_same_id_without_create_spam() {
+    for code in ["SHADE", "LUNET", "NOCT"] {
+        let night = FakeClock::at(23, 0);
+        let (mut active, e) = fixture(code, &night, 8);
+        active.apply_server_encounter(0., Some(e.clone()), 120.);
+        assert!(active.view.pip.is_some());
+        let day = FakeClock::at(12, 0);
+        // Same live UTC lease, local noon after a timezone change during restart.
+        *day.value.lock().unwrap() = night
+            .value
+            .lock()
+            .unwrap()
+            .with_timezone(&FixedOffset::west_opt(2 * 3600).unwrap());
+        let (mut restored, _) = fixture(code, &day, 8);
+        assert_eq!(restored.spawn_action(0.), Some(Action::Reconcile));
+        restored.complete_spawn(0., Action::Reconcile, Ok(Some(e.clone())));
+        assert!(restored.view.pip.is_none());
+        assert!(restored.view.dex.discovered_codes.is_empty());
+        let action = Action::Resolve(e.encounter_id);
+        assert_eq!(restored.spawn_action(0.), Some(action));
+        restored.complete_spawn(0., action, Err("offline".into()));
+        for i in 1..1000 {
+            assert!(restored.spawn_action(f64::from(i) * 0.004).is_none());
+        }
+        assert_eq!(restored.spawn_action(5.), Some(action));
+        restored.complete_spawn(5., action, Ok(None));
+        assert_eq!(
+            restored.spawn_runtime.director.state(),
+            SpawnState::Cooldown
+        );
+        assert!(restored.spawn_action(6.).is_none());
+    }
+}
+fn live_night() -> FakeClock {
     let clock = FakeClock::at(23, 0);
-    let (mut w, _) = fixture(&code, &clock, 8);
-    w.apply_server_encounter(0., Some(e.clone()), 60.);
-    motion(&mut w, &code);
-    let (mut restored, _) = fixture(&code, &clock, 8);
-    let fetched = api.encounter(false).unwrap().unwrap();
-    assert_eq!(fetched.encounter_id, e.encounter_id);
-    restored.apply_server_encounter(0., Some(fetched), 60.);
-    assert_eq!(
-        restored.view.monster.as_ref().unwrap().encounter_id,
-        Some(e.encounter_id)
-    );
-    let b = api.battle(e.encounter_id, Some("start")).unwrap();
-    restored.apply_battle(b.clone());
-    let hit = api.battle(b.battle_id, Some("attack")).unwrap();
-    assert_eq!(hit.monster.hp, 18);
-    restored.apply_battle(hit);
-    let c = api.capture(b.battle_id).unwrap();
-    assert!(c.success);
-    assert_eq!(c.collection.as_ref().unwrap().monster_code, code);
-    restored.view.dex.loaded(api.collection().unwrap());
-    restored.apply_battle(c.battle);
-    restored.apply_server_encounter(2., api.encounter(false).unwrap(), 0.);
-    restored.tick(3., 0.1, (-9999., -9999.), false);
-    assert!(restored.view.pip.is_none());
-    assert_eq!(
-        restored.spawn_runtime.director.state(),
-        SpawnState::Cooldown
-    );
-    eprintln!("BATCH3 LIVE PASS {code}: real asset/spawn/motion/restart/battle/capture/collection/cooldown");
+    let now = chrono::Utc::now();
+    // Preserve the actual UTC instant/lease while injecting a local timezone whose hour is23.
+    let hours = (23 - now.hour() as i32 + 12) % 24 - 12;
+    *clock.value.lock().unwrap() = now.with_timezone(&FixedOffset::east_opt(hours * 3600).unwrap());
+    clock
+}
+#[test]
+#[ignore = "requires isolated test-only LUMA_TEST_BATCH3 Spring server and fresh DB"]
+fn live_batch3_production() {
+    let api = crate::backend::Api::new(&std::env::var("LUMA_GAME_SERVER_URL").unwrap()).unwrap();
+    assert!(api.encounter(false).unwrap().is_none());
+    for code in CODES {
+        let clock = live_night();
+        let (mut w, _) = fixture(code, &clock, 8);
+        assert_eq!(w.spawn_action(0.), Some(Action::Reconcile));
+        w.complete_spawn(0., Action::Reconcile, Ok(api.encounter(false).unwrap()));
+        let t = w.spawn_runtime.director.next_spawn_at().as_secs_f64();
+        assert!(w.spawn_action(t).is_none());
+        assert_eq!(w.spawn_action(t), Some(Action::Create));
+        let e = api.encounter(true).unwrap().unwrap();
+        assert_eq!(e.monster.code, code);
+        let (mut w, _) = fixture(code, &clock, 8);
+        assert_eq!(w.spawn_action(0.), Some(Action::Reconcile));
+        w.complete_spawn(0., Action::Reconcile, Ok(Some(e.clone())));
+        assert_eq!(w.view.dex.discovered_codes, vec![code]);
+        let identity = w.view.monster.as_ref().unwrap();
+        assert_eq!(identity.asset_identity, code.to_lowercase());
+        assert_eq!(identity.rarity, e.monster.rarity);
+        motion(&mut w, code);
+        let (mut restored, _) = fixture(code, &clock, 8);
+        assert_eq!(restored.spawn_action(0.), Some(Action::Reconcile));
+        restored.complete_spawn(0., Action::Reconcile, Ok(api.encounter(false).unwrap()));
+        assert_eq!(
+            restored.view.monster.as_ref().unwrap().encounter_id,
+            Some(e.encounter_id)
+        );
+        assert!(restored.spawn_action(1.).is_none());
+        let b = api.battle(e.encounter_id, Some("start")).unwrap();
+        restored.apply_battle(b.clone());
+        let hit = api.battle(b.battle_id, Some("attack")).unwrap();
+        assert_eq!(hit.monster.hp, 18);
+        restored.apply_battle(hit);
+        for item in ["SMALL_POTION", "CAPTURE_CHARM"] {
+            api.purchase(item, 1).unwrap();
+        }
+        let potion = api.use_item("SMALL_POTION", Some(b.battle_id)).unwrap();
+        assert_eq!(potion.healed_amount, Some(5));
+        let charm = api.use_item("CAPTURE_CHARM", Some(b.battle_id)).unwrap();
+        assert_eq!(charm.armed, Some(true));
+        let c = api.capture(b.battle_id).unwrap();
+        assert!(c.success);
+        let base = definition(code)["baseCaptureRate"].as_f64().unwrap();
+        assert!((c.base_chance.unwrap() - (base + 0.2)).abs() < 1e-9);
+        assert_eq!(c.item_bonus, Some(0.1));
+        assert!((c.final_chance.unwrap() - (base + 0.3)).abs() < 1e-9);
+        let row = c.collection.as_ref().unwrap();
+        assert_eq!(row.monster_code, code);
+        assert_eq!(row.capture_count, 1);
+        assert!(row.first_captured_at <= row.last_captured_at);
+        restored.view.dex.loaded(api.collection().unwrap());
+        restored.view.dex.captured(row);
+        restored.apply_battle(c.battle);
+        restored.apply_server_encounter(2., api.encounter(false).unwrap(), 0.);
+        restored.tick(3., 0.1, (-9999., -9999.), false);
+        assert!(restored.view.pip.is_none());
+        assert_eq!(
+            restored.spawn_runtime.director.state(),
+            SpawnState::Cooldown
+        );
+        assert!(restored.spawn_action(3.).is_none());
+        eprintln!("BATCH3 PRODUCTION LIVE PASS {code}: POST/asset/condition/movement/restore/battle/hit/potion/charm/capture/collection/cooldown id={}",e.encounter_id);
+    }
+    let records = api.collection().unwrap();
+    assert_eq!(records.len(), 5);
+    assert!(CODES.iter().all(|code| records
+        .iter()
+        .any(|r| r.monster_code == *code && r.capture_count == 1)));
+    if let Ok(path) = std::env::var("LUMA_TEST_BATCH3_COLLECTION_OUTPUT") {
+        std::fs::write(path, serde_json::to_vec(&records).unwrap()).unwrap();
+    }
 }

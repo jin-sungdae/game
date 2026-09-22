@@ -173,8 +173,8 @@ fn all_advanced_fixtures_route_through_world_with_safe_motion_and_rarity() {
             definition(code)["rarity"].as_str().unwrap()
         );
         assert!(
-            ContentProvider.candidate(code).is_none(),
-            "fixture must not activate production"
+            ContentProvider.candidate(code).is_some(),
+            "reviewed final production candidate remains available"
         );
     }
     assert_eq!(definition("NOCT")["rarity"], "SPECIAL");

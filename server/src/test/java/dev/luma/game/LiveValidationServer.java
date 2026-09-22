@@ -11,9 +11,11 @@ public class LiveValidationServer {
     static class FixedRandom {
         @Bean @Primary RandomSource captureFixtureRandom() {
             var index = new java.util.concurrent.atomic.AtomicInteger();
-            return bound -> bound==850 && "1".equals(System.getenv("LUMA_TEST_BATCH2"))
+            return bound -> bound==961 && "1".equals(System.getenv("LUMA_TEST_BATCH3"))
+                ? new long[]{850,900,920,940,960}[index.getAndIncrement()%5]
+                : (bound==850 || bound==961) && "1".equals(System.getenv("LUMA_TEST_BATCH2"))
                 ? new long[]{500,600,700,750,800}[index.getAndIncrement()%5]
-                : (bound==500 || bound==850) && "1".equals(System.getenv("LUMA_TEST_BATCH1"))
+                : (bound==500 || bound==850 || bound==961) && "1".equals(System.getenv("LUMA_TEST_BATCH1"))
                 ? (index.getAndIncrement()%5)*100L : bound==1_000_000 && "failure".equals(System.getenv("LUMA_TEST_CAPTURE_MODE")) ? bound-1 : 0;
         }
     }

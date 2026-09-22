@@ -22,7 +22,7 @@ class Batch2ActivationTest {
  @Autowired JdbcTemplate db; @Autowired GameRepository repository; @Autowired TestRestTemplate http; @LocalServerPort int port;
  @MockitoBean RandomSource random;
  String url(String p){return "http://127.0.0.1:"+port+"/api/v1"+p;}
- @BeforeEach void reset(){clean();db.update("UPDATE game.t_player SET gold=10000");when(random.nextLong(anyLong())).thenReturn(0L);}
+ @BeforeEach void reset(){clean();db.update("UPDATE game.m_monster SET use_yn=(code NOT IN ('SHADE','EMBER','LUNET','NOVA','NOCT'))");db.update("UPDATE game.t_player SET gold=10000");when(random.nextLong(anyLong())).thenReturn(0L);}
  @AfterEach void clean(){
   for(String table:List.of("t_battle_item_effect","t_item_purchase","t_inventory","t_companion_evolution_history","t_reward","t_collection","t_battle","t_encounter")) db.update("DELETE FROM game."+table);
   db.update("UPDATE game.m_monster SET use_yn=true");

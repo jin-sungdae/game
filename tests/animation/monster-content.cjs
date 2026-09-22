@@ -1,4 +1,4 @@
-const activeCodes = ['PIP','MELLO','MOSSY','CHIRP','BUBU','PEBB','PUFF','TIKKI','MIMI','WISP'];
+const activeCodes = ['PIP','MELLO','MOSSY','CHIRP','BUBU','PEBB','PUFF','TIKKI','MIMI','WISP','SHADE','EMBER','LUNET','NOVA','NOCT'];
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
