@@ -64,3 +64,14 @@ Local AUTOMATED PASS: TypeScript/Vite build; 52 animation/base/Dex/delivery test
 PLATFORM_REQUIRED / MANUAL_REQUIRED: real desktop focus, typing/mouse, single instance, visual positioning and delivered-art appearance NOT_RUN. CI native compile and server integration results are recorded on the PR's final SHA, not inferred from local tests.
 
 Base: origin/main dfe8345 (includes Spawn #20). Parallel Collection UI #21 has no overlapping files at inspection. Parallel Monster Content #23 overlaps scripts/test-animation.sh and tests/animation/monster-dex.cjs; preserve both test additions and the updated PIP asset expectation when integrating. No Monster Content DB, Collection UI, Rust, native window, migration, Companion pipeline or production PNG change. Architecture and merge remain human decisions.
+
+
+## PR #23 main integration
+
+Integrated origin/main e829615 into the existing PR #22 branch. Resolved test-animation.sh by retaining both asset tests and content projection/content tests. The expanded Dex contract, rarity projections, contentReady/productionStatus checks and PIP NEAR_DOCK content definition remain from main without source changes. All fifteen Alpha codes and lowercase asset identities now match the asset registry exactly; remaining provisional slots retain diagnostic-only resolution.
+
+Updated pre-delivery test assumptions: baseAsset is a canonical URL candidate, not proof that a PNG exists. Dex BASE is a presentation intent; actual decode failure still uses the same-monster diagnostic fallback. No Collection UI or content definition was modified. A regression test loads successful image fixtures for all fifteen codes and proves contentReady/enabled/productionStatus remain unchanged: only PIP is PRODUCTION, ready and enabled. Content and asset scales are checked for equality.
+
+This supersedes the earlier pre-integration note about unmapped provisional identities. Both Monster Content and Asset test suites run, including server rarity projection consistency. No PNG was created or changed. Optional alpha remains PASS; strict-alpha must continue to fail with exactly fourteen missing deliveries.
+
+Post-integration local AUTOMATED PASS: 58 animation/base/Dex/content/asset tests, 40 presentation tests, 22 validator tests, 9 automation tests; 93 Rust tests (7 optional live fixtures NOT_RUN), cargo clippy/fmt, npm build, Tao integrity. Java 21 full test + bootJar passed against a newly initialized isolated PostgreSQL instance, then the temporary database was stopped and removed. Final CI evidence is attached to the latest PR commit.

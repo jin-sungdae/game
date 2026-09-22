@@ -56,14 +56,20 @@ mod tests {
         let records: Vec<Metadata> =
             serde_json::from_str(include_str!("../../../src/entities/monster-dex.json")).unwrap();
         for metadata in records {
-            assert!(zone(&metadata.spawn_profile).is_some());
+            if metadata.enabled {
+                assert!(zone(&metadata.spawn_profile).is_some());
+            } else if metadata.spawn_profile == "LOWER_CORNER" {
+                assert!(zone(&metadata.spawn_profile).is_none());
+            } else {
+                assert!(zone(&metadata.spawn_profile).is_some());
+            }
             if metadata.monster_code != "PIP" {
                 assert!(pip_candidate(&metadata.monster_code).is_none());
             }
         }
         assert!(zone("UNREVIEWED_PROFILE").is_none());
         let pip = pip_candidate("PIP").unwrap();
-        assert_eq!(pip.zone, SpawnZone::Bottom);
+        assert_eq!(pip.zone, SpawnZone::NearDock);
         assert_eq!(pip.movement_profile, MovementProfile::Ground);
         assert_eq!(pip.condition, SpawnCondition::AnyTime);
     }

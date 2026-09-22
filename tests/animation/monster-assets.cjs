@@ -17,7 +17,7 @@ test('exact fifteen delivery paths, PIP unchanged, provisional content remains s
   assert.equal(definition.alphaDelivery,true);assert.ok(validMonsterScale(definition.visualScale));
  }
  for(const code of ['unknown','constructor','__proto__','mello']) assert.equal(resolveMonster(code),null);
- assert.equal(resolveMonster('MONSTER_002').baseAsset,null);
+ assert.equal(resolveMonster('MONSTER_005').baseAsset,null);
  assert.deepEqual(monsterAssetContract,{width:256,height:256,format:'PNG',color:'RGBA',transparent:true,anchor:'bottom-center',sourceFacing:'RIGHT',minimumScale:.5,maximumScale:1.5});
 });
 test('missing own base never falls back to PIP or Companion; valid image uses same URL',async()=>{
@@ -68,4 +68,24 @@ test('bottom center and RIGHT source survive facing and source switch without ne
  const css=fs.readFileSync('src/style.css','utf8');
  assert.match(css,/\.sprite-frame[^}]*transform-origin:50% 100%/);
  assert.match(css,/\.companion-visual[^}]*justify-content:flex-end/);
+});
+
+test('confirmed content and delivery identities match; successful image loads never activate gameplay',async()=>{
+ const {monsterDex}=require(path.join(root,'entities/monsterDex.js'));
+ const alpha=monsterDex.filter(m=>m.alphaCandidate);
+ assert.deepEqual(alpha.map(m=>m.monsterCode).sort(),Object.keys(monsterRegistry).sort());
+ assert.deepEqual(alpha.map(m=>m.assetIdentity).sort(),[...slugs].sort());
+ const before=JSON.stringify(monsterDex);
+ const loader=new BaseAssetLoader(async()=>({width:256,height:256}));
+ for(const m of alpha) {
+  const asset=resolveMonster(m.monsterCode);
+  assert.equal(asset.assetRoot,`/assets/monsters/${m.assetIdentity}`);
+  assert.equal(asset.baseAsset,`${asset.assetRoot}/base.png`);
+  assert.equal(asset.visualScale,m.visualScale);
+  assert.equal(await loader.load(asset.baseAsset),asset.baseAsset);
+  assert.equal(m.contentReady,m.monsterCode==='PIP');
+  assert.equal(m.enabled,m.monsterCode==='PIP');
+  assert.equal(m.productionStatus,m.monsterCode==='PIP'?'PRODUCTION':'PROVISIONAL');
+ }
+ assert.equal(JSON.stringify(monsterDex),before);
 });

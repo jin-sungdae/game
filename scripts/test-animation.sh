@@ -11,3 +11,5 @@ node --test tests/animation/base.cjs
 node --test tests/animation/monster-dex.cjs
 
 node --test tests/animation/monster-assets.cjs
+python3 scripts/sync_monster_content.py --check
+node --test tests/animation/monster-content.cjs
