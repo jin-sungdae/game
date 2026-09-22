@@ -1,6 +1,7 @@
 //! Desktop orchestration only. No HTTP, OS tracking, monster selection or entity mutation.
 use crate::{desktop::DesktopSafeArea, geometry::Size, movement::MovementProfile};
 use std::time::{Duration, Instant};
+mod dex_adapter;
 
 pub trait Clock {
     fn now(&self) -> Duration;
@@ -33,7 +34,8 @@ pub enum SpawnZone {
     NearDock,
     LowerCorner,
 }
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, serde::Deserialize)]
+#[serde(rename_all = "SCREAMING_SNAKE_CASE")]
 pub enum SpawnCondition {
     AnyTime,
     Day,
@@ -63,14 +65,7 @@ pub trait SpawnCandidateProvider {
 pub struct PipProvider;
 impl SpawnCandidateProvider for PipProvider {
     fn candidate(&self, code: &str) -> Option<Candidate> {
-        (code == "PIP").then(|| Candidate {
-            monster_code: code.into(),
-            zone: SpawnZone::Bottom,
-            movement_profile: MovementProfile::Ground,
-            size: crate::geometry::PIP_SIZE,
-            lifetime: Duration::from_secs(60),
-            condition: SpawnCondition::AnyTime,
-        })
+        dex_adapter::pip_candidate(code)
     }
 }
 #[derive(Clone, Debug)]

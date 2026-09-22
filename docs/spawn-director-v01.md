@@ -43,10 +43,21 @@ Future wiring: opportunity → existing serialized backend request (no client mo
 
 ## Validation and known risks
 
-AUTOMATED: 80 Rust tests passed (including 7 grouped Spawn acceptance tests); 5 live server/DB tests ignored, NOT_RUN. Existing TypeScript/Vite build, animation, presentation, 16 asset tests, 9 automation tests and Tao integrity check passed. Asset validation in existing --allow-missing mode reports 26 previously unprovided assets; this does not certify those assets. Rust native link passed locally. CI results are recorded on the PR at the final commit.
+Initial pre-integration AUTOMATED: 80 Rust tests passed (including 7 grouped Spawn acceptance tests); 5 live server/DB tests ignored, NOT_RUN. Existing TypeScript/Vite build, animation, presentation, 16 asset tests, 9 automation tests and Tao integrity check passed. Asset validation in existing --allow-missing mode reports 26 previously unprovided assets; this does not certify those assets. Rust native link passed locally. CI results are recorded on the PR at the final commit.
 
 PLATFORM_REQUIRED / MANUAL_REQUIRED: real multi-monitor/Dock/typing/click Never Steal Focus, single-instance behavior and live gameplay visual checks NOT_RUN. The disabled foundation and fake-clock failure tests are not an end-to-end automatic spawn rollout. Safe-area fallback inherits existing conservative Dock assumptions; 16 candidates can miss an available gap. Ground movement for elevated future zones requires profile/lifecycle integration review before enabling. No DB/Flyway/m_monster migration, dependency change, UI, new asset, Tao or native panel change.
 
 ## Parallel changes
 
-Base was fetched origin/main c482fec before this work started. Inventory PR #18 subsequently merged: overlap is src-tauri/src/main.rs and src-tauri/src/behaviors.rs, consisting of independent additive wiring; check final merge for context conflicts. Monster Dex PR #19 has no overlapping files at inspection. Neither branch is a dependency and neither was merged into this worktree. Final approval/merge remains HUMAN_REVIEW_REQUIRED.
+Base was fetched origin/main c482fec before this work started. Inventory PR #18 subsequently merged: overlap is src-tauri/src/main.rs and src-tauri/src/behaviors.rs, consisting of independent additive wiring; check final merge for context conflicts. Monster Dex PR #19 has no overlapping files at inspection. At initial implementation neither branch was a dependency. Following the user's follow-up, latest origin/main 29ea7c3 containing both merged PRs was integrated into this feature branch without conflicts. Final approval/merge remains HUMAN_REVIEW_REQUIRED.
+
+
+## Merged Monster Dex compatibility
+
+After the requested main integration, PipProvider consumes a narrow projection of the authoritative content file `src/entities/monster-dex.json`. No duplicate monster registry, rarity, stats or visual scale is introduced. Rust SpawnCondition uses the same serde strings as the TypeScript contract; existing MovementProfile is reused. A compatibility test parses every merged Dex record and verifies known spawn vocabulary, while only enabled production PIP/GROUND/ANY_TIME is accepted by the provider.
+
+Content spawnProfile and concrete SpawnZone have different responsibilities. BOTTOM/TOP/NEAR_DOCK map directly; FREE_AREA/FLOATING_AREA map to interior; EDGE/NEAR_DESKTOP_EDGE map to LOWER_CORNER for a conservative deterministic edge candidate. LEFT_EDGE and RIGHT_EDGE remain explicit placement options for future reviewed policy. Unknown profiles fail closed. Size and lifetime remain presentation inputs absent from the Dex contract; visualScale is not applied again. Metadata parsing happens only at provider lookup, never in the World tick.
+
+Inventory source and migrations are unchanged relative to latest main; the upstream Inventory V5 migration is present only through the requested main merge, not introduced by this PR. Textual merge completed cleanly. Post-integration regression and CI are re-run on the final PR head.
+
+Final local post-integration AUTOMATED PASS: 93 Rust tests (8 Spawn/adapter groups), 7 live fixtures ignored/NOT_RUN; Rust fmt and clippy; TypeScript/Vite build; 47 animation/base/Dex tests; 40 presentation/evolution/item tests; 16 asset tests; 9 automation-policy tests; existing optional-asset validation and Tao integrity. Native focus harness compile passed (runtime remains NOT_RUN). Latest-main diff contains only Spawn files and the 9 lines of World/module wiring; no Inventory or Monster Dex source/registry modifications.
