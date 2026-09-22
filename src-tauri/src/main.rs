@@ -44,10 +44,30 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
                 "interact" => world.interact(),
                 "close" => world.close(),
                 "evolution" => world.open_evolution(),
+                "shop" | "inventory" | "battle-items" => {
+                    world.view.menu = true;
+                    world.view.interaction = match kind.as_str() {
+                        "shop" => behaviors::InteractionMode::Shop,
+                        "battle-items" => behaviors::InteractionMode::BattleItems,
+                        _ => behaviors::InteractionMode::Inventory,
+                    };
+                }
 
                 _ => {}
             }
+            if !world.view.game.busy && !world.view.evolution.busy {
+                let battle = world.view.game.battle.clone();
+                if let Some(command) = world.view.items.command(&kind, battle.as_ref()) {
+                    if !state.backend.lock().unwrap().request(command) {
+                        world
+                            .view
+                            .items
+                            .finish(Some("Request queue unavailable".into()));
+                    }
+                }
+            }
             if kind == "evolve"
+                && !world.view.items.busy
                 && !world.view.game.busy
                 && world.view.evolution.request()
                 && !state
@@ -61,7 +81,7 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
                     .evolution
                     .fail("Request queue unavailable".into());
             }
-            if !world.view.evolution.busy {
+            if !world.view.evolution.busy && !world.view.items.busy {
                 if let Some(command) = world.view.game.command(&kind) {
                     world.presentation.request(&kind, now);
                     if !state.backend.lock().unwrap().request(command) {
@@ -186,6 +206,18 @@ fn main() {
                             while let Some(event) = state.backend.lock().unwrap().event() {
                                 backend_changed = true;
                                 match event {
+                                    backend::Event::Items(value) => {
+                                        world.view.items.inventory = Some(value);
+                                    }
+                                    backend::Event::Purchased(value) => {
+                                        world.view.items.purchase(value)
+                                    }
+                                    backend::Event::ItemUsed(value) => {
+                                        world.view.items.used(&value)
+                                    }
+                                    backend::Event::ItemsFinished(error) => {
+                                        world.view.items.finish(error)
+                                    }
                                     backend::Event::Evolution(value) => {
                                         world.view.evolution.eligibility = Some(value);
                                         if !world.view.evolution.busy {
@@ -206,6 +238,9 @@ fn main() {
                                     backend::Event::Capture(value) => {
                                         world.presentation.capture(&value, now);
                                         world.view.game.capture_chance = Some(value.chance);
+                                        world.view.game.capture_base_chance = value.base_chance;
+                                        world.view.game.capture_item_bonus = value.item_bonus;
+                                        world.view.game.capture_final_chance = value.final_chance;
                                         world.apply_battle(value.battle);
                                         world.view.game.feedback = Some(
                                             if value.success {
@@ -299,7 +334,11 @@ fn main() {
                                     .pip
                                     .as_ref()
                                     .filter(|_| {
-                                        view.interaction == behaviors::InteractionMode::Encounter
+                                        matches!(
+                                            view.interaction,
+                                            behaviors::InteractionMode::Encounter
+                                                | behaviors::InteractionMode::BattleItems
+                                        )
                                     })
                                     .map_or((view.moa.x, view.moa.y, view.moa.size), |p| {
                                         (p.x, p.y, p.size)

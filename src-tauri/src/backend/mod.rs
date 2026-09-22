@@ -1,5 +1,6 @@
 pub mod battle;
 pub mod evolution;
+pub mod items;
 use battle::{Battle, Capture, Collected, Command};
 // Local HTTP client, DTO validation and bounded worker. No AppKit/React calls.
 use chrono::{DateTime, Utc};
@@ -117,14 +118,35 @@ impl Api {
         path: &str,
         post: bool,
     ) -> Result<Option<T>, &'static str> {
+        self.send(path, post, None)
+    }
+    fn request_json<T: serde::de::DeserializeOwned>(
+        &self,
+        path: &str,
+        body: Option<&serde_json::Value>,
+    ) -> Result<Option<T>, &'static str> {
+        self.send(path, true, body)
+    }
+    fn send<T: serde::de::DeserializeOwned>(
+        &self,
+        path: &str,
+        post: bool,
+        body: Option<&serde_json::Value>,
+    ) -> Result<Option<T>, &'static str> {
         let url = format!("{}{path}", self.base);
-        let response = if post {
+        let request = if post {
             self.client.post(url)
         } else {
             self.client.get(url)
-        }
-        .send()
-        .map_err(|_| "server unavailable")?;
+        };
+        let request = if let Some(body) = body {
+            request
+                .header("Content-Type", "application/json")
+                .body(body.to_string())
+        } else {
+            request
+        };
+        let response = request.send().map_err(|_| "server unavailable")?;
         if response.status() == reqwest::StatusCode::NO_CONTENT {
             return Ok(None);
         }
@@ -152,6 +174,16 @@ impl Api {
                     Some("ENCOUNTER_EXPIRED") => "Encounter expired",
                     Some("BATTLE_ALREADY_TERMINAL") => "Battle already terminal; refresh state",
                     Some("CAPTURE_ALREADY_RESOLVED") => "Capture already resolved; refresh state",
+                    Some("ITEM_NOT_FOUND") => "ITEM_NOT_FOUND",
+                    Some("ITEM_DISABLED") => "ITEM_DISABLED",
+                    Some("INSUFFICIENT_GOLD") => "INSUFFICIENT_GOLD",
+                    Some("MAX_STACK_EXCEEDED") => "MAX_STACK_EXCEEDED",
+                    Some("ITEM_NOT_OWNED") => "ITEM_NOT_OWNED",
+                    Some("ITEM_NOT_USABLE") => "ITEM_NOT_USABLE",
+                    Some("FULL_HP") => "FULL_HP",
+                    Some("INVALID_BATTLE_STATE") => "INVALID_BATTLE_STATE",
+                    Some("EFFECT_ALREADY_ACTIVE") => "EFFECT_ALREADY_ACTIVE",
+                    Some("INVALID_QUANTITY") => "INVALID_QUANTITY",
                     Some("NOT_ELIGIBLE") => "Evolution not eligible; refresh status",
                     Some("MAX_STAGE") => "Maximum evolution stage",
                     Some("INVALID_STATE") => "Invalid game state; refresh state",
@@ -191,6 +223,10 @@ impl Api {
     }
 }
 pub enum Event {
+    Items(items::Inventory),
+    Purchased(items::Purchase),
+    ItemUsed(items::Used),
+    ItemsFinished(Option<String>),
     Evolution(evolution::Eligibility),
     Evolved(evolution::Result),
     EvolutionFailed(String),
@@ -231,6 +267,10 @@ impl Backend {
             while !stopped.load(Ordering::Relaxed) {
                 let explicit = command.is_some();
                 let evolving = matches!(command, Some(Command::Evolve));
+                let item_request = matches!(
+                    command,
+                    Some(Command::LoadItems(_) | Command::Purchase(_) | Command::UseItem(..))
+                );
                 let result = (|| {
                     if !bootstrapped {
                         let bootstrap = api.bootstrap()?;
@@ -244,6 +284,25 @@ impl Backend {
                         bootstrapped = true;
                     }
                     match command.take() {
+                        Some(Command::LoadItems(id)) => {
+                            last_battle = id;
+                        }
+                        Some(Command::Purchase(code)) => {
+                            events
+                                .send(Event::Purchased(api.purchase(&code, 1)?))
+                                .map_err(|_| "closed")?;
+                        }
+                        Some(Command::UseItem(code, id)) => {
+                            events
+                                .send(Event::ItemUsed(api.use_item(&code, id)?))
+                                .map_err(|_| "closed")?;
+                            if let Some(id) = id {
+                                last_battle = Some(id);
+                                events
+                                    .send(Event::Battle(api.battle(id, None)?))
+                                    .map_err(|_| "closed")?;
+                            }
+                        }
                         Some(Command::Evolve) => {
                             events
                                 .send(Event::Evolved(api.evolve()?))
@@ -311,6 +370,11 @@ impl Backend {
                             .send(Event::Bootstrap(bootstrap))
                             .map_err(|_| "closed")?;
                     }
+                    if item_request || visible.load(Ordering::Relaxed) {
+                        events
+                            .send(Event::Items(api.items(last_battle)?))
+                            .map_err(|_| "closed")?;
+                    }
                     // Status failure cannot discard an acknowledged battle/evolution result.
                     match api.evolution() {
                         Ok(value) => {
@@ -344,7 +408,12 @@ impl Backend {
                         Event::EvolutionUnavailable((*error).into())
                     });
                 }
-                if explicit {
+                if item_request {
+                    let _ = events.send(Event::ItemsFinished(
+                        result.as_ref().err().map(|e| (*e).into()),
+                    ));
+                }
+                if explicit && !item_request {
                     let _ =
                         events.send(Event::Finished(result.as_ref().err().map(|e| (*e).into())));
                 }

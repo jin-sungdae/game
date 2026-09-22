@@ -96,8 +96,12 @@ public class BattleService {
         var e=lockBattleEncounter(id);var b=row(id);
         if(!e.status.equals("ACTIVE")) throw new GameFault(409,"CAPTURE_ALREADY_RESOLVED");
         if(!List.of("ACTIVE","VICTORY").contains(b.status)) throw new GameFault(409,"BATTLE_ALREADY_TERMINAL");
-        double chance=CombatRules.captureChance(b.monsterHp,b.monsterMax,e.rarity);
+        double baseChance=CombatRules.captureChance(b.monsterHp,b.monsterMax,e.rarity);
+        var bonuses=db.query("SELECT value FROM game.t_battle_item_effect WHERE battle_id=? AND effect_type='CAPTURE_BONUS' AND consumed_at IS NULL FOR UPDATE",(r,n)->r.getDouble(1),id);
+        double itemBonus=bonuses.isEmpty()?0:bonuses.getFirst();
+        double chance=ItemRules.captureChance(baseChance,itemBonus);
         long roll=random.nextLong(1_000_000);if(roll<0||roll>=1_000_000) throw new GameUnavailable("Invalid random source");
+        if(itemBonus>0) db.update("UPDATE game.t_battle_item_effect SET consumed_at=clock_timestamp() WHERE battle_id=? AND effect_type='CAPTURE_BONUS' AND consumed_at IS NULL",id);
         boolean success=roll<Math.round(chance*1_000_000);var events=new ArrayList<String>();
         BattleDtos.Collected collection=null;
         if(success) {
@@ -117,7 +121,7 @@ public class BattleService {
         var current=row(id);
         var presentation=events.contains("MONSTER_ATTACK")?List.of(new BattleDtos.PresentationEvent("MONSTER_ATTACK",b.hp-current.hp)):List.<BattleDtos.PresentationEvent>of();
         var result=dto(current,events,presentation);
-        return new BattleDtos.Capture(id,e.id,success,chance,new BattleDtos.Monster(e.code,e.name),result.status(),result.encounterStatus(),collection,result);
+        return new BattleDtos.Capture(id,e.id,success,chance,new BattleDtos.Monster(e.code,e.name),result.status(),result.encounterStatus(),collection,result,baseChance,itemBonus,chance);
     }
     public BattleDtos.Resolution ignore(UUID id) {
         playerLock();var e=encounter(id);active(e);resolve(id,"ESCAPED");

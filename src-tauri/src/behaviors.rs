@@ -10,6 +10,9 @@ pub enum InteractionMode {
     #[default]
     Encounter,
     Evolution,
+    Shop,
+    Inventory,
+    BattleItems,
 }
 #[derive(Clone, Serialize)]
 pub struct Snapshot {
@@ -19,6 +22,7 @@ pub struct Snapshot {
     pub interaction: InteractionMode,
     pub identity: Option<crate::backend::Companion>,
     pub evolution: crate::backend::evolution::Presentation,
+    pub items: crate::backend::items::Presentation,
     pub game: crate::backend::battle::Presentation,
     pub visual: crate::presentation::Visual,
 }
@@ -43,6 +47,7 @@ impl World {
                 interaction: Default::default(),
                 identity: None,
                 evolution: Default::default(),
+                items: Default::default(),
                 game: Default::default(),
                 visual: Default::default(),
             },
@@ -112,6 +117,9 @@ impl World {
             self.view.game.battle = None;
             self.view.game.feedback = None;
             self.view.game.capture_chance = None;
+            self.view.game.capture_base_chance = None;
+            self.view.game.capture_item_bonus = None;
+            self.view.game.capture_final_chance = None;
         }
         self.view.game.encounter_id = Some(encounter.encounter_id);
         self.view.game.monster_level = encounter.monster.level;

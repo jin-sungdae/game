@@ -1,0 +1,9 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const path=require('node:path');const fs=require('node:fs');
+const {usableItems,itemView}=require(path.join(process.env.LUMA_PRESENTATION_TEST_DIR,'presentation/items.js'));
+const items=['SMALL_POTION','BOND_BERRY','CAPTURE_CHARM'].map(itemCode=>({itemCode,quantity:1}));
+test('battle shows only potion/charm; companion only berry',()=>{assert.deepEqual(usableItems(items,true).map(i=>i.itemCode),['SMALL_POTION','CAPTURE_CHARM']);assert.deepEqual(usableItems(items,false).map(i=>i.itemCode),['BOND_BERRY']);});
+test('authoritative gold, quantities, names and prices pass through',()=>{const inventory={gold:17,shop:[{price:123,ownedQuantity:7}],owned:items,effects:[]};const view=itemView({inventory,busy:false,error:null,feedback:null});assert.equal(view.gold,17);assert.equal(view.shop,inventory.shop);assert.equal(view.owned,items);});
+test('loading guard respects other domain mutation',()=>{assert.equal(itemView({busy:true}).busy,true);assert.equal(itemView(undefined,true).busy,true);});
+test('failure asks for refresh without automatic retry',()=>{assert.match(itemView({error:'INSUFFICIENT_GOLD'}).message,/Refresh/);assert.equal(itemView(undefined).gold,null);});
+for(const feedback of ['HP +7','Bond 4 → 5 ♥','Charm Ready'])test(`server feedback ${feedback}`,()=>assert.equal(itemView({feedback}).message,feedback));
+test('compact UI sends explicit identifiers only and never focuses windows',()=>{const source=fs.readFileSync('src/components/ItemInteraction.tsx','utf8');assert.match(source,/onClick=.*action\(`buy:/);assert.match(source,/onClick=.*action\(`use:/);assert.doesNotMatch(source,/\.focus\(|setFocus|WebviewWindow|setInterval|fetch\(/);assert.match(source,/role=\{view\?\.error\?'alert':'status'\}/);});
