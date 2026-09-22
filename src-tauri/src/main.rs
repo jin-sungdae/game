@@ -175,6 +175,16 @@ fn main() {
                     std::env::var_os("LUMA_VISUAL_SMOKE").map(|_| Default::default()),
                 ),
             });
+            app.state::<State>()
+                .world
+                .lock()
+                .unwrap()
+                .spawn_runtime
+                .load_assets(|path| {
+                    app.asset_resolver()
+                        .get(path.to_owned())
+                        .map(|asset| asset.bytes)
+                });
             let handle = app.handle().clone();
             // Bounded dispatch: at most one outstanding tick even if AppKit is busy.
             let pending = Arc::new(AtomicBool::new(false));

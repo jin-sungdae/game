@@ -32,9 +32,10 @@ class GameIntegrationTest {
     String url(String path) {return "http://127.0.0.1:"+port+"/api/v1"+path;}
     @BeforeEach void reset() {
         jdbc.update("DELETE FROM game.t_encounter");
-        jdbc.update("UPDATE game.m_monster SET use_yn=true");
+        jdbc.update("UPDATE game.m_monster SET use_yn=(code='PIP')");
         jdbc.update("UPDATE game.t_player_companion SET active=true WHERE player_id=1");
     }
+    @org.junit.jupiter.api.AfterEach void restoreCandidates() { jdbc.update("UPDATE game.m_monster SET use_yn=true"); }
     GameDtos.Encounter create() {
         var response=http.postForEntity(url("/encounters"),null,GameDtos.Encounter.class);
         assertEquals(HttpStatus.OK,response.getStatusCode());return response.getBody();

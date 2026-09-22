@@ -1,4 +1,5 @@
 //! Desktop orchestration only. No HTTP, OS tracking, monster selection or entity mutation.
+pub mod assets;
 use crate::{desktop::DesktopSafeArea, geometry::Size, movement::MovementProfile};
 use std::time::{Duration, Instant};
 mod dex_adapter;
@@ -338,11 +339,13 @@ pub fn intent_for_encounter(
 mod tests;
 
 pub fn metadata_matches(encounter: &crate::backend::Encounter, candidate: &Candidate) -> bool {
-    serde_json::from_value::<MovementProfile>(serde_json::Value::String(
-        encounter.monster.movement_profile.clone(),
-    ))
-    .ok()
-        == Some(candidate.movement_profile)
+    encounter.monster.name == encounter.monster.code
+        && (1..=3).contains(&encounter.monster.level)
+        && serde_json::from_value::<MovementProfile>(serde_json::Value::String(
+            encounter.monster.movement_profile.clone(),
+        ))
+        .ok()
+            == Some(candidate.movement_profile)
         && dex_adapter::identity(&encounter.monster.code)
             .is_some_and(|m| m.rarity == encounter.monster.rarity)
 }

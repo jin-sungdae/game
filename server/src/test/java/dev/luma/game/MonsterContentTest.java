@@ -30,11 +30,11 @@ class MonsterContentTest {
     }
     @Test void productionGateCannotBeBypassedByPositiveDatabaseWeight() {
         for(var d:MonsterContent.definitions()) {
-            boolean pip=d.monsterCode().equals("PIP");
+            boolean pip=List.of("PIP","MELLO","MOSSY","CHIRP","BUBU").contains(d.monsterCode());
             assertEquals(pip,MonsterContent.productionReady(d.monsterCode()));
             var master=new MonsterSelector.Monster(d.dexNo(),d.monsterCode(),d.displayName(),d.rarity(),d.movementProfile(),1,3,100);
             assertEquals(pip,MonsterContent.eligible(master));
-            if(d.alphaCandidate()) {assertEquals(d.monsterCode().toLowerCase(),d.assetIdentity());assertEquals(pip?.8:1,d.visualScale());}
+            if(d.alphaCandidate()) {assertEquals(d.monsterCode().toLowerCase(),d.assetIdentity());assertEquals(d.monsterCode().equals("PIP")?.8:1,d.visualScale());}
         }
         assertFalse(MonsterContent.productionReady("UNKNOWN"));
         assertFalse(MonsterContent.eligible(new MonsterSelector.Monster(99,"UNKNOWN","Unknown","COMMON","GROUND",1,3,100)));

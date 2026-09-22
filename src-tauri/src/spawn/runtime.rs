@@ -18,6 +18,7 @@ pub struct Runtime {
     resolving: bool,
     resolution_at: f64,
     failures: usize,
+    available_assets: std::collections::HashSet<String>,
 }
 impl Runtime {
     pub fn new(seed: u64) -> Self {
@@ -32,6 +33,16 @@ impl Runtime {
             resolving: false,
             resolution_at: 0.0,
             failures: 0,
+            available_assets: Default::default(),
+        }
+    }
+    pub fn load_assets(&mut self, mut load: impl FnMut(&str) -> Option<Vec<u8>>) {
+        self.available_assets.clear();
+        for code in ["PIP", "MELLO", "MOSSY", "CHIRP", "BUBU"] {
+            let bytes = load(&format!("assets/monsters/{}/base.png", code.to_lowercase()));
+            if assets::available(code, bytes.as_deref()) {
+                self.available_assets.insert(code.into());
+            }
         }
     }
     pub fn hidden(&mut self) {
@@ -113,6 +124,11 @@ impl Runtime {
             return None;
         }
         let encounter = self.encounter.as_ref()?;
+        if !self.available_assets.contains(&encounter.monster.code) {
+            self.resolving = true;
+            self.resolution_at = now;
+            return None;
+        }
         let Some(candidate) = ContentProvider.candidate(&encounter.monster.code) else {
             self.resolving = true;
             self.resolution_at = now;
@@ -151,6 +167,14 @@ impl Runtime {
 
 #[cfg(test)]
 pub fn test_environment(world: &mut crate::behaviors::World) {
+    world.spawn_runtime.load_assets(|path| {
+        std::fs::read(
+            std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+                .join("../public")
+                .join(path),
+        )
+        .ok()
+    });
     let a = world.area;
     world.set_spawn_environment(
         crate::desktop::DesktopSafeArea {
@@ -168,3 +192,6 @@ pub fn test_environment(world: &mut crate::behaviors::World) {
 }
 #[cfg(test)]
 mod tests;
+
+#[cfg(test)]
+mod batch1;
