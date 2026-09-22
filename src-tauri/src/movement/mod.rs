@@ -1,4 +1,5 @@
 //! Presentation-independent logical-point movement. No OS APIs, state transitions or clocks.
+pub mod ambient;
 use crate::geometry::{Area, Size};
 use serde::{Deserialize, Serialize};
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize, Deserialize)]
@@ -222,7 +223,7 @@ impl MovementController {
                 }
             }
             MovementProfile::Floating => (
-                m.start.0,
+                lerp(m.start.0, target.0, p),
                 m.start.1 + m.intent.height * (std::f64::consts::PI * p).sin(),
             ),
             MovementProfile::Flying | MovementProfile::Edge => {

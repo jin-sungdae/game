@@ -38,6 +38,8 @@ pub struct World {
     pub spawn_runtime: crate::spawn::runtime::Runtime,
     spawn_environment: Option<SpawnEnvironment>,
     monster_movement: crate::movement::MovementController,
+    monster_behavior: Option<crate::monster_behavior::Controller>,
+    behavior_seed: u64,
     pub view: Snapshot,
     pub area: Area,
     companion: CompanionController,
@@ -72,6 +74,8 @@ impl World {
             spawn_runtime: crate::spawn::runtime::Runtime::new(seed),
             spawn_environment: None,
             monster_movement: Default::default(),
+            monster_behavior: None,
+            behavior_seed: seed,
         }
     }
     pub fn apply_battle(&mut self, value: crate::backend::battle::Battle) {
@@ -145,6 +149,7 @@ impl World {
             }
             self.view.monster = None;
             self.monster_movement.cancel();
+            self.monster_behavior = None;
         }
         self.server_encounter = Some((encounter.encounter_id, now + remaining));
         self.place_server_monster(now);
@@ -232,6 +237,17 @@ impl World {
             "[LUMA SPAWN] placed {} encounter={} at={:?}",
             identity.monster_code, encounter.encounter_id, intent.position
         );
+        self.monster_behavior =
+            crate::monster_behavior::profile(&identity.monster_code).map(|profile| {
+                let id = encounter.encounter_id.as_u128();
+                crate::monster_behavior::Controller::new(
+                    profile,
+                    crate::monster_behavior::Seeded::new(
+                        self.behavior_seed ^ id as u64 ^ (id >> 64) as u64,
+                    ),
+                    now,
+                )
+            });
         self.view.monster = Some(identity);
         self.pip_deadline = now + 0.6;
     }
@@ -291,6 +307,35 @@ impl World {
         let was_dragging = self.companion.entity().state == CompanionState::Dragging;
         self.companion.tick(now, dt, self.area, cursor, down);
         self.view.moa = self.companion.entity().clone();
+        let terminal = self
+            .view
+            .game
+            .battle
+            .as_ref()
+            .is_some_and(|b| b.encounter_status != "ACTIVE");
+        let locked =
+            self.view.menu
+                || down
+                || was_dragging
+                || self.view.game.busy
+                || self.view.items.busy
+                || self.view.evolution.busy
+                || self
+                    .view
+                    .game
+                    .battle
+                    .as_ref()
+                    .is_some_and(|b| b.status == crate::backend::battle::Status::Active)
+                || terminal
+                || self.view.pip.as_ref().is_some_and(|p| {
+                    p.state == PipState::Engaged || p.state == PipState::Despawning
+                });
+        if locked {
+            self.monster_movement.cancel();
+            if let Some(b) = &mut self.monster_behavior {
+                b.hold(terminal);
+            }
+        }
         let mut remove = false;
         let mut react = false;
         if let Some(p) = &mut self.view.pip {
@@ -304,81 +349,53 @@ impl World {
                     }
                 }
                 PipState::Roaming => {
-                    if let Some(identity) = &self.view.monster {
-                        use crate::movement::{MovementIntent, MovementProfile};
-                        if self.monster_movement.profile().is_none() {
-                            let mut target =
-                                self.area
-                                    .clamp(p.x + p.facing as f64 * 100.0, p.y + 32.0, p.size);
-                            if identity.movement_profile == MovementProfile::Edge {
-                                target = self.area.clamp(p.x, p.y + p.facing as f64 * 80.0, p.size);
-                                if (target.1 - p.y).abs() < 1.0 {
-                                    p.facing *= -1;
-                                }
-                            } else if (target.0 - p.x).abs() < 1.0 {
-                                p.facing *= -1;
-                            }
-                            let advanced = matches!(
-                                identity.movement_profile,
-                                MovementProfile::Edge
-                                    | MovementProfile::Free2d
-                                    | MovementProfile::Floating
-                            );
-                            let clear = !advanced
-                                || crate::movement::unobstructed(
-                                    (p.x, p.y),
-                                    target,
-                                    24.0,
-                                    p.size,
-                                    cursor,
-                                    self.spawn_environment
-                                        .as_ref()
-                                        .and_then(|e| e.windows.as_deref()),
-                                    100.0,
-                                );
-                            if clear {
-                                self.monster_movement.start(
-                                    MovementIntent {
-                                        profile: identity.movement_profile,
-                                        target,
-                                        duration: 4.0,
-                                        height: 24.0,
-                                    },
-                                    (p.x, p.y),
-                                    self.area,
-                                    p.size,
-                                );
-                            }
-                        }
-                        let (position, _) =
-                            self.monster_movement
-                                .tick((p.x, p.y), dt, self.area, p.size, 24.0);
-                        let advanced = matches!(
-                            identity.movement_profile,
-                            MovementProfile::Edge
-                                | MovementProfile::Free2d
-                                | MovementProfile::Floating
-                        );
-                        if !advanced
-                            || crate::movement::unobstructed(
-                                (p.x, p.y),
-                                position,
-                                0.0,
-                                p.size,
+                    if self.view.monster.is_some() && locked {
+                        // Interaction/battle ownership freezes ambient motion, not entity identity.
+                    } else if let Some(identity) = &self.view.monster {
+                        if let Some(behavior) = &mut self.monster_behavior {
+                            let companion = self.view.identity.as_ref().and_then(|_| {
+                                let q = &self.view.moa;
+                                (q.x.is_finite() && q.y.is_finite()).then_some((q.x, q.y))
+                            });
+                            let distance = companion.map(|q| (q.0 - p.x).hypot(q.1 - p.y));
+                            let env = crate::movement::ambient::Environment {
+                                area: self.area,
+                                size: p.size,
                                 cursor,
-                                self.spawn_environment
+                                windows: self
+                                    .spawn_environment
                                     .as_ref()
                                     .and_then(|e| e.windows.as_deref()),
-                                100.0,
-                            )
-                        {
+                            };
+                            if behavior.stop_approach(distance)
+                                && identity.movement_profile
+                                    != crate::movement::MovementProfile::Jump
+                            {
+                                self.monster_movement.cancel();
+                            }
+                            if let Some(decision) = behavior.poll(
+                                now,
+                                distance,
+                                identity.movement_profile,
+                                self.monster_movement.profile().is_some(),
+                            ) {
+                                self.monster_movement.start_ambient(
+                                    identity.movement_profile,
+                                    decision,
+                                    (p.x, p.y),
+                                    companion,
+                                    env,
+                                );
+                            }
+                            let position = self.monster_movement.tick_ambient(
+                                identity.movement_profile,
+                                (p.x, p.y),
+                                dt,
+                                behavior.current.speed,
+                                env,
+                            );
                             p.x = position.0;
                             p.y = position.1;
-                        } else {
-                            self.monster_movement.cancel();
-                        }
-                        if identity.movement_profile == MovementProfile::Ground {
-                            p.y = self.area.ground_y();
                         }
                     } else {
                         p.x += p.facing as f64 * 24.0 * dt;
@@ -390,7 +407,7 @@ impl World {
                     p.x = x;
                     p.y = y;
                     let distance = (p.x - self.view.moa.x).hypot(p.y - self.view.moa.y);
-                    if distance < 130.0 && !was_dragging {
+                    if distance < 130.0 && !was_dragging && self.view.monster.is_none() {
                         p.state = PipState::Engaged;
                         react = true;
                     }
@@ -415,6 +432,8 @@ impl World {
         if remove {
             self.spawn_runtime.hidden();
             self.view.pip = None;
+            self.monster_behavior = None;
+            self.monster_movement.cancel();
         }
         if let Some(p) = &mut self.view.pip {
             let (x, y) = if self.view.monster.is_some() {
@@ -548,3 +567,6 @@ mod tests {
         assert!(w.view.moa.y >= 100.0);
     }
 }
+
+#[cfg(test)]
+mod monster_tests;

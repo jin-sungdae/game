@@ -23,6 +23,10 @@ pub struct Runtime {
     available_assets: std::collections::HashSet<String>,
 }
 impl Runtime {
+    #[cfg(test)]
+    pub(crate) fn set_test_calendar(&mut self, clock: Box<dyn conditions::CalendarClock>) {
+        self.calendar = clock;
+    }
     pub fn new(seed: u64) -> Self {
         Self {
             director: Director::new(true, seed, Config::default()).expect("valid spawn defaults"),
