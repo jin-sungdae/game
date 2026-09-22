@@ -84,6 +84,9 @@ fn capture_request_success_and_failure_counter() {
             encounter_id: b.encounter_id,
             success,
             chance: 0.6,
+            base_chance: None,
+            item_bonus: None,
+            final_chance: None,
             battle: b,
             collection: None,
         };
@@ -193,6 +196,9 @@ fn capture_does_not_discard_pending_reward() {
         encounter_id: b.encounter_id,
         success: true,
         chance: 0.85,
+        base_chance: None,
+        item_bonus: None,
+        final_chance: None,
         battle: b,
         collection: None,
     };

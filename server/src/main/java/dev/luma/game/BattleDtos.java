@@ -11,6 +11,6 @@ public final class BattleDtos {
     public record Collected(String monsterCode,String monsterName,long captureCount,Instant firstCapturedAt,Instant lastCapturedAt) {}
     public record Monster(String code,String name) {}
     public record Capture(UUID battleId,UUID encounterId,boolean success,double chance,Monster monster,
-                          String battleStatus,String encounterStatus,Collected collection,Battle battle) {}
+                          String battleStatus,String encounterStatus,Collected collection,Battle battle,double baseChance,double itemBonus,double finalChance) {}
     public record Resolution(UUID encounterId,String encounterStatus) {}
 }

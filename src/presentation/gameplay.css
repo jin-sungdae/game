@@ -16,3 +16,5 @@
 @keyframes gp-disappear{to{opacity:0;scale:.8}}
 @keyframes gp-toast-in{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.gp-impulse,.gp-impulse .gp-visual,.gp-capture-ring,.gp-damage,.gp-toast,.gp-creature.pip.SPAWNING,.gp-creature.pip.DESPAWNING{animation:none!important}.gp-defeated{transform:none;transition:none}.gp-hp-track span{transition:none}.gp-capture-success{opacity:.5}.gp-damage{opacity:1;transform:none}}
+
+.item-row{display:flex;align-items:center;justify-content:space-between;gap:4px;padding:4px 0;border-bottom:1px solid #c9d2b8}.item-row small{display:block;font-size:9px;color:#737a62}.item-row span{font-size:11px}
