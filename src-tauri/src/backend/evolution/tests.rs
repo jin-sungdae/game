@@ -306,9 +306,13 @@ fn live_nebla_natural_production_trace() {
             w.tick(now + 2.0, 0.1, (-9999.0, -9999.0), false);
             let boot = api.bootstrap().unwrap();
             assert_eq!(boot.active_companion.exp, u64::from(i as u32) * 20);
-            assert_eq!(boot.active_companion.bond, i as u32);
+            assert_eq!(boot.active_companion.bond, if i <= 15 { 0 } else { 5 });
             w.apply_bootstrap(boot);
             if i == 15 {
+                api.purchase("BOND_BERRY", 5).unwrap();
+                for _ in 0..5 {
+                    api.use_item("BOND_BERRY", None).unwrap();
+                }
                 w.apply_evolved(api.evolve().unwrap(), now + 3.0);
                 w.view.evolution.tick(now + 5.0);
             }
@@ -320,10 +324,13 @@ fn live_nebla_natural_production_trace() {
         }
         let c = api.bootstrap().unwrap().active_companion;
         assert_eq!(c.level, 6);
-        assert_eq!(c.bond, 75);
-        api.purchase("BOND_BERRY", 1).unwrap();
+        assert_eq!(c.bond, 5);
+        api.purchase("BOND_BERRY", 7).unwrap();
+        for _ in 0..6 {
+            api.use_item("BOND_BERRY", None).unwrap();
+        }
         let used = api.use_item("BOND_BERRY", None).unwrap();
-        assert_eq!(used.bond_after, Some(76));
+        assert_eq!(used.bond_after, Some(12));
         w.apply_bootstrap(api.bootstrap().unwrap());
         w.view.evolution.eligibility = Some(api.evolution().unwrap());
         assert_eq!(
@@ -362,7 +369,7 @@ fn live_nebla_natural_production_trace() {
         assert_eq!(c.evolution_stage, 3);
         assert_eq!(c.level, 6);
         assert_eq!(c.exp, 1500);
-        assert_eq!(c.bond, 76);
+        assert_eq!(c.bond, 12);
         assert_eq!(w.view.evolution.phase, Phase::Idle);
         frames.push(frame("restored", &w));
     }

@@ -6,7 +6,8 @@ import java.nio.file.Path;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-/** Cross-check the offline Python report against actual Java domain implementations. */
+/** PR #40 historical inputs; unchanged EXP/evolution rules remain cross-checked.
+ * Historical bond=wins is not the current production reward; see CompanionBondIntegrationTest. */
 class ProgressionBondAnalysisTest {
     private JsonNode report() throws Exception {
         return new ObjectMapper().readTree(Path.of("../tests/fixtures/progression-bond-analysis.json").toFile());
@@ -28,7 +29,7 @@ class ProgressionBondAnalysisTest {
             }
         }
     }
-    @Test void naturalGateBerryAndExactThresholdDistinction() {
+    @Test void historicalBondInputsBerryAndExactThresholdDistinction() {
         for(int monster=1;monster<=3;monster++) {
             long exp=0;int wins=0;
             while(CombatRules.level(exp)<6){exp+=CombatRules.exp(monster);wins++;}
@@ -36,7 +37,7 @@ class ProgressionBondAnalysisTest {
             var c=new GameDtos.Companion(1,"MOA",2,"MOKORI",6,exp,wins);
             assertTrue(EvolutionRules.next(c).orElseThrow().eligible(c));
         }
-        // Explicit legacy/test state: this is NOT reachable from fresh production rewards.
+        // Low-Bond input: legacy/test in v0.1; naturally reachable via interactions in v0.2.
         var before=new GameDtos.Companion(1,"MOA",2,"MOKORI",6,1500,11);
         var after=new GameDtos.Companion(1,"MOA",2,"MOKORI",6,1500,11+ItemRules.BERRY_BOND);
         assertFalse(EvolutionRules.next(before).orElseThrow().eligible(before));

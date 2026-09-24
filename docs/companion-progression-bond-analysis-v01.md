@@ -1,5 +1,7 @@
 # Companion Progression & Bond Balance Analysis v0.1
 
+> HISTORICAL v0.1: 아래 수치는 PR #40 당시 계약이다. Bond v0.2 이후 production과 다르며 frozen fixture로만 재현한다. 현재 규칙·검증은 [Bond v0.2](companion-bond-progression-v02.md) 및 `scripts/analysis/bond_progression_v02.py`를 사용한다. 아래 source guard/실행 설명도 당시 기록이다.
+
 분석 기준: `origin/main` **b1f1dd1** (PR #39 포함). Production gameplay changed: **NO**. Migration: **NONE**. Runtime 변경 없음. 아래 모델은 승인 제안이 아닌 비교용 가정이다.
 
 ## Current Rules / authority

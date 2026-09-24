@@ -8,7 +8,7 @@ import { assets } from '../entities/assets';
 import { CompanionVisual } from './CompanionVisual';
 import type { CompanionState, Entity } from '../types/entity';
 export function Creature({ kind, entity }: { kind:'moa'|'pip'; entity:Entity }) {
-  const {visual,game,identity,evolution,monster}=useEntities();
+  const {visual,game,identity,evolution,monster,bond}=useEntities();
   const companion=renderIdentity(identity,evolution);
   const evo=evolutionModel(evolution,game?.busy);
   const effect=effectFor(visual?.phase,kind);const damage=damageFor(visual,kind);
@@ -22,6 +22,7 @@ export function Creature({ kind, entity }: { kind:'moa'|'pip'; entity:Entity }) 
       {arrival && <span className={`spawn-highlight spawn-${arrival.tier}`} style={{'--spawn-duration':`${arrival.duration}ms`} as React.CSSProperties} aria-hidden="true"/>}
       <div className={`gp-pose ${defeated?'gp-defeated':''}`}><div className={`gp-impulse gp-${effect}`}><div className={`gp-visual gp-${kind}`}>{kind === 'moa' ? <div className={`evolution-pose evo-${evolution?.phase ?? 'IDLE'}`}><CompanionVisual species={companion?.species.toLowerCase() ?? 'moa'} evolutionStage={companion?.evolutionStage ?? 1} displayName={companion?.evolutionName} state={entity.state as CompanionState} facing={entity.facing}/></div> : <MonsterVisual code={monster?.monsterCode ?? "PIP"} state={entity.state} facing={entity.facing}/>}</div></div></div>
       {kind==='moa' && <button className={`evolution-entry ${evo.available?'available':''}`} aria-label={evo.available?'Evolution available':'Companion evolution'} title={evo.available?'Evolution Available':'Companion evolution'} onPointerDown={e=>e.stopPropagation()} onClick={e=>{e.stopPropagation();void action('evolution');}} onContextMenu={e=>{e.preventDefault();e.stopPropagation();}}>✦</button>}
+      {kind==='moa' && bond?.feedback && <span className="bond-feedback" role="status">{bond.feedback}</span>}
       {effect==='capturing'  && <span className="gp-capture-ring" aria-hidden="true"/>}
       {damage!=null && <span key={visual?.serial} className="gp-damage" aria-label={`Damage ${damage}`}>−{damage}</span>}
   </div>;

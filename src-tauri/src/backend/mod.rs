@@ -1,4 +1,5 @@
 pub mod battle;
+pub mod companion_interaction;
 pub mod discovery;
 pub mod evolution;
 pub mod items;
@@ -223,6 +224,7 @@ impl Api {
     }
 }
 pub enum Event {
+    CompanionInteracted(Result<companion_interaction::Result, String>),
     SpawnCompleted(
         crate::spawn::runtime::Action,
         Result<Option<Encounter>, String>,
@@ -306,6 +308,25 @@ impl Backend {
                     };
                     continue;
                 }
+                if matches!(command, Some(Command::InteractCompanion)) {
+                    let result = api.interact_companion().map_err(str::to_owned);
+                    if let Ok(value) = &result {
+                        identity = Some((
+                            value.bootstrap.active_companion.species.clone(),
+                            value.bootstrap.active_companion.evolution_stage,
+                        ));
+                    }
+                    if events.send(Event::CompanionInteracted(result)).is_err() {
+                        break;
+                    }
+                    // A lost POST response is never retried automatically.
+                    command = match rx.recv_timeout(Duration::from_secs(5)) {
+                        Ok(c) => Some(c),
+                        Err(mpsc::RecvTimeoutError::Timeout) => None,
+                        Err(_) => break,
+                    };
+                    continue;
+                }
                 let explicit = command.is_some();
                 let evolving = matches!(command, Some(Command::Evolve));
                 let item_request = matches!(
@@ -333,7 +354,9 @@ impl Backend {
                         }
                     }
                     match command.take() {
-                        Some(Command::Spawn(_) | Command::Discover(_)) => unreachable!(),
+                        Some(
+                            Command::Spawn(_) | Command::Discover(_) | Command::InteractCompanion,
+                        ) => unreachable!(),
                         Some(Command::LoadItems(id)) => {
                             last_battle = id;
                         }

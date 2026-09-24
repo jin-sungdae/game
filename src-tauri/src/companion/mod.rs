@@ -37,6 +37,7 @@ pub struct CompanionController {
     rng: u64,
     movement_rng: u64,
     drag: Option<DragGesture>,
+    clicked: bool,
 }
 impl CompanionController {
     pub fn new(
@@ -71,9 +72,13 @@ impl CompanionController {
             // Separate deterministic stream; movement choices do not consume behavior randomness.
             movement_rng: (seed ^ 0x6c756d615f6d6f76).max(1),
             drag: None,
+            clicked: false,
         };
         s.duration = config.idle.sample(s.random());
         s
+    }
+    pub fn take_click(&mut self) -> bool {
+        std::mem::take(&mut self.clicked)
     }
     pub fn entity(&self) -> &Entity<CompanionState> {
         &self.entity
@@ -241,6 +246,7 @@ impl CompanionController {
                 self.apply(Event::DragReleased, now, area, cursor);
                 // Preserve the spike's native mouse gesture classification: click is a separate reaction.
                 if clicked {
+                    self.clicked = true;
                     self.react(now, area, None);
                 }
             }

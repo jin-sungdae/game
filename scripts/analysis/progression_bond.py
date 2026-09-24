@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Offline analysis only. Read reviewed source contracts; never connect to a game DB.
+"""Historical PR #40 v0.1 analysis only. Read frozen inputs; never connect to a game DB.
 
 Exact Fraction renewal/binomial calculations; no random sampling or dependencies.
 CLI emits stable JSON, or --markdown for the generated report section.
@@ -9,57 +9,14 @@ from fractions import Fraction as F
 import json
 from math import ceil, comb
 from pathlib import Path
-import re
 
 ROOT = Path(__file__).resolve().parents[2]
 JAVA = ROOT / 'server/src/main/java/dev/luma/game'
 
 
 def contract():
-    def source(name):
-        return (JAVA / (name + '.java')).read_text()
-    def require(text, fragment):
-        if fragment not in text:
-            raise ValueError('Production contract changed; re-review analysis: ' + fragment)
-    combat = source('CombatRules')
-    require(combat, 'return 50L*level*(level-1);')
-    require(combat, 'while(level<MAX_LEVEL && exp>=levelThreshold(level+1)) level++;')
-    require(combat, 'return level*20L;')
-    require(combat, 'return level*10L;')
-    require(combat, 'MAX_LEVEL = 20;')
-    battle = source('BattleService')
-    require(battle, 'bond=bond+1')
-    require(battle, 'status="VICTORY";events.add("VICTORY");reward(b,e,events);')
-    capture = battle.split('public BattleDtos.Capture capture(')[1].split('public BattleDtos.Resolution ignore(')[0]
-    if 'reward(' in capture or 'SET bond' in capture or 'SET exp' in capture:
-        raise ValueError('Capture progression changed; re-review analysis')
-    require(source('ItemRules'), 'BERRY_BOND=1')
-    require(source('EvolutionRules'), 'new Rule("MOA", 1, 2, 3, 5)')
-    require(source('EvolutionRules'), 'new Rule("MOA", 2, 3, 6, 12)')
-    selector = source('MonsterSelector')
-    require(selector, 'random.nextLong(range)')
-    require(selector, 'monster.minLevel() + offset')
-    migrations = ROOT / 'server/src/main/resources/db/migration'
-    sql = '\n'.join(p.read_text() for p in sorted(migrations.glob('*.sql')))
-    rows = re.findall(r"\('([A-Z]+)','[A-Z]+','(COMMON|UNCOMMON|RARE|SPECIAL)','[A-Z_0-9]+',([0-9]+),([0-9]+),([0-9]+),true\)", sql)
-    dex = json.loads((ROOT / 'src/entities/monster-dex.json').read_text())
-    active = {d['monsterCode']: d for d in dex if d['enabled'] and d['contentReady'] and d['productionStatus'] == 'PRODUCTION'}
-    if len(rows) != 15 or set(active) != {r[0] for r in rows}:
-        raise ValueError('Master roster changed; re-review distribution')
-    for code, rarity, low, high, weight in rows:
-        if (int(low), int(high)) != (1, 3) or active[code]['rarity'] != rarity or active[code]['encounterWeight'] != int(weight):
-            raise ValueError('Master distribution changed')
-    prices = dict((code, int(price)) for code, price in re.findall(r"\('(SMALL_POTION|BOND_BERRY|CAPTURE_CHARM)','[^']+','[^']+',([0-9]+),99\)", sql))
-    if prices != {'SMALL_POTION': 20, 'BOND_BERRY': 30, 'CAPTURE_CHARM': 40}:
-        raise ValueError('Shop seed changed')
-    require(sql, "VALUES (1,'LOCAL_PLAYER',0)")
-    require(sql, "SELECT 1,species_id,1,1,0,0,true")
-    spawn = (ROOT / 'src-tauri/src/spawn/mod.rs').read_text()
-    require(spawn, 'minimum_cooldown: Duration::from_secs(120)')
-    require(spawn, 'maximum_cooldown: Duration::from_secs(300)')
-    return {'max_level': 20, 'exp_per_monster_level': 20, 'gold_per_monster_level': 10,
-            'battle_bond': 1, 'berry_bond': 1, 'prices': prices,
-            'monsters': [{'code': c, 'rarity': r, 'min': int(lo), 'max': int(hi), 'weight': int(w)} for c, r, lo, hi, w in rows]}
+    """Frozen PR #40 v0.1 input, not current production. See bond_progression_v02.py."""
+    return json.loads((ROOT / 'tests/fixtures/progression-bond-analysis.json').read_text())['rules']
 
 
 def threshold(level):

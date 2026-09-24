@@ -25,6 +25,7 @@ pub struct Snapshot {
     pub identity: Option<crate::backend::Companion>,
     pub evolution: crate::backend::evolution::Presentation,
     pub items: crate::backend::items::Presentation,
+    pub bond: crate::backend::companion_interaction::Presentation,
     pub game: crate::backend::battle::Presentation,
     pub dex: crate::collection_dex::Presentation,
     pub visual: crate::presentation::Visual,
@@ -62,6 +63,7 @@ impl World {
                 identity: None,
                 evolution: Default::default(),
                 items: Default::default(),
+                bond: Default::default(),
                 game: Default::default(),
                 dex: Default::default(),
                 visual: Default::default(),
@@ -115,6 +117,26 @@ impl World {
             .evolution
             .acknowledge(&value, self.view.identity.clone(), now);
         self.apply_bootstrap(value.bootstrap);
+    }
+    pub fn take_companion_click(&mut self) -> bool {
+        self.companion.take_click()
+    }
+    pub fn apply_companion_interaction(
+        &mut self,
+        result: Result<crate::backend::companion_interaction::Result, String>,
+        now: f64,
+    ) {
+        match result {
+            Ok(value) => {
+                self.view.bond.acknowledge(&value, now);
+                self.view.evolution.eligibility = Some(value.evolution);
+                self.apply_bootstrap(value.bootstrap);
+            }
+            Err(error) => {
+                eprintln!("[LUMA BOND] {error}; no local reward or automatic retry");
+                self.view.bond.fail();
+            }
+        }
     }
     pub fn open_evolution(&mut self) {
         self.view.interaction = InteractionMode::Evolution;

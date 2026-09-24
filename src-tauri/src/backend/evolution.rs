@@ -31,7 +31,7 @@ pub struct Eligibility {
     pub requirements: Option<Requirements>,
 }
 impl Eligibility {
-    fn valid(&self) -> bool {
+    pub(super) fn valid(&self) -> bool {
         !self.species.is_empty()
             && !self.current_name.is_empty()
             && (1..=5).contains(&self.current_stage)

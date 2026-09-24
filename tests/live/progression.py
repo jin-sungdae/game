@@ -31,8 +31,10 @@ if phase == 'reward':
     while b['status'] == 'ACTIVE':
         b = call('/battles/'+b['battleId']+'/attack', True)
     assert b['status'] == 'VICTORY'
-    assert b['reward'] == {'gold': 10, 'exp': 20, 'bond': 1}
+    assert b['reward'] == {'gold': 10, 'exp': 20, 'bond': 0}
     call('/encounters/'+e['encounterId']+'/ignore', True)
+    assert snapshot()[1] == (2, 6, 1500, 10)
+    assert call('/companions/active/interact', True)['bondDelta'] == 1
     assert snapshot()[1] == (2, 6, 1500, 11)
     assert call('/companions/active/evolution')['status'] == 'LOCKED'
 elif phase == 'berry-evolve':

@@ -29,7 +29,7 @@ export function Interaction() {
  </div>
  {g?.captureItemBonus!=null&&g.captureItemBonus>0&&<small>Charm +{Math.round(g.captureItemBonus*100)}% · Base {Math.round((g.captureBaseChance??0)*100)}% → Final {Math.round((g.captureFinalChance??0)*100)}%</small>}
  {g?.captureChance!=null&&<small className="gp-note">Last server capture chance: {Math.round(g.captureChance*100)}%</small>}
- {v?.phase==='REWARD'&&v.reward&&<div key={v.serial} className="gp-toast" role="status">+{v.reward.gold} Gold · +{v.reward.exp} EXP · +{v.reward.bond} Bond</div>}
+ {v?.phase==='REWARD'&&v.reward&&<div key={v.serial} className="gp-toast" role="status">+{v.reward.gold} Gold · +{v.reward.exp} EXP{v.reward.bond>0 && <> · +{v.reward.bond} Bond</>}</div>}
  {v?.phase==='LEVEL_UP'&&v.level&&<div key={v.serial} className="gp-toast" role="status">LEVEL UP · Lv.{v.level.from} → Lv.{v.level.to}</div>}
  {g?.collection.map(c=><small className="gp-collection" key={c.monsterCode}>{c.monsterCode} · Collected ×{c.captureCount}</small>)}
  </section>;

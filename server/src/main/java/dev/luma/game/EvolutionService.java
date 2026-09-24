@@ -12,7 +12,7 @@ public class EvolutionService {
     public EvolutionService(GameRepository game, EvolutionRepository repository) {
         this.game=game; this.repository=repository;
     }
-    private Status status(GameDtos.Companion c) {
+    Status status(GameDtos.Companion c) {
         var next=EvolutionRules.next(c);
         if (next.isEmpty()) return new Status(c.evolutionStage()==5 ? State.MAX_STAGE : State.LOCKED,
             c.species(),c.evolutionStage(),c.evolutionName(),null,null,null);

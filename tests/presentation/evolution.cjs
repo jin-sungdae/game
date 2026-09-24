@@ -33,3 +33,10 @@ test('NEBLA keeps MOKORI during acknowledged glow then reveals Stage3 diagnostic
  assert.equal(renderIdentity(next,{phase:'REVEAL',previous:old}),next);
  assert.equal(renderIdentity(next),next);
 });
+test('relationship feedback stays in existing entity panel and reward zero is hidden',()=>{
+ const creature=fs.readFileSync('src/components/Creature.tsx','utf8');
+ assert.match(creature,/bond\?\.feedback/);assert.match(creature,/className="bond-feedback" role="status"/);
+ assert.doesNotMatch(creature,/Bond\s*\+\s*1|setTimeout|nextAvailableAt.*Date/);
+ assert.match(fs.readFileSync('src/components/Interaction.tsx','utf8'),/v.reward.bond>0/);
+ assert.match(fs.readFileSync('src/presentation/evolution.css','utf8'),/\.bond-feedback[^}]*pointer-events:none/);
+});
