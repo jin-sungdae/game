@@ -72,13 +72,13 @@ public class BattleService {
     }
     private void reward(Row b,Encounter e,List<String> events) {
         record Progress(long exp,int level) {}
-        db.update("INSERT INTO game.t_reward(reward_id,encounter_id,player_id,gold_reward,exp_reward,bond_reward) VALUES(?,?,1,?,?,1)",UUID.randomUUID(),e.id,CombatRules.gold(e.level),CombatRules.exp(e.level));
+        db.update("INSERT INTO game.t_reward(reward_id,encounter_id,player_id,gold_reward,exp_reward,bond_reward) VALUES(?,?,1,?,?,0)",UUID.randomUUID(),e.id,CombatRules.gold(e.level),CombatRules.exp(e.level));
         db.update("UPDATE game.t_player SET gold=gold+?,updated_at=clock_timestamp() WHERE player_id=1",CombatRules.gold(e.level));
         var previous=db.queryForObject("SELECT exp,level FROM game.t_player_companion WHERE player_companion_id=?",
             (r,n)->new Progress(r.getLong(1),r.getInt(2)),b.companionId);
         long oldExp=previous.exp();
         long exp=Math.addExact(oldExp,CombatRules.exp(e.level));int level=CombatRules.level(exp);
-        db.update("UPDATE game.t_player_companion SET exp=?,level=?,bond=bond+1,updated_at=clock_timestamp() WHERE player_companion_id=?",exp,level,b.companionId);
+        db.update("UPDATE game.t_player_companion SET exp=?,level=?,updated_at=clock_timestamp() WHERE player_companion_id=?",exp,level,b.companionId);
         events.add("REWARD");if(level>previous.level()) events.add("LEVEL_UP");
     }
     private int counter(Row b,Encounter e,List<String> events) {

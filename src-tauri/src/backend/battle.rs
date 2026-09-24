@@ -87,6 +87,7 @@ pub struct Resolution {
 }
 #[derive(Clone, Debug)]
 pub enum Command {
+    InteractCompanion,
     Discover(super::discovery::Job),
     Spawn(crate::spawn::runtime::Action),
     LoadItems(Option<uuid::Uuid>),

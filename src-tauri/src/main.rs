@@ -242,6 +242,7 @@ fn main() {
                                     backend::Event::SpawnCompleted(action, result) => {
                                         world.complete_spawn(now, action, result)
                                     }
+                                    backend::Event::CompanionInteracted(value) => world.apply_companion_interaction(value, now),
                                     backend::Event::Items(value) => {
                                         world.view.items.inventory = Some(value);
                                     }
@@ -329,10 +330,12 @@ fn main() {
                             }
                             let visual_changed = world.presentation.tick(now);
                             let evolution_changed = world.view.evolution.tick(now);
+                            let bond_changed = world.view.bond.tick(now);
                             world.view.visual = world.presentation.view.clone();
                             if backend_changed
                                 || visual_changed
                                 || evolution_changed
+                                || bond_changed
                                 || world.view.visual.serial != previous_visual
                             {
                                 if visual_audit {
@@ -368,6 +371,10 @@ fn main() {
                             }
                             world.set_movement_windows(overlay::movement_windows());
                             world.tick(now, dt, cursor, down);
+                            if world.take_companion_click() && world.view.bond.request()
+                                && !state.backend.lock().unwrap().request(backend::battle::Command::InteractCompanion) {
+                                world.view.bond.fail();
+                            }
                             if let Some(action) = world.spawn_action(now) {
                                 if !state
                                     .backend

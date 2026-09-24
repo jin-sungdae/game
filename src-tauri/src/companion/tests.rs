@@ -344,3 +344,20 @@ fn unknown_windows_keep_ground_and_movement_rng_does_not_consume_behavior_rng() 
     assert_eq!(c.movement.profile(), Some(MovementProfile::Ground));
     assert_eq!(c.rng, baseline.rng);
 }
+
+#[test]
+fn only_completed_click_emits_one_relationship_intent() {
+    let mut c = controller(MOA_BEHAVIOR);
+    c.react(0.0, area(), None);
+    assert!(!c.take_click());
+    c.begin_drag(1.0, area(), (100.0, 100.0));
+    c.tick(1.1, 0.1, area(), (100.0, 100.0), false);
+    assert!(c.take_click());
+    assert!(!c.take_click());
+    c.begin_drag(2.0, area(), (100.0, 100.0));
+    c.tick(2.1, 0.1, area(), (110.0, 100.0), true);
+    c.tick(2.2, 0.1, area(), (100.0, 100.0), false);
+    assert!(!c.take_click());
+    c.tick(10.0, 0.1, area(), FAR, false);
+    assert!(!c.take_click());
+}

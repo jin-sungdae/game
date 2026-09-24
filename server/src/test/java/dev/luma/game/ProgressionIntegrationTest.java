@@ -31,20 +31,20 @@ class ProgressionIntegrationTest {
  BattleDtos.Battle attack(UUID id){return http.postForObject(url("/battles/"+id+"/attack"),null,BattleDtos.Battle.class);}
  BattleDtos.Battle win(){var b=start();while(b.status().equals("ACTIVE"))b=attack(b.battleId());assertEquals("VICTORY",b.status());return b;}
  void resolve(BattleDtos.Battle b){assertEquals(200,http.postForEntity(url("/encounters/"+b.encounterId()+"/ignore"),null,String.class).getStatusCode().value());}
- @Test void naturalSeventyFiveBattlesReachNeblaWithoutProgressionWrites(){
+ @Test void naturalSeventyFiveBattlesReachSixButDoNotUnlockBondGate(){
   for(int i=1;i<=75;i++){
-   var b=win();assertEquals(20,b.reward().exp());resolve(b);
-   var c=bootstrap().activeCompanion();assertEquals(i*20L,c.exp());assertEquals(i,c.bond());
-   if(i==15){assertEquals(3,c.level());assertEquals(2,evolve().bootstrap().activeCompanion().evolutionStage());}
+   var b=win();assertEquals(20,b.reward().exp());assertEquals(0,b.reward().bond());resolve(b);
+   var c=bootstrap().activeCompanion();assertEquals(i*20L,c.exp());assertEquals(0,c.bond());
+   if(i==15)assertEquals(EvolutionDtos.State.LOCKED,status().status());
    if(i==50)assertEquals(5,c.level());
   }
-  assertEquals(6,bootstrap().activeCompanion().level());assertEquals(EvolutionDtos.State.AVAILABLE,status().status());
-  var before=bootstrap();var r=evolve();assertEquals("NEBLA",r.bootstrap().activeCompanion().evolutionName());
-  assertEquals(before.activeCompanion().exp(),r.bootstrap().activeCompanion().exp());assertEquals(before.player(),r.bootstrap().player());
+  assertEquals(6,bootstrap().activeCompanion().level());assertEquals(1,bootstrap().activeCompanion().evolutionStage());
+  assertEquals(EvolutionDtos.State.LOCKED,status().status());
+  assertEquals(750,bootstrap().player().gold());
   assertEquals(75,db.queryForObject("SELECT count(*) FROM game.t_reward",Integer.class));
  }
  @Test void battleCrossesSixBerryUnlocksAndSevenRemainsReachable(){
-  db.update("UPDATE game.t_player_companion SET evolution_stage=2,level=5,exp=1480,bond=10");db.update("UPDATE game.t_player SET gold=100");
+  db.update("UPDATE game.t_player_companion SET evolution_stage=2,level=5,exp=1480,bond=11");db.update("UPDATE game.t_player SET gold=100");
   var b=win();resolve(b);var c=bootstrap().activeCompanion();assertEquals(6,c.level());assertEquals(1500,c.exp());assertEquals(11,c.bond());
   assertEquals(EvolutionDtos.State.LOCKED,status().status());
   http.postForObject(url("/shop/purchases"),new ItemDtos.PurchaseRequest("BOND_BERRY",1),ItemDtos.Purchase.class);
@@ -60,7 +60,7 @@ class ProgressionIntegrationTest {
    for(int i=0;i<4;i++)tasks.add(pool.submit(()->{gate.await();return http.postForEntity(url("/battles/"+b.battleId()+"/attack"),null,String.class).getStatusCode().value();}));gate.countDown();
    var results=new ArrayList<Integer>();for(var task:tasks)results.add(task.get(10,TimeUnit.SECONDS));assertEquals(1,Collections.frequency(results,200));assertEquals(3,Collections.frequency(results,409));
   }
-  assertEquals(1500,bootstrap().activeCompanion().exp());assertEquals(6,bootstrap().activeCompanion().level());assertEquals(11,bootstrap().activeCompanion().bond());
+  assertEquals(1500,bootstrap().activeCompanion().exp());assertEquals(6,bootstrap().activeCompanion().level());assertEquals(10,bootstrap().activeCompanion().bond());
   assertEquals(1,db.queryForObject("SELECT count(*) FROM game.t_reward",Integer.class));
  }
  @Test void legacyCappedExpReconcilesOnNextRewardWithLevelUpEvent(){
