@@ -1,3 +1,4 @@
+import { animationClock } from './clock';
 import { useEffect, useMemo, useState } from 'react';
 import type { CompanionState } from '../types/entity';
 import { AnimationController } from './controller';
@@ -11,7 +12,7 @@ export function useAnimation(species:string, stage:number, state:CompanionState)
   const token=useMemo(()=>({identity}),[identity]);
   const [view,setView]=useState<{token:object; identity:string; asset:LoadedClip; frame:number}|null>(null);
   useEffect(()=>{
-    let disposed=false, request=0;
+    let disposed=false;let stop=()=>{};
     void loader.load(species,stage,clipName).then(asset=>{
       if(disposed || !asset) return;
       const controller=new AnimationController(); controller.select(identity,asset.clip);
@@ -20,11 +21,12 @@ export function useAnimation(species:string, stage:number, state:CompanionState)
         if(disposed) return;
         const sample=controller.sample();
         if(sample.frame!==previous) { previous=sample.frame; setView({token,identity,asset,frame:sample.frame}); }
-        if(!sample.finished) request=requestAnimationFrame(tick);
+        if(sample.finished) stop();
       };
       tick();
+      if(!controller.sample().finished) stop=animationClock.subscribe(tick);
     });
-    return ()=>{ disposed=true; cancelAnimationFrame(request); };
+    return ()=>{ disposed=true; stop(); };
   },[identity,species,stage,clipName,token]);
   return view?.token===token ? view : null;
 }

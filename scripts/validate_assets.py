@@ -224,6 +224,19 @@ def validate_alpha(root=ROOT, strict=False):
                     if entry.name.casefold().startswith('base.'):
                         errors.append(f'{entry}: base must be a regular PNG file')
                     continue
+                if code == 'PIP' and entry.name == 'manifest.json':
+                    try:
+                        m = json.loads(entry.read_text())
+                        expected = {'species':'pip','stage':1,'canvas':{'width':256,'height':256},
+                            'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{
+                                'idle':{'frames':6,'frameDuration':100,'loop':True},
+                                'walk':{'frames':8,'frameDuration':80,'loop':True},
+                                'react':{'frames':6,'frameDuration':80,'loop':False}}}
+                        if m != expected:
+                            errors.append(f'{entry}: invalid PIP pilot animation contract')
+                    except (OSError, ValueError) as exc:
+                        errors.append(f'{entry}: invalid PIP pilot manifest: {exc}')
+                    continue
                 if entry.name != 'base.png':
                     errors.append(f'{entry}: invalid filename/duplicate/case mismatch; expected base.png')
             canonical = next((entry for entry in entries if entry.name == 'base.png' and entry.is_file()), None)

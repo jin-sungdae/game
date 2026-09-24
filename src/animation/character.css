@@ -1,0 +1,5 @@
+.character-facing,.character-animation{display:flex;align-items:flex-end;justify-content:center;flex:none;transform-origin:50% 100%;pointer-events:none}
+.character-breathing{animation:character-breathe 2.8s ease-in-out infinite}
+/* Bottom-center never translates; contraction fits within the unchanged base envelope. */
+@keyframes character-breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.99)}}
+@media(prefers-reduced-motion:reduce){.character-animation{animation:none!important;transform:none!important}}

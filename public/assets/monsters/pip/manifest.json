@@ -1,0 +1,9 @@
+{
+  "species":"pip","stage":1,"canvas":{"width":256,"height":256},
+  "anchor":{"x":0.5,"y":1},"display":{"width":82},
+  "animations":{
+    "idle":{"frames":6,"frameDuration":100,"loop":true},
+    "walk":{"frames":8,"frameDuration":80,"loop":true},
+    "react":{"frames":6,"frameDuration":80,"loop":false}
+  }
+}

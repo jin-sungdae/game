@@ -370,7 +370,11 @@ fn main() {
                                 _ => {}
                             }
                             world.set_movement_windows(overlay::movement_windows());
+                            let before_moa = (world.view.moa.x, world.view.moa.y);
+                            let before_pip = world.view.pip.as_ref().map(|p| (p.x,p.y));
                             world.tick(now, dt, cursor, down);
+                            world.view.animation.moa = presentation::animation::speed(before_moa, (world.view.moa.x,world.view.moa.y),dt,world.view.animation.moa);
+                            world.view.animation.pip = before_pip.zip(world.view.pip.as_ref()).map_or(0.0, |(before,p)| presentation::animation::speed(before,(p.x,p.y),dt,world.view.animation.pip));
                             if world.take_companion_click() && world.view.bond.request()
                                 && !state.backend.lock().unwrap().request(backend::battle::Command::InteractCompanion) {
                                 world.view.bond.fail();
@@ -430,13 +434,14 @@ fn main() {
                                 );
                             }
                             state.backend.lock().unwrap().set_open(view.menu);
-                            // State events only: positions are native; no 30Hz React rendering.
+                            // State/quantized animation-speed changes only; positions remain native.
                             let key = format!(
-                                "{:?}:{:?}:{}:{}",
+                                "{:?}:{:?}:{}:{}:{:?}",
                                 view.moa.state,
                                 view.pip.as_ref().map(|p| (p.state, p.facing)),
                                 view.moa.facing,
-                                view.menu
+                                view.menu,
+                                view.animation
                             );
                             LAST_KEY.with(|last| {
                                 if *last.borrow() != key {

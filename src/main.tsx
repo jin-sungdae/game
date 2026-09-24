@@ -1,3 +1,4 @@
+import './animation/character.css';
 import './presentation/evolution.css';
 import { createRoot } from 'react-dom/client';
 import { useEntities, connect } from './stores/entities';
