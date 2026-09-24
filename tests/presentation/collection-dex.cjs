@@ -132,3 +132,9 @@ test(process.env.LUMA_TEST_BATCH3_COLLECTION_OUTPUT ? 'Batch3 actual HTTP captur
   assert.equal(slot.asset,`/assets/monsters/${code.toLowerCase()}/base.png`);
  }
 });
+
+test('Dex copy reflects restart-persistent server discovery',()=>{
+ const html=render({discoveredCodes:['PIP']});
+ assert.match(html,/발견·포획 기록은 서버에 저장됩니다/);
+ assert.doesNotMatch(html,/현재 실행 기준/);
+});
