@@ -563,3 +563,6 @@ fn poll_delay(success: bool, failures: &mut usize) -> Duration {
     *failures = (*failures + 1).min(3);
     Duration::from_secs(delay)
 }
+
+#[cfg(test)]
+mod alpha_vertical_slice;
