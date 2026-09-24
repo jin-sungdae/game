@@ -1,0 +1,623 @@
+{
+  "battle_counts": [
+    {
+      "exact_threshold_best": 2,
+      "exact_threshold_expected": 2.8271604938271606,
+      "exact_threshold_worst": 5,
+      "fresh_best": 2,
+      "fresh_expected": 2.8271604938271606,
+      "fresh_worst": 5,
+      "increment_expected_with_carry": 2.8271604938271606,
+      "level": 2
+    },
+    {
+      "exact_threshold_best": 4,
+      "exact_threshold_expected": 5.334755880709242,
+      "exact_threshold_worst": 10,
+      "fresh_best": 5,
+      "fresh_expected": 7.833347027756191,
+      "fresh_worst": 15,
+      "increment_expected_with_carry": 5.00618653392903,
+      "level": 3
+    },
+    {
+      "exact_threshold_best": 5,
+      "exact_threshold_expected": 7.833347027756191,
+      "exact_threshold_worst": 15,
+      "fresh_best": 10,
+      "fresh_expected": 15.333333357947769,
+      "fresh_worst": 30,
+      "increment_expected_with_carry": 7.499986330191578,
+      "level": 4
+    },
+    {
+      "exact_threshold_best": 7,
+      "exact_threshold_expected": 10.333327366517606,
+      "exact_threshold_worst": 20,
+      "fresh_best": 17,
+      "fresh_expected": 25.33333333333373,
+      "fresh_worst": 50,
+      "increment_expected_with_carry": 9.999999975385963,
+      "level": 5
+    },
+    {
+      "exact_threshold_best": 9,
+      "exact_threshold_expected": 12.833333326087278,
+      "exact_threshold_worst": 25,
+      "fresh_best": 25,
+      "fresh_expected": 37.833333333333336,
+      "fresh_worst": 75,
+      "increment_expected_with_carry": 12.499999999999602,
+      "level": 6
+    }
+  ],
+  "berry_examples": {
+    "38": {
+      "after_one": {
+        "bond": 39,
+        "exp": 1520,
+        "gold": 730,
+        "level": 6,
+        "mokori_requirements_met": true,
+        "nebla_requirements_met": true,
+        "stage": "NEBLA"
+      },
+      "before": {
+        "bond": 38,
+        "exp": 1520,
+        "gold": 760,
+        "level": 6,
+        "mokori_requirements_met": true,
+        "nebla_requirements_met": true,
+        "stage": "NEBLA"
+      }
+    },
+    "8": {
+      "after_one": {
+        "bond": 9,
+        "exp": 320,
+        "gold": 130,
+        "level": 3,
+        "mokori_requirements_met": true,
+        "nebla_requirements_met": false,
+        "stage": "MOKORI"
+      },
+      "before": {
+        "bond": 8,
+        "exp": 320,
+        "gold": 160,
+        "level": 3,
+        "mokori_requirements_met": true,
+        "nebla_requirements_met": false,
+        "stage": "MOKORI"
+      }
+    }
+  },
+  "economy": [
+    {
+      "gold_max": 170,
+      "gold_min": 150,
+      "items": {
+        "BOND_BERRY": [
+          5,
+          5
+        ],
+        "CAPTURE_CHARM": [
+          3,
+          4
+        ],
+        "SMALL_POTION": [
+          7,
+          8
+        ]
+      },
+      "milestone": "MOKORI"
+    },
+    {
+      "gold_max": 520,
+      "gold_min": 500,
+      "items": {
+        "BOND_BERRY": [
+          16,
+          17
+        ],
+        "CAPTURE_CHARM": [
+          12,
+          13
+        ],
+        "SMALL_POTION": [
+          25,
+          26
+        ]
+      },
+      "milestone": "Lv5"
+    },
+    {
+      "gold_max": 770,
+      "gold_min": 750,
+      "items": {
+        "BOND_BERRY": [
+          25,
+          25
+        ],
+        "CAPTURE_CHARM": [
+          18,
+          19
+        ],
+        "SMALL_POTION": [
+          37,
+          38
+        ]
+      },
+      "milestone": "Lv6 / NEBLA"
+    }
+  ],
+  "natural_lv6_bond": {
+    "expected": 37.833333333333336,
+    "max": 75,
+    "min": 25
+  },
+  "rules": {
+    "battle_bond": 1,
+    "berry_bond": 1,
+    "exp_per_monster_level": 20,
+    "gold_per_monster_level": 10,
+    "max_level": 20,
+    "monsters": [
+      {
+        "code": "PIP",
+        "max": 3,
+        "min": 1,
+        "rarity": "COMMON",
+        "weight": 100
+      },
+      {
+        "code": "MELLO",
+        "max": 3,
+        "min": 1,
+        "rarity": "COMMON",
+        "weight": 100
+      },
+      {
+        "code": "MOSSY",
+        "max": 3,
+        "min": 1,
+        "rarity": "COMMON",
+        "weight": 100
+      },
+      {
+        "code": "CHIRP",
+        "max": 3,
+        "min": 1,
+        "rarity": "COMMON",
+        "weight": 100
+      },
+      {
+        "code": "BUBU",
+        "max": 3,
+        "min": 1,
+        "rarity": "COMMON",
+        "weight": 100
+      },
+      {
+        "code": "PEBB",
+        "max": 3,
+        "min": 1,
+        "rarity": "COMMON",
+        "weight": 100
+      },
+      {
+        "code": "PUFF",
+        "max": 3,
+        "min": 1,
+        "rarity": "COMMON",
+        "weight": 100
+      },
+      {
+        "code": "TIKKI",
+        "max": 3,
+        "min": 1,
+        "rarity": "UNCOMMON",
+        "weight": 50
+      },
+      {
+        "code": "MIMI",
+        "max": 3,
+        "min": 1,
+        "rarity": "UNCOMMON",
+        "weight": 50
+      },
+      {
+        "code": "WISP",
+        "max": 3,
+        "min": 1,
+        "rarity": "UNCOMMON",
+        "weight": 50
+      },
+      {
+        "code": "SHADE",
+        "max": 3,
+        "min": 1,
+        "rarity": "UNCOMMON",
+        "weight": 50
+      },
+      {
+        "code": "EMBER",
+        "max": 3,
+        "min": 1,
+        "rarity": "RARE",
+        "weight": 20
+      },
+      {
+        "code": "LUNET",
+        "max": 3,
+        "min": 1,
+        "rarity": "RARE",
+        "weight": 20
+      },
+      {
+        "code": "NOVA",
+        "max": 3,
+        "min": 1,
+        "rarity": "RARE",
+        "weight": 20
+      },
+      {
+        "code": "NOCT",
+        "max": 3,
+        "min": 1,
+        "rarity": "SPECIAL",
+        "weight": 1
+      }
+    ],
+    "prices": {
+      "BOND_BERRY": 30,
+      "CAPTURE_CHARM": 40,
+      "SMALL_POTION": 20
+    }
+  },
+  "scenario_nebla_opportunity": {
+    "A": 38,
+    "B": null,
+    "C": 75,
+    "D": 149
+  },
+  "scenarios_100_opportunities": {
+    "A": {
+      "bond": 100,
+      "evolution_opportunity": {
+        "MOKORI": 8,
+        "NEBLA": 38
+      },
+      "exp": 3980,
+      "gold": 1990,
+      "level": 9,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": true,
+      "stage": "NEBLA",
+      "wins": 100
+    },
+    "B": {
+      "bond": 0,
+      "evolution_opportunity": {
+        "MOKORI": null,
+        "NEBLA": null
+      },
+      "exp": 0,
+      "gold": 0,
+      "level": 1,
+      "mokori_requirements_met": false,
+      "nebla_requirements_met": false,
+      "stage": "MOA",
+      "wins": 0
+    },
+    "C": {
+      "bond": 50,
+      "evolution_opportunity": {
+        "MOKORI": 15,
+        "NEBLA": 75
+      },
+      "exp": 1980,
+      "gold": 990,
+      "level": 6,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": true,
+      "stage": "NEBLA",
+      "wins": 50
+    },
+    "D": {
+      "bond": 25,
+      "evolution_opportunity": {
+        "MOKORI": 29,
+        "NEBLA": null
+      },
+      "exp": 980,
+      "gold": 490,
+      "level": 4,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": false,
+      "stage": "MOKORI",
+      "wins": 25
+    }
+  },
+  "sensitivity": {
+    "battle_bond_zero": {
+      "expected_bond_at_lv6": 0.0,
+      "mokori": {
+        "expected_wins": null,
+        "probability_locked_at_level": 1.0
+      },
+      "nebla": {
+        "expected_wins": null,
+        "probability_locked_at_level": 1.0
+      }
+    },
+    "current": {
+      "expected_bond_at_lv6": 37.833333333333336,
+      "mokori": {
+        "expected_wins": 7.833347027756191,
+        "probability_locked_at_level": 0.0
+      },
+      "nebla": {
+        "expected_wins": 37.833333333333336,
+        "probability_locked_at_level": 0.0
+      }
+    },
+    "nebla_bond_40": {
+      "expected_bond_at_lv6": 37.833333333333336,
+      "mokori": {
+        "expected_wins": 7.833347027756191,
+        "probability_locked_at_level": 0.0
+      },
+      "nebla": {
+        "expected_wins": 40.2802187976603,
+        "probability_locked_at_level": 0.7532330869518474
+      }
+    },
+    "p_0.25": {
+      "expected_bond_at_lv6": 9.458333333333334,
+      "mokori": {
+        "expected_wins": 20.025012268630086,
+        "probability_locked_at_level": 0.9709914874768367
+      },
+      "nebla": {
+        "expected_wins": 49.10657625960349,
+        "probability_locked_at_level": 0.7772103801888687
+      }
+    }
+  },
+  "thresholds": [
+    {
+      "exp": 0,
+      "increment": 0,
+      "level": 1
+    },
+    {
+      "exp": 100,
+      "increment": 100,
+      "level": 2
+    },
+    {
+      "exp": 300,
+      "increment": 200,
+      "level": 3
+    },
+    {
+      "exp": 600,
+      "increment": 300,
+      "level": 4
+    },
+    {
+      "exp": 1000,
+      "increment": 400,
+      "level": 5
+    },
+    {
+      "exp": 1500,
+      "increment": 500,
+      "level": 6
+    },
+    {
+      "exp": 2100,
+      "increment": 600,
+      "level": 7
+    },
+    {
+      "exp": 2800,
+      "increment": 700,
+      "level": 8
+    },
+    {
+      "exp": 3600,
+      "increment": 800,
+      "level": 9
+    },
+    {
+      "exp": 4500,
+      "increment": 900,
+      "level": 10
+    },
+    {
+      "exp": 5500,
+      "increment": 1000,
+      "level": 11
+    },
+    {
+      "exp": 6600,
+      "increment": 1100,
+      "level": 12
+    },
+    {
+      "exp": 7800,
+      "increment": 1200,
+      "level": 13
+    },
+    {
+      "exp": 9100,
+      "increment": 1300,
+      "level": 14
+    },
+    {
+      "exp": 10500,
+      "increment": 1400,
+      "level": 15
+    },
+    {
+      "exp": 12000,
+      "increment": 1500,
+      "level": 16
+    },
+    {
+      "exp": 13600,
+      "increment": 1600,
+      "level": 17
+    },
+    {
+      "exp": 15300,
+      "increment": 1700,
+      "level": 18
+    },
+    {
+      "exp": 17100,
+      "increment": 1800,
+      "level": 19
+    },
+    {
+      "exp": 19000,
+      "increment": 1900,
+      "level": 20
+    }
+  ],
+  "timeline_fixed_level2": [
+    {
+      "bond": 0,
+      "exp": 0,
+      "gold": 0,
+      "level": 1,
+      "mokori_requirements_met": false,
+      "nebla_requirements_met": false,
+      "stage": "MOA",
+      "wins": 0
+    },
+    {
+      "bond": 1,
+      "exp": 40,
+      "gold": 20,
+      "level": 1,
+      "mokori_requirements_met": false,
+      "nebla_requirements_met": false,
+      "stage": "MOA",
+      "wins": 1
+    },
+    {
+      "bond": 5,
+      "exp": 200,
+      "gold": 100,
+      "level": 2,
+      "mokori_requirements_met": false,
+      "nebla_requirements_met": false,
+      "stage": "MOA",
+      "wins": 5
+    },
+    {
+      "bond": 10,
+      "exp": 400,
+      "gold": 200,
+      "level": 3,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": false,
+      "stage": "MOKORI",
+      "wins": 10
+    },
+    {
+      "bond": 15,
+      "exp": 600,
+      "gold": 300,
+      "level": 4,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": false,
+      "stage": "MOKORI",
+      "wins": 15
+    },
+    {
+      "bond": 20,
+      "exp": 800,
+      "gold": 400,
+      "level": 4,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": false,
+      "stage": "MOKORI",
+      "wins": 20
+    },
+    {
+      "bond": 25,
+      "exp": 1000,
+      "gold": 500,
+      "level": 5,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": false,
+      "stage": "MOKORI",
+      "wins": 25
+    },
+    {
+      "bond": 30,
+      "exp": 1200,
+      "gold": 600,
+      "level": 5,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": false,
+      "stage": "MOKORI",
+      "wins": 30
+    },
+    {
+      "bond": 40,
+      "exp": 1600,
+      "gold": 800,
+      "level": 6,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": true,
+      "stage": "NEBLA",
+      "wins": 40
+    },
+    {
+      "bond": 50,
+      "exp": 2000,
+      "gold": 1000,
+      "level": 6,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": true,
+      "stage": "NEBLA",
+      "wins": 50
+    },
+    {
+      "bond": 60,
+      "exp": 2400,
+      "gold": 1200,
+      "level": 7,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": true,
+      "stage": "NEBLA",
+      "wins": 60
+    },
+    {
+      "bond": 75,
+      "exp": 3000,
+      "gold": 1500,
+      "level": 8,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": true,
+      "stage": "NEBLA",
+      "wins": 75
+    },
+    {
+      "bond": 100,
+      "exp": 4000,
+      "gold": 2000,
+      "level": 9,
+      "mokori_requirements_met": true,
+      "nebla_requirements_met": true,
+      "stage": "NEBLA",
+      "wins": 100
+    }
+  ]
+}
