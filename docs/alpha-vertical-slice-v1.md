@@ -43,11 +43,11 @@ PASS means the stated automated scope passed. Native manual checks below remain 
 
 ### Actual journey
 
-- Fresh→MOKORI: **9 victories**, Lv3/EXP340/Bond5/Gold20.
-- Fresh→NEBLA: **39 victories**, Lv6/EXP1520/Bond12/Gold400.
+- Fresh→MOKORI: **10 battles started / 9 victories**, Lv3/EXP340/Bond5/Gold20.
+- Fresh→NEBLA: **40 battles started / 39 victories**, Lv6/EXP1520/Bond12/Gold400.
 - Two awarded interactions; one additional cooldown request awarded zero.
--10 Berry (300 Gold),1 Potion (20 Gold),1 Charm (40 Gold): **760 earned−360 spent=400 remaining**.
--40 capture outcomes:36 success,4 failure. One early Charm capture ended an encounter before victory; therefore capture attempts and victory counts differ.
+- 10 Berry (300 Gold),1 Potion (20 Gold),1 Charm (40 Gold): **760 earned−360 spent=400 remaining**.
+- 40 capture outcomes:36 success,4 failure. One early Charm capture ended an encounter before victory; therefore capture attempts and victory counts differ.
 - Actual random journey discovered/captured14 species: PIP, MELLO, MOSSY, CHIRP, BUBU, PEBB, PUFF, TIKKI, MIMI, WISP, SHADE, EMBER, LUNET, NOVA. **NOCT random bootJar encounter: NOT_RUN** (not drawn). Its production master, weighted boundary, NIGHT/EDGE, asset and World behavior are covered by deterministic tests. No forced RNG or fabricated encounter was used in the journey.
 - **Random bootJar defeat: NOT_RUN**; controlled real HTTP/PostgreSQL battle integration covers defeat.
 - Shop requests do not have general idempotency keys: another funded purchase is a new purchase. This certification proves transaction/funds safety and existing busy guards, not arbitrary purchase deduplication.
