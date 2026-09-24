@@ -554,3 +554,33 @@ fn passive_worker_error_backoff_is_bounded_and_success_restores_existing_poll_in
     assert_eq!(poll_delay(true, &mut failures).as_secs(), 5);
     assert_eq!(failures, 0);
 }
+
+#[test]
+fn release_connection_refused_and_read_timeout_are_bounded_and_sanitized() {
+    let refused = TcpListener::bind("127.0.0.1:0").unwrap();
+    let addr = refused.local_addr().unwrap();
+    drop(refused);
+    assert_eq!(
+        Api::new(&format!("http://{addr}"))
+            .unwrap()
+            .bootstrap()
+            .unwrap_err(),
+        "server unavailable"
+    );
+    let listener = TcpListener::bind("127.0.0.1:0").unwrap();
+    let addr = listener.local_addr().unwrap();
+    let task = std::thread::spawn(move || {
+        let (_socket, _) = listener.accept().unwrap();
+        std::thread::sleep(Duration::from_secs(4));
+    });
+    let start = std::time::Instant::now();
+    assert_eq!(
+        Api::new(&format!("http://{addr}"))
+            .unwrap()
+            .bootstrap()
+            .unwrap_err(),
+        "server unavailable"
+    );
+    assert!(start.elapsed() < Duration::from_secs(6));
+    task.join().unwrap();
+}

@@ -74,3 +74,7 @@ test('delivered NEBLA resolves its own base before and after loader restart',asy
   assert.deepEqual(calls,[1,2,3].map(n=>`/assets/creatures/moa/stage0${n}/base.png`));
  }
 });
+
+test('corrupt companion stages fail closed without borrowing another stage',()=>{
+ for(const stage of [-1,0,4,99,NaN,1.5]) assert.equal(companionBase('moa',stage),null);
+});

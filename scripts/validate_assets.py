@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 COUNTS = dict(idle=6, walk=8, sit=4, look=4, sleep=6, react=6)
 
 
-def png_errors(path, require_transparency=False):
+def png_errors(path, require_transparency=False, bounds=None):
     errors = []
     try:
         data = path.read_bytes()
@@ -57,6 +57,7 @@ def png_errors(path, require_transparency=False):
             if require_transparency:
                 previous = bytearray(1024)
                 transparent = False
+                ink = []
                 for start in range(0, len(raw), 1025):
                     filtering = raw[start]
                     row = bytearray(raw[start+1:start+1025])
@@ -78,7 +79,14 @@ def png_errors(path, require_transparency=False):
                             predictor = 0
                         row[i] = (row[i]+predictor) & 255
                     transparent |= any(alpha < 255 for alpha in row[3::4])
+                    if bounds is not None:
+                        ink.extend((x, start//1025) for x, alpha in enumerate(row[3::4]) if alpha)
                     previous = row
+                if bounds is not None:
+                    if not ink:
+                        errors.append('empty alpha content')
+                    else:
+                        bounds.extend([min(x for x,y in ink), min(y for x,y in ink), max(x for x,y in ink), max(y for x,y in ink)])
                 if not transparent:
                     errors.append('transparent pixels required; fully opaque RGBA is invalid')
     except (OSError, ValueError, struct.error, zlib.error) as exc:
@@ -228,14 +236,40 @@ def validate_alpha(root=ROOT, strict=False):
     return errors, pending
 
 
+def validate_release(root=ROOT):
+    """Required Alpha bases only; optional animation remains the existing allow-missing gate."""
+    errors, _ = validate_alpha(root, strict=True)
+    registry = json.loads((root/'src/entities/companions.json').read_text())
+    rows = []
+    required = []
+    for stage, name in [(1, 'MOA'), (2, 'MOKORI'), (3, 'NEBLA')]:
+        url = f'/assets/creatures/moa/stage{stage:02}/base.png'
+        moa = registry.get('moa', {})
+        if moa.get('stages', {}).get(str(stage)) != url.replace('base.png', 'manifest.json') or moa.get('stageNames', {}).get(str(stage), moa.get('name')) != name:
+            errors.append(f'{name}: companion registry identity mismatch')
+        required.append((name, url))
+    required.extend((code.upper(), f'/assets/monsters/{code}/base.png') for code in ALPHA_CODES)
+    for name, url in required:
+        bounds = []
+        failures = png_errors(root/'public'/url.lstrip('/'), True, bounds)
+        errors.extend(f'{name}: {e}' for e in failures)
+        rows.append({'identity': name, 'url': url, 'bounds': bounds, 'status': 'FAIL' if failures else 'PASS'})
+    return errors, rows
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--release', action='store_true', help='audit all eighteen required production bases')
     parser.add_argument('--allow-missing', action='store_true')
     parser.add_argument('--strict-base', action='store_true', help='require MOA and PIP base delivery; frame policy unchanged')
     parser.add_argument('--strict-alpha', action='store_true', help='require all fifteen Monster bases; independent of Companion delivery')
     parser.add_argument('--alpha-only', action='store_true', help='validate only optional Alpha Monster delivery')
     parser.add_argument('--root', type=Path, default=ROOT, help='repository/delivery staging root')
     args = parser.parse_args()
+    if args.release:
+        failures, rows = validate_release(args.root)
+        print(json.dumps({'requiredBases': rows, 'errors': failures}, indent=2))
+        raise SystemExit(bool(failures))
     failures, pending = validate_alpha(args.root, strict=args.strict_alpha)
     if not (args.alpha_only or args.strict_alpha):
         frame_failures, frame_pending = validate(args.root, allow_missing=args.allow_missing)
