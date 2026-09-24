@@ -90,3 +90,8 @@ test('confirmed content and delivery identities match; successful image loads ne
  }
  assert.equal(JSON.stringify(monsterDex),before);
 });
+
+test('release real fifteen bases select same-monster base, never diagnostic',async()=>{
+ const loader=new BaseAssetLoader(async url=>{const b=fs.readFileSync('public'+url);return {width:b.readUInt32BE(16),height:b.readUInt32BE(20)};});
+ for(const slug of slugs){const url=resolveMonster(slug.toUpperCase()).baseAsset;assert.deepEqual(rendererSource(null,await loader.load(url)),{kind:'base',url});}
+});

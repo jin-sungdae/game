@@ -12,6 +12,7 @@ import subprocess as sp
 import tempfile
 import time
 import urllib.request
+import urllib.error
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -20,14 +21,16 @@ def free_port():
         s.bind(('127.0.0.1',0))
         return s.getsockname()[1]
 
-def run(output):
+def run(output, release=False):
     pg=Path(os.environ['PG_BIN']);java=Path(os.environ['JAVA_HOME'])/'bin/java'
     assert ' 16.' in sp.check_output([pg/'postgres','--version'],text=True), 'PostgreSQL16 required'
     jar=ROOT/'server/build/libs/luma-game-server-0.1.0.jar'
     assert jar.is_file(), 'Build actual bootJar first'
     output.mkdir(parents=True,exist_ok=False)  # Refuse overwriting evidence or prior state.
     db_port,server_port=free_port(),free_port()
-    env=dict(os.environ,LUMA_GAME_SERVER_URL=f'http://127.0.0.1:{server_port}',LUMA_ALPHA_OUTPUT=str(output))
+    while server_port == db_port: server_port=free_port()
+    clean_env={k:v for k,v in os.environ.items() if not k.startswith(('SPRING_', 'LUMA_DB_', 'LUMA_TEST_DB_'))}
+    env=dict(clean_env,LUMA_DB_USER='luma',LUMA_DB_PASSWORD='',LUMA_TEST_DB_USER='luma',LUMA_TEST_DB_PASSWORD='',LUMA_GAME_SERVER_URL=f'http://127.0.0.1:{server_port}',LUMA_ALPHA_OUTPUT=str(output))
     server=None
     with tempfile.TemporaryDirectory(prefix='luma-alpha-pg-') as data:
         def command(args,name,extra=None):
@@ -60,6 +63,9 @@ def run(output):
             command([pg/'initdb','-D',data,'-U','luma','-A','trust'],'initdb.log')
             command([pg/'pg_ctl','-D',data,'-l',output/'postgres.log','-o',f'-p {db_port} -h 127.0.0.1','start'],'pg-start.log');started=True
             command([pg/'createdb','-h','127.0.0.1','-p',str(db_port),'-U','luma','luma_alpha_slice_test'],'createdb.log')
+            if release:
+                command([pg/'createdb','-h','127.0.0.1','-p',str(db_port),'-U','luma','luma_alpha_regression_test'],'regression-db.log')
+                command(['./server/gradlew','-p','server','test','bootJar','--rerun-tasks','--no-daemon'],'server-tests.log',dict(env,LUMA_TEST_DB_URL=f'jdbc:postgresql://127.0.0.1:{db_port}/luma_alpha_regression_test'))
             start('fresh');phase('fresh');stop();phase('offline')
             # Explicit authorized clock fixture only: no EXP/Bond/Gold/stage/inventory SQL updates.
             start('discovery-restart')
@@ -73,6 +79,27 @@ def run(output):
             stop();start('nebla-restart');phase('restored');assert before==history()
             (output/'history-after.json').write_text(json.dumps(history(),indent=2))
             (output/'run.json').write_text(json.dumps({'result':'PASS','head':sp.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'postgresVersion':sp.check_output([pg/'postgres','--version'],text=True).strip(),'db':'new isolated luma_alpha_slice_test','clockInjection':'last_bond_interaction_at only, after first restart','progressionSqlWrites':False,'serverRestarts':2,'worldProcesses':['fresh','offline','progress','restored']},indent=2))
+            if release:
+                # Only our disposable cluster is stopped. Real bootJar must return a bounded 503.
+                command([pg/'pg_ctl','-D',data,'stop'],'db-runtime-stop.log');started=False
+                began=time.monotonic()
+                try:
+                    urllib.request.urlopen(env['LUMA_GAME_SERVER_URL']+'/api/v1/game/bootstrap',timeout=12)
+                    raise AssertionError('unavailable DB unexpectedly succeeded')
+                except urllib.error.HTTPError as error:
+                    assert error.code == 503
+                    body=json.loads(error.read())
+                    assert body['code']=='GAME_UNAVAILABLE'
+                elapsed=time.monotonic()-began
+                stop()
+                canary='luma-release-ephemeral-canary'
+                with (output/'db-startup-failure.log').open('w') as log:
+                    bad=sp.run([str(java),'-jar',str(jar)],cwd=ROOT,env=dict(env,LUMA_SERVER_PORT=str(server_port),LUMA_DB_URL=f'jdbc:postgresql://127.0.0.1:{db_port}/luma_alpha_slice_test',LUMA_DB_PASSWORD=canary),stdout=log,stderr=sp.STDOUT,timeout=40)
+                assert bad.returncode != 0
+                text=(output/'db-startup-failure.log').read_text()
+                assert 'Connection refused' in text or 'connection attempt failed' in text
+                assert canary not in text
+                (output/'db-failure.json').write_text(json.dumps({'runtimeStatus':503,'runtimeSeconds':elapsed,'startupExit':bad.returncode,'credentialCanaryAbsent':True},indent=2))
             print((output/'summary.json').read_text(),flush=True)
         finally:
             stop()

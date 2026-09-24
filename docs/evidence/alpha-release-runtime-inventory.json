@@ -1,0 +1,114 @@
+{
+  "server/src/main/java/dev/luma/game/GameErrors.java": [
+    "LOG.warn(\"Local game request unavailable: {}\",error.getClass().getSimpleName());"
+  ],
+  "src-tauri/native/panel.m": [
+    "NSLog(@\"[LUMA PANEL] %@ opaque=%d level=%ld keyAllowed=%d mainAllowed=%d\", panel.title, panel.opaque, (long)panel.level, panel.canBecomeKeyWindow, panel.canBecomeMainWindow);"
+  ],
+  "src-tauri/src/backend/battle.rs": [
+    ".request(&format!(\"/api/v1/battles/{id}/capture\"), true)?",
+    ".request(&path, action.is_some())?"
+  ],
+  "src-tauri/src/backend/companion_interaction.rs": [
+    ".request(\"/api/v1/companions/active/interact\", true)?"
+  ],
+  "src-tauri/src/backend/discovery.rs": [
+    "let rows: Vec<Entry> = self.request(\"/api/v1/dex\", false)?.ok_or(\"missing Dex\")?;"
+  ],
+  "src-tauri/src/backend/evolution.rs": [
+    ".request(\"/api/v1/companions/active/evolution\", false)?",
+    ".request(\"/api/v1/companions/active/evolve\", true)?"
+  ],
+  "src-tauri/src/backend/items.rs": [
+    ".request(\"/api/v1/inventory\", false)?",
+    ".request(\"/api/v1/shop/items\", false)?",
+    "self.request(&format!(\"/api/v1/battles/{id}/item-effects\"), false)?"
+  ],
+  "src-tauri/src/backend/mod.rs": [
+    ".request(\"/api/v1/game/bootstrap\", false)?",
+    ".send(Event::Battle(api.battle(id, None)?))",
+    ".send(Event::Battle(api.battle(id, None)?))",
+    ".send(Event::Battle(api.battle(id, None)?))",
+    ".send(Event::Battle(api.battle(id, Some(\"attack\"))?))",
+    ".send(Event::Battle(api.battle(id, Some(\"start\"))?))",
+    ".send(Event::Bootstrap(bootstrap))",
+    ".send(Event::Bootstrap(bootstrap))",
+    ".send(Event::Bootstrap(bootstrap))",
+    ".send(Event::Capture(api.capture(id)?))",
+    ".send(Event::Encounter(api.encounter(true)?))",
+    ".send(Event::EvolutionUnavailable(e.into()))",
+    ".send(Event::Evolved(api.evolve()?))",
+    ".send(Event::ItemUsed(api.use_item(&code, id)?))",
+    ".send(Event::Items(api.items(last_battle)?))",
+    ".send(Event::Purchased(api.purchase(&code, 1)?))",
+    "Err(error) => eprintln!(",
+    "eprintln!(\"[LUMA BACKEND] connection restored\")",
+    "eprintln!(\"[LUMA BACKEND] {e}; local Companion continues\");",
+    "events.send(Event::Dex(api.dex()?)).map_err(|_| \"closed\")?;",
+    "events.send(Event::Dex(rows)).map_err(|_| \"closed\")?;",
+    "events.send(Event::Encounter(e)).map_err(|_| \"closed\")?;",
+    "events.send(Event::Evolution(value)).map_err(|_| \"closed\")?;",
+    "events.send(Event::Finished(result.as_ref().err().map(|e| (*e).into())));",
+    "if events.send(Event::CompanionInteracted(result)).is_err() {",
+    "if events.send(Event::DiscoveryCompleted(job, result)).is_err() {",
+    "if events.send(Event::SpawnCompleted(action, result)).is_err() {",
+    "let (events, receiver) = mpsc::sync_channel(8);",
+    "let (requests, rx) = mpsc::sync_channel(1);",
+    "let _ = events.send(Event::Finished(Some(e.into())));",
+    "let _ = events.send(Event::ItemsFinished(",
+    "let _ = events.send(if evolving {",
+    "let e: Option<Encounter> = self.request(",
+    "let response = request.send().map_err(|_| \"server unavailable\")?;",
+    "self.send(path, post, None)",
+    "self.send(path, true, body)",
+    "std::thread::spawn(move || {"
+  ],
+  "src-tauri/src/behaviors.rs": [
+    "eprintln!(",
+    "eprintln!(",
+    "eprintln!(\"[LUMA BOND] {error}; no local reward or automatic retry\");"
+  ],
+  "src-tauri/src/main.rs": [
+    "&& !state.backend.lock().unwrap().request(backend::battle::Command::InteractCompanion) {",
+    "&& world.view.evolution.request()",
+    ".request(backend::battle::Command::Evolve)",
+    ".request(backend::battle::Command::Spawn(action))",
+    "Err(error) => eprintln!(\"[LUMA DISCOVERY] {error}; retained for bounded retry\"),",
+    "eprintln!(",
+    "eprintln!(",
+    "eprintln!(\"[LUMA EXIT] panels and status item cleaned\");",
+    "eprintln!(\"[LUMA FOCUS] app active={active} t={now:.2}\");",
+    "eprintln!(\"[LUMA INPUT] {kind}\");",
+    "eprintln!(\"[LUMA SMOKE] normal exit\");",
+    "eprintln!(\"[LUMA] emit: {e}\");",
+    "if !state.backend.lock().unwrap().request(backend::battle::Command::Discover(job.clone())) {",
+    "if !state.backend.lock().unwrap().request(command) {",
+    "if !state.backend.lock().unwrap().request(command) {",
+    "if world.take_companion_click() && world.view.bond.request()",
+    "std::thread::spawn(move || {",
+    "world.presentation.request(&kind, now);"
+  ],
+  "src-tauri/src/presentation/smoke.rs": [
+    "eprintln!(",
+    "eprintln!(\"[LUMA VISUAL SMOKE] FAIL timeout\");",
+    "eprintln!(\"[LUMA VISUAL SMOKE] FAIL {error}\");",
+    "eprintln!(\"[LUMA VISUAL SMOKE] command={action}\");",
+    "if !backend.request(command) {",
+    "w.presentation.request(action, now);"
+  ],
+  "src-tauri/src/spawn/runtime/batch1.rs": [
+    "eprintln!(\"BATCH1 LIVE PASS {code}: spawn/movement/restart/battle/hit/capture/collection/cooldown encounter={}\",e.encounter_id);"
+  ],
+  "src-tauri/src/spawn/runtime/batch2.rs": [
+    "eprintln!(\"BATCH2 LIVE PASS {code}: spawn/movement/restart/battle/hit/capture/collection/cooldown encounter={}\",e.encounter_id);"
+  ],
+  "src-tauri/src/spawn/runtime/batch3.rs": [
+    "eprintln!(\"BATCH3 PRODUCTION LIVE PASS {code}: POST/asset/condition/movement/restore/battle/hit/potion/charm/capture/collection/cooldown id={}\",e.encounter_id);"
+  ],
+  "src/animation/loader.ts": [
+    "json:async url => { const r=await fetch(url); if(!r.ok) throw new Error('Missing manifest'); return r.json(); },"
+  ],
+  "src/animation/useAnimation.ts": [
+    "if(!sample.finished) request=requestAnimationFrame(tick);"
+  ]
+}
