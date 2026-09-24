@@ -14,3 +14,8 @@ export function effectFor(phase:Visual['phase']|undefined,kind:'moa'|'pip') {
 export function damageFor(v:Visual|undefined,kind:'moa'|'pip') {
  return v && ((kind==='moa'&&v.phase==='PLAYER_HIT')||(kind==='pip'&&v.phase==='MONSTER_HIT')) ? v.damage : null;
 }
+
+// Server-selected WAIT only; one status line, never client combat decisions.
+export function monsterWaitMessage(b:{status:string;encounterStatus:string;events:string[]}|null|undefined,name:string):string|null {
+ return b?.status==='ACTIVE' && b.encounterStatus==='ACTIVE' && b.events.includes('MONSTER_WAIT') ? `${name} waits` : null;
+}

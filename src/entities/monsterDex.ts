@@ -5,6 +5,7 @@ export const archetypes = ['BEAST', 'SLIME', 'PLANT', 'SPIRIT', 'BIRD', 'INSECT'
 // Wire values of src-tauri/src/movement/mod.rs::MovementProfile; no new engine.
 export const movementProfiles = ['GROUND', 'JUMP', 'FREE_2D', 'FLOATING', 'FLYING', 'EDGE', 'STATIC'] as const;
 export const behaviorProfiles = ['CURIOUS', 'TIMID', 'PLAYFUL', 'AGGRESSIVE', 'SLEEPY', 'TRICKSTER', 'PASSIVE'] as const;
+export const battlePersonalities = ['BALANCED','DEFENSIVE','AGGRESSIVE','ERRATIC'] as const;
 export const spawnProfiles = ['BOTTOM', 'TOP', 'EDGE', 'FREE_AREA', 'NEAR_DOCK', 'NEAR_DESKTOP_EDGE', 'FLOATING_AREA', 'LOWER_CORNER'] as const;
 export const spawnConditions = ['ANY_TIME', 'DAY', 'NIGHT', 'FOCUS_SESSION', 'SPECIAL_EVENT'] as const;
 function choice<T extends string>(values: readonly T[], value: unknown): T {
@@ -26,6 +27,7 @@ export interface MonsterDefinition {
   readonly archetype: ReturnType<typeof parseArchetype>;
   readonly movementProfile: ReturnType<typeof parseMovementProfile>;
   readonly behaviorProfile: ReturnType<typeof parseBehaviorProfile>;
+  readonly battlePersonality: typeof battlePersonalities[number] | null;
   readonly spawnProfile: ReturnType<typeof parseSpawnProfile>;
   readonly spawnCondition: ReturnType<typeof parseSpawnCondition>;
   // Checked projections of server Domain rarity defaults; never desktop gameplay formulas.
@@ -70,6 +72,7 @@ export function parseMonsterDefinitions(input: unknown): readonly MonsterDefinit
       displayName: v.displayName === null ? null : text(v.displayName), workingName: text(v.workingName),
       rarity: parseRarity(v.rarity), archetype: parseArchetype(v.archetype),
       movementProfile: parseMovementProfile(v.movementProfile), behaviorProfile: parseBehaviorProfile(v.behaviorProfile),
+      battlePersonality: v.battlePersonality === null ? null : choice(battlePersonalities,v.battlePersonality),
       spawnProfile: parseSpawnProfile(v.spawnProfile), spawnCondition: parseSpawnCondition(v.spawnCondition),
       encounterWeight: number(v.encounterWeight, 0, Number.MAX_SAFE_INTEGER, true),
       baseCaptureRate: v.baseCaptureRate === null ? null : number(v.baseCaptureRate, 0, 1),
@@ -77,6 +80,7 @@ export function parseMonsterDefinitions(input: unknown): readonly MonsterDefinit
       captureDirection: text(v.captureDirection), visualTheme: text(v.visualTheme),
       productionStatus: choice(['PRODUCTION', 'PROVISIONAL'] as const, v.productionStatus),
     };
+    if (result.alphaCandidate && result.battlePersonality === null) throw new Error('Alpha requires battle personality');
     if (result.enabled && !result.contentReady) throw new Error('Enabled Monster requires ready content');
     if (result.contentReady && (result.productionStatus !== 'PRODUCTION' || result.displayName === null || result.encounterWeight === 0 || result.baseCaptureRate === null)) throw new Error('Ready Monster requires confirmed production metadata');
     return Object.freeze(result);

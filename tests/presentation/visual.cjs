@@ -4,3 +4,12 @@ test('HP tiers include exact thresholds and retain numbers',()=>{for(const [hp,t
 test('entity slots preserve attacker and damage recipient',()=>{assert.equal(effectFor('PLAYER_ATTACK','moa'),'attack');assert.equal(effectFor('PLAYER_ATTACK','pip'),'none');assert.equal(effectFor('MONSTER_ATTACK','pip'),'attack');assert.equal(effectFor('MONSTER_HIT','pip'),'hit');assert.equal(damageFor({phase:'MONSTER_HIT',damage:12},'pip'),12);assert.equal(damageFor({phase:'MONSTER_HIT',damage:12},'moa'),null);assert.equal(effectFor('CAPTURING','pip'),'capturing');assert.equal(effectFor('CAPTURE_SUCCESS','pip'),'capture-success');});
 test('reduced motion disables effects and HP transition in actual stylesheet',()=>{const css=fs.readFileSync('src/presentation/gameplay.css','utf8');const reduced=css.slice(css.indexOf('@media(prefers-reduced-motion:reduce)'));for(const selector of ['.gp-impulse','.gp-capture-ring','.gp-damage','.gp-toast','.gp-hp-track span'])assert.ok(reduced.includes(selector));assert.ok(reduced.includes('animation:none!important'));assert.ok(reduced.includes('transition:none'));});
 test('visual wrapper never remounts production animation and no guessed capture chance',()=>{const entity=fs.readFileSync('src/components/Creature.tsx','utf8');assert.ok(!entity.includes('key={`${effect}'));const panel=fs.readFileSync('src/components/Interaction.tsx','utf8');assert.ok(panel.includes('g?.captureChance!=null'));assert.ok(!panel.includes('0.35'));});
+
+test('server WAIT has compact feedback only while active',()=>{
+ const {monsterWaitMessage}=require(path.join(process.env.LUMA_PRESENTATION_TEST_DIR,'presentation/model.js'));
+ assert.equal(monsterWaitMessage(null,'MOSSY'),null);
+ const b={status:'ACTIVE',encounterStatus:'ACTIVE',events:['MONSTER_WAIT']};
+ assert.equal(monsterWaitMessage(b,'MOSSY'),'MOSSY waits');
+ for(const status of ['VICTORY','DEFEAT','CAPTURED'])assert.equal(monsterWaitMessage({...b,status},'MOSSY'),null);
+ assert.equal(monsterWaitMessage({...b,events:[]},'MOSSY'),null);
+});
