@@ -275,3 +275,101 @@ fn stage_three_acknowledgement_transition_restart_and_retry() {
     restored.apply_evolved(r, 3.0);
     assert_eq!(restored.view.evolution.phase, Phase::Idle);
 }
+
+#[test]
+#[ignore = "fresh isolated fixed-RNG Spring/PostgreSQL required; no progression SQL writes"]
+fn live_nebla_natural_production_trace() {
+    let api = Api::new(&std::env::var("LUMA_GAME_SERVER_URL").unwrap()).unwrap();
+    let mode = std::env::var("LUMA_NEBLA_MODE").unwrap();
+    let mut w = world();
+    w.apply_bootstrap(api.bootstrap().unwrap());
+    let mut frames = Vec::new();
+    let frame = |label: &str, w: &World| serde_json::json!({"label":label,"snapshot":w.view});
+    if mode == "natural" {
+        assert_eq!(api.bootstrap().unwrap().active_companion.exp, 0);
+        for i in 1..=75 {
+            let now = f64::from(i) * 10.0;
+            let e = api.encounter(true).unwrap().unwrap();
+            crate::spawn::runtime::test_environment(&mut w);
+            w.apply_server_encounter(now, Some(e.clone()), 60.0);
+            assert!(w.view.pip.is_some());
+            let mut b = api.battle(e.encounter_id, Some("start")).unwrap();
+            w.apply_battle(b.clone());
+            while b.status == crate::backend::battle::Status::Active {
+                b = api.battle(b.battle_id, Some("attack")).unwrap();
+                w.apply_battle(b.clone());
+            }
+            assert_eq!(b.status, crate::backend::battle::Status::Victory);
+            assert_eq!(b.reward.as_ref().unwrap().exp, 20);
+            api.ignore(e.encounter_id).unwrap();
+            w.apply_server_encounter(now + 1.0, None, 0.0);
+            w.tick(now + 2.0, 0.1, (-9999.0, -9999.0), false);
+            let boot = api.bootstrap().unwrap();
+            assert_eq!(boot.active_companion.exp, u64::from(i as u32) * 20);
+            assert_eq!(boot.active_companion.bond, i as u32);
+            w.apply_bootstrap(boot);
+            if i == 15 {
+                w.apply_evolved(api.evolve().unwrap(), now + 3.0);
+                w.view.evolution.tick(now + 5.0);
+            }
+            if i == 74 {
+                assert_eq!(w.view.identity.as_ref().unwrap().level, 5);
+                assert_eq!(w.view.identity.as_ref().unwrap().evolution_stage, 2);
+                frames.push(frame("mokori-lv5", &w));
+            }
+        }
+        let c = api.bootstrap().unwrap().active_companion;
+        assert_eq!(c.level, 6);
+        assert_eq!(c.bond, 75);
+        api.purchase("BOND_BERRY", 1).unwrap();
+        let used = api.use_item("BOND_BERRY", None).unwrap();
+        assert_eq!(used.bond_after, Some(76));
+        w.apply_bootstrap(api.bootstrap().unwrap());
+        w.view.evolution.eligibility = Some(api.evolution().unwrap());
+        assert_eq!(
+            w.view.evolution.eligibility.as_ref().unwrap().status,
+            Status::Available
+        );
+        assert!(w.view.evolution.request());
+        assert_eq!(w.view.identity.as_ref().unwrap().evolution_stage, 2);
+        frames.push(frame("request-before-ack", &w));
+        let before = api.bootstrap().unwrap();
+        let result = api.evolve().unwrap();
+        assert_eq!(result.result, Outcome::Evolved);
+        assert_eq!(before.player.gold, result.bootstrap.player.gold);
+        assert_eq!(
+            before.active_companion.exp,
+            result.bootstrap.active_companion.exp
+        );
+        assert_eq!(
+            before.active_companion.level,
+            result.bootstrap.active_companion.level
+        );
+        assert_eq!(
+            before.active_companion.bond,
+            result.bootstrap.active_companion.bond
+        );
+        w.apply_evolved(result, 800.0);
+        assert_eq!(w.view.evolution.phase, Phase::Glow);
+        frames.push(frame("glow", &w));
+        w.view.evolution.tick(800.9);
+        assert_eq!(w.view.evolution.phase, Phase::Reveal);
+        frames.push(frame("reveal", &w));
+    } else {
+        assert_eq!(mode, "restored");
+        let c = w.view.identity.as_ref().unwrap();
+        assert_eq!(c.evolution_name, "NEBLA");
+        assert_eq!(c.evolution_stage, 3);
+        assert_eq!(c.level, 6);
+        assert_eq!(c.exp, 1500);
+        assert_eq!(c.bond, 76);
+        assert_eq!(w.view.evolution.phase, Phase::Idle);
+        frames.push(frame("restored", &w));
+    }
+    std::fs::write(
+        std::env::var("LUMA_NEBLA_TRACE_PATH").unwrap(),
+        serde_json::to_vec_pretty(&frames).unwrap(),
+    )
+    .unwrap();
+    eprintln!("NEBLA LIVE {mode} PASS: real API → compiled World, trace exported");
+}

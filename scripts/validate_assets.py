@@ -93,7 +93,7 @@ def validate(root=ROOT, allow_missing=False):
         for stage, url in definition['stages'].items():
             manifest_path = root/'public'/url.lstrip('/')
             prefix = f'{species}/stage{int(stage):02}'
-            if not manifest_path.exists() and definition.get('stageAssetStatus', {}).get(stage) == 'NOT_SUPPLIED':
+            if not manifest_path.exists() and definition.get('stageAnimationStatus', definition.get('stageAssetStatus', {})).get(stage) == 'NOT_SUPPLIED':
                 (pending if allow_missing else errors).append(f'{prefix}: asset not supplied')
                 continue
             try:

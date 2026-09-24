@@ -56,11 +56,21 @@ test('missing MOKORI base is cached CSS fallback, never stage01',async()=>{
  const url=companionBase('moa',2);assert.equal(rendererSource(null,await loader.load(url)).kind,'css');
  assert.equal(await loader.load(url),null);assert.deepEqual(calls,['/assets/creatures/moa/stage02/base.png']);
 });
-test('NEBLA stage03 missing asset stays diagnostic and never borrows MOKORI',async()=>{
+test('NEBLA failed stage03 load stays diagnostic and never borrows MOKORI',async()=>{
  const {resolveCompanion}=require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'entities/registry.js'));
  assert.equal(resolveCompanion('moa',3).name,'NEBLA');
  const url=companionBase('moa',3);assert.equal(url,'/assets/creatures/moa/stage03/base.png');
  const calls=[];const loader=new BaseAssetLoader(async u=>{calls.push(u);throw Error('not supplied');});
  assert.equal(rendererSource(null,await loader.load(url)).kind,'css');assert.equal(await loader.load(url),null);
- assert.deepEqual(calls,[url]);assert.equal(fs.existsSync('public'+url),false);
+ assert.deepEqual(calls,[url]);assert.equal(fs.existsSync('public'+url),true);
+});
+
+test('delivered NEBLA resolves its own base before and after loader restart',async()=>{
+ for(let restart=0;restart<2;restart++){
+  const calls=[];const loader=new BaseAssetLoader(async url=>{calls.push(url);const data=fs.readFileSync('public'+url);return {width:data.readUInt32BE(16),height:data.readUInt32BE(20)};});
+  for(const stage of [1,2,3]){
+   const url=companionBase('moa',stage);assert.deepEqual(rendererSource(null,await loader.load(url)),{kind:'base',url});
+  }
+  assert.deepEqual(calls,[1,2,3].map(n=>`/assets/creatures/moa/stage0${n}/base.png`));
+ }
 });

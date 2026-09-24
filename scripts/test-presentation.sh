@@ -16,3 +16,5 @@ NODE_PATH="$PWD/node_modules" node --test tests/presentation/collection-dex.cjs
 node --test tests/presentation/spawn.cjs
 ./node_modules/.bin/tsc src/components/CompanionVisual.tsx --outDir "$LUMA_PRESENTATION_TEST_DIR" --resolveJsonModule --esModuleInterop --module commonjs --target ES2022 --jsx react-jsx --strict --skipLibCheck
 NODE_PATH="$PWD/node_modules" node --test tests/presentation/nebla-ui.cjs
+
+./node_modules/.bin/tsc tests/live/nebla.tsx --noEmit --module ESNext --moduleResolution bundler --target ES2022 --jsx react-jsx --resolveJsonModule --esModuleInterop --strict --skipLibCheck
