@@ -7,6 +7,6 @@ export class AnimationClock {
     if(this.request===null) this.request=this.raf(this.tick);
     return ()=>{this.listeners.delete(fn);if(!this.listeners.size && this.request!==null){this.cancel(this.request);this.request=null;}};
   }
-  private tick=(time:number)=>{this.request=null;for(const fn of this.listeners)fn(time);if(this.listeners.size)this.request=this.raf(this.tick);};
+  private tick=(time:number)=>{this.request=null;for(const fn of this.listeners)fn(time);if(this.listeners.size && this.request===null)this.request=this.raf(this.tick);};
 }
 export const animationClock=new AnimationClock(cb=>requestAnimationFrame(cb),id=>cancelAnimationFrame(id));

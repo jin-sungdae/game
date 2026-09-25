@@ -64,3 +64,24 @@ test('stable React entity, independent transform layers and native authority pre
  assert.match(css,/transform-origin:50% 100%/);assert.match(css,/scaleY\(\.99\)/);assert.doesNotMatch(css,/translate(?:X|Y)?\(/);assert.match(css,/prefers-reduced-motion:reduce/);
  for(const facing of [-1,1])assert.equal((41-41)*facing+41,41);
 });
+test('StrictMode effect setup-cleanup-setup and 100 mount cycles retain a single clock',()=>{
+ let serial=0,calls=0;const pending=new Map();
+ const clock=new AnimationClock(cb=>{pending.set(++serial,cb);return serial;},id=>pending.delete(id));
+ assert.equal(pending.size,0);
+ for(let cycle=0;cycle<100;cycle++){
+  const mount=()=>Array.from({length:16},()=>clock.subscribe(()=>calls++));
+  const probe=mount();assert.equal(pending.size,1);probe.forEach(stop=>stop());assert.equal(pending.size,0);
+  const active=mount();assert.equal(pending.size,1);
+  const [id,tick]=[...pending][0];pending.delete(id);tick(cycle*16);assert.equal(pending.size,1);
+  active.forEach(stop=>{stop();stop();});assert.equal(pending.size,0);
+ }
+ assert.equal(calls,1600);
+});
+test('subscription created during a tick cannot start a second RAF chain',()=>{
+ let serial=0;const pending=new Map();const clock=new AnimationClock(cb=>{pending.set(++serial,cb);return serial;},id=>pending.delete(id));
+ let added=false,stopChild=()=>{};
+ const stop=clock.subscribe(()=>{if(!added){added=true;stopChild=clock.subscribe(()=>{});}});
+ const [id,tick]=[...pending][0];pending.delete(id);tick(16);
+ assert.equal(pending.size,1);
+ stop();stopChild();assert.equal(pending.size,0);
+});
