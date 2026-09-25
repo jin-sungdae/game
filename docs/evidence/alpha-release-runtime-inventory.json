@@ -105,10 +105,10 @@
   "src-tauri/src/spawn/runtime/batch3.rs": [
     "eprintln!(\"BATCH3 PRODUCTION LIVE PASS {code}: POST/asset/condition/movement/restore/battle/hit/potion/charm/capture/collection/cooldown id={}\",e.encounter_id);"
   ],
+  "src/animation/clock.ts": [
+    "export const animationClock=new AnimationClock(cb=>requestAnimationFrame(cb),id=>cancelAnimationFrame(id));"
+  ],
   "src/animation/loader.ts": [
     "json:async url => { const r=await fetch(url); if(!r.ok) throw new Error('Missing manifest'); return r.json(); },"
-  ],
-  "src/animation/useAnimation.ts": [
-    "if(!sample.finished) request=requestAnimationFrame(tick);"
   ]
 }

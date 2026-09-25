@@ -90,3 +90,14 @@ class AlphaAssetTests(test_assets.unittest.TestCase):
         self.assertTrue(any('path mismatch' in e for e in validator.validate_alpha(self.root)[0]))
         path.write_text(original.replace('"PIP": {','"PIP": {}, "PIP": {',1))
         self.assertTrue(any('duplicate registry key' in e for e in validator.validate_alpha(self.root)[0]))
+
+    def test_only_canonical_pip_animation_manifest_is_allowed(self):
+        manifest=json.loads((test_assets.ROOT/'public/assets/monsters/pip/manifest.json').read_text())
+        p=self.put('pip',json.dumps(manifest).encode(),'manifest.json')
+        self.assertEqual(validator.validate_alpha(self.root)[0],[])
+        manifest['anchor']['x']=0
+        p.write_text(json.dumps(manifest))
+        self.assertTrue(any('pilot animation contract' in e for e in validator.validate_alpha(self.root)[0]))
+        p.unlink()
+        self.put('pip',b'{}','Manifest.json')
+        self.assertTrue(any('invalid filename' in e for e in validator.validate_alpha(self.root)[0]))

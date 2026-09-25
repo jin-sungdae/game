@@ -1,3 +1,4 @@
+pub mod animation;
 #[cfg(debug_assertions)]
 pub mod smoke;
 pub mod spawn;

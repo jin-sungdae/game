@@ -16,9 +16,13 @@ export class AssetLoader {
   load(species:string, stage:number, name:string):Promise<LoadedClip|null> {
     const companion=resolveCompanion(species,stage);
     if(!companion) return Promise.resolve(null);
-    const base=companion.assetManifest.slice(0,-'/manifest.json'.length), key=`${base}/${name}`;
+    return this.loadRegistered(species,stage,companion.assetManifest,name);
+  }
+  // Call only with a trusted registry path; identity still validated against the manifest.
+  loadRegistered(species:string,stage:number,manifestUrl:string,name:string):Promise<LoadedClip|null> {
+    const base=manifestUrl.slice(0,-'/manifest.json'.length), key=`${base}/${name}`;
     if(!this.manifests.has(base)) this.manifests.set(base,
-      this.io.json(companion.assetManifest).then(m=>parseManifest(m,species,stage)).catch(()=>null));
+      this.io.json(manifestUrl).then(m=>parseManifest(m,species,stage)).catch(()=>null));
     if(!this.clips.has(key)) this.clips.set(key, this.manifests.get(base)!.then(async manifest => {
       const clip=manifest?.animations[name];
       if(!manifest || !clip) return null;

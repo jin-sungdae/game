@@ -1,3 +1,5 @@
+import { CharacterRenderer } from './CharacterRenderer';
+import { pilotDefinition, type AnimationInput } from '../animation/pilot';
 import { companionBase, rendererSource } from '../assets/base';
 import { useBaseAsset } from '../assets/useBaseAsset';
 import { BaseSprite, useVisualBounds } from './BaseVisual';
@@ -9,7 +11,7 @@ import { directionScale, spriteSize } from '../animation/model';
 export function PlaceholderRenderer({facing}:{facing:number}) {
   return <div className="body" style={{transform:`scaleX(${directionScale(facing)})`}}><i/><i/><span className="mouth"/></div>;
 }
-export const CompanionVisual=memo(function CompanionVisual({state,facing,species='moa',evolutionStage=1,displayName}:{state:CompanionState;facing:number;species?:string;evolutionStage?:number;displayName?:string}) {
+const LegacyCompanionVisual=memo(function LegacyCompanionVisual({state,facing,species='moa',evolutionStage=1,displayName}:{state:CompanionState;facing:number;species?:string;evolutionStage?:number;displayName?:string}) {
   const view=useAnimation(species,evolutionStage,state);
   const name=displayName ?? resolveCompanion(species,evolutionStage)?.name ?? 'Companion';
   const {container,bounds}=useVisualBounds();
@@ -24,3 +26,8 @@ export const CompanionVisual=memo(function CompanionVisual({state,facing,species
       onError={()=>setFailed(sprite.identity)}/> : source.kind==='base' ? <BaseSprite character={species} state={state} url={source.url} name={name} facing={facing} bounds={bounds} onError={base.fail}/> : <><PlaceholderRenderer facing={facing}/><span className="name">{name}</span>{evolutionStage>1 && <span className="stage-label">Stage {evolutionStage} · asset pending</span>}<span className="state">{state}</span></>}
   </div>;
 });
+
+export function CompanionVisual(props:{state:CompanionState;facing:number;species?:string;evolutionStage?:number;displayName?:string;animationInput?:AnimationInput;entityId?:string}) {
+  const pilot=pilotDefinition(props.species??'moa',props.evolutionStage??1);
+  return pilot && props.animationInput ? <CharacterRenderer pilot={pilot} input={props.animationInput} facing={props.facing} name={props.displayName??'MOA'} entityId={props.entityId??'moa'}/> : <LegacyCompanionVisual {...props}/>;
+}

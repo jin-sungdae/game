@@ -17,6 +17,7 @@ pub enum InteractionMode {
 }
 #[derive(Clone, Serialize)]
 pub struct Snapshot {
+    pub animation: crate::presentation::animation::Motion,
     pub moa: Entity<CompanionState>,
     pub pip: Option<Entity<PipState>>,
     pub monster: Option<crate::spawn::MonsterIdentity>,
@@ -55,6 +56,7 @@ impl World {
         let companion = CompanionController::new(area, now, seed, MOA_PERSONALITY, MOA_BEHAVIOR);
         Self {
             view: Snapshot {
+                animation: Default::default(),
                 moa: companion.entity().clone(),
                 pip: None,
                 monster: None,
