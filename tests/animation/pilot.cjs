@@ -89,7 +89,7 @@ test('MOA IDLE approved and MOVE pilot; REACT and PIP remain unsupplied',async()
  const p=pilotDefinition('moa');const m=require('../../public'+p.manifest);let count=0;
  const assets=new PilotAssets(new AssetLoader({json:async()=>m,image:async()=>{count++;return {width:256,height:256};}}));
  assert.equal(p.status,'IDLE_PRODUCTION');assert.equal((await assets.load(p,'IDLE')).urls.length,4);
- assert.equal(p.moveStatus,'PRODUCTION_PILOT');assert.equal((await assets.load(p,'MOVE')).urls.length,8);
+ assert.equal(p.moveStatus,'PRODUCTION');assert.equal((await assets.load(p,'MOVE')).urls.length,8);
  for(const state of ['REACT'])assert.equal(await assets.load(p,state),null);
  for(const state of ['IDLE','MOVE','REACT'])assert.equal(await assets.load(pilotDefinition('PIP'),state),null);
  assert.equal(count,12);
