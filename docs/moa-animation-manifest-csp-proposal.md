@@ -1,6 +1,8 @@
 # PR #46 — local animation metadata / CSP analysis and proposal
 
-Status: **PROPOSAL ONLY / HUMAN_APPROVAL_REQUIRED**. Analyzed implementation: `63c11025e5379f7eb48e94f569c5c89401db3466`. This follow-up changes documentation only. PR #46 stays Draft and must not merge. Artwork registration is a separate unresolved issue: wait for replacement assets; do not modify/regenerate the supplied six PNGs. No production timing is selected.
+Historical proposal: Option B and its exact fetch-inventory subtraction were subsequently approved by the user and implemented. See [implementation and actual production verification](evidence/moa-static-registry/README.md). The following text records the original proposal.
+
+Original status: **PROPOSAL ONLY / HUMAN_APPROVAL_REQUIRED**. Analyzed implementation: `63c11025e5379f7eb48e94f569c5c89401db3466`. This follow-up changes documentation only. PR #46 stays Draft and must not merge. Artwork registration is a separate unresolved issue: wait for replacement assets; do not modify/regenerate the supplied six PNGs. No production timing is selected.
 
 ## Root cause
 

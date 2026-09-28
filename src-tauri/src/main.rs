@@ -149,6 +149,11 @@ fn main() {
                     label,
                     tauri::WebviewUrl::App(format!("index.html?entity={label}").into()),
                 )
+                .initialization_script(if std::env::var_os("LUMA_METADATA_AUDIT").is_some() {
+                    include_str!("../../scripts/gui_qa/metadata_audit.js")
+                } else {
+                    ""
+                })
                 .title(label)
                 .inner_size(w, h)
                 .visible(false)

@@ -1,0 +1,52 @@
+{
+  "images": [
+    {
+      "AXDescription": "MOA IDLE frame 1 base",
+      "AXEnabled": true,
+      "AXFocused": false,
+      "AXPosition": [
+        1591,
+        1047
+      ],
+      "AXRole": "AXImage",
+      "AXSize": [
+        82,
+        82
+      ],
+      "AXTitle": "",
+      "AXValue": ""
+    }
+  ],
+  "network": [
+    {
+      "version": 1,
+      "fetchAttempts": 3,
+      "xhrAttempts": 0,
+      "manifestAttempts": 1,
+      "cspViolations": 1,
+      "resources": [],
+      "attempts": [
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/plugin%3Aevent%7Clisten",
+          "time": 65
+        },
+        {
+          "kind": "fetch",
+          "url": "/assets/creatures/moa/stage01/manifest.json",
+          "time": 89
+        },
+        {
+          "kind": "csp",
+          "directive": "connect-src",
+          "url": "tauri://localhost/assets/creatures/moa/stage01/manifest.json"
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/snapshot",
+          "time": 112
+        }
+      ]
+    }
+  ]
+}

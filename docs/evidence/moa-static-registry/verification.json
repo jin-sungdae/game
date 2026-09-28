@@ -1,0 +1,409 @@
+{
+  "baselineCommit": "76404d63a112b50bd019f11113946f34d630093d",
+  "productionCspSHA256Before": "ec17f98f93751c43639cd59c9022e26c2a7d2d700715fe6e360227803fcd0a4f",
+  "productionCspSHA256After": "ec17f98f93751c43639cd59c9022e26c2a7d2d700715fe6e360227803fcd0a4f",
+  "productionConfigSHA256": "cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed",
+  "manifestFetchCallSitesBefore": 1,
+  "manifestFetchCallSitesAfter": 0,
+  "runtimeBefore": {
+    "version": 1,
+    "fetchAttempts": 3,
+    "xhrAttempts": 0,
+    "manifestAttempts": 1,
+    "cspViolations": 1,
+    "resources": [],
+    "attempts": [
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/plugin%3Aevent%7Clisten",
+        "time": 65
+      },
+      {
+        "kind": "fetch",
+        "url": "/assets/creatures/moa/stage01/manifest.json",
+        "time": 89
+      },
+      {
+        "kind": "csp",
+        "directive": "connect-src",
+        "url": "tauri://localhost/assets/creatures/moa/stage01/manifest.json"
+      },
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/snapshot",
+        "time": 112
+      }
+    ]
+  },
+  "runtimeAfter": {
+    "version": 1,
+    "fetchAttempts": 2,
+    "xhrAttempts": 0,
+    "manifestAttempts": 0,
+    "cspViolations": 0,
+    "resources": [],
+    "attempts": [
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/plugin%3Aevent%7Clisten",
+        "time": 74
+      },
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/snapshot",
+        "time": 77
+      }
+    ]
+  },
+  "inventoryRemoved": [
+    "json:async url => { const r=await fetch(url); if(!r.ok) throw new Error('Missing manifest'); return r.json(); },"
+  ],
+  "otherInventoryUnchanged": true,
+  "captureSeconds": 8.100337875075638,
+  "captureFrames": 83,
+  "orderedFrameSequence": [
+    {
+      "frame": 4,
+      "pts": 1599113.5781055
+    },
+    {
+      "frame": 5,
+      "pts": 1599113.687458166
+    },
+    {
+      "frame": 6,
+      "pts": 1599113.789930625
+    },
+    {
+      "frame": 1,
+      "pts": 1599113.89226675
+    },
+    {
+      "frame": 2,
+      "pts": 1599113.995187291
+    },
+    {
+      "frame": 3,
+      "pts": 1599114.081276375
+    },
+    {
+      "frame": 4,
+      "pts": 1599114.183948625
+    },
+    {
+      "frame": 5,
+      "pts": 1599114.287115291
+    },
+    {
+      "frame": 6,
+      "pts": 1599114.374088833
+    },
+    {
+      "frame": 1,
+      "pts": 1599114.478347041
+    },
+    {
+      "frame": 2,
+      "pts": 1599114.577253166
+    },
+    {
+      "frame": 3,
+      "pts": 1599114.678752166
+    },
+    {
+      "frame": 4,
+      "pts": 1599114.778774791
+    },
+    {
+      "frame": 5,
+      "pts": 1599114.878747666
+    },
+    {
+      "frame": 6,
+      "pts": 1599115.016726708
+    },
+    {
+      "frame": 1,
+      "pts": 1599115.0868865
+    },
+    {
+      "frame": 2,
+      "pts": 1599115.185462875
+    },
+    {
+      "frame": 3,
+      "pts": 1599115.285607375
+    },
+    {
+      "frame": 4,
+      "pts": 1599115.377069791
+    },
+    {
+      "frame": 5,
+      "pts": 1599115.477286625
+    },
+    {
+      "frame": 6,
+      "pts": 1599115.577272041
+    },
+    {
+      "frame": 1,
+      "pts": 1599115.678506916
+    },
+    {
+      "frame": 2,
+      "pts": 1599115.777261208
+    },
+    {
+      "frame": 3,
+      "pts": 1599115.877525333
+    },
+    {
+      "frame": 4,
+      "pts": 1599115.97749625
+    },
+    {
+      "frame": 5,
+      "pts": 1599116.087873833
+    },
+    {
+      "frame": 6,
+      "pts": 1599116.177609291
+    },
+    {
+      "frame": 1,
+      "pts": 1599116.277354
+    },
+    {
+      "frame": 2,
+      "pts": 1599116.377451458
+    },
+    {
+      "frame": 3,
+      "pts": 1599116.477344458
+    },
+    {
+      "frame": 4,
+      "pts": 1599116.577495833
+    },
+    {
+      "frame": 5,
+      "pts": 1599116.6773445
+    },
+    {
+      "frame": 6,
+      "pts": 1599116.78132775
+    },
+    {
+      "frame": 1,
+      "pts": 1599116.877913708
+    },
+    {
+      "frame": 2,
+      "pts": 1599117.00398
+    },
+    {
+      "frame": 3,
+      "pts": 1599117.090328833
+    },
+    {
+      "frame": 4,
+      "pts": 1599117.17686175
+    },
+    {
+      "frame": 5,
+      "pts": 1599117.276928333
+    },
+    {
+      "frame": 6,
+      "pts": 1599117.378654291
+    },
+    {
+      "frame": 1,
+      "pts": 1599117.478605333
+    },
+    {
+      "frame": 2,
+      "pts": 1599117.578640958
+    },
+    {
+      "frame": 3,
+      "pts": 1599117.678956541
+    },
+    {
+      "frame": 4,
+      "pts": 1599117.779230041
+    },
+    {
+      "frame": 5,
+      "pts": 1599117.87878275
+    },
+    {
+      "frame": 6,
+      "pts": 1599117.994460291
+    },
+    {
+      "frame": 1,
+      "pts": 1599118.08936475
+    },
+    {
+      "frame": 2,
+      "pts": 1599118.185603875
+    },
+    {
+      "frame": 3,
+      "pts": 1599118.285534583
+    },
+    {
+      "frame": 4,
+      "pts": 1599118.385599375
+    },
+    {
+      "frame": 5,
+      "pts": 1599118.477167291
+    },
+    {
+      "frame": 6,
+      "pts": 1599118.587168541
+    },
+    {
+      "frame": 1,
+      "pts": 1599118.67855425
+    },
+    {
+      "frame": 2,
+      "pts": 1599118.777256875
+    },
+    {
+      "frame": 3,
+      "pts": 1599118.878381333
+    },
+    {
+      "frame": 4,
+      "pts": 1599118.994433083
+    },
+    {
+      "frame": 5,
+      "pts": 1599119.098256
+    },
+    {
+      "frame": 6,
+      "pts": 1599119.177179458
+    },
+    {
+      "frame": 1,
+      "pts": 1599119.279117
+    },
+    {
+      "frame": 2,
+      "pts": 1599119.377270958
+    },
+    {
+      "frame": 3,
+      "pts": 1599119.477582333
+    },
+    {
+      "frame": 4,
+      "pts": 1599119.594197333
+    },
+    {
+      "frame": 5,
+      "pts": 1599119.677625958
+    },
+    {
+      "frame": 6,
+      "pts": 1599119.777350541
+    },
+    {
+      "frame": 1,
+      "pts": 1599119.885718708
+    },
+    {
+      "frame": 2,
+      "pts": 1599120.012623
+    },
+    {
+      "frame": 3,
+      "pts": 1599120.09712325
+    },
+    {
+      "frame": 4,
+      "pts": 1599120.177152666
+    },
+    {
+      "frame": 5,
+      "pts": 1599120.277143375
+    },
+    {
+      "frame": 6,
+      "pts": 1599120.377288875
+    },
+    {
+      "frame": 1,
+      "pts": 1599120.477657083
+    },
+    {
+      "frame": 2,
+      "pts": 1599120.5773975
+    },
+    {
+      "frame": 3,
+      "pts": 1599120.678948083
+    },
+    {
+      "frame": 4,
+      "pts": 1599120.777707
+    },
+    {
+      "frame": 5,
+      "pts": 1599120.877605166
+    },
+    {
+      "frame": 6,
+      "pts": 1599121.003962916
+    },
+    {
+      "frame": 1,
+      "pts": 1599121.072789083
+    },
+    {
+      "frame": 2,
+      "pts": 1599121.177155333
+    },
+    {
+      "frame": 3,
+      "pts": 1599121.277211166
+    },
+    {
+      "frame": 4,
+      "pts": 1599121.378851125
+    },
+    {
+      "frame": 5,
+      "pts": 1599121.470422583
+    },
+    {
+      "frame": 6,
+      "pts": 1599121.577272291
+    },
+    {
+      "frame": 1,
+      "pts": 1599121.678443375
+    }
+  ],
+  "orderPass": true,
+  "loopBoundaries": 14,
+  "artworkQuality": "FAIL / REPLACEMENT_REQUIRED",
+  "productionTimingApproved": false,
+  "cspExceptionUsed": false,
+  "diagnosticFlag": "LUMA_METADATA_AUDIT=1 (document-start observer only)",
+  "productionBinarySHA256": "80e6412520f07ad755eee0ef1956062ed7e7bb7ef77eb2e65c19ab808aaaeb51",
+  "sourceSHA256": {
+    "src/animation/loader.ts": "f17d27b0e17d1f67275bbfb213564a12d2c85d66c954e0f3645d41cec740d5c5",
+    "src/animation/generated-manifests.ts": "c083f4077e7245baf172c194cbe4e9e9c1910ca06dd823b6f83fe85934f5b2e4",
+    "src/animation/pilot.ts": "4beb39c38fca4789c5d101af8dfd6ac9fb25f9ea2783cd126c842dd33ef244f4",
+    "src/animation/clock.ts": "261eaf8ed570aa9dba7aae3ae5b4f92056ac264fb0eaccb7a5acd9160af273c3",
+    "src-tauri/src/main.rs": "13fca94d9618992404d40d4e2172afa6fa680f65aeda576e9391d2b7fd8fa57e",
+    "scripts/gui_qa/metadata_audit.js": "ecaae035dc318f8081487f651ec0046872ff41c2e3448752f127ecf12bd80374"
+  }
+}

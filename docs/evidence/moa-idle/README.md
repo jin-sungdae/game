@@ -2,6 +2,8 @@
 
 **HUMAN_REVIEW_REQUIRED — visual acceptance FAIL; no timing selected.**
 
+The historical QA-CSP recordings below are retained unchanged. The approved Option B follow-up now demonstrates playback with unchanged production CSP: [static registry verification](../moa-static-registry/README.md).
+
 These are continuous ScreenCaptureKit recordings of the actual Tauri release `.app` / WKWebView / `CharacterRenderer`, not a browser mock, source-frame slideshow, or reconstructed animation. Each recording uses the same six supplied PNG byte streams, shared animation clock, native 96×104pt MOA panel, isolated backend, pointer proximity, and 82×82pt image canvas. The native idle/looking presentation resolves to renderer IDLE throughout the observed image samples. Facing is LEFT in all four recordings (the existing renderer mirrors RIGHT-source art).
 
 ## Watch the four candidates

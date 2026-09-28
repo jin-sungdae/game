@@ -16,6 +16,7 @@ export const pilotContract = {canvas:256,anchor:{x:.5,y:1},maxFrames:32,minFrame
 export class PilotAssets {
   constructor(private loader=new AssetLoader()) {}
   async load(p:Pilot,state:AnimationState):Promise<LoadedClip|null> {
+    if(!Object.hasOwn(pilotClips,state)) return null;
     if(p.status==='NOT_SUPPLIED' || (p.status==='IDLE_PRODUCTION' && state!=='IDLE')) return null;
     const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,pilotClips[state]);
     if(!asset || asset.manifest.canvas.width!==256 || asset.manifest.canvas.height!==256 || asset.clip.frames!==pilotFrames[state] || asset.clip.frameDuration<40 || asset.clip.frameDuration>1000 || asset.clip.loop!==(state!=='REACT') || (state==='REACT' && asset.clip.frames*asset.clip.frameDuration!==480)) return null;
