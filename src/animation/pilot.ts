@@ -4,9 +4,9 @@ import { resolveMonster } from '../entities/monsters';
 import { AssetLoader, type LoadedClip } from './loader';
 export type AnimationState = 'IDLE'|'MOVE'|'REACT';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
-export interface Pilot { character:'MOA'|'PIP'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'; sourceFacing:'RIGHT' }
+export interface Pilot { character:'MOA'|'PIP'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'; sourceFacing:'RIGHT' }
 export function pilotDefinition(character:string,stage=1):Pilot|null {
-  if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'NOT_SUPPLIED',sourceFacing:'RIGHT'};
+  if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
   if(character==='PIP') return {character:'PIP',species:'pip',stage:1,manifest:resolveMonster('PIP')!.assetRoot+'/manifest.json',base:resolveMonster('PIP')!.baseAsset!,status:'NOT_SUPPLIED',sourceFacing:'RIGHT'};
   return null;
 }
@@ -16,7 +16,7 @@ export const pilotContract = {canvas:256,anchor:{x:.5,y:1},maxFrames:32,minFrame
 export class PilotAssets {
   constructor(private loader=new AssetLoader()) {}
   async load(p:Pilot,state:AnimationState):Promise<LoadedClip|null> {
-    if(p.status==='NOT_SUPPLIED') return null;
+    if(p.status==='NOT_SUPPLIED' || (p.status==='IDLE_PRODUCTION' && state!=='IDLE')) return null;
     const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,pilotClips[state]);
     if(!asset || asset.manifest.canvas.width!==256 || asset.manifest.canvas.height!==256 || asset.clip.frames!==pilotFrames[state] || asset.clip.frameDuration<40 || asset.clip.frameDuration>1000 || asset.clip.loop!==(state!=='REACT') || (state==='REACT' && asset.clip.frames*asset.clip.frameDuration!==480)) return null;
     return asset;

@@ -1,0 +1,1247 @@
+{
+  "method": "PNG SHA256 equality across four recordings; labels correlated inside 1800ms frame holds using AX intervals. PTS from ScreenCaptureKit, not simulated clock.",
+  "pixelHashFrameMapping": {
+    "29444092628d4c6e4178f5f7d9a835deb9c76e379720e5fe34bc1b1cf954fa6a": 6,
+    "2feebcc5b0a68529838f5f7f02a79a239616a15fbb1254a9cb54631bcfc513b1": 1,
+    "7bca4a121d73f13fea06d9a8d62adff3559f0e5f6563bb189055eb8c40925c2d": 3,
+    "4bb1ee17c028260ff67a962d8aa8906db7c92f0122948e470b4e14eb6c1ffd49": 4,
+    "a4bee5e5fa2e9606e4742b456a2833d9f903c596705975373a5d83a82f7ca4d5": 2,
+    "5d8746582c8a98cd68a56fafbbcd68a7f1ae6ce20968848b060cc4fa2fbbf9cd": 5
+  },
+  "mappingVotes": {
+    "29444092628d4c6e4178f5f7d9a835deb9c76e379720e5fe34bc1b1cf954fa6a": {
+      "6": 2
+    },
+    "2feebcc5b0a68529838f5f7f02a79a239616a15fbb1254a9cb54631bcfc513b1": {
+      "1": 3
+    },
+    "7bca4a121d73f13fea06d9a8d62adff3559f0e5f6563bb189055eb8c40925c2d": {
+      "3": 2
+    },
+    "4bb1ee17c028260ff67a962d8aa8906db7c92f0122948e470b4e14eb6c1ffd49": {
+      "4": 2
+    },
+    "a4bee5e5fa2e9606e4742b456a2833d9f903c596705975373a5d83a82f7ca4d5": {
+      "2": 1
+    },
+    "5d8746582c8a98cd68a56fafbbcd68a7f1ae6ce20968848b060cc4fa2fbbf9cd": {
+      "5": 1
+    }
+  },
+  "candidates": [
+    {
+      "cycleMs": 600,
+      "captureSeconds": 8.017089334083721,
+      "capturedFrames": 82,
+      "orderPass": true,
+      "loopBoundaries": 13,
+      "medianFrameMs": 101.7824171576649,
+      "minFrameMs": 17.72699994035065,
+      "maxFrameMs": 128.64649994298816,
+      "windowBounds": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        }
+      ],
+      "imagePositions": [
+        [
+          1591,
+          1047
+        ]
+      ],
+      "imageSizes": [
+        [
+          82,
+          82
+        ]
+      ],
+      "panelAndCanvasStable": true,
+      "sequence": [
+        {
+          "frame": 3,
+          "pts": 1594946.415762041,
+          "file": "frame-00000.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594946.433489041,
+          "file": "frame-00001.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594946.558669625,
+          "file": "frame-00002.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594946.633386708,
+          "file": "frame-00003.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594946.735009875,
+          "file": "frame-00004.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594946.847595,
+          "file": "frame-00005.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594946.961311875,
+          "file": "frame-00006.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594947.04775875,
+          "file": "frame-00007.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594947.138506583,
+          "file": "frame-00008.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594947.245325541,
+          "file": "frame-00009.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594947.333675375,
+          "file": "frame-00010.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594947.441028041,
+          "file": "frame-00011.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594947.544235375,
+          "file": "frame-00012.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594947.634336916,
+          "file": "frame-00013.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594947.738571208,
+          "file": "frame-00014.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594947.832958791,
+          "file": "frame-00015.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594947.937214791,
+          "file": "frame-00016.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594948.046795458,
+          "file": "frame-00017.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594948.134113708,
+          "file": "frame-00018.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594948.232990166,
+          "file": "frame-00019.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594948.33397975,
+          "file": "frame-00020.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594948.433087458,
+          "file": "frame-00021.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594948.541338708,
+          "file": "frame-00022.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594948.650177666,
+          "file": "frame-00023.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594948.736622791,
+          "file": "frame-00024.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594948.857542583,
+          "file": "frame-00025.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594948.942292833,
+          "file": "frame-00026.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594949.037479208,
+          "file": "frame-00027.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594949.141412625,
+          "file": "frame-00028.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594949.245169083,
+          "file": "frame-00029.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594949.332863333,
+          "file": "frame-00030.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594949.44328525,
+          "file": "frame-00031.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594949.553657958,
+          "file": "frame-00032.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594949.640773416,
+          "file": "frame-00033.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594949.743124083,
+          "file": "frame-00034.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594949.846666541,
+          "file": "frame-00035.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594949.934208583,
+          "file": "frame-00036.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594950.035698166,
+          "file": "frame-00037.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594950.133267125,
+          "file": "frame-00038.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594950.232860791,
+          "file": "frame-00039.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594950.332976,
+          "file": "frame-00040.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594950.433163708,
+          "file": "frame-00041.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594950.542491416,
+          "file": "frame-00042.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594950.645881833,
+          "file": "frame-00043.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594950.73483875,
+          "file": "frame-00044.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594950.85413475,
+          "file": "frame-00045.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594950.962706,
+          "file": "frame-00046.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594951.049666333,
+          "file": "frame-00047.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594951.138157666,
+          "file": "frame-00048.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594951.244651833,
+          "file": "frame-00049.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594951.348363958,
+          "file": "frame-00050.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594951.435753791,
+          "file": "frame-00051.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594951.541339416,
+          "file": "frame-00052.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594951.644979208,
+          "file": "frame-00053.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594951.7343485,
+          "file": "frame-00054.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594951.836338041,
+          "file": "frame-00055.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594951.944704291,
+          "file": "frame-00056.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594952.041550208,
+          "file": "frame-00057.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594952.146102916,
+          "file": "frame-00058.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594952.241342333,
+          "file": "frame-00059.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594952.34312475,
+          "file": "frame-00060.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594952.446651166,
+          "file": "frame-00061.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594952.554034291,
+          "file": "frame-00062.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594952.66905775,
+          "file": "frame-00063.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594952.737077916,
+          "file": "frame-00064.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594952.848414166,
+          "file": "frame-00065.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594952.93637025,
+          "file": "frame-00066.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594953.044722666,
+          "file": "frame-00067.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594953.150014291,
+          "file": "frame-00068.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594953.236776541,
+          "file": "frame-00069.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594953.347691958,
+          "file": "frame-00070.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594953.434910875,
+          "file": "frame-00071.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594953.538140333,
+          "file": "frame-00072.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594953.646545333,
+          "file": "frame-00073.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594953.747917083,
+          "file": "frame-00074.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594953.841613875,
+          "file": "frame-00075.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594953.955238625,
+          "file": "frame-00076.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594954.042085708,
+          "file": "frame-00077.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594954.133161041,
+          "file": "frame-00078.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594954.261807541,
+          "file": "frame-00079.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594954.340520416,
+          "file": "frame-00080.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594954.432851375,
+          "file": "frame-00081.png"
+        }
+      ]
+    },
+    {
+      "cycleMs": 900,
+      "captureSeconds": 8.068692874861881,
+      "capturedFrames": 55,
+      "orderPass": true,
+      "loopBoundaries": 9,
+      "medianFrameMs": 148.65129149984568,
+      "minFrameMs": 114.39604102633893,
+      "maxFrameMs": 186.651875032112,
+      "windowBounds": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        }
+      ],
+      "imagePositions": [
+        [
+          1591,
+          1047
+        ]
+      ],
+      "imageSizes": [
+        [
+          82,
+          82
+        ]
+      ],
+      "panelAndCanvasStable": true,
+      "sequence": [
+        {
+          "frame": 3,
+          "pts": 1594960.404040208,
+          "file": "frame-00000.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594960.562927125,
+          "file": "frame-00001.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594960.677323166,
+          "file": "frame-00002.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594960.819558583,
+          "file": "frame-00003.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594960.9929055,
+          "file": "frame-00004.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594961.141193291,
+          "file": "frame-00005.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594961.278897916,
+          "file": "frame-00006.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594961.428967291,
+          "file": "frame-00007.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594961.57409525,
+          "file": "frame-00008.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594961.716227,
+          "file": "frame-00009.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594961.869024708,
+          "file": "frame-00010.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594962.050854916,
+          "file": "frame-00011.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594962.192719083,
+          "file": "frame-00012.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594962.34522575,
+          "file": "frame-00013.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594962.467374083,
+          "file": "frame-00014.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594962.616242541,
+          "file": "frame-00015.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594962.771351166,
+          "file": "frame-00016.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594962.931098375,
+          "file": "frame-00017.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594963.089423583,
+          "file": "frame-00018.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594963.219780416,
+          "file": "frame-00019.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594963.3768245,
+          "file": "frame-00020.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594963.535770166,
+          "file": "frame-00021.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594963.681121458,
+          "file": "frame-00022.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594963.82187175,
+          "file": "frame-00023.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594964.008523625,
+          "file": "frame-00024.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594964.149038125,
+          "file": "frame-00025.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594964.297474333,
+          "file": "frame-00026.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594964.438849666,
+          "file": "frame-00027.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594964.581112791,
+          "file": "frame-00028.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594964.719217125,
+          "file": "frame-00029.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594964.869178166,
+          "file": "frame-00030.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594965.028291,
+          "file": "frame-00031.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594965.166578208,
+          "file": "frame-00032.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594965.3245975,
+          "file": "frame-00033.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594965.486322666,
+          "file": "frame-00034.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594965.627524833,
+          "file": "frame-00035.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594965.789059291,
+          "file": "frame-00036.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594965.929375666,
+          "file": "frame-00037.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594966.084452125,
+          "file": "frame-00038.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594966.22661575,
+          "file": "frame-00039.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594966.370240291,
+          "file": "frame-00040.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594966.53884175,
+          "file": "frame-00041.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594966.695882958,
+          "file": "frame-00042.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594966.833830083,
+          "file": "frame-00043.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594966.9975715,
+          "file": "frame-00044.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594967.146665,
+          "file": "frame-00045.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594967.284576333,
+          "file": "frame-00046.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594967.436440875,
+          "file": "frame-00047.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594967.576738458,
+          "file": "frame-00048.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594967.737518958,
+          "file": "frame-00049.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594967.886385333,
+          "file": "frame-00050.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594968.025766833,
+          "file": "frame-00051.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594968.187290083,
+          "file": "frame-00052.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594968.334170125,
+          "file": "frame-00053.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594968.472733083,
+          "file": "frame-00054.png"
+        }
+      ]
+    },
+    {
+      "cycleMs": 1500,
+      "captureSeconds": 7.99631533306092,
+      "capturedFrames": 33,
+      "orderPass": true,
+      "loopBoundaries": 5,
+      "medianFrameMs": 247.8408955503255,
+      "minFrameMs": 220.05116706714034,
+      "maxFrameMs": 287.531582871452,
+      "windowBounds": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        }
+      ],
+      "imagePositions": [
+        [
+          1591,
+          1047
+        ]
+      ],
+      "imageSizes": [
+        [
+          82,
+          82
+        ]
+      ],
+      "panelAndCanvasStable": true,
+      "sequence": [
+        {
+          "frame": 1,
+          "pts": 1594974.079886625,
+          "file": "frame-00000.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594974.320008,
+          "file": "frame-00001.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594974.561203916,
+          "file": "frame-00002.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594974.823344333,
+          "file": "frame-00003.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594975.065629541,
+          "file": "frame-00004.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594975.308751041,
+          "file": "frame-00005.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594975.564557833,
+          "file": "frame-00006.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594975.809472958,
+          "file": "frame-00007.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594976.068119125,
+          "file": "frame-00008.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594976.30918075,
+          "file": "frame-00009.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594976.596712333,
+          "file": "frame-00010.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594976.8167635,
+          "file": "frame-00011.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594977.068359458,
+          "file": "frame-00012.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594977.310110333,
+          "file": "frame-00013.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594977.561548375,
+          "file": "frame-00014.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594977.812389916,
+          "file": "frame-00015.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594978.080821958,
+          "file": "frame-00016.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594978.31578075,
+          "file": "frame-00017.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594978.574862625,
+          "file": "frame-00018.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594978.81201425,
+          "file": "frame-00019.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594979.079497833,
+          "file": "frame-00020.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594979.330596625,
+          "file": "frame-00021.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594979.56216375,
+          "file": "frame-00022.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594979.832285166,
+          "file": "frame-00023.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594980.081475666,
+          "file": "frame-00024.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594980.316506416,
+          "file": "frame-00025.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594980.581418375,
+          "file": "frame-00026.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594980.82353475,
+          "file": "frame-00027.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594981.065491,
+          "file": "frame-00028.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594981.311982291,
+          "file": "frame-00029.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594981.574403625,
+          "file": "frame-00030.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594981.815530458,
+          "file": "frame-00031.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594982.076201958,
+          "file": "frame-00032.png"
+        }
+      ]
+    },
+    {
+      "cycleMs": 1800,
+      "captureSeconds": 7.810042083030567,
+      "capturedFrames": 28,
+      "orderPass": true,
+      "loopBoundaries": 5,
+      "medianFrameMs": 300.6855419371277,
+      "minFrameMs": 17.768832854926586,
+      "maxFrameMs": 322.7178330998868,
+      "windowBounds": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        }
+      ],
+      "imagePositions": [
+        [
+          1591,
+          1047
+        ]
+      ],
+      "imageSizes": [
+        [
+          82,
+          82
+        ]
+      ],
+      "panelAndCanvasStable": true,
+      "sequence": [
+        {
+          "frame": 4,
+          "pts": 1594987.450751458,
+          "file": "frame-00000.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594987.468520291,
+          "file": "frame-00001.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594987.772290583,
+          "file": "frame-00002.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594988.08430275,
+          "file": "frame-00003.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594988.365951458,
+          "file": "frame-00004.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594988.674044125,
+          "file": "frame-00005.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594988.996761958,
+          "file": "frame-00006.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594989.257878166,
+          "file": "frame-00007.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594989.564962625,
+          "file": "frame-00008.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594989.859397541,
+          "file": "frame-00009.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594990.160083083,
+          "file": "frame-00010.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594990.474965708,
+          "file": "frame-00011.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594990.771066,
+          "file": "frame-00012.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594991.081966833,
+          "file": "frame-00013.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594991.364614666,
+          "file": "frame-00014.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594991.6828445,
+          "file": "frame-00015.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594991.980850041,
+          "file": "frame-00016.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594992.257632708,
+          "file": "frame-00017.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594992.561518458,
+          "file": "frame-00018.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594992.860150916,
+          "file": "frame-00019.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594993.168064916,
+          "file": "frame-00020.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594993.457822208,
+          "file": "frame-00021.png"
+        },
+        {
+          "frame": 2,
+          "pts": 1594993.761819,
+          "file": "frame-00022.png"
+        },
+        {
+          "frame": 3,
+          "pts": 1594994.06808025,
+          "file": "frame-00023.png"
+        },
+        {
+          "frame": 4,
+          "pts": 1594994.358019875,
+          "file": "frame-00024.png"
+        },
+        {
+          "frame": 5,
+          "pts": 1594994.671498833,
+          "file": "frame-00025.png"
+        },
+        {
+          "frame": 6,
+          "pts": 1594994.96786375,
+          "file": "frame-00026.png"
+        },
+        {
+          "frame": 1,
+          "pts": 1594995.260793541,
+          "file": "frame-00027.png"
+        }
+      ]
+    }
+  ],
+  "visualBounds": [
+    {
+      "sourceFrame": 1,
+      "captureFile": "frame-00003.png",
+      "mainBodyBoundsInclusivePixels": [
+        23,
+        113,
+        122,
+        202
+      ],
+      "bodyWidth": 100,
+      "bodyHeight": 90,
+      "bodyCenterX": 72.5,
+      "touchesPanelEdge": false,
+      "method": "largest connected nonblack component below y60; threshold max RGB >40; excludes evolution button, fragments"
+    },
+    {
+      "sourceFrame": 2,
+      "captureFile": "frame-00004.png",
+      "mainBodyBoundsInclusivePixels": [
+        56,
+        114,
+        146,
+        202
+      ],
+      "bodyWidth": 91,
+      "bodyHeight": 89,
+      "bodyCenterX": 101.0,
+      "touchesPanelEdge": false,
+      "method": "largest connected nonblack component below y60; threshold max RGB >40; excludes evolution button, fragments"
+    },
+    {
+      "sourceFrame": 3,
+      "captureFile": "frame-00005.png",
+      "mainBodyBoundsInclusivePixels": [
+        58,
+        100,
+        168,
+        201
+      ],
+      "bodyWidth": 111,
+      "bodyHeight": 102,
+      "bodyCenterX": 113.0,
+      "touchesPanelEdge": false,
+      "method": "largest connected nonblack component below y60; threshold max RGB >40; excludes evolution button, fragments"
+    },
+    {
+      "sourceFrame": 4,
+      "captureFile": "frame-00000.png",
+      "mainBodyBoundsInclusivePixels": [
+        29,
+        116,
+        126,
+        202
+      ],
+      "bodyWidth": 98,
+      "bodyHeight": 87,
+      "bodyCenterX": 77.5,
+      "touchesPanelEdge": false,
+      "method": "largest connected nonblack component below y60; threshold max RGB >40; excludes evolution button, fragments"
+    },
+    {
+      "sourceFrame": 5,
+      "captureFile": "frame-00001.png",
+      "mainBodyBoundsInclusivePixels": [
+        52,
+        117,
+        142,
+        202
+      ],
+      "bodyWidth": 91,
+      "bodyHeight": 86,
+      "bodyCenterX": 97.0,
+      "touchesPanelEdge": false,
+      "method": "largest connected nonblack component below y60; threshold max RGB >40; excludes evolution button, fragments"
+    },
+    {
+      "sourceFrame": 6,
+      "captureFile": "frame-00002.png",
+      "mainBodyBoundsInclusivePixels": [
+        68,
+        114,
+        168,
+        202
+      ],
+      "bodyWidth": 101,
+      "bodyHeight": 89,
+      "bodyCenterX": 118.0,
+      "touchesPanelEdge": false,
+      "method": "largest connected nonblack component below y60; threshold max RGB >40; excludes evolution button, fragments"
+    }
+  ]
+}

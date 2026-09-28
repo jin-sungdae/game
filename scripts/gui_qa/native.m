@@ -20,8 +20,9 @@ static BOOL press(AXUIElementRef e,NSString *label,int depth){
 }
 int main(int argc,const char **argv){@autoreleasepool{
  if(argc<2)return 2;NSString*cmd=@(argv[1]);
- int need=[@{@"probe":@2,@"snapshot":@3,@"ax":@3,@"press":@4,@"type":@3,@"click":@4,@"right":@4,@"drag":@6,@"observe":@4}[cmd] intValue];if(!need||argc!=need)return 2;
+ int need=[@{@"probe":@2,@"move":@4,@"snapshot":@3,@"ax":@3,@"press":@4,@"type":@3,@"click":@4,@"right":@4,@"drag":@6,@"observe":@4}[cmd] intValue];if(!need||argc!=need)return 2;
  if([cmd isEqual:@"probe"]){NSMutableArray*a=[NSMutableArray new];for(NSScreen*s in NSScreen.screens)[a addObject:@{@"frame":NSStringFromRect(s.frame),@"visibleFrame":NSStringFromRect(s.visibleFrame),@"scale":@(s.backingScaleFactor)}];print(@{@"accessibility":@(AXIsProcessTrusted()),@"screenRecording":@(CGPreflightScreenCaptureAccess()),@"postEvent":@(CGPreflightPostEventAccess()),@"screens":a,@"reduceMotion":@(NSWorkspace.sharedWorkspace.accessibilityDisplayShouldReduceMotion)});return 0;}
+ if([cmd isEqual:@"move"]){if(!CGPreflightPostEventAccess())return 3;mouse(kCGEventMouseMoved,CGPointMake(atof(argv[2]),atof(argv[3])));return 0;}
  if([cmd isEqual:@"snapshot"]){print(snapshot(atoi(argv[2])));return 0;}
  if([cmd isEqual:@"ax"]){AXUIElementRef e=AXUIElementCreateApplication(atoi(argv[2]));print(node(e,12));CFRelease(e);return 0;}
  if([cmd isEqual:@"press"]){AXUIElementRef e=AXUIElementCreateApplication(atoi(argv[2]));BOOL ok=press(e,@(argv[3]),15);CFRelease(e);print(@{@"pressed":@(ok)});return ok?0:1;}

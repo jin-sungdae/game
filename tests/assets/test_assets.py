@@ -33,6 +33,9 @@ class AssetTests(unittest.TestCase):
         shutil.copytree(ROOT/'public/assets', self.root/'public/assets',
                         ignore=shutil.ignore_patterns('base.png'))
         self.stage = self.root/'public/assets/creatures/moa/stage01'
+        # Scaffold/partial-clip tests own empty fixture directories, independent of delivery.
+        for frame in (self.stage/'idle').glob('*.png'):
+            frame.unlink()
 
     def errors(self, allow=True):
         return validator.validate(self.root, allow)[0]

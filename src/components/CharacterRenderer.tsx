@@ -36,7 +36,7 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
   return <div ref={container} className="companion-visual character-renderer" role="group" aria-label={`${name} ${current.state.toLowerCase()}`} data-character={pilot.character} data-animation-state={current.state} data-animation-source={url===base.url?'base':'animation'}>
     {url ? <div className="character-facing" style={{...baseSize(bounds.width,bounds.height),transform:`scaleX(${directionScale(facing)})`}}>
       <div className={`character-animation ${(!animation || clipId===failed) && current.state==='IDLE' && !current.suppressed && !input.suppressed?'character-breathing':''}`}>
-        <img className="sprite-frame" src={url} alt={name} draggable={false} style={baseSize(bounds.width,bounds.height)} onError={()=>{if(url===base.url)base.fail();else setFailed(clipId);}}/>
+        <img className="sprite-frame" src={url} alt={`${name} ${current.state} frame ${current.frame+1} ${url===base.url?'base':'animation'}`} draggable={false} style={baseSize(bounds.width,bounds.height)} onError={()=>{if(url===base.url)base.fail();else setFailed(clipId);}}/>
       </div>
     </div> : <span className="name" role="img" aria-label={`${name} asset missing`}>{name} · asset missing</span>}
   </div>;
