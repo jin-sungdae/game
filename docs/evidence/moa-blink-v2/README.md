@@ -1,3 +1,5 @@
+> Historical rejected Blink v2. Current [measured Blink v3 evidence](../moa-blink-v3/README.md) verifies corrected eye placement and closure.
+
 # MOA Blink v2 replacement — visual acceptance FAIL
 
 The three supplied PNGs are copied byte-for-byte. **Actual facial eyes remain open in blink02**: the new closed-eyelid drawings are placed above the face on the head/leaves. Do not approve the artwork. PR #46 stays Draft; no timing approval or merge.
