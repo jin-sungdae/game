@@ -35,12 +35,14 @@ The largest sampled native step is6pt during a LEFT walk; CGWindow/AX calls can 
 
 ## V1 versus V2 human review
 
+**[Open the four short clips committed for PR review](review/README.md).** Original MP4 bytes and playback timing are preserved; no full recording was added.
+
 | Version | LEFT actual clip | RIGHT actual clip |
 |---|---|---|
 | V1 | `/Users/jinseongdae/Documents/LUMA QA/moa-move-v1-seeded/move-02-left.mp4` | `/Users/jinseongdae/Documents/LUMA QA/moa-move-v1-seeded/move-03-right.mp4` |
 | V2 | `/Users/jinseongdae/Documents/LUMA QA/moa-move-v2/review-left.mp4` | `/Users/jinseongdae/Documents/LUMA QA/moa-move-v2-right/review-right.mp4` |
 
-Full V2 recordings are `production-move.mp4` in each V2 directory. Raw ScreenCaptureKit buffers/PTS, AX/native frame trace, network trace and app logs are retained beside them. `recordings.json` records absolute paths, SHA256 and byte counts. Files are durable local artifacts, **not cloud-uploaded videos or temporary-only output**.
+Full V2 recordings are `production-move.mp4` in each V2 directory. Raw ScreenCaptureKit buffers/PTS, AX/native frame trace, network trace and app logs are retained beside them. `recordings.json` records absolute paths, SHA256 and byte counts. Full recordings/raw traces remain durable local artifacts. The four short review clips are now also committed under `review/` for access from this PR.
 
 These captures track the entity panel; they show actual gait, while absolute movement comes from the accompanying native trajectory. They are not fixed-desktop shots, so sliding relative to the desktop should be assessed with that limitation. Source pixel variation increases objectively: V1 near-paw ROIs unchanged, V2 front/rear paw variation present; body interior also changes. This alone does not prove improved perceived walking.
 

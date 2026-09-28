@@ -1,0 +1,98 @@
+{
+  "totalBytes": 1467582,
+  "conversion": "none; original MP4 bytes and playback timestamps retained",
+  "clips": [
+    {
+      "label": "V1 LEFT",
+      "file": "v1/move-02-left.mp4",
+      "bytes": 509051,
+      "sha256": "7e918380415619cd0691ad1cbb02aa11b048bff525371eb421376e53f371a7c6",
+      "source": "/Users/jinseongdae/Documents/LUMA QA/moa-move-v1-seeded/move-02-left.mp4",
+      "byteIdentical": true,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 576,
+            "height": 624,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "13.450000"
+        }
+      }
+    },
+    {
+      "label": "V1 RIGHT",
+      "file": "v1/move-03-right.mp4",
+      "bytes": 430216,
+      "sha256": "31484cb91e3367395322f74f415654a7b905f7aba506aede054c5c4a72251ec1",
+      "source": "/Users/jinseongdae/Documents/LUMA QA/moa-move-v1-seeded/move-03-right.mp4",
+      "byteIdentical": true,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 576,
+            "height": 624,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "12.516667"
+        }
+      }
+    },
+    {
+      "label": "V2 LEFT",
+      "file": "v2/review-left.mp4",
+      "bytes": 257337,
+      "sha256": "d805af8219557c5ecf3d3b8848b1705e71c52e5c6e338e543389bc72ff188d2a",
+      "source": "/Users/jinseongdae/Documents/LUMA QA/moa-move-v2/review-left.mp4",
+      "byteIdentical": true,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 576,
+            "height": 624,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "12.316667"
+        }
+      }
+    },
+    {
+      "label": "V2 RIGHT",
+      "file": "v2/review-right.mp4",
+      "bytes": 270978,
+      "sha256": "9c9a1ee250ea8e0ba38b696d22275652d318adbc24754eba41b26de41d86dce9",
+      "source": "/Users/jinseongdae/Documents/LUMA QA/moa-move-v2-right/review-right.mp4",
+      "byteIdentical": true,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 576,
+            "height": 624,
+            "avg_frame_rate": "60/1"
+          }
+        ],
+        "format": {
+          "duration": "12.333333"
+        }
+      }
+    }
+  ]
+}
