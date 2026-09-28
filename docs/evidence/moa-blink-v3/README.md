@@ -1,3 +1,5 @@
+> **Subsequent human approval (2026-09-28):** Registered Breath v3 and measured Blink v3, 1800ms breathing / 90ms blink / randomized 3–7s, are approved Alpha Pilot Production defaults. See [current approval and final status](../../moa-idle-v3-sequences.md). The capture-time review wording below is historical.
+
 # MOA Blink v3 measured replacement
 
 [Actual production recording — 25.856 seconds](production-v3-playback.mp4) · [BREATH still](actual-breath.png) · [BLINK02 still](actual-blink02.png).
