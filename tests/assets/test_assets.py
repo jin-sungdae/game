@@ -53,7 +53,8 @@ class AssetTests(unittest.TestCase):
     def test_scaffold_pending_not_production_pass(self):
         errors,pending = validator.validate(self.root,True)
         self.assertEqual(errors,[])
-        self.assertEqual(len(pending),25)
+        self.assertEqual(len(pending),24)
+        self.assertFalse(any(item.startswith("moa/stage01/walk:") for item in pending))
         self.assertTrue(self.errors(False))
 
     def test_complete_registered_frame_fixture(self):

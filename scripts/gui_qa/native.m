@@ -39,7 +39,7 @@ int main(int argc,const char **argv){@autoreleasepool{
   for(int retry=0;retry<30 && !target;retry++){target=moaImage(app,20);if(!target)usleep(100000);}
   CFRelease(app);if(!target)return 5;
   double end=NSDate.date.timeIntervalSince1970+atof(argv[3]);
-  while(NSDate.date.timeIntervalSince1970<end){@autoreleasepool{double before=NSDate.date.timeIntervalSince1970;id label=attr(target,kAXDescriptionAttribute);print(@{@"before":@(before),@"after":@(NSDate.date.timeIntervalSince1970),@"label":label});}usleep(10000);}
+  while(NSDate.date.timeIntervalSince1970<end){@autoreleasepool{double before=NSDate.date.timeIntervalSince1970;id label=attr(target,kAXDescriptionAttribute);NSMutableArray *panels=[NSMutableArray new];for(NSDictionary *w in windows(atoi(argv[2])))if([w[(id)kCGWindowName]isEqual:@"moa"])[panels addObject:w[(id)kCGWindowBounds]];print(@{@"before":@(before),@"after":@(NSDate.date.timeIntervalSince1970),@"label":label,@"image":node(target,0),@"panels":panels});}usleep(20000);}
   CFRelease(target);return 0;
  }
  if([cmd isEqual:@"observe"]){double end=NSDate.date.timeIntervalSince1970+atof(argv[3]);while(NSDate.date.timeIntervalSince1970<end){@autoreleasepool{print(snapshot(atoi(argv[2])));}usleep(50000);}return 0;}

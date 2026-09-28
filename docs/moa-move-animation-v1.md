@@ -1,0 +1,7 @@
+# MOA MOVE Animation Pilot v1
+
+Extends the approved MOA Stage1 IDLE on main74a886d. Supplied `move_01..08.png` map byte-for-byte to existing `walk/walk_00..07.png` paths. No image transform or new engine. Canonical walk metadata already declares8×80ms,640ms at1×; it remains a visual pilot candidate. Existing `IDLE_PRODUCTION` stays approved, with explicit `moveStatus: PRODUCTION_PILOT` opt-in for MOA only. REACT/PIP remain unsupplied.
+
+MovementController exclusively owns world position. The existing resolver uses8pt/s enter and3pt/s exit hysteresis; MOVE rate is clamp(speed/40,0.5,2). Thus reference cycle is640ms at40pt/s,1280ms at20pt/s or below,320ms at80pt/s or above. The animator modifies frame phase only. Shared clock, CSP/static registry, battle/evolution/interaction priority and Reduced Motion frame0 pinning are unchanged. MOVE interrupts blink; IDLE restart schedules a fresh3–7 second blink delay. Missing MOVE frames reject the full clip and use MOA base, while production IDLE remains available.
+
+QA uses existing release-app ScreenCaptureKit/AX infrastructure and observes autonomous movement with the pointer away from MOA. No gameplay timing, seed, position/state injection or debug renderer is used. Captured panel/image positions distinguish world travel from sprite-local bounds. Facing reversal is measured separately; the historical1.5pt silhouette excursion must not be hidden. Gait quality, foot motion, sliding impression, body bob and cycle naturalness remain MANUAL_VISUAL_REVIEW.
