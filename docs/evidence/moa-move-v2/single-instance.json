@@ -1,0 +1,79 @@
+{
+  "primaryPid": 94693,
+  "primaryWindowIdsBefore": [
+    316642
+  ],
+  "primaryWindowIdsAfter": [
+    316642
+  ],
+  "secondaries": [
+    {
+      "exitCode": 0,
+      "pid": 95019,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.apple.finder",
+          "frontPid": 691,
+          "keyWindows": 0,
+          "pid": 95019,
+          "seconds": 0.0021709203720092773
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 95020,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.apple.finder",
+          "frontPid": 691,
+          "keyWindows": 0,
+          "pid": 95020,
+          "seconds": 0.001392960548400879
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 95024,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.apple.finder",
+          "frontPid": 691,
+          "keyWindows": 0,
+          "pid": 95024,
+          "seconds": 0.0050699710845947266
+        }
+      ]
+    }
+  ],
+  "primaryAudit": [
+    {
+      "activations": 0,
+      "event": "before-tauri",
+      "frontBundle": "com.carriez.rustdesk",
+      "frontPid": 96061,
+      "keyWindows": 0,
+      "pid": 94693,
+      "seconds": 0.003031015396118164
+    }
+  ],
+  "noLumaForeground": true,
+  "focusPass": true,
+  "singleInstancePass": true
+}
