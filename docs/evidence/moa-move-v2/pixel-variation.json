@@ -1,0 +1,461 @@
+{
+  "method": "Adjacent pairs including08\u219201; visible RGB changes counted only when either pixel has nonzero alpha; raw8-bit RGB MAE, bounding-box ROIs from prior annotation (not semantic segmentation).",
+  "V1": {
+    "uniqueByteHashes": 5,
+    "uniqueDecodedFrames": 5,
+    "regions": {
+      "FRONT_PAW_NEAR": {
+        "inclusiveROI": {
+          "x_min": 166,
+          "y_min": 229,
+          "x_max": 207,
+          "y_max": 245,
+          "width": 42,
+          "height": 17,
+          "center_x": 186.5,
+          "center_y": 237.0
+        },
+        "roiPixels": 714,
+        "adjacentPairs": [
+          {
+            "from": 1,
+            "to": 2,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 8,
+            "to": 1,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          }
+        ]
+      },
+      "REAR_PAW_NEAR": {
+        "inclusiveROI": {
+          "x_min": 96,
+          "y_min": 225,
+          "x_max": 126,
+          "y_max": 240,
+          "width": 31,
+          "height": 16,
+          "center_x": 111.0,
+          "center_y": 232.5
+        },
+        "roiPixels": 496,
+        "adjacentPairs": [
+          {
+            "from": 1,
+            "to": 2,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 8,
+            "to": 1,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          }
+        ]
+      },
+      "BODY_INTERIOR": {
+        "inclusiveROI": {
+          "x_min": 136,
+          "y_min": 190,
+          "x_max": 152,
+          "y_max": 219,
+          "width": 17,
+          "height": 30,
+          "center_x": 144.0,
+          "center_y": 204.5
+        },
+        "roiPixels": 510,
+        "adjacentPairs": [
+          {
+            "from": 1,
+            "to": 2,
+            "changedRGBPixels": 22,
+            "changedAlphaPixels": 7,
+            "meanAbsoluteRGBDifference": 0.058823529411764705
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changedRGBPixels": 9,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0196078431372549
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changedRGBPixels": 9,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0196078431372549
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changedRGBPixels": 22,
+            "changedAlphaPixels": 7,
+            "meanAbsoluteRGBDifference": 0.058823529411764705
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "changedRGBPixels": 124,
+            "changedAlphaPixels": 2,
+            "meanAbsoluteRGBDifference": 0.27908496732026145
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "changedRGBPixels": 4,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.027450980392156862
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "changedRGBPixels": 4,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.027450980392156862
+          },
+          {
+            "from": 8,
+            "to": 1,
+            "changedRGBPixels": 124,
+            "changedAlphaPixels": 2,
+            "meanAbsoluteRGBDifference": 0.27908496732026145
+          }
+        ]
+      }
+    },
+    "wholeFrameAdjacentRGBChanges": [
+      21081,
+      15126,
+      15126,
+      21081,
+      20938,
+      15126,
+      15126,
+      20938
+    ]
+  },
+  "V2": {
+    "uniqueByteHashes": 7,
+    "uniqueDecodedFrames": 7,
+    "regions": {
+      "FRONT_PAW_NEAR": {
+        "inclusiveROI": {
+          "x_min": 166,
+          "y_min": 229,
+          "x_max": 207,
+          "y_max": 245,
+          "width": 42,
+          "height": 17,
+          "center_x": 186.5,
+          "center_y": 237.0
+        },
+        "roiPixels": 714,
+        "adjacentPairs": [
+          {
+            "from": 1,
+            "to": 2,
+            "changedRGBPixels": 262,
+            "changedAlphaPixels": 12,
+            "meanAbsoluteRGBDifference": 2.3229652669777088
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changedRGBPixels": 168,
+            "changedAlphaPixels": 2,
+            "meanAbsoluteRGBDifference": 0.9818558838776568
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changedRGBPixels": 168,
+            "changedAlphaPixels": 2,
+            "meanAbsoluteRGBDifference": 0.9818558838776568
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changedRGBPixels": 262,
+            "changedAlphaPixels": 12,
+            "meanAbsoluteRGBDifference": 2.3229652669777088
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "changedRGBPixels": 19,
+            "changedAlphaPixels": 6,
+            "meanAbsoluteRGBDifference": 0.23379989631933645
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "changedRGBPixels": 16,
+            "changedAlphaPixels": 1,
+            "meanAbsoluteRGBDifference": 0.09331259720062209
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "changedRGBPixels": 16,
+            "changedAlphaPixels": 1,
+            "meanAbsoluteRGBDifference": 0.09331259720062209
+          },
+          {
+            "from": 8,
+            "to": 1,
+            "changedRGBPixels": 19,
+            "changedAlphaPixels": 6,
+            "meanAbsoluteRGBDifference": 0.23379989631933645
+          }
+        ]
+      },
+      "REAR_PAW_NEAR": {
+        "inclusiveROI": {
+          "x_min": 96,
+          "y_min": 225,
+          "x_max": 126,
+          "y_max": 240,
+          "width": 31,
+          "height": 16,
+          "center_x": 111.0,
+          "center_y": 232.5
+        },
+        "roiPixels": 496,
+        "adjacentPairs": [
+          {
+            "from": 1,
+            "to": 2,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changedRGBPixels": 0,
+            "changedAlphaPixels": 0,
+            "meanAbsoluteRGBDifference": 0.0
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "changedRGBPixels": 260,
+            "changedAlphaPixels": 53,
+            "meanAbsoluteRGBDifference": 4.901746724890829
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "changedRGBPixels": 162,
+            "changedAlphaPixels": 7,
+            "meanAbsoluteRGBDifference": 2.022561863173217
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "changedRGBPixels": 162,
+            "changedAlphaPixels": 7,
+            "meanAbsoluteRGBDifference": 2.022561863173217
+          },
+          {
+            "from": 8,
+            "to": 1,
+            "changedRGBPixels": 260,
+            "changedAlphaPixels": 53,
+            "meanAbsoluteRGBDifference": 4.901746724890829
+          }
+        ]
+      },
+      "BODY_INTERIOR": {
+        "inclusiveROI": {
+          "x_min": 136,
+          "y_min": 190,
+          "x_max": 152,
+          "y_max": 219,
+          "width": 17,
+          "height": 30,
+          "center_x": 144.0,
+          "center_y": 204.5
+        },
+        "roiPixels": 510,
+        "adjacentPairs": [
+          {
+            "from": 1,
+            "to": 2,
+            "changedRGBPixels": 301,
+            "changedAlphaPixels": 9,
+            "meanAbsoluteRGBDifference": 1.7941176470588236
+          },
+          {
+            "from": 2,
+            "to": 3,
+            "changedRGBPixels": 301,
+            "changedAlphaPixels": 9,
+            "meanAbsoluteRGBDifference": 1.7941176470588236
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "changedRGBPixels": 357,
+            "changedAlphaPixels": 10,
+            "meanAbsoluteRGBDifference": 1.9516339869281045
+          },
+          {
+            "from": 4,
+            "to": 5,
+            "changedRGBPixels": 357,
+            "changedAlphaPixels": 10,
+            "meanAbsoluteRGBDifference": 1.9516339869281045
+          },
+          {
+            "from": 5,
+            "to": 6,
+            "changedRGBPixels": 301,
+            "changedAlphaPixels": 9,
+            "meanAbsoluteRGBDifference": 1.7941176470588236
+          },
+          {
+            "from": 6,
+            "to": 7,
+            "changedRGBPixels": 301,
+            "changedAlphaPixels": 9,
+            "meanAbsoluteRGBDifference": 1.7941176470588236
+          },
+          {
+            "from": 7,
+            "to": 8,
+            "changedRGBPixels": 357,
+            "changedAlphaPixels": 10,
+            "meanAbsoluteRGBDifference": 1.9516339869281045
+          },
+          {
+            "from": 8,
+            "to": 1,
+            "changedRGBPixels": 357,
+            "changedAlphaPixels": 10,
+            "meanAbsoluteRGBDifference": 1.9516339869281045
+          }
+        ]
+      }
+    },
+    "wholeFrameAdjacentRGBChanges": [
+      713,
+      593,
+      662,
+      782,
+      689,
+      582,
+      651,
+      758
+    ]
+  }
+}

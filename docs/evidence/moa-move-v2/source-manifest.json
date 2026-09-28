@@ -1,0 +1,91 @@
+{
+  "character": "MOA",
+  "animation": "MOVE_V2_ANATOMY_GUIDED",
+  "canvas": [
+    256,
+    256
+  ],
+  "source_facing": "RIGHT",
+  "anchor": "bottom-center",
+  "frames": 8,
+  "frame_ms": 80,
+  "source_sha256": "3e2f8a31d71bda3005a0a78eb31ac1ac84a146add959034fdcea3f5c1b765743",
+  "registration": {
+    "max_center_x_delta_px": 0.0,
+    "max_bottom_delta_px": 0
+  },
+  "frame_data": [
+    {
+      "file": "move_01.png",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "center_x": 129.0,
+      "bottom": 248,
+      "front_near_lift": 0,
+      "rear_near_lift": 0,
+      "body_bob": 0.0
+    },
+    {
+      "file": "move_02.png",
+      "sha256": "7108a9a487a13f523f093e3c64ff003db6e49342891acaf3bac5182414d82cc2",
+      "center_x": 129.0,
+      "bottom": 248,
+      "front_near_lift": 1.414213562373095,
+      "rear_near_lift": 0,
+      "body_bob": 1.0
+    },
+    {
+      "file": "move_03.png",
+      "sha256": "5da2daabbdbca12179aea36b419c3e178b66f3c1a8ad0f2926c89f5e1c7c91e9",
+      "center_x": 129.0,
+      "bottom": 248,
+      "front_near_lift": 2.0,
+      "rear_near_lift": 0,
+      "body_bob": 1.2246467991473532e-16
+    },
+    {
+      "file": "move_04.png",
+      "sha256": "e16fdb1a1e8fb9a090560126ca542f27fd4b6bf4f191ba2ce7ab0e95041ec550",
+      "center_x": 129.0,
+      "bottom": 248,
+      "front_near_lift": 1.4142135623730951,
+      "rear_near_lift": 0,
+      "body_bob": -1.0
+    },
+    {
+      "file": "move_05.png",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "center_x": 129.0,
+      "bottom": 248,
+      "front_near_lift": 2.4492935982947064e-16,
+      "rear_near_lift": 0,
+      "body_bob": -2.4492935982947064e-16
+    },
+    {
+      "file": "move_06.png",
+      "sha256": "7ab6530e30bdc55c9b844d95c22a68a779b17594878b13fc3e9b79a08aa9507e",
+      "center_x": 129.0,
+      "bottom": 248,
+      "front_near_lift": 0,
+      "rear_near_lift": 1.414213562373095,
+      "body_bob": 1.0
+    },
+    {
+      "file": "move_07.png",
+      "sha256": "28ce2f3556a7d9b202b43394dd0a8aeb7a63f4adc2b13cd428feb11fd6e48f36",
+      "center_x": 129.0,
+      "bottom": 248,
+      "front_near_lift": 0,
+      "rear_near_lift": 2.0,
+      "body_bob": 3.6739403974420594e-16
+    },
+    {
+      "file": "move_08.png",
+      "sha256": "2d35f697bea21ba827740d0cf5edae08c971720d8f98e7bdb27566f39b3397ea",
+      "center_x": 129.0,
+      "bottom": 248,
+      "front_near_lift": 0,
+      "rear_near_lift": 1.4142135623730954,
+      "body_bob": -1.0
+    }
+  ]
+}
