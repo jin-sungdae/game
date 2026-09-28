@@ -1,0 +1,310 @@
+{
+  "source": "/Users/jinseongdae/Documents/ChatGPT/luma-moa-idle-animation-pilot-v1/public/assets/creatures/moa/stage01/base.png",
+  "sha256": "3e2f8a31d71bda3005a0a78eb31ac1ac84a146add959034fdcea3f5c1b765743",
+  "coordinateConvention": "Image left/right, top-left (0,0), pixel-index extrema inclusive; center is midpoint of extreme pixel indices, not an anatomical label or intensity centroid.",
+  "method": "Within broad visually identified face ROIs select alpha>=128, max(RGB)<230, R-G<35; take largest 4-connected component. Enclosed white highlights are included by the bounding rectangle. Thresholds operationally define raster edge; no authored eye mask exists. Bright exterior antialias rim is conservatively covered by one-pixel expansion, not claimed as exact semantic segmentation. Safe rectangle adds one more pixel and is a work ROI, not a rectangular repaint instruction.",
+  "eyes": {
+    "LEFT_EYE": {
+      "searchROIExclusive": [
+        185,
+        130,
+        218,
+        170
+      ],
+      "segmentedIrisAndBoundary": {
+        "x": 192,
+        "y": 138,
+        "x_max_inclusive": 211,
+        "y_max_inclusive": 163,
+        "width": 20,
+        "height": 26,
+        "center": [
+          201.5,
+          150.5
+        ]
+      },
+      "darkRGBUnder110": {
+        "x": 192,
+        "y": 138,
+        "x_max_inclusive": 210,
+        "y_max_inclusive": 162,
+        "width": 19,
+        "height": 25,
+        "center": [
+          201.0,
+          150.0
+        ]
+      },
+      "fullEyeIncludingBrightRimConservative": {
+        "x": 191,
+        "y": 137,
+        "x_max_inclusive": 212,
+        "y_max_inclusive": 164,
+        "width": 22,
+        "height": 28,
+        "center": [
+          201.5,
+          150.5
+        ]
+      },
+      "blinkSafeRegionProposed": {
+        "x": 190,
+        "y": 136,
+        "x_max_inclusive": 213,
+        "y_max_inclusive": 165,
+        "width": 24,
+        "height": 30,
+        "center": [
+          201.5,
+          150.5
+        ]
+      },
+      "segmentedPixelCount": 402,
+      "rowExtents": {
+        "138": [
+          200,
+          205
+        ],
+        "139": [
+          198,
+          207
+        ],
+        "140": [
+          197,
+          208
+        ],
+        "141": [
+          196,
+          209
+        ],
+        "142": [
+          195,
+          209
+        ],
+        "143": [
+          194,
+          210
+        ],
+        "144": [
+          194,
+          210
+        ],
+        "145": [
+          193,
+          210
+        ],
+        "146": [
+          193,
+          211
+        ],
+        "147": [
+          193,
+          211
+        ],
+        "148": [
+          192,
+          211
+        ],
+        "149": [
+          192,
+          211
+        ],
+        "150": [
+          192,
+          211
+        ],
+        "151": [
+          192,
+          211
+        ],
+        "152": [
+          192,
+          211
+        ],
+        "153": [
+          192,
+          211
+        ],
+        "154": [
+          192,
+          210
+        ],
+        "155": [
+          192,
+          210
+        ],
+        "156": [
+          192,
+          210
+        ],
+        "157": [
+          192,
+          209
+        ],
+        "158": [
+          193,
+          209
+        ],
+        "159": [
+          193,
+          208
+        ],
+        "160": [
+          194,
+          207
+        ],
+        "161": [
+          195,
+          206
+        ],
+        "162": [
+          197,
+          205
+        ],
+        "163": [
+          200,
+          201
+        ]
+      }
+    },
+    "RIGHT_EYE": {
+      "searchROIExclusive": [
+        225,
+        130,
+        240,
+        160
+      ],
+      "segmentedIrisAndBoundary": {
+        "x": 230,
+        "y": 138,
+        "x_max_inclusive": 236,
+        "y_max_inclusive": 157,
+        "width": 7,
+        "height": 20,
+        "center": [
+          233.0,
+          147.5
+        ]
+      },
+      "darkRGBUnder110": {
+        "x": 231,
+        "y": 138,
+        "x_max_inclusive": 236,
+        "y_max_inclusive": 156,
+        "width": 6,
+        "height": 19,
+        "center": [
+          233.5,
+          147.0
+        ]
+      },
+      "fullEyeIncludingBrightRimConservative": {
+        "x": 229,
+        "y": 137,
+        "x_max_inclusive": 237,
+        "y_max_inclusive": 158,
+        "width": 9,
+        "height": 22,
+        "center": [
+          233.0,
+          147.5
+        ]
+      },
+      "blinkSafeRegionProposed": {
+        "x": 228,
+        "y": 136,
+        "x_max_inclusive": 238,
+        "y_max_inclusive": 159,
+        "width": 11,
+        "height": 24,
+        "center": [
+          233.0,
+          147.5
+        ]
+      },
+      "segmentedPixelCount": 109,
+      "rowExtents": {
+        "138": [
+          232,
+          234
+        ],
+        "139": [
+          232,
+          235
+        ],
+        "140": [
+          231,
+          235
+        ],
+        "141": [
+          231,
+          236
+        ],
+        "142": [
+          231,
+          236
+        ],
+        "143": [
+          231,
+          236
+        ],
+        "144": [
+          231,
+          236
+        ],
+        "145": [
+          230,
+          236
+        ],
+        "146": [
+          230,
+          236
+        ],
+        "147": [
+          230,
+          236
+        ],
+        "148": [
+          230,
+          236
+        ],
+        "149": [
+          230,
+          236
+        ],
+        "150": [
+          230,
+          236
+        ],
+        "151": [
+          230,
+          236
+        ],
+        "152": [
+          231,
+          236
+        ],
+        "153": [
+          231,
+          236
+        ],
+        "154": [
+          231,
+          235
+        ],
+        "155": [
+          231,
+          235
+        ],
+        "156": [
+          232,
+          235
+        ],
+        "157": [
+          233,
+          234
+        ]
+      }
+    }
+  }
+}
