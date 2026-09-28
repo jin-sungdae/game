@@ -1,5 +1,7 @@
 # MOA IDLE: actual production renderer timing review
 
+Historical artwork evidence: the rejected v1 source has now been replaced by registered v2. See [v2 actual production measurements](../moa-idle-v2/README.md). Original records below remain unchanged in meaning.
+
 **HUMAN_REVIEW_REQUIRED — visual acceptance FAIL; no timing selected.**
 
 The historical QA-CSP recordings below are retained unchanged. The approved Option B follow-up now demonstrates playback with unchanged production CSP: [static registry verification](../moa-static-registry/README.md).

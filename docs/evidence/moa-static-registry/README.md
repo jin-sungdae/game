@@ -1,5 +1,7 @@
 # Option B implemented — unchanged-CSP production playback
 
+Historical artwork evidence: the rejected v1 source has now been replaced by registered v2. See [v2 actual production measurements](../moa-idle-v2/README.md). Original records below remain unchanged in meaning.
+
 **Architecture verification PASS. Artwork remains FAIL / REPLACEMENT_REQUIRED. PR #46 stays Draft; no timing approval or automatic merge.**
 
 [Actual production .app playback (8.10s)](production-static-playback.mp4) · [verification and hashes](verification.json) · [runtime before](runtime-before.json) · [runtime after](runtime-after-trace.jsonl) · [release gate](release-result.json).

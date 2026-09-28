@@ -1,0 +1,36 @@
+{
+  "src-tauri/tauri.conf.json": {
+    "before": "cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed",
+    "after": "cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed",
+    "equal": true
+  },
+  "src/animation/clock.ts": {
+    "before": "261eaf8ed570aa9dba7aae3ae5b4f92056ac264fb0eaccb7a5acd9160af273c3",
+    "after": "261eaf8ed570aa9dba7aae3ae5b4f92056ac264fb0eaccb7a5acd9160af273c3",
+    "equal": true
+  },
+  "src/animation/generated-manifests.ts": {
+    "before": "c083f4077e7245baf172c194cbe4e9e9c1910ca06dd823b6f83fe85934f5b2e4",
+    "after": "c083f4077e7245baf172c194cbe4e9e9c1910ca06dd823b6f83fe85934f5b2e4",
+    "equal": true
+  },
+  "src/animation/loader.ts": {
+    "before": "f17d27b0e17d1f67275bbfb213564a12d2c85d66c954e0f3645d41cec740d5c5",
+    "after": "f17d27b0e17d1f67275bbfb213564a12d2c85d66c954e0f3645d41cec740d5c5",
+    "equal": true
+  },
+  "docs/evidence/alpha-release-runtime-inventory.json": {
+    "before": "99b693994a1b96b0945bb454585b14f435e485b8748cfe76eb9e61a2a4ec7720",
+    "after": "99b693994a1b96b0945bb454585b14f435e485b8748cfe76eb9e61a2a4ec7720",
+    "equal": true
+  },
+  "public/assets/creatures/moa/stage01/base.png": {
+    "before": "3e2f8a31d71bda3005a0a78eb31ac1ac84a146add959034fdcea3f5c1b765743",
+    "after": "3e2f8a31d71bda3005a0a78eb31ac1ac84a146add959034fdcea3f5c1b765743",
+    "equal": true
+  },
+  "nativeQAAppBinary": {
+    "candidate": "f2de453f54ca0481d509d28c74ab9e8547e9c9706337d9c9c5fb74b859312a3e",
+    "cleanMetadataCopy": "f2de453f54ca0481d509d28c74ab9e8547e9c9706337d9c9c5fb74b859312a3e"
+  }
+}

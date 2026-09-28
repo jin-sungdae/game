@@ -1,0 +1,99 @@
+{
+  "character": "MOA",
+  "stage": 1,
+  "animation": "IDLE_REGISTERED_V2",
+  "canvas": [
+    256,
+    256
+  ],
+  "format": "PNG RGBA transparent",
+  "source_facing": "RIGHT",
+  "anchor": "bottom-center",
+  "master": "production stage01/base.png",
+  "method": "localized vertical breathing deformation from one production master; paws/ground locked",
+  "registration": {
+    "max_silhouette_center_x_delta_px": 0.0,
+    "max_bottom_delta_px": 0,
+    "frame06_equals_frame01_bytes": true
+  },
+  "frames": [
+    {
+      "file": "idle_01.png",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "alpha_bounds": [
+        14,
+        30,
+        244,
+        248
+      ],
+      "silhouette_center_x": 129.0,
+      "bottom": 248,
+      "breath_amp_px": 0.0
+    },
+    {
+      "file": "idle_02.png",
+      "sha256": "a0e9c1ce1a7df785ad9893dc3f00ea6770cbe786d4dbbd34dc6084772de605c0",
+      "alpha_bounds": [
+        14,
+        29,
+        244,
+        248
+      ],
+      "silhouette_center_x": 129.0,
+      "bottom": 248,
+      "breath_amp_px": 1.0
+    },
+    {
+      "file": "idle_03.png",
+      "sha256": "3ad3a6aec69c8a08ac299293e3fd6a23a663ee36e30aa80892e4d0fe181b8361",
+      "alpha_bounds": [
+        14,
+        28,
+        244,
+        248
+      ],
+      "silhouette_center_x": 129.0,
+      "bottom": 248,
+      "breath_amp_px": 2.0
+    },
+    {
+      "file": "idle_04.png",
+      "sha256": "a0e9c1ce1a7df785ad9893dc3f00ea6770cbe786d4dbbd34dc6084772de605c0",
+      "alpha_bounds": [
+        14,
+        29,
+        244,
+        248
+      ],
+      "silhouette_center_x": 129.0,
+      "bottom": 248,
+      "breath_amp_px": 1.0
+    },
+    {
+      "file": "idle_05.png",
+      "sha256": "5e29a4472bb48c3f2c1812ddb37899148bbcc0152dfa97dd6a6914bbb64d5e21",
+      "alpha_bounds": [
+        14,
+        29,
+        244,
+        248
+      ],
+      "silhouette_center_x": 129.0,
+      "bottom": 248,
+      "breath_amp_px": 0.5
+    },
+    {
+      "file": "idle_06.png",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "alpha_bounds": [
+        14,
+        30,
+        244,
+        248
+      ],
+      "silhouette_center_x": 129.0,
+      "bottom": 248,
+      "breath_amp_px": 0.0
+    }
+  ]
+}
