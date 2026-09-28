@@ -1,0 +1,22 @@
+{
+  "completeReactMs": [
+    478.2569408416748,
+    489.00890350341797,
+    475.4319190979004,
+    480.09586334228516,
+    490.77415466308594
+  ],
+  "sourceCenterDriftPx": 0,
+  "sourceBottomDriftPx": 0,
+  "reactPanelDriftPt": 0,
+  "visibleBoundsDriftWithinEachReactPt": 0,
+  "bottomDriftPt": 0,
+  "cleanLeftVisibleCenterPx": 94,
+  "cleanRightVisibleCenterPx": 97,
+  "facingExcursionPt": 1.5,
+  "leftCleanEvidence": "production-left-stationary.json interrupted repeated click frames01..03, without Bond toast",
+  "rightCleanEvidence": "production-right.json cooldown complete frames01..06, without Bond toast",
+  "limitation": "Full LEFT REACT includes Bond toast in nonblack pixel union; do not treat its union center86px as character center. Clean LEFT captures cover01..03, source PNG registration covers all6.",
+  "nativeMovingClick": "MOVE -> DRAGGING -> REACT -> IDLE; existing gesture cancels movement",
+  "nativeGestureTransient": "DRAGGING suppresses animation to own-base; rapid pointer placement can produce real displacement and drag classification. Not caused or corrected by REACT artwork."
+}

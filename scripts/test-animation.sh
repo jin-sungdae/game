@@ -23,3 +23,5 @@ node --test tests/animation/static-registry.cjs
 node --test tests/animation/idle.cjs
 
 node --test tests/animation/move.cjs
+
+node --test tests/animation/react.cjs
