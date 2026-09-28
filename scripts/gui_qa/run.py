@@ -10,7 +10,7 @@ ROOT=Path(__file__).resolve().parents[2]
 def free_port():
     with socket.socket() as s:s.bind(('127.0.0.1',0));return s.getsockname()[1]
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--bundle',required=True,type=Path);p.add_argument('--output',required=True,type=Path);p.add_argument('--keep-running',action='store_true');p.add_argument('--metadata-audit',action='store_true');p.add_argument('--capture-only',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--bundle',required=True,type=Path);p.add_argument('--output',required=True,type=Path);p.add_argument('--keep-running',action='store_true');p.add_argument('--metadata-audit',action='store_true');p.add_argument('--capture-only',action='store_true');p.add_argument('--world-seed',type=int);a=p.parse_args()
     root=a.output.resolve();root.mkdir(parents=True,exist_ok=False);(root/'screenshots').mkdir();(root/'access').mkdir()
     helper=root/'native-qa';sp.run(['clang','-fobjc-arc','-framework','AppKit','-framework','ApplicationServices',str(ROOT/'scripts/gui_qa/native.m'),'-o',str(helper)],check=True)
     caps=json.loads(sp.check_output([helper,'probe'],text=True));(root/'capabilities.json').write_text(json.dumps(caps,indent=2))
@@ -18,7 +18,7 @@ def main():
         raise SystemExit('PERMISSION_REQUIRED: authorize the launching Codex/Terminal app in Accessibility and Screen Recording, then use a new output directory.')
     pg=Path(os.environ['PG_BIN']);java=Path(os.environ['JAVA_HOME'])/'bin/java';db=free_port();port=free_port()
     while port==db:port=free_port()
-    cfg={'helper':str(helper),'serverUrl':f'http://127.0.0.1:{port}','dbPort':db,'headSha':sp.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'appBundle':str(a.bundle.resolve()),'metadataAudit':a.metadata_audit,'captureOnly':a.capture_only,'bundleId':'dev.luma.spike','pgBin':str(pg)}
+    cfg={'helper':str(helper),'serverUrl':f'http://127.0.0.1:{port}','dbPort':db,'headSha':sp.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'appBundle':str(a.bundle.resolve()),'worldSeed':a.world_seed,'metadataAudit':a.metadata_audit,'captureOnly':a.capture_only,'bundleId':'dev.luma.spike','pgBin':str(pg)}
     (root/'session.json').write_text(json.dumps(cfg,indent=2))
     try:
         for args in [[pg/'initdb','-D',root/'pg','-U','luma','-A','trust'],[pg/'pg_ctl','-D',root/'pg','-l',root/'postgres.log','-o',f'-p {db} -h 127.0.0.1','start'],[pg/'createdb','-h','127.0.0.1','-p',str(db),'-U','luma','luma_gui_qa_test']]:
@@ -34,7 +34,7 @@ def main():
                 break
             except OSError:time.sleep(.25)
         else:raise TimeoutError('server bootstrap')
-        sp.run(['open','-n','--stdout',str(root/'app.log'),'--stderr',str(root/'app.log'),'--env','LUMA_GAME_SERVER_URL='+cfg['serverUrl'],'--env','LUMA_FOCUS_AUDIT=1',*(['--env','LUMA_METADATA_AUDIT=1'] if a.metadata_audit else []),cfg['appBundle']],check=True)
+        sp.run(['open','-n','--stdout',str(root/'app.log'),'--stderr',str(root/'app.log'),'--env','LUMA_GAME_SERVER_URL='+cfg['serverUrl'],'--env','LUMA_FOCUS_AUDIT=1',*(['--env','LUMA_METADATA_AUDIT=1'] if a.metadata_audit else []),*(['--env',f'LUMA_QA_WORLD_SEED={a.world_seed}'] if a.world_seed is not None else []),cfg['appBundle']],check=True)
         for _ in range(80):
             text=(root/'app.log').read_text() if (root/'app.log').exists() else ''
             rows=[json.loads(x[len('LUMA_AUDIT '):]) for x in text.splitlines() if x.startswith('LUMA_AUDIT ')]

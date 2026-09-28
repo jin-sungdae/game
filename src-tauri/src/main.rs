@@ -21,6 +21,12 @@ use std::{
     time::{Duration, Instant, SystemTime, UNIX_EPOCH},
 };
 use tauri::{Emitter, Manager};
+// Opt-in reproducible QA uses the existing World RNG; normal launches retain time seeds.
+fn world_seed(qa: Option<&str>, default: u64) -> Result<u64, std::num::ParseIntError> {
+    qa.map(str::parse)
+        .transpose()
+        .map(|seed| seed.unwrap_or(default))
+}
 struct State {
     world: Mutex<World>,
     start: Instant,
@@ -173,7 +179,10 @@ fn main() {
                 world: Mutex::new(World::new(
                     overlay::area(),
                     0.0,
-                    SystemTime::now().duration_since(UNIX_EPOCH)?.as_nanos() as u64,
+                    world_seed(
+                        std::env::var("LUMA_QA_WORLD_SEED").ok().as_deref(),
+                        SystemTime::now().duration_since(UNIX_EPOCH)?.as_nanos() as u64,
+                    )?,
                 )),
                 start,
                 backend: Mutex::new(backend::Backend::start(stop_setup.clone())),
@@ -496,3 +505,13 @@ fn main() {
     });
 }
 thread_local! {static LAST_KEY:std::cell::RefCell<String>=const{std::cell::RefCell::new(String::new())};static ACTIVE:std::cell::Cell<i32>=const{std::cell::Cell::new(-1)};}
+
+#[cfg(test)]
+mod qa_seed_tests {
+    #[test]
+    fn opt_in_seed_preserves_default_and_rejects_invalid_input() {
+        assert_eq!(super::world_seed(None, 42), Ok(42));
+        assert_eq!(super::world_seed(Some("165945"), 42), Ok(165945));
+        assert!(super::world_seed(Some("invalid"), 42).is_err());
+    }
+}

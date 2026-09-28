@@ -1,4 +1,4 @@
-"""Observe unchanged release-app autonomous walking; no forced state, velocity or seed."""
+"""Observe unchanged release-app autonomous walking; no forced state or velocity; optional session seed uses the existing World RNG."""
 import argparse,json,subprocess as sp,time,re
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('root',type=Path);p.add_argument('--seconds',type=int,default=1200);a=p.parse_args();root=a.root.resolve();cfg=json.loads((root/'session/session.json').read_text());helper=cfg['helper'];pid=cfg['appPid'];frames=root/'playback-frames';frames.mkdir()
