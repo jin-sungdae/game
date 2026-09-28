@@ -5,9 +5,9 @@ import { AssetLoader, type LoadedClip } from './loader';
 export type AnimationState = 'IDLE'|'MOVE'|'REACT';
 export type AnimationSequence = AnimationState|'BLINK';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
-export interface Pilot { character:'MOA'|'PIP'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'; sourceFacing:'RIGHT'; moveStatus?:'PRODUCTION' }
+export interface Pilot { character:'MOA'|'PIP'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'; sourceFacing:'RIGHT'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION' }
 export function pilotDefinition(character:string,stage=1):Pilot|null {
-  if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION'};
+  if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
   if(character==='PIP') return {character:'PIP',species:'pip',stage:1,manifest:resolveMonster('PIP')!.assetRoot+'/manifest.json',base:resolveMonster('PIP')!.baseAsset!,status:'NOT_SUPPLIED',sourceFacing:'RIGHT'};
   return null;
 }
@@ -18,7 +18,7 @@ export class PilotAssets {
   constructor(private loader=new AssetLoader()) {}
   async load(p:Pilot,state:AnimationSequence):Promise<LoadedClip|null> {
     if(state!=='BLINK' && !Object.hasOwn(pilotClips,state)) return null;
-    if(p.status==='NOT_SUPPLIED' || (p.status==='IDLE_PRODUCTION' && state!=='IDLE' && state!=='BLINK' && !(state==='MOVE' && p.character==='MOA' && p.stage===1 && p.moveStatus==='PRODUCTION'))) return null;
+    if(p.status==='NOT_SUPPLIED' || (p.status==='IDLE_PRODUCTION' && state!=='IDLE' && state!=='BLINK' && !(state==='MOVE' && p.character==='MOA' && p.stage===1 && p.moveStatus==='PRODUCTION') && !(state==='REACT' && p.character==='MOA' && p.stage===1 && p.reactStatus==='PRODUCTION'))) return null;
     const sequences=p.character==='MOA' && p.stage===1;
     if(state==='BLINK' && !sequences) return null;
     const name=sequences && state==='IDLE'?'breath':state==='BLINK'?'blink':pilotClips[state];

@@ -1,0 +1,991 @@
+{
+  "captureSeconds": 15.964056083001196,
+  "react": [
+    {
+      "state": "REACT",
+      "source": "animation",
+      "start": 1790584287.494278,
+      "end": 1790584287.985052,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584287.494278
+        },
+        {
+          "frame": 2,
+          "time": 1790584287.593293
+        },
+        {
+          "frame": 3,
+          "time": 1790584287.667392
+        },
+        {
+          "frame": 4,
+          "time": 1790584287.744946
+        },
+        {
+          "frame": 5,
+          "time": 1790584287.855078
+        },
+        {
+          "frame": 6,
+          "time": 1790584287.906036
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ],
+      "durationMs": 490.77415466308594,
+      "before": "IDLE",
+      "after": "IDLE",
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fullOrderPass": true,
+      "panelStable": true,
+      "pixels": [
+        {
+          "file": "frame-00015.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00017.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00018.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00019.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00020.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00021.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        }
+      ],
+      "centerDriftPt": 0.0,
+      "bottomDriftPt": 0.0,
+      "clipping": false
+    },
+    {
+      "state": "REACT",
+      "source": "animation",
+      "start": 1790584290.1173549,
+      "end": 1790584290.369664,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584290.1173549
+        },
+        {
+          "frame": 2,
+          "time": 1790584290.194131
+        },
+        {
+          "frame": 3,
+          "time": 1790584290.2930741
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ],
+      "durationMs": 252.30908393859863,
+      "before": "IDLE",
+      "after": "IDLE",
+      "sequence": [
+        1,
+        2,
+        3
+      ],
+      "fullOrderPass": false,
+      "panelStable": true,
+      "pixels": [
+        {
+          "file": "frame-00029.png",
+          "bounds": [
+            22,
+            64,
+            166,
+            201
+          ],
+          "center": 94.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00030.png",
+          "bounds": [
+            22,
+            64,
+            166,
+            201
+          ],
+          "center": 94.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00031.png",
+          "bounds": [
+            22,
+            64,
+            166,
+            201
+          ],
+          "center": 94.0,
+          "bottom": 201,
+          "clipped": false
+        }
+      ],
+      "centerDriftPt": 0.0,
+      "bottomDriftPt": 0.0,
+      "clipping": false
+    }
+  ],
+  "medianCompleteReactMs": 490.77415466308594,
+  "panelSizes": [
+    [
+      96,
+      104
+    ]
+  ],
+  "canvasSizes": [
+    [
+      82,
+      82
+    ]
+  ],
+  "network": [
+    {
+      "version": 1,
+      "fetchAttempts": 7,
+      "xhrAttempts": 0,
+      "manifestAttempts": 0,
+      "cspViolations": 0,
+      "resources": [],
+      "attempts": [
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/plugin%3Aevent%7Clisten",
+          "time": 11
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/snapshot",
+          "time": 13.000000000000002
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 3141
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 5672
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 8299
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 8622
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 10902.000000000002
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "first-idle-click",
+      "beforeTime": 1790584284.612174,
+      "before": {
+        "player": {
+          "playerId": 1,
+          "name": "LOCAL_PLAYER",
+          "gold": 0
+        },
+        "activeCompanion": {
+          "playerCompanionId": 1,
+          "species": "MOA",
+          "evolutionStage": 1,
+          "evolutionName": "MOA",
+          "level": 1,
+          "exp": 0,
+          "bond": 0
+        }
+      },
+      "panelBefore": {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 3,
+        "kCGWindowMemoryUsage": 2368,
+        "kCGWindowName": "moa",
+        "kCGWindowNumber": 317479,
+        "kCGWindowOwnerName": "LUMA Spike",
+        "kCGWindowOwnerPID": 4689,
+        "kCGWindowSharingState": 1,
+        "kCGWindowStoreType": 1
+      },
+      "releasedAt": 1790584284.921479,
+      "after": {
+        "player": {
+          "playerId": 1,
+          "name": "LOCAL_PLAYER",
+          "gold": 0
+        },
+        "activeCompanion": {
+          "playerCompanionId": 1,
+          "species": "MOA",
+          "evolutionStage": 1,
+          "evolutionName": "MOA",
+          "level": 1,
+          "exp": 0,
+          "bond": 0
+        }
+      },
+      "panelAfter": {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 3,
+        "kCGWindowMemoryUsage": 2368,
+        "kCGWindowName": "moa",
+        "kCGWindowNumber": 317479,
+        "kCGWindowOwnerName": "LUMA Spike",
+        "kCGWindowOwnerPID": 4689,
+        "kCGWindowSharingState": 1,
+        "kCGWindowStoreType": 1
+      },
+      "afterTime": 1790584285.8267038,
+      "bondDelta": 0,
+      "reactSegments": []
+    },
+    {
+      "name": "cooldown-click",
+      "beforeTime": 1790584287.1613061,
+      "before": {
+        "player": {
+          "playerId": 1,
+          "name": "LOCAL_PLAYER",
+          "gold": 0
+        },
+        "activeCompanion": {
+          "playerCompanionId": 1,
+          "species": "MOA",
+          "evolutionStage": 1,
+          "evolutionName": "MOA",
+          "level": 1,
+          "exp": 0,
+          "bond": 0
+        }
+      },
+      "panelBefore": {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 3,
+        "kCGWindowMemoryUsage": 2368,
+        "kCGWindowName": "moa",
+        "kCGWindowNumber": 317479,
+        "kCGWindowOwnerName": "LUMA Spike",
+        "kCGWindowOwnerPID": 4689,
+        "kCGWindowSharingState": 1,
+        "kCGWindowStoreType": 1
+      },
+      "releasedAt": 1790584287.4613938,
+      "after": {
+        "player": {
+          "playerId": 1,
+          "name": "LOCAL_PLAYER",
+          "gold": 0
+        },
+        "activeCompanion": {
+          "playerCompanionId": 1,
+          "species": "MOA",
+          "evolutionStage": 1,
+          "evolutionName": "MOA",
+          "level": 1,
+          "exp": 0,
+          "bond": 1
+        }
+      },
+      "panelAfter": {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 3,
+        "kCGWindowMemoryUsage": 2368,
+        "kCGWindowName": "moa",
+        "kCGWindowNumber": 317479,
+        "kCGWindowOwnerName": "LUMA Spike",
+        "kCGWindowOwnerPID": 4689,
+        "kCGWindowSharingState": 1,
+        "kCGWindowStoreType": 1
+      },
+      "afterTime": 1790584288.4372659,
+      "bondDelta": 1,
+      "reactSegments": [
+        0
+      ]
+    },
+    {
+      "name": "repeated-clicks",
+      "start": 1790584289.8857741,
+      "end": 1790584290.412534,
+      "reactSegments": [
+        1
+      ]
+    },
+    {
+      "name": "drag",
+      "start": 1790584292.5446012,
+      "end": 1790584293.243805,
+      "reactSegments": []
+    }
+  ],
+  "segments": [
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790584282.472379,
+      "end": 1790584284.8875651,
+      "frames": [
+        {
+          "frame": 2,
+          "time": 1790584282.472379
+        },
+        {
+          "frame": 3,
+          "time": 1790584282.6600661
+        },
+        {
+          "frame": 4,
+          "time": 1790584283.133976
+        },
+        {
+          "frame": 1,
+          "time": 1790584283.571053
+        },
+        {
+          "frame": 2,
+          "time": 1790584284.03482
+        },
+        {
+          "frame": 3,
+          "time": 1790584284.468323
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790584284.8875651,
+      "end": 1790584284.96306,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584284.8875651
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "MOVE",
+      "source": "animation",
+      "start": 1790584284.96306,
+      "end": 1790584285.016066,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584284.96306
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1570,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790584285.016066,
+      "end": 1790584287.419858,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584285.016066
+        },
+        {
+          "frame": 2,
+          "time": 1790584285.447338
+        },
+        {
+          "frame": 3,
+          "time": 1790584285.904881
+        },
+        {
+          "frame": 4,
+          "time": 1790584286.364167
+        },
+        {
+          "frame": 1,
+          "time": 1790584286.819179
+        },
+        {
+          "frame": 2,
+          "time": 1790584287.274854
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790584287.419858,
+      "end": 1790584287.494278,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584287.419858
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "REACT",
+      "source": "animation",
+      "start": 1790584287.494278,
+      "end": 1790584287.985052,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584287.494278
+        },
+        {
+          "frame": 2,
+          "time": 1790584287.593293
+        },
+        {
+          "frame": 3,
+          "time": 1790584287.667392
+        },
+        {
+          "frame": 4,
+          "time": 1790584287.744946
+        },
+        {
+          "frame": 5,
+          "time": 1790584287.855078
+        },
+        {
+          "frame": 6,
+          "time": 1790584287.906036
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790584287.985052,
+      "end": 1790584290.04474,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584287.985052
+        },
+        {
+          "frame": 2,
+          "time": 1790584288.4613729
+        },
+        {
+          "frame": 3,
+          "time": 1790584288.879158
+        },
+        {
+          "frame": 4,
+          "time": 1790584289.323574
+        },
+        {
+          "frame": 1,
+          "time": 1790584289.803303
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790584290.04474,
+      "end": 1790584290.1173549,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584290.04474
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "REACT",
+      "source": "animation",
+      "start": 1790584290.1173549,
+      "end": 1790584290.369664,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584290.1173549
+        },
+        {
+          "frame": 2,
+          "time": 1790584290.194131
+        },
+        {
+          "frame": 3,
+          "time": 1790584290.2930741
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790584290.369664,
+      "end": 1790584290.47107,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584290.369664
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790584290.47107,
+      "end": 1790584292.63833,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584290.47107
+        },
+        {
+          "frame": 2,
+          "time": 1790584290.928489
+        },
+        {
+          "frame": 3,
+          "time": 1790584291.385325
+        },
+        {
+          "frame": 4,
+          "time": 1790584291.8333778
+        },
+        {
+          "frame": 1,
+          "time": 1790584292.279819
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1571,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1532,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790584292.63833,
+      "end": 1790584293.267226,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584292.63833
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1532,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1535,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1537,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1539,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1547,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1549,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1551,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1553,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1556,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1558,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1560,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1563,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1568,
+          "Y": 1021
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1582,
+          "Y": 1015
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790584293.267226,
+      "end": 1790584298.095875,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584293.267226
+        },
+        {
+          "frame": 2,
+          "time": 1790584293.718202
+        },
+        {
+          "frame": 3,
+          "time": 1790584294.179089
+        },
+        {
+          "frame": 4,
+          "time": 1790584294.647245
+        },
+        {
+          "frame": 1,
+          "time": 1790584295.101789
+        },
+        {
+          "frame": 2,
+          "time": 1790584295.521905
+        },
+        {
+          "frame": 3,
+          "time": 1790584295.9818149
+        },
+        {
+          "frame": 4,
+          "time": 1790584296.4208999
+        },
+        {
+          "frame": 1,
+          "time": 1790584296.88237
+        },
+        {
+          "frame": 2,
+          "time": 1790584297.330051
+        },
+        {
+          "frame": 3,
+          "time": 1790584297.7830129
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1582,
+          "Y": 1015
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1586,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790584298.095875,
+      "end": 1790584298.378175,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584298.095875
+        },
+        {
+          "frame": 2,
+          "time": 1790584298.202038
+        },
+        {
+          "frame": 3,
+          "time": 1790584298.27781
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1586,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790584298.378175,
+      "end": 1790584298.378175,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790584298.378175
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1586,
+          "Y": 1025
+        }
+      ]
+    }
+  ],
+  "method": "20ms AX sampling + ScreenCaptureKit native192x208; silhouette RGB max>40 below y60; no mock. Sources01/06 identical; AX disambiguates them. React panel continuity excludes native mouse-down Dragging gesture."
+}

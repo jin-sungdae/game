@@ -1,0 +1,70 @@
+{
+  "character": "MOA",
+  "animation": "REACT_V1_REGISTERED",
+  "canvas": [
+    256,
+    256
+  ],
+  "source_facing": "RIGHT",
+  "anchor": "bottom-center",
+  "frame_count": 6,
+  "frame_ms": 80,
+  "cycle_ms": 480,
+  "sequence": [
+    "neutral",
+    "notice",
+    "peak",
+    "follow-through",
+    "settle",
+    "neutral"
+  ],
+  "registration": {
+    "max_center_x_delta_px": 0.0,
+    "max_bottom_delta_px": 0,
+    "react06_equals_react01": true
+  },
+  "frames": [
+    {
+      "file": "react_01.png",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "center_x": 129.0,
+      "bottom": 248,
+      "lift_px": 0
+    },
+    {
+      "file": "react_02.png",
+      "sha256": "1d14a25d230fc1c6df10300c8bd157a076948f33bd2c10f643115e69fa44ee7f",
+      "center_x": 129.0,
+      "bottom": 248,
+      "lift_px": 1
+    },
+    {
+      "file": "react_03.png",
+      "sha256": "7256173a1415cebf35213f4764021399c2bc813aca0abe38de304490f1676303",
+      "center_x": 129.0,
+      "bottom": 248,
+      "lift_px": 2
+    },
+    {
+      "file": "react_04.png",
+      "sha256": "e73f60dc0d6167073062c58f57286aed777b051ebdfde83c76fabe80fe85ec4d",
+      "center_x": 129.0,
+      "bottom": 248,
+      "lift_px": 1.25
+    },
+    {
+      "file": "react_05.png",
+      "sha256": "fe0f17c9791dd1fea88e46661b635e1b2d8fd1d1a7be26025e95e0e2a0bb8273",
+      "center_x": 129.0,
+      "bottom": 248,
+      "lift_px": 0.5
+    },
+    {
+      "file": "react_06.png",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "center_x": 129.0,
+      "bottom": 248,
+      "lift_px": 0
+    }
+  ]
+}

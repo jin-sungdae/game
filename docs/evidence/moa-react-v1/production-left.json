@@ -1,0 +1,2278 @@
+{
+  "captureSeconds": 89.81268987501971,
+  "react": [
+    {
+      "state": "REACT",
+      "source": "animation",
+      "start": 1790583896.543493,
+      "end": 1790583897.02175,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583896.543493
+        },
+        {
+          "frame": 2,
+          "time": 1790583896.617522
+        },
+        {
+          "frame": 3,
+          "time": 1790583896.692559
+        },
+        {
+          "frame": 4,
+          "time": 1790583896.7901149
+        },
+        {
+          "frame": 5,
+          "time": 1790583896.8714771
+        },
+        {
+          "frame": 6,
+          "time": 1790583896.944418
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        }
+      ],
+      "durationMs": 478.2569408416748,
+      "before": "IDLE",
+      "after": "IDLE",
+      "sequence": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "fullOrderPass": true,
+      "panelStable": true,
+      "pixels": [
+        {
+          "file": "frame-00013.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00014.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00015.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00016.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00017.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        },
+        {
+          "file": "frame-00018.png",
+          "bounds": [
+            6,
+            64,
+            166,
+            201
+          ],
+          "center": 86.0,
+          "bottom": 201,
+          "clipped": false
+        }
+      ],
+      "centerDriftPt": 0.0,
+      "bottomDriftPt": 0.0,
+      "clipping": false
+    }
+  ],
+  "medianCompleteReactMs": 478.2569408416748,
+  "panelSizes": [
+    [
+      96,
+      104
+    ]
+  ],
+  "canvasSizes": [
+    [
+      82,
+      82
+    ]
+  ],
+  "network": [
+    {
+      "version": 1,
+      "fetchAttempts": 7,
+      "xhrAttempts": 0,
+      "manifestAttempts": 0,
+      "cspViolations": 0,
+      "resources": [],
+      "attempts": [
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/plugin%3Aevent%7Clisten",
+          "time": 617
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/snapshot",
+          "time": 620
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 2888
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 5032
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 7183
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 7540
+        },
+        {
+          "kind": "fetch",
+          "url": "ipc://localhost/action",
+          "time": 9798
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "first-idle-click",
+      "beforeTime": 1790583893.987426,
+      "before": {
+        "player": {
+          "playerId": 1,
+          "name": "LOCAL_PLAYER",
+          "gold": 0
+        },
+        "activeCompanion": {
+          "playerCompanionId": 1,
+          "species": "MOA",
+          "evolutionStage": 1,
+          "evolutionName": "MOA",
+          "level": 1,
+          "exp": 0,
+          "bond": 0
+        }
+      },
+      "panelBefore": {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 3,
+        "kCGWindowMemoryUsage": 2368,
+        "kCGWindowName": "moa",
+        "kCGWindowNumber": 317381,
+        "kCGWindowOwnerName": "LUMA Spike",
+        "kCGWindowOwnerPID": 4155,
+        "kCGWindowSharingState": 1,
+        "kCGWindowStoreType": 1
+      },
+      "releasedAt": 1790583894.294069,
+      "after": {
+        "player": {
+          "playerId": 1,
+          "name": "LOCAL_PLAYER",
+          "gold": 0
+        },
+        "activeCompanion": {
+          "playerCompanionId": 1,
+          "species": "MOA",
+          "evolutionStage": 1,
+          "evolutionName": "MOA",
+          "level": 1,
+          "exp": 0,
+          "bond": 0
+        }
+      },
+      "panelAfter": {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 3,
+        "kCGWindowMemoryUsage": 2368,
+        "kCGWindowName": "moa",
+        "kCGWindowNumber": 317381,
+        "kCGWindowOwnerName": "LUMA Spike",
+        "kCGWindowOwnerPID": 4155,
+        "kCGWindowSharingState": 1,
+        "kCGWindowStoreType": 1
+      },
+      "afterTime": 1790583895.201848,
+      "bondDelta": 0,
+      "reactSegments": []
+    },
+    {
+      "name": "cooldown-click",
+      "beforeTime": 1790583896.207032,
+      "before": {
+        "player": {
+          "playerId": 1,
+          "name": "LOCAL_PLAYER",
+          "gold": 0
+        },
+        "activeCompanion": {
+          "playerCompanionId": 1,
+          "species": "MOA",
+          "evolutionStage": 1,
+          "evolutionName": "MOA",
+          "level": 1,
+          "exp": 0,
+          "bond": 0
+        }
+      },
+      "panelBefore": {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 3,
+        "kCGWindowMemoryUsage": 2368,
+        "kCGWindowName": "moa",
+        "kCGWindowNumber": 317381,
+        "kCGWindowOwnerName": "LUMA Spike",
+        "kCGWindowOwnerPID": 4155,
+        "kCGWindowSharingState": 1,
+        "kCGWindowStoreType": 1
+      },
+      "releasedAt": 1790583896.4730859,
+      "after": {
+        "player": {
+          "playerId": 1,
+          "name": "LOCAL_PLAYER",
+          "gold": 0
+        },
+        "activeCompanion": {
+          "playerCompanionId": 1,
+          "species": "MOA",
+          "evolutionStage": 1,
+          "evolutionName": "MOA",
+          "level": 1,
+          "exp": 0,
+          "bond": 1
+        }
+      },
+      "panelAfter": {
+        "kCGWindowAlpha": 1,
+        "kCGWindowBounds": {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        },
+        "kCGWindowIsOnscreen": true,
+        "kCGWindowLayer": 3,
+        "kCGWindowMemoryUsage": 2368,
+        "kCGWindowName": "moa",
+        "kCGWindowNumber": 317381,
+        "kCGWindowOwnerName": "LUMA Spike",
+        "kCGWindowOwnerPID": 4155,
+        "kCGWindowSharingState": 1,
+        "kCGWindowStoreType": 1
+      },
+      "afterTime": 1790583897.3828921,
+      "bondDelta": 1,
+      "reactSegments": [
+        0
+      ]
+    },
+    {
+      "name": "repeated-clicks",
+      "start": 1790583898.385372,
+      "end": 1790583898.984302,
+      "reactSegments": []
+    },
+    {
+      "name": "drag",
+      "start": 1790583901.094943,
+      "end": 1790583901.790221,
+      "reactSegments": []
+    }
+  ],
+  "segments": [
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583892.545064,
+      "end": 1790583894.269475,
+      "frames": [
+        {
+          "frame": 2,
+          "time": 1790583892.545064
+        },
+        {
+          "frame": 3,
+          "time": 1790583893.007268
+        },
+        {
+          "frame": 4,
+          "time": 1790583893.453748
+        },
+        {
+          "frame": 1,
+          "time": 1790583893.918145
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790583894.269475,
+      "end": 1790583894.349801,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583894.269475
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1584,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1582,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583894.349801,
+      "end": 1790583896.421515,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583894.349801
+        },
+        {
+          "frame": 2,
+          "time": 1790583894.812971
+        },
+        {
+          "frame": 3,
+          "time": 1790583895.2664309
+        },
+        {
+          "frame": 4,
+          "time": 1790583895.724671
+        },
+        {
+          "frame": 1,
+          "time": 1790583896.166722
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1582,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790583896.421515,
+      "end": 1790583896.543493,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583896.421515
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "REACT",
+      "source": "animation",
+      "start": 1790583896.543493,
+      "end": 1790583897.02175,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583896.543493
+        },
+        {
+          "frame": 2,
+          "time": 1790583896.617522
+        },
+        {
+          "frame": 3,
+          "time": 1790583896.692559
+        },
+        {
+          "frame": 4,
+          "time": 1790583896.7901149
+        },
+        {
+          "frame": 5,
+          "time": 1790583896.8714771
+        },
+        {
+          "frame": 6,
+          "time": 1790583896.944418
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583897.02175,
+      "end": 1790583898.582241,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583897.02175
+        },
+        {
+          "frame": 2,
+          "time": 1790583897.4688969
+        },
+        {
+          "frame": 3,
+          "time": 1790583897.938829
+        },
+        {
+          "frame": 4,
+          "time": 1790583898.370276
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790583898.582241,
+      "end": 1790583898.704074,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583898.582241
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1019
+        }
+      ]
+    },
+    {
+      "state": "MOVE",
+      "source": "animation",
+      "start": 1790583898.704074,
+      "end": 1790583898.7304912,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583898.704074
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583898.7304912,
+      "end": 1790583898.936651,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583898.7304912
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790583898.936651,
+      "end": 1790583899.034945,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583898.936651
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1566,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1567,
+          "Y": 1015
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583899.034945,
+      "end": 1790583901.2024798,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583899.034945
+        },
+        {
+          "frame": 2,
+          "time": 1790583899.4843888
+        },
+        {
+          "frame": 3,
+          "time": 1790583899.9481301
+        },
+        {
+          "frame": 4,
+          "time": 1790583900.391947
+        },
+        {
+          "frame": 1,
+          "time": 1790583900.8330579
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1565,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "base",
+      "start": 1790583901.2024798,
+      "end": 1790583901.8407822,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583901.2024798
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1565,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1551,
+          "Y": 1022
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1470,
+          "Y": 987
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1597,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1600,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1602,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1574,
+          "Y": 1014
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1606,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1611,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1605,
+          "Y": 1019
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1616,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1605,
+          "Y": 1017
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1613,
+          "Y": 1012
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1623,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1625,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1583,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583901.8407822,
+      "end": 1790583907.7958531,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583901.8407822
+        },
+        {
+          "frame": 2,
+          "time": 1790583902.306948
+        },
+        {
+          "frame": 3,
+          "time": 1790583902.755198
+        },
+        {
+          "frame": 4,
+          "time": 1790583903.188458
+        },
+        {
+          "frame": 1,
+          "time": 1790583903.639286
+        },
+        {
+          "frame": 2,
+          "time": 1790583904.098706
+        },
+        {
+          "frame": 3,
+          "time": 1790583904.54866
+        },
+        {
+          "frame": 4,
+          "time": 1790583905.0678902
+        },
+        {
+          "frame": 1,
+          "time": 1790583905.516505
+        },
+        {
+          "frame": 2,
+          "time": 1790583905.97564
+        },
+        {
+          "frame": 3,
+          "time": 1790583906.417647
+        },
+        {
+          "frame": 4,
+          "time": 1790583906.8747249
+        },
+        {
+          "frame": 1,
+          "time": 1790583907.321459
+        },
+        {
+          "frame": 2,
+          "time": 1790583907.7675629
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1583,
+          "Y": 1025
+        },
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583907.7958531,
+      "end": 1790583908.0836282,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583907.7958531
+        },
+        {
+          "frame": 2,
+          "time": 1790583907.9039888
+        },
+        {
+          "frame": 3,
+          "time": 1790583907.981391
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583908.0836282,
+      "end": 1790583911.30688,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583908.0836282
+        },
+        {
+          "frame": 2,
+          "time": 1790583908.524791
+        },
+        {
+          "frame": 3,
+          "time": 1790583908.990244
+        },
+        {
+          "frame": 4,
+          "time": 1790583909.424202
+        },
+        {
+          "frame": 1,
+          "time": 1790583909.881878
+        },
+        {
+          "frame": 2,
+          "time": 1790583910.3347502
+        },
+        {
+          "frame": 3,
+          "time": 1790583910.775923
+        },
+        {
+          "frame": 4,
+          "time": 1790583911.2546492
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583911.30688,
+      "end": 1790583911.593065,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583911.30688
+        },
+        {
+          "frame": 2,
+          "time": 1790583911.414084
+        },
+        {
+          "frame": 3,
+          "time": 1790583911.565186
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583911.593065,
+      "end": 1790583915.0233688,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583911.593065
+        },
+        {
+          "frame": 2,
+          "time": 1790583912.0623689
+        },
+        {
+          "frame": 3,
+          "time": 1790583912.500077
+        },
+        {
+          "frame": 4,
+          "time": 1790583912.937983
+        },
+        {
+          "frame": 1,
+          "time": 1790583913.411741
+        },
+        {
+          "frame": 2,
+          "time": 1790583913.8644938
+        },
+        {
+          "frame": 3,
+          "time": 1790583914.29725
+        },
+        {
+          "frame": 4,
+          "time": 1790583914.741138
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583915.0233688,
+      "end": 1790583915.305882,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583915.0233688
+        },
+        {
+          "frame": 2,
+          "time": 1790583915.119699
+        },
+        {
+          "frame": 3,
+          "time": 1790583915.228427
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583915.305882,
+      "end": 1790583920.4277282,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583915.305882
+        },
+        {
+          "frame": 2,
+          "time": 1790583915.773993
+        },
+        {
+          "frame": 3,
+          "time": 1790583916.2084
+        },
+        {
+          "frame": 4,
+          "time": 1790583916.674675
+        },
+        {
+          "frame": 1,
+          "time": 1790583917.112057
+        },
+        {
+          "frame": 2,
+          "time": 1790583917.5602078
+        },
+        {
+          "frame": 3,
+          "time": 1790583918.01699
+        },
+        {
+          "frame": 4,
+          "time": 1790583918.456975
+        },
+        {
+          "frame": 1,
+          "time": 1790583918.935674
+        },
+        {
+          "frame": 2,
+          "time": 1790583919.358135
+        },
+        {
+          "frame": 3,
+          "time": 1790583919.823151
+        },
+        {
+          "frame": 4,
+          "time": 1790583920.2769809
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583920.4277282,
+      "end": 1790583920.7123752,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583920.4277282
+        },
+        {
+          "frame": 3,
+          "time": 1790583920.686102
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583920.7123752,
+      "end": 1790583925.3321419,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583920.7123752
+        },
+        {
+          "frame": 2,
+          "time": 1790583921.185471
+        },
+        {
+          "frame": 3,
+          "time": 1790583921.597633
+        },
+        {
+          "frame": 4,
+          "time": 1790583922.077635
+        },
+        {
+          "frame": 1,
+          "time": 1790583922.508554
+        },
+        {
+          "frame": 2,
+          "time": 1790583922.969091
+        },
+        {
+          "frame": 3,
+          "time": 1790583923.4103808
+        },
+        {
+          "frame": 4,
+          "time": 1790583923.864397
+        },
+        {
+          "frame": 1,
+          "time": 1790583924.315795
+        },
+        {
+          "frame": 2,
+          "time": 1790583924.762433
+        },
+        {
+          "frame": 3,
+          "time": 1790583925.205721
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583925.3321419,
+      "end": 1790583925.608638,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583925.3321419
+        },
+        {
+          "frame": 2,
+          "time": 1790583925.4350882
+        },
+        {
+          "frame": 3,
+          "time": 1790583925.508642
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583925.608638,
+      "end": 1790583929.622305,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583925.608638
+        },
+        {
+          "frame": 2,
+          "time": 1790583926.074409
+        },
+        {
+          "frame": 3,
+          "time": 1790583926.508737
+        },
+        {
+          "frame": 4,
+          "time": 1790583926.954469
+        },
+        {
+          "frame": 1,
+          "time": 1790583927.4058971
+        },
+        {
+          "frame": 2,
+          "time": 1790583927.862214
+        },
+        {
+          "frame": 3,
+          "time": 1790583928.308185
+        },
+        {
+          "frame": 4,
+          "time": 1790583928.777664
+        },
+        {
+          "frame": 1,
+          "time": 1790583929.222402
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583929.622305,
+      "end": 1790583929.894559,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583929.622305
+        },
+        {
+          "frame": 2,
+          "time": 1790583929.730823
+        },
+        {
+          "frame": 3,
+          "time": 1790583929.8106441
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583929.894559,
+      "end": 1790583933.2909431,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583929.894559
+        },
+        {
+          "frame": 2,
+          "time": 1790583930.3635721
+        },
+        {
+          "frame": 3,
+          "time": 1790583930.7985659
+        },
+        {
+          "frame": 4,
+          "time": 1790583931.255662
+        },
+        {
+          "frame": 1,
+          "time": 1790583931.706305
+        },
+        {
+          "frame": 2,
+          "time": 1790583932.15291
+        },
+        {
+          "frame": 3,
+          "time": 1790583932.623767
+        },
+        {
+          "frame": 4,
+          "time": 1790583933.054638
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583933.2909431,
+      "end": 1790583933.5865068,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583933.2909431
+        },
+        {
+          "frame": 2,
+          "time": 1790583933.3873801
+        },
+        {
+          "frame": 3,
+          "time": 1790583933.489304
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583933.5865068,
+      "end": 1790583938.106491,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583933.5865068
+        },
+        {
+          "frame": 2,
+          "time": 1790583934.021117
+        },
+        {
+          "frame": 3,
+          "time": 1790583934.488852
+        },
+        {
+          "frame": 4,
+          "time": 1790583934.933119
+        },
+        {
+          "frame": 1,
+          "time": 1790583935.3943748
+        },
+        {
+          "frame": 2,
+          "time": 1790583935.8405461
+        },
+        {
+          "frame": 3,
+          "time": 1790583936.275618
+        },
+        {
+          "frame": 4,
+          "time": 1790583936.741648
+        },
+        {
+          "frame": 1,
+          "time": 1790583937.1841102
+        },
+        {
+          "frame": 2,
+          "time": 1790583937.625407
+        },
+        {
+          "frame": 3,
+          "time": 1790583938.081315
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583938.106491,
+      "end": 1790583938.387037,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583938.106491
+        },
+        {
+          "frame": 2,
+          "time": 1790583938.219499
+        },
+        {
+          "frame": 3,
+          "time": 1790583938.273031
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583938.387037,
+      "end": 1790583942.670671,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583938.387037
+        },
+        {
+          "frame": 2,
+          "time": 1790583938.835341
+        },
+        {
+          "frame": 3,
+          "time": 1790583939.27017
+        },
+        {
+          "frame": 4,
+          "time": 1790583939.731112
+        },
+        {
+          "frame": 1,
+          "time": 1790583940.201966
+        },
+        {
+          "frame": 2,
+          "time": 1790583940.627667
+        },
+        {
+          "frame": 3,
+          "time": 1790583941.0770922
+        },
+        {
+          "frame": 4,
+          "time": 1790583941.523631
+        },
+        {
+          "frame": 1,
+          "time": 1790583941.983879
+        },
+        {
+          "frame": 2,
+          "time": 1790583942.439793
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583942.670671,
+      "end": 1790583942.976063,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583942.670671
+        },
+        {
+          "frame": 2,
+          "time": 1790583942.7736058
+        },
+        {
+          "frame": 3,
+          "time": 1790583942.8710232
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583942.976063,
+      "end": 1790583947.202872,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583942.976063
+        },
+        {
+          "frame": 2,
+          "time": 1790583943.408772
+        },
+        {
+          "frame": 3,
+          "time": 1790583943.886427
+        },
+        {
+          "frame": 4,
+          "time": 1790583944.324761
+        },
+        {
+          "frame": 1,
+          "time": 1790583944.769665
+        },
+        {
+          "frame": 2,
+          "time": 1790583945.2270699
+        },
+        {
+          "frame": 3,
+          "time": 1790583945.69524
+        },
+        {
+          "frame": 4,
+          "time": 1790583946.1048331
+        },
+        {
+          "frame": 1,
+          "time": 1790583946.5898771
+        },
+        {
+          "frame": 2,
+          "time": 1790583947.023244
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583947.202872,
+      "end": 1790583947.501262,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583947.202872
+        },
+        {
+          "frame": 2,
+          "time": 1790583947.3058991
+        },
+        {
+          "frame": 3,
+          "time": 1790583947.3934379
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583947.501262,
+      "end": 1790583953.684412,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583947.501262
+        },
+        {
+          "frame": 2,
+          "time": 1790583947.951642
+        },
+        {
+          "frame": 3,
+          "time": 1790583948.402028
+        },
+        {
+          "frame": 4,
+          "time": 1790583948.846834
+        },
+        {
+          "frame": 1,
+          "time": 1790583949.2998781
+        },
+        {
+          "frame": 2,
+          "time": 1790583949.765137
+        },
+        {
+          "frame": 3,
+          "time": 1790583950.185646
+        },
+        {
+          "frame": 4,
+          "time": 1790583950.6437821
+        },
+        {
+          "frame": 1,
+          "time": 1790583951.0836248
+        },
+        {
+          "frame": 2,
+          "time": 1790583951.56888
+        },
+        {
+          "frame": 3,
+          "time": 1790583952.005278
+        },
+        {
+          "frame": 4,
+          "time": 1790583952.460067
+        },
+        {
+          "frame": 1,
+          "time": 1790583952.897245
+        },
+        {
+          "frame": 2,
+          "time": 1790583953.354343
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583953.684412,
+      "end": 1790583953.9633489,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583953.684412
+        },
+        {
+          "frame": 2,
+          "time": 1790583953.790734
+        },
+        {
+          "frame": 3,
+          "time": 1790583953.866782
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583953.9633489,
+      "end": 1790583960.101954,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583953.9633489
+        },
+        {
+          "frame": 2,
+          "time": 1790583954.423018
+        },
+        {
+          "frame": 3,
+          "time": 1790583954.874207
+        },
+        {
+          "frame": 4,
+          "time": 1790583955.3269548
+        },
+        {
+          "frame": 1,
+          "time": 1790583955.796733
+        },
+        {
+          "frame": 2,
+          "time": 1790583956.245284
+        },
+        {
+          "frame": 3,
+          "time": 1790583956.6742868
+        },
+        {
+          "frame": 4,
+          "time": 1790583957.1139631
+        },
+        {
+          "frame": 1,
+          "time": 1790583957.580742
+        },
+        {
+          "frame": 2,
+          "time": 1790583958.033197
+        },
+        {
+          "frame": 3,
+          "time": 1790583958.4634728
+        },
+        {
+          "frame": 4,
+          "time": 1790583958.9274879
+        },
+        {
+          "frame": 1,
+          "time": 1790583959.375372
+        },
+        {
+          "frame": 2,
+          "time": 1790583959.820778
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583960.101954,
+      "end": 1790583960.400403,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583960.101954
+        },
+        {
+          "frame": 2,
+          "time": 1790583960.207176
+        },
+        {
+          "frame": 3,
+          "time": 1790583960.2946439
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583960.400403,
+      "end": 1790583963.598634,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583960.400403
+        },
+        {
+          "frame": 2,
+          "time": 1790583960.840536
+        },
+        {
+          "frame": 3,
+          "time": 1790583961.2901711
+        },
+        {
+          "frame": 4,
+          "time": 1790583961.730664
+        },
+        {
+          "frame": 1,
+          "time": 1790583962.195658
+        },
+        {
+          "frame": 2,
+          "time": 1790583962.64532
+        },
+        {
+          "frame": 3,
+          "time": 1790583963.113791
+        },
+        {
+          "frame": 4,
+          "time": 1790583963.542697
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583963.598634,
+      "end": 1790583963.878635,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583963.598634
+        },
+        {
+          "frame": 2,
+          "time": 1790583963.69538
+        },
+        {
+          "frame": 3,
+          "time": 1790583963.771649
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583963.878635,
+      "end": 1790583968.423349,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583963.878635
+        },
+        {
+          "frame": 2,
+          "time": 1790583964.328706
+        },
+        {
+          "frame": 3,
+          "time": 1790583964.78146
+        },
+        {
+          "frame": 4,
+          "time": 1790583965.206355
+        },
+        {
+          "frame": 1,
+          "time": 1790583965.668535
+        },
+        {
+          "frame": 2,
+          "time": 1790583966.128531
+        },
+        {
+          "frame": 3,
+          "time": 1790583966.575655
+        },
+        {
+          "frame": 4,
+          "time": 1790583967.022192
+        },
+        {
+          "frame": 1,
+          "time": 1790583967.4661288
+        },
+        {
+          "frame": 2,
+          "time": 1790583967.927485
+        },
+        {
+          "frame": 3,
+          "time": 1790583968.3705359
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583968.423349,
+      "end": 1790583968.7154732,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583968.423349
+        },
+        {
+          "frame": 2,
+          "time": 1790583968.529942
+        },
+        {
+          "frame": 3,
+          "time": 1790583968.606035
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583968.7154732,
+      "end": 1790583972.09016,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583968.7154732
+        },
+        {
+          "frame": 2,
+          "time": 1790583969.17003
+        },
+        {
+          "frame": 3,
+          "time": 1790583969.617048
+        },
+        {
+          "frame": 4,
+          "time": 1790583970.045216
+        },
+        {
+          "frame": 1,
+          "time": 1790583970.499857
+        },
+        {
+          "frame": 2,
+          "time": 1790583970.9489532
+        },
+        {
+          "frame": 3,
+          "time": 1790583971.401166
+        },
+        {
+          "frame": 4,
+          "time": 1790583971.850081
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583972.09016,
+      "end": 1790583972.363514,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583972.09016
+        },
+        {
+          "frame": 2,
+          "time": 1790583972.196001
+        },
+        {
+          "frame": 3,
+          "time": 1790583972.281174
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583972.363514,
+      "end": 1790583975.707319,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583972.363514
+        },
+        {
+          "frame": 2,
+          "time": 1790583972.827997
+        },
+        {
+          "frame": 3,
+          "time": 1790583973.279933
+        },
+        {
+          "frame": 4,
+          "time": 1790583973.724666
+        },
+        {
+          "frame": 1,
+          "time": 1790583974.172943
+        },
+        {
+          "frame": 2,
+          "time": 1790583974.604792
+        },
+        {
+          "frame": 3,
+          "time": 1790583975.075217
+        },
+        {
+          "frame": 4,
+          "time": 1790583975.504677
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583975.707319,
+      "end": 1790583975.9850168,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583975.707319
+        },
+        {
+          "frame": 2,
+          "time": 1790583975.798934
+        },
+        {
+          "frame": 3,
+          "time": 1790583975.878293
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583975.9850168,
+      "end": 1790583979.276748,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583975.9850168
+        },
+        {
+          "frame": 2,
+          "time": 1790583976.44623
+        },
+        {
+          "frame": 3,
+          "time": 1790583976.894175
+        },
+        {
+          "frame": 4,
+          "time": 1790583977.330333
+        },
+        {
+          "frame": 1,
+          "time": 1790583977.8028889
+        },
+        {
+          "frame": 2,
+          "time": 1790583978.229951
+        },
+        {
+          "frame": 3,
+          "time": 1790583978.694045
+        },
+        {
+          "frame": 4,
+          "time": 1790583979.143544
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "BLINK",
+      "source": "animation",
+      "start": 1790583979.276748,
+      "end": 1790583979.579904,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583979.276748
+        },
+        {
+          "frame": 2,
+          "time": 1790583979.380083
+        },
+        {
+          "frame": 3,
+          "time": 1790583979.455665
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    },
+    {
+      "state": "IDLE",
+      "source": "animation",
+      "start": 1790583979.579904,
+      "end": 1790583982.3236089,
+      "frames": [
+        {
+          "frame": 1,
+          "time": 1790583979.579904
+        },
+        {
+          "frame": 2,
+          "time": 1790583980.024427
+        },
+        {
+          "frame": 3,
+          "time": 1790583980.474008
+        },
+        {
+          "frame": 4,
+          "time": 1790583980.931273
+        },
+        {
+          "frame": 1,
+          "time": 1790583981.385083
+        },
+        {
+          "frame": 2,
+          "time": 1790583981.8452659
+        },
+        {
+          "frame": 3,
+          "time": 1790583982.281732
+        }
+      ],
+      "panels": [
+        {
+          "Height": 104,
+          "Width": 96,
+          "X": 1630,
+          "Y": 1025
+        }
+      ]
+    }
+  ],
+  "method": "20ms AX sampling + ScreenCaptureKit native192x208; silhouette RGB max>40 below y60; no mock. Sources01/06 identical; AX disambiguates them. React panel continuity excludes native mouse-down Dragging gesture."
+}
