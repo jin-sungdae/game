@@ -1,0 +1,67 @@
+{
+  "recordingRoot": "/Users/jinseongdae/Documents/LUMA QA/moa-move-v1-seeded",
+  "worldSeed": 165945,
+  "runtimeSourceCommit": "cdfaee7cd5c24ed7934fe45d199002f43b697b63",
+  "sourceZipSha256": "dc48f7f4503f965957d7b94450b6f80d6c404b8177ad69619adddb6242f29a5f",
+  "bundleExecutableSha256": "cc32a7f5429fd177dfa6ee848714e8b1464ec141e4555e634fed9c9e18f37611",
+  "unchangedContracts": {
+    "src-tauri/tauri.conf.json": true,
+    "src/animation/clock.ts": true,
+    "src/animation/idle.ts": true,
+    "src/animation/model.ts": true,
+    "src/animation/generated-manifests.ts": true,
+    "src/components/CharacterRenderer.tsx": true,
+    "src/animation/loader.ts": true,
+    "src-tauri/src/movement/mod.rs": true,
+    "src-tauri/src/companion/mod.rs": true,
+    "docs/evidence/alpha-release-runtime-inventory.json": true,
+    "public/assets/creatures/moa/stage01/base.png": true,
+    "public/assets/creatures/moa/stage01/manifest.json": true,
+    "public/assets/creatures/moa/stage01/breath/breath_01.png": true,
+    "public/assets/creatures/moa/stage01/breath/breath_00.png": true,
+    "public/assets/creatures/moa/stage01/breath/breath_02.png": true,
+    "public/assets/creatures/moa/stage01/breath/breath_03.png": true,
+    "public/assets/creatures/moa/stage01/blink/blink_00.png": true,
+    "public/assets/creatures/moa/stage01/blink/blink_01.png": true,
+    "public/assets/creatures/moa/stage01/blink/blink_02.png": true
+  },
+  "portsClosed": {
+    "60116": true,
+    "60117": true
+  },
+  "appProcessAbsent": true,
+  "recordings": {
+    "move-03-right.mp4": {
+      "bytes": 430216,
+      "sha256": "31484cb91e3367395322f74f415654a7b905f7aba506aede054c5c4a72251ec1"
+    },
+    "move-06-left.mp4": {
+      "bytes": 494772,
+      "sha256": "e7332100ffb7e2e30476a825124323947d899930e83f30738ababf283f557442"
+    },
+    "move-07-left.mp4": {
+      "bytes": 141028,
+      "sha256": "caec72be9d5dfe670865875cf03b6118ed752993e6fabbe20c9e0fc4a7e4aab8"
+    },
+    "move-01-left.mp4": {
+      "bytes": 417943,
+      "sha256": "6516c53b06ec0b745ad742b59a405f6cce89d0326686220fb80fbb31ac27d840"
+    },
+    "move-05-left.mp4": {
+      "bytes": 319537,
+      "sha256": "d5d5b0da71576d039dff609496aaae10ae2688ed38b64fec70d4b98ad9bab639"
+    },
+    "move-04-left.mp4": {
+      "bytes": 476088,
+      "sha256": "2d506211035733be816d5d3f871ac1217b593172df73a18dea475a7513bcd8c5"
+    },
+    "production-move.mp4": {
+      "bytes": 8526809,
+      "sha256": "91d0f8589c9c6fda5d766c72049d3a1d1705b1adf4dd072878814b9a18b694f9"
+    },
+    "move-02-left.mp4": {
+      "bytes": 509051,
+      "sha256": "7e918380415619cd0691ad1cbb02aa11b048bff525371eb421376e53f371a7c6"
+    }
+  }
+}

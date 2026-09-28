@@ -6,7 +6,7 @@ const {baseSize,rendererSource}=load('assets/base.js');
 for(const [character,base] of [['moa','/assets/creatures/moa/stage01/base.png'],['PIP','/assets/monsters/pip/base.png']]) {
  const pilot=pilotDefinition(character);const m=require('../../public'+pilot.manifest);
  test(character+' own base NOT_SUPPLIED without image requests',async()=>{
-  assert.equal(pilot.base,base);assert.equal(await new PilotAssets(new AssetLoader({json:()=>assert.fail(),image:()=>assert.fail()})).load(pilot,character==='moa'?'MOVE':'IDLE'),null);
+  assert.equal(pilot.base,base);assert.equal(await new PilotAssets(new AssetLoader({json:()=>assert.fail(),image:()=>assert.fail()})).load(pilot,character==='moa'?'REACT':'IDLE'),null);
   assert.deepEqual(rendererSource(null,pilot.base),{kind:'base',url:base});
  });
  test(character+' missing, decode failure, wrong canvas or wrong identity reject whole animation',async()=>{
@@ -85,11 +85,12 @@ test('subscription created during a tick cannot start a second RAF chain',()=>{
  assert.equal(pending.size,1);
  stop();stopChild();assert.equal(pending.size,0);
 });
-test('MOA delivery loads only IDLE; MOVE REACT and PIP remain unsupplied',async()=>{
+test('MOA IDLE approved and MOVE pilot; REACT and PIP remain unsupplied',async()=>{
  const p=pilotDefinition('moa');const m=require('../../public'+p.manifest);let count=0;
  const assets=new PilotAssets(new AssetLoader({json:async()=>m,image:async()=>{count++;return {width:256,height:256};}}));
  assert.equal(p.status,'IDLE_PRODUCTION');assert.equal((await assets.load(p,'IDLE')).urls.length,4);
- for(const state of ['MOVE','REACT'])assert.equal(await assets.load(p,state),null);
+ assert.equal(p.moveStatus,'PRODUCTION');assert.equal((await assets.load(p,'MOVE')).urls.length,8);
+ for(const state of ['REACT'])assert.equal(await assets.load(p,state),null);
  for(const state of ['IDLE','MOVE','REACT'])assert.equal(await assets.load(pilotDefinition('PIP'),state),null);
- assert.equal(count,4);
+ assert.equal(count,12);
 });

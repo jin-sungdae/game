@@ -1,0 +1,8 @@
+{
+  "executableSha256": "1949d6bdef9925aa628d08074cc3a46841650b9eac0f324026308f9448cbea62",
+  "tauriConfigSha256": "cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed",
+  "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src ipc: http://ipc.localhost http://localhost:1420 ws://localhost:1420",
+  "sourceRuntimeIdenticalToV1": true,
+  "seed": 165945,
+  "clockTimingGuarantee": "Seed alone does not freeze native cursor/window/tick inputs; similar conditions, not exact replay."
+}

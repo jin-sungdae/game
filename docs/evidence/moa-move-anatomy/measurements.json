@@ -1,0 +1,1026 @@
+{
+  "source": "public/assets/creatures/moa/stage01/base.png",
+  "source_sha256": "3e2f8a31d71bda3005a0a78eb31ac1ac84a146add959034fdcea3f5c1b765743",
+  "canvas": [
+    256,
+    256
+  ],
+  "coordinates": "origin top-left; x rightward, y downward; min/max inclusive; centers are bounding-box midpoints, NOT center of mass",
+  "method": "Manual semantic polygon annotation on 4x nearest-neighbor pixel grid, intersected with actual decoded alpha>=128. Alpha>0 also reported. Exact mask measurements do not imply uniquely determined anatomy seams.",
+  "regions": {
+    "HEAD_FACE": {
+      "polygon": [
+        [
+          128,
+          151
+        ],
+        [
+          133,
+          126
+        ],
+        [
+          144,
+          111
+        ],
+        [
+          165,
+          101
+        ],
+        [
+          180,
+          83
+        ],
+        [
+          188,
+          103
+        ],
+        [
+          210,
+          93
+        ],
+        [
+          216,
+          88
+        ],
+        [
+          218,
+          103
+        ],
+        [
+          233,
+          112
+        ],
+        [
+          241,
+          131
+        ],
+        [
+          246,
+          163
+        ],
+        [
+          243,
+          174
+        ],
+        [
+          224,
+          184
+        ],
+        [
+          188,
+          188
+        ],
+        [
+          154,
+          192
+        ],
+        [
+          154,
+          183
+        ],
+        [
+          137,
+          187
+        ],
+        [
+          144,
+          177
+        ],
+        [
+          128,
+          178
+        ],
+        [
+          138,
+          168
+        ],
+        [
+          128,
+          163
+        ]
+      ],
+      "visible_alpha128": {
+        "x_min": 128,
+        "y_min": 86,
+        "x_max": 242,
+        "y_max": 191,
+        "width": 115,
+        "height": 106,
+        "center_x": 185.0,
+        "center_y": 138.5
+      },
+      "alpha_nonzero": {
+        "x_min": 128,
+        "y_min": 84,
+        "x_max": 243,
+        "y_max": 191,
+        "width": 116,
+        "height": 108,
+        "center_x": 185.5,
+        "center_y": 137.5
+      },
+      "boundary": "manually annotated visible seam; hidden anatomy not recoverable"
+    },
+    "HEAD_CROWN": {
+      "polygon": [
+        [
+          90,
+          56
+        ],
+        [
+          110,
+          51
+        ],
+        [
+          131,
+          55
+        ],
+        [
+          161,
+          67
+        ],
+        [
+          180,
+          91
+        ],
+        [
+          180,
+          71
+        ],
+        [
+          196,
+          27
+        ],
+        [
+          204,
+          28
+        ],
+        [
+          218,
+          50
+        ],
+        [
+          232,
+          78
+        ],
+        [
+          225,
+          98
+        ],
+        [
+          208,
+          106
+        ],
+        [
+          188,
+          103
+        ],
+        [
+          182,
+          111
+        ],
+        [
+          161,
+          104
+        ],
+        [
+          140,
+          101
+        ],
+        [
+          117,
+          87
+        ]
+      ],
+      "visible_alpha128": {
+        "x_min": 94,
+        "y_min": 31,
+        "x_max": 225,
+        "y_max": 110,
+        "width": 132,
+        "height": 80,
+        "center_x": 159.5,
+        "center_y": 70.5
+      },
+      "alpha_nonzero": {
+        "x_min": 93,
+        "y_min": 30,
+        "x_max": 228,
+        "y_max": 110,
+        "width": 136,
+        "height": 81,
+        "center_x": 160.5,
+        "center_y": 70.0
+      },
+      "boundary": "manually annotated visible seam; hidden anatomy not recoverable"
+    },
+    "BODY_VISIBLE": {
+      "polygon": [
+        [
+          118,
+          181
+        ],
+        [
+          139,
+          175
+        ],
+        [
+          158,
+          185
+        ],
+        [
+          179,
+          199
+        ],
+        [
+          184,
+          216
+        ],
+        [
+          169,
+          230
+        ],
+        [
+          142,
+          233
+        ],
+        [
+          126,
+          222
+        ],
+        [
+          114,
+          210
+        ]
+      ],
+      "visible_alpha128": {
+        "x_min": 114,
+        "y_min": 175,
+        "x_max": 183,
+        "y_max": 232,
+        "width": 70,
+        "height": 58,
+        "center_x": 148.5,
+        "center_y": 203.5
+      },
+      "alpha_nonzero": {
+        "x_min": 114,
+        "y_min": 175,
+        "x_max": 183,
+        "y_max": 232,
+        "width": 70,
+        "height": 58,
+        "center_x": 148.5,
+        "center_y": 203.5
+      },
+      "boundary": "manually annotated visible seam; hidden anatomy not recoverable"
+    },
+    "FRONT_LEG_NEAR": {
+      "polygon": [
+        [
+          151,
+          195
+        ],
+        [
+          167,
+          198
+        ],
+        [
+          181,
+          208
+        ],
+        [
+          193,
+          208
+        ],
+        [
+          202,
+          216
+        ],
+        [
+          208,
+          235
+        ],
+        [
+          205,
+          245
+        ],
+        [
+          197,
+          249
+        ],
+        [
+          178,
+          249
+        ],
+        [
+          165,
+          242
+        ],
+        [
+          159,
+          231
+        ],
+        [
+          147,
+          218
+        ],
+        [
+          145,
+          207
+        ]
+      ],
+      "visible_alpha128": {
+        "x_min": 145,
+        "y_min": 195,
+        "x_max": 207,
+        "y_max": 245,
+        "width": 63,
+        "height": 51,
+        "center_x": 176.0,
+        "center_y": 220.0
+      },
+      "alpha_nonzero": {
+        "x_min": 145,
+        "y_min": 195,
+        "x_max": 207,
+        "y_max": 247,
+        "width": 63,
+        "height": 53,
+        "center_x": 176.0,
+        "center_y": 221.0
+      },
+      "boundary": "manually annotated visible seam; hidden anatomy not recoverable"
+    },
+    "FRONT_LEG_FAR": {
+      "polygon": [
+        [
+          208,
+          207
+        ],
+        [
+          221,
+          207
+        ],
+        [
+          221,
+          218
+        ],
+        [
+          215,
+          229
+        ],
+        [
+          210,
+          238
+        ],
+        [
+          205,
+          240
+        ],
+        [
+          201,
+          228
+        ],
+        [
+          202,
+          218
+        ]
+      ],
+      "visible_alpha128": {
+        "x_min": 201,
+        "y_min": 207,
+        "x_max": 220,
+        "y_max": 239,
+        "width": 20,
+        "height": 33,
+        "center_x": 210.5,
+        "center_y": 223.0
+      },
+      "alpha_nonzero": {
+        "x_min": 201,
+        "y_min": 207,
+        "x_max": 220,
+        "y_max": 239,
+        "width": 20,
+        "height": 33,
+        "center_x": 210.5,
+        "center_y": 223.0
+      },
+      "boundary": "manually annotated visible seam; hidden anatomy not recoverable"
+    },
+    "REAR_LEG_NEAR": {
+      "polygon": [
+        [
+          112,
+          181
+        ],
+        [
+          132,
+          181
+        ],
+        [
+          144,
+          190
+        ],
+        [
+          146,
+          210
+        ],
+        [
+          137,
+          222
+        ],
+        [
+          127,
+          227
+        ],
+        [
+          125,
+          235
+        ],
+        [
+          120,
+          243
+        ],
+        [
+          104,
+          246
+        ],
+        [
+          95,
+          241
+        ],
+        [
+          92,
+          229
+        ],
+        [
+          94,
+          219
+        ],
+        [
+          94,
+          204
+        ],
+        [
+          101,
+          190
+        ]
+      ],
+      "visible_alpha128": {
+        "x_min": 94,
+        "y_min": 181,
+        "x_max": 145,
+        "y_max": 240,
+        "width": 52,
+        "height": 60,
+        "center_x": 119.5,
+        "center_y": 210.5
+      },
+      "alpha_nonzero": {
+        "x_min": 93,
+        "y_min": 181,
+        "x_max": 145,
+        "y_max": 243,
+        "width": 53,
+        "height": 63,
+        "center_x": 119.0,
+        "center_y": 212.0
+      },
+      "boundary": "manually annotated visible seam; hidden anatomy not recoverable"
+    },
+    "REAR_LEG_FAR": {
+      "polygon": [
+        [
+          129,
+          219
+        ],
+        [
+          144,
+          224
+        ],
+        [
+          154,
+          226
+        ],
+        [
+          160,
+          232
+        ],
+        [
+          157,
+          241
+        ],
+        [
+          143,
+          243
+        ],
+        [
+          132,
+          237
+        ],
+        [
+          126,
+          229
+        ]
+      ],
+      "visible_alpha128": {
+        "x_min": 126,
+        "y_min": 219,
+        "x_max": 157,
+        "y_max": 238,
+        "width": 32,
+        "height": 20,
+        "center_x": 141.5,
+        "center_y": 228.5
+      },
+      "alpha_nonzero": {
+        "x_min": 126,
+        "y_min": 219,
+        "x_max": 158,
+        "y_max": 241,
+        "width": 33,
+        "height": 23,
+        "center_x": 142.0,
+        "center_y": 230.0
+      },
+      "boundary": "manually annotated visible seam; hidden anatomy not recoverable"
+    },
+    "TAIL": {
+      "polygon": [
+        [
+          95,
+          93
+        ],
+        [
+          111,
+          96
+        ],
+        [
+          127,
+          107
+        ],
+        [
+          137,
+          122
+        ],
+        [
+          141,
+          140
+        ],
+        [
+          135,
+          157
+        ],
+        [
+          140,
+          169
+        ],
+        [
+          128,
+          177
+        ],
+        [
+          114,
+          177
+        ],
+        [
+          101,
+          187
+        ],
+        [
+          98,
+          211
+        ],
+        [
+          85,
+          214
+        ],
+        [
+          75,
+          208
+        ],
+        [
+          68,
+          198
+        ],
+        [
+          65,
+          187
+        ],
+        [
+          59,
+          197
+        ],
+        [
+          53,
+          180
+        ],
+        [
+          39,
+          177
+        ],
+        [
+          42,
+          171
+        ],
+        [
+          19,
+          170
+        ],
+        [
+          12,
+          157
+        ],
+        [
+          23,
+          143
+        ],
+        [
+          43,
+          133
+        ],
+        [
+          65,
+          123
+        ],
+        [
+          65,
+          115
+        ],
+        [
+          80,
+          104
+        ]
+      ],
+      "visible_alpha128": {
+        "x_min": 17,
+        "y_min": 96,
+        "x_max": 140,
+        "y_max": 211,
+        "width": 124,
+        "height": 116,
+        "center_x": 78.5,
+        "center_y": 153.5
+      },
+      "alpha_nonzero": {
+        "x_min": 14,
+        "y_min": 94,
+        "x_max": 140,
+        "y_max": 212,
+        "width": 127,
+        "height": 119,
+        "center_x": 77.0,
+        "center_y": 153.0
+      },
+      "boundary": "manually annotated visible seam; hidden anatomy not recoverable"
+    },
+    "HEAD_WITH_CROWN": {
+      "visible_alpha128": {
+        "x_min": 94,
+        "y_min": 31,
+        "x_max": 242,
+        "y_max": 191,
+        "width": 149,
+        "height": 161,
+        "center_x": 168.0,
+        "center_y": 111.0
+      },
+      "includes": [
+        "HEAD_FACE",
+        "HEAD_CROWN"
+      ]
+    },
+    "FRONT_PAW_NEAR": {
+      "visible_alpha128": {
+        "x_min": 166,
+        "y_min": 229,
+        "x_max": 207,
+        "y_max": 245,
+        "width": 42,
+        "height": 17,
+        "center_x": 186.5,
+        "center_y": 237.0
+      },
+      "annotation_roi_inclusive": [
+        166,
+        229,
+        207,
+        247
+      ],
+      "local_bottom": {
+        "y": 245,
+        "x_runs_inclusive": [
+          [
+            186,
+            195
+          ]
+        ]
+      },
+      "boundary": "manual distal-paw ROI; not an independent anatomical layer"
+    },
+    "FRONT_PAW_FAR": {
+      "visible_alpha128": {
+        "x_min": 205,
+        "y_min": 222,
+        "x_max": 213,
+        "y_max": 238,
+        "width": 9,
+        "height": 17,
+        "center_x": 209.0,
+        "center_y": 230.0
+      },
+      "annotation_roi_inclusive": [
+        205,
+        222,
+        215,
+        238
+      ],
+      "local_bottom": {
+        "y": 238,
+        "x_runs_inclusive": [
+          [
+            205,
+            208
+          ]
+        ]
+      },
+      "boundary": "manual distal-paw ROI; not an independent anatomical layer"
+    },
+    "REAR_PAW_NEAR": {
+      "visible_alpha128": {
+        "x_min": 96,
+        "y_min": 225,
+        "x_max": 126,
+        "y_max": 240,
+        "width": 31,
+        "height": 16,
+        "center_x": 111.0,
+        "center_y": 232.5
+      },
+      "annotation_roi_inclusive": [
+        93,
+        225,
+        126,
+        243
+      ],
+      "local_bottom": {
+        "y": 240,
+        "x_runs_inclusive": [
+          [
+            103,
+            117
+          ]
+        ]
+      },
+      "boundary": "manual distal-paw ROI; not an independent anatomical layer"
+    },
+    "REAR_PAW_FAR": {
+      "visible_alpha128": {
+        "x_min": 134,
+        "y_min": 230,
+        "x_max": 157,
+        "y_max": 238,
+        "width": 24,
+        "height": 9,
+        "center_x": 145.5,
+        "center_y": 234.0
+      },
+      "annotation_roi_inclusive": [
+        131,
+        230,
+        157,
+        241
+      ],
+      "local_bottom": {
+        "y": 238,
+        "x_runs_inclusive": [
+          [
+            142,
+            154
+          ]
+        ]
+      },
+      "boundary": "manual distal-paw ROI; not an independent anatomical layer"
+    }
+  },
+  "ground_baseline_by_alpha_threshold": {
+    "1": {
+      "y": 247,
+      "x_runs_inclusive": [
+        [
+          181,
+          199
+        ]
+      ]
+    },
+    "128": {
+      "y": 245,
+      "x_runs_inclusive": [
+        [
+          186,
+          195
+        ]
+      ]
+    },
+    "250": {
+      "y": 244,
+      "x_runs_inclusive": [
+        [
+          183,
+          197
+        ]
+      ]
+    }
+  },
+  "safe_deformation_proposals": {
+    "BODY_INTERIOR": {
+      "polygon": [
+        [
+          138,
+          190
+        ],
+        [
+          147,
+          191
+        ],
+        [
+          153,
+          197
+        ],
+        [
+          149,
+          206
+        ],
+        [
+          151,
+          213
+        ],
+        [
+          143,
+          220
+        ],
+        [
+          136,
+          215
+        ],
+        [
+          136,
+          204
+        ]
+      ],
+      "bounds": {
+        "x_min": 136,
+        "y_min": 190,
+        "x_max": 152,
+        "y_max": 219,
+        "width": 17,
+        "height": 30,
+        "center_x": 144.0,
+        "center_y": 204.5
+      },
+      "scope": "interior-only conservative proposal; not approved limb translation envelope or rig mask"
+    },
+    "FRONT_PAW_NEAR_INTERIOR": {
+      "polygon": [
+        [
+          176,
+          232
+        ],
+        [
+          193,
+          232
+        ],
+        [
+          198,
+          237
+        ],
+        [
+          194,
+          241
+        ],
+        [
+          182,
+          240
+        ]
+      ],
+      "bounds": {
+        "x_min": 176,
+        "y_min": 232,
+        "x_max": 196,
+        "y_max": 240,
+        "width": 21,
+        "height": 9,
+        "center_x": 186.0,
+        "center_y": 236.0
+      },
+      "scope": "interior-only conservative proposal; not approved limb translation envelope or rig mask"
+    },
+    "FRONT_PAW_FAR_INTERIOR": {
+      "polygon": [
+        [
+          207,
+          224
+        ],
+        [
+          211,
+          224
+        ],
+        [
+          210,
+          229
+        ],
+        [
+          207,
+          231
+        ]
+      ],
+      "bounds": {
+        "x_min": 207,
+        "y_min": 224,
+        "x_max": 209,
+        "y_max": 230,
+        "width": 3,
+        "height": 7,
+        "center_x": 208.0,
+        "center_y": 227.0
+      },
+      "scope": "interior-only conservative proposal; not approved limb translation envelope or rig mask"
+    },
+    "REAR_PAW_NEAR_INTERIOR": {
+      "polygon": [
+        [
+          103,
+          227
+        ],
+        [
+          115,
+          227
+        ],
+        [
+          120,
+          231
+        ],
+        [
+          117,
+          236
+        ],
+        [
+          105,
+          237
+        ],
+        [
+          100,
+          234
+        ]
+      ],
+      "bounds": {
+        "x_min": 100,
+        "y_min": 227,
+        "x_max": 119,
+        "y_max": 236,
+        "width": 20,
+        "height": 10,
+        "center_x": 109.5,
+        "center_y": 231.5
+      },
+      "scope": "interior-only conservative proposal; not approved limb translation envelope or rig mask"
+    },
+    "REAR_PAW_FAR_INTERIOR": {
+      "polygon": [
+        [
+          138,
+          232
+        ],
+        [
+          150,
+          233
+        ],
+        [
+          153,
+          235
+        ],
+        [
+          148,
+          237
+        ],
+        [
+          140,
+          237
+        ]
+      ],
+      "bounds": {
+        "x_min": 138,
+        "y_min": 232,
+        "x_max": 151,
+        "y_max": 236,
+        "width": 14,
+        "height": 5,
+        "center_x": 144.5,
+        "center_y": 234.0
+      },
+      "scope": "interior-only conservative proposal; not approved limb translation envelope or rig mask"
+    }
+  }
+}

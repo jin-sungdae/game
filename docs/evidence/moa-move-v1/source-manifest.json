@@ -1,0 +1,136 @@
+{
+  "character": "MOA",
+  "stage": 1,
+  "animation": "MOVE_V1_REGISTERED",
+  "canvas": [
+    256,
+    256
+  ],
+  "format": "PNG RGBA transparent",
+  "source_facing": "RIGHT",
+  "anchor": "bottom-center",
+  "master": "production stage01/base.png",
+  "frame_count": 8,
+  "candidate_frame_ms": 80,
+  "cycle_ms": 640,
+  "note": "registered movement pilot; world displacement remains MovementController-owned",
+  "registration": {
+    "max_center_x_delta_px": 0.0,
+    "max_bottom_delta_px": 0,
+    "frame01_master_sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6"
+  },
+  "frames": [
+    {
+      "file": "move_01.png",
+      "phase_rad": 0.0,
+      "body_bob_px": 0.0,
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "alpha_bounds": [
+        14,
+        30,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "move_02.png",
+      "phase_rad": 0.7853981633974483,
+      "body_bob_px": 1.0606601717798212,
+      "sha256": "ea1b7fc952da8ebc4304cc1f1d346d9db92eb3849035a48b25d0f4da833807db",
+      "alpha_bounds": [
+        14,
+        28,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "move_03.png",
+      "phase_rad": 1.5707963267948966,
+      "body_bob_px": 1.5,
+      "sha256": "43033689688f06771b2f4a0e5f3a2248f2a79768bcbe62e846ee1e2d47c58850",
+      "alpha_bounds": [
+        14,
+        28,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "move_04.png",
+      "phase_rad": 2.356194490192345,
+      "body_bob_px": 1.0606601717798214,
+      "sha256": "ea1b7fc952da8ebc4304cc1f1d346d9db92eb3849035a48b25d0f4da833807db",
+      "alpha_bounds": [
+        14,
+        28,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "move_05.png",
+      "phase_rad": 3.141592653589793,
+      "body_bob_px": 1.8369701987210297e-16,
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "alpha_bounds": [
+        14,
+        30,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "move_06.png",
+      "phase_rad": 3.9269908169872414,
+      "body_bob_px": -1.0606601717798212,
+      "sha256": "b8c1d668b33e654d6a35759c594e4a0e229dea0a6c075acaaff7a7592669db23",
+      "alpha_bounds": [
+        14,
+        31,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "move_07.png",
+      "phase_rad": 4.71238898038469,
+      "body_bob_px": -1.5,
+      "sha256": "ef894ff7977a33ee5e9d1723b17e95bacb981a3374b6e28f8263515a7e51f389",
+      "alpha_bounds": [
+        14,
+        31,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "move_08.png",
+      "phase_rad": 5.497787143782138,
+      "body_bob_px": -1.0606601717798214,
+      "sha256": "b8c1d668b33e654d6a35759c594e4a0e229dea0a6c075acaaff7a7592669db23",
+      "alpha_bounds": [
+        14,
+        31,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    }
+  ]
+}

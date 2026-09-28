@@ -1,0 +1,150 @@
+{
+  "zipSha256": "18ac4588dcd63f2ff72cffe6abaa95e56c2b83de6be45f9061bfb3acaf785282",
+  "frames": [
+    {
+      "source": "move_01.png",
+      "destination": "public/assets/creatures/moa/stage01/walk/walk_00.png",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "byteIdentical": true,
+      "alphaEqualsBase": true,
+      "alphaBoundsInclusive": [
+        14,
+        30,
+        243,
+        247
+      ],
+      "centerXExclusiveConvention": 129.0,
+      "bottomExclusive": 248
+    },
+    {
+      "source": "move_02.png",
+      "destination": "public/assets/creatures/moa/stage01/walk/walk_01.png",
+      "sha256": "7108a9a487a13f523f093e3c64ff003db6e49342891acaf3bac5182414d82cc2",
+      "byteIdentical": true,
+      "alphaEqualsBase": false,
+      "alphaBoundsInclusive": [
+        14,
+        30,
+        243,
+        247
+      ],
+      "centerXExclusiveConvention": 129.0,
+      "bottomExclusive": 248
+    },
+    {
+      "source": "move_03.png",
+      "destination": "public/assets/creatures/moa/stage01/walk/walk_02.png",
+      "sha256": "5da2daabbdbca12179aea36b419c3e178b66f3c1a8ad0f2926c89f5e1c7c91e9",
+      "byteIdentical": true,
+      "alphaEqualsBase": false,
+      "alphaBoundsInclusive": [
+        14,
+        30,
+        243,
+        247
+      ],
+      "centerXExclusiveConvention": 129.0,
+      "bottomExclusive": 248
+    },
+    {
+      "source": "move_04.png",
+      "destination": "public/assets/creatures/moa/stage01/walk/walk_03.png",
+      "sha256": "e16fdb1a1e8fb9a090560126ca542f27fd4b6bf4f191ba2ce7ab0e95041ec550",
+      "byteIdentical": true,
+      "alphaEqualsBase": false,
+      "alphaBoundsInclusive": [
+        14,
+        30,
+        243,
+        247
+      ],
+      "centerXExclusiveConvention": 129.0,
+      "bottomExclusive": 248
+    },
+    {
+      "source": "move_05.png",
+      "destination": "public/assets/creatures/moa/stage01/walk/walk_04.png",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "byteIdentical": true,
+      "alphaEqualsBase": true,
+      "alphaBoundsInclusive": [
+        14,
+        30,
+        243,
+        247
+      ],
+      "centerXExclusiveConvention": 129.0,
+      "bottomExclusive": 248
+    },
+    {
+      "source": "move_06.png",
+      "destination": "public/assets/creatures/moa/stage01/walk/walk_05.png",
+      "sha256": "7ab6530e30bdc55c9b844d95c22a68a779b17594878b13fc3e9b79a08aa9507e",
+      "byteIdentical": true,
+      "alphaEqualsBase": false,
+      "alphaBoundsInclusive": [
+        14,
+        30,
+        243,
+        247
+      ],
+      "centerXExclusiveConvention": 129.0,
+      "bottomExclusive": 248
+    },
+    {
+      "source": "move_07.png",
+      "destination": "public/assets/creatures/moa/stage01/walk/walk_06.png",
+      "sha256": "28ce2f3556a7d9b202b43394dd0a8aeb7a63f4adc2b13cd428feb11fd6e48f36",
+      "byteIdentical": true,
+      "alphaEqualsBase": false,
+      "alphaBoundsInclusive": [
+        14,
+        30,
+        243,
+        247
+      ],
+      "centerXExclusiveConvention": 129.0,
+      "bottomExclusive": 248
+    },
+    {
+      "source": "move_08.png",
+      "destination": "public/assets/creatures/moa/stage01/walk/walk_07.png",
+      "sha256": "2d35f697bea21ba827740d0cf5edae08c971720d8f98e7bdb27566f39b3397ea",
+      "byteIdentical": true,
+      "alphaEqualsBase": false,
+      "alphaBoundsInclusive": [
+        14,
+        30,
+        243,
+        247
+      ],
+      "centerXExclusiveConvention": 129.0,
+      "bottomExclusive": 248
+    }
+  ],
+  "baseMatchesManifest": true,
+  "unchangedContracts": {
+    "src-tauri/tauri.conf.json": true,
+    "src/animation/clock.ts": true,
+    "src/animation/idle.ts": true,
+    "src/animation/model.ts": true,
+    "src/animation/generated-manifests.ts": true,
+    "src/components/CharacterRenderer.tsx": true,
+    "src/animation/loader.ts": true,
+    "src-tauri/src/movement/mod.rs": true,
+    "src-tauri/src/companion/mod.rs": true,
+    "docs/evidence/alpha-release-runtime-inventory.json": true,
+    "public/assets/creatures/moa/stage01/base.png": true,
+    "public/assets/creatures/moa/stage01/manifest.json": true,
+    "public/assets/creatures/moa/stage01/breath/breath_01.png": true,
+    "public/assets/creatures/moa/stage01/breath/breath_00.png": true,
+    "public/assets/creatures/moa/stage01/breath/breath_02.png": true,
+    "public/assets/creatures/moa/stage01/breath/breath_03.png": true,
+    "public/assets/creatures/moa/stage01/blink/blink_00.png": true,
+    "public/assets/creatures/moa/stage01/blink/blink_01.png": true,
+    "public/assets/creatures/moa/stage01/blink/blink_02.png": true
+  },
+  "runtimeDiffFromV1": "",
+  "centerDrift": 0.0,
+  "bottomDrift": 0
+}

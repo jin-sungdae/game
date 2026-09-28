@@ -40,7 +40,10 @@ final class Frames: NSObject, SCStreamOutput, @unchecked Sendable {
         let stream = SCStream(filter: filter, configuration: config, delegate: nil)
         try stream.addStreamOutput(output, type: .screen, sampleHandlerQueue: queue)
         try await stream.startCapture()
-        try await Task.sleep(nanoseconds: UInt64(duration * 1_000_000_000))
+        let deadline = Date().addingTimeInterval(duration)
+        while Date() < deadline && !FileManager.default.fileExists(atPath: dir.appendingPathComponent("stop").path) {
+            try await Task.sleep(nanoseconds: 100_000_000)
+        }
         try await stream.stopCapture()
         queue.sync {}
         let data = try JSONSerialization.data(withJSONObject: ["pid": pid, "windowId": window.windowID, "requestedSeconds": duration, "frames": output.rows], options: [.prettyPrinted, .sortedKeys])
