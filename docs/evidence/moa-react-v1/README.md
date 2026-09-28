@@ -1,5 +1,6 @@
 # MOA REACT v1 — production asset pilot
 
+> Current status: the user has approved REACT v1 as Alpha Pilot Production, including MOVE → native walking cancel → REACT → IDLE. See [production approval](../../moa-react-v1-production-approval.md). Candidate/Draft labels below are preserved historical capture-time status, superseded by that approval.
 Six supplied `react_01..06.png` are copied byte-for-byte to canonical `react/react_00..05.png`. [Source manifest](source-manifest.json) and [asset validation](asset-validation.json) retain hashes,256×256 RGBA/transparent checks,RIGHT source, bottom-center registration,center-X0px,bottom0px and06==01. No artwork transformation. MOA Stage1 REACT alone opts into `PRODUCTION_PILOT`; approved IDLE/MOVE remain production, PIP remains NOT_SUPPLIED.
 
 The existing canonical manifest already defines6×80ms,480ms,non-looping. Generated static metadata therefore needs **no duplicate source or regeneration diff**. `PilotAssets` only adds the per-state opt-in. Renderer, resolver, shared clock, idle scheduler, native movement/gesture code, CSP and runtime inventory have no change. Base/Breath/Blink/MOVE hashes are preserved in [preserved contracts](preserved-contracts.json). No new engine, API, fetch, timer or polling loop.

@@ -2,7 +2,7 @@ const {test}=require('node:test');const assert=require('node:assert/strict');con
 const load=f=>require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'animation',f));
 const {PilotAssets,pilotDefinition,AnimationStateResolver,CharacterAnimator}=load('pilot.js');const {AssetLoader,browserIO}=load('loader.js');const {IdleSequencer}=load('idle.js');
 test('REACT opt-in is atomic, static and own-character only; missing frame isolates failure',async()=>{
- const p=pilotDefinition('moa');assert.equal(p.reactStatus,'PRODUCTION_PILOT');
+ const p=pilotDefinition('moa');assert.equal(p.reactStatus,'PRODUCTION');
  const assets=new PilotAssets(new AssetLoader({json:browserIO.json,image:async u=>{if(u.endsWith('react_03.png'))throw Error('missing');return {width:256,height:256};}}));
  assert.equal(await assets.load(p,'REACT'),null);assert.equal((await assets.load(p,'IDLE')).urls.length,4);assert.equal((await assets.load(p,'MOVE')).urls.length,8);
  assert.equal(p.base,'/assets/creatures/moa/stage01/base.png');assert.equal(await assets.load({...p,reactStatus:undefined},'REACT'),null);assert.equal(await assets.load(pilotDefinition('PIP'),'REACT'),null);

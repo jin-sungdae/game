@@ -85,12 +85,12 @@ test('subscription created during a tick cannot start a second RAF chain',()=>{
  assert.equal(pending.size,1);
  stop();stopChild();assert.equal(pending.size,0);
 });
-test('MOA IDLE and MOVE approved, REACT pilot; PIP remains unsupplied',async()=>{
+test('MOA IDLE MOVE REACT approved; PIP remains unsupplied',async()=>{
  const p=pilotDefinition('moa');const m=require('../../public'+p.manifest);let count=0;
  const assets=new PilotAssets(new AssetLoader({json:async()=>m,image:async()=>{count++;return {width:256,height:256};}}));
  assert.equal(p.status,'IDLE_PRODUCTION');assert.equal((await assets.load(p,'IDLE')).urls.length,4);
  assert.equal(p.moveStatus,'PRODUCTION');assert.equal((await assets.load(p,'MOVE')).urls.length,8);
- assert.equal(p.reactStatus,'PRODUCTION_PILOT');assert.equal((await assets.load(p,'REACT')).urls.length,6);
+ assert.equal(p.reactStatus,'PRODUCTION');assert.equal((await assets.load(p,'REACT')).urls.length,6);
  for(const state of ['IDLE','MOVE','REACT'])assert.equal(await assets.load(pilotDefinition('PIP'),state),null);
  assert.equal(count,18);
 });
