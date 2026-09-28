@@ -5,10 +5,10 @@ import { AssetLoader, type LoadedClip } from './loader';
 export type AnimationState = 'IDLE'|'MOVE'|'REACT';
 export type AnimationSequence = AnimationState|'BLINK';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
-export interface Pilot { character:'MOA'|'PIP'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'; sourceFacing:'RIGHT'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION' }
+export interface Pilot { character:'MOA'|'PIP'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION' }
 export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
-  if(character==='PIP') return {character:'PIP',species:'pip',stage:1,manifest:resolveMonster('PIP')!.assetRoot+'/manifest.json',base:resolveMonster('PIP')!.baseAsset!,status:'NOT_SUPPLIED',sourceFacing:'RIGHT'};
+  if(character==='PIP') return {character:'PIP',species:'pip',stage:1,manifest:resolveMonster('PIP')!.assetRoot+'/manifest.json',base:resolveMonster('PIP')!.baseAsset!,status:'PRODUCTION_PILOT',sourceFacing:'RIGHT'};
   return null;
 }
 export const pilotFrames = {IDLE:6,MOVE:8,REACT:6} as const;
@@ -22,7 +22,7 @@ export class PilotAssets {
     const sequences=p.character==='MOA' && p.stage===1;
     if(state==='BLINK' && !sequences) return null;
     const name=sequences && state==='IDLE'?'breath':state==='BLINK'?'blink':pilotClips[state];
-    const expected=sequences && state==='IDLE'?4:state==='BLINK'?3:pilotFrames[state];
+    const expected=state==='IDLE' && (sequences || p.character==='PIP')?4:state==='BLINK'?3:pilotFrames[state];
     const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,name);
     if(!asset || asset.manifest.canvas.width!==256 || asset.manifest.canvas.height!==256 || asset.clip.frames!==expected || asset.clip.frameDuration<40 || asset.clip.frameDuration>1000 || asset.clip.loop!==(state!=='REACT' && state!=='BLINK') || (state==='REACT' && asset.clip.frames*asset.clip.frameDuration!==480)) return null;
     if(sequences && (state==='IDLE' || state==='BLINK') && !asset.manifest.idleSequences) return null;

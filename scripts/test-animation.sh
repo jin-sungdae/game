@@ -25,3 +25,5 @@ node --test tests/animation/idle.cjs
 node --test tests/animation/move.cjs
 
 node --test tests/animation/react.cjs
+
+node --test tests/animation/pip.cjs

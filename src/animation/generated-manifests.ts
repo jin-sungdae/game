@@ -213,8 +213,8 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     },
     "animations": {
       "idle": {
-        "frameDuration": 100,
-        "frames": 6,
+        "frameDuration": 450,
+        "frames": 4,
         "loop": true
       },
       "react": {
