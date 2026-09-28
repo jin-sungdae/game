@@ -1,0 +1,512 @@
+{
+  "renderer": "actual production WKWebView; unchanged CSP; static registry",
+  "recordSeconds": 25.855967165902257,
+  "captureFrames": 70,
+  "axSamples": 2110,
+  "sequenceErrors": [],
+  "breathingCyclesMs": [
+    1830.751895904541,
+    1836.1639976501465,
+    1770.5159187316895,
+    1801.9120693206787,
+    1802.3271560668945,
+    1805.0999641418457,
+    1800.3170490264893,
+    1799.988031387329,
+    1801.259994506836,
+    1798.6130714416504,
+    1804.1248321533203
+  ],
+  "blinkStartsWallTime": [
+    1790572524.499148,
+    1790572530.995749,
+    1790572537.092383,
+    1790572544.234781
+  ],
+  "blinkReturnWallTime": [
+    1790572524.775835,
+    1790572531.2748299,
+    1790572537.382598,
+    1790572544.513123
+  ],
+  "blinkWaitAfterReturnMs": [
+    6219.913959503174,
+    5817.5530433654785,
+    6852.183103561401
+  ],
+  "blinkStartToStartMs": [
+    6496.601104736328,
+    6096.6339111328125,
+    7142.398118972778
+  ],
+  "centerDriftCapturePx": 0.0,
+  "horizontalHoppingPt": 0.0,
+  "bottomDriftCapturePx": 0,
+  "bottomHoppingPt": 0.0,
+  "clipping": false,
+  "panelStable": true,
+  "panelBounds": [
+    {
+      "Height": 104,
+      "Width": 96,
+      "X": 1584,
+      "Y": 1025
+    }
+  ],
+  "imagePositions": [
+    [
+      1591,
+      1047
+    ]
+  ],
+  "imageSizes": [
+    [
+      82,
+      82
+    ]
+  ],
+  "pixelBounds": [
+    {
+      "file": "frame-00066.png",
+      "sha256": "e0d39c9733a72a4ae2bec7bff0cc0e4cbcb598d5aab490811d3161da7d9c72cb",
+      "bounds": [
+        22,
+        64,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00068.png",
+      "sha256": "705f8cf7e0b515ed817b6efaf95efb3e433eec1b9c4c4a239903155438fb9533",
+      "bounds": [
+        22,
+        64,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00069.png",
+      "sha256": "0a0e3ba3939b79d5378dc8d63efe89fe919efbb4281ac18fc9a2e15d462036f7",
+      "bounds": [
+        22,
+        63,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00063.png",
+      "sha256": "57064140b9bc08e14bd3e097f150b750c6764e60cf50e730d1c8b1dedcecac71",
+      "bounds": [
+        22,
+        64,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00062.png",
+      "sha256": "37f2a65e55bd1c913116f7cba8f83286f1182c31814cc277e8a885a1c03eccf5",
+      "bounds": [
+        22,
+        64,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    }
+  ],
+  "sequence": [
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572520.9614558
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572520.971904
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572521.419888
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572521.873715
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572522.322596
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572522.796874
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572523.25064
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572523.7013512
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572524.143972
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790572524.499148
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790572524.59919
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790572524.6837
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572524.775835
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572525.2276049
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572525.684458
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572526.1349502
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572526.611999
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572527.045555
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572527.47792
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572527.931859
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572528.382515
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572528.828117
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572529.277777
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572529.727937
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572530.184427
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572530.632546
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790572530.995749
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790572531.099859
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790572531.1892939
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572531.2748299
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572531.731832
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572532.178042
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572532.63252
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572533.077157
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572533.5344238
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572533.9868422
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572534.4314408
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572534.882257
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572535.340918
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572535.776082
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572536.229239
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572536.682574
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790572537.092383
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790572537.192312
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790572537.282806
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572537.382598
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572537.824699
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572538.2811952
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572538.733101
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572539.182586
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572539.632563
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572540.0868769
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572540.533928
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572540.983846
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572541.425266
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572541.879856
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572542.34515
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572542.782459
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572543.231964
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572543.685183
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572544.129161
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790572544.234781
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790572544.334508
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790572544.410479
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572544.513123
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572544.960792
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790572545.418977
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790572545.875802
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790572546.3172479
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790572546.768818
+    }
+  ],
+  "networkLast": {
+    "version": 1,
+    "fetchAttempts": 2,
+    "xhrAttempts": 0,
+    "manifestAttempts": 0,
+    "cspViolations": 0,
+    "resources": [],
+    "attempts": [
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/plugin%3Aevent%7Clisten",
+        "time": 375
+      },
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/snapshot",
+        "time": 500
+      }
+    ]
+  },
+  "manualVisualReview": [
+    "breathing strength",
+    "blink naturalness",
+    "overall liveliness"
+  ]
+}

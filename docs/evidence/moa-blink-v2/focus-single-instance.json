@@ -1,0 +1,79 @@
+{
+  "primaryPid": 53248,
+  "primaryWindowIdsBefore": [
+    314259
+  ],
+  "primaryWindowIdsAfter": [
+    314259
+  ],
+  "secondaries": [
+    {
+      "exitCode": 0,
+      "pid": 54393,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.openai.codex",
+          "frontPid": 5404,
+          "keyWindows": 0,
+          "pid": 54393,
+          "seconds": 0.003162980079650879
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 54394,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.openai.codex",
+          "frontPid": 5404,
+          "keyWindows": 0,
+          "pid": 54394,
+          "seconds": 0.0020769834518432617
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 54396,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.openai.codex",
+          "frontPid": 5404,
+          "keyWindows": 0,
+          "pid": 54396,
+          "seconds": 0.003037095069885254
+        }
+      ]
+    }
+  ],
+  "primaryAudit": [
+    {
+      "activations": 0,
+      "event": "before-tauri",
+      "frontBundle": "com.openai.chat",
+      "frontPid": 98925,
+      "keyWindows": 0,
+      "pid": 53248,
+      "seconds": 0.003188014030456543
+    }
+  ],
+  "noLumaForeground": true,
+  "focusPass": true,
+  "singleInstancePass": true
+}

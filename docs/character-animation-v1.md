@@ -1,3 +1,5 @@
+> For the current MOA Stage1 Alpha Pilot Production assets, timings and delivery state, see [approved MOA IDLE v3](moa-idle-v3-sequences.md). The original architecture/unsupplied delivery description below records PR #45 foundation history.
+
 # Character Animation System v1 — MOA/PIP Pilot
 
 ## Proposed scope and alternatives (before implementation)

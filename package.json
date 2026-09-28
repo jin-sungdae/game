@@ -14,7 +14,10 @@
     "test:presentation": "sh scripts/test-presentation.sh",
     "validate:alpha": "python3 scripts/validate_assets.py --alpha-only",
     "validate:alpha:strict": "python3 scripts/validate_assets.py --strict-alpha",
-    "validate:alpha:release": "python3 scripts/validate_alpha_release.py"
+    "validate:alpha:release": "python3 scripts/validate_alpha_release.py",
+    "sync:animation": "python3 scripts/sync_animation_manifests.py",
+    "prebuild": "python3 scripts/sync_animation_manifests.py --check",
+    "predev": "python3 scripts/sync_animation_manifests.py --check"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.10.0",

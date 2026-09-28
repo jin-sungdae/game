@@ -1,0 +1,61 @@
+{
+  "character": "MOA",
+  "animation": "BLINK_V3_MEASURED",
+  "measured_eye_bounds": [
+    "LEFT x191..212 y137..164",
+    "RIGHT x229..237 y137..158"
+  ],
+  "safe_regions": [
+    "LEFT x190..213 y136..165",
+    "RIGHT x228..238 y136..159"
+  ],
+  "base_dark_eye_pixels": [
+    288,
+    71
+  ],
+  "registration": {
+    "max_center_x_delta_px": 0.0,
+    "max_bottom_delta_px": 0,
+    "alpha_identical": true,
+    "outside_safe_rgb_identical": true,
+    "blink01_equals_blink03": true
+  },
+  "frames": [
+    {
+      "file": "blink_01.png",
+      "sha256": "edf00f37c01be6a5f48226f22324d5c1fe873b6c77c6b6324afdb05618a08501",
+      "alpha_identical": true,
+      "outside_safe_rgb_identical": true,
+      "center_x": 129.0,
+      "bottom": 248,
+      "dark_eye_pixels": [
+        77,
+        27
+      ]
+    },
+    {
+      "file": "blink_02.png",
+      "sha256": "d6e6e1b91ea971d01a39018aca2947f42c2dfdf76979543d917d519ffb160231",
+      "alpha_identical": true,
+      "outside_safe_rgb_identical": true,
+      "center_x": 129.0,
+      "bottom": 248,
+      "dark_eye_pixels": [
+        61,
+        22
+      ]
+    },
+    {
+      "file": "blink_03.png",
+      "sha256": "edf00f37c01be6a5f48226f22324d5c1fe873b6c77c6b6324afdb05618a08501",
+      "alpha_identical": true,
+      "outside_safe_rgb_identical": true,
+      "center_x": 129.0,
+      "bottom": 248,
+      "dark_eye_pixels": [
+        77,
+        27
+      ]
+    }
+  ]
+}

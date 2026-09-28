@@ -110,16 +110,20 @@ def validate(root=ROOT, allow_missing=False):
                     raise ValueError('identity/canvas/anchor mismatch')
                 if type(m['display']['width']) not in (int,float) or not 0 < m['display']['width'] <= 256:
                     raise ValueError('invalid display width')
-                if set(m['animations']) != set(COUNTS):
+                counts=dict(COUNTS)
+                if species=='moa' and int(stage)==1 and 'idleSequences' in m:
+                    if m['idleSequences']!={'breath':'breath','blink':'blink','blinkIntervalMs':[3000,7000]}:raise ValueError('invalid idle sequences')
+                    counts.update(breath=4,blink=3)
+                if set(m['animations']) != set(counts):
                     raise ValueError('required animation keys mismatch')
-                for clip, count in COUNTS.items():
+                for clip, count in counts.items():
                     c = m['animations'][clip]
-                    if c['frames'] != count or type(c['frameDuration']) not in (int,float) or not 0 < c['frameDuration'] < float('inf') or c['loop'] is not (clip != 'react'):
+                    if c['frames'] != count or type(c['frameDuration']) not in (int,float) or not 0 < c['frameDuration'] < float('inf') or c['loop'] is not (clip not in ('react','blink')):
                         raise ValueError(f'{clip}: invalid frame count/timing/loop')
             except (OSError, ValueError, KeyError, TypeError) as exc:
                 errors.append(f'{prefix}: manifest: {exc}')
                 continue
-            for clip, count in COUNTS.items():
+            for clip, count in counts.items():
                 directory = manifest_path.parent/clip
                 if not directory.is_dir():
                     errors.append(f'{prefix}/{clip}: missing directory')

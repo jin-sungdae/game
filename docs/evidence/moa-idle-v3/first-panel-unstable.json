@@ -1,0 +1,466 @@
+{
+  "renderer": "actual production WKWebView; unchanged CSP; static registry",
+  "recordSeconds": 20.037278958130628,
+  "captureFrames": 55,
+  "axSamples": 1638,
+  "sequenceErrors": [],
+  "breathingCyclesMs": [
+    2743.875026702881,
+    1799.9958992004395,
+    1796.9729900360107,
+    1799.7431755065918,
+    1795.9380149841309,
+    1815.6766891479492,
+    1800.0447750091553,
+    1815.650224685669,
+    1800.0030517578125
+  ],
+  "blinkStartsWallTime": [
+    1790562395.572682,
+    1790562402.3725219,
+    1790562408.809237,
+    1790562413.45827
+  ],
+  "blinkReturnWallTime": [
+    1790562395.8652601,
+    1790562402.662077,
+    1790562409.0951772,
+    1790562413.723184
+  ],
+  "blinkWaitAfterReturnMs": [
+    6507.261753082275,
+    6147.160053253174,
+    4363.09289932251
+  ],
+  "blinkStartToStartMs": [
+    6799.839973449707,
+    6436.715126037598,
+    4649.033069610596
+  ],
+  "centerDriftCapturePx": 0.0,
+  "horizontalHoppingPt": 0.0,
+  "bottomDriftCapturePx": 0,
+  "bottomHoppingPt": 0.0,
+  "clipping": false,
+  "panelStable": false,
+  "panelBounds": [
+    {
+      "Height": 104,
+      "Width": 96,
+      "X": -3558,
+      "Y": 1025
+    },
+    {
+      "Height": 104,
+      "Width": 96,
+      "X": -4586,
+      "Y": 1025
+    },
+    {
+      "Height": 104,
+      "Width": 96,
+      "X": 1584,
+      "Y": 1025
+    },
+    {
+      "Height": 104,
+      "Width": 96,
+      "X": -4774,
+      "Y": 1025
+    },
+    {
+      "Height": 104,
+      "Width": 96,
+      "X": -4769,
+      "Y": 1025
+    },
+    {
+      "Height": 104,
+      "Width": 96,
+      "X": -4738,
+      "Y": 1025
+    }
+  ],
+  "imagePositions": [
+    [
+      1591,
+      1047
+    ]
+  ],
+  "imageSizes": [
+    [
+      82,
+      82
+    ]
+  ],
+  "pixelBounds": [
+    {
+      "file": "frame-00054.png",
+      "sha256": "705f8cf7e0b515ed817b6efaf95efb3e433eec1b9c4c4a239903155438fb9533",
+      "bounds": [
+        22,
+        64,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00049.png",
+      "sha256": "93a1f3ef2b4fd48fa7a8b8abab9e66745f12a7cd878e163b352f918292a538a5",
+      "bounds": [
+        22,
+        64,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00048.png",
+      "sha256": "694685dfb781e005755c2092016d3eb10d22f98538dcfb1407114f3982204d30",
+      "bounds": [
+        22,
+        64,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00051.png",
+      "sha256": "0a0e3ba3939b79d5378dc8d63efe89fe919efbb4281ac18fc9a2e15d462036f7",
+      "bounds": [
+        22,
+        63,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00052.png",
+      "sha256": "e0d39c9733a72a4ae2bec7bff0cc0e4cbcb598d5aab490811d3161da7d9c72cb",
+      "bounds": [
+        22,
+        64,
+        166,
+        201
+      ],
+      "center": 94.0,
+      "bottom": 201,
+      "clipped": false
+    }
+  ],
+  "sequence": [
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562395.539176
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790562395.572682
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790562395.6677752
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790562395.751209
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562395.8652601
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562396.31726
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562396.783331
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562398.154911
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562398.6091352
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562399.05426
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562399.509157
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562399.961844
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562400.409131
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562400.857829
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562401.305852
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562401.759824
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562402.206104
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790562402.3725219
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790562402.471211
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790562402.557749
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562402.662077
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562403.1284208
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562403.563807
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562404.016118
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562404.4618201
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562404.907202
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562405.355184
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562405.8138409
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562406.2577581
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562406.707751
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562407.166122
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562407.632769
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562408.0734348
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562408.513861
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790562408.809237
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790562408.907742
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790562409.000556
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562409.0951772
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562409.551842
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562409.993836
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562410.449144
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562410.895222
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562411.34515
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562411.7984781
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562412.2471452
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562412.7108722
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562413.1451511
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790562413.45827
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790562413.53917
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790562413.6383572
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562413.723184
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562414.171595
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562414.6284819
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562415.082612
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562415.5231872
+    }
+  ],
+  "networkLast": {
+    "version": 1,
+    "fetchAttempts": 2,
+    "xhrAttempts": 0,
+    "manifestAttempts": 0,
+    "cspViolations": 0,
+    "resources": [],
+    "attempts": [
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/plugin%3Aevent%7Clisten",
+        "time": 591
+      },
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/snapshot",
+        "time": 594
+      }
+    ]
+  },
+  "manualVisualReview": [
+    "breathing strength",
+    "blink naturalness",
+    "overall liveliness",
+    "visible horizontal artwork seam in blink frames; eyes appear open"
+  ]
+}

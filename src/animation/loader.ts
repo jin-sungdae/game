@@ -1,9 +1,13 @@
+import { animationManifests } from './generated-manifests';
 import { resolveCompanion } from '../entities/registry';
 import { frameUrls, parseManifest, type Manifest, type Clip } from './model';
 export interface LoadedClip { manifest:Manifest; clip:Clip; urls:string[] }
 export interface AssetIO { json:(url:string)=>Promise<unknown>; image:(url:string)=>Promise<{width:number;height:number}> }
 export const browserIO:AssetIO = {
-  json:async url => { const r=await fetch(url); if(!r.ok) throw new Error('Missing manifest'); return r.json(); },
+  json:async url => {
+    if(!Object.hasOwn(animationManifests,url)) throw new Error('Missing bundled manifest');
+    return structuredClone(animationManifests[url]);
+  },
   image:url => new Promise((resolve,reject) => {
     const img=new Image(); img.onload=()=>resolve({width:img.naturalWidth,height:img.naturalHeight});
     img.onerror=()=>reject(new Error('Missing frame')); img.src=url;
@@ -24,7 +28,7 @@ export class AssetLoader {
     if(!this.manifests.has(base)) this.manifests.set(base,
       this.io.json(manifestUrl).then(m=>parseManifest(m,species,stage)).catch(()=>null));
     if(!this.clips.has(key)) this.clips.set(key, this.manifests.get(base)!.then(async manifest => {
-      const clip=manifest?.animations[name];
+      const clip=manifest && Object.hasOwn(manifest.animations,name)?manifest.animations[name]:null;
       if(!manifest || !clip) return null;
       const urls=frameUrls(base,name,clip);
       try {
