@@ -1,3 +1,5 @@
+> Historical initial v3 blink artwork. See [Blink v2 replacement evidence](../moa-blink-v2/README.md) for the current assets and failed closed-eyes acceptance.
+
 # MOA registered v3 — actual production playback
 
 PR #46 remains **Draft**. No merge, final timing selection, or automatic visual approval.

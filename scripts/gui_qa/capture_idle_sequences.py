@@ -1,11 +1,11 @@
 """Actual production window recording plus document-start fetch/XHR/CSP trace, no CSP override."""
 import argparse,json,subprocess as sp,time
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('root',type=Path);p.add_argument('--recorder',type=Path,required=True);a=p.parse_args();root=a.root.resolve();cfg=json.loads((root/'session/session.json').read_text());helper=cfg['helper'];pid=cfg['appPid']
+p=argparse.ArgumentParser();p.add_argument('root',type=Path);p.add_argument('--seconds',type=int,default=20);p.add_argument('--recorder',type=Path,required=True);a=p.parse_args();root=a.root.resolve();cfg=json.loads((root/'session/session.json').read_text());helper=cfg['helper'];pid=cfg['appPid']
 def native(*args):return json.loads(sp.check_output([helper,*map(str,args)],text=True))
-snap=native('snapshot',pid);window=next(w for w in snap['windows'] if w.get('kCGWindowName')=='moa');b=window['kCGWindowBounds'];sp.run([helper,'move',str(b['X']+b['Width']+40),str(b['Y']+60)],check=True);time.sleep(2)
-fast=sp.Popen([helper,'frames',str(pid),'21'],stdout=(root/'frame-trace.jsonl').open('w'))
-frames=root/'playback-frames';recorder=sp.Popen([a.recorder,str(pid),'20',frames],stdout=(root/'record.log').open('w'),stderr=sp.STDOUT)
+snap=native('snapshot',pid);window=next(w for w in snap['windows'] if w.get('kCGWindowName')=='moa');b=window['kCGWindowBounds'];sp.run([helper,'move',str(max(0,b['X']-40)),str(b['Y']+60)],check=True);time.sleep(2)
+fast=sp.Popen([helper,'frames',str(pid),str(a.seconds+1)],stdout=(root/'frame-trace.jsonl').open('w'))
+frames=root/'playback-frames';recorder=sp.Popen([a.recorder,str(pid),str(a.seconds),frames],stdout=(root/'record.log').open('w'),stderr=sp.STDOUT)
 with (root/'runtime-trace.jsonl').open('w') as log:
  while recorder.poll() is None:
   snapshot=native('snapshot',pid);row={'time':time.time(),'images':[],'network':[],'windows':[w for w in snapshot['windows'] if w.get('kCGWindowName')=='moa'],'frontBundle':snapshot['frontBundle']};ax=native('ax',pid)
