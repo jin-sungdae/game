@@ -6,4 +6,6 @@
 - [PIP base, MOA assets, CSP, clock and runtime preservation](preserved-contracts.json)
 - [Initial full release gate](release-initial.json)
 
-Actual GUI recordings are not yet available: the real server-owned PIP encounter was created, but native safe placement rejected the window-obstructed main-screen ground band. This is ENVIRONMENT_UNAVAILABLE, not a playback PASS. The initial session's native log, server/DB trace and fixture are retained in `/Users/jinseongdae/Documents/LUMA QA/pip-animation-v1/`. No debug entity or mock preview is presented as production evidence.
+Historical initial attempt: the real server-owned PIP encounter was created, but native safe placement rejected the window-obstructed main-screen ground band. This is ENVIRONMENT_UNAVAILABLE, not a playback PASS. The initial session's native log, server/DB trace and fixture are retained in `/Users/jinseongdae/Documents/LUMA QA/pip-animation-v1/`. No debug entity or mock preview is presented as production evidence.
+
+Follow-up actual GUI evidence is now available: [recordings, measurements and restoration](gui/README.md). RIGHT travel with stale LEFT facing remains a runtime KNOWN_ISSUE.

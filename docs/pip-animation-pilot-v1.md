@@ -29,6 +29,10 @@ The initial full release gate passed18 composed checks;46 asset tests and animat
 
 GUI tooling is extended only with an optional named recorder window and `frames-pip` observer. It captures actual ScreenCaptureKit pixels/native AX labels, never HTML mock playback. PIP selection fixture modifies weights only in run.py's newly created isolated QA DB; production DB/defaults are untouched. The existing native right-click requests a real server encounter and normal placement/reconciliation.
 
-Initial actual GUI attempt: server encounter succeeds, but existing window-obstruction checks deny safe placement because other apps cover the main screen's ground band. No bypass/debug-PIP substitution is accepted. Actual playback/transition/clipping measurements are pending environment preparation, not PASS. The first QA session was stopped with evidence retained under `/Users/jinseongdae/Documents/LUMA QA/pip-animation-v1/`.
+Initial actual GUI attempt: server encounter succeeds, but existing window-obstruction checks deny safe placement because other apps cover the main screen's ground band. No bypass/debug-PIP substitution is accepted. That historical attempt did not establish playback/transition/clipping PASS. A subsequent user-authorized minimal window adjustment enabled actual GUI QA; see the follow-up below. The first QA session was stopped with evidence retained under `/Users/jinseongdae/Documents/LUMA QA/pip-animation-v1/`.
 
 **MANUAL_VISUAL_REVIEW:** breathing naturalness, movement/sliding impression,body motion,640ms candidate naturalness and REACT readability. All timing/artwork stays PRODUCTION_PILOT until human approval. No automatic merge.
+
+## Actual GUI follow-up
+
+[Server PIP recordings, quantitative measurements, facing trace and window restoration](evidence/pip-animation-v1/gui/README.md) now cover actual IDLE and LEFT/RIGHT movement on the unchanged production bundle. Ambient center/bottom drift0pt, no clipping or base fallback. RIGHT-facing remains an existing native runtime KNOWN_ISSUE; it was not repaired or hidden with inverted artwork. Both adjusted user windows were restored exactly.

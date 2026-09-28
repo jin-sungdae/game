@@ -1,0 +1,6 @@
+{
+  "scope": "fresh run.py-owned luma_gui_qa_test only",
+  "query": "UPDATE game.m_monster SET encounter_weight=CASE WHEN code='PIP' THEN 100 ELSE 0 END; SELECT code,encounter_weight FROM game.m_monster ORDER BY code;",
+  "result": "UPDATE 15\nBUBU|0\nCHIRP|0\nEMBER|0\nLUNET|0\nMELLO|0\nMIMI|0\nMOSSY|0\nNOCT|0\nNOVA|0\nPEBB|0\nPIP|100\nPUFF|0\nSHADE|0\nTIKKI|0\nWISP|0\n",
+  "productionDefaultsChanged": false
+}
