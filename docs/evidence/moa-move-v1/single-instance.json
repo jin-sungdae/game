@@ -1,0 +1,79 @@
+{
+  "primaryPid": 79407,
+  "primaryWindowIdsBefore": [
+    315783
+  ],
+  "primaryWindowIdsAfter": [
+    315783
+  ],
+  "secondaries": [
+    {
+      "exitCode": 0,
+      "pid": 81423,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.Excel",
+          "frontPid": 28767,
+          "keyWindows": 0,
+          "pid": 81423,
+          "seconds": 0.0022569894790649414
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 81424,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.Excel",
+          "frontPid": 28767,
+          "keyWindows": 0,
+          "pid": 81424,
+          "seconds": 0.003935098648071289
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 81426,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.microsoft.Excel",
+          "frontPid": 28767,
+          "keyWindows": 0,
+          "pid": 81426,
+          "seconds": 0.0024379491806030273
+        }
+      ]
+    }
+  ],
+  "primaryAudit": [
+    {
+      "activations": 0,
+      "event": "before-tauri",
+      "frontBundle": "com.google.Chrome",
+      "frontPid": 21425,
+      "keyWindows": 0,
+      "pid": 79407,
+      "seconds": 0.002260923385620117
+    }
+  ],
+  "noLumaForeground": true,
+  "focusPass": true,
+  "singleInstancePass": true
+}
