@@ -1,0 +1,90 @@
+{
+  "zipSHA256": "635f225a7bb87a186187d1e885e72377b4bc8780b504c5e202342e9fcfa5fb7c",
+  "frames": [
+    {
+      "source": "breath_01.png",
+      "repository": "public/assets/creatures/moa/stage01/breath/breath_00.png",
+      "sameBytes": true,
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "alphaBounds": [
+        14,
+        30,
+        244,
+        248
+      ]
+    },
+    {
+      "source": "breath_02.png",
+      "repository": "public/assets/creatures/moa/stage01/breath/breath_01.png",
+      "sameBytes": true,
+      "sha256": "123f90062a3e12ca0dea67db6b951d9d1eab2c69d40dac45f0d329a00ed20afb",
+      "alphaBounds": [
+        14,
+        28,
+        244,
+        248
+      ]
+    },
+    {
+      "source": "breath_03.png",
+      "repository": "public/assets/creatures/moa/stage01/breath/breath_02.png",
+      "sameBytes": true,
+      "sha256": "aa486bc5482e42d6b68abcb0652fc7d35801e2acc2e165d0cba6caade00331db",
+      "alphaBounds": [
+        14,
+        29,
+        244,
+        248
+      ]
+    },
+    {
+      "source": "breath_04.png",
+      "repository": "public/assets/creatures/moa/stage01/breath/breath_03.png",
+      "sameBytes": true,
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "alphaBounds": [
+        14,
+        30,
+        244,
+        248
+      ]
+    },
+    {
+      "source": "blink_01.png",
+      "repository": "public/assets/creatures/moa/stage01/blink/blink_00.png",
+      "sameBytes": true,
+      "sha256": "bdceb82d5ccc8fb6eb95ec4b9e0d9e89b03761e3cf99fa7e11d80dee52a3122e",
+      "alphaBounds": [
+        14,
+        30,
+        244,
+        248
+      ]
+    },
+    {
+      "source": "blink_02.png",
+      "repository": "public/assets/creatures/moa/stage01/blink/blink_01.png",
+      "sameBytes": true,
+      "sha256": "ab0c453694da40620d4d23c06d2afa5bca1a3d4e97503d5ac98f5cbbcea80077",
+      "alphaBounds": [
+        14,
+        30,
+        244,
+        248
+      ]
+    },
+    {
+      "source": "blink_03.png",
+      "repository": "public/assets/creatures/moa/stage01/blink/blink_02.png",
+      "sameBytes": true,
+      "sha256": "bdceb82d5ccc8fb6eb95ec4b9e0d9e89b03761e3cf99fa7e11d80dee52a3122e",
+      "alphaBounds": [
+        14,
+        30,
+        244,
+        248
+      ]
+    }
+  ],
+  "decodedGeometryTest": "tests/assets/test_moa_idle_v3.py PASS; 40 asset tests PASS"
+}

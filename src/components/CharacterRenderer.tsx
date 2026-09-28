@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { IdleSequencer, idleRandom } from '../animation/idle';
 import { animationClock } from '../animation/clock';
-import { AnimationStateResolver, CharacterAnimator, PilotAssets, type AnimationInput, type AnimationState, type Pilot } from '../animation/pilot';
+import { AnimationStateResolver, CharacterAnimator, PilotAssets, type AnimationInput, type AnimationSequence, type Pilot } from '../animation/pilot';
 import type { LoadedClip } from '../animation/loader';
 import { useBaseAsset } from '../assets/useBaseAsset';
 import { baseSize } from '../assets/base';
@@ -8,8 +9,8 @@ import { directionScale } from '../animation/model';
 import { useVisualBounds } from './BaseVisual';
 const assets=new PilotAssets();
 export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilot;input:AnimationInput;facing:number;name:string;entityId:string}) {
-  const runtime=useMemo(()=>({resolver:new AnimationStateResolver(),animator:new CharacterAnimator(),clips:new Map<AnimationState,LoadedClip|null>()}),[entityId,pilot.character]);
-  const [view,setView]=useState<{runtime:object;state:AnimationState;frame:number;suppressed:boolean;asset:LoadedClip|null}>({runtime,state:'IDLE',frame:0,suppressed:false,asset:null});
+  const runtime=useMemo(()=>({resolver:new AnimationStateResolver(),animator:new CharacterAnimator(),idle:new IdleSequencer(idleRandom()),clips:new Map<AnimationSequence,LoadedClip|null>()}),[entityId,pilot.character]);
+  const [view,setView]=useState<{runtime:object;state:AnimationSequence;frame:number;suppressed:boolean;asset:LoadedClip|null}>({runtime,state:'IDLE',frame:0,suppressed:false,asset:null});
   const [failed,setFailed]=useState<string|null>(null);
   const reduced=useRef(false);
   const base=useBaseAsset(pilot.base);
@@ -19,14 +20,18 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
     let disposed=false;
     const media=matchMedia('(prefers-reduced-motion: reduce)');
     const change=()=>{reduced.current=media.matches;};change();media.addEventListener('change',change);
-    for(const state of ['IDLE','MOVE','REACT'] as const) void assets.load(pilot,state).then(clip=>{if(!disposed)runtime.clips.set(state,clip);});
+    for(const state of ['IDLE','BLINK','MOVE','REACT'] as const) void assets.load(pilot,state).then(clip=>{if(!disposed)runtime.clips.set(state,clip);});
     const stop=animationClock.subscribe(time=>{
-      const sample=runtime.resolver.sample(time);
+      const resolved=runtime.resolver.sample(time);
+      const breath=runtime.clips.get('IDLE');
+      const sequence=runtime.idle.sample(time,resolved.state==='IDLE' && !resolved.suppressed,reduced.current,breath?.manifest.idleSequences,
+        (breath?.manifest.animations.blink?.frames??3)*(breath?.manifest.animations.blink?.frameDuration??90));
+      const sample={...resolved,state:resolved.state==='IDLE'?sequence:resolved.state};
       const clip=sample.suppressed?null:runtime.clips.get(sample.state)??null;
       const frame=runtime.animator.sample(sample.state+':'+Boolean(clip)+':'+sample.suppressed,clip,time,sample.rate,reduced.current);
       setView(old=>old.runtime===runtime && old.state===sample.state && old.frame===frame && old.suppressed===sample.suppressed && old.asset===clip?old:{runtime,state:sample.state,frame,suppressed:sample.suppressed,asset:clip});
     });
-    return ()=>{disposed=true;stop();media.removeEventListener('change',change);runtime.clips.clear();};
+    return ()=>{disposed=true;stop();media.removeEventListener('change',change);runtime.clips.clear();runtime.idle.reset();};
   },[runtime,pilot.character,pilot.status]);
   const current=view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
   const asset=current.suppressed||input.suppressed?null:runtime.clips.get(current.state);

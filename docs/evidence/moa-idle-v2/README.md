@@ -1,3 +1,5 @@
+> Historical v2 six-frame timing evidence. Current PR uses the [v3 breath + occasional blink pilot](../moa-idle-v3/README.md).
+
 # MOA IDLE registered artwork v2 — actual production verification
 
 **Registration acceptance PASS. Visual vitality/breathing remains MANUAL_VISUAL_REVIEW. No timing selected; PR #46 stays Draft.** The previous six misregistered assets are rejected historical evidence, not the current delivery.

@@ -1,0 +1,32 @@
+{
+  "src-tauri/tauri.conf.json": {
+    "before": "cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed",
+    "after": "cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed",
+    "unchanged": true
+  },
+  "src/animation/clock.ts": {
+    "before": "261eaf8ed570aa9dba7aae3ae5b4f92056ac264fb0eaccb7a5acd9160af273c3",
+    "after": "261eaf8ed570aa9dba7aae3ae5b4f92056ac264fb0eaccb7a5acd9160af273c3",
+    "unchanged": true
+  },
+  "src/animation/loader.ts": {
+    "before": "f17d27b0e17d1f67275bbfb213564a12d2c85d66c954e0f3645d41cec740d5c5",
+    "after": "f17d27b0e17d1f67275bbfb213564a12d2c85d66c954e0f3645d41cec740d5c5",
+    "unchanged": true
+  },
+  "docs/evidence/alpha-release-runtime-inventory.json": {
+    "before": "99b693994a1b96b0945bb454585b14f435e485b8748cfe76eb9e61a2a4ec7720",
+    "after": "99b693994a1b96b0945bb454585b14f435e485b8748cfe76eb9e61a2a4ec7720",
+    "unchanged": true
+  },
+  "public/assets/creatures/moa/stage01/base.png": {
+    "before": "3e2f8a31d71bda3005a0a78eb31ac1ac84a146add959034fdcea3f5c1b765743",
+    "after": "3e2f8a31d71bda3005a0a78eb31ac1ac84a146add959034fdcea3f5c1b765743",
+    "unchanged": true
+  },
+  "productionCSP": {
+    "value": "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src ipc: http://ipc.localhost http://localhost:1420 ws://localhost:1420",
+    "sha256": "ec17f98f93751c43639cd59c9022e26c2a7d2d700715fe6e360227803fcd0a4f"
+  },
+  "releaseBinarySHA256": "a0cb7bac70b372a462a2e90b65cfd7315cb6eceb3906b6a6bbb468cb544e4cba"
+}

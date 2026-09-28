@@ -31,6 +31,11 @@ def generate(root=ROOT):
         if not positive(m.get('display',{}).get('width')) or not isinstance(m.get('animations'),dict) or not m['animations']:raise ValueError('invalid display/clips')
         for name,c in m['animations'].items():
             if not re.fullmatch('[a-z][a-z0-9_-]*',name) or type(c.get('frames')) is not int or not 1<=c['frames']<=256 or not positive(c.get('frameDuration')) or type(c.get('loop')) is not bool:raise ValueError('invalid clip: '+url)
+        if 'idleSequences' in m:
+            if m['idleSequences']!={'breath':'breath','blink':'blink','blinkIntervalMs':[3000,7000]}:raise ValueError('invalid idle sequences')
+            for name,count,loop in [('breath',4,True),('blink',3,False)]:
+                c=m['animations'].get(name,{})
+                if c.get('frames')!=count or c.get('loop') is not loop:raise ValueError('invalid idle sequence clip')
         entries[url]=m
     # The current MOA IDLE production delivery requires this metadata; other slots stay optional.
     if '/assets/creatures/moa/stage01/manifest.json' not in entries:raise ValueError('missing MOA production IDLE manifest')

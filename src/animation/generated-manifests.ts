@@ -6,6 +6,16 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
       "y": 1
     },
     "animations": {
+      "blink": {
+        "frameDuration": 90,
+        "frames": 3,
+        "loop": false
+      },
+      "breath": {
+        "frameDuration": 450,
+        "frames": 4,
+        "loop": true
+      },
       "idle": {
         "frameDuration": 100,
         "frames": 6,
@@ -43,6 +53,14 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     },
     "display": {
       "width": 130
+    },
+    "idleSequences": {
+      "blink": "blink",
+      "blinkIntervalMs": [
+        3000,
+        7000
+      ],
+      "breath": "breath"
     },
     "species": "moa",
     "stage": 1

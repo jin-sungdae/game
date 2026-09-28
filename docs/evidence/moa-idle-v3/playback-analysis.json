@@ -1,0 +1,431 @@
+{
+  "renderer": "actual production WKWebView; unchanged CSP; static registry",
+  "recordSeconds": 19.923000250011683,
+  "captureFrames": 55,
+  "axSamples": 1632,
+  "sequenceErrors": [],
+  "breathingCyclesMs": [
+    1812.9172325134277,
+    1792.9291725158691,
+    1801.3689517974854,
+    1795.4130172729492,
+    1804.2569160461426,
+    1806.753158569336,
+    1797.196865081787,
+    1793.9751148223877
+  ],
+  "blinkStartsWallTime": [
+    1790562523.394953,
+    1790562526.844923,
+    1790562533.164898
+  ],
+  "blinkReturnWallTime": [
+    1790562523.6780128,
+    1790562527.131501,
+    1790562533.4409928
+  ],
+  "blinkWaitAfterReturnMs": [
+    3166.910171508789,
+    6033.39695930481
+  ],
+  "blinkStartToStartMs": [
+    3449.970006942749,
+    6319.974899291992
+  ],
+  "centerDriftCapturePx": 0.0,
+  "horizontalHoppingPt": 0.0,
+  "bottomDriftCapturePx": 0,
+  "bottomHoppingPt": 0.0,
+  "clipping": false,
+  "panelStable": true,
+  "panelBounds": [
+    {
+      "Height": 104,
+      "Width": 96,
+      "X": 1450,
+      "Y": 1025
+    }
+  ],
+  "imagePositions": [
+    [
+      1457,
+      1047
+    ]
+  ],
+  "imageSizes": [
+    [
+      82,
+      82
+    ]
+  ],
+  "pixelBounds": [
+    {
+      "file": "frame-00053.png",
+      "sha256": "ed74220e911011adfc97248f9a164f2f2b9a92cb2b74282a63e8e8fd92ee74bc",
+      "bounds": [
+        25,
+        64,
+        169,
+        201
+      ],
+      "center": 97.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00054.png",
+      "sha256": "e8cd129b3ef7682bc3a814551f1458a3c28b10eee8c06acf7575a2b95d6993a6",
+      "bounds": [
+        25,
+        63,
+        169,
+        201
+      ],
+      "center": 97.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00051.png",
+      "sha256": "3178a6ef9211ddc53d3196b4abf88b4cb7c9a7ae65d9195331072ff500a99c7d",
+      "bounds": [
+        25,
+        64,
+        169,
+        201
+      ],
+      "center": 97.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00040.png",
+      "sha256": "04b741025bac2aead29a6407027ad7fcd02c16aa369b5dc8db27519fbf2db064",
+      "bounds": [
+        25,
+        64,
+        169,
+        201
+      ],
+      "center": 97.0,
+      "bottom": 201,
+      "clipped": false
+    },
+    {
+      "file": "frame-00039.png",
+      "sha256": "e5e10fe03a269e9cc3240d2fbbc6e33538947c916bf8240d97d8835e610c6316",
+      "bounds": [
+        25,
+        64,
+        169,
+        201
+      ],
+      "center": 97.0,
+      "bottom": 201,
+      "clipped": false
+    }
+  ],
+  "sequence": [
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562519.4107761
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562519.589859
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562520.0460958
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562520.488797
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562520.946951
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562521.397503
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562521.848699
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562522.3036718
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562522.7598681
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562523.190907
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790562523.394953
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790562523.494986
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790562523.577625
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562523.6780128
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562524.136571
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562524.574181
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562525.0241551
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562525.470942
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562525.925087
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562526.37763
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562526.820503
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790562526.844923
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790562526.944289
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790562527.027406
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562527.131501
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562527.573631
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562528.0319738
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562528.475486
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562528.93287
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562529.377631
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562529.823828
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562530.289326
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562530.728283
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562531.177639
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562531.6327538
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562532.074393
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562532.5325398
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562532.977614
+    },
+    {
+      "state": "BLINK",
+      "frame": 1,
+      "time": 1790562533.164898
+    },
+    {
+      "state": "BLINK",
+      "frame": 2,
+      "time": 1790562533.263793
+    },
+    {
+      "state": "BLINK",
+      "frame": 3,
+      "time": 1790562533.349436
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562533.4409928
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562533.888229
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562534.345245
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562534.7907848
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562535.247746
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562535.690831
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562536.1456199
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562536.599029
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562537.0449429
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562537.487053
+    },
+    {
+      "state": "IDLE",
+      "frame": 3,
+      "time": 1790562537.950045
+    },
+    {
+      "state": "IDLE",
+      "frame": 4,
+      "time": 1790562538.390839
+    },
+    {
+      "state": "IDLE",
+      "frame": 1,
+      "time": 1790562538.838918
+    },
+    {
+      "state": "IDLE",
+      "frame": 2,
+      "time": 1790562539.291617
+    }
+  ],
+  "networkLast": {
+    "version": 1,
+    "fetchAttempts": 2,
+    "xhrAttempts": 0,
+    "manifestAttempts": 0,
+    "cspViolations": 0,
+    "resources": [],
+    "attempts": [
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/plugin%3Aevent%7Clisten",
+        "time": 591
+      },
+      {
+        "kind": "fetch",
+        "url": "ipc://localhost/snapshot",
+        "time": 594
+      }
+    ]
+  },
+  "manualVisualReview": [
+    "breathing strength",
+    "blink naturalness",
+    "overall liveliness",
+    "visible horizontal artwork seam in blink frames; eyes appear open"
+  ]
+}

@@ -4,10 +4,11 @@ export const stateClips: Record<CompanionState, string> = {
   SLEEPING:'sleep', REACTING:'react', DRAGGING:'idle',
 };
 export interface Clip { frames:number; frameDuration:number; loop:boolean }
+export interface IdleSequences { breath:string; blink:string; blinkIntervalMs:[number,number] }
 export interface Manifest {
   species:string; stage:number;
   canvas:{width:number;height:number}; anchor:{x:number;y:number};
-  display:{width:number}; animations:Record<string,Clip>;
+  display:{width:number}; animations:Record<string,Clip>; idleSequences?:IdleSequences;
 }
 const positive = (n:unknown): n is number => typeof n === 'number' && Number.isFinite(n) && n > 0;
 export function parseManifest(value:unknown, species:string, stage:number): Manifest {
@@ -21,6 +22,13 @@ export function parseManifest(value:unknown, species:string, stage:number): Mani
     if(!/^[a-z][a-z0-9_-]*$/.test(name) || !c || !positive(c.frames) ||
       !Number.isInteger(c.frames) || c.frames > 256 || !positive(c.frameDuration) ||
       typeof c.loop !== 'boolean') throw new Error('Invalid clip');
+  }
+  if(m.idleSequences) {
+    const {breath,blink,blinkIntervalMs:i}=m.idleSequences;
+    if(breath!=='breath' || blink!=='blink' || !Array.isArray(i) || i.length!==2 ||
+      i[0]!==3000 || i[1]!==7000 || m.animations[breath]?.frames!==4 ||
+      m.animations[breath]?.loop!==true || m.animations[blink]?.frames!==3 ||
+      m.animations[blink]?.loop!==false) throw new Error('Invalid idle sequences');
   }
   return m;
 }

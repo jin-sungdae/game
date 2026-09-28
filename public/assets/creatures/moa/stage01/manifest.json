@@ -42,6 +42,24 @@
       "frames": 6,
       "frameDuration": 80,
       "loop": false
+    },
+    "breath": {
+      "frames": 4,
+      "frameDuration": 450,
+      "loop": true
+    },
+    "blink": {
+      "frames": 3,
+      "frameDuration": 90,
+      "loop": false
     }
+  },
+  "idleSequences": {
+    "breath": "breath",
+    "blink": "blink",
+    "blinkIntervalMs": [
+      3000,
+      7000
+    ]
   }
 }

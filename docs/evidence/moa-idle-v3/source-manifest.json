@@ -1,0 +1,123 @@
+{
+  "character": "MOA",
+  "stage": 1,
+  "version": "idle-v3",
+  "canvas": [
+    256,
+    256
+  ],
+  "format": "PNG RGBA transparent",
+  "sourceFacing": "RIGHT",
+  "anchor": "bottom-center",
+  "master": "production stage01/base.png",
+  "breathing": {
+    "frames": 4,
+    "suggestedCycleMs": 1800
+  },
+  "blink": {
+    "frames": 3,
+    "suggestedFrameMs": 90,
+    "suggestedIntervalMs": [
+      3000,
+      7000
+    ]
+  },
+  "registration": {
+    "maxCenterXDeltaPx": 0.0,
+    "maxBottomDeltaPx": 0,
+    "breath04EqualsBreath01Bytes": true
+  },
+  "frames": [
+    {
+      "file": "breath_01.png",
+      "kind": "BREATH",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "alpha_bounds": [
+        14,
+        30,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "breath_02.png",
+      "kind": "BREATH",
+      "sha256": "123f90062a3e12ca0dea67db6b951d9d1eab2c69d40dac45f0d329a00ed20afb",
+      "alpha_bounds": [
+        14,
+        28,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "breath_03.png",
+      "kind": "BREATH",
+      "sha256": "aa486bc5482e42d6b68abcb0652fc7d35801e2acc2e165d0cba6caade00331db",
+      "alpha_bounds": [
+        14,
+        29,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "breath_04.png",
+      "kind": "BREATH",
+      "sha256": "c0f64d5a17341aad51110e6ff32bccd1d5015c671ea3b7ff3280f51d11d4bbc6",
+      "alpha_bounds": [
+        14,
+        30,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "blink_01.png",
+      "kind": "BLINK",
+      "sha256": "bdceb82d5ccc8fb6eb95ec4b9e0d9e89b03761e3cf99fa7e11d80dee52a3122e",
+      "alpha_bounds": [
+        14,
+        30,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "blink_02.png",
+      "kind": "BLINK",
+      "sha256": "ab0c453694da40620d4d23c06d2afa5bca1a3d4e97503d5ac98f5cbbcea80077",
+      "alpha_bounds": [
+        14,
+        30,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    },
+    {
+      "file": "blink_03.png",
+      "kind": "BLINK",
+      "sha256": "bdceb82d5ccc8fb6eb95ec4b9e0d9e89b03761e3cf99fa7e11d80dee52a3122e",
+      "alpha_bounds": [
+        14,
+        30,
+        244,
+        248
+      ],
+      "center_x": 129.0,
+      "bottom": 248
+    }
+  ]
+}
