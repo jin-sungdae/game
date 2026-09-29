@@ -36,7 +36,10 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
     });
     return ()=>{disposed=true;stop();media.removeEventListener('change',change);runtime.clips.clear();runtime.idle.reset();};
   },[runtime,pilot.character,pilot.status]);
-  const current=view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
+  // Movement phases render from the same native snapshot as telemetry/position,
+  // without waiting one extra shared-clock callback at ground contact.
+  const nativeFrame=jumpFrame(input.jump,input.suppressed || input.state!=='ROAMING',reduced.current);
+  const current=pilot.jumpProfile==='JUMP'?{state:(nativeFrame===null?'IDLE':'JUMP') as AnimationSequence,frame:nativeFrame??0,suppressed:input.suppressed || input.state!=='ROAMING'}:view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
   const asset=current.suppressed||input.suppressed?null:runtime.clips.get(current.state);
   const clipId=entityId+':'+pilot.character+':'+current.state;
   const animation=asset?.urls[current.frame]??null;
