@@ -1,0 +1,110 @@
+{
+  "kakao": "EXACT_RESTORATION_PASS",
+  "excel": "TARGET_WINDOWS_NO_LONGER_EXIST",
+  "explanation": "Four retained Excel AX window handles became invalid during QA. Process remained alive; current AX list contains only the three previously unadjusted windows. No close/quit was issued for Excel. Exact restoration of disappeared windows cannot be verified; no document reopened.",
+  "excelBefore": [
+    {
+      "position": [
+        0,
+        39
+      ],
+      "size": [
+        1028,
+        1225
+      ]
+    },
+    {
+      "position": [
+        0,
+        39
+      ],
+      "size": [
+        2056,
+        1226
+      ]
+    },
+    {
+      "position": [
+        0,
+        39
+      ],
+      "size": [
+        1028,
+        1226
+      ]
+    },
+    {
+      "position": [
+        0,
+        109
+      ],
+      "size": [
+        2056,
+        1220
+      ]
+    },
+    {
+      "position": [
+        0,
+        39
+      ],
+      "size": [
+        2056,
+        1226
+      ]
+    },
+    {
+      "position": [
+        0,
+        39
+      ],
+      "size": [
+        2056,
+        1217
+      ]
+    },
+    {
+      "position": [
+        0,
+        39
+      ],
+      "size": [
+        2056,
+        1217
+      ]
+    }
+  ],
+  "excelAfter": [
+    {
+      "position": [
+        0,
+        39
+      ],
+      "size": [
+        2056,
+        1226
+      ]
+    },
+    {
+      "position": [
+        0,
+        39
+      ],
+      "size": [
+        2056,
+        1217
+      ]
+    },
+    {
+      "position": [
+        0,
+        39
+      ],
+      "size": [
+        2056,
+        1217
+      ]
+    }
+  ],
+  "noTemporary850HeightRemains": true
+}

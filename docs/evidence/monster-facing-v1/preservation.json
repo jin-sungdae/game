@@ -1,0 +1,34 @@
+[
+  {
+    "scope": "public",
+    "equalsOriginMain": true
+  },
+  {
+    "scope": "src",
+    "equalsOriginMain": true
+  },
+  {
+    "file": "src-tauri/tauri.conf.json",
+    "sha256": "cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed",
+    "equalsOriginMain": true
+  },
+  {
+    "file": "docs/evidence/alpha-release-runtime-inventory.json",
+    "sha256": "99b693994a1b96b0945bb454585b14f435e485b8748cfe76eb9e61a2a4ec7720",
+    "equalsOriginMain": true
+  },
+  {
+    "compiledProductionSource": "src-tauri/src/behaviors.rs",
+    "sha256": "42bdad77a0acac087045f74ce6d9781e31274cffe8f6ea6eecc25bafc4310b5e"
+  },
+  {
+    "compiledProductionSource": "src-tauri/src/movement/mod.rs",
+    "sha256": "27368eae28056cd8ec64ab0a3d1310b7517dc0194ae09b2a009ee604fe4a681f"
+  },
+  {
+    "productionExecutable": "/Users/jinseongdae/Documents/LUMA QA/monster-facing-v1/LUMA Spike.app/Contents/MacOS/luma-spike",
+    "sha256": "e3b15ac26c31246a9a3baa335d33c7c324627c0a6eda83a6c9523c6669fc7b16",
+    "baseCommit": "7bea47f63e54f0201183eddc942434232d341842",
+    "note": "Built with native fix before evidence commit; production source hashes above bind final source. Session head is base checkout before commit, not unmodified executable."
+  }
+]

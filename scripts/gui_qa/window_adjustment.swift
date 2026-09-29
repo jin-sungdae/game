@@ -10,10 +10,11 @@ func size(_ w:AXUIElement)->CGSize { var p=CGSize.zero; if let v=attr(w,kAXSizeA
 func state(_ w:AXUIElement)->[String:Any] { let p=point(w),s=size(w);return ["x":p.x,"y":p.y,"width":s.width,"height":s.height,"fullscreen":(attr(w,"AXFullScreen") as? NSNumber)?.boolValue ?? false] }
 func geometry(_ w:AXUIElement,_ p:CGPoint,_ s:CGSize) { var p=p,s=s; AXUIElementSetAttributeValue(w,kAXPositionAttribute as CFString,AXValueCreate(.cgPoint,&p)!);AXUIElementSetAttributeValue(w,kAXSizeAttribute as CFString,AXValueCreate(.cgSize,&s)!) }
 let args=CommandLine.arguments
-if args.count != 6 { fatalError("PID X Y TEMP_HEIGHT OUTPUT_DIRECTORY") }
+if args.count != 6 && args.count != 7 { fatalError("PID X Y TEMP_HEIGHT OUTPUT_DIRECTORY") }
 let pid=Int32(args[1])!,x=Double(args[2])!,y=Double(args[3])!,height=Double(args[4])!,dir=URL(fileURLWithPath:args[5]);try FileManager.default.createDirectory(at:dir,withIntermediateDirectories:true)
 let app=AXUIElementCreateApplication(pid)
-let windows=attr(app,kAXWindowsAttribute) as? [AXUIElement] ?? []
+let allWindows=attr(app,kAXWindowsAttribute) as? [AXUIElement] ?? []
+let windows=args.count == 7 ? [allWindows[Int(args[6])!]] : allWindows
 guard let window=windows.first(where:{abs(point($0).x-x)<3 && abs(point($0).y-y)<3 && size($0).height>100}) else {fatalError("Exact observed window not found")}
 let original=state(window),originalPoint=point(window),originalSize=size(window),full=(original["fullscreen"] as! Bool)
 var report:[String:Any]=["pid":pid,"original":original,"startedAt":Date().timeIntervalSince1970]
