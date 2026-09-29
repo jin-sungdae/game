@@ -9,3 +9,13 @@ Alternative: a fixed eight-frame loop would detach landing from ground contact a
 Use the existing canonical manifest → generated static TS pipeline; preserve supplied delivery manifest and byte-identical PNGs. JUMP phase mapping is reusable by movement profile, while asset availability remains registered per character. No production activation of IDLE/REACT artwork, policy/inventory expansion, gameplay change, or visual approval is implied.
 
 Implementation, tests and actual production GUI evidence: NOT_RUN at proposal creation. Human visual review of squash/stretch strength remains required. No automatic merge.
+
+## Implemented contract and verification
+
+Native `movement::jump::Sample` reports progress, accepted position, analytic vertical velocity, grounded and phase. Phase windows: first5% LAUNCH, until45% ASCEND,45–55% APEX, after55% DESCEND; LAND requires completed movement and actual ground coordinate. Monotonic progress provides apex hysteresis without direction chatter. Blocked/cancelled motion clears the sample instead of inventing LAND. The next inactive tick returns to own-base IDLE. No CROUCH/SETTLE state or delay is invented.
+
+MELLO and BUBU share the same JUMP movement implementation; their CURIOUS/PLAYFUL behavior decisions can differ in distance/speed, so animation uses movement progress rather than a fixed640ms loop. Only MELLO supplies the registered artwork in this pilot. `jumpProfile` opts assets into the reusable phase resolver, without a MELLO-specific native movement path.
+
+Canonical metadata keeps the existing clip schema; the80ms field is schema compatibility metadata and is never used to advance JUMP frames. Supplied1-based file names are preserved. IDLE/REACT/Blink remain unavailable for MELLO. Static loader validates identity, phase map, canvas and complete frame loading before use; failures resolve to MELLO own base. Shared clock ownership, native facing, CSP, server authority, arrival/rarity and battle/capture suppression remain intact. Reduced Motion uses own base while gameplay trajectory continues.
+
+Actual production capture found and fixed a one-callback stale-frame boundary: JUMP now selects its frame directly in the same native-snapshot render, bypassing time-loop playback. [Final evidence and explicit limitations](evidence/mello-jump-v1/README.md) includes real-server identity,25s review video, two complete jumps, phase trace, registration, Focus/Single Instance and restoration. Original failed evidence is retained. Visual squash/stretch strength remains MANUAL_VISUAL_REVIEW. Final release/CI results are recorded on the PR against its final HEAD.

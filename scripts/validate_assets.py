@@ -169,6 +169,7 @@ def validate_mello_jump(root=ROOT):
         bounds=[]
         for f,phase in zip(source['frames'],phases):
             p=d/f['file'];b=[];errors.extend(png_errors(p,require_transparency=True,bounds=b));bounds.append(b)
+            if len(b)==4 and ((b[0]+b[2]+1)/2!=f['center_x'] or b[3]+1!=f['bottom']):errors.append('MELLO manifest registration bounds')
             if hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256'] or f['phase']!=phase:errors.append('MELLO source hash/phase '+f['file'])
         if any(len(b)!=4 for b in bounds) or len({(b[0]+b[2],b[3]) for b in bounds if len(b)==4})!=1:errors.append('MELLO registration drift')
         if (d/names[0]).read_bytes()!=(d/names[-1]).read_bytes():errors.append('MELLO loop registration')

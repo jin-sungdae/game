@@ -30,7 +30,7 @@ for f in cap:
  pixels.append({'file':f['file'],'time':t,'bounds':b,'center':(b[0]+b[2])/2,'bottom':b[3],'phase':r['sample']['phase'] if r['sample'] else 'IDLE','nativeFacing':r['sample']['facing'] if r['sample'] else None,'pixelFacing':flip})
 groups={}
 for pix in pixels:
- key=pix['phase'];groups.setdefault(key,[]).append(pix)
+ key=pix['phase']+'_'+str(pix['pixelFacing']);groups.setdefault(key,[]).append(pix)
 bounds={k:{'samples':len(v),'centerDriftPt':(max(p['center'] for p in v)-min(p['center'] for p in v))/2,'bottomDriftPt':(max(p['bottom'] for p in v)-min(p['bottom'] for p in v))/2} for k,v in groups.items()}
 summary=[]
 for c in cycles:

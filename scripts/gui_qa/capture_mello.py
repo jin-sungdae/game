@@ -21,12 +21,12 @@ for name,cmd in [('pip','frames-mello')]:
  windows[name]=s.panel(name)['kCGWindowNumber'];captures[name]=[];(root/(name+'-frames')).mkdir()
 # Native window screenshots are actual production pixels. Timestamp each completed
 # capture; do not synthesize renderer frames or pretend this is a 60fps observation.
-started=time.monotonic()
-while time.monotonic()-started<25:
+started=time.monotonic();failed=False
+while time.monotonic()-started<25 and not failed:
  for name in ['pip']:
   file='frame-%05d.png'%len(captures[name]);before=time.time()
   capture=sp.run(['/usr/sbin/screencapture','-x','-l',str(windows[name]),str(root/(name+'-frames')/file)],timeout=5)
-  if capture.returncode:break
+  if capture.returncode:failed=True;break
   captures[name].append({'file':file,'pts':time.monotonic()-started,'wallTime':time.time(),'before':before,'width':192,'height':208})
  # Capture as fast as native window capture returns; timestamps preserve real pacing.
 for name,rows in captures.items():(root/(name+'-frames')/'frames.json').write_text(json.dumps({'method':'native screencapture window-only','frames':rows},indent=2))

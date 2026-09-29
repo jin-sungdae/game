@@ -1,0 +1,79 @@
+{
+  "primaryPid": 45652,
+  "primaryWindowIdsBefore": [
+    326788
+  ],
+  "primaryWindowIdsAfter": [
+    326788
+  ],
+  "secondaries": [
+    {
+      "exitCode": 0,
+      "pid": 46341,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.google.Chrome",
+          "frontPid": 21425,
+          "keyWindows": 0,
+          "pid": 46341,
+          "seconds": 0.0019720792770385742
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 46342,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.google.Chrome",
+          "frontPid": 21425,
+          "keyWindows": 0,
+          "pid": 46342,
+          "seconds": 0.0038449764251708984
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 46346,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.google.Chrome",
+          "frontPid": 21425,
+          "keyWindows": 0,
+          "pid": 46346,
+          "seconds": 0.003265976905822754
+        }
+      ]
+    }
+  ],
+  "primaryAudit": [
+    {
+      "activations": 0,
+      "event": "before-tauri",
+      "frontBundle": "com.kakao.KakaoTalkMac",
+      "frontPid": 19213,
+      "keyWindows": 0,
+      "pid": 45652,
+      "seconds": 0.0029249191284179688
+    }
+  ],
+  "noLumaForeground": true,
+  "focusPass": true,
+  "singleInstancePass": true
+}
