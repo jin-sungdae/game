@@ -11,3 +11,5 @@ Historical initial attempt: the real server-owned PIP encounter was created, but
 Follow-up actual GUI evidence is now available: [recordings, measurements and restoration](gui/README.md). RIGHT travel with stale LEFT facing remains a runtime KNOWN_ISSUE.
 
 Latest result after main/PR50 integration: [actual animation + facing GUI evidence](integration/README.md). The earlier RIGHT-facing issue is now resolved by the shared native runtime. Historical evidence is preserved.
+
+Human Alpha Production approval (2026-09-29) supersedes historical pending-approval labels for IDLE/MOVE only; see [current contract](../../pip-animation-pilot-v1.md). Original evidence remains unmodified. REACT mouse event remains NOT_APPLICABLE.

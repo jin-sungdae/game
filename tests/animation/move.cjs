@@ -2,7 +2,7 @@ const {test}=require('node:test');const assert=require('node:assert/strict');con
 const load=f=>require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'animation',f));
 const {PilotAssets,pilotDefinition,AnimationStateResolver,CharacterAnimator}=load('pilot.js');const {AssetLoader,browserIO}=load('loader.js');const {IdleSequencer}=load('idle.js');
 test('MOVE pilot is explicit, atomic and isolated from approved IDLE and REACT',async()=>{
- const p=pilotDefinition('moa');assert.equal(p.status,'IDLE_PRODUCTION');assert.equal(p.moveStatus,'PRODUCTION');assert.equal(pilotDefinition('PIP').status,'PRODUCTION_PILOT');let requests=[];
+ const p=pilotDefinition('moa');assert.equal(p.status,'IDLE_PRODUCTION');assert.equal(p.moveStatus,'PRODUCTION');assert.equal(pilotDefinition('PIP').status,'IDLE_PRODUCTION');let requests=[];
  const assets=new PilotAssets(new AssetLoader({json:browserIO.json,image:async u=>{requests.push(u);if(u.endsWith('walk_03.png'))throw Error('missing MOVE');return {width:256,height:256};}}));
  assert.equal(await assets.load(p,'MOVE'),null);assert.equal((await assets.load(p,'IDLE')).urls.length,4);assert.equal((await assets.load(p,'BLINK')).urls.length,3);assert.equal((await assets.load(p,'REACT')).urls.length,6);
  assert.equal(await assets.load({...p,moveStatus:undefined},'MOVE'),null);assert.equal(await assets.load({...pilotDefinition('PIP'),status:'NOT_SUPPLIED'},'MOVE'),null);

@@ -3,8 +3,9 @@ const load=f=>require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'animation',
 const {PilotAssets,pilotDefinition,AnimationStateResolver,CharacterAnimator}=load('pilot.js');const {AssetLoader,browserIO}=load('loader.js');const {IdleSequencer}=load('idle.js');const {rendererSource}=require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'assets/base.js'));
 const make=(image=async()=>({width:256,height:256}))=>new PilotAssets(new AssetLoader({json:browserIO.json,image}));
 test('PIP pilot static lookup: own IDLE4 MOVE8 REACT6, no Blink or MOA fallback',async()=>{
- const p=pilotDefinition('PIP');assert.equal(p.status,'PRODUCTION_PILOT');assert.equal(p.base,'/assets/monsters/pip/base.png');const old=global.fetch;global.fetch=()=>assert.fail('no manifest fetch');
+ const p=pilotDefinition('PIP');assert.equal(p.status,'IDLE_PRODUCTION');assert.equal(p.moveStatus,'PRODUCTION');assert.equal(p.reactStatus,'SUPPLIED');assert.equal(p.base,'/assets/monsters/pip/base.png');const old=global.fetch;global.fetch=()=>assert.fail('no manifest fetch');
  try{const a=make();for(const [state,n,ms,loop] of [['IDLE',4,450,true],['MOVE',8,80,true],['REACT',6,80,false]]){const c=await a.load(p,state);assert.equal(c.urls.length,n);assert.equal(c.clip.frameDuration,ms);assert.equal(c.clip.loop,loop);assert.ok(c.urls.every(u=>u.startsWith('/assets/monsters/pip/')));}
+ assert.equal(await a.load({...p,moveStatus:undefined},'MOVE'),null);assert.equal(await a.load({...p,reactStatus:undefined},'REACT'),null);
  assert.equal(await a.load(p,'BLINK'),null);assert.equal(await a.load(p,'INVALID'),null);
  const idle=new IdleSequencer(()=>assert.fail('PIP has no blink schedule'));assert.equal(idle.sample(10000,true,false,undefined,270),'IDLE');
  }finally{global.fetch=old;}

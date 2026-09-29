@@ -2,18 +2,18 @@
 
 PIP reuses the existing CharacterRenderer, AnimationStateResolver, Shared Animation Clock and canonical-manifest → generated TypeScript registry. Only PIP animation readiness and supplied metadata change. No animation engine, production event, RAF, interval, polling or manifest fetch is introduced. MOA production animation and all supplied MOA bytes remain unchanged.
 
-| PIP sequence | Readiness | Candidate |
+| PIP sequence | Readiness | Alpha Pilot approved default / coverage |
 |---|---|---|
-| IDLE | PRODUCTION_PILOT |4frames,450ms/frame,1800ms loop |
-| MOVE | PRODUCTION_PILOT |8frames,80ms/frame,640ms at1× |
-| REACT | PRODUCTION_PILOT |6frames,80ms/frame,480ms non-looping |
+| IDLE | PRODUCTION |4frames,450ms/frame,1800ms loop |
+| MOVE | PRODUCTION |8frames,80ms/frame,640ms at1× |
+| REACT | SUPPLIED — mouse event NOT_APPLICABLE |6frames,80ms/frame,480ms non-looping |
 | BLINK | NOT_SUPPLIED | No clip, schedule or borrowed MOA frames |
 
 Source ZIP byte hashes and metadata are retained under [evidence](evidence/pip-animation-v1/source-manifest.json). `idle/breath_01..04` map to `idle/idle_00..03`, `move/move_01..08` to `walk/walk_00..07`, and `react/react_01..06` to `react/react_00..05`. Only names change. All18 originals validate256×256 RGBA, transparency, bottom-center,RIGHT source and0px center/bottom registration. PIP own base is untouched.
 
 ## Actual Monster contract
 
-PIP content is GROUND / PLAYFUL / NEAR_DOCK, not a Companion WALKING state machine. Native Monster movement owns all x/y. The renderer receives measured speed while native state remains ROAMING. Zero speed selects IDLE; actual ambient movement selects MOVE with existing8/3 speed hysteresis. The existing shared resolver uses a bounded0.5–2× playback rate relative to40pt/s. PIP's14pt/s Wander (telemetry quantized near16) reaches the0.5× floor, so its actual cycle can be1280ms;24pt/s ShortBurst gives approximately1066.7ms at0.6×.640ms is the1× candidate, not a claim that actual movement always plays that period. No PIP world speed or timing policy is changed to force a comparison.
+PIP content is GROUND / PLAYFUL / NEAR_DOCK, not a Companion WALKING state machine. Native Monster movement owns all x/y. The renderer receives measured speed while native state remains ROAMING. Zero speed selects IDLE; actual ambient movement selects MOVE with existing8/3 speed hysteresis. The existing shared resolver uses a bounded0.5–2× playback rate relative to40pt/s. PIP's14pt/s Wander (telemetry quantized near16) reaches the0.5× floor, so its actual cycle can be1280ms;24pt/s ShortBurst gives approximately1066.7ms at0.6×.640ms is the approved1× Alpha default, not a claim that actual movement always plays that period. No PIP world speed or timing policy is changed to force a comparison.
 
 Actual PIP click enters ENGAGED/encounter and may start battle through the existing server command. ENGAGED is intentionally suppressed by the resolver. There is no unsuppressed production REACT event for PIP. **Actual mouse REACT: NOT_APPLICABLE.** REACT frame order/completion/fallback is covered by deterministic animator/state tests; no new gameplay trigger is invented for QA.
 
@@ -31,7 +31,7 @@ GUI tooling is extended only with an optional named recorder window and `frames-
 
 Initial actual GUI attempt: server encounter succeeds, but existing window-obstruction checks deny safe placement because other apps cover the main screen's ground band. No bypass/debug-PIP substitution is accepted. That historical attempt did not establish playback/transition/clipping PASS. A subsequent user-authorized minimal window adjustment enabled actual GUI QA; see the follow-up below. The first QA session was stopped with evidence retained under `/Users/jinseongdae/Documents/LUMA QA/pip-animation-v1/`.
 
-**MANUAL_VISUAL_REVIEW:** breathing naturalness, movement/sliding impression,body motion,640ms candidate naturalness and REACT readability. All timing/artwork stays PRODUCTION_PILOT until human approval. No automatic merge.
+Historical pilot visual review preceded the final human approval below. IDLE/MOVE artwork and timing are now approved Alpha defaults; future visual polish may tune them. REACT remains deterministic asset/state coverage only. No automatic merge.
 
 ## Actual GUI follow-up
 
@@ -39,4 +39,12 @@ Initial actual GUI attempt: server encounter succeeds, but existing window-obstr
 
 ## Latest-main final integration
 
-PR50 is now integrated from main `c7aadd8`. [Final production GUI evidence](evidence/pip-animation-v1/integration/README.md) verifies animation plus native facing together:249 stable moving samples match direction, IDLE4/MOVE8 order has no observed gaps,10 transitions each way, and0pt center/bottom drift. The older limitation and blocked-session evidence above are historical. PIP IDLE/MOVE are technically ready for human visual review; all three PIP states remain PRODUCTION_PILOT. Mouse REACT remains NOT_APPLICABLE.
+PR50 is now integrated from main `c7aadd8`. [Final production GUI evidence](evidence/pip-animation-v1/integration/README.md) verifies animation plus native facing together:249 stable moving samples match direction, IDLE4/MOVE8 order has no observed gaps,10 transitions each way, and0pt center/bottom drift. The older limitation and blocked-session evidence above are historical. PIP IDLE/MOVE subsequently received human Alpha Production approval; REACT asset readiness is SUPPLIED. Mouse REACT remains NOT_APPLICABLE.
+
+## Alpha Pilot Production approval — 2026-09-29
+
+Human approval finalizes supplied PIP IDLE4/1800ms and MOVE8/80ms per frame,640ms at1× as Alpha defaults. Existing bounded0.5–2× velocity-linked playback remains. Registry uses the existing IDLE_PRODUCTION status plus moveStatus PRODUCTION; reactStatus SUPPLIED describes retained6-frame deterministic coverage, not a mouse-triggered behavior. Blink remains NOT_SUPPLIED.
+
+Click → ENGAGED/Battle is the production interaction contract. Mouse REACT remains NOT_APPLICABLE. Merged PR50 native facing and249 stable moving samples/zero mismatches are preserved. MOA's historical1.5pt silhouette reversal is not a PIP blocker. All prior failed/blocked-placement and GUI evidence is retained unchanged as history. Future artwork/timing polish is permitted by the approval, but no tuning is performed here.
+
+Final-head release gate and GitHub CI are reported in PR49. Ready for Review follows passing verification; no automatic merge.
