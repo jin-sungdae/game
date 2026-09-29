@@ -1,0 +1,55 @@
+LUMA_AUDIT {"activations":0,"event":"before-tauri","frontBundle":"com.openai.codex","frontPid":5404,"keyWindows":0,"pid":3095,"seconds":0.0027589797973632812}
+2026-09-29 09:08:54.775 luma-spike[3095:57676862] [LUMA PANEL] moa opaque=0 level=3 keyAllowed=0 mainAllowed=0
+2026-09-29 09:08:54.809 luma-spike[3095:57676862] [LUMA PANEL] pip opaque=0 level=3 keyAllowed=0 mainAllowed=0
+2026-09-29 09:08:54.842 luma-spike[3095:57676862] [LUMA PANEL] interaction opaque=0 level=3 keyAllowed=0 mainAllowed=0
+[LUMA BACKEND] bootstrap player=1 companion=MOA/stage1
+[LUMA STATE] t=0.05 Idle:None:-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=None
+[LUMA FOCUS] app active=0 t=0.05
+[LUMA INPUT] encounter
+[LUMA SPAWN] placed PIP encounter=2956f0d5-9991-4116-9cc1-8faa2a8eebde at=(810.0, 200.0)
+[LUMA BACKEND] bootstrap player=1 companion=MOA/stage1
+[LUMA STATE] t=0.79 Idle:Some((Spawning, -1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((810.0, 200.0))
+[LUMA STATE] t=1.40 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((810.0, 200.0))
+[LUMA STATE] t=1.44 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1632.0,200.0) pip=Some((810.532377412, 200.0))
+[LUMA STATE] t=4.30 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 24.0 } moa=(1632.0,200.0) pip=Some((850.913695, 200.0))
+[LUMA STATE] t=6.30 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((898.0, 200.0))
+[LUMA STATE] t=7.86 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1632.0,200.0) pip=Some((897.489084, 200.0))
+[LUMA STATE] t=10.71 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 4.0 } moa=(1632.0,200.0) pip=Some((858.0, 200.0))
+[LUMA STATE] t=10.74 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 16.0 } moa=(1632.0,200.0) pip=Some((858.4891985, 200.0))
+[LUMA STATE] t=13.59 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((898.0, 200.0))
+[LUMA STATE] t=18.02 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 24.0 } moa=(1632.0,200.0) pip=Some((898.859531008, 200.0))
+[LUMA STATE] t=20.02 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((946.0, 200.0))
+[LUMA STATE] t=24.98 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 24.0 } moa=(1632.0,200.0) pip=Some((946.913188, 200.0))
+[LUMA STATE] t=26.98 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 4.0 } moa=(1632.0,200.0) pip=Some((994.0, 200.0))
+[LUMA STATE] t=27.01 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((994.0, 200.0))
+[LUMA STATE] t=28.59 Idle:Some((Roaming, 1)):-1:false:Motion { moa: 0.0, pip: 16.0 } moa=(1632.0,200.0) pip=Some((994.532839412, 200.0))
+[LUMA STATE] t=30.01 Walking:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 16.0 } moa=(1632.0,200.0) pip=Some((1014.3649605460001, 200.0))
+[LUMA STATE] t=30.04 Walking:Some((Roaming, 1)):1:false:Motion { moa: 40.0, pip: 16.0 } moa=(1633.5,200.0) pip=Some((1014.8979020460001, 200.0))
+[LUMA STATE] t=31.44 Walking:Some((Roaming, 1)):1:false:Motion { moa: 40.0, pip: 0.0 } moa=(1689.4,200.0) pip=Some((1034.0, 200.0))
+[LUMA STATE] t=31.48 Walking:Some((Roaming, 1)):1:false:Motion { moa: 40.0, pip: 12.0 } moa=(1690.8,200.0) pip=Some((1034.507518662, 200.0))
+[LUMA STATE] t=33.37 Idle:Some((Roaming, 1)):1:false:Motion { moa: 32.0, pip: 12.0 } moa=(1766.4,200.0) pip=Some((1061.0438606059997, 200.0))
+[LUMA STATE] t=33.41 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1766.4,200.0) pip=Some((1061.5454794439997, 200.0))
+[LUMA STATE] t=34.32 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 4.0 } moa=(1766.4,200.0) pip=Some((1074.0, 200.0))
+[LUMA STATE] t=34.36 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 16.0 } moa=(1766.4,200.0) pip=Some((1074.4756465, 200.0))
+[LUMA STATE] t=37.19 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 8.0 } moa=(1766.4,200.0) pip=Some((1114.0, 200.0))
+[LUMA STATE] t=37.23 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 24.0 } moa=(1766.4,200.0) pip=Some((1114.91365, 200.0))
+[LUMA STATE] t=39.26 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 4.0 } moa=(1766.4,200.0) pip=Some((1162.0, 200.0))
+[LUMA STATE] t=39.29 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((1162.0, 200.0))
+[LUMA STATE] t=40.60 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1766.4,200.0) pip=Some((1162.467051074, 200.0))
+[LUMA STATE] t=43.47 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((1202.0, 200.0))
+[LUMA STATE] t=43.68 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 16.0 } moa=(1766.4,200.0) pip=Some((1201.482244412, 200.0))
+[LUMA STATE] t=46.51 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1766.4,200.0) pip=Some((1162.0, 200.0))
+[LUMA STATE] t=46.55 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((1162.0, 200.0))
+[LUMA STATE] t=47.20 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1766.4,200.0) pip=Some((1162.532699426, 200.0))
+[LUMA STATE] t=50.07 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((1202.0, 200.0))
+[LUMA STATE] t=51.02 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1766.4,200.0) pip=Some((1201.46709875, 200.0))
+[LUMA STATE] t=53.86 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 4.0 } moa=(1766.4,200.0) pip=Some((1162.0, 200.0))
+[LUMA STATE] t=53.90 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1766.4,200.0) pip=Some((1161.521590838, 200.0))
+[LUMA STATE] t=56.76 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((1122.0, 200.0))
+[LUMA STATE] t=57.38 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 16.0 } moa=(1766.4,200.0) pip=Some((1121.46699025, 200.0))
+[LUMA STATE] t=60.22 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 4.0 } moa=(1766.4,200.0) pip=Some((1082.0, 200.0))
+[LUMA STATE] t=60.26 Idle:Some((Roaming, 1)):1:false:Motion { moa: 0.0, pip: 24.0 } moa=(1766.4,200.0) pip=Some((1082.866986992, 200.0))
+[LUMA STATE] t=60.79 Idle:Some((Despawning, 1)):1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((1094.8209610160002, 200.0))
+[LUMA STATE] t=61.45 Idle:None:1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=None
+[LUMA STATE] t=68.12 Looking:None:-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=None
+[LUMA STATE] t=71.53 Idle:None:-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=None

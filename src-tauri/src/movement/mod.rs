@@ -25,6 +25,26 @@ pub struct MovementConfig {
     pub duration: f64,
     pub cursor_clearance: f64,
 }
+/// Horizontal deadband matches the existing 3pt/s presentation jitter floor.
+/// Retaining the previous sign inside [-3, 3] gives stateful directional hysteresis.
+/// Use accepted displacement, never target direction or vertical speed.
+pub const FACING_SPEED_EPSILON: f64 = 3.0;
+pub fn facing_from_velocity(previous: i8, dx: f64, dt: f64) -> i8 {
+    if !dt.is_finite() || !(0.001..=0.1).contains(&dt) {
+        return previous;
+    }
+    let vx = dx / dt;
+    if !vx.is_finite() || vx.abs() > 256.0 {
+        return previous; // Ignore discontinuities, as existing motion telemetry does.
+    }
+    if dx > FACING_SPEED_EPSILON * dt {
+        1
+    } else if dx < -FACING_SPEED_EPSILON * dt {
+        -1
+    } else {
+        previous
+    }
+}
 pub const WINDOW_POLL_SECONDS: f64 = 1.0;
 pub const MOA_MOVEMENT: MovementConfig = MovementConfig {
     default: MovementProfile::Ground,

@@ -90,7 +90,20 @@ fn all_fifteen_world_traces_preserve_identity_constraints_and_companion() {
         let mut previous = 0;
         for i in 1..=1800 {
             let t = f64::from(i) / 30.;
+            let before = w.view.pip.as_ref().unwrap().clone();
             w.tick(t, 1. / 30., FAR, false);
+            let after = w.view.pip.as_ref().unwrap();
+            let vx = (after.x - before.x) * 30.;
+            if before.state == PipState::Roaming {
+                let expected = if vx > 3. {
+                    1
+                } else if vx < -3. {
+                    -1
+                } else {
+                    before.facing
+                };
+                assert_eq!(after.facing, expected, "{code} vx={vx}");
+            }
             control.tick(t, 1. / 30., FAR, false);
             inside(&w);
             assert_eq!(
@@ -336,6 +349,95 @@ fn rarity_arrival_holds_behavior_preserves_identity_and_yields_to_battle() {
             b.apply_server_encounter(at + 0.2, None, 0.);
             b.tick(at + 2., 0.1, FAR, false);
             assert!(b.view.pip.is_none());
+        }
+    }
+}
+
+#[test]
+fn server_monster_facing_follows_accepted_motion_for_all_profiles() {
+    use crate::movement::FACING_SPEED_EPSILON;
+    for (code, profile) in [
+        ("PIP", MovementProfile::Ground),
+        ("MELLO", MovementProfile::Jump),
+        ("CHIRP", MovementProfile::Flying),
+        ("PUFF", MovementProfile::Floating),
+        ("SHADE", MovementProfile::Edge),
+        ("EMBER", MovementProfile::Free2d),
+        ("MIMI", MovementProfile::Static),
+    ] {
+        let mut w = world(code);
+        assert_eq!(w.view.monster.as_ref().unwrap().movement_profile, profile);
+        w.view.pip.as_mut().unwrap().state = PipState::Roaming;
+        w.monster_behavior.as_mut().unwrap().hold(true); // deterministic test-only decision freeze
+        w.monster_behavior.as_mut().unwrap().current.speed = 20.;
+        let area = w.area;
+        let size = w.view.pip.as_ref().unwrap().size;
+        let start = match profile {
+            MovementProfile::Flying => area.clamp(-1800., f64::MAX, size),
+            MovementProfile::Edge => area.clamp(f64::MIN, area.ground_y() + 80., size),
+            MovementProfile::Floating => (-1800., area.ground_y() + 80.),
+            _ => area.ground(-1800., size),
+        };
+        {
+            let p = w.view.pip.as_mut().unwrap();
+            p.x = start.0;
+            p.y = start.1;
+            p.facing = -1;
+        }
+        let mut seen = std::collections::BTreeSet::new();
+        let mut now = 1.;
+        for sign in [1., -1., 1., -1.] {
+            let p = w.view.pip.as_ref().unwrap();
+            let from = (p.x, p.y);
+            w.monster_movement.start_ambient(
+                profile,
+                crate::monster_behavior::Decision {
+                    intent: Intent::Wander,
+                    direction: sign,
+                    distance: 40.,
+                    speed: 20.,
+                },
+                from,
+                None,
+                crate::movement::ambient::Environment {
+                    area,
+                    size,
+                    cursor: FAR,
+                    windows: Some(&[]),
+                },
+            );
+            for _ in 0..65 {
+                let before = w.view.pip.as_ref().unwrap().clone();
+                now += 0.05;
+                w.tick(now, 0.05, FAR, false);
+                let after = w.view.pip.as_ref().unwrap();
+                let vx = (after.x - before.x) / 0.05;
+                let expected = if vx > FACING_SPEED_EPSILON {
+                    1
+                } else if vx < -FACING_SPEED_EPSILON {
+                    -1
+                } else {
+                    before.facing
+                };
+                assert_eq!(after.facing, expected, "{profile:?} vx={vx}");
+                if vx.abs() > FACING_SPEED_EPSILON {
+                    seen.insert(after.facing);
+                }
+                if matches!(profile, MovementProfile::Static | MovementProfile::Edge) {
+                    assert_eq!(after.facing, -1);
+                }
+            }
+        }
+        if !matches!(profile, MovementProfile::Static | MovementProfile::Edge) {
+            assert_eq!(seen, [-1, 1].into_iter().collect(), "{profile:?}");
+        }
+        // Locked and stationary motion cannot reset a RIGHT-facing monster.
+        w.view.pip.as_mut().unwrap().facing = 1;
+        w.view.menu = true;
+        for _ in 0..10 {
+            now += 0.05;
+            w.tick(now, 0.05, FAR, false);
+            assert_eq!(w.view.pip.as_ref().unwrap().facing, 1);
         }
     }
 }

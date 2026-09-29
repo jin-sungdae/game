@@ -279,3 +279,25 @@ fn batch1_profiles_fit_existing_entity_bounds() {
         );
     }
 }
+
+#[test]
+fn facing_deadband_retains_sign_across_stop_jitter_and_invalid_time() {
+    for previous in [-1, 1] {
+        let mut facing = previous;
+        for vx in [0., 2.9, -2.9, 3., -3., 0.01, -0.01, 0.] {
+            facing = facing_from_velocity(facing, vx * 0.05, 0.05);
+            assert_eq!(facing, previous);
+        }
+        for dt in [0., -1., f64::NAN, f64::INFINITY, 0.0001, 1.] {
+            assert_eq!(facing_from_velocity(previous, 1., dt), previous);
+        }
+        for dx in [f64::NAN, f64::INFINITY, 1000.] {
+            assert_eq!(facing_from_velocity(previous, dx, 0.05), previous);
+        }
+    }
+    let mut facing = -1;
+    for (vx, expected) in [(14., 1), (0., 1), (-2., 1), (-14., -1), (2., -1), (24., 1)] {
+        facing = facing_from_velocity(facing, vx * 0.05, 0.05);
+        assert_eq!(facing, expected);
+    }
+}

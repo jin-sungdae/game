@@ -414,6 +414,7 @@ impl World {
                                     env,
                                 );
                             }
+                            let moving = self.monster_movement.profile().is_some();
                             let position = self.monster_movement.tick_ambient(
                                 identity.movement_profile,
                                 (p.x, p.y),
@@ -421,6 +422,16 @@ impl World {
                                 behavior.current.speed,
                                 env,
                             );
+                            if moving
+                                && identity.movement_profile
+                                    != crate::movement::MovementProfile::Static
+                            {
+                                p.facing = crate::movement::facing_from_velocity(
+                                    p.facing,
+                                    position.0 - p.x,
+                                    dt,
+                                );
+                            }
                             p.x = position.0;
                             p.y = position.1;
                         }
@@ -428,7 +439,7 @@ impl World {
                         p.x += p.facing as f64 * 24.0 * dt;
                     }
                     let (x, y) = self.area.clamp(p.x, p.y, p.size);
-                    if x != p.x {
+                    if self.view.monster.is_none() && x != p.x {
                         p.facing *= -1;
                     }
                     p.x = x;
