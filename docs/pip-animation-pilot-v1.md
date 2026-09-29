@@ -19,7 +19,7 @@ Actual PIP click enters ENGAGED/encounter and may start battle through the exist
 
 Creature's existing Spawn/Rarity, battle, capture/effect, busy, evolution and despawn suppression remains above animation. Missing/invalid clips fail atomically to `/assets/monsters/pip/base.png`; no MOA or other-monster fallback. No idleSequences metadata is supplied, so PIP does not schedule Blink. The stable encounter-id renderer identity and existing subscriber cleanup are retained.
 
-## Facing limitation under review
+## Historical facing limitation (resolved by merged PR50)
 
 Existing native server PIP starts with facing−1 and does not update facing from ordinary ambient movement direction; it only flips after the existing boundary-clamp branch. Thus RIGHT travel can remain LEFT-facing. Source RIGHT and renderer horizontal flip are preserved; both directions are covered deterministically. No native facing repair is included without separate scope confirmation. Actual RIGHT-facing proof must not be inferred from RIGHTward travel.
 
@@ -36,3 +36,7 @@ Initial actual GUI attempt: server encounter succeeds, but existing window-obstr
 ## Actual GUI follow-up
 
 [Server PIP recordings, quantitative measurements, facing trace and window restoration](evidence/pip-animation-v1/gui/README.md) now cover actual IDLE and LEFT/RIGHT movement on the unchanged production bundle. Ambient center/bottom drift0pt, no clipping or base fallback. RIGHT-facing remains an existing native runtime KNOWN_ISSUE; it was not repaired or hidden with inverted artwork. Both adjusted user windows were restored exactly.
+
+## Latest-main final integration
+
+PR50 is now integrated from main `c7aadd8`. [Final production GUI evidence](evidence/pip-animation-v1/integration/README.md) verifies animation plus native facing together:249 stable moving samples match direction, IDLE4/MOVE8 order has no observed gaps,10 transitions each way, and0pt center/bottom drift. The older limitation and blocked-session evidence above are historical. PIP IDLE/MOVE are technically ready for human visual review; all three PIP states remain PRODUCTION_PILOT. Mouse REACT remains NOT_APPLICABLE.

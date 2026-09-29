@@ -9,3 +9,5 @@
 Historical initial attempt: the real server-owned PIP encounter was created, but native safe placement rejected the window-obstructed main-screen ground band. This is ENVIRONMENT_UNAVAILABLE, not a playback PASS. The initial session's native log, server/DB trace and fixture are retained in `/Users/jinseongdae/Documents/LUMA QA/pip-animation-v1/`. No debug entity or mock preview is presented as production evidence.
 
 Follow-up actual GUI evidence is now available: [recordings, measurements and restoration](gui/README.md). RIGHT travel with stale LEFT facing remains a runtime KNOWN_ISSUE.
+
+Latest result after main/PR50 integration: [actual animation + facing GUI evidence](integration/README.md). The earlier RIGHT-facing issue is now resolved by the shared native runtime. Historical evidence is preserved.
