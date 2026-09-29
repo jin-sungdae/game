@@ -1,0 +1,83 @@
+{
+  "character": "MELLO",
+  "movement_profile": "JUMP",
+  "canvas": [
+    256,
+    256
+  ],
+  "source_facing": "RIGHT",
+  "anchor": "bottom-center",
+  "phase_contract": [
+    "NEUTRAL",
+    "CROUCH",
+    "LAUNCH",
+    "ASCEND",
+    "APEX",
+    "DESCEND",
+    "LAND",
+    "SETTLE"
+  ],
+  "registration": {
+    "max_center_x_delta_px": 0.0,
+    "max_bottom_delta_px": 0,
+    "jump08_equals_jump01": true
+  },
+  "frames": [
+    {
+      "file": "jump_01.png",
+      "phase": "NEUTRAL",
+      "sha256": "24ccfdf8a7781a2c2d8235cad39551d91a27757131e489549d39e4529cebe862",
+      "center_x": 128.0,
+      "bottom": 242
+    },
+    {
+      "file": "jump_02.png",
+      "phase": "CROUCH",
+      "sha256": "4557ddab1bd734980d5ee6579fcb9dddbdfe68812b237c17a050a2df2388d638",
+      "center_x": 128.0,
+      "bottom": 242
+    },
+    {
+      "file": "jump_03.png",
+      "phase": "LAUNCH",
+      "sha256": "8cc7eac07bacaef8c66a2ed4d73f2c848a9be3d9d118aa1975fa8bae9326c8a8",
+      "center_x": 128.0,
+      "bottom": 242
+    },
+    {
+      "file": "jump_04.png",
+      "phase": "ASCEND",
+      "sha256": "c4dfd5a9393a0cfd1b35d6b840e04cea45072e475c9b2beb30bf35d95ba14ef3",
+      "center_x": 128.0,
+      "bottom": 242
+    },
+    {
+      "file": "jump_05.png",
+      "phase": "APEX",
+      "sha256": "1f5c9487d367958a44b921ff1e66a612d60144633b1bbef286e11ca362c559d9",
+      "center_x": 128.0,
+      "bottom": 242
+    },
+    {
+      "file": "jump_06.png",
+      "phase": "DESCEND",
+      "sha256": "795415aeafbdcf37b103b7de3d8013ea01722b7f0a0ac83a49d1e38565f13df4",
+      "center_x": 128.0,
+      "bottom": 242
+    },
+    {
+      "file": "jump_07.png",
+      "phase": "LAND",
+      "sha256": "ee8f1d96cf62690e53f9a092f0b558bf36712e14999468d2fc5f4083757a6e5a",
+      "center_x": 128.0,
+      "bottom": 242
+    },
+    {
+      "file": "jump_08.png",
+      "phase": "SETTLE",
+      "sha256": "24ccfdf8a7781a2c2d8235cad39551d91a27757131e489549d39e4529cebe862",
+      "center_x": 128.0,
+      "bottom": 242
+    }
+  ]
+}

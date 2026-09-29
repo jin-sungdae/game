@@ -178,6 +178,7 @@ impl World {
             self.monster_behavior = None;
         }
         self.server_encounter = Some((encounter.encounter_id, now + remaining));
+        self.view.animation.jump = None;
         self.place_server_monster(now);
     }
     pub fn debug_spawn(&mut self, now: f64) {
@@ -320,6 +321,7 @@ impl World {
         self.companion.set_movement_windows(windows);
     }
     pub fn tick(&mut self, now: f64, dt: f64, cursor: (f64, f64), down: bool) {
+        self.view.animation.jump = None;
         self.place_server_monster(now);
         // Hide an expired lease, but keep authority/budget until server reconciliation.
         if self.server_encounter.as_ref().is_some_and(|e| now >= e.1) {
@@ -432,6 +434,17 @@ impl World {
                                     dt,
                                 );
                             }
+                            self.view.animation.jump =
+                                self.monster_movement.jump.map(|mut sample| {
+                                    sample.timestamp = now;
+                                    sample.vx = if dt > 0.0 {
+                                        (position.0 - p.x) / dt
+                                    } else {
+                                        0.0
+                                    };
+                                    sample.facing = p.facing;
+                                    sample
+                                });
                             p.x = position.0;
                             p.y = position.1;
                         }

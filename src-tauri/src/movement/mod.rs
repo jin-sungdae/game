@@ -1,5 +1,6 @@
 //! Presentation-independent logical-point movement. No OS APIs, state transitions or clocks.
 pub mod ambient;
+pub mod jump;
 use crate::geometry::{Area, Size};
 use serde::{Deserialize, Serialize};
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize, Deserialize)]
@@ -139,6 +140,7 @@ struct Motion {
 #[derive(Default)]
 pub struct MovementController {
     active: Option<Motion>,
+    pub jump: Option<jump::Sample>,
 }
 impl MovementController {
     pub fn profile(&self) -> Option<MovementProfile> {
@@ -146,6 +148,7 @@ impl MovementController {
     }
     pub fn cancel(&mut self) {
         self.active = None;
+        self.jump = None;
     }
     pub fn start(
         &mut self,
@@ -154,6 +157,7 @@ impl MovementController {
         area: Area,
         size: Size,
     ) {
+        self.jump = None;
         intent.duration = intent.duration.max(0.001);
         intent.height = intent.height.max(0.0);
         let mut start = area.clamp(position.0, position.1, size);
@@ -208,6 +212,7 @@ impl MovementController {
         size: Size,
         ground_speed: f64,
     ) -> ((f64, f64), bool) {
+        self.jump = None;
         let Some(m) = self.active.as_mut() else {
             return (area.clamp(position.0, position.1, size), true);
         };
@@ -252,9 +257,20 @@ impl MovementController {
             MovementProfile::Static => m.start,
         };
         let result = area.clamp(result.0, result.1, size);
+        let jump =
+            (m.intent.profile == MovementProfile::Jump && m.intent.height > 0.0).then(|| {
+                jump::sample(
+                    p,
+                    m.intent.height,
+                    m.intent.duration,
+                    result,
+                    area.ground_y(),
+                )
+            });
         if complete {
             self.cancel();
         }
+        self.jump = jump;
         (result, complete)
     }
 }

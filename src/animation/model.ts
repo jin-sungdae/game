@@ -8,7 +8,7 @@ export interface IdleSequences { breath:string; blink:string; blinkIntervalMs:[n
 export interface Manifest {
   species:string; stage:number;
   canvas:{width:number;height:number}; anchor:{x:number;y:number};
-  display:{width:number}; animations:Record<string,Clip>; idleSequences?:IdleSequences;
+  display:{width:number}; animations:Record<string,Clip>; idleSequences?:IdleSequences; jumpPhases?:string[];
 }
 const positive = (n:unknown): n is number => typeof n === 'number' && Number.isFinite(n) && n > 0;
 export function parseManifest(value:unknown, species:string, stage:number): Manifest {
@@ -38,7 +38,7 @@ export function assetBase(species:string, stage:number) {
   return `/assets/creatures/${species}/stage${String(stage).padStart(2,'0')}`;
 }
 export function frameUrls(base:string, name:string, clip:Clip): string[] {
-  return Array.from({length:clip.frames}, (_,i) => `${base}/${name}/${name}_${String(i).padStart(2,'0')}.png`);
+  return Array.from({length:clip.frames}, (_,i) => `${base}/${name}/${name}_${String(name==='jump'?i+1:i).padStart(2,'0')}.png`);
 }
 export function directionScale(facing:number) { return facing < 0 ? -1 : 1; }
 // Fit the full canonical canvas; its bottom-center remains the world anchor.
