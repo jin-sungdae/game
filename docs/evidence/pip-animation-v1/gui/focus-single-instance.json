@@ -1,0 +1,83 @@
+{
+  "primaryPid": 56411,
+  "primaryWindowIdsBefore": [
+    319258,
+    319253,
+    319251
+  ],
+  "primaryWindowIdsAfter": [
+    319258,
+    319253,
+    319251
+  ],
+  "secondaries": [
+    {
+      "exitCode": 0,
+      "pid": 56982,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.openai.codex",
+          "frontPid": 5404,
+          "keyWindows": 0,
+          "pid": 56982,
+          "seconds": 0.0018169879913330078
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 56984,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.openai.codex",
+          "frontPid": 5404,
+          "keyWindows": 0,
+          "pid": 56984,
+          "seconds": 0.0015380382537841797
+        }
+      ]
+    },
+    {
+      "exitCode": 0,
+      "pid": 56986,
+      "aliveAfterLaunch": false,
+      "worldCreated": false,
+      "panelsCreated": false,
+      "audit": [
+        {
+          "activations": 0,
+          "event": "before-tauri",
+          "frontBundle": "com.openai.codex",
+          "frontPid": 5404,
+          "keyWindows": 0,
+          "pid": 56986,
+          "seconds": 0.002484917640686035
+        }
+      ]
+    }
+  ],
+  "primaryAudit": [
+    {
+      "activations": 0,
+      "event": "before-tauri",
+      "frontBundle": "com.google.Chrome",
+      "frontPid": 21425,
+      "keyWindows": 0,
+      "pid": 56411,
+      "seconds": 0.004048943519592285
+    }
+  ],
+  "noLumaForeground": true,
+  "focusPass": true,
+  "singleInstancePass": true
+}

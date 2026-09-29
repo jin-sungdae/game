@@ -150,7 +150,28 @@ def validate(root=ROOT, allow_missing=False):
                         indices.add(index)
                     if p.suffix.lower() == '.png':
                         errors.extend(f'{prefix}/{clip}/{p.name}: {e}' for e in png_errors(p))
-    return errors, pending
+    pip_errors, pip_pending = validate_pip_animation(root, allow_missing)
+    return errors + pip_errors, pending + pip_pending
+
+
+def validate_pip_animation(root=ROOT, allow_missing=False):
+    """PIP pilot delivery extends the existing PNG validator; Blink is unsupplied."""
+    errors, pending = [], []
+    directory = root/'public/assets/monsters/pip'
+    for clip, count in [('idle',4),('walk',8),('react',6)]:
+        folder = directory/clip
+        if not folder.is_dir():
+            (pending if allow_missing else errors).append(f'PIP/{clip}: NOT_SUPPLIED')
+            continue
+        files = [p for p in folder.iterdir() if p.name not in ('.gitkeep','.DS_Store')]
+        if not files and allow_missing:
+            pending.append(f'PIP/{clip}: NOT_SUPPLIED');continue
+        expected = {f'{clip}_{i:02}.png' for i in range(count)}
+        if {p.name for p in files} != expected or len(files) != count:
+            errors.append(f'PIP/{clip}: filename/count/case mismatch')
+        for p in files:
+            errors.extend(f'PIP/{clip}/{p.name}: {e}' for e in png_errors(p,True))
+    return errors,pending
 
 
 def validate_bases(root=ROOT, strict=False):
@@ -233,7 +254,7 @@ def validate_alpha(root=ROOT, strict=False):
                         m = json.loads(entry.read_text())
                         expected = {'species':'pip','stage':1,'canvas':{'width':256,'height':256},
                             'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{
-                                'idle':{'frames':6,'frameDuration':100,'loop':True},
+                                'idle':{'frames':4,'frameDuration':450,'loop':True},
                                 'walk':{'frames':8,'frameDuration':80,'loop':True},
                                 'react':{'frames':6,'frameDuration':80,'loop':False}}}
                         if m != expected:

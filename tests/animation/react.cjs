@@ -5,7 +5,7 @@ test('REACT opt-in is atomic, static and own-character only; missing frame isola
  const p=pilotDefinition('moa');assert.equal(p.reactStatus,'PRODUCTION');
  const assets=new PilotAssets(new AssetLoader({json:browserIO.json,image:async u=>{if(u.endsWith('react_03.png'))throw Error('missing');return {width:256,height:256};}}));
  assert.equal(await assets.load(p,'REACT'),null);assert.equal((await assets.load(p,'IDLE')).urls.length,4);assert.equal((await assets.load(p,'MOVE')).urls.length,8);
- assert.equal(p.base,'/assets/creatures/moa/stage01/base.png');assert.equal(await assets.load({...p,reactStatus:undefined},'REACT'),null);assert.equal(await assets.load(pilotDefinition('PIP'),'REACT'),null);
+ assert.equal(p.base,'/assets/creatures/moa/stage01/base.png');assert.equal(await assets.load({...p,reactStatus:undefined},'REACT'),null);assert.equal(await assets.load({...pilotDefinition('PIP'),status:'NOT_SUPPLIED'},'REACT'),null);
 });
 test('six 80ms frames play once; reduced motion pins neutral; current velocity controls completion',async()=>{
  const asset=await new PilotAssets(new AssetLoader({json:browserIO.json,image:async()=>({width:256,height:256})})).load(pilotDefinition('moa'),'REACT');

@@ -1,7 +1,7 @@
 """Offline real native-window pixel/position measurements; never modifies renderer."""
 import argparse,bisect,csv,datetime,hashlib,json,re,statistics,subprocess as sp
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('root',type=Path);a=p.parse_args();root=a.root
+p=argparse.ArgumentParser();p.add_argument('root',type=Path);p.add_argument('--pip-only',action='store_true');a=p.parse_args();root=a.root
 log=(root/'session/app.log').read_text();native=[]
 for line in log.splitlines():
  m=re.search(r't=([\d.]+) .*?Some\(\((\w+), (-?\d+)\)\).*?pip=Some\(\(([\d.e+-]+), ([\d.e+-]+)\)\)',line)
@@ -16,7 +16,7 @@ for k in range(-25,26):
  epoch=base+k/100;errors=[abs(predicted(r['after']-epoch)-(r['panels'][0]['X']+48)) for r in raw[::5]];fits.append((statistics.mean(errors),epoch))
 error,epoch=min(fits)
 result={'epochFit':{'epoch':epoch,'meanPositionResidualPt':error,'method':'Existing AppKit timestamp +/-250ms fitted to native x and CGWindow centers. Native t precision10ms; sequential sampling and integer CG rounding remain.'},'nativeTrace':native}
-for name in ['pip','moa']:
+for name in (['pip'] if a.pip_only else ['pip','moa']):
  cap=json.loads((root/(name+'-frames')/'frames.json').read_text())['frames'];cache={};pixels=[]
  for f in cap:
   path=root/(name+'-frames')/f['file'];h=hashlib.sha256(path.read_bytes()).hexdigest()
@@ -41,5 +41,5 @@ for pix in pip:
 with (root/'facing-trace.csv').open('w') as f:w=csv.DictWriter(f,fieldnames=tr[0].keys());w.writeheader();w.writerows(tr)
 result['movementSegments']=segments;result['stableMovingSamples']=sum(r['direction']!='STILL' and not r['nearFacingTransition150ms'] for r in tr)
 result['facingMismatches']=[r for r in tr if r['direction']!='STILL' and not r['nearFacingTransition150ms'] and (r['nativeFacing']!=(1 if r['direction']=='RIGHT' else -1) or r['nativeFacing']!=r['rendererFacingFromPixels'])]
-result['note']='Base renderer on latest main, PR49 animation NOT_SUPPLIED. Pixel centroid classification independently reviewed in LEFT/RIGHT representative captures. Nominal flip maps source RIGHT using unchanged renderer; no DOM probe. Velocities are rounded CGWindow displacement, not injected physics telemetry.'
+result['note']='Asset source and animation state are read from actual AX labels in the CSV. Pixel centroid classification independently reviewed in LEFT/RIGHT representative captures. Nominal flip maps source RIGHT using unchanged renderer; no DOM probe. Velocities are rounded CGWindow displacement, not injected physics telemetry.'
 (root/'analysis.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps({k:({i:j for i,j in v.items() if i!='pixels'} if k in ['pip','moa'] else v) for k,v in result.items() if k not in ['nativeTrace','facingMismatches']},indent=2));print('mismatches',len(result['facingMismatches']))

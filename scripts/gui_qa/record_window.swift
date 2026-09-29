@@ -26,10 +26,11 @@ final class Frames: NSObject, SCStreamOutput, @unchecked Sendable {
     static func main() async throws {
         _ = NSApplication.shared
         let args = CommandLine.arguments
-        guard args.count == 4, let pid = Int32(args[1]), let duration = Double(args[2]), duration >= 5 else { fatalError("record_window PID SECONDS OUTPUT") }
+        guard (args.count == 4 || args.count == 5), let pid = Int32(args[1]), let duration = Double(args[2]), duration >= 5 else { fatalError("record_window PID SECONDS OUTPUT") }
+        let entity = args.count == 5 ? args[4] : "moa"
         let dir = URL(fileURLWithPath: args[3]); try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
         let content = try await SCShareableContent.excludingDesktopWindows(true, onScreenWindowsOnly: true)
-        guard let window = content.windows.first(where: { $0.owningApplication?.processID == pid && $0.title == "moa" }) else { fatalError("MOA window not found") }
+        guard let window = content.windows.first(where: { $0.owningApplication?.processID == pid && $0.title == entity }) else { fatalError("MOA window not found") }
         let filter = SCContentFilter(desktopIndependentWindow: window)
         let config = SCStreamConfiguration()
         config.width = Int(window.frame.width * 2); config.height = Int(window.frame.height * 2)

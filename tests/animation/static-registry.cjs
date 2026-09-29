@@ -8,7 +8,7 @@ test('static MOA IDLE lookup never uses fetch, keeps unavailable states and own-
   let images=0;const assets=new PilotAssets(new AssetLoader({json:browserIO.json,image:async()=>{images++;return {width:256,height:256};}}));const moa=pilotDefinition('moa');
   const clip=await assets.load(moa,'IDLE');assert.equal(clip.urls.length,4);assert.equal(clip.clip.frameDuration,450);
   for(const state of ['INVALID','toString'])assert.equal(await assets.load(moa,state),null);
-  for(const state of ['IDLE','MOVE','REACT'])assert.equal(await assets.load(pilotDefinition('PIP'),state),null);
+  for(const state of ['IDLE','MOVE','REACT'])assert.equal(await assets.load({...pilotDefinition('PIP'),status:'NOT_SUPPLIED'},state),null);
   assert.equal(images,4);
   for(const mode of ['missing','invalid','missing-frame']){
    const io={json:mode==='invalid'?async()=>({species:'wrong'}):browserIO.json,image:async()=>{throw Error('missing frame');}};

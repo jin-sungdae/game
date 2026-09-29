@@ -1,0 +1,35 @@
+LUMA_AUDIT {"activations":0,"event":"before-tauri","frontBundle":"com.google.Chrome","frontPid":21425,"keyWindows":0,"pid":56411,"seconds":0.0040489435195922852}
+2026-09-28 20:35:26.166 luma-spike[56411:57198625] [LUMA PANEL] moa opaque=0 level=3 keyAllowed=0 mainAllowed=0
+2026-09-28 20:35:26.195 luma-spike[56411:57198625] [LUMA PANEL] pip opaque=0 level=3 keyAllowed=0 mainAllowed=0
+2026-09-28 20:35:26.228 luma-spike[56411:57198625] [LUMA PANEL] interaction opaque=0 level=3 keyAllowed=0 mainAllowed=0
+[LUMA BACKEND] bootstrap player=1 companion=MOA/stage1
+[LUMA STATE] t=0.04 Idle:None:-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=None
+[LUMA FOCUS] app active=0 t=0.04
+[LUMA INPUT] encounter
+[LUMA SPAWN] placed PIP encounter=8c572ca1-2ca7-41eb-b7f0-c7ba413bc952 at=(316.0, 200.0)
+[LUMA BACKEND] bootstrap player=1 companion=MOA/stage1
+[LUMA STATE] t=0.76 Idle:Some((Spawning, -1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((316.0, 200.0))
+[LUMA STATE] t=1.37 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((316.0, 200.0))
+[LUMA STATE] t=4.01 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 24.0 } moa=(1632.0,200.0) pip=Some((315.110365, 200.0))
+[LUMA STATE] t=5.04 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((291.144131968, 200.0))
+[LUMA STATE] t=13.79 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 24.0 } moa=(1632.0,200.0) pip=Some((291.977796952, 200.0))
+[LUMA STATE] t=15.79 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((339.144131968, 200.0))
+[LUMA STATE] t=19.64 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1632.0,200.0) pip=Some((338.650162968, 200.0))
+[LUMA STATE] t=20.22 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((330.954473778, 200.0))
+[LUMA STATE] t=23.60 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1632.0,200.0) pip=Some((331.44985269, 200.0))
+[LUMA STATE] t=26.79 Idle:Some((Roaming, -1)):-1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((375.478117616, 200.0))
+[LUMA STATE] t=30.03 Walking:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1632.0,200.0) pip=Some((375.478117616, 200.0))
+[LUMA STATE] t=30.06 Walking:Some((Roaming, -1)):1:false:Motion { moa: 40.0, pip: 0.0 } moa=(1633.4,200.0) pip=Some((375.478117616, 200.0))
+[LUMA STATE] t=33.10 Walking:Some((Roaming, -1)):1:false:Motion { moa: 40.0, pip: 12.0 } moa=(1754.8,200.0) pip=Some((376.008539116, 200.0))
+[LUMA STATE] t=33.39 Idle:Some((Roaming, -1)):1:false:Motion { moa: 40.0, pip: 12.0 } moa=(1766.4,200.0) pip=Some((380.100393218, 200.0))
+[LUMA STATE] t=33.42 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 12.0 } moa=(1766.4,200.0) pip=Some((380.58588054200004, 200.0))
+[LUMA STATE] t=35.93 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 8.0 } moa=(1766.4,200.0) pip=Some((415.478117616, 200.0))
+[LUMA STATE] t=35.97 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 24.0 } moa=(1766.4,200.0) pip=Some((414.673544616, 200.0))
+[LUMA STATE] t=37.97 Idle:Some((Roaming, -1)):1:false:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((367.478117616, 200.0))
+[LUMA INPUT] interact
+[LUMA STATE] t=38.80 Idle:Some((Engaged, -1)):1:true:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((367.478117616, 200.0))
+[LUMA BACKEND] bootstrap player=1 companion=MOA/stage1
+[LUMA INPUT] capture
+[LUMA BACKEND] bootstrap player=1 companion=MOA/stage1
+[LUMA STATE] t=68.12 Looking:Some((Engaged, -1)):-1:true:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((367.478117616, 200.0))
+[LUMA STATE] t=71.52 Idle:Some((Engaged, -1)):-1:true:Motion { moa: 0.0, pip: 0.0 } moa=(1766.4,200.0) pip=Some((367.478117616, 200.0))
