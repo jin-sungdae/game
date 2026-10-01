@@ -15,8 +15,8 @@ test('arrival battle capture despawn lifecycle and invalid signal fail closed',(
  for(const x of [{},input(NaN),input(Infinity),input(257),{...input(20),flight:null}])assert.equal(resolveFlying(x,'FLY').suppressed,true);
  const frozen=input(40);Object.freeze(frozen.flight);resolveFlying(frozen,'HOVER');assert.equal(frozen.flight.x,100);
 });
-test('all supplied states use own registry, original filenames and candidate timing',async()=>{
- assert.equal(p.status,'SUPPLIED');assert.equal(p.base,'/assets/monsters/chirp/base.png');const urls=[];
+test('all supplied states use own registry, original filenames and approved Alpha timing',async()=>{
+ assert.equal(p.status,'FLYING_PRODUCTION');assert.equal(p.base,'/assets/monsters/chirp/base.png');const urls=[];
  const assets=new PilotAssets(new AssetLoader({json:async()=>m,image:async u=>{urls.push(u);return {width:256,height:256}}}));
  for(const [state,count,cycle] of [['HOVER',4,1600],['FLY',6,540],['GLIDE',2,600]]){
   const c=await assets.load(p,state);assert.equal(c.clip.frames,count);assert.equal(c.clip.frameDuration*count,cycle);assert.ok(c.urls[0].endsWith('_01.png'));
