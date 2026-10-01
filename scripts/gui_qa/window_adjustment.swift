@@ -10,11 +10,11 @@ func size(_ w:AXUIElement)->CGSize { var p=CGSize.zero; if let v=attr(w,kAXSizeA
 func state(_ w:AXUIElement)->[String:Any] { let p=point(w),s=size(w);return ["x":p.x,"y":p.y,"width":s.width,"height":s.height,"fullscreen":(attr(w,"AXFullScreen") as? NSNumber)?.boolValue ?? false] }
 func geometry(_ w:AXUIElement,_ p:CGPoint,_ s:CGSize) { var p=p,s=s; AXUIElementSetAttributeValue(w,kAXPositionAttribute as CFString,AXValueCreate(.cgPoint,&p)!);AXUIElementSetAttributeValue(w,kAXSizeAttribute as CFString,AXValueCreate(.cgSize,&s)!) }
 let args=CommandLine.arguments
-if args.count != 6 && args.count != 7 { fatalError("PID X Y TEMP_HEIGHT OUTPUT_DIRECTORY") }
+if args.count != 6 && args.count != 7 && args.count != 8 { fatalError("PID X Y TEMP_HEIGHT OUTPUT_DIRECTORY") }
 let pid=Int32(args[1])!,x=Double(args[2])!,y=Double(args[3])!,height=Double(args[4])!,dir=URL(fileURLWithPath:args[5]);try FileManager.default.createDirectory(at:dir,withIntermediateDirectories:true)
 let app=AXUIElementCreateApplication(pid)
 let allWindows=attr(app,kAXWindowsAttribute) as? [AXUIElement] ?? []
-let windows=args.count == 7 ? [allWindows[Int(args[6])!]] : allWindows
+let windows=args.count >= 7 ? [allWindows[Int(args[6])!]] : allWindows
 guard let window=windows.first(where:{abs(point($0).x-x)<3 && abs(point($0).y-y)<3 && size($0).height>100}) else {fatalError("Exact observed window not found")}
 let original=state(window),originalPoint=point(window),originalSize=size(window),full=(original["fullscreen"] as! Bool)
 var report:[String:Any]=["pid":pid,"original":original,"startedAt":Date().timeIntervalSince1970]
@@ -29,7 +29,7 @@ func run() {
   report["restored"]=state(window);report["endedAt"]=Date().timeIntervalSince1970;report["restoreMatchesOriginal"]=NSDictionary(dictionary:original).isEqual(to:state(window));save()
  }
  if full {let result=AXUIElementSetAttributeValue(window,"AXFullScreen" as CFString,kCFBooleanFalse);if result != .success {report["error"]="Cannot leave fullscreen";return};Thread.sleep(forTimeInterval:2)}
- geometry(window,originalPoint,CGSize(width:originalSize.width,height:height));Thread.sleep(forTimeInterval:0.5);report["temporary"]=state(window);save()
+ geometry(window,CGPoint(x:originalPoint.x,y:args.count == 8 ? Double(args[7])! : originalPoint.y),CGSize(width:originalSize.width,height:height));Thread.sleep(forTimeInterval:0.5);report["temporary"]=state(window);save()
  let deadline=Date().addingTimeInterval(600)
  while Date()<deadline && !restoreRequested && !FileManager.default.fileExists(atPath:dir.appendingPathComponent("restore").path) {Thread.sleep(forTimeInterval:0.2)}
 }

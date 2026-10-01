@@ -1,0 +1,116 @@
+{
+  "cspBeforeSha256": "5ba97f016dfb215df31f1593f0b207a2a6f25956e65326ccb26dde40246a7b8e",
+  "cspAfterSha256": "5ba97f016dfb215df31f1593f0b207a2a6f25956e65326ccb26dde40246a7b8e",
+  "cspUnchanged": true,
+  "baseUnchanged": true,
+  "baseSha256": "8629ba2cf4f22f3e0946f7d3e030869ce5f38f5a06f2f65ca9af77c14bfba83e",
+  "bundleBinarySha256": "d6c8a8d9638a498b49011d50b8965129b5002ae8538135718ea1d5c4224003db",
+  "bundleSourceHead": "0b5429f9e6a2b810396eb2f98ee848f131643af0",
+  "sharedClockAndMovementControllerUnchanged": true,
+  "focusAndSingleInstance": {
+    "primaryPid": 67981,
+    "primaryWindowIdsBefore": [
+      342009
+    ],
+    "primaryWindowIdsAfter": [
+      342009
+    ],
+    "secondaries": [
+      {
+        "exitCode": 0,
+        "pid": 70960,
+        "aliveAfterLaunch": false,
+        "worldCreated": false,
+        "panelsCreated": false,
+        "audit": [
+          {
+            "activations": 0,
+            "event": "before-tauri",
+            "frontBundle": "com.openai.codex",
+            "frontPid": 93868,
+            "keyWindows": 0,
+            "pid": 70960,
+            "seconds": 0.0032820701599121094
+          }
+        ]
+      },
+      {
+        "exitCode": 0,
+        "pid": 70964,
+        "aliveAfterLaunch": false,
+        "worldCreated": false,
+        "panelsCreated": false,
+        "audit": [
+          {
+            "activations": 0,
+            "event": "before-tauri",
+            "frontBundle": "com.openai.codex",
+            "frontPid": 93868,
+            "keyWindows": 0,
+            "pid": 70964,
+            "seconds": 0.0025730133056640625
+          }
+        ]
+      },
+      {
+        "exitCode": 0,
+        "pid": 70966,
+        "aliveAfterLaunch": false,
+        "worldCreated": false,
+        "panelsCreated": false,
+        "audit": [
+          {
+            "activations": 0,
+            "event": "before-tauri",
+            "frontBundle": "com.openai.codex",
+            "frontPid": 93868,
+            "keyWindows": 0,
+            "pid": 70966,
+            "seconds": 0.0031371116638183594
+          }
+        ]
+      }
+    ],
+    "primaryAudit": [
+      {
+        "activations": 0,
+        "event": "before-tauri",
+        "frontBundle": "com.openai.codex",
+        "frontPid": 93868,
+        "keyWindows": 0,
+        "pid": 67981,
+        "seconds": 0.0023180246353149414
+      }
+    ],
+    "noLumaForeground": true,
+    "focusPass": true,
+    "singleInstancePass": true
+  },
+  "windowRestoration": {
+    "endedAt": 1790835108.007731,
+    "original": {
+      "fullscreen": true,
+      "height": 1080,
+      "width": 1920,
+      "x": 0,
+      "y": 0
+    },
+    "pid": 93868,
+    "restored": {
+      "fullscreen": true,
+      "height": 1080,
+      "width": 1920,
+      "x": 0,
+      "y": 0
+    },
+    "restoreMatchesOriginal": true,
+    "startedAt": 1790834927.818563,
+    "temporary": {
+      "fullscreen": false,
+      "height": 600,
+      "width": 1920,
+      "x": 0,
+      "y": 400
+    }
+  }
+}

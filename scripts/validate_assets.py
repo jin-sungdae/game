@@ -155,6 +155,28 @@ def validate(root=ROOT, allow_missing=False):
 
 
 
+def validate_chirp_flying(root=ROOT):
+    import hashlib
+    errors=[];d=root/'public/assets/monsters/chirp';counts={'hover':(4,400),'fly':(6,90),'glide':(2,300)}
+    try:
+        source=json.loads((d/'delivery/manifest.json').read_text());m=json.loads((d/'manifest.json').read_text())
+        expected={'species':'chirp','stage':1,'canvas':{'width':256,'height':256},'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{n:{'frames':c,'frameDuration':t,'loop':True} for n,(c,t) in counts.items()}}
+        if m!=expected or source['character']!='CHIRP' or source['movement_profile']!='FLYING' or source['canvas']!=[256,256] or source['source_facing']!='RIGHT' or source['anchor']!='bottom-center':errors.append('CHIRP metadata contract')
+        if source['profile']!={'hover':{'frames':4,'cycle_ms':1600},'fly':{'frames':6,'frame_ms':90,'cycle_ms':540},'glide':{'frames':2,'cycle_ms':600}}:errors.append('CHIRP candidate timings')
+        names=[f'{n}/{n}_{i:02}.png' for n,(c,t) in counts.items() for i in range(1,c+1)]
+        if [f['file'] for f in source['frames']]!=names:errors.append('CHIRP manifest files')
+        for n,(c,t) in counts.items():
+            if sorted(p.name for p in (d/n).iterdir())!=[f'{n}_{i:02}.png' for i in range(1,c+1)]:errors.append('CHIRP filenames '+n)
+        bounds=[]
+        for f in source['frames']:
+            if f['file'] not in names:errors.append('CHIRP noncanonical path');continue
+            p=d/f['file'];b=[];errors.extend(png_errors(p,True,b));bounds.append(b)
+            if hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256']:errors.append('CHIRP SHA mismatch')
+            if len(b)==4 and ((b[0]+b[2]+1)/2!=f['center_x'] or b[3]+1!=f['bottom']):errors.append('CHIRP registration metadata')
+        if len(bounds)!=12 or any(len(b)!=4 for b in bounds) or len({(b[0]+b[2],b[3]) for b in bounds if len(b)==4})!=1:errors.append('CHIRP registration drift')
+    except (OSError,ValueError,KeyError,TypeError) as e:errors.append('CHIRP FLYING: '+str(e))
+    return errors
+
 def validate_mello_jump(root=ROOT):
     import hashlib
     errors=[];directory=root/'public/assets/monsters/mello';d=directory/'jump'
@@ -270,6 +292,9 @@ def validate_alpha(root=ROOT, strict=False):
                 if entry.is_dir():
                     if entry.name.casefold().startswith('base.'):
                         errors.append(f'{entry}: base must be a regular PNG file')
+                    continue
+                if code == 'CHIRP' and entry.name == 'manifest.json':
+                    errors.extend(validate_chirp_flying(root))
                     continue
                 if code == 'MELLO' and entry.name == 'manifest.json':
                     errors.extend(validate_mello_jump(root))

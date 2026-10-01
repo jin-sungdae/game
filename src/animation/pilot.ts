@@ -1,17 +1,19 @@
+import { flyingClips, type FlightMotion } from './flying';
 import { jumpPhases, type JumpSample } from './jump';
 import { companionBase } from '../assets/base';
 import { resolveCompanion } from '../entities/registry';
 import { resolveMonster } from '../entities/monsters';
 import { AssetLoader, type LoadedClip } from './loader';
 export type AnimationState = 'IDLE'|'MOVE'|'REACT';
-export type AnimationSequence = AnimationState|'BLINK'|'JUMP';
+export type AnimationSequence = AnimationState|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
 // Readiness describes clip assets, not gameplay triggers (PIP mouse REACT is unavailable).
-export interface Pilot { character:'MOA'|'PIP'|'MELLO'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; jumpProfile?:'JUMP'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
+export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
 export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
   if(character==='PIP') return {character:'PIP',species:'pip',stage:1,manifest:resolveMonster('PIP')!.assetRoot+'/manifest.json',base:resolveMonster('PIP')!.baseAsset!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'};
   if(character==='MELLO') return {character:'MELLO',species:'mello',stage:1,manifest:resolveMonster('MELLO')!.assetRoot+'/manifest.json',base:resolveMonster('MELLO')!.baseAsset!,status:'JUMP_PRODUCTION',sourceFacing:'RIGHT',jumpProfile:'JUMP'};
+  if(character==='CHIRP') return {character:'CHIRP',species:'chirp',stage:1,manifest:resolveMonster('CHIRP')!.assetRoot+'/manifest.json',base:resolveMonster('CHIRP')!.baseAsset!,status:'FLYING_PRODUCTION',sourceFacing:'RIGHT',flyingProfile:'FLYING'};
   return null;
 }
 export const pilotFrames = {IDLE:6,MOVE:8,REACT:6} as const;
@@ -20,6 +22,13 @@ export const pilotContract = {canvas:256,anchor:{x:.5,y:1},maxFrames:32,minFrame
 export class PilotAssets {
   constructor(private loader=new AssetLoader()) {}
   async load(p:Pilot,state:AnimationSequence):Promise<LoadedClip|null> {
+    if(p.flyingProfile==='FLYING') {
+      if(p.status==='NOT_SUPPLIED' || !Object.hasOwn(flyingClips,state)) return null;
+      const c=flyingClips[state as keyof typeof flyingClips];
+      const a=await this.loader.loadRegistered(p.species,p.stage,p.manifest,c.name);
+      return a && a.manifest.canvas.width===256 && a.manifest.canvas.height===256 && a.clip.frames===c.frames && a.clip.frameDuration===c.frameDuration && a.clip.loop?a:null;
+    }
+    if(state==='HOVER' || state==='FLY' || state==='GLIDE') return null;
     if(p.jumpProfile==='JUMP') {
       if(state!=='JUMP' || p.status==='NOT_SUPPLIED') return null;
       const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,'jump');
@@ -38,7 +47,7 @@ export class PilotAssets {
     return asset;
   }
 }
-export interface AnimationInput { speed:number;state:string;suppressed:boolean; jump?:JumpSample|null }
+export interface AnimationInput { speed:number;state:string;suppressed:boolean; jump?:JumpSample|null; flight?:FlightMotion|null }
 export class AnimationStateResolver {
   private speed=0;
   private moving=false;
