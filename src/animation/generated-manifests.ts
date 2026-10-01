@@ -206,6 +206,38 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "ruu",
     "stage": 1
   },
+  "/assets/monsters/chirp/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "fly": {
+        "frameDuration": 90.0,
+        "frames": 6,
+        "loop": true
+      },
+      "glide": {
+        "frameDuration": 300.0,
+        "frames": 2,
+        "loop": true
+      },
+      "hover": {
+        "frameDuration": 400.0,
+        "frames": 4,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "chirp",
+    "stage": 1
+  },
   "/assets/monsters/mello/manifest.json": {
     "anchor": {
       "x": 0.5,

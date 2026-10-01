@@ -14,7 +14,7 @@ export function Creature({ kind, entity }: { kind:'moa'|'pip'; entity:Entity }) 
   const effect=effectFor(visual?.phase,kind);const damage=damageFor(visual,kind);
   const arrival=kind==='pip' ? spawnPresentation(monster?.rarity,entity.state,Boolean(game?.battle)||Boolean(game?.busy)||effect!=='none') : null;
   const defeated=kind==='pip' && game?.battle?.status==='VICTORY';
-  const animationInput={jump:kind==='pip'?animation?.jump:null,state:entity.state,speed:animation?.[kind]??0,suppressed:Boolean(arrival)||entity.state==='SPAWNING'||entity.state==='DESPAWNING'||Boolean(game?.battle)||Boolean(game?.busy)||effect!=='none'||(evolution?.phase??'IDLE')!=='IDLE'};
+  const animationInput={flight:kind==='pip'?animation?.flight:null,jump:kind==='pip'?animation?.jump:null,state:entity.state,speed:animation?.[kind]??0,suppressed:Boolean(arrival)||entity.state==='SPAWNING'||entity.state==='DESPAWNING'||Boolean(game?.battle)||Boolean(game?.busy)||effect!=='none'||(evolution?.phase??'IDLE')!=='IDLE'};
   return <div className={`creature gp-creature ${kind} ${entity.state} ${arrival?'spawn-enhanced':''}`} style={{'--skin':assets[kind].color,'--gp-direction':entity.facing} as React.CSSProperties}
     title={kind === 'moa' ? `${identity?.evolutionName ?? 'MOA'} · drag / click · right-click for server encounter` : `${monster?.monsterCode ?? 'Debug PIP'} · click to interact`}
     onPointerDown={e => { if(e.button === 0 && kind === 'moa') void action('drag'); }}

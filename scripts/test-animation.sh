@@ -29,3 +29,5 @@ node --test tests/animation/react.cjs
 node --test tests/animation/pip.cjs
 
 node --test tests/animation/jump.cjs
+
+node --test tests/animation/flying.cjs

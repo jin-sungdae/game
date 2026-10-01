@@ -1,0 +1,32 @@
+{
+  "species": "chirp",
+  "stage": 1,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "display": {
+    "width": 82
+  },
+  "animations": {
+    "hover": {
+      "frames": 4,
+      "frameDuration": 400.0,
+      "loop": true
+    },
+    "fly": {
+      "frames": 6,
+      "frameDuration": 90.0,
+      "loop": true
+    },
+    "glide": {
+      "frames": 2,
+      "frameDuration": 300.0,
+      "loop": true
+    }
+  }
+}
