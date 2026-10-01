@@ -1,0 +1,103 @@
+{
+  "character": "CHIRP",
+  "movement_profile": "FLYING",
+  "canvas": [
+    256,
+    256
+  ],
+  "source_facing": "RIGHT",
+  "anchor": "bottom-center",
+  "profile": {
+    "hover": {
+      "frames": 4,
+      "cycle_ms": 1600
+    },
+    "fly": {
+      "frames": 6,
+      "frame_ms": 90,
+      "cycle_ms": 540
+    },
+    "glide": {
+      "frames": 2,
+      "cycle_ms": 600
+    }
+  },
+  "registration": {
+    "max_center_x_delta_px": 0.0,
+    "max_bottom_delta_px": 0
+  },
+  "frames": [
+    {
+      "file": "hover/hover_01.png",
+      "sha256": "118b4e2ad84a0ccffba9a9568e9af69834eb1eed177147168845edf2aa11ee4a",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "hover/hover_02.png",
+      "sha256": "38207686699ff1add7abd6f5d8b1964fcfaaa871fe4aaa461350d7ad9d766739",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "hover/hover_03.png",
+      "sha256": "118b4e2ad84a0ccffba9a9568e9af69834eb1eed177147168845edf2aa11ee4a",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "hover/hover_04.png",
+      "sha256": "04a4bc3151163f9b2e80f60d7d39b2dfb18f30e2f90b7636e322d7bc970d8aa7",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "fly/fly_01.png",
+      "sha256": "118b4e2ad84a0ccffba9a9568e9af69834eb1eed177147168845edf2aa11ee4a",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "fly/fly_02.png",
+      "sha256": "580c01ea9c5cc1b352eb67be2f115bb50008bccec7650b4ea25a2ba6305e7d4d",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "fly/fly_03.png",
+      "sha256": "901cd28f8776b40bb6723af211285bb09979c0959e168a297bb53e59b201d1a3",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "fly/fly_04.png",
+      "sha256": "118b4e2ad84a0ccffba9a9568e9af69834eb1eed177147168845edf2aa11ee4a",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "fly/fly_05.png",
+      "sha256": "1885c64cbe9b425bdbe77edd03ae2ef5dfb601c1904fcc99d45a0baeec0c4ef8",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "fly/fly_06.png",
+      "sha256": "83c919736356329021e0b3f08394b55a432cbbe8493361fb151b58981b647e40",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "glide/glide_01.png",
+      "sha256": "118b4e2ad84a0ccffba9a9568e9af69834eb1eed177147168845edf2aa11ee4a",
+      "center_x": 128.0,
+      "bottom": 252
+    },
+    {
+      "file": "glide/glide_02.png",
+      "sha256": "5344f1a7e1f5a384189d24f8d44f7f32026dd79d8778fb8a11c5bb06e4b6884a",
+      "center_x": 128.0,
+      "bottom": 252
+    }
+  ]
+}
