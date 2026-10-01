@@ -301,5 +301,37 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     },
     "species": "pip",
     "stage": 1
+  },
+  "/assets/monsters/puff/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "float": {
+        "frameDuration": 200,
+        "frames": 6,
+        "loop": true
+      },
+      "hover": {
+        "frameDuration": 500,
+        "frames": 4,
+        "loop": true
+      },
+      "settle": {
+        "frameDuration": 200,
+        "frames": 2,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "puff",
+    "stage": 1
   }
 };

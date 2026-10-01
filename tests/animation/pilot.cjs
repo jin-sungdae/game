@@ -34,8 +34,8 @@ for(const [character,base] of [['moa','/assets/creatures/moa/stage01/base.png'],
   observe(40,1000,'REACTING',true);assert.equal(r.sample(1000).suppressed,true);assert.equal(r.sample(1000).state,'IDLE');
  });
 }
-test('only pilot opts in, remaining 12 monster and stage2/3 unchanged',()=>{
- for(const name of ['MOSSY','BUBU','PEBB','PUFF','TIKKI','MIMI','WISP','SHADE','EMBER','LUNET','NOVA','NOCT','unknown','MOKORI','NEBLA'])assert.equal(pilotDefinition(name),null);
+test('only pilot opts in, remaining 11 monster and stage2/3 unchanged',()=>{
+ for(const name of ['MOSSY','BUBU','PEBB','TIKKI','MIMI','WISP','SHADE','EMBER','LUNET','NOVA','NOCT','unknown','MOKORI','NEBLA'])assert.equal(pilotDefinition(name),null);
  for(const stage of [2,3])assert.equal(pilotDefinition('moa',stage),null);
 });
 test('drag and invalid speed cannot drive walking playback',()=>{
