@@ -7,11 +7,11 @@ export type AnimationState = 'IDLE'|'MOVE'|'REACT';
 export type AnimationSequence = AnimationState|'BLINK'|'JUMP';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
 // Readiness describes clip assets, not gameplay triggers (PIP mouse REACT is unavailable).
-export interface Pilot { character:'MOA'|'PIP'|'MELLO'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; jumpProfile?:'JUMP'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
+export interface Pilot { character:'MOA'|'PIP'|'MELLO'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; jumpProfile?:'JUMP'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
 export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
   if(character==='PIP') return {character:'PIP',species:'pip',stage:1,manifest:resolveMonster('PIP')!.assetRoot+'/manifest.json',base:resolveMonster('PIP')!.baseAsset!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'};
-  if(character==='MELLO') return {character:'MELLO',species:'mello',stage:1,manifest:resolveMonster('MELLO')!.assetRoot+'/manifest.json',base:resolveMonster('MELLO')!.baseAsset!,status:'SUPPLIED',sourceFacing:'RIGHT',jumpProfile:'JUMP'};
+  if(character==='MELLO') return {character:'MELLO',species:'mello',stage:1,manifest:resolveMonster('MELLO')!.assetRoot+'/manifest.json',base:resolveMonster('MELLO')!.baseAsset!,status:'JUMP_PRODUCTION',sourceFacing:'RIGHT',jumpProfile:'JUMP'};
   return null;
 }
 export const pilotFrames = {IDLE:6,MOVE:8,REACT:6} as const;

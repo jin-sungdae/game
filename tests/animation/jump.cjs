@@ -10,7 +10,9 @@ test('native phases select frames without elapsed playback, ground gate fails cl
  }
  for(const s of [null,sample('CROUCH'),sample('SETTLE'),sample('NEUTRAL'),sample('LAND',0,false),sample('DESCEND',-2,true),sample('ASCEND',-1),sample('DESCEND',1),sample('APEX',NaN)])assert.equal(jumpFrame(s,false,false),null);
 });
-test('registered JUMP supplied; IDLE REACT BLINK unavailable; all failures own base',async()=>{
+test('registered JUMP production; IDLE REACT BLINK unavailable; all failures own base',async()=>{
+ assert.equal(p.status,'JUMP_PRODUCTION');
+ assert.equal(p.jumpProfile,'JUMP');
  assert.equal(p.base,'/assets/monsters/mello/base.png');
  for(const failure of [null,'manifest','image','identity','phase','dimensions']){
   const assets=new PilotAssets(new AssetLoader({json:async()=>{if(failure==='manifest')throw Error();return {...manifest,species:failure==='identity'?'pip':'mello',jumpPhases:failure==='phase'?[]:manifest.jumpPhases}},image:async()=>{if(failure==='image')throw Error();return {width:failure==='dimensions'?128:256,height:256}}}));

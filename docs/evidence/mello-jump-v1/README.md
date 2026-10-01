@@ -13,3 +13,6 @@ Capture limits:188 real screenshots, median129.07ms sampling (~7.7fps); video is
 Production `.app`, complete raw recordings and session logs remain at `/Users/jinseongdae/Documents/LUMA QA/mello-jump-v1/`. Final recording/raw trace: `run6/`. Source build is46cb3eb; later changes are validation/evidence only. [CSP/binary integrity](production-contract.json).
 
 CROUCH / SETTLE: NOT_APPLICABLE; native runtime has no preparation/recovery state. The supplied frames are retained and validated but not played by fabricated delays. NEUTRAL/IDLE uses own base. Squash/stretch strength and overall liveliness: MANUAL_VISUAL_REVIEW; no artwork approval inferred.
+
+
+Alpha approval update (2026-10-01): the user approved the supplied artwork and movement-owned JUMP profile for Alpha Pilot Production. Historical MANUAL_VISUAL_REVIEW labels above describe the original capture, not the current approval state. CROUCH/SETTLE remain NOT_APPLICABLE; squash/stretch strength and liveliness are future polish, and the1.5pt facing excursion remains a Known Visual Issue. Original evidence is unchanged.
