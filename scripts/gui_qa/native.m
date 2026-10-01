@@ -37,7 +37,7 @@ int main(int argc,const char **argv){@autoreleasepool{
  if([cmd isEqual:@"frames"]||[cmd isEqual:@"frames-pip"]||[cmd isEqual:@"frames-mello"]||([cmd isEqual:@"frames-chirp"]||[cmd isEqual:@"frames-puff"])){
   BOOL pip=![cmd isEqual:@"frames"];
   AXUIElementRef app=AXUIElementCreateApplication(atoi(argv[2]));AXUIElementRef target=NULL;
-  for(int retry=0;retry<30 && !target;retry++){target=characterImage(app,20,([cmd isEqual:@"frames-chirp"]||[cmd isEqual:@"frames-puff"])?@"CHIRP ":[cmd isEqual:@"frames-mello"]?@"MELLO ":pip?@"PIP ":@"MOA ");if(!target)usleep(100000);}
+  for(int retry=0;retry<30 && !target;retry++){target=characterImage(app,20,[cmd isEqual:@"frames-puff"]?@"PUFF ":[cmd isEqual:@"frames-chirp"]?@"CHIRP ":[cmd isEqual:@"frames-mello"]?@"MELLO ":pip?@"PIP ":@"MOA ");if(!target)usleep(100000);}
   CFRelease(app);if(!target)return 5;
   double end=NSDate.date.timeIntervalSince1970+atof(argv[3]);
   while(NSDate.date.timeIntervalSince1970<end){@autoreleasepool{double before=NSDate.date.timeIntervalSince1970;id label=attr(target,kAXDescriptionAttribute);NSMutableArray *panels=[NSMutableArray new];for(NSDictionary *w in windows(atoi(argv[2])))if([w[(id)kCGWindowName]isEqual:(pip?@"pip":@"moa")])[panels addObject:w[(id)kCGWindowBounds]];print(@{@"before":@(before),@"after":@(NSDate.date.timeIntervalSince1970),@"label":label,@"image":node(target,0),@"panels":panels});}usleep(20000);}
