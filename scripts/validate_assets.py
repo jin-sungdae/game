@@ -154,6 +154,28 @@ def validate(root=ROOT, allow_missing=False):
     return errors + pip_errors, pending + pip_pending
 
 
+
+def validate_mello_jump(root=ROOT):
+    import hashlib
+    errors=[];directory=root/'public/assets/monsters/mello';d=directory/'jump'
+    phases=['NEUTRAL','CROUCH','LAUNCH','ASCEND','APEX','DESCEND','LAND','SETTLE']
+    try:
+        m=json.loads((directory/'manifest.json').read_text());source=json.loads((d/'manifest.json').read_text())
+        expected={'species':'mello','stage':1,'canvas':{'width':256,'height':256},'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{'jump':{'frames':8,'frameDuration':80,'loop':False}},'jumpPhases':phases}
+        if m!=expected or source['character']!='MELLO' or source['movement_profile']!='JUMP' or source['phase_contract']!=phases or source['canvas']!=[256,256] or source['source_facing']!='RIGHT' or source['anchor']!='bottom-center': errors.append('MELLO JUMP metadata contract')
+        names=[f'jump_{i:02}.png' for i in range(1,9)]
+        if sorted(p.name for p in d.iterdir())!=sorted(names+['manifest.json']):errors.append('MELLO JUMP filenames')
+        if [f['file'] for f in source['frames']]!=names:errors.append('MELLO phase files')
+        bounds=[]
+        for f,phase in zip(source['frames'],phases):
+            p=d/f['file'];b=[];errors.extend(png_errors(p,require_transparency=True,bounds=b));bounds.append(b)
+            if len(b)==4 and ((b[0]+b[2]+1)/2!=f['center_x'] or b[3]+1!=f['bottom']):errors.append('MELLO manifest registration bounds')
+            if hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256'] or f['phase']!=phase:errors.append('MELLO source hash/phase '+f['file'])
+        if any(len(b)!=4 for b in bounds) or len({(b[0]+b[2],b[3]) for b in bounds if len(b)==4})!=1:errors.append('MELLO registration drift')
+        if (d/names[0]).read_bytes()!=(d/names[-1]).read_bytes():errors.append('MELLO loop registration')
+    except (OSError,ValueError,KeyError,TypeError) as e:errors.append('MELLO JUMP: '+str(e))
+    return errors
+
 def validate_pip_animation(root=ROOT, allow_missing=False):
     """PIP pilot delivery extends the existing PNG validator; Blink is unsupplied."""
     errors, pending = [], []
@@ -248,6 +270,9 @@ def validate_alpha(root=ROOT, strict=False):
                 if entry.is_dir():
                     if entry.name.casefold().startswith('base.'):
                         errors.append(f'{entry}: base must be a regular PNG file')
+                    continue
+                if code == 'MELLO' and entry.name == 'manifest.json':
+                    errors.extend(validate_mello_jump(root))
                     continue
                 if code == 'PIP' and entry.name == 'manifest.json':
                     try:

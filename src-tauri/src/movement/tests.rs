@@ -301,3 +301,74 @@ fn facing_deadband_retains_sign_across_stop_jitter_and_invalid_time() {
         assert_eq!(facing, expected);
     }
 }
+
+#[test]
+fn jump_animation_tracks_accepted_trajectory_and_cancels_without_false_land() {
+    let area = Area {
+        x: 0.,
+        y: 0.,
+        w: 1200.,
+        h: 900.,
+    };
+    let size = crate::geometry::PIP_SIZE;
+    for dx in [-40., 0., 40.] {
+        let mut c = MovementController::default();
+        let mut pos = area.ground(500., size);
+        c.start(
+            MovementIntent {
+                profile: MovementProfile::Jump,
+                target: (pos.0 + dx, pos.1),
+                height: 16.,
+                duration: 2.,
+            },
+            pos,
+            area,
+            size,
+        );
+        let mut phases = Vec::new();
+        let mut facing = -1;
+        for _ in 0..200 {
+            let previous = pos;
+            pos = c.tick(pos, 0.02, area, size, 14.).0;
+            let Some(s) = c.jump else { break };
+            facing = facing_from_velocity(facing, pos.0 - previous.0, 0.02);
+            if dx == 0. {
+                assert_eq!(facing, -1);
+            }
+            if phases.last() != Some(&s.phase) {
+                phases.push(s.phase);
+            }
+            if s.phase == "LAND" {
+                assert!(s.grounded);
+                assert_eq!(pos.1, area.ground_y());
+            } else {
+                assert!(!s.grounded);
+                assert!(pos.1 > area.ground_y());
+            }
+            if s.phase == "ASCEND" {
+                assert!(pos.1 > previous.1);
+                assert!(s.vy > 0.);
+            }
+            if s.phase == "DESCEND" {
+                assert!(pos.1 < previous.1);
+                assert!(s.vy < 0.);
+            }
+        }
+        assert_eq!(phases, vec!["LAUNCH", "ASCEND", "APEX", "DESCEND", "LAND"]);
+        assert!(c.jump.is_none());
+        c.start(
+            MovementIntent {
+                profile: MovementProfile::Jump,
+                target: (pos.0 + 40., pos.1),
+                height: 16.,
+                duration: 2.,
+            },
+            pos,
+            area,
+            size,
+        );
+        c.tick(pos, 0.02, area, size, 14.);
+        c.cancel();
+        assert!(c.jump.is_none());
+    }
+}

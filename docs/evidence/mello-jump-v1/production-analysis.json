@@ -1,0 +1,293 @@
+{
+  "rows": 982,
+  "completeJumps": [
+    {
+      "durationSeconds": 2.8810851491565157,
+      "observedSeconds": 2.8426304170000094,
+      "phases": [
+        "LAUNCH",
+        "ASCEND",
+        "APEX",
+        "DESCEND",
+        "LAND"
+      ],
+      "phaseObservedSeconds": {
+        "LAUNCH": 0.11045958300000791,
+        "ASCEND": 1.1498352499999953,
+        "APEX": 0.2868304590000008,
+        "DESCEND": 1.2955051250000054
+      },
+      "nativeStart": 85.592325667,
+      "nativeEnd": 88.434956084
+    },
+    {
+      "durationSeconds": 2.8856248228278982,
+      "observedSeconds": 2.816238458000001,
+      "phases": [
+        "LAUNCH",
+        "ASCEND",
+        "APEX",
+        "DESCEND",
+        "LAND"
+      ],
+      "phaseObservedSeconds": {
+        "LAUNCH": 0.10914316699999915,
+        "ASCEND": 1.1408048330000042,
+        "APEX": 0.28845116700000517,
+        "DESCEND": 1.2778392909999923
+      },
+      "nativeStart": 92.279595042,
+      "nativeEnd": 95.0958335
+    }
+  ],
+  "issues": [],
+  "transitions": [
+    {
+      "phase": "LAUNCH",
+      "wallTime": 1790653175.7670798,
+      "nativeTime": 76.215858417
+    },
+    {
+      "phase": "ASCEND",
+      "wallTime": 1790653175.80682,
+      "nativeTime": 76.326833125
+    },
+    {
+      "phase": "IDLE",
+      "wallTime": 1790653176.9802551,
+      "nativeTime": null
+    },
+    {
+      "phase": "LAUNCH",
+      "wallTime": 1790653179.3526812,
+      "nativeTime": 79.866597417
+    },
+    {
+      "phase": "ASCEND",
+      "wallTime": 1790653179.449636,
+      "nativeTime": 79.974652084
+    },
+    {
+      "phase": "IDLE",
+      "wallTime": 1790653179.822832,
+      "nativeTime": null
+    },
+    {
+      "phase": "LAUNCH",
+      "wallTime": 1790653181.888647,
+      "nativeTime": 82.411915334
+    },
+    {
+      "phase": "ASCEND",
+      "wallTime": 1790653181.9964108,
+      "nativeTime": 82.522236459
+    },
+    {
+      "phase": "IDLE",
+      "wallTime": 1790653182.246183,
+      "nativeTime": null
+    },
+    {
+      "phase": "LAUNCH",
+      "wallTime": 1790653185.068687,
+      "nativeTime": 85.592325667
+    },
+    {
+      "phase": "ASCEND",
+      "wallTime": 1790653185.1818829,
+      "nativeTime": 85.70278525
+    },
+    {
+      "phase": "APEX",
+      "wallTime": 1790653186.32906,
+      "nativeTime": 86.8526205
+    },
+    {
+      "phase": "DESCEND",
+      "wallTime": 1790653186.604377,
+      "nativeTime": 87.139450959
+    },
+    {
+      "phase": "LAND",
+      "wallTime": 1790653187.914805,
+      "nativeTime": 88.434956084
+    },
+    {
+      "phase": "LAUNCH",
+      "wallTime": 1790653187.95245,
+      "nativeTime": 88.470270959
+    },
+    {
+      "phase": "ASCEND",
+      "wallTime": 1790653188.074146,
+      "nativeTime": 88.611943459
+    },
+    {
+      "phase": "APEX",
+      "wallTime": 1790653189.2178168,
+      "nativeTime": 89.748335875
+    },
+    {
+      "phase": "DESCEND",
+      "wallTime": 1790653189.4884539,
+      "nativeTime": 90.0076345
+    },
+    {
+      "phase": "IDLE",
+      "wallTime": 1790653189.6518168,
+      "nativeTime": null
+    },
+    {
+      "phase": "LAUNCH",
+      "wallTime": 1790653191.740004,
+      "nativeTime": 92.279595042
+    },
+    {
+      "phase": "ASCEND",
+      "wallTime": 1790653191.8713489,
+      "nativeTime": 92.388738209
+    },
+    {
+      "phase": "APEX",
+      "wallTime": 1790653192.995184,
+      "nativeTime": 93.529543042
+    },
+    {
+      "phase": "DESCEND",
+      "wallTime": 1790653193.29861,
+      "nativeTime": 93.817994209
+    },
+    {
+      "phase": "LAND",
+      "wallTime": 1790653194.576943,
+      "nativeTime": 95.0958335
+    },
+    {
+      "phase": "LAUNCH",
+      "wallTime": 1790653194.602648,
+      "nativeTime": 95.1332545
+    },
+    {
+      "phase": "ASCEND",
+      "wallTime": 1790653194.7426028,
+      "nativeTime": 95.27635475
+    },
+    {
+      "phase": "APEX",
+      "wallTime": 1790653195.9099689,
+      "nativeTime": 96.408136875
+    },
+    {
+      "phase": "DESCEND",
+      "wallTime": 1790653196.170234,
+      "nativeTime": 96.694789709
+    },
+    {
+      "phase": "IDLE",
+      "wallTime": 1790653197.187141,
+      "nativeTime": null
+    },
+    {
+      "phase": "LAUNCH",
+      "wallTime": 1790653200.357523,
+      "nativeTime": 100.875723625
+    },
+    {
+      "phase": "ASCEND",
+      "wallTime": 1790653200.459371,
+      "nativeTime": 100.987034292
+    },
+    {
+      "phase": "APEX",
+      "wallTime": 1790653201.648881,
+      "nativeTime": 102.170424209
+    },
+    {
+      "phase": "DESCEND",
+      "wallTime": 1790653201.926742,
+      "nativeTime": 102.444972375
+    }
+  ],
+  "phaseBounds": {
+    "LAUNCH_-1": {
+      "samples": 1,
+      "centerDriftPt": 0.0,
+      "bottomDriftPt": 0.0
+    },
+    "ASCEND_1": {
+      "samples": 50,
+      "centerDriftPt": 0.0,
+      "bottomDriftPt": 0.0
+    },
+    "IDLE_1": {
+      "samples": 92,
+      "centerDriftPt": 0.0,
+      "bottomDriftPt": 0.0
+    },
+    "LAUNCH_1": {
+      "samples": 7,
+      "centerDriftPt": 0.0,
+      "bottomDriftPt": 0.0
+    },
+    "APEX_1": {
+      "samples": 8,
+      "centerDriftPt": 0.0,
+      "bottomDriftPt": 0.0
+    },
+    "DESCEND_1": {
+      "samples": 30,
+      "centerDriftPt": 0.0,
+      "bottomDriftPt": 0.0
+    }
+  },
+  "allCenterDriftPt": 1.5,
+  "allBottomDriftPt": 0.0,
+  "clipping": false,
+  "pixelFacingMismatch": 1,
+  "captureSeconds": 24.890063958,
+  "captureFrames": 188,
+  "medianCaptureIntervalMs": 129.07329200000106,
+  "panelSizes": [
+    [
+      96,
+      104
+    ]
+  ],
+  "canvasSizes": [
+    [
+      66,
+      65
+    ],
+    [
+      66,
+      66
+    ]
+  ],
+  "facingPixelLimits": {
+    "mismatches": [
+      {
+        "file": "frame-00000.png",
+        "time": 1790653175.6631584,
+        "bounds": [
+          38,
+          104,
+          150,
+          200
+        ],
+        "center": 94.0,
+        "bottom": 200,
+        "phase": "LAUNCH",
+        "nativeFacing": 1,
+        "pixelFacing": -1
+      }
+    ],
+    "within150msOfStateBoundary": [
+      true
+    ],
+    "note": "One sequential native/AX/screenshot boundary pair; no stable-facing mismatch. Frame sampling is about 7.7 fps, not the 60fps encoding rate."
+  },
+  "landObservedHoldSeconds": [
+    0.03764510154724121,
+    0.02570509910583496
+  ]
+}

@@ -25,5 +25,5 @@ function LegacyMonsterVisual({code,state,facing,animationFrame}:{code:string;sta
 
 export function MonsterVisual(props:{code:string;state:string;facing:number;animationFrame?:MonsterAnimationFrame;animationInput?:AnimationInput;entityId?:string}) {
   const pilot=pilotDefinition(props.code);
-  return pilot && props.animationInput ? <CharacterRenderer pilot={pilot} input={props.animationInput} facing={props.facing} name="PIP" entityId={props.entityId??'debug-pip'}/> : <LegacyMonsterVisual {...props}/>;
+  return pilot && props.animationInput ? <CharacterRenderer pilot={pilot} input={props.animationInput} facing={props.facing} name={props.code} entityId={props.entityId??'debug-pip'}/> : <LegacyMonsterVisual {...props}/>;
 }
