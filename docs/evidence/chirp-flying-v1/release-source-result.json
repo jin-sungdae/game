@@ -1,0 +1,97 @@
+{
+  "status": "AUTOMATED_READY",
+  "manualGate": "MANUAL_QA_REQUIRED",
+  "head": "0b5429f9e6a2b810396eb2f98ee848f131643af0",
+  "workingTreeDirty": true,
+  "checks": [
+    {
+      "name": "frontend-build",
+      "status": "PASS",
+      "seconds": 1.96
+    },
+    {
+      "name": "animation-content",
+      "status": "PASS",
+      "seconds": 4.21
+    },
+    {
+      "name": "presentation",
+      "status": "PASS",
+      "seconds": 4.17
+    },
+    {
+      "name": "asset-tests",
+      "status": "PASS",
+      "seconds": 83.47
+    },
+    {
+      "name": "optional-assets",
+      "status": "PASS",
+      "seconds": 4.03
+    },
+    {
+      "name": "strict-alpha",
+      "status": "PASS",
+      "seconds": 2.84
+    },
+    {
+      "name": "required-bases",
+      "status": "PASS",
+      "seconds": 4.1
+    },
+    {
+      "name": "automation-policy",
+      "status": "PASS",
+      "seconds": 0.71
+    },
+    {
+      "name": "release-static",
+      "status": "PASS",
+      "seconds": 0.07
+    },
+    {
+      "name": "tao-integrity",
+      "status": "PASS",
+      "seconds": 0.05
+    },
+    {
+      "name": "rust-fmt",
+      "status": "PASS",
+      "seconds": 0.33
+    },
+    {
+      "name": "rust-tests-native-link",
+      "status": "PASS",
+      "seconds": 4.76
+    },
+    {
+      "name": "rust-clippy",
+      "status": "PASS",
+      "seconds": 5.84
+    },
+    {
+      "name": "launch_audit",
+      "status": "PASS",
+      "seconds": 0.37
+    },
+    {
+      "name": "single_instance_audit",
+      "status": "PASS",
+      "seconds": 0.35
+    },
+    {
+      "name": "bootJar",
+      "status": "PASS",
+      "seconds": 3.11
+    },
+    {
+      "name": "server-fresh-persistence-failures",
+      "status": "PASS"
+    },
+    {
+      "name": "whitespace",
+      "status": "PASS",
+      "seconds": 0.05
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 """Movement-owned CHIRP FLYING state capture on the production release; no domain instrumentation."""
-import argparse,json,subprocess as sp,time
+import argparse,json,subprocess as sp,time,struct
 from pathlib import Path
 from session import Session
 p=argparse.ArgumentParser();p.add_argument('root',type=Path);a=p.parse_args();root=a.root;s=Session(root/'session');cfg=s.config
@@ -27,7 +27,7 @@ while time.monotonic()-started<50 and not failed:
   file='frame-%05d.png'%len(captures[name]);before=time.time()
   capture=sp.run(['/usr/sbin/screencapture','-x','-l',str(windows[name]),str(root/(name+'-frames')/file)],timeout=5)
   if capture.returncode:failed=True;break
-  captures[name].append({'file':file,'pts':time.monotonic()-started,'wallTime':time.time(),'before':before,'width':192,'height':208})
+  captures[name].append({'file':file,'pts':time.monotonic()-started,'wallTime':time.time(),'before':before,'width':struct.unpack('>II',(root/(name+'-frames')/file).read_bytes()[16:24])[0],'height':struct.unpack('>II',(root/(name+'-frames')/file).read_bytes()[16:24])[1]})
  # Capture as fast as native window capture returns; timestamps preserve real pacing.
 for name,rows in captures.items():(root/(name+'-frames')/'frames.json').write_text(json.dumps({'method':'native screencapture window-only','frames':rows},indent=2))
 for c in children:c.wait()
