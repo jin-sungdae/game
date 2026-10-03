@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LUMA observed native GUI trace v1",
+  "type": "object",
+  "required": ["version", "timestamp", "entityId", "entityType", "world", "vx", "vy", "speed", "movementState", "animationState", "animationFrame", "nativeFacing", "rendererFlip", "panelBounds", "canvasBounds", "displayId", "missingNativeFields"],
+  "properties": {
+    "version": {"const": 1}, "timestamp": {"type": "number"},
+    "entityId": {"type": "string"}, "entityType": {"type": "string"},
+    "world": {"anyOf": [{"type": "null"}, {"type": "object", "required": ["x", "y"], "properties": {"x": {"type": "number"}, "y": {"type": "number"}}}]},
+    "vx": {"type": ["number", "null"]}, "vy": {"type": ["number", "null"]}, "speed": {"type": ["number", "null"]},
+    "movementState": {"type": ["string", "null"]}, "excursionActive": {"type": ["boolean", "null"]},
+    "animationState": {"type": "string"}, "animationFrame": {"type": "integer", "minimum": 1},
+    "nativeFacing": {"enum": [-1, 1, null]}, "rendererFlip": {"enum": [-1, 1, null]},
+    "panelBounds": {"$ref": "#/$defs/rect"}, "canvasBounds": {"$ref": "#/$defs/rect"},
+    "displayId": {"type": ["integer", "null"]}, "missingNativeFields": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {"rect": {"anyOf": [{"type": "null"}, {"type": "object", "required": ["x", "y", "w", "h"], "properties": {"x": {"type": "number"}, "y": {"type": "number"}, "w": {"type": "number", "exclusiveMinimum": 0}, "h": {"type": "number", "exclusiveMinimum": 0}}}]}}
+}
