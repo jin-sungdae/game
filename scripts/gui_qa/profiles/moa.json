@@ -1,0 +1,43 @@
+{
+  "entityId": "MOA",
+  "entityType": "COMPANION",
+  "label": "MOA",
+  "window": "moa",
+  "panelSize": [
+    96,
+    104
+  ],
+  "zone": "BOTTOM",
+  "states": {
+    "IDLE": {
+      "frames": 4,
+      "loop": true,
+      "required": true
+    },
+    "BLINK": {
+      "frames": 3,
+      "loop": false
+    },
+    "MOVE": {
+      "frames": 8,
+      "loop": true
+    },
+    "REACT": {
+      "frames": 6,
+      "loop": false
+    }
+  },
+  "sourceBounds": null,
+  "sourceCanvas": [
+    256,
+    256
+  ],
+  "sourceFacing": "RIGHT",
+  "velocityEpsilon": 3,
+  "maxTraceSkewSeconds": 0.05,
+  "pixelMask": {
+    "method": "rgb-threshold",
+    "threshold": 40
+  },
+  "note": "Pixels measured against capture background; sourceBounds unknown until supplied, no identity or visual approval."
+}
