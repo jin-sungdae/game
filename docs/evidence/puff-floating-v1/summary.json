@@ -62,5 +62,33 @@
     "note": "Historical measurements above are preserved; this attempt did not produce new renderer evidence.",
     "releaseGate": "AUTOMATED_READY",
     "qaSelfTests": "16 PASS"
+  },
+  "alphaAcceptance": {
+    "status": "AUTOMATED_ACCEPTED",
+    "visualQa": "GUI_VISUAL_QA_DEFERRED",
+    "productionStates": {
+      "HOVER": "PRODUCTION",
+      "FLOAT": "PRODUCTION",
+      "SETTLE": "NOT_APPLICABLE"
+    },
+    "approvedDefaults": {
+      "HOVER": {
+        "frames": 4,
+        "cycleMs": 2000
+      },
+      "FLOAT": {
+        "frames": 6,
+        "frameDurationMs": 200,
+        "cycleMs": 1200
+      }
+    },
+    "runtimeChange": false,
+    "assetChange": false,
+    "timingChange": false,
+    "environmentBlockerIsProductionDefect": false,
+    "environmentBlockerIsMergeBlocker": false,
+    "deferredStatus": "NOT_VERIFIED",
+    "backlog": "docs/qa/monster-visual-regression-sweep.md",
+    "basis": "Explicit human Alpha acceptance; no visual PASS inferred"
   }
 }
