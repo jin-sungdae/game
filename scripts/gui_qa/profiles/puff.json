@@ -1,0 +1,12 @@
+{
+  "entityId": "PUFF", "entityType": "MONSTER", "label": "PUFF", "window": "pip",
+  "panelSize": [96,104], "zone": "FREE_AREA",
+  "states": {
+    "HOVER": {"frames": 4, "loop": true, "required": true},
+    "FLOAT": {"frames": 6, "loop": true, "required": true, "excursionActive": true}
+  },
+  "sourceBounds": [20,44,242,251], "sourceCanvas": [256,256], "sourceFacing": "RIGHT",
+  "velocityEpsilon": 3, "maxTraceSkewSeconds": 0.05,
+  "pixelMask": {"method": "rgb-threshold", "threshold": 40},
+  "note": "HOVER 2000ms / FLOAT 1200ms candidates unchanged. SETTLE NOT_APPLICABLE. Source mirror offset 6px is a risk, not an observed renderer jump."
+}
