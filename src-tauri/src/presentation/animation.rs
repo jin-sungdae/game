@@ -6,6 +6,7 @@ pub struct Motion {
     pub pip: f64,
     pub jump: Option<crate::movement::jump::Sample>,
     pub flight: Option<Flight>,
+    pub floating: Option<Flight>,
 }
 pub fn speed(before: (f64, f64), after: (f64, f64), dt: f64, previous: f64) -> f64 {
     if !dt.is_finite() || !(0.001..=0.25).contains(&dt) {

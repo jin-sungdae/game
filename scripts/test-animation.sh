@@ -31,3 +31,5 @@ node --test tests/animation/pip.cjs
 node --test tests/animation/jump.cjs
 
 node --test tests/animation/flying.cjs
+
+node --test tests/animation/floating.cjs

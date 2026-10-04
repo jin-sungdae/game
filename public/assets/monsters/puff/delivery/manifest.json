@@ -1,0 +1,116 @@
+{
+  "character": "PUFF",
+  "movement_profile": "FLOATING",
+  "canvas": [
+    256,
+    256
+  ],
+  "source_facing": "RIGHT",
+  "profile": {
+    "hover": {
+      "frames": 4,
+      "cycle_ms": 2000
+    },
+    "float": {
+      "frames": 6,
+      "frame_ms": 200,
+      "cycle_ms": 1200
+    },
+    "settle": {
+      "frames": 2,
+      "cycle_ms": 400,
+      "runtime_status": "NOT_YET_APPLICABLE"
+    }
+  },
+  "registration": {
+    "max_center_x_delta_px": 0.0,
+    "max_center_y_delta_px": 0.0,
+    "max_bottom_delta_px": 0
+  },
+  "frames": [
+    {
+      "file": "hover/hover_01.png",
+      "sha256": "1d2fa8d9123d898498a16bf0135e5b6adb9f98e85501af617448961a911848ba",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "hover/hover_02.png",
+      "sha256": "caabed4fbbdfbd8dc3cb01b58e1e0da21fc2364a5a73148376d59e2e101eb941",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "hover/hover_03.png",
+      "sha256": "1d2fa8d9123d898498a16bf0135e5b6adb9f98e85501af617448961a911848ba",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "hover/hover_04.png",
+      "sha256": "9a0ccc585a5cf90094311f4bb25f582495755316babc275e7d9ce30ea6df2047",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "float/float_01.png",
+      "sha256": "1d2fa8d9123d898498a16bf0135e5b6adb9f98e85501af617448961a911848ba",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "float/float_02.png",
+      "sha256": "c96068724511b85db1be17760a98eb369a2a0a756b6d5ad4f10c497c539876e4",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "float/float_03.png",
+      "sha256": "8c5a719bfed457a5fdb31179a61a5d56e8407bb499a0813000a25af9151acad9",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "float/float_04.png",
+      "sha256": "ec78a7538f0df5923812f5c7aec195f33cc35b3a9894f334713bc9009296b8e5",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "float/float_05.png",
+      "sha256": "903c35c6dc2862b2eb74a00102ce571a7f0771ecdbb8d54acb4a18bb29b8370f",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "float/float_06.png",
+      "sha256": "cd2e7e3ed4c064c12e922e6a237c171f3fb9331fbbf97baf068a6c99d9f900dc",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "settle/settle_01.png",
+      "sha256": "ec78a7538f0df5923812f5c7aec195f33cc35b3a9894f334713bc9009296b8e5",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    },
+    {
+      "file": "settle/settle_02.png",
+      "sha256": "1d2fa8d9123d898498a16bf0135e5b6adb9f98e85501af617448961a911848ba",
+      "center_x": 131.0,
+      "center_y": 147.5,
+      "bottom": 251
+    }
+  ]
+}

@@ -180,6 +180,7 @@ impl World {
         self.server_encounter = Some((encounter.encounter_id, now + remaining));
         self.view.animation.jump = None;
         self.view.animation.flight = None;
+        self.view.animation.floating = None;
         self.place_server_monster(now);
     }
     pub fn debug_spawn(&mut self, now: f64) {
@@ -324,6 +325,7 @@ impl World {
     pub fn tick(&mut self, now: f64, dt: f64, cursor: (f64, f64), down: bool) {
         self.view.animation.jump = None;
         self.view.animation.flight = None;
+        self.view.animation.floating = None;
         self.place_server_monster(now);
         // Hide an expired lease, but keep authority/budget until server reconciliation.
         if self.server_encounter.as_ref().is_some_and(|e| now >= e.1) {
@@ -450,6 +452,19 @@ impl World {
                             if identity.movement_profile == crate::movement::MovementProfile::Flying
                             {
                                 self.view.animation.flight =
+                                    crate::presentation::animation::Flight::measured(
+                                        (p.x, p.y),
+                                        position,
+                                        dt,
+                                        now,
+                                        self.monster_movement.profile().is_some(),
+                                        p.facing,
+                                    );
+                            }
+                            if identity.movement_profile
+                                == crate::movement::MovementProfile::Floating
+                            {
+                                self.view.animation.floating =
                                     crate::presentation::animation::Flight::measured(
                                         (p.x, p.y),
                                         position,
