@@ -1,0 +1,27 @@
+{
+  "species": "mimi",
+  "stage": 1,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "display": {
+    "width": 82
+  },
+  "animations": {
+    "idle": {
+      "frames": 5,
+      "frameDuration": 500,
+      "loop": true
+    },
+    "peek": {
+      "frames": 5,
+      "frameDuration": 120,
+      "loop": false
+    }
+  }
+}
