@@ -270,6 +270,35 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "mello",
     "stage": 1
   },
+  "/assets/monsters/mimi/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "firstFrame": 1,
+        "frameDuration": 500,
+        "frames": 5,
+        "loop": true
+      },
+      "peek": {
+        "firstFrame": 1,
+        "frameDuration": 120,
+        "frames": 5,
+        "loop": false
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "mimi",
+    "stage": 1
+  },
   "/assets/monsters/pip/manifest.json": {
     "anchor": {
       "x": 0.5,

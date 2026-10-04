@@ -16,12 +16,14 @@
     "idle": {
       "frames": 5,
       "frameDuration": 500,
-      "loop": true
+      "loop": true,
+      "firstFrame": 1
     },
     "peek": {
       "frames": 5,
       "frameDuration": 120,
-      "loop": false
+      "loop": false,
+      "firstFrame": 1
     }
   }
 }

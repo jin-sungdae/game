@@ -1,3 +1,4 @@
+import { resolveStatic } from '../animation/static';
 import { resolveFloating, type FloatingState } from '../animation/floating';
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { resolveFlying, type FlightState } from '../animation/flying';
@@ -24,7 +25,7 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
     let disposed=false;
     const media=matchMedia('(prefers-reduced-motion: reduce)');
     const change=()=>{reduced.current=media.matches;};change();media.addEventListener('change',change);
-    for(const state of ['IDLE','BLINK','MOVE','REACT','JUMP','HOVER','FLY','GLIDE','FLOAT','SETTLE'] as const) void assets.load(pilot,state).then(clip=>{if(!disposed)runtime.clips.set(state,clip);});
+    for(const state of ['IDLE','BLINK','MOVE','REACT','JUMP','HOVER','FLY','GLIDE','FLOAT','SETTLE','PEEK'] as const) void assets.load(pilot,state).then(clip=>{if(!disposed)runtime.clips.set(state,clip);});
     const stop=animationClock.subscribe(time=>{
       const floating=resolveFloating(latestInput.current,runtime.floatingState);
       if(pilot.floatingProfile) runtime.floatingState=floating.state;
@@ -35,7 +36,7 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
       const sequence=runtime.idle.sample(time,resolved.state==='IDLE' && !resolved.suppressed,reduced.current,breath?.manifest.idleSequences,
         (breath?.manifest.animations.blink?.frames??3)*(breath?.manifest.animations.blink?.frameDuration??90));
       const phaseFrame=jumpFrame(latestInput.current.jump,resolved.suppressed,reduced.current);
-      const sample:{state:AnimationSequence;suppressed:boolean;rate:number}=pilot.floatingProfile?floating:pilot.flyingProfile?flight:{...resolved,state:pilot.jumpProfile==='JUMP'?(phaseFrame===null?'IDLE':'JUMP'):resolved.state==='IDLE'?sequence:resolved.state};
+      const sample:{state:AnimationSequence;suppressed:boolean;rate:number}=pilot.staticProfile?resolveStatic(latestInput.current):pilot.floatingProfile?floating:pilot.flyingProfile?flight:{...resolved,state:pilot.jumpProfile==='JUMP'?(phaseFrame===null?'IDLE':'JUMP'):resolved.state==='IDLE'?sequence:resolved.state};
       const clip=sample.suppressed?null:runtime.clips.get(sample.state)??null;
       const frame=sample.state==='JUMP'?phaseFrame!:runtime.animator.sample(sample.state+':'+Boolean(clip)+':'+sample.suppressed,clip,time,sample.rate,reduced.current);
       setView(old=>old.runtime===runtime && old.state===sample.state && old.frame===frame && old.suppressed===sample.suppressed && old.asset===clip?old:{runtime,state:sample.state,frame,suppressed:sample.suppressed,asset:clip});
@@ -47,7 +48,8 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
   const nativeFrame=jumpFrame(input.jump,input.suppressed || input.state!=='ROAMING',reduced.current);
   const floating=resolveFloating(input,runtime.floatingState);
   const flight=resolveFlying(input,runtime.flightState);
-  const current=pilot.floatingProfile?{state:floating.state,frame:view.runtime===runtime && view.state===floating.state?view.frame:0,suppressed:floating.suppressed}:pilot.flyingProfile?{state:flight.state,frame:view.runtime===runtime && view.state===flight.state?view.frame:0,suppressed:flight.suppressed}:pilot.jumpProfile==='JUMP'?{state:(nativeFrame===null?'IDLE':'JUMP') as AnimationSequence,frame:nativeFrame??0,suppressed:input.suppressed || input.state!=='ROAMING'}:view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
+  const stationary=resolveStatic(input);
+  const current=pilot.staticProfile?{...stationary,frame:view.runtime===runtime && view.state==='IDLE'?view.frame:0}:pilot.floatingProfile?{state:floating.state,frame:view.runtime===runtime && view.state===floating.state?view.frame:0,suppressed:floating.suppressed}:pilot.flyingProfile?{state:flight.state,frame:view.runtime===runtime && view.state===flight.state?view.frame:0,suppressed:flight.suppressed}:pilot.jumpProfile==='JUMP'?{state:(nativeFrame===null?'IDLE':'JUMP') as AnimationSequence,frame:nativeFrame??0,suppressed:input.suppressed || input.state!=='ROAMING'}:view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
   const asset=current.suppressed||input.suppressed?null:runtime.clips.get(current.state);
   const clipId=entityId+':'+pilot.character+':'+current.state;
   const animation=asset?.urls[current.frame]??null;
