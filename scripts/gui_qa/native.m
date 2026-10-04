@@ -26,7 +26,7 @@ static AXUIElementRef characterImage(AXUIElementRef e,int depth,NSString *prefix
 }
 int main(int argc,const char **argv){@autoreleasepool{
  if(argc<2)return 2;NSString*cmd=@(argv[1]);
- int need=[@{@"probe":@2,@"frames":@4,@"frames-pip":@4,@"frames-mello":@4,@"frames-chirp":@4,@"frames-puff":@4,@"move":@4,@"snapshot":@3,@"ax":@3,@"press":@4,@"type":@3,@"click":@4,@"right":@4,@"drag":@6,@"observe":@4}[cmd] intValue];if(!need||argc!=need)return 2;
+ int need=[@{@"probe":@2,@"frames-character":@6,@"frames":@4,@"frames-pip":@4,@"frames-mello":@4,@"frames-chirp":@4,@"frames-puff":@4,@"move":@4,@"snapshot":@3,@"ax":@3,@"press":@4,@"type":@3,@"click":@4,@"right":@4,@"drag":@6,@"observe":@4}[cmd] intValue];if(!need||argc!=need)return 2;
  if([cmd isEqual:@"probe"]){NSMutableArray*a=[NSMutableArray new];for(NSScreen*s in NSScreen.screens)[a addObject:@{@"frame":NSStringFromRect(s.frame),@"visibleFrame":NSStringFromRect(s.visibleFrame),@"scale":@(s.backingScaleFactor)}];print(@{@"accessibility":@(AXIsProcessTrusted()),@"screenRecording":@(CGPreflightScreenCaptureAccess()),@"postEvent":@(CGPreflightPostEventAccess()),@"screens":a,@"reduceMotion":@(NSWorkspace.sharedWorkspace.accessibilityDisplayShouldReduceMotion)});return 0;}
  if([cmd isEqual:@"move"]){if(!CGPreflightPostEventAccess())return 3;mouse(kCGEventMouseMoved,CGPointMake(atof(argv[2]),atof(argv[3])));return 0;}
  if([cmd isEqual:@"snapshot"]){print(snapshot(atoi(argv[2])));return 0;}
@@ -34,13 +34,14 @@ int main(int argc,const char **argv){@autoreleasepool{
  if([cmd isEqual:@"press"]){AXUIElementRef e=AXUIElementCreateApplication(atoi(argv[2]));BOOL ok=press(e,@(argv[3]),15);CFRelease(e);print(@{@"pressed":@(ok)});return ok?0:1;}
  if([cmd isEqual:@"type"]){if(!CGPreflightPostEventAccess())return 3;NSString*s=@(argv[2]);for(NSUInteger i=0;i<s.length;i++){if(![NSWorkspace.sharedWorkspace.frontmostApplication.bundleIdentifier isEqual:@"com.apple.TextEdit"])return 4;unichar c=[s characterAtIndex:i];CGEventRef e=CGEventCreateKeyboardEvent(NULL,c=='\n'?36:0,true);if(c!='\n')CGEventKeyboardSetUnicodeString(e,1,&c);CGEventPost(kCGHIDEventTap,e);CGEventSetType(e,kCGEventKeyUp);CGEventPost(kCGHIDEventTap,e);CFRelease(e);usleep(4000);}return 0;}
  if([cmd isEqual:@"click"]||[cmd isEqual:@"right"]||[cmd isEqual:@"drag"]){if(!CGPreflightPostEventAccess())return 3;CGPoint p=CGPointMake(atof(argv[2]),atof(argv[3]));mouse(kCGEventMouseMoved,p);mouse([cmd isEqual:@"right"]?kCGEventRightMouseDown:kCGEventLeftMouseDown,p);usleep(80000);if([cmd isEqual:@"drag"]){CGPoint end=CGPointMake(atof(argv[4]),atof(argv[5]));for(int i=1;i<=30;i++){CGPoint q=CGPointMake(p.x+(end.x-p.x)*i/30,p.y+(end.y-p.y)*i/30);mouse(kCGEventLeftMouseDragged,q);usleep(16000);}p=end;}mouse([cmd isEqual:@"right"]?kCGEventRightMouseUp:kCGEventLeftMouseUp,p);return 0;}
- if([cmd isEqual:@"frames"]||[cmd isEqual:@"frames-pip"]||[cmd isEqual:@"frames-mello"]||([cmd isEqual:@"frames-chirp"]||[cmd isEqual:@"frames-puff"])){
+ if([cmd isEqual:@"frames-character"]||[cmd isEqual:@"frames"]||[cmd isEqual:@"frames-pip"]||[cmd isEqual:@"frames-mello"]||[cmd isEqual:@"frames-chirp"]||[cmd isEqual:@"frames-puff"]){
+  BOOL generic=[cmd isEqual:@"frames-character"];
   BOOL pip=![cmd isEqual:@"frames"];
   AXUIElementRef app=AXUIElementCreateApplication(atoi(argv[2]));AXUIElementRef target=NULL;
-  for(int retry=0;retry<30 && !target;retry++){target=characterImage(app,20,[cmd isEqual:@"frames-puff"]?@"PUFF ":[cmd isEqual:@"frames-chirp"]?@"CHIRP ":[cmd isEqual:@"frames-mello"]?@"MELLO ":pip?@"PIP ":@"MOA ");if(!target)usleep(100000);}
+  for(int retry=0;retry<30 && !target;retry++){target=characterImage(app,20,generic?[@(argv[4]) stringByAppendingString:@" "]:[cmd isEqual:@"frames-puff"]?@"PUFF ":[cmd isEqual:@"frames-chirp"]?@"CHIRP ":[cmd isEqual:@"frames-mello"]?@"MELLO ":pip?@"PIP ":@"MOA ");if(!target)usleep(100000);}
   CFRelease(app);if(!target)return 5;
   double end=NSDate.date.timeIntervalSince1970+atof(argv[3]);
-  while(NSDate.date.timeIntervalSince1970<end){@autoreleasepool{double before=NSDate.date.timeIntervalSince1970;id label=attr(target,kAXDescriptionAttribute);NSMutableArray *panels=[NSMutableArray new];for(NSDictionary *w in windows(atoi(argv[2])))if([w[(id)kCGWindowName]isEqual:(pip?@"pip":@"moa")])[panels addObject:w[(id)kCGWindowBounds]];print(@{@"before":@(before),@"after":@(NSDate.date.timeIntervalSince1970),@"label":label,@"image":node(target,0),@"panels":panels});}usleep(20000);}
+  while(NSDate.date.timeIntervalSince1970<end){@autoreleasepool{double before=NSDate.date.timeIntervalSince1970;id label=attr(target,kAXDescriptionAttribute);NSMutableArray *panels=[NSMutableArray new];for(NSDictionary *w in windows(atoi(argv[2])))if([w[(id)kCGWindowName]isEqual:(generic?@(argv[5]):(pip?@"pip":@"moa"))])[panels addObject:w[(id)kCGWindowBounds]];print(@{@"before":@(before),@"after":@(NSDate.date.timeIntervalSince1970),@"label":label,@"image":node(target,0),@"panels":panels});}usleep(20000);}
   CFRelease(target);return 0;
  }
  if([cmd isEqual:@"observe"]){double end=NSDate.date.timeIntervalSince1970+atof(argv[3]);while(NSDate.date.timeIntervalSince1970<end){@autoreleasepool{print(snapshot(atoi(argv[2])));}usleep(50000);}return 0;}

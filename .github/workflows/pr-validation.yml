@@ -58,6 +58,11 @@ jobs:
         run: cargo +stable clippy --locked --manifest-path src-tauri/Cargo.toml --no-deps -- -D warnings
       - name: Compile native focus observer harness
         run: clang -fobjc-arc -framework AppKit scripts/launch_audit.m -o /tmp/luma-launch-audit
+      - name: Compile QA-only environment observer and native recorder
+        run: |
+          clang -fobjc-arc -framework AppKit -framework ApplicationServices scripts/gui_qa/environment_probe.m -o /tmp/luma-environment-probe
+          clang -fobjc-arc -framework AppKit -framework ApplicationServices scripts/gui_qa/native.m -o /tmp/luma-native-qa
+          swiftc -parse-as-library scripts/gui_qa/record_window.swift -o /tmp/luma-record-window
       - name: Runtime boundary
         run: echo 'PLATFORM_REQUIRED native compile passed; real desktop launch/mouse/typing is MANUAL_REQUIRED, NOT_RUN on hosted CI.'
   server-java:

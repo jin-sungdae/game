@@ -10,11 +10,13 @@ ROOT=Path(__file__).resolve().parents[2]
 def free_port():
     with socket.socket() as s:s.bind(('127.0.0.1',0));return s.getsockname()[1]
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--bundle',required=True,type=Path);p.add_argument('--output',required=True,type=Path);p.add_argument('--keep-running',action='store_true');p.add_argument('--metadata-audit',action='store_true');p.add_argument('--capture-only',action='store_true');p.add_argument('--world-seed',type=int);a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--environment-profile',type=Path);p.add_argument('--encounter-code');p.add_argument('--bundle',required=True,type=Path);p.add_argument('--output',required=True,type=Path);p.add_argument('--keep-running',action='store_true');p.add_argument('--metadata-audit',action='store_true');p.add_argument('--capture-only',action='store_true');p.add_argument('--world-seed',type=int);a=p.parse_args()
+    if a.encounter_code and not a.environment_profile: p.error('--encounter-code requires --environment-profile')
+    if a.environment_profile and not a.capture_only: p.error('environment mode requires --capture-only; never activate a user app')
     root=a.output.resolve();root.mkdir(parents=True,exist_ok=False);(root/'screenshots').mkdir();(root/'access').mkdir()
     helper=root/'native-qa';sp.run(['clang','-fobjc-arc','-framework','AppKit','-framework','ApplicationServices',str(ROOT/'scripts/gui_qa/native.m'),'-o',str(helper)],check=True)
     caps=json.loads(sp.check_output([helper,'probe'],text=True));(root/'capabilities.json').write_text(json.dumps(caps,indent=2))
-    if not all(caps[k] for k in ['accessibility','screenRecording','postEvent']):
+    if not all(caps[k] for k in (['accessibility','screenRecording'] if a.environment_profile else ['accessibility','screenRecording','postEvent'])):
         raise SystemExit('PERMISSION_REQUIRED: authorize the launching Codex/Terminal app in Accessibility and Screen Recording, then use a new output directory.')
     pg=Path(os.environ['PG_BIN']);java=Path(os.environ['JAVA_HOME'])/'bin/java';db=free_port();port=free_port()
     while port==db:port=free_port()
@@ -27,6 +29,9 @@ def main():
         env.update(LUMA_DB_URL=f'jdbc:postgresql://127.0.0.1:{db}/luma_gui_qa_test',LUMA_DB_USER='luma',LUMA_DB_PASSWORD='',LUMA_SERVER_PORT=str(port),SERVER_TOMCAT_ACCESSLOG_ENABLED='true',SERVER_TOMCAT_ACCESSLOG_DIRECTORY=str(root/'access'))
         with (root/'server.log').open('w') as log:server=sp.Popen([str(java),'-jar',str(ROOT/'server/build/libs/luma-game-server-0.1.0.jar')],cwd=ROOT,env=env,stdout=log,stderr=sp.STDOUT,start_new_session=True)
         (root/'server-process-group').write_text(str(server.pid))
+        if a.environment_profile:
+            from cleanup_environment import identity
+            cfg.update(serverPid=server.pid,serverPidIdentity=identity(server.pid));(root/'session.json').write_text(json.dumps(cfg,indent=2))
         for _ in range(80):
             if server.poll() is not None:raise RuntimeError('bootJar exited')
             try:
@@ -34,15 +39,38 @@ def main():
                 break
             except OSError:time.sleep(.25)
         else:raise TimeoutError('server bootstrap')
+        if a.environment_profile:
+            from environment import compile_probe, prepare
+            if a.encounter_code:
+                import re
+                if not re.fullmatch(r'[A-Z][A-Z0-9_]{0,31}',a.encounter_code): raise ValueError('invalid encounter code')
+                # Only this freshly-created loopback database, never inherited DB defaults.
+                sql=f"BEGIN; DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM game.m_monster WHERE code='{a.encounter_code}' AND use_yn=true) THEN RAISE EXCEPTION 'fixture unavailable'; END IF; END $$; UPDATE game.m_monster SET encounter_weight=CASE WHEN code='{a.encounter_code}' THEN 100 ELSE 0 END; COMMIT;"
+                sp.run([str(pg/'psql'),'-X','-v','ON_ERROR_STOP=1','-h','127.0.0.1','-p',str(db),'-U','luma','-d','luma_gui_qa_test','-c',sql],check=True,stdout=sp.DEVNULL)
+                request=urllib.request.Request(cfg['serverUrl']+'/api/v1/encounters',method='POST')
+                with urllib.request.urlopen(request,timeout=8) as response: encounter=json.load(response)
+                if encounter.get('monster',{}).get('code')!=a.encounter_code: raise RuntimeError('real server fixture mismatch')
+                (root/'encounter.json').write_text(json.dumps(encounter,indent=2))
+            probe=root/'environment-probe';compile_probe(probe)
+            report=prepare(probe,json.loads(a.environment_profile.read_text()),root/'preflight.json')
+            if report['status']!='READY': raise SystemExit(2)
+        if a.environment_profile:
+            cfg['appLaunchRequested']=True;(root/'session.json').write_text(json.dumps(cfg,indent=2))
         sp.run(['open','-n','--stdout',str(root/'app.log'),'--stderr',str(root/'app.log'),'--env','LUMA_GAME_SERVER_URL='+cfg['serverUrl'],'--env','LUMA_FOCUS_AUDIT=1',*(['--env','LUMA_METADATA_AUDIT=1'] if a.metadata_audit else []),*(['--env',f'LUMA_QA_WORLD_SEED={a.world_seed}'] if a.world_seed is not None else []),cfg['appBundle']],check=True)
         for _ in range(80):
             text=(root/'app.log').read_text() if (root/'app.log').exists() else ''
             rows=[json.loads(x[len('LUMA_AUDIT '):]) for x in text.splitlines() if x.startswith('LUMA_AUDIT ')]
+            if rows:
+                cfg['appPid']=rows[0]['pid']
+                if a.environment_profile: cfg['appPidIdentity']=identity(cfg['appPid'])
+                (root/'session.json').write_text(json.dumps(cfg,indent=2))
             if rows and '[LUMA STATE]' in text:break
             time.sleep(.25)
         else:raise RuntimeError('new World did not start; quit another LUMA primary before retrying')
         cfg['appPid']=rows[0]['pid'];(root/'session.json').write_text(json.dumps(cfg,indent=2))
-        s=Session(root);s.save('launch-ax',s.ax());s.capture('01-launch')
+        s=Session(root)
+        if not a.environment_profile:
+            s.save('launch-ax',s.ax());s.capture('01-launch')
         if not a.capture_only:
             # Create a dedicated scratch document; never overwrite an existing user document.
             sp.run(['osascript','-e','tell application "TextEdit" to make new document with properties {text:""}'],check=True)
@@ -50,5 +78,9 @@ def main():
             print('Actual GUI smoke complete:',root,'; manual/sweep/evolution/soak require their own evidence.')
         else:print('Production capture session ready (focus/interaction smoke not run):',root)
     finally:
-        if not a.keep_running:sp.run(['python3',str(ROOT/'scripts/gui_qa/stop.py'),str(root)],check=False)
+        if not a.keep_running:
+            if a.environment_profile:
+                from cleanup_environment import cleanup
+                cleanup(root)
+            else: sp.run(['python3',str(ROOT/'scripts/gui_qa/stop.py'),str(root)],check=False)
 if __name__=='__main__':main()

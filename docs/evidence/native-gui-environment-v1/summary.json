@@ -1,0 +1,46 @@
+{
+  "scope": "QA-only; aggregates without window geometry, titles, identifiers or local process logs",
+  "unitTests": {
+    "passed": 16,
+    "includes": "synthetic READY/BLOCKED, geometry stability, PID reuse, owned child shutdown, frame order/skew, synthetic pixel drift/clipping"
+  },
+  "nativeCompile": {
+    "environmentProbe": "PASS",
+    "AXObserver": "PASS",
+    "ScreenCaptureKitRecorder": "PASS"
+  },
+  "actualDesktopPreflight": {
+    "status": "GUI_ENVIRONMENT_BLOCKED",
+    "reason": "NO_SAFE_CANDIDATE",
+    "userWindowMutations": 0,
+    "appAndServerStarted": false
+  },
+  "isolatedEncounterPreparation": {
+    "status": "PASS",
+    "monsterCode": "PIP",
+    "beforeReleaseLaunch": true
+  },
+  "cleanup": {
+    "status": "PASS",
+    "processes": [
+      {
+        "process": "appPid",
+        "status": "NOT_STARTED"
+      },
+      {
+        "process": "serverPid",
+        "status": "STOPPED"
+      },
+      {
+        "process": "database",
+        "status": "STOPPED"
+      }
+    ],
+    "userWindowMutations": 0
+  },
+  "actualNativeRecording": "NOT_VERIFIED: preflight correctly blocked; no mock replacement",
+  "productionSourceDiff": "NONE",
+  "pr53": "UNMODIFIED; GUI_ENVIRONMENT_BLOCKED remains independent",
+  "releaseGate": "AUTOMATED_READY; final repeat checked before commit",
+  "manualGate": "MANUAL_QA_REQUIRED"
+}
