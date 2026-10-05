@@ -35,3 +35,5 @@ node --test tests/animation/flying.cjs
 node --test tests/animation/floating.cjs
 
 node --test tests/animation/static.cjs
+
+node --test tests/animation/edge.cjs

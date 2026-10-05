@@ -1,0 +1,41 @@
+{
+  "entityId": "SHADE",
+  "entityType": "MONSTER",
+  "label": "SHADE",
+  "window": "pip",
+  "panelSize": [
+    96,
+    104
+  ],
+  "zone": "EDGE",
+  "states": {
+    "IDLE": {
+      "frames": 5,
+      "loop": true,
+      "required": true
+    },
+    "EDGE_MOVE": {
+      "frames": 6,
+      "loop": true,
+      "required": true
+    }
+  },
+  "sourceBounds": [
+    22,
+    29,
+    242,
+    243
+  ],
+  "sourceCanvas": [
+    256,
+    256
+  ],
+  "sourceFacing": "RIGHT",
+  "velocityEpsilon": 3,
+  "maxTraceSkewSeconds": 0.05,
+  "pixelMask": {
+    "method": "rgb-threshold",
+    "threshold": 40
+  },
+  "note": "EDGE vertical same-side movement. IDLE 2200ms / EDGE_MOVE 1080ms fixed candidates; TURN NOT_APPLICABLE. Source center-X +/-0.5px, peak-to-peak 1px; renderer effect unverified."
+}
