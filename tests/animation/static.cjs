@@ -17,7 +17,7 @@ test('arrival/rarity and all non-roaming lifecycle states suppress immediately, 
  assert.equal(resolveStatic({state:'ROAMING',suppressed:false}).suppressed,false);
 });
 test('IDLE order and 2500ms loop; PEEK asset non-loop coverage without production trigger',async()=>{
- assert.equal(p.staticProfile,'STATIC');assert.equal(p.base,'/assets/monsters/mimi/base.png');
+ assert.equal(p.status,'IDLE_PRODUCTION');assert.equal(p.staticProfile,'STATIC');assert.equal(p.base,'/assets/monsters/mimi/base.png');
  for(const [state,duration,loop] of [['IDLE',500,true],['PEEK',120,false]]){
   const c=await assets().load(p,state);assert.equal(c.clip.frames,5);assert.equal(c.clip.frameDuration,duration);assert.equal(c.clip.loop,loop);
   assert.deepEqual(c.urls.map(u=>u.slice(-6)),['01.png','02.png','03.png','04.png','05.png']);

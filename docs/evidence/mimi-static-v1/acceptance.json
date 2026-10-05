@@ -115,5 +115,13 @@
     "2500ms naturalness",
     "PEEK readability (asset only; no production trigger)"
   ],
-  "backlog": "Monster Visual Regression Sweep: READY native QA environment required for MIMI IDLE recording, world/panel stability, renderer drift and clipping."
+  "backlog": "Monster Visual Regression Sweep: READY native QA environment required for MIMI IDLE recording, world/panel stability, renderer drift and clipping.",
+  "acceptance": "AUTOMATED_ACCEPTED",
+  "productionStates": {
+    "IDLE": "PRODUCTION",
+    "MOVE": "NOT_APPLICABLE",
+    "PEEK": "NOT_APPLICABLE"
+  },
+  "idleApprovedDefaultMs": 2500,
+  "approvalScope": "Alpha Pilot Production STATIC Profile; human approval. Historical candidate and blocked preflight evidence retained."
 }

@@ -17,7 +17,7 @@ export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='MELLO') return {character:'MELLO',species:'mello',stage:1,manifest:resolveMonster('MELLO')!.assetRoot+'/manifest.json',base:resolveMonster('MELLO')!.baseAsset!,status:'JUMP_PRODUCTION',sourceFacing:'RIGHT',jumpProfile:'JUMP'};
   if(character==='PUFF') return {character:'PUFF',species:'puff',stage:1,manifest:resolveMonster('PUFF')!.assetRoot+'/manifest.json',base:resolveMonster('PUFF')!.baseAsset!,status:'SUPPLIED',sourceFacing:'RIGHT',floatingProfile:'FLOATING'};
   if(character==='CHIRP') return {character:'CHIRP',species:'chirp',stage:1,manifest:resolveMonster('CHIRP')!.assetRoot+'/manifest.json',base:resolveMonster('CHIRP')!.baseAsset!,status:'FLYING_PRODUCTION',sourceFacing:'RIGHT',flyingProfile:'FLYING'};
-  if(character==='MIMI') return {character:'MIMI',species:'mimi',stage:1,manifest:resolveMonster('MIMI')!.assetRoot+'/manifest.json',base:resolveMonster('MIMI')!.baseAsset!,status:'SUPPLIED',sourceFacing:'RIGHT',staticProfile:'STATIC'};
+  if(character==='MIMI') return {character:'MIMI',species:'mimi',stage:1,manifest:resolveMonster('MIMI')!.assetRoot+'/manifest.json',base:resolveMonster('MIMI')!.baseAsset!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',staticProfile:'STATIC'};
   return null;
 }
 export const pilotFrames = {IDLE:6,MOVE:8,REACT:6} as const;
