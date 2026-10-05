@@ -32,6 +32,10 @@ class AssetTests(unittest.TestCase):
         # Missing-base cases must stay independent of delivered production files.
         shutil.copytree(ROOT/'public/assets', self.root/'public/assets',
                         ignore=shutil.ignore_patterns('base.png'))
+        # Batch delivery provenance is shared once outside public assets.
+        delivery = Path('docs/evidence/floating-alpha-batch-v1/delivery-manifest.json')
+        (self.root/delivery).parent.mkdir(parents=True)
+        shutil.copy(ROOT/delivery, self.root/delivery)
         self.stage = self.root/'public/assets/creatures/moa/stage01'
         # Scaffold/partial-clip tests own empty fixture directories, independent of delivery.
         for frame in (self.stage/'idle').glob('*.png'):
