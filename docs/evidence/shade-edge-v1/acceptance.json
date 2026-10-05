@@ -32,5 +32,17 @@
     "1080ms naturalness",
     "0.5px reference / 1px peak-to-peak center variation",
     "TURN readability (asset only)"
-  ]
+  ],
+  "acceptance": "AUTOMATED_ACCEPTED",
+  "productionStates": {
+    "IDLE": "PRODUCTION",
+    "EDGE_MOVE": "PRODUCTION",
+    "TURN": "NOT_APPLICABLE"
+  },
+  "approvedDefaultsMs": {
+    "IDLE": 2200,
+    "EDGE_MOVE": 1080
+  },
+  "approvedHysteresis": "enter >=8pt/s; remain >3pt/s",
+  "approvalScope": "Alpha Pilot Production EDGE Profile; historical candidate and blocked GUI evidence retained"
 }

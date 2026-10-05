@@ -4,7 +4,8 @@ const {resolveEdge,turnApplicability}=load('animation/edge.js'),{PilotAssets,pil
 const p=pilotDefinition('SHADE'),m=require('../../public'+p.manifest);
 const input=speed=>Object.freeze({speed,state:'ROAMING',suppressed:false,x:20,y:60,facing:-1});
 test('EDGE reads accepted speed with hysteresis, stop/resume and fixed smoke cadence',()=>{
- let state='IDLE';for(const [speed,expected] of [[0,'IDLE'],[7,'IDLE'],[8,'EDGE_MOVE'],[4,'EDGE_MOVE'],[3,'EDGE_MOVE'],[2,'IDLE'],[20,'EDGE_MOVE'],[0,'IDLE']]){const i=input(speed),s=resolveEdge(i,state);assert.equal(s.state,expected);assert.equal(s.rate,1);assert.equal(i.x,20);assert.equal(i.y,60);assert.equal(i.facing,-1);state=s.state;}
+ let state='IDLE';for(const [speed,expected] of [[0,'IDLE'],[7,'IDLE'],[8,'EDGE_MOVE'],[4,'EDGE_MOVE'],[3.001,'EDGE_MOVE'],[3,'IDLE'],[2,'IDLE'],[20,'EDGE_MOVE'],[0,'IDLE']]){const i=input(speed),s=resolveEdge(i,state);assert.equal(s.state,expected);assert.equal(s.rate,1);assert.equal(i.x,20);assert.equal(i.y,60);assert.equal(i.facing,-1);state=s.state;}
+ assert.equal(p.status,'EDGE_PRODUCTION');
  assert.equal(turnApplicability,'NOT_APPLICABLE');
 });
 test('lifecycle and invalid motion suppress; no corner signal is invented',()=>{

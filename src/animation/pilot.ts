@@ -11,7 +11,7 @@ export type AnimationState = 'IDLE'|'MOVE'|'REACT';
 export type AnimationSequence = AnimationState|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE'|'FLOAT'|'SETTLE'|'PEEK'|'EDGE_MOVE'|'TURN';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
 // Readiness describes clip assets, not gameplay triggers (PIP mouse REACT is unavailable).
-export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
+export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
 export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
   if(character==='PIP') return {character:'PIP',species:'pip',stage:1,manifest:resolveMonster('PIP')!.assetRoot+'/manifest.json',base:resolveMonster('PIP')!.baseAsset!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'};
@@ -19,7 +19,7 @@ export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='PUFF') return {character:'PUFF',species:'puff',stage:1,manifest:resolveMonster('PUFF')!.assetRoot+'/manifest.json',base:resolveMonster('PUFF')!.baseAsset!,status:'SUPPLIED',sourceFacing:'RIGHT',floatingProfile:'FLOATING'};
   if(character==='CHIRP') return {character:'CHIRP',species:'chirp',stage:1,manifest:resolveMonster('CHIRP')!.assetRoot+'/manifest.json',base:resolveMonster('CHIRP')!.baseAsset!,status:'FLYING_PRODUCTION',sourceFacing:'RIGHT',flyingProfile:'FLYING'};
   if(character==='MIMI') return {character:'MIMI',species:'mimi',stage:1,manifest:resolveMonster('MIMI')!.assetRoot+'/manifest.json',base:resolveMonster('MIMI')!.baseAsset!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',staticProfile:'STATIC'};
-  if(character==='SHADE') return {character:'SHADE',species:'shade',stage:1,manifest:resolveMonster('SHADE')!.assetRoot+'/manifest.json',base:resolveMonster('SHADE')!.baseAsset!,status:'SUPPLIED',sourceFacing:'RIGHT',edgeProfile:'EDGE'};
+  if(character==='SHADE') return {character:'SHADE',species:'shade',stage:1,manifest:resolveMonster('SHADE')!.assetRoot+'/manifest.json',base:resolveMonster('SHADE')!.baseAsset!,status:'EDGE_PRODUCTION',sourceFacing:'RIGHT',edgeProfile:'EDGE'};
   return null;
 }
 export const pilotFrames = {IDLE:6,MOVE:8,REACT:6} as const;
