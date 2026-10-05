@@ -39,3 +39,13 @@ sampling/mask limits. Preserve unavailable fields as null, never guessed PASS.
 HOVER 2000ms and FLOAT 1200ms are now approved Alpha defaults; do not tune them as
 part of evidence collection. SETTLE remains NOT_APPLICABLE. Publish reviewed native
 clips/measurements with the sweep results, while retaining historical blocked evidence.
+
+## WISP / LUNET — FLOATING batch, DEFERRED_VISUAL_QA
+
+Both common harness preflights: GUI_ENVIRONMENT_BLOCKED / NO_SAFE_CANDIDATE.
+Actual HOVER → FLOAT → HOVER, LEFT/RIGHT/vertical movement, reversal, renderer center-X,
+center-Y, bottom drift, mirror offset, panel/canvas bounds, clipping and measured
+cycles remain NOT_VERIFIED. Collect real release-app Server Encounter evidence when
+READY, using profiles `wisp.json` and `lunet.json`; no individual follow-up PR required.
+The measured 0px source registration drift is not renderer evidence. Batch details and
+preservation hashes are in `docs/evidence/floating-alpha-batch-v1/summary.json`.

@@ -18,6 +18,7 @@ fn profiles_and_companion_fallback() {
     assert_eq!(pick(Curious, Some(100.), Ground, 0.1), Pause);
     assert_eq!(pick(Timid, Some(100.), Edge, 0.1), AvoidCompanion);
     assert_eq!(pick(Timid, Some(600.), Floating, 0.1), Pause);
+    assert_eq!(pick(Timid, Some(100.), Floating, 0.1), AvoidCompanion);
     assert_eq!(pick(Aggressive, Some(600.), Free2d, 0.9), ApproachCompanion);
     assert_eq!(pick(Sleepy, Some(600.), Ground, 0.99), Pause);
     assert_eq!(pick(Trickster, Some(600.), Static, 0.99), Pause);

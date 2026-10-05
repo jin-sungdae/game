@@ -441,3 +441,65 @@ fn server_monster_facing_follows_accepted_motion_for_all_profiles() {
         }
     }
 }
+
+#[test]
+fn floating_batch_timid_avoidance_emits_active_completion_and_native_facing() {
+    for code in ["WISP", "LUNET"] {
+        let mut w = world(code); // LUNET uses the existing test-only NIGHT calendar.
+        assert_eq!(w.monster_behavior.as_ref().unwrap().profile, Profile::Timid);
+        assert_eq!(
+            w.view.monster.as_ref().unwrap().movement_profile,
+            MovementProfile::Floating
+        );
+        w.view.pip.as_mut().unwrap().state = PipState::Roaming;
+        w.monster_behavior.as_mut().unwrap().hold(true);
+        w.monster_behavior.as_mut().unwrap().current.speed = 20.;
+        let area = w.area;
+        let size = w.view.pip.as_ref().unwrap().size;
+        let mut now = 1.;
+        for sign in [1., -1.] {
+            let from = (-1800., area.ground_y() + 80.);
+            {
+                let p = w.view.pip.as_mut().unwrap();
+                p.x = from.0;
+                p.y = from.1;
+            }
+            w.monster_movement.start_ambient(
+                MovementProfile::Floating,
+                crate::monster_behavior::Decision {
+                    intent: Intent::AvoidCompanion,
+                    direction: sign,
+                    distance: 40.,
+                    speed: 20.,
+                },
+                from,
+                Some((from.0 - sign * 100., from.1)),
+                crate::movement::ambient::Environment {
+                    area,
+                    size,
+                    cursor: FAR,
+                    windows: Some(&[]),
+                },
+            );
+            let mut active = false;
+            let mut moving = false;
+            for _ in 0..70 {
+                now += 0.05;
+                w.tick(now, 0.05, FAR, false);
+                let sample = w.view.animation.floating.as_ref().unwrap();
+                active |= sample.active;
+                if sample.vx.abs() > crate::movement::FACING_SPEED_EPSILON {
+                    moving = true;
+                    assert_eq!(sample.facing, sign as i8, "{code}");
+                    assert_eq!(w.view.pip.as_ref().unwrap().facing, sample.facing);
+                }
+                inside(&w);
+            }
+            assert!(active && moving, "{code}");
+            assert!(
+                !w.view.animation.floating.as_ref().unwrap().active,
+                "{code} completion"
+            );
+        }
+    }
+}

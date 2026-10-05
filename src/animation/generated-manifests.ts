@@ -273,6 +273,33 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "ember",
     "stage": 1
   },
+  "/assets/monsters/lunet/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "float": {
+        "frameDuration": 200,
+        "frames": 6,
+        "loop": true
+      },
+      "hover": {
+        "frameDuration": 500,
+        "frames": 4,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "lunet",
+    "stage": 1
+  },
   "/assets/monsters/mello/manifest.json": {
     "anchor": {
       "x": 0.5,
@@ -432,6 +459,33 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
       "width": 82
     },
     "species": "shade",
+    "stage": 1
+  },
+  "/assets/monsters/wisp/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "float": {
+        "frameDuration": 200,
+        "frames": 6,
+        "loop": true
+      },
+      "hover": {
+        "frameDuration": 500,
+        "frames": 4,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "wisp",
     "stage": 1
   }
 };
