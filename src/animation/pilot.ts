@@ -1,3 +1,4 @@
+import { free2dClips } from './free2d';
 import { edgeClips } from './edge';
 import { staticClips } from './static';
 import { floatingClips } from './floating';
@@ -8,10 +9,10 @@ import { resolveCompanion } from '../entities/registry';
 import { resolveMonster } from '../entities/monsters';
 import { AssetLoader, type LoadedClip } from './loader';
 export type AnimationState = 'IDLE'|'MOVE'|'REACT';
-export type AnimationSequence = AnimationState|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE'|'FLOAT'|'SETTLE'|'PEEK'|'EDGE_MOVE'|'TURN';
+export type AnimationSequence = AnimationState|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE'|'FLOAT'|'SETTLE'|'PEEK'|'EDGE_MOVE'|'TURN'|'FLICKER'|'FLOW'|'INTENSE';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
 // Readiness describes clip assets, not gameplay triggers (PIP mouse REACT is unavailable).
-export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
+export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
 export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
   if(character==='PIP') return {character:'PIP',species:'pip',stage:1,manifest:resolveMonster('PIP')!.assetRoot+'/manifest.json',base:resolveMonster('PIP')!.baseAsset!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'};
@@ -20,6 +21,7 @@ export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='CHIRP') return {character:'CHIRP',species:'chirp',stage:1,manifest:resolveMonster('CHIRP')!.assetRoot+'/manifest.json',base:resolveMonster('CHIRP')!.baseAsset!,status:'FLYING_PRODUCTION',sourceFacing:'RIGHT',flyingProfile:'FLYING'};
   if(character==='MIMI') return {character:'MIMI',species:'mimi',stage:1,manifest:resolveMonster('MIMI')!.assetRoot+'/manifest.json',base:resolveMonster('MIMI')!.baseAsset!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',staticProfile:'STATIC'};
   if(character==='SHADE') return {character:'SHADE',species:'shade',stage:1,manifest:resolveMonster('SHADE')!.assetRoot+'/manifest.json',base:resolveMonster('SHADE')!.baseAsset!,status:'EDGE_PRODUCTION',sourceFacing:'RIGHT',edgeProfile:'EDGE'};
+  if(character==='EMBER') return {character:'EMBER',species:'ember',stage:1,manifest:resolveMonster('EMBER')!.assetRoot+'/manifest.json',base:resolveMonster('EMBER')!.baseAsset!,status:'SUPPLIED',sourceFacing:'RIGHT',free2dProfile:'FREE_2D'};
   return null;
 }
 export const pilotFrames = {IDLE:6,MOVE:8,REACT:6} as const;
@@ -28,6 +30,13 @@ export const pilotContract = {canvas:256,anchor:{x:.5,y:1},maxFrames:32,minFrame
 export class PilotAssets {
   constructor(private loader=new AssetLoader()) {}
   async load(p:Pilot,state:AnimationSequence):Promise<LoadedClip|null> {
+    if(p.free2dProfile==='FREE_2D') {
+      if(p.status==='NOT_SUPPLIED' || !Object.hasOwn(free2dClips,state)) return null;
+      const c=free2dClips[state as keyof typeof free2dClips];
+      const a=await this.loader.loadRegistered(p.species,p.stage,p.manifest,c.name);
+      return a && a.manifest.canvas.width===256 && a.manifest.canvas.height===256 && a.clip.frames===c.frames && a.clip.frameDuration===c.frameDuration && a.clip.loop===c.loop?a:null;
+    }
+    if(state==='FLICKER' || state==='FLOW' || state==='INTENSE') return null;
     if(p.edgeProfile==='EDGE') {
       if(p.status==='NOT_SUPPLIED' || !Object.hasOwn(edgeClips,state)) return null;
       const c=edgeClips[state as keyof typeof edgeClips];
