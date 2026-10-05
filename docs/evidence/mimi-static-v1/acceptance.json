@@ -1,0 +1,127 @@
+{
+  "assetIntegrity": "PASS",
+  "sourceZip": "mimi_static_pilot_v1.zip",
+  "frames": [
+    {
+      "file": "idle/idle_01.png",
+      "sha256": "2a48069c10f81d3e38baf49592f3c8a64c18fbc1e2cc008cb5d7e23ca5ff71c3",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    },
+    {
+      "file": "idle/idle_02.png",
+      "sha256": "0b253c68b08d43701a93fac85bfc3058bb03850135c27c0ac92ad34d5372f536",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    },
+    {
+      "file": "idle/idle_03.png",
+      "sha256": "6a8838d217e401cfacfd18983276726abc4a94f6c4ad5d277d2fd4d357fc32a3",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    },
+    {
+      "file": "idle/idle_04.png",
+      "sha256": "1495732cdf609afa04154c9cb2eb288333f685752563d8a20221a1a20fc3a339",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    },
+    {
+      "file": "idle/idle_05.png",
+      "sha256": "2a48069c10f81d3e38baf49592f3c8a64c18fbc1e2cc008cb5d7e23ca5ff71c3",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    },
+    {
+      "file": "peek/peek_01.png",
+      "sha256": "2a48069c10f81d3e38baf49592f3c8a64c18fbc1e2cc008cb5d7e23ca5ff71c3",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    },
+    {
+      "file": "peek/peek_02.png",
+      "sha256": "72b451fe4b4e8af0985d83271d68fc94f5a2e357cb76c59ee9b0034ce80e964e",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    },
+    {
+      "file": "peek/peek_03.png",
+      "sha256": "bd5e1e9cdc5a8564f598ecba44f8e7a9af69aedaeab77363b9a9a56646224272",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    },
+    {
+      "file": "peek/peek_04.png",
+      "sha256": "dcf185b39535b7f6b304ff37feb31586907a4a4384a7f6226e2bd62c6d694a99",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    },
+    {
+      "file": "peek/peek_05.png",
+      "sha256": "2a48069c10f81d3e38baf49592f3c8a64c18fbc1e2cc008cb5d7e23ca5ff71c3",
+      "center_x": 127.5,
+      "center_y": 144.5,
+      "bottom": 249
+    }
+  ],
+  "canvas": [
+    256,
+    256
+  ],
+  "format": "PNG RGBA transparent",
+  "alphaBoundsExclusive": [
+    21,
+    40,
+    234,
+    249
+  ],
+  "sourceCenterXDriftPx": 0,
+  "sourceCenterYDriftPx": 0,
+  "sourceBottomDriftPx": 0,
+  "baseSha256": "b6476e6e585ef6075c131d1fa227304f39a738e87044e71694f3fdee12c41479",
+  "baseUnchanged": true,
+  "registrationNote": "Supplier visual-center describes pixel registration. Existing bottom-center runtime anchor unchanged.",
+  "idleCandidateMs": 2500,
+  "peekFrameCandidateMs": 120,
+  "peekApplicability": "NOT_APPLICABLE",
+  "peekTrigger": null,
+  "preflight": {
+    "status": "GUI_ENVIRONMENT_BLOCKED",
+    "reason": "NO_SAFE_CANDIDATE",
+    "userWindowMutations": 0
+  },
+  "visualQa": "GUI_VISUAL_QA_DEFERRED",
+  "actualMimi": "NOT_VERIFIED",
+  "actualCycleMs": null,
+  "productionRecording": null,
+  "rendererCenterXDrift": null,
+  "rendererCenterYDrift": null,
+  "rendererBottomDrift": null,
+  "worldPositionStability": "NOT_VERIFIED",
+  "panelStability": "NOT_VERIFIED",
+  "clipping": "NOT_VERIFIED",
+  "manualVisualReview": [
+    "idle naturalness",
+    "internal face/tongue motion",
+    "2500ms naturalness",
+    "PEEK readability (asset only; no production trigger)"
+  ],
+  "backlog": "Monster Visual Regression Sweep: READY native QA environment required for MIMI IDLE recording, world/panel stability, renderer drift and clipping.",
+  "acceptance": "AUTOMATED_ACCEPTED",
+  "productionStates": {
+    "IDLE": "PRODUCTION",
+    "MOVE": "NOT_APPLICABLE",
+    "PEEK": "NOT_APPLICABLE"
+  },
+  "idleApprovedDefaultMs": 2500,
+  "approvalScope": "Alpha Pilot Production STATIC Profile; human approval. Historical candidate and blocked preflight evidence retained."
+}

@@ -1,0 +1,36 @@
+{
+  "entityId": "MIMI",
+  "entityType": "MONSTER",
+  "label": "MIMI",
+  "window": "pip",
+  "panelSize": [
+    96,
+    104
+  ],
+  "zone": "EDGE",
+  "states": {
+    "IDLE": {
+      "frames": 5,
+      "loop": true,
+      "required": true
+    }
+  },
+  "sourceBounds": [
+    21,
+    40,
+    234,
+    249
+  ],
+  "sourceCanvas": [
+    256,
+    256
+  ],
+  "sourceFacing": "RIGHT",
+  "velocityEpsilon": 3,
+  "maxTraceSkewSeconds": 0.05,
+  "pixelMask": {
+    "method": "rgb-threshold",
+    "threshold": 40
+  },
+  "note": "STATIC IDLE 2500ms Alpha Production default. PEEK NOT_APPLICABLE; no production trigger. No window manipulation."
+}

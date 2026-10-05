@@ -158,6 +158,28 @@ def validate(root=ROOT, allow_missing=False):
 def validate_chirp_flying(root=ROOT):
     return validate_profile_delivery(root,'CHIRP','FLYING',{'hover':(4,400),'fly':(6,90),'glide':(2,300)}, {'hover':{'frames':4,'cycle_ms':1600},'fly':{'frames':6,'frame_ms':90,'cycle_ms':540},'glide':{'frames':2,'cycle_ms':600}})
 
+def validate_mimi_static(root=ROOT):
+    import hashlib
+    errors=[];d=root/'public/assets/monsters/mimi'
+    try:
+        source=json.loads((d/'delivery/manifest.json').read_text());m=json.loads((d/'manifest.json').read_text())
+        expected={'species':'mimi','stage':1,'canvas':{'width':256,'height':256},'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{'idle':{'frames':5,'frameDuration':500,'loop':True,'firstFrame':1},'peek':{'frames':5,'frameDuration':120,'loop':False,'firstFrame':1}}}
+        if m!=expected or source['character']!='MIMI' or source['movement_profile']!='STATIC' or source['canvas']!=[256,256] or source['anchor']!='fixed-object / visual-center': errors.append('MIMI metadata contract')
+        if source['profile']!={'idle':{'frames':5,'cycle_ms':2500},'peek':{'frames':5,'frame_ms':120,'cycle_ms':600,'runtime_status':'NOT_YET_APPLICABLE'}}: errors.append('MIMI candidate timings')
+        names=[f'{n}/{n}_{i:02}.png' for n in ('idle','peek') for i in range(1,6)]
+        if [f['file'] for f in source['frames']]!=names: errors.append('MIMI manifest files')
+        for n in ('idle','peek'):
+            if sorted(p.name for p in (d/n).iterdir())!=[f'{n}_{i:02}.png' for i in range(1,6)]: errors.append('MIMI filenames')
+        bounds=[]
+        for f in source['frames']:
+            if f['file'] not in names: errors.append('MIMI noncanonical path');continue
+            p=d/f['file'];b=[];errors.extend(png_errors(p,True,b));bounds.append(b)
+            if hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256']: errors.append('MIMI SHA mismatch')
+            if len(b)==4 and ((b[0]+b[2]+1)/2!=f['center_x'] or (b[1]+b[3]+1)/2!=f['center_y'] or b[3]+1!=f['bottom']): errors.append('MIMI registration metadata')
+        if len(bounds)!=10 or any(len(b)!=4 for b in bounds) or len({tuple(b) for b in bounds})!=1: errors.append('MIMI registration drift')
+    except (OSError,ValueError,KeyError,TypeError) as e: errors.append('MIMI STATIC: '+str(e))
+    return errors
+
 def validate_puff_floating(root=ROOT):
     return validate_profile_delivery(root,'PUFF','FLOATING',{'hover':(4,500),'float':(6,200),'settle':(2,200)}, {'hover':{'frames':4,'cycle_ms':2000},'float':{'frames':6,'frame_ms':200,'cycle_ms':1200},'settle':{'frames':2,'cycle_ms':400,'runtime_status':'NOT_YET_APPLICABLE'}},True)
 
@@ -298,6 +320,9 @@ def validate_alpha(root=ROOT, strict=False):
                 if entry.is_dir():
                     if entry.name.casefold().startswith('base.'):
                         errors.append(f'{entry}: base must be a regular PNG file')
+                    continue
+                if code == 'MIMI' and entry.name == 'manifest.json':
+                    errors.extend(validate_mimi_static(root))
                     continue
                 if code == 'PUFF' and entry.name == 'manifest.json':
                     errors.extend(validate_puff_floating(root))

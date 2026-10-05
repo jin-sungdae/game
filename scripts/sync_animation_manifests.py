@@ -30,7 +30,7 @@ def generate(root=ROOT):
         def positive(x):return type(x) in (int,float) and math.isfinite(x) and x>0
         if not positive(m.get('display',{}).get('width')) or not isinstance(m.get('animations'),dict) or not m['animations']:raise ValueError('invalid display/clips')
         for name,c in m['animations'].items():
-            if not re.fullmatch('[a-z][a-z0-9_-]*',name) or type(c.get('frames')) is not int or not 1<=c['frames']<=256 or not positive(c.get('frameDuration')) or type(c.get('loop')) is not bool:raise ValueError('invalid clip: '+url)
+            if not re.fullmatch('[a-z][a-z0-9_-]*',name) or type(c.get('frames')) is not int or not 1<=c['frames']<=256 or not positive(c.get('frameDuration')) or type(c.get('loop')) is not bool or ('firstFrame' in c and (type(c['firstFrame']) is not int or c['firstFrame'] not in (0,1))):raise ValueError('invalid clip: '+url)
         if 'jumpPhases' in m:
             if m['jumpPhases']!=['NEUTRAL','CROUCH','LAUNCH','ASCEND','APEX','DESCEND','LAND','SETTLE'] or m['animations'].get('jump')!={'frames':8,'frameDuration':80,'loop':False}:raise ValueError('invalid movement-driven jump phases')
         if 'idleSequences' in m:
