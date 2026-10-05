@@ -1,0 +1,155 @@
+{
+  "character": "EMBER",
+  "movement_profile": "FREE_2D",
+  "canvas": [
+    256,
+    256
+  ],
+  "source_facing": "RIGHT",
+  "anchor": "visual-center / native-world-position-owned",
+  "profile": {
+    "flicker": {
+      "frames": 5,
+      "candidate_cycle_ms": 1800
+    },
+    "flow": {
+      "frames": 6,
+      "candidate_frame_ms": 160,
+      "candidate_cycle_ms": 960
+    },
+    "intense": {
+      "frames": 4,
+      "candidate_frame_ms": 120,
+      "candidate_cycle_ms": 480,
+      "runtime_status": "NOT_YET_APPLICABLE"
+    }
+  },
+  "contract": "native movement owns world X/Y/vector/facing; artwork presents flame flicker/flow only",
+  "registration": {
+    "max_center_x_delta_px": 3.0,
+    "max_center_y_delta_px": 0.5,
+    "max_bottom_delta_px": 0
+  },
+  "frames": [
+    {
+      "file": "flicker/flicker_01.png",
+      "state": "FLICKER",
+      "sha256": "18c515a232acda8da3af52a61c35cfafd43f0ab8ff340eb79d20f924e3070c7c",
+      "center_x": 129.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flicker/flicker_02.png",
+      "state": "FLICKER",
+      "sha256": "70db9379b3bc8a0fc323a06555f3e485f4cd1409ac9508942fb3e3be3e56dbf9",
+      "center_x": 126.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flicker/flicker_03.png",
+      "state": "FLICKER",
+      "sha256": "86f580c6bc1542efdd48534c7b1feb4009c1629bff8cffdbca64969b71f7a795",
+      "center_x": 126.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flicker/flicker_04.png",
+      "state": "FLICKER",
+      "sha256": "0d8c944ebee145ab5a998465c189e86ab5951ca15e681bbf4025d4f5130f8c05",
+      "center_x": 126.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flicker/flicker_05.png",
+      "state": "FLICKER",
+      "sha256": "18c515a232acda8da3af52a61c35cfafd43f0ab8ff340eb79d20f924e3070c7c",
+      "center_x": 129.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flow/flow_01.png",
+      "state": "FLOW",
+      "sha256": "18c515a232acda8da3af52a61c35cfafd43f0ab8ff340eb79d20f924e3070c7c",
+      "center_x": 129.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flow/flow_02.png",
+      "state": "FLOW",
+      "sha256": "a6241d30b8974448fae8d330d9d2b6e03f604ff168a307904e1154bcd19b5256",
+      "center_x": 126.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flow/flow_03.png",
+      "state": "FLOW",
+      "sha256": "b42b115c37b26eaa2f24114d6894b2eed9b82280e644a2a5c238176b7d5fbff4",
+      "center_x": 126.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flow/flow_04.png",
+      "state": "FLOW",
+      "sha256": "35344e8e2331470608083239f64ca54718b15a9ae2daf10656220259b89f190d",
+      "center_x": 126.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flow/flow_05.png",
+      "state": "FLOW",
+      "sha256": "d017d66681a80ebe020ee337b374a075a85f260e0b2d53e672c8eebf91aa961f",
+      "center_x": 127.0,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "flow/flow_06.png",
+      "state": "FLOW",
+      "sha256": "a844491b780418f813a08f51d732d5c21849f136de8edc984f139fdf9cc2fb18",
+      "center_x": 127.0,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "intense/intense_01.png",
+      "state": "INTENSE_CANDIDATE",
+      "sha256": "18c515a232acda8da3af52a61c35cfafd43f0ab8ff340eb79d20f924e3070c7c",
+      "center_x": 129.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "intense/intense_02.png",
+      "state": "INTENSE_CANDIDATE",
+      "sha256": "7c0e14bd7573ab34528ead8aa8fd4ee017556fa3721cc6ccb090af3de6a118d0",
+      "center_x": 126.5,
+      "center_y": 138.0,
+      "bottom": 252
+    },
+    {
+      "file": "intense/intense_03.png",
+      "state": "INTENSE_CANDIDATE",
+      "sha256": "5d57928879a9ac3a638478a740cd958a6a57b39ef03029c9d60ed93c40220384",
+      "center_x": 126.5,
+      "center_y": 137.5,
+      "bottom": 252
+    },
+    {
+      "file": "intense/intense_04.png",
+      "state": "INTENSE_CANDIDATE",
+      "sha256": "4703fbc42c3e4a82aa47d4bfe30b888ed3e7a33d74721f4497bb2fd1191027bb",
+      "center_x": 126.5,
+      "center_y": 138.0,
+      "bottom": 252
+    }
+  ]
+}
