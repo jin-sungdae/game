@@ -362,5 +362,41 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     },
     "species": "puff",
     "stage": 1
+  },
+  "/assets/monsters/shade/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "edge_move": {
+        "filePrefix": "edge",
+        "firstFrame": 1,
+        "frameDuration": 180,
+        "frames": 6,
+        "loop": true
+      },
+      "idle": {
+        "firstFrame": 1,
+        "frameDuration": 440,
+        "frames": 5,
+        "loop": true
+      },
+      "turn": {
+        "firstFrame": 1,
+        "frameDuration": 120,
+        "frames": 3,
+        "loop": false
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "shade",
+    "stage": 1
   }
 };

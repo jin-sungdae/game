@@ -3,7 +3,7 @@ export const stateClips: Record<CompanionState, string> = {
   IDLE:'idle', WALKING:'walk', SITTING:'sit', LOOKING:'look',
   SLEEPING:'sleep', REACTING:'react', DRAGGING:'idle',
 };
-export interface Clip { frames:number; frameDuration:number; loop:boolean; firstFrame?:number }
+export interface Clip { frames:number; frameDuration:number; loop:boolean; firstFrame?:number; filePrefix?:string }
 export interface IdleSequences { breath:string; blink:string; blinkIntervalMs:[number,number] }
 export interface Manifest {
   species:string; stage:number;
@@ -23,6 +23,7 @@ export function parseManifest(value:unknown, species:string, stage:number): Mani
       !Number.isInteger(c.frames) || c.frames > 256 || !positive(c.frameDuration) ||
       typeof c.loop !== 'boolean' || (c.firstFrame!==undefined && c.firstFrame!==0 && c.firstFrame!==1)) throw new Error('Invalid clip');
   }
+  for(const c of Object.values(m.animations)) if(c.filePrefix!==undefined && (typeof c.filePrefix!=='string' || !/^[a-z][a-z0-9_-]*$/.test(c.filePrefix))) throw new Error('Invalid frame prefix');
   if(m.idleSequences) {
     const {breath,blink,blinkIntervalMs:i}=m.idleSequences;
     if(breath!=='breath' || blink!=='blink' || !Array.isArray(i) || i.length!==2 ||
@@ -38,7 +39,7 @@ export function assetBase(species:string, stage:number) {
   return `/assets/creatures/${species}/stage${String(stage).padStart(2,'0')}`;
 }
 export function frameUrls(base:string, name:string, clip:Clip): string[] {
-  return Array.from({length:clip.frames}, (_,i) => `${base}/${name}/${name}_${String(i+(clip.firstFrame??(['jump','hover','fly','glide','float','settle'].includes(name)?1:0))).padStart(2,'0')}.png`);
+  return Array.from({length:clip.frames}, (_,i) => `${base}/${name}/${clip.filePrefix??name}_${String(i+(clip.firstFrame??(['jump','hover','fly','glide','float','settle'].includes(name)?1:0))).padStart(2,'0')}.png`);
 }
 export function directionScale(facing:number) { return facing < 0 ? -1 : 1; }
 // Fit the full canonical canvas; its bottom-center remains the world anchor.

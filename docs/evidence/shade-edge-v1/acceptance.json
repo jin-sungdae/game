@@ -1,0 +1,48 @@
+{
+  "preflight": {
+    "status": "GUI_ENVIRONMENT_BLOCKED",
+    "reason": "NO_SAFE_CANDIDATE",
+    "userWindowMutations": 0
+  },
+  "visualQa": "GUI_VISUAL_QA_DEFERRED",
+  "actualShade": "NOT_VERIFIED",
+  "productionRecording": null,
+  "actualCycleMs": null,
+  "rendererCenterXDrift": null,
+  "rendererCenterYDrift": null,
+  "rendererBottomDrift": null,
+  "panelStability": "NOT_VERIFIED",
+  "clipping": "NOT_VERIFIED",
+  "sourceRegistration": "source-registration.json",
+  "turnApplicability": "NOT_APPLICABLE",
+  "horizontalTraversal": "NOT_APPLICABLE",
+  "cornerTraversal": "NOT_APPLICABLE",
+  "nativeRuntime": "Nearest left/right safe side, vertical travel, same-side vertical boundary reversal; no corner event.",
+  "presentationSignal": "Existing accepted-displacement speed; thresholds 8 enter / 3 remain; zero on stop. Active/target/progress/vectors not exposed to EDGE frontend.",
+  "timingCandidatesMs": {
+    "IDLE": 2200,
+    "EDGE_MOVE": 1080,
+    "TURN": 360
+  },
+  "rate": "fixed 1x; smoke flow is not stride distance",
+  "backlog": "Monster Visual Regression Sweep: SHADE IDLE/EDGE_MOVE/IDLE actual recording; vertical reversal, drift, clipping, panel stability and timing when native harness READY.",
+  "manualReview": [
+    "smoke flow naturalness",
+    "edge movement impression",
+    "1080ms naturalness",
+    "0.5px reference / 1px peak-to-peak center variation",
+    "TURN readability (asset only)"
+  ],
+  "acceptance": "AUTOMATED_ACCEPTED",
+  "productionStates": {
+    "IDLE": "PRODUCTION",
+    "EDGE_MOVE": "PRODUCTION",
+    "TURN": "NOT_APPLICABLE"
+  },
+  "approvedDefaultsMs": {
+    "IDLE": 2200,
+    "EDGE_MOVE": 1080
+  },
+  "approvedHysteresis": "enter >=8pt/s; remain >3pt/s",
+  "approvalScope": "Alpha Pilot Production EDGE Profile; historical candidate and blocked GUI evidence retained"
+}

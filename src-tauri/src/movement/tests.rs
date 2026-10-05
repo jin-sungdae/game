@@ -372,3 +372,52 @@ fn jump_animation_tracks_accepted_trajectory_and_cancels_without_false_land() {
         assert!(c.jump.is_none());
     }
 }
+
+#[test]
+fn edge_presentation_source_stays_on_each_side_and_stops_without_corner() {
+    use crate::monster_behavior::{Decision, Intent};
+    let a = area();
+    for side in [f64::MIN, f64::MAX] {
+        let mut p = a.clamp(side, -500., SIZE);
+        let side_x = p.0;
+        let env = ambient::Environment {
+            area: a,
+            size: SIZE,
+            cursor: (-9999., -9999.),
+            windows: Some(&[]),
+        };
+        let mut c = MovementController::default();
+        for sign in [1., -1.] {
+            let start_y = p.1;
+            c.start_ambient(
+                MovementProfile::Edge,
+                Decision {
+                    intent: Intent::Wander,
+                    direction: sign,
+                    distance: 40.,
+                    speed: 20.,
+                },
+                p,
+                None,
+                env,
+            );
+            let mut moving = false;
+            for _ in 0..60 {
+                let before = p;
+                p = c.tick_ambient(MovementProfile::Edge, p, 0.05, 20., env);
+                assert_eq!(p.0, side_x);
+                assert_eq!(facing_from_velocity(-1, p.0 - before.0, 0.05), -1);
+                moving |= crate::presentation::animation::speed(before, p, 0.05, 0.) >= 8.;
+            }
+            assert!(moving);
+            assert!((p.1 - start_y) * sign > 0.);
+            assert_eq!(c.profile(), None);
+            let stopped = c.tick_ambient(MovementProfile::Edge, p, 0.05, 20., env);
+            assert_eq!(stopped, p);
+            assert_eq!(
+                crate::presentation::animation::speed(p, stopped, 0.05, 20.),
+                0.
+            );
+        }
+    }
+}
