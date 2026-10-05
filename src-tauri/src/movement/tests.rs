@@ -421,3 +421,61 @@ fn edge_presentation_source_stays_on_each_side_and_stops_without_corner() {
         }
     }
 }
+
+#[test]
+fn free2d_vectors_drive_read_only_speed_and_preserve_vertical_facing() {
+    let a = area();
+    let start = a.ground(-700., SIZE);
+    for (dx, dy) in [(80., 0.), (-80., 0.), (0., 80.), (80., 80.), (-80., 80.)] {
+        let target = (start.0 + dx, start.1 + dy);
+        let mut c = MovementController::default();
+        c.start(
+            MovementIntent {
+                profile: MovementProfile::Free2d,
+                target,
+                duration: 4.,
+                height: 0.,
+            },
+            start,
+            a,
+            SIZE,
+        );
+        let mut p = start;
+        let mut facing = -1;
+        let mut horizontal = false;
+        let mut upward = false;
+        let mut downward = false;
+        let mut diagonal = false;
+        let mut meaningful_speed = false;
+        for _ in 0..100 {
+            let before = p;
+            p = c.tick(p, 0.05, a, SIZE, 14.).0;
+            inside(p, a, SIZE);
+            let vx = (p.0 - before.0) / 0.05;
+            let vy = (p.1 - before.1) / 0.05;
+            horizontal |= vx.abs() > 3.;
+            upward |= vy > 3.;
+            downward |= vy < -3.;
+            diagonal |= vx.abs() > 3. && vy.abs() > 3.;
+            let old = facing;
+            facing = facing_from_velocity(facing, p.0 - before.0, 0.05);
+            if vx.abs() <= 3. {
+                assert_eq!(facing, old);
+            } else {
+                assert_eq!(facing, if vx > 0. { 1 } else { -1 });
+            }
+            meaningful_speed |= crate::presentation::animation::speed(before, p, 0.05, 0.) >= 8.;
+        }
+        assert_eq!(horizontal, dx != 0.);
+        assert_eq!(upward, dy > 0.);
+        assert_eq!(downward, dy > 0.);
+        assert_eq!(diagonal, dx != 0. && dy > 0.);
+        assert!(meaningful_speed);
+        assert_eq!(c.profile(), None);
+        assert!((p.0 - target.0).abs() < 1e-8);
+        assert!((p.1 - a.ground_y()).abs() < 1e-8);
+        assert_eq!(crate::presentation::animation::speed(p, p, 0.05, 20.), 0.);
+        c.cancel();
+        assert_eq!(c.tick(p, 0.05, a, SIZE, 14.).0, p);
+    }
+}

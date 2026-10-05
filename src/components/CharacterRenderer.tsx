@@ -1,3 +1,4 @@
+import { resolveFree2d, type Free2dState } from '../animation/free2d';
 import { resolveEdge, type EdgeState } from '../animation/edge';
 import { resolveStatic } from '../animation/static';
 import { resolveFloating, type FloatingState } from '../animation/floating';
@@ -14,7 +15,7 @@ import { directionScale } from '../animation/model';
 import { useVisualBounds } from './BaseVisual';
 const assets=new PilotAssets();
 export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilot;input:AnimationInput;facing:number;name:string;entityId:string}) {
-  const runtime=useMemo(()=>({edgeState:'IDLE' as EdgeState,floatingState:'HOVER' as FloatingState,flightState:'HOVER' as FlightState,resolver:new AnimationStateResolver(),animator:new CharacterAnimator(),idle:new IdleSequencer(idleRandom()),clips:new Map<AnimationSequence,LoadedClip|null>()}),[entityId,pilot.character]);
+  const runtime=useMemo(()=>({free2dState:'FLICKER' as Free2dState,edgeState:'IDLE' as EdgeState,floatingState:'HOVER' as FloatingState,flightState:'HOVER' as FlightState,resolver:new AnimationStateResolver(),animator:new CharacterAnimator(),idle:new IdleSequencer(idleRandom()),clips:new Map<AnimationSequence,LoadedClip|null>()}),[entityId,pilot.character]);
   const [view,setView]=useState<{runtime:object;state:AnimationSequence;frame:number;suppressed:boolean;asset:LoadedClip|null}>({runtime,state:'IDLE',frame:0,suppressed:false,asset:null});
   const [failed,setFailed]=useState<string|null>(null);
   const reduced=useRef(false);
@@ -26,8 +27,10 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
     let disposed=false;
     const media=matchMedia('(prefers-reduced-motion: reduce)');
     const change=()=>{reduced.current=media.matches;};change();media.addEventListener('change',change);
-    for(const state of ['IDLE','BLINK','MOVE','REACT','JUMP','HOVER','FLY','GLIDE','FLOAT','SETTLE','PEEK','EDGE_MOVE','TURN'] as const) void assets.load(pilot,state).then(clip=>{if(!disposed)runtime.clips.set(state,clip);});
+    for(const state of ['IDLE','BLINK','MOVE','REACT','JUMP','HOVER','FLY','GLIDE','FLOAT','SETTLE','PEEK','EDGE_MOVE','TURN','FLICKER','FLOW','INTENSE'] as const) void assets.load(pilot,state).then(clip=>{if(!disposed)runtime.clips.set(state,clip);});
     const stop=animationClock.subscribe(time=>{
+      const free2d=resolveFree2d(latestInput.current,runtime.free2dState);
+      if(pilot.free2dProfile) runtime.free2dState=free2d.state;
       const edge=resolveEdge(latestInput.current,runtime.edgeState);
       if(pilot.edgeProfile) runtime.edgeState=edge.state;
       const floating=resolveFloating(latestInput.current,runtime.floatingState);
@@ -39,7 +42,7 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
       const sequence=runtime.idle.sample(time,resolved.state==='IDLE' && !resolved.suppressed,reduced.current,breath?.manifest.idleSequences,
         (breath?.manifest.animations.blink?.frames??3)*(breath?.manifest.animations.blink?.frameDuration??90));
       const phaseFrame=jumpFrame(latestInput.current.jump,resolved.suppressed,reduced.current);
-      const sample:{state:AnimationSequence;suppressed:boolean;rate:number}=pilot.edgeProfile?edge:pilot.staticProfile?resolveStatic(latestInput.current):pilot.floatingProfile?floating:pilot.flyingProfile?flight:{...resolved,state:pilot.jumpProfile==='JUMP'?(phaseFrame===null?'IDLE':'JUMP'):resolved.state==='IDLE'?sequence:resolved.state};
+      const sample:{state:AnimationSequence;suppressed:boolean;rate:number}=pilot.free2dProfile?free2d:pilot.edgeProfile?edge:pilot.staticProfile?resolveStatic(latestInput.current):pilot.floatingProfile?floating:pilot.flyingProfile?flight:{...resolved,state:pilot.jumpProfile==='JUMP'?(phaseFrame===null?'IDLE':'JUMP'):resolved.state==='IDLE'?sequence:resolved.state};
       const clip=sample.suppressed?null:runtime.clips.get(sample.state)??null;
       const frame=sample.state==='JUMP'?phaseFrame!:runtime.animator.sample(sample.state+':'+Boolean(clip)+':'+sample.suppressed,clip,time,sample.rate,reduced.current);
       setView(old=>old.runtime===runtime && old.state===sample.state && old.frame===frame && old.suppressed===sample.suppressed && old.asset===clip?old:{runtime,state:sample.state,frame,suppressed:sample.suppressed,asset:clip});
@@ -53,7 +56,8 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
   const flight=resolveFlying(input,runtime.flightState);
   const stationary=resolveStatic(input);
   const edge=resolveEdge(input,runtime.edgeState);
-  const current=pilot.edgeProfile?{...edge,frame:view.runtime===runtime && view.state===edge.state?view.frame:0}:pilot.staticProfile?{...stationary,frame:view.runtime===runtime && view.state==='IDLE'?view.frame:0}:pilot.floatingProfile?{state:floating.state,frame:view.runtime===runtime && view.state===floating.state?view.frame:0,suppressed:floating.suppressed}:pilot.flyingProfile?{state:flight.state,frame:view.runtime===runtime && view.state===flight.state?view.frame:0,suppressed:flight.suppressed}:pilot.jumpProfile==='JUMP'?{state:(nativeFrame===null?'IDLE':'JUMP') as AnimationSequence,frame:nativeFrame??0,suppressed:input.suppressed || input.state!=='ROAMING'}:view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
+  const free2d=resolveFree2d(input,runtime.free2dState);
+  const current=pilot.free2dProfile?{...free2d,frame:view.runtime===runtime && view.state===free2d.state?view.frame:0}:pilot.edgeProfile?{...edge,frame:view.runtime===runtime && view.state===edge.state?view.frame:0}:pilot.staticProfile?{...stationary,frame:view.runtime===runtime && view.state==='IDLE'?view.frame:0}:pilot.floatingProfile?{state:floating.state,frame:view.runtime===runtime && view.state===floating.state?view.frame:0,suppressed:floating.suppressed}:pilot.flyingProfile?{state:flight.state,frame:view.runtime===runtime && view.state===flight.state?view.frame:0,suppressed:flight.suppressed}:pilot.jumpProfile==='JUMP'?{state:(nativeFrame===null?'IDLE':'JUMP') as AnimationSequence,frame:nativeFrame??0,suppressed:input.suppressed || input.state!=='ROAMING'}:view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
   const asset=current.suppressed||input.suppressed?null:runtime.clips.get(current.state);
   const clipId=entityId+':'+pilot.character+':'+current.state;
   const animation=asset?.urls[current.frame]??null;

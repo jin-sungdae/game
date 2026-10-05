@@ -1,0 +1,36 @@
+{
+  "preflight": {
+    "status": "GUI_ENVIRONMENT_BLOCKED",
+    "reason": "NO_SAFE_CANDIDATE",
+    "userWindowMutations": 0
+  },
+  "visualQa": "GUI_VISUAL_QA_DEFERRED",
+  "actualEmber": "NOT_VERIFIED",
+  "productionRecording": null,
+  "actualCycleMs": null,
+  "worldContinuity": "NOT_VERIFIED",
+  "panelStability": "NOT_VERIFIED",
+  "canvasBounds": "NOT_VERIFIED",
+  "rendererSilhouetteDrift": "NOT_VERIFIED",
+  "rendererBottomDrift": "NOT_VERIFIED",
+  "clipping": "NOT_VERIFIED",
+  "intenseApplicability": "NOT_APPLICABLE",
+  "nativeRuntime": "First half linear outbound to target (horizontal/vertical/diagonal), second half descent at target X to ground; finite completion/cancel.",
+  "intenseAnalysis": "EMBER AGGRESSIVE chooses ApproachCompanion/Pause, ordinary decision speed14. No reliable distinct high-speed band/event for INTENSE; trajectory speed is not gameplay intensity.",
+  "presentationSignal": "Existing accepted 2D displacement magnitude; enter >=8, remain >3, zero on stop. Dedicated FREE_2D active/target/progress/vectors are not exposed to renderer.",
+  "candidateCycleMs": {
+    "FLICKER": 1800,
+    "FLOW": 960,
+    "INTENSE": 480
+  },
+  "rate": "fixed1x flame cadence; not stride-linked",
+  "sourceRegistration": "source-registration.json",
+  "backlog": "Monster Visual Regression Sweep when native harness READY: real EMBER FLICKER/FLOW/FLICKER recording, horizontal/vertical/diagonal/reversal, world/panel/canvas continuity, silhouette drift, clipping and actual cycles.",
+  "manualVisualReview": [
+    "flame flicker naturalness",
+    "flow impression",
+    "960ms naturalness",
+    "3px silhouette center variation versus visible hopping",
+    "INTENSE readability (asset-only)"
+  ]
+}

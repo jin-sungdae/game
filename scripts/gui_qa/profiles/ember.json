@@ -1,0 +1,41 @@
+{
+  "entityId": "EMBER",
+  "entityType": "MONSTER",
+  "label": "EMBER",
+  "window": "pip",
+  "panelSize": [
+    96,
+    104
+  ],
+  "zone": "FREE_AREA",
+  "states": {
+    "FLICKER": {
+      "frames": 5,
+      "loop": true,
+      "required": true
+    },
+    "FLOW": {
+      "frames": 6,
+      "loop": true,
+      "required": true
+    }
+  },
+  "sourceBounds": [
+    21,
+    24,
+    238,
+    252
+  ],
+  "sourceCanvas": [
+    256,
+    256
+  ],
+  "sourceFacing": "RIGHT",
+  "velocityEpsilon": 3,
+  "maxTraceSkewSeconds": 0.05,
+  "pixelMask": {
+    "method": "rgb-threshold",
+    "threshold": 40
+  },
+  "note": "FREE_2D flame presentation. FLICKER 1800ms / FLOW 960ms fixed candidates. INTENSE NOT_APPLICABLE. Source silhouette drift X3px/Y0.5px is not world motion."
+}

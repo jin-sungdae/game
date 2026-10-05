@@ -158,6 +158,32 @@ def validate(root=ROOT, allow_missing=False):
 def validate_chirp_flying(root=ROOT):
     return validate_profile_delivery(root,'CHIRP','FLYING',{'hover':(4,400),'fly':(6,90),'glide':(2,300)}, {'hover':{'frames':4,'cycle_ms':1600},'fly':{'frames':6,'frame_ms':90,'cycle_ms':540},'glide':{'frames':2,'cycle_ms':600}})
 
+def validate_ember_free2d(root=ROOT):
+    import hashlib
+    errors=[];d=root/'public/assets/monsters/ember'
+    try:
+        source=json.loads((d/'delivery/manifest.json').read_text());m=json.loads((d/'manifest.json').read_text())
+        clips={'flicker':(5,360),'flow':(6,160),'intense':(4,120)}
+        expected={'species':'ember','stage':1,'canvas':{'width':256,'height':256},'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{n:{'frames':c,'frameDuration':t,'loop':True,'firstFrame':1} for n,(c,t) in clips.items()}}
+        if m!=expected or source['character']!='EMBER' or source['movement_profile']!='FREE_2D' or source['canvas']!=[256,256] or source['source_facing']!='RIGHT':errors.append('EMBER metadata')
+        if source['profile']!={'flicker':{'frames':5,'candidate_cycle_ms':1800},'flow':{'frames':6,'candidate_frame_ms':160,'candidate_cycle_ms':960},'intense':{'frames':4,'candidate_frame_ms':120,'candidate_cycle_ms':480,'runtime_status':'NOT_YET_APPLICABLE'}}:errors.append('EMBER timing')
+        names=[f'{n}/{n}_{i:02}.png' for n,(c,t) in clips.items() for i in range(1,c+1)]
+        if [f['file'] for f in source['frames']]!=names:errors.append('EMBER manifest files')
+        for n,(c,t) in clips.items():
+            if sorted(p.name for p in (d/n).iterdir())!=[f'{n}_{i:02}.png' for i in range(1,c+1)]:errors.append('EMBER filename/count')
+        centers=[]
+        for f in source['frames']:
+            if f['file'] not in names:errors.append('EMBER path');continue
+            p=d/f['file'];b=[];errors.extend(png_errors(p,True,b))
+            if hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256']:errors.append('EMBER SHA')
+            if len(b)!=4:errors.append('EMBER bounds');continue
+            actual=((b[0]+b[2]+1)/2,(b[1]+b[3]+1)/2,b[3]+1);centers.append(actual)
+            if actual!=(f['center_x'],f['center_y'],f['bottom']):errors.append('EMBER registration metadata')
+        if len(centers)!=15 or any(abs(x-129.5)>3 or abs(y-138)>.5 or bottom!=252 for x,y,bottom in centers):errors.append('EMBER registration deviation')
+        if source['registration']!={'max_center_x_delta_px':3,'max_center_y_delta_px':.5,'max_bottom_delta_px':0}:errors.append('EMBER registration contract')
+    except (OSError,ValueError,KeyError,TypeError) as e:errors.append('EMBER FREE_2D: '+str(e))
+    return errors
+
 def validate_shade_edge(root=ROOT):
     import hashlib
     errors=[];d=root/'public/assets/monsters/shade'
@@ -346,6 +372,9 @@ def validate_alpha(root=ROOT, strict=False):
                 if entry.is_dir():
                     if entry.name.casefold().startswith('base.'):
                         errors.append(f'{entry}: base must be a regular PNG file')
+                    continue
+                if code == 'EMBER' and entry.name == 'manifest.json':
+                    errors.extend(validate_ember_free2d(root))
                     continue
                 if code == 'SHADE' and entry.name == 'manifest.json':
                     errors.extend(validate_shade_edge(root))
