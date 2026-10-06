@@ -184,6 +184,33 @@ def validate_ember_free2d(root=ROOT):
     except (OSError,ValueError,KeyError,TypeError) as e:errors.append('EMBER FREE_2D: '+str(e))
     return errors
 
+def validate_noct_edge(root=ROOT):
+    import hashlib
+    errors=[];d=root/'public/assets/monsters/noct'
+    try:
+        source=json.loads((d/'delivery/manifest.json').read_text());m=json.loads((d/'manifest.json').read_text())
+        clips={'idle':(5,440,'idle'),'edge_move':(6,180,'edge')}
+        expected={'species':'noct','stage':1,'canvas':{'width':256,'height':256},'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{n:{'frames':c,'frameDuration':t,'loop':True,'firstFrame':1,**({'filePrefix':prefix} if n!=prefix else {})} for n,(c,t,prefix) in clips.items()}}
+        if m!=expected or source['batch']!='EDGE_ALPHA_NOCT_V1' or source['character']!='NOCT' or source['movement_profile']!='EDGE' or source['contract_source']!='SHADE':errors.append('NOCT metadata')
+        if source['profile']!={'idle':{'frames':5,'cycle_ms':2200},'edge_move':{'frames':6,'frame_ms':180,'cycle_ms':1080,'cadence':'fixed-1x'},'turn':{'runtime_status':'NOT_APPLICABLE'}}:errors.append('NOCT timing/state')
+        names=[f'{n}/{prefix}_{i:02}.png' for n,(c,t,prefix) in clips.items() for i in range(1,c+1)]
+        if [f['file'] for f in source['frames']]!=names:errors.append('NOCT manifest files')
+        for n,(c,t,prefix) in clips.items():
+            if sorted(p.name for p in (d/n).iterdir())!=[f'{prefix}_{i:02}.png' for i in range(1,c+1)]:errors.append('NOCT filename/count')
+        centers=[]
+        for f in source['frames']:
+            if f['file'] not in names:errors.append('NOCT path');continue
+            p=d/f['file'];b=[];errors.extend(png_errors(p,True,b))
+            if hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256']:errors.append('NOCT SHA')
+            if len(b)!=4:errors.append('NOCT bounds');continue
+            actual=((b[0]+b[2]+1)/2,(b[1]+b[3]+1)/2,b[3]+1);centers.append(actual)
+            if actual!=(f['cx'],f['cy'],f['bottom']):errors.append('NOCT registration metadata')
+        # Delivery max delta is relative to the first frame, not peak-to-peak.
+        if len(centers)!=11 or any(abs(x-128)>.5 or abs(y-139.5)>.5 or bottom!=244 for x,y,bottom in centers):errors.append('NOCT registration deviation')
+        if source['registration']!={'max_center_x_delta_px':.5,'max_center_y_delta_px':.5,'max_bottom_delta_px':0}:errors.append('NOCT registration contract')
+    except (OSError,ValueError,KeyError,TypeError) as e:errors.append('NOCT EDGE: '+str(e))
+    return errors
+
 def validate_shade_edge(root=ROOT):
     import hashlib
     errors=[];d=root/'public/assets/monsters/shade'
@@ -411,6 +438,9 @@ def validate_alpha(root=ROOT, strict=False):
                     continue
                 if code == 'EMBER' and entry.name == 'manifest.json':
                     errors.extend(validate_ember_free2d(root))
+                    continue
+                if code == 'NOCT' and entry.name == 'manifest.json':
+                    errors.extend(validate_noct_edge(root))
                     continue
                 if code == 'SHADE' and entry.name == 'manifest.json':
                     errors.extend(validate_shade_edge(root))

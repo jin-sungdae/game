@@ -1,0 +1,41 @@
+{
+  "entityId": "NOCT",
+  "entityType": "MONSTER",
+  "label": "NOCT",
+  "window": "pip",
+  "panelSize": [
+    96,
+    104
+  ],
+  "zone": "EDGE",
+  "states": {
+    "IDLE": {
+      "frames": 5,
+      "loop": true,
+      "required": true
+    },
+    "EDGE_MOVE": {
+      "frames": 6,
+      "loop": true,
+      "required": true
+    }
+  },
+  "sourceBounds": [
+    14,
+    35,
+    242,
+    244
+  ],
+  "sourceCanvas": [
+    256,
+    256
+  ],
+  "sourceFacing": "RIGHT",
+  "velocityEpsilon": 3,
+  "maxTraceSkewSeconds": 0.05,
+  "pixelMask": {
+    "method": "rgb-threshold",
+    "threshold": 40
+  },
+  "note": "Existing EDGE consumer. IDLE 2200ms / EDGE_MOVE 1080ms fixed. TURN NOT_APPLICABLE. Source max reference X/Y deviation 0.5px each; X peak-to-peak 1px, Y 0.5px. Renderer unverified."
+}

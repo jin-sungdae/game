@@ -49,3 +49,13 @@ cycles remain NOT_VERIFIED. Collect real release-app Server Encounter evidence w
 READY, using profiles `wisp.json` and `lunet.json`; no individual follow-up PR required.
 The measured 0px source registration drift is not renderer evidence. Batch details and
 preservation hashes are in `docs/evidence/floating-alpha-batch-v1/summary.json`.
+
+## NOCT — EDGE consumer, DEFERRED_VISUAL_QA
+
+Common harness preflight: GUI_ENVIRONMENT_BLOCKED / NO_SAFE_CANDIDATE. Actual NOCT,
+IDLE/EDGE_MOVE cycles and transitions, vertical movement/reversal, facing, renderer
+center-X/center-Y/bottom drift, panel/canvas bounds, clipping and production recording
+remain NOT_VERIFIED. Use `scripts/gui_qa/profiles/noct.json` in a future READY sweep
+with the real release app, isolated Server Encounter and unchanged safe-placement.
+Source reference X/Y deviation 0.5px each (X peak-to-peak 1px), bottom 0px is not GUI
+proof. See `docs/evidence/noct-edge-alpha-v1/` for original-source measurements.
