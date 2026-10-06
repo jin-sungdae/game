@@ -57,5 +57,29 @@ NO_SAFE_CANDIDATE. No user windows were moved/resized/closed and no production p
 bypass, mock entity or recording was used. Actual NOCT IDLE/EDGE_MOVE, transitions,
 vertical/reversal footage, renderer center/bottom drift, clipping and actual cycles
 remain NOT_VERIFIED / GUI_VISUAL_QA_DEFERRED in the shared sweep backlog.
-After automated gate/CI PASS, acceptance is AUTOMATED_ACCEPTED + GUI_VISUAL_QA_DEFERRED,
-not GUI PASS. Keep the PR Draft for human review; no automatic merge.
+Acceptance remains AUTOMATED_ACCEPTED + GUI_VISUAL_QA_DEFERRED, not GUI PASS.
+
+## Alpha Production approval — 2026-10-06
+
+Human approval accepts NOCT as an Alpha Production consumer of SHADE's existing
+EDGE Production Profile:
+
+| NOCT sequence | Approved state | Alpha default |
+| --- | --- | --- |
+| IDLE | PRODUCTION | 5 frames / 2200ms |
+| EDGE_MOVE | PRODUCTION | 6 frames / 1080ms fixed 1× |
+| TURN | NOT_APPLICABLE | No production trigger |
+
+SHADE and NOCT reuse the same EDGE resolver. Entry >=8pt/s and retention >3pt/s
+hysteresis are unchanged. No new resolver, engine, movement or facing behavior.
+This finalization changes approval documentation only; runtime, assets and timing
+are unchanged. Registry SUPPLIED continues to describe delivery readiness, while
+this approval records NOCT's Production acceptance without changing runtime metadata.
+
+GUI_ENVIRONMENT_BLOCKED remains GUI_VISUAL_QA_DEFERRED. All actual renderer
+NOT_VERIFIED measurements and the Monster Visual Regression Sweep backlog are
+preserved. This approval does not establish actual GUI acceptance.
+
+After final HEAD release validation and CI pass, PR #59 may be Ready for Review
+under this human approval. Automatic merge remains prohibited. Final gate/CI results
+are recorded on the PR against its HEAD.
