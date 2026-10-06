@@ -1,0 +1,105 @@
+{
+  "batch": "EDGE_ALPHA_NOCT_V1",
+  "character": "NOCT",
+  "movement_profile": "EDGE",
+  "contract_source": "SHADE",
+  "profile": {
+    "idle": {
+      "frames": 5,
+      "cycle_ms": 2200
+    },
+    "edge_move": {
+      "frames": 6,
+      "frame_ms": 180,
+      "cycle_ms": 1080,
+      "cadence": "fixed-1x"
+    },
+    "turn": {
+      "runtime_status": "NOT_APPLICABLE"
+    }
+  },
+  "registration": {
+    "max_center_x_delta_px": 0.5,
+    "max_center_y_delta_px": 0.5,
+    "max_bottom_delta_px": 0
+  },
+  "frames": [
+    {
+      "file": "idle/idle_01.png",
+      "sha256": "7423a79ec84c346a6071925052102187a030c4bba2af290b6567f2a4ec62c330",
+      "cx": 128.0,
+      "cy": 139.5,
+      "bottom": 244
+    },
+    {
+      "file": "idle/idle_02.png",
+      "sha256": "97f66d36be9bbc16d044b6332502ab46c303c9ada483d036f9686ca46dd2afca",
+      "cx": 128.0,
+      "cy": 140.0,
+      "bottom": 244
+    },
+    {
+      "file": "idle/idle_03.png",
+      "sha256": "2e91181bb792be9f2aaf9ef62c3ad1db307c856c30ed4538a442d538a7095d1e",
+      "cx": 128.0,
+      "cy": 140.0,
+      "bottom": 244
+    },
+    {
+      "file": "idle/idle_04.png",
+      "sha256": "05064bc87db022698c19e1888119652f4321c9feeaa86d7ae26bc52f7956376a",
+      "cx": 128.0,
+      "cy": 140.0,
+      "bottom": 244
+    },
+    {
+      "file": "idle/idle_05.png",
+      "sha256": "7423a79ec84c346a6071925052102187a030c4bba2af290b6567f2a4ec62c330",
+      "cx": 128.0,
+      "cy": 139.5,
+      "bottom": 244
+    },
+    {
+      "file": "edge_move/edge_01.png",
+      "sha256": "7423a79ec84c346a6071925052102187a030c4bba2af290b6567f2a4ec62c330",
+      "cx": 128.0,
+      "cy": 139.5,
+      "bottom": 244
+    },
+    {
+      "file": "edge_move/edge_02.png",
+      "sha256": "653216a7ed2bc863135d74f3e1c0b576baab0974eefc92dc7d8f12862607770f",
+      "cx": 128.0,
+      "cy": 140.0,
+      "bottom": 244
+    },
+    {
+      "file": "edge_move/edge_03.png",
+      "sha256": "b4bb80545303706388cbef5e911c6447e560bf3c4a57c6fbfcbdf96418693844",
+      "cx": 127.5,
+      "cy": 140.0,
+      "bottom": 244
+    },
+    {
+      "file": "edge_move/edge_04.png",
+      "sha256": "20dbec210e03637655e9c279e670ede8f71ce7f319695471aaf5a7a0bd660da3",
+      "cx": 128.0,
+      "cy": 140.0,
+      "bottom": 244
+    },
+    {
+      "file": "edge_move/edge_05.png",
+      "sha256": "7b551af274b45fe4f2640bfe370b42f96fc001063f87610f3ab85cbd84a67701",
+      "cx": 128.5,
+      "cy": 140.0,
+      "bottom": 244
+    },
+    {
+      "file": "edge_move/edge_06.png",
+      "sha256": "d61b72d76856031db62fadb185d9f4c72b47abc1af2c86b18867e43a92deefe9",
+      "cx": 128.5,
+      "cy": 140.0,
+      "bottom": 244
+    }
+  ]
+}
