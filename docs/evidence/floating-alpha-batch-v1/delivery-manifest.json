@@ -1,0 +1,182 @@
+{
+  "batch": "FLOATING_ALPHA_WISP_LUNET_V1",
+  "profile": "FLOATING",
+  "characters": {
+    "WISP": {
+      "hover": {
+        "frames": 4,
+        "cycle_ms": 2000
+      },
+      "float": {
+        "frames": 6,
+        "frame_ms": 200,
+        "cycle_ms": 1200
+      },
+      "registration": {
+        "max_center_x_delta_px": 0.0,
+        "max_center_y_delta_px": 0.0,
+        "max_bottom_delta_px": 0
+      },
+      "frames": [
+        {
+          "file": "wisp/hover/hover_01.png",
+          "sha256": "7eb84a69a61a33dcd7ff2645cac639f284f075767db71522a65af21d247edd84",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        },
+        {
+          "file": "wisp/hover/hover_02.png",
+          "sha256": "19b1a4efe8bed92f774893a2b60c8f3cefa1de0f5f876fc8a55a9757de68ada7",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        },
+        {
+          "file": "wisp/hover/hover_03.png",
+          "sha256": "7eb84a69a61a33dcd7ff2645cac639f284f075767db71522a65af21d247edd84",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        },
+        {
+          "file": "wisp/hover/hover_04.png",
+          "sha256": "7271396b0dc73e10607340cc38051bd7b51b9b407aec6e2348788bfafbd85d63",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        },
+        {
+          "file": "wisp/float/float_01.png",
+          "sha256": "7eb84a69a61a33dcd7ff2645cac639f284f075767db71522a65af21d247edd84",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        },
+        {
+          "file": "wisp/float/float_02.png",
+          "sha256": "a424e8009c899e2a3180b94c8963ff88f6097439828d8306edab2333632caa61",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        },
+        {
+          "file": "wisp/float/float_03.png",
+          "sha256": "88b54fef5d68096dabacb56352ffa36c47a81581ba94a5e537e9625b62515872",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        },
+        {
+          "file": "wisp/float/float_04.png",
+          "sha256": "042a8aed9784d5ff6d14ecee178fbf84cf5b839388f5c70be141df149c55bdee",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        },
+        {
+          "file": "wisp/float/float_05.png",
+          "sha256": "3bac422db4d00cb497446bb325022514fb0422ff1b9aba34e7b1263cc326158e",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        },
+        {
+          "file": "wisp/float/float_06.png",
+          "sha256": "c369fe9c0afa5d842f3c9febbc25f9ae645af7b6dc8901c76e12501b95e965da",
+          "cx": 129.0,
+          "cy": 137.5,
+          "bottom": 251
+        }
+      ]
+    },
+    "LUNET": {
+      "hover": {
+        "frames": 4,
+        "cycle_ms": 2000
+      },
+      "float": {
+        "frames": 6,
+        "frame_ms": 200,
+        "cycle_ms": 1200
+      },
+      "registration": {
+        "max_center_x_delta_px": 0.0,
+        "max_center_y_delta_px": 0.0,
+        "max_bottom_delta_px": 0
+      },
+      "frames": [
+        {
+          "file": "lunet/hover/hover_01.png",
+          "sha256": "cde530fafb7bf3be0393e45d411c333d617672f26dae277fe6302882d91c4ada",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        },
+        {
+          "file": "lunet/hover/hover_02.png",
+          "sha256": "71a9033af1e3f331acf507072e90ffed35d633466fa9ba0c79bb49c1878a84f7",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        },
+        {
+          "file": "lunet/hover/hover_03.png",
+          "sha256": "cde530fafb7bf3be0393e45d411c333d617672f26dae277fe6302882d91c4ada",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        },
+        {
+          "file": "lunet/hover/hover_04.png",
+          "sha256": "91e309804d51aa430592bca33022fc4ff25dbc0f44ee087264cd8594a8d41a6e",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        },
+        {
+          "file": "lunet/float/float_01.png",
+          "sha256": "cde530fafb7bf3be0393e45d411c333d617672f26dae277fe6302882d91c4ada",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        },
+        {
+          "file": "lunet/float/float_02.png",
+          "sha256": "1799ea46072b7d5376fa1da2e39300b865c70b4277a7ec75a67e6ae53cf00fbb",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        },
+        {
+          "file": "lunet/float/float_03.png",
+          "sha256": "111157c85098a1aa31e9441a1348f1cc71299384d7b78f5d68ab789faabb985d",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        },
+        {
+          "file": "lunet/float/float_04.png",
+          "sha256": "ffc6a819a3a0941042f3771ffcca8fdc335b1a4b5d610e25a66d0cdba1c62368",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        },
+        {
+          "file": "lunet/float/float_05.png",
+          "sha256": "af8485c1a1fd0d9394972f5bff9cfc3faea029ac149f74b556074bc57b5709c6",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        },
+        {
+          "file": "lunet/float/float_06.png",
+          "sha256": "373a75409d98c05805fa35f72ee18bff3f33af1e790df426e499f8cb158f35de",
+          "cx": 125.5,
+          "cy": 136.0,
+          "bottom": 248
+        }
+      ]
+    }
+  }
+}

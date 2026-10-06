@@ -1,0 +1,324 @@
+{
+  "baseline": "963fb49d5b88c53e3b0be38449165ddd39a2ca46",
+  "guiAcceptance": "GUI_VISUAL_QA_DEFERRED",
+  "representative": "PUFF",
+  "consumers": [
+    "PUFF",
+    "WISP",
+    "LUNET"
+  ],
+  "characters": {
+    "WISP": {
+      "assetIntegrity": "PASS",
+      "frames": [
+        {
+          "path": "wisp/float/float_01.png",
+          "sha256": "7eb84a69a61a33dcd7ff2645cac639f284f075767db71522a65af21d247edd84",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        },
+        {
+          "path": "wisp/float/float_02.png",
+          "sha256": "a424e8009c899e2a3180b94c8963ff88f6097439828d8306edab2333632caa61",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        },
+        {
+          "path": "wisp/float/float_03.png",
+          "sha256": "88b54fef5d68096dabacb56352ffa36c47a81581ba94a5e537e9625b62515872",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        },
+        {
+          "path": "wisp/float/float_04.png",
+          "sha256": "042a8aed9784d5ff6d14ecee178fbf84cf5b839388f5c70be141df149c55bdee",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        },
+        {
+          "path": "wisp/float/float_05.png",
+          "sha256": "3bac422db4d00cb497446bb325022514fb0422ff1b9aba34e7b1263cc326158e",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        },
+        {
+          "path": "wisp/float/float_06.png",
+          "sha256": "c369fe9c0afa5d842f3c9febbc25f9ae645af7b6dc8901c76e12501b95e965da",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        },
+        {
+          "path": "wisp/hover/hover_01.png",
+          "sha256": "7eb84a69a61a33dcd7ff2645cac639f284f075767db71522a65af21d247edd84",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        },
+        {
+          "path": "wisp/hover/hover_02.png",
+          "sha256": "19b1a4efe8bed92f774893a2b60c8f3cefa1de0f5f876fc8a55a9757de68ada7",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        },
+        {
+          "path": "wisp/hover/hover_03.png",
+          "sha256": "7eb84a69a61a33dcd7ff2645cac639f284f075767db71522a65af21d247edd84",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        },
+        {
+          "path": "wisp/hover/hover_04.png",
+          "sha256": "7271396b0dc73e10607340cc38051bd7b51b9b407aec6e2348788bfafbd85d63",
+          "boundsExclusive": [
+            18,
+            24,
+            240,
+            251
+          ],
+          "centerX": 129.0,
+          "centerY": 137.5,
+          "bottom": 251
+        }
+      ],
+      "sourceDrift": {
+        "centerX": 0.0,
+        "centerY": 0.0,
+        "bottom": 0
+      },
+      "preflight": {
+        "status": "GUI_ENVIRONMENT_BLOCKED",
+        "reason": "NO_SAFE_CANDIDATE",
+        "userWindowMutations": 0
+      },
+      "actualPlayback": "NOT_VERIFIED",
+      "rendererDrift": "NOT_VERIFIED",
+      "clipping": "NOT_VERIFIED",
+      "productionRecording": "NOT_VERIFIED"
+    },
+    "LUNET": {
+      "assetIntegrity": "PASS",
+      "frames": [
+        {
+          "path": "lunet/float/float_01.png",
+          "sha256": "cde530fafb7bf3be0393e45d411c333d617672f26dae277fe6302882d91c4ada",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        },
+        {
+          "path": "lunet/float/float_02.png",
+          "sha256": "1799ea46072b7d5376fa1da2e39300b865c70b4277a7ec75a67e6ae53cf00fbb",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        },
+        {
+          "path": "lunet/float/float_03.png",
+          "sha256": "111157c85098a1aa31e9441a1348f1cc71299384d7b78f5d68ab789faabb985d",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        },
+        {
+          "path": "lunet/float/float_04.png",
+          "sha256": "ffc6a819a3a0941042f3771ffcca8fdc335b1a4b5d610e25a66d0cdba1c62368",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        },
+        {
+          "path": "lunet/float/float_05.png",
+          "sha256": "af8485c1a1fd0d9394972f5bff9cfc3faea029ac149f74b556074bc57b5709c6",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        },
+        {
+          "path": "lunet/float/float_06.png",
+          "sha256": "373a75409d98c05805fa35f72ee18bff3f33af1e790df426e499f8cb158f35de",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        },
+        {
+          "path": "lunet/hover/hover_01.png",
+          "sha256": "cde530fafb7bf3be0393e45d411c333d617672f26dae277fe6302882d91c4ada",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        },
+        {
+          "path": "lunet/hover/hover_02.png",
+          "sha256": "71a9033af1e3f331acf507072e90ffed35d633466fa9ba0c79bb49c1878a84f7",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        },
+        {
+          "path": "lunet/hover/hover_03.png",
+          "sha256": "cde530fafb7bf3be0393e45d411c333d617672f26dae277fe6302882d91c4ada",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        },
+        {
+          "path": "lunet/hover/hover_04.png",
+          "sha256": "91e309804d51aa430592bca33022fc4ff25dbc0f44ee087264cd8594a8d41a6e",
+          "boundsExclusive": [
+            17,
+            24,
+            234,
+            248
+          ],
+          "centerX": 125.5,
+          "centerY": 136.0,
+          "bottom": 248
+        }
+      ],
+      "sourceDrift": {
+        "centerX": 0.0,
+        "centerY": 0.0,
+        "bottom": 0
+      },
+      "preflight": {
+        "status": "GUI_ENVIRONMENT_BLOCKED",
+        "reason": "NO_SAFE_CANDIDATE",
+        "userWindowMutations": 0
+      },
+      "actualPlayback": "NOT_VERIFIED",
+      "rendererDrift": "NOT_VERIFIED",
+      "clipping": "NOT_VERIFIED",
+      "productionRecording": "NOT_VERIFIED"
+    }
+  },
+  "preserved": {
+    "src/animation/floating.ts": "d230c20174a0ec993851e4050e6b5fd0cbb772f08deffccbd7b1e5dd53f7607a",
+    "src/animation/clock.ts": "261eaf8ed570aa9dba7aae3ae5b4f92056ac264fb0eaccb7a5acd9160af273c3",
+    "src/animation/loader.ts": "f17d27b0e17d1f67275bbfb213564a12d2c85d66c954e0f3645d41cec740d5c5",
+    "src/components/CharacterRenderer.tsx": "7b7d928487d22766b1aa8b5f4446289cb384433515348a919d32db75a04c5742",
+    "src-tauri/tauri.conf.json": "cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed",
+    "src-tauri/src/behaviors.rs": "aa95e7e51e9de3b4d2a42b6e20610669b216b4057fc06f0e18a2aca4a67fe2c8",
+    "src-tauri/src/movement/mod.rs": "9bf88f34a405a270359c9195b7a2f505ec65ba60cbb402dc978ccaf4b773ef1f",
+    "src-tauri/src/movement/ambient.rs": "5f40d3fdb1e51bb505c0ceff2e87e3134cd8275d7424b6bf1159eb95a080a5ef",
+    "src/entities/monsters.json": "d9bd40da5cb35ddcab67b8bd92c6c26cccacf452756379820fbc60a49ac52c04",
+    "src/entities/monster-dex.json": "9fb66e25e74ca9c74bc4a7ddee7ae5ad2fc9b5307415d8b1fb82ffd9487c73e2",
+    "public/assets/monsters/wisp/base.png": "9423d6524797e82349ab9f0bf40a4f8be5dacb3683276c0645516c52388e1b3d",
+    "public/assets/monsters/lunet/base.png": "eeba6eeec884e042b32f151f26b5e881a2dd0d3db65a5ba0ef13bf6153765640"
+  }
+}

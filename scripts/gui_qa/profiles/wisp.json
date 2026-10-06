@@ -1,0 +1,42 @@
+{
+  "entityId": "WISP",
+  "entityType": "MONSTER",
+  "label": "WISP",
+  "window": "pip",
+  "panelSize": [
+    96,
+    104
+  ],
+  "zone": "FREE_AREA",
+  "states": {
+    "HOVER": {
+      "frames": 4,
+      "loop": true,
+      "required": true
+    },
+    "FLOAT": {
+      "frames": 6,
+      "loop": true,
+      "required": true,
+      "excursionActive": true
+    }
+  },
+  "sourceBounds": [
+    18,
+    24,
+    240,
+    251
+  ],
+  "sourceCanvas": [
+    256,
+    256
+  ],
+  "sourceFacing": "RIGHT",
+  "velocityEpsilon": 3,
+  "maxTraceSkewSeconds": 0.05,
+  "pixelMask": {
+    "method": "rgb-threshold",
+    "threshold": 40
+  },
+  "note": "Existing FLOATING consumer: HOVER 2000ms / FLOAT 1200ms. SETTLE NOT_APPLICABLE. Source registration does not prove renderer stability."
+}
