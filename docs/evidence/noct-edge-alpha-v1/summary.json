@@ -1,0 +1,45 @@
+{
+  "baseline": "fd02b97d8a9939df61027af11a47f59b04761e2c",
+  "representative": "SHADE",
+  "consumers": [
+    "SHADE",
+    "NOCT"
+  ],
+  "preservationSHA256": {
+    "src/animation/edge.ts": "c9bfdda8d977ccd7469a5e88a4a5a64305fff88f7c6629a9ae9c45cf6830cafb",
+    "src/animation/clock.ts": "261eaf8ed570aa9dba7aae3ae5b4f92056ac264fb0eaccb7a5acd9160af273c3",
+    "src/animation/loader.ts": "f17d27b0e17d1f67275bbfb213564a12d2c85d66c954e0f3645d41cec740d5c5",
+    "src/components/CharacterRenderer.tsx": "7b7d928487d22766b1aa8b5f4446289cb384433515348a919d32db75a04c5742",
+    "src-tauri/tauri.conf.json": "cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed",
+    "src-tauri/src/main.rs": "878a7fcd034da56ff42c4fd243111b4ca1947217d2022ce7c25ad6583b14a449",
+    "src-tauri/src/behaviors.rs": "aa95e7e51e9de3b4d2a42b6e20610669b216b4057fc06f0e18a2aca4a67fe2c8",
+    "src-tauri/src/movement/mod.rs": "9bf88f34a405a270359c9195b7a2f505ec65ba60cbb402dc978ccaf4b773ef1f",
+    "src-tauri/src/movement/ambient.rs": "5f40d3fdb1e51bb505c0ceff2e87e3134cd8275d7424b6bf1159eb95a080a5ef",
+    "src/entities/monsters.json": "d9bd40da5cb35ddcab67b8bd92c6c26cccacf452756379820fbc60a49ac52c04",
+    "src/entities/monster-dex.json": "9fb66e25e74ca9c74bc4a7ddee7ae5ad2fc9b5307415d8b1fb82ffd9487c73e2",
+    "public/assets/monsters/noct/base.png": "c808c729d22318b7cb544682ce629d2b35eda07f4d199c288b6210ab4c3ba75a",
+    "public/assets/monsters/shade/manifest.json": "0692f0f376b3226bf6da607bb86ac5f7665d05a258e8670cb4b5a9bdb8f4592d"
+  },
+  "preflight": {
+    "status": "GUI_ENVIRONMENT_BLOCKED",
+    "reason": "NO_SAFE_CANDIDATE",
+    "userWindowMutations": 0
+  },
+  "guiAcceptance": "GUI_VISUAL_QA_DEFERRED",
+  "actualGUI": {
+    "NOCT": "NOT_VERIFIED",
+    "IDLE": "NOT_VERIFIED",
+    "EDGE_MOVE": "NOT_VERIFIED",
+    "verticalMovement": "NOT_VERIFIED",
+    "verticalReversal": "NOT_VERIFIED",
+    "facing": "NOT_VERIFIED",
+    "centerXDrift": "NOT_VERIFIED",
+    "centerYDrift": "NOT_VERIFIED",
+    "bottomDrift": "NOT_VERIFIED",
+    "clipping": "NOT_VERIFIED",
+    "panelBounds": "NOT_VERIFIED",
+    "canvasBounds": "NOT_VERIFIED",
+    "cycleTiming": "NOT_VERIFIED",
+    "productionRecording": "NOT_VERIFIED"
+  }
+}

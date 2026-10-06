@@ -503,3 +503,75 @@ fn floating_batch_timid_avoidance_emits_active_completion_and_native_facing() {
         }
     }
 }
+
+#[test]
+fn noct_edge_batch_timid_avoidance_boundary_reversal_and_facing_retention() {
+    for side in [f64::MIN, f64::MAX] {
+        let mut w = world("NOCT"); // Existing NIGHT eligibility remains domain-owned.
+        assert_eq!(w.monster_behavior.as_ref().unwrap().profile, Profile::Timid);
+        assert_eq!(
+            w.view.monster.as_ref().unwrap().movement_profile,
+            MovementProfile::Edge
+        );
+        w.view.pip.as_mut().unwrap().state = PipState::Roaming;
+        w.monster_behavior.as_mut().unwrap().hold(true);
+        w.monster_behavior.as_mut().unwrap().current.speed = 20.;
+        let area = w.area;
+        let size = w.view.pip.as_ref().unwrap().size;
+        let mut now = 1.;
+        for (intent, y, sign, expected) in [
+            (Intent::AvoidCompanion, area.ground_y() + 80., 1., 1.),
+            (Intent::AvoidCompanion, area.ground_y() + 80., -1., -1.),
+            (Intent::Wander, f64::MAX, 1., -1.),
+            (Intent::Wander, f64::MIN, -1., 1.),
+        ] {
+            let from = area.clamp(side, y, size);
+            {
+                let p = w.view.pip.as_mut().unwrap();
+                p.x = from.0;
+                p.y = from.1;
+                p.facing = if side < 0. { -1 } else { 1 };
+            }
+            let facing = w.view.pip.as_ref().unwrap().facing;
+            w.monster_movement.start_ambient(
+                MovementProfile::Edge,
+                crate::monster_behavior::Decision {
+                    intent,
+                    direction: sign,
+                    distance: 40.,
+                    speed: 20.,
+                },
+                from,
+                Some((from.0, from.1 - sign * 100.)),
+                crate::movement::ambient::Environment {
+                    area,
+                    size,
+                    cursor: FAR,
+                    windows: Some(&[]),
+                },
+            );
+            let mut moved = false;
+            let mut measured_speed = 0.;
+            for _ in 0..70 {
+                let before = w.view.pip.as_ref().map(|p| (p.x, p.y)).unwrap();
+                now += 0.05;
+                w.tick(now, 0.05, FAR, false);
+                let p = w.view.pip.as_ref().unwrap();
+                assert_eq!(p.x, from.0);
+                assert_eq!(p.facing, facing);
+                // Same read-only accepted-displacement adapter used by main.rs.
+                measured_speed =
+                    crate::presentation::animation::speed(before, (p.x, p.y), 0.05, measured_speed);
+                moved |= measured_speed >= 8.;
+                inside(&w);
+            }
+            assert!(moved, "{intent:?}");
+            assert!(
+                (w.view.pip.as_ref().unwrap().y - from.1) * expected > 0.,
+                "{intent:?}"
+            );
+            assert_eq!(w.monster_movement.profile(), None);
+            assert_eq!(measured_speed, 0.);
+        }
+    }
+}
