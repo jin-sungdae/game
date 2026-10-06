@@ -50,6 +50,26 @@ recording was claimed. Actual HOVER/FLOAT, direction/reversal, renderer drift,
 clipping and actual cycle measurements remain NOT_VERIFIED / GUI_VISUAL_QA_DEFERRED.
 Source registration and deterministic tests do not establish visual acceptance.
 
-The batch may be AUTOMATED_ACCEPTED once the final release gate and CI pass, under
-the user's explicit deferred-GUI policy. Keep the PR Draft for human review and never
-merge automatically. Final gate/CI results are recorded on the PR against its HEAD.
+## Alpha Production approval — 2026-10-06
+
+Human approval accepts the existing AUTOMATED_ACCEPTED result as Alpha Production.
+WISP and LUNET are Production consumers of PUFF's existing FLOATING Production Profile.
+
+| Consumer | HOVER | FLOAT | SETTLE |
+| --- | --- | --- | --- |
+| WISP | PRODUCTION — 4 frames / 2000ms | PRODUCTION — 6 frames / 1200ms fixed cadence | NOT_APPLICABLE |
+| LUNET | PRODUCTION — 4 frames / 2000ms | PRODUCTION — 6 frames / 1200ms fixed cadence | NOT_APPLICABLE |
+
+PUFF/WISP/LUNET reuse the same approved FLOATING resolver. This finalization changes
+approval documentation only; production runtime, assets and timing remain unchanged.
+The existing SUPPLIED registry value describes asset delivery, not a separate approval
+gate, and is retained consistently with PUFF.
+
+AUTOMATED_ACCEPTED and GUI_VISUAL_QA_DEFERRED remain separate. Historical
+GUI_ENVIRONMENT_BLOCKED / NO_SAFE_CANDIDATE and every NOT_VERIFIED measurement above
+are preserved; this approval is not a GUI PASS. Deferred work remains in the Monster
+Visual Regression Sweep backlog.
+
+After the final HEAD release gate and CI pass, PR #58 is Ready for Review under this
+human approval. Automatic merge remains prohibited. Gate/CI results are recorded on
+the PR against its final HEAD.
