@@ -259,6 +259,39 @@ def validate_mimi_static(root=ROOT):
     except (OSError,ValueError,KeyError,TypeError) as e: errors.append('MIMI STATIC: '+str(e))
     return errors
 
+def validate_ground_batch(root=ROOT, code='MOSSY'):
+    """Validate original batch bytes and canonical metadata; no runtime policy."""
+    import hashlib
+    errors=[]
+    try:
+        source=json.loads((root/'docs/evidence/ground-alpha-batch-v1/delivery-manifest.json').read_text())
+        if code not in ('MOSSY','PEBB','TIKKI') or source['batch']!='GROUND_ALPHA_MOSSY_PEBB_TIKKI_V1' or source['profile']!='GROUND' or source['contract_source']!='PIP' or set(source['characters'])!={'MOSSY','PEBB','TIKKI'}:
+            raise ValueError('batch identity')
+        delivery=source['characters'][code];d=root/'public/assets/monsters'/code.lower()
+        counts={'idle':(4,450),'move':(8,80)}
+        expected={'species':code.lower(),'stage':1,'canvas':{'width':256,'height':256},'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{n:{'frames':c,'frameDuration':t,'loop':True,'firstFrame':1} for n,(c,t) in counts.items()}}
+        if json.loads((d/'manifest.json').read_text())!=expected:errors.append(code+' metadata contract')
+        if delivery['idle']!={'frames':4,'cycle_ms':1800} or delivery['move']!={'frames':8,'frame_ms':80,'cycle_ms_at_1x':640}:errors.append(code+' timing contract')
+        if delivery['registration']!={'max_center_x_delta_px':0,'max_center_y_delta_px':0,'max_bottom_delta_px':0}:errors.append(code+' registration contract')
+        names=[f'{code.lower()}/{n}/{n}_{i:02}.png' for n,(c,t) in counts.items() for i in range(1,c+1)]
+        if [f['file'] for f in delivery['frames']]!=names:errors.append(code+' manifest files')
+        for n,(c,t) in counts.items():
+            if sorted(p.name for p in (d/n).iterdir())!=[f'{n}_{i:02}.png' for i in range(1,c+1)]:errors.append(code+' filenames '+n)
+        measurements=[]
+        for f in delivery['frames']:
+            if f['file'] not in names:errors.append(code+' noncanonical path');continue
+            p=root/'public/assets/monsters'/f['file'];b=[]
+            errors.extend(png_errors(p,True,b))
+            if hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256']:errors.append(code+' SHA mismatch')
+            if len(b)==4:
+                measured=((b[0]+b[2]+1)/2,(b[1]+b[3]+1)/2,b[3]+1)
+                measurements.append(measured)
+                if measured!=(f['cx'],f['cy'],f['bottom']):errors.append(code+' registration metadata')
+        if len(measurements)!=12 or len(set(measurements))!=1:errors.append(code+' registration drift')
+    except (OSError,ValueError,KeyError,TypeError) as e:errors.append(code+' GROUND batch: '+str(e))
+    return errors
+
+
 def validate_floating_batch(root=ROOT, code='WISP'):
     """Validate original batch bytes and canonical metadata; no runtime policy."""
     import hashlib
@@ -432,6 +465,9 @@ def validate_alpha(root=ROOT, strict=False):
                 if entry.is_dir():
                     if entry.name.casefold().startswith('base.'):
                         errors.append(f'{entry}: base must be a regular PNG file')
+                    continue
+                if code in ('MOSSY', 'PEBB', 'TIKKI') and entry.name == 'manifest.json':
+                    errors.extend(validate_ground_batch(root, code))
                     continue
                 if code in ('WISP', 'LUNET') and entry.name == 'manifest.json':
                     errors.extend(validate_floating_batch(root, code))

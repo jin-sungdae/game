@@ -575,3 +575,70 @@ fn noct_edge_batch_timid_avoidance_boundary_reversal_and_facing_retention() {
         }
     }
 }
+
+#[test]
+fn ground_batch_consumers_keep_profiles_ground_facing_and_pause() {
+    for (code, profile, speed, intent) in [
+        ("MOSSY", Profile::Sleepy, 8., Intent::Wander),
+        ("PEBB", Profile::Passive, 10., Intent::Wander),
+        ("TIKKI", Profile::Curious, 14., Intent::ApproachCompanion),
+    ] {
+        let mut w = world(code);
+        assert_eq!(w.monster_behavior.as_ref().unwrap().profile, profile);
+        assert_eq!(
+            w.view.monster.as_ref().unwrap().movement_profile,
+            MovementProfile::Ground
+        );
+        w.view.pip.as_mut().unwrap().state = PipState::Roaming;
+        w.monster_behavior.as_mut().unwrap().hold(true);
+        w.monster_behavior.as_mut().unwrap().current.speed = speed;
+        let area = w.area;
+        let size = w.view.pip.as_ref().unwrap().size;
+        let mut now = 1.;
+        for sign in [1., -1.] {
+            let from = area.ground(-1800., size);
+            {
+                let p = w.view.pip.as_mut().unwrap();
+                p.x = from.0;
+                p.y = from.1;
+            }
+            w.monster_movement.start_ambient(
+                MovementProfile::Ground,
+                crate::monster_behavior::Decision {
+                    intent,
+                    direction: sign,
+                    distance: 24.,
+                    speed,
+                },
+                from,
+                Some((from.0 + sign * 600., from.1)),
+                crate::movement::ambient::Environment {
+                    area,
+                    size,
+                    cursor: FAR,
+                    windows: Some(&[]),
+                },
+            );
+            let mut moved = false;
+            for _ in 0..100 {
+                let before = w.view.pip.as_ref().unwrap().clone();
+                now += 0.05;
+                w.tick(now, 0.05, FAR, false);
+                let p = w.view.pip.as_ref().unwrap();
+                assert_eq!(p.y, from.1);
+                if (p.x - before.x).abs() / 0.05 > crate::movement::FACING_SPEED_EPSILON {
+                    moved = true;
+                    assert_eq!(p.facing, sign as i8);
+                }
+                inside(&w);
+            }
+            assert!(moved, "{code}");
+            assert_eq!(w.monster_movement.profile(), None);
+            let stopped = w.view.pip.as_ref().unwrap().clone();
+            now += 0.05;
+            w.tick(now, 0.05, FAR, false);
+            let p = w.view.pip.as_ref().unwrap();
+            assert_eq!((p.x, p.y, p.facing), (stopped.x, stopped.y, stopped.facing));
+        }
+    }
+}

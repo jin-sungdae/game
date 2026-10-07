@@ -12,12 +12,19 @@ export type AnimationState = 'IDLE'|'MOVE'|'REACT';
 export type AnimationSequence = AnimationState|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE'|'FLOAT'|'SETTLE'|'PEEK'|'EDGE_MOVE'|'TURN'|'FLICKER'|'FLOW'|'INTENSE';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
 // Readiness describes clip assets, not gameplay triggers (PIP mouse REACT is unavailable).
-export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'|'WISP'|'LUNET'|'NOCT'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
+export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'|'WISP'|'LUNET'|'NOCT'|'MOSSY'|'PEBB'|'TIKKI'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; groundProfile?:'GROUND'; groundMoveClip?:'walk'|'move'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
+export const groundConsumers=[{character:'PIP',status:'IDLE_PRODUCTION',moveClip:'walk',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'},{character:'MOSSY',status:'SUPPLIED',moveClip:'move'},{character:'PEBB',status:'SUPPLIED',moveClip:'move'},{character:'TIKKI',status:'SUPPLIED',moveClip:'move'}] as const;
+// Shared GROUND clip metadata; identity never determines frame count.
+export const groundClips={IDLE:{frames:4,frameDuration:450},MOVE:{frames:8,frameDuration:80}} as const;
 export const edgeConsumers=[{character:'SHADE',status:'EDGE_PRODUCTION'},{character:'NOCT',status:'SUPPLIED'}] as const;
 export const floatingConsumers=['PUFF','WISP','LUNET'] as const;
 export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
-  if(character==='PIP') return {character:'PIP',species:'pip',stage:1,manifest:resolveMonster('PIP')!.assetRoot+'/manifest.json',base:resolveMonster('PIP')!.baseAsset!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'};
+  const ground=groundConsumers.find(consumer=>consumer.character===character);
+  if(ground) {
+    const asset=resolveMonster(ground.character)!;
+    return {character:ground.character,species:ground.character.toLowerCase(),stage:1,manifest:asset.assetRoot+'/manifest.json',base:asset.baseAsset!,status:ground.status,sourceFacing:'RIGHT',groundProfile:'GROUND',groundMoveClip:ground.moveClip,...('moveStatus' in ground?{moveStatus:ground.moveStatus,reactStatus:ground.reactStatus}:{})};
+  }
   if(character==='MELLO') return {character:'MELLO',species:'mello',stage:1,manifest:resolveMonster('MELLO')!.assetRoot+'/manifest.json',base:resolveMonster('MELLO')!.baseAsset!,status:'JUMP_PRODUCTION',sourceFacing:'RIGHT',jumpProfile:'JUMP'};
   const floating=floatingConsumers.find(code=>code===character);
   if(floating) {
@@ -40,6 +47,14 @@ export const pilotContract = {canvas:256,anchor:{x:.5,y:1},maxFrames:32,minFrame
 export class PilotAssets {
   constructor(private loader=new AssetLoader()) {}
   async load(p:Pilot,state:AnimationSequence):Promise<LoadedClip|null> {
+    if(p.groundProfile==='GROUND' && (state==='IDLE' || state==='MOVE')) {
+      if(p.status==='NOT_SUPPLIED' || (state==='MOVE' && p.status==='IDLE_PRODUCTION' && p.moveStatus!=='PRODUCTION')) return null;
+      const contract=groundClips[state];
+      const name=state==='IDLE'?'idle':p.groundMoveClip;
+      if(!name) return null;
+      const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,name);
+      return asset && asset.manifest.canvas.width===256 && asset.manifest.canvas.height===256 && asset.clip.frames===contract.frames && asset.clip.frameDuration===contract.frameDuration && asset.clip.loop?asset:null;
+    }
     if(p.free2dProfile==='FREE_2D') {
       if(p.status==='NOT_SUPPLIED' || !Object.hasOwn(free2dClips,state)) return null;
       const c=free2dClips[state as keyof typeof free2dClips];
@@ -86,7 +101,7 @@ export class PilotAssets {
     const sequences=p.character==='MOA' && p.stage===1;
     if(state==='BLINK' && !sequences) return null;
     const name=sequences && state==='IDLE'?'breath':state==='BLINK'?'blink':pilotClips[state];
-    const expected=state==='IDLE' && (sequences || p.character==='PIP')?4:state==='BLINK'?3:pilotFrames[state];
+    const expected=state==='IDLE' && sequences?4:state==='BLINK'?3:pilotFrames[state];
     const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,name);
     if(!asset || asset.manifest.canvas.width!==256 || asset.manifest.canvas.height!==256 || asset.clip.frames!==expected || asset.clip.frameDuration<40 || asset.clip.frameDuration>1000 || asset.clip.loop!==(state!=='REACT' && state!=='BLINK') || (state==='REACT' && asset.clip.frames*asset.clip.frameDuration!==480)) return null;
     if(sequences && (state==='IDLE' || state==='BLINK') && !asset.manifest.idleSequences) return null;

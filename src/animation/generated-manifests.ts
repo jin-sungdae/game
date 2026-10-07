@@ -361,6 +361,35 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "mimi",
     "stage": 1
   },
+  "/assets/monsters/mossy/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "firstFrame": 1,
+        "frameDuration": 450,
+        "frames": 4,
+        "loop": true
+      },
+      "move": {
+        "firstFrame": 1,
+        "frameDuration": 80,
+        "frames": 8,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "mossy",
+    "stage": 1
+  },
   "/assets/monsters/noct/manifest.json": {
     "anchor": {
       "x": 0.5,
@@ -389,6 +418,35 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
       "width": 82
     },
     "species": "noct",
+    "stage": 1
+  },
+  "/assets/monsters/pebb/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "firstFrame": 1,
+        "frameDuration": 450,
+        "frames": 4,
+        "loop": true
+      },
+      "move": {
+        "firstFrame": 1,
+        "frameDuration": 80,
+        "frames": 8,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "pebb",
     "stage": 1
   },
   "/assets/monsters/pip/manifest.json": {
@@ -489,6 +547,35 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
       "width": 82
     },
     "species": "shade",
+    "stage": 1
+  },
+  "/assets/monsters/tikki/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "firstFrame": 1,
+        "frameDuration": 450,
+        "frames": 4,
+        "loop": true
+      },
+      "move": {
+        "firstFrame": 1,
+        "frameDuration": 80,
+        "frames": 8,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "tikki",
     "stage": 1
   },
   "/assets/monsters/wisp/manifest.json": {

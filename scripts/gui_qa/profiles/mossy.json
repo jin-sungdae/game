@@ -1,0 +1,41 @@
+{
+  "entityId": "MOSSY",
+  "entityType": "MONSTER",
+  "label": "MOSSY",
+  "window": "pip",
+  "panelSize": [
+    96,
+    104
+  ],
+  "zone": "BOTTOM",
+  "states": {
+    "IDLE": {
+      "frames": 4,
+      "loop": true,
+      "required": true
+    },
+    "MOVE": {
+      "frames": 8,
+      "loop": true,
+      "required": true
+    }
+  },
+  "sourceBounds": [
+    14,
+    26,
+    240,
+    252
+  ],
+  "sourceCanvas": [
+    256,
+    256
+  ],
+  "sourceFacing": "RIGHT",
+  "velocityEpsilon": 3,
+  "maxTraceSkewSeconds": 0.05,
+  "pixelMask": {
+    "method": "rgb-threshold",
+    "threshold": 40
+  },
+  "note": "Existing GROUND consumer: IDLE 1800ms; MOVE 640ms at 1x, bounded velocity-linked playback. Source registration is not renderer evidence."
+}

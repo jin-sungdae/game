@@ -59,3 +59,12 @@ remain NOT_VERIFIED. Use `scripts/gui_qa/profiles/noct.json` in a future READY s
 with the real release app, isolated Server Encounter and unchanged safe-placement.
 Source reference X/Y deviation 0.5px each (X peak-to-peak 1px), bottom 0px is not GUI
 proof. See `docs/evidence/noct-edge-alpha-v1/` for original-source measurements.
+
+## MOSSY / PEBB / TIKKI — GROUND batch, DEFERRED_VISUAL_QA
+
+All three common harness preflights returned GUI_ENVIRONMENT_BLOCKED /
+NO_SAFE_CANDIDATE. Actual IDLE/MOVE cycles, transition, LEFT/RIGHT facing, renderer
+center-X/center-Y/bottom drift, panel/canvas bounds, clipping and production recording
+remain NOT_VERIFIED. Use the respective `mossy.json`, `pebb.json`, `tikki.json` profiles
+in a future READY sweep with real release app and real Server Encounters. Source 0px
+variation does not establish renderer PASS. No individual follow-up PR is required.

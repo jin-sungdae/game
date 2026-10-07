@@ -133,3 +133,30 @@ fn content_profiles_are_independent_of_physics() {
     }
     assert!(profile("UNKNOWN").is_none());
 }
+
+#[test]
+fn ground_batch_behavior_decisions_keep_existing_profiles() {
+    let mut sleepy = Controller::new(Profile::Sleepy, Fixed(0.9), 0.);
+    assert_eq!(
+        sleepy
+            .poll(0., None, MovementProfile::Ground, false)
+            .unwrap()
+            .intent,
+        Intent::Pause
+    );
+    let walk = sleepy
+        .poll(10., None, MovementProfile::Ground, false)
+        .unwrap();
+    assert_eq!(walk.intent, Intent::Wander);
+    assert_eq!(walk.speed, 8.);
+    let pause = Controller::new(Profile::Passive, Fixed(0.1), 0.)
+        .poll(0., None, MovementProfile::Ground, false)
+        .unwrap();
+    assert_eq!(pause.intent, Intent::Idle);
+    assert_eq!(pause.speed, 0.);
+    let approach = Controller::new(Profile::Curious, Fixed(0.1), 0.)
+        .poll(0., Some(600.), MovementProfile::Ground, false)
+        .unwrap();
+    assert_eq!(approach.intent, Intent::ApproachCompanion);
+    assert_eq!(approach.speed, 14.);
+}
