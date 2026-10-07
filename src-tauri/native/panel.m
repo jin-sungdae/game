@@ -11,13 +11,17 @@ static NSMutableDictionary<NSNumber *, LumaPanel *> *panels;
 static NSStatusItem *statusItem;
 static int pendingAction;
 @interface LumaMenu : NSObject
+#ifdef LUMA_DEBUG_BUILD
 - (void)spawn:(id)sender;
 - (void)despawn:(id)sender;
+#endif
 - (void)quit:(id)sender;
 @end
 @implementation LumaMenu
+#ifdef LUMA_DEBUG_BUILD
 - (void)spawn:(id)sender { pendingAction = 1; }
 - (void)despawn:(id)sender { pendingAction = 2; }
+#endif
 - (void)quit:(id)sender { pendingAction = 3; }
 @end
 static LumaMenu *menuTarget;
@@ -27,9 +31,14 @@ void luma_init(void) {
     statusItem = [NSStatusBar.systemStatusBar statusItemWithLength:NSVariableStatusItemLength];
     statusItem.button.title = @"LUMA";
     NSMenu *menu = [NSMenu new];
+#ifdef LUMA_DEBUG_BUILD
     NSArray *titles = @[@"Debug: Spawn PIP", @"Debug: Despawn PIP", @"Quit LUMA"];
     SEL actions[] = {@selector(spawn:), @selector(despawn:), @selector(quit:)};
-    for (NSUInteger i=0; i<3; i++) {
+#else
+    NSArray *titles = @[@"Quit LUMA"];
+    SEL actions[] = {@selector(quit:)};
+#endif
+    for (NSUInteger i=0; i<titles.count; i++) {
         NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:titles[i] action:actions[i] keyEquivalent:@""];
         item.target = menuTarget; [menu addItem:item];
     }

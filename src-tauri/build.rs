@@ -3,7 +3,11 @@ fn main() {
         std::env::var("CARGO_CFG_TARGET_OS").unwrap() == "macos",
         "This spike requires macOS"
     );
-    cc::Build::new()
+    let mut native = cc::Build::new();
+    if std::env::var("DEBUG").as_deref() == Ok("true") {
+        native.define("LUMA_DEBUG_BUILD", None);
+    }
+    native
         .file("native/panel.m")
         .file("native/focus_audit.m")
         .flag("-fobjc-arc")

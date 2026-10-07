@@ -183,6 +183,7 @@ impl World {
         self.view.animation.floating = None;
         self.place_server_monster(now);
     }
+    #[cfg(any(test, debug_assertions))]
     pub fn debug_spawn(&mut self, now: f64) {
         if self.server_encounter.is_none() && self.view.pip.is_none() {
             self.view.game = Default::default();
@@ -190,6 +191,7 @@ impl World {
             self.spawn(now);
         }
     }
+    #[cfg(any(test, debug_assertions))]
     pub fn spawn(&mut self, now: f64) {
         if self.view.pip.is_some() {
             return;

@@ -91,9 +91,10 @@ int main(int argc,const char **argv) { @autoreleasepool {
     [center removeObserver:observer];
     NSString *primary=readLog(firstPath);NSArray *audit=auditRows(firstPath);
     BOOL firstExited=!first.running;
+    // Instance/focus acceptance must not require a debug-only synthetic encounter.
     BOOL pass=ready && runs.count==3 && firstExited && first.terminationStatus==0 && cleanAudit(audit)
-        && [primary containsString:@"[LUMA SMOKE] normal exit"] && [primary containsString:@"Some((Spawning"]
-        && [primary containsString:@"Some((Engaged"] && [primary containsString:@"[LUMA EXIT]"]
+        && [primary containsString:@"[LUMA SMOKE] normal exit"]
+        && [primary containsString:@"[LUMA EXIT]"]
         && [primary componentsSeparatedByString:@"[LUMA PANEL]"].count-1==3;
     for(NSDictionary *run in runs) if(![run[@"pass"] boolValue])pass=NO;
     for(NSDictionary *event in foregroundEvents) if([event[@"pid"] intValue]!=baselinePID)pass=NO;

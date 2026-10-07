@@ -47,6 +47,7 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
             let mut world = state.world.lock().unwrap();
             eprintln!("[LUMA INPUT] {kind}");
             match kind.as_str() {
+                #[cfg(debug_assertions)]
                 "spawn" => world.debug_spawn(now), // explicit developer-only path
 
                 "drag" => world.drag(now, overlay::cursor().0),
@@ -130,6 +131,12 @@ fn main() {
         .invoke_handler(tauri::generate_handler![snapshot, action])
         .setup(move |app| {
             unsafe { overlay::luma_init() };
+            // Existing opt-in audit observes the actual asset response policy, not config text.
+            if std::env::var_os("LUMA_METADATA_AUDIT").is_some() {
+                if let Some(asset) = app.asset_resolver().get("index.html".into()) {
+                    eprintln!("[LUMA CSP] {}", asset.csp_header().unwrap_or("missing"));
+                }
+            }
             for (index, label, w, h) in [
                 (
                     0,
@@ -365,7 +372,9 @@ fn main() {
                             world.area = overlay::area();
                             let (cursor, down) = overlay::cursor();
                             match unsafe { overlay::luma_action() } {
+                                #[cfg(debug_assertions)]
                                 1 => world.debug_spawn(now),
+                                #[cfg(debug_assertions)]
                                 2 => world.despawn(now),
                                 3 => {
                                     app.exit(0);
@@ -373,9 +382,13 @@ fn main() {
                                 _ => {}
                             }
                             match phase {
+                                #[cfg(debug_assertions)]
                                 1 => world.debug_spawn(now),
+                                #[cfg(debug_assertions)]
                                 2 => world.interact(),
+                                #[cfg(debug_assertions)]
                                 3 => world.close(),
+                                #[cfg(debug_assertions)]
                                 4 => world.despawn(now),
                                 5 => {
                                     eprintln!("[LUMA SMOKE] normal exit");

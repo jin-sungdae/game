@@ -76,6 +76,7 @@
     "Err(error) => eprintln!(\"[LUMA DISCOVERY] {error}; retained for bounded retry\"),",
     "eprintln!(",
     "eprintln!(",
+    "eprintln!(\"[LUMA CSP] {}\", asset.csp_header().unwrap_or(\"missing\"));",
     "eprintln!(\"[LUMA EXIT] panels and status item cleaned\");",
     "eprintln!(\"[LUMA FOCUS] app active={active} t={now:.2}\");",
     "eprintln!(\"[LUMA INPUT] {kind}\");",
