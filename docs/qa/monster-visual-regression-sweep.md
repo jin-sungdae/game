@@ -77,3 +77,34 @@ renderer center-X/center-Y/bottom drift, panel/canvas bounds, clipping and recor
 remain NOT_VERIFIED. Use `scripts/gui_qa/profiles/bubu.json` in a future READY sweep
 with real release app, isolated Server Encounter and unchanged safe-placement.
 Source 0px variation is not renderer proof. No individual follow-up PR is required.
+
+## Active Alpha 15-species tracking index
+
+This index tracks every Active Alpha species. Historical evidence is preserved;
+a new sweep is not implied to have run. Existing recordings are not a blanket PASS
+for unmeasured fields. All outstanding fields stay NOT_VERIFIED until measured in a
+READY environment. Manual naturalness/polish remains MANUAL_VISUAL_REVIEW.
+
+| Monster | Existing evidence | Outstanding sweep scope |
+| --- | --- | --- |
+| PIP | [Facing-integrated GUI](../evidence/pip-animation-v1/integration/README.md) | Consolidated release regression; preserve prior 249/0 mismatch proof, no new measurements here |
+| MELLO | [JUMP evidence](../evidence/mello-jump-v1/README.md) | Consolidated phase/ground-contact regression; preserve known facing silhouette issue |
+| MOSSY | [GROUND summary](../evidence/ground-alpha-batch-v1/summary.json) | DEFERRED_VISUAL_QA: actual IDLE/MOVE, transition/facing/cycles, drift/bounds/clipping/recording |
+| CHIRP | [FLYING contract](../chirp-flying-animation-profile-v1.md) | Consolidated HOVER/FLY/reversal regression; preserve alpha-fringe caveat |
+| BUBU | [Preflight](../evidence/bubu-jump-alpha-v1/preflight-summary.json) | DEFERRED_VISUAL_QA: phases/ground contact, facing, drift/bounds/clipping/recording |
+| PEBB | [GROUND summary](../evidence/ground-alpha-batch-v1/summary.json) | DEFERRED_VISUAL_QA: actual IDLE/MOVE, transition/facing/cycles, drift/bounds/clipping/recording |
+| PUFF | [Detailed backlog above](#puff--deferred_visual_qa--known-risk) | DEFERRED_VISUAL_QA: actual FLOAT/vectors/reversal/cycles, drift/mirror/bounds/clipping/recording |
+| TIKKI | [GROUND summary](../evidence/ground-alpha-batch-v1/summary.json) | DEFERRED_VISUAL_QA: actual IDLE/MOVE, transition/facing/cycles, drift/bounds/clipping/recording |
+| MIMI | [Acceptance](../evidence/mimi-static-v1/acceptance.json) | DEFERRED_VISUAL_QA: actual IDLE/cycle, world/panel stability, drift/bounds/clipping/recording |
+| WISP | [FLOATING summary](../evidence/floating-alpha-batch-v1/summary.json) | DEFERRED_VISUAL_QA: HOVER/FLOAT/vectors/reversal/cycles, drift/mirror/bounds/clipping/recording |
+| SHADE | [Acceptance](../evidence/shade-edge-v1/acceptance.json) | DEFERRED_VISUAL_QA: IDLE/EDGE_MOVE/vertical reversal, drift/bounds/clipping/smoke naturalness/recording |
+| EMBER | [Acceptance](../evidence/ember-free2d-v1/acceptance.json) | DEFERRED_VISUAL_QA: FLICKER/FLOW, horizontal/vertical/diagonal/reversal/cycles, continuity/drift/bounds/clipping/recording |
+| LUNET | [FLOATING summary](../evidence/floating-alpha-batch-v1/summary.json) | DEFERRED_VISUAL_QA: HOVER/FLOAT/vectors/reversal/cycles, drift/mirror/bounds/clipping/recording |
+| NOVA | [Preflight](../evidence/nova-free2d-alpha-v1/preflight-summary.json) | DEFERRED_VISUAL_QA: FLICKER/FLOW/vectors/completion/facing/cycles, world/panel continuity, drift/mirror/bounds/clipping/recording |
+| NOCT | [EDGE contract](../noct-edge-alpha-batch-v1.md) | DEFERRED_VISUAL_QA: IDLE/EDGE_MOVE/vertical reversal/cycles, facing/drift/bounds/clipping/recording |
+
+NOVA preflight: GUI_ENVIRONMENT_BLOCKED / NO_SAFE_CANDIDATE; userWindowMutations=0.
+Use `scripts/gui_qa/profiles/nova.json` with real release app and isolated Server
+Encounter after READY. INTENSE remains NOT_APPLICABLE. Do not change 1800ms/960ms
+cadence, native policy, thresholds or assets to collect proof. Source zero drift
+is not renderer evidence. No separate per-Monster follow-up PR is required.

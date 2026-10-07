@@ -363,6 +363,7 @@ fn server_monster_facing_follows_accepted_motion_for_all_profiles() {
         ("PUFF", MovementProfile::Floating),
         ("SHADE", MovementProfile::Edge),
         ("EMBER", MovementProfile::Free2d),
+        ("NOVA", MovementProfile::Free2d),
         ("MIMI", MovementProfile::Static),
     ] {
         let mut w = world(code);

@@ -1,0 +1,171 @@
+{
+  "active": 15,
+  "complete": 15,
+  "notSupplied": 0,
+  "coveragePercent": 100,
+  "provisionalExcluded": 15,
+  "rows": [
+    {
+      "monster": "PIP",
+      "profile": "GROUND",
+      "behavior": "PLAYFUL",
+      "states": [
+        "IDLE",
+        "MOVE"
+      ],
+      "base": "/assets/monsters/pip/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "MELLO",
+      "profile": "JUMP",
+      "behavior": "CURIOUS",
+      "states": [
+        "JUMP"
+      ],
+      "base": "/assets/monsters/mello/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "MOSSY",
+      "profile": "GROUND",
+      "behavior": "SLEEPY",
+      "states": [
+        "IDLE",
+        "MOVE"
+      ],
+      "base": "/assets/monsters/mossy/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "CHIRP",
+      "profile": "FLYING",
+      "behavior": "CURIOUS",
+      "states": [
+        "HOVER",
+        "FLY"
+      ],
+      "base": "/assets/monsters/chirp/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "BUBU",
+      "profile": "JUMP",
+      "behavior": "PLAYFUL",
+      "states": [
+        "JUMP"
+      ],
+      "base": "/assets/monsters/bubu/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "PEBB",
+      "profile": "GROUND",
+      "behavior": "PASSIVE",
+      "states": [
+        "IDLE",
+        "MOVE"
+      ],
+      "base": "/assets/monsters/pebb/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "PUFF",
+      "profile": "FLOATING",
+      "behavior": "CURIOUS",
+      "states": [
+        "HOVER",
+        "FLOAT"
+      ],
+      "base": "/assets/monsters/puff/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "TIKKI",
+      "profile": "GROUND",
+      "behavior": "CURIOUS",
+      "states": [
+        "IDLE",
+        "MOVE"
+      ],
+      "base": "/assets/monsters/tikki/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "MIMI",
+      "profile": "STATIC",
+      "behavior": "TRICKSTER",
+      "states": [
+        "IDLE"
+      ],
+      "base": "/assets/monsters/mimi/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "WISP",
+      "profile": "FLOATING",
+      "behavior": "TIMID",
+      "states": [
+        "HOVER",
+        "FLOAT"
+      ],
+      "base": "/assets/monsters/wisp/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "SHADE",
+      "profile": "EDGE",
+      "behavior": "TRICKSTER",
+      "states": [
+        "IDLE",
+        "EDGE_MOVE"
+      ],
+      "base": "/assets/monsters/shade/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "EMBER",
+      "profile": "FREE_2D",
+      "behavior": "AGGRESSIVE",
+      "states": [
+        "FLICKER",
+        "FLOW"
+      ],
+      "base": "/assets/monsters/ember/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "LUNET",
+      "profile": "FLOATING",
+      "behavior": "TIMID",
+      "states": [
+        "HOVER",
+        "FLOAT"
+      ],
+      "base": "/assets/monsters/lunet/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "NOVA",
+      "profile": "FREE_2D",
+      "behavior": "CURIOUS",
+      "states": [
+        "FLICKER",
+        "FLOW"
+      ],
+      "base": "/assets/monsters/nova/base.png",
+      "coverage": "COMPLETE"
+    },
+    {
+      "monster": "NOCT",
+      "profile": "EDGE",
+      "behavior": "TIMID",
+      "states": [
+        "IDLE",
+        "EDGE_MOVE"
+      ],
+      "base": "/assets/monsters/noct/base.png",
+      "coverage": "COMPLETE"
+    }
+  ]
+}

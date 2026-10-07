@@ -158,6 +158,32 @@ def validate(root=ROOT, allow_missing=False):
 def validate_chirp_flying(root=ROOT):
     return validate_profile_delivery(root,'CHIRP','FLYING',{'hover':(4,400),'fly':(6,90),'glide':(2,300)}, {'hover':{'frames':4,'cycle_ms':1600},'fly':{'frames':6,'frame_ms':90,'cycle_ms':540},'glide':{'frames':2,'cycle_ms':600}})
 
+def validate_nova_free2d(root=ROOT):
+    import hashlib
+    errors=[];d=root/'public/assets/monsters/nova'
+    try:
+        m=json.loads((d/'manifest.json').read_text())
+        source=json.loads((root/'docs/evidence/nova-free2d-alpha-v1/delivery-manifest.json').read_text())
+        expected={'species':'nova','stage':1,'canvas':{'width':256,'height':256},'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{n:{'frames':c,'frameDuration':t,'loop':True,'firstFrame':1} for n,c,t in [('flicker',5,360),('flow',6,160)]}}
+        if m!=expected or source['batch']!='FREE_2D_ALPHA_NOVA_V1' or source['character']!='NOVA' or source['movement_profile']!='FREE_2D' or source['contract_source']!='EMBER':errors.append('NOVA metadata')
+        if source['profile']!={'flicker':{'frames':5,'cycle_ms':1800},'flow':{'frames':6,'frame_ms':160,'cycle_ms':960,'cadence':'fixed-1x'},'intense':{'runtime_status':'NOT_APPLICABLE'}}:errors.append('NOVA timing')
+        names=[f'{n}/{n}_{i:02}.png' for n,c in [('flicker',5),('flow',6)] for i in range(1,c+1)]
+        if [f['file'] for f in source['frames']]!=names:errors.append('NOVA manifest files')
+        for n,c in [('flicker',5),('flow',6)]:
+            if sorted(p.name for p in (d/n).iterdir())!=[f'{n}_{i:02}.png' for i in range(1,c+1)]:errors.append('NOVA filename/count')
+        centers=[]
+        for f in source['frames']:
+            if f['file'] not in names:errors.append('NOVA path');continue
+            p=d/f['file'];b=[];errors.extend(png_errors(p,True,b))
+            if hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256']:errors.append('NOVA SHA')
+            if len(b)!=4:errors.append('NOVA bounds');continue
+            actual=((b[0]+b[2]+1)/2,(b[1]+b[3]+1)/2,b[3]+1);centers.append(actual)
+            if actual!=(f['cx'],f['cy'],f['bottom']):errors.append('NOVA registration metadata')
+        if len(centers)!=11 or len(set(centers))!=1:errors.append('NOVA registration deviation')
+        if source['registration']!={'max_center_x_delta_px':0,'max_center_y_delta_px':0,'max_bottom_delta_px':0}:errors.append('NOVA registration contract')
+    except (OSError,ValueError,KeyError,TypeError) as e:errors.append('NOVA FREE_2D: '+str(e))
+    return errors
+
 def validate_ember_free2d(root=ROOT):
     import hashlib
     errors=[];d=root/'public/assets/monsters/ember'
@@ -498,6 +524,9 @@ def validate_alpha(root=ROOT, strict=False):
                     continue
                 if code in ('WISP', 'LUNET') and entry.name == 'manifest.json':
                     errors.extend(validate_floating_batch(root, code))
+                    continue
+                if code == 'NOVA' and entry.name == 'manifest.json':
+                    errors.extend(validate_nova_free2d(root))
                     continue
                 if code == 'EMBER' and entry.name == 'manifest.json':
                     errors.extend(validate_ember_free2d(root))

@@ -168,3 +168,16 @@ fn bubu_jump_batch_playful_shortburst_decision_unchanged() {
         Intent::ShortBurst
     );
 }
+
+#[test]
+fn nova_curious_free2d_approach_and_pause_unchanged() {
+    use crate::movement::MovementProfile::Free2d;
+    assert_eq!(
+        pick(Profile::Curious, Some(600.), Free2d, 0.1),
+        Intent::ApproachCompanion
+    );
+    assert_eq!(
+        pick(Profile::Curious, Some(100.), Free2d, 0.1),
+        Intent::Pause
+    );
+}
