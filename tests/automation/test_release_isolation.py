@@ -26,6 +26,9 @@ class ReleaseIsolation(unittest.TestCase):
         self.assertIn('pendingAction = 3', release)
 
     def test_every_debug_spawn_entry_is_compile_guarded(self):
+        build = (ROOT / 'src-tauri/build.rs').read_text()
+        self.assertIn('var_os("CARGO_CFG_DEBUG_ASSERTIONS").is_some()', build)
+        self.assertNotIn('var("DEBUG")', build)
         main = (ROOT / 'src-tauri/src/main.rs').read_text()
         calls = list(re.finditer(r'(?m)^.*=> world\.debug_spawn\(now\).*$', main))
         self.assertEqual(len(calls), 3)  # command, native menu, scripted smoke

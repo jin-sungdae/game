@@ -4,7 +4,7 @@ fn main() {
         "This spike requires macOS"
     );
     let mut native = cc::Build::new();
-    if std::env::var("DEBUG").as_deref() == Ok("true") {
+    if std::env::var_os("CARGO_CFG_DEBUG_ASSERTIONS").is_some() {
         native.define("LUMA_DEBUG_BUILD", None);
     }
     native
