@@ -1,7 +1,7 @@
 # BUBU JUMP Alpha Batch Expansion v1
 
 Representative: MELLO. Consumers: MELLO and BUBU, sharing the existing movement-owned
-JUMP phase resolver. BUBU is SUPPLIED pending human Production approval.
+JUMP phase resolver. BUBU is approved as an Alpha Production consumer; SUPPLIED runtime metadata records asset delivery readiness.
 No new resolver, engine, MovementController or timing system is introduced.
 
 The `jumpConsumers` table in `src/animation/pilot.ts` resolves identity-specific paths.
@@ -41,3 +41,20 @@ Common #54 preflight returned GUI_ENVIRONMENT_BLOCKED / NO_SAFE_CANDIDATE with z
 user window mutations. Actual BUBU playback, renderer drift, bounds, clipping,
 facing and production recording remain NOT_VERIFIED / GUI_VISUAL_QA_DEFERRED.
 Automated acceptance does not imply GUI acceptance. See the shared sweep backlog.
+
+## Alpha Production approval — 2026-10-07
+
+Human approval accepts BUBU JUMP as PRODUCTION using the existing MELLO JUMP Profile.
+LAUNCH, ASCEND, APEX, DESCEND and LAND are Production phases. CROUCH and SETTLE
+remain NOT_APPLICABLE; no synthetic preparation or recovery is introduced.
+
+MELLO/BUBU share the unchanged JUMP resolver, movement-progress 45–55% APEX band,
+ground-contact same-render LAND selection and eight-frame loader contract.
+PLAYFUL/ShortBurst retains native ownership. No new resolver, MovementController
+or timing system is added. This finalization changes approval documentation only;
+Production runtime, assets and timing remain unchanged.
+
+GUI_ENVIRONMENT_BLOCKED remains GUI_VISUAL_QA_DEFERRED. Actual GUI NOT_VERIFIED
+items and the Monster Visual Regression Sweep backlog are preserved, not marked PASS.
+Final clean-HEAD Release Gate and CI results are recorded on PR #61 before marking
+it Ready for Review. Automatic merge remains prohibited.
