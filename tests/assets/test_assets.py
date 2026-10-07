@@ -39,6 +39,9 @@ class AssetTests(unittest.TestCase):
         ground_delivery = Path('docs/evidence/ground-alpha-batch-v1/delivery-manifest.json')
         (self.root/ground_delivery).parent.mkdir(parents=True)
         shutil.copy(ROOT/ground_delivery, self.root/ground_delivery)
+        nova_delivery = Path('docs/evidence/nova-free2d-alpha-v1/delivery-manifest.json')
+        (self.root/nova_delivery).parent.mkdir(parents=True)
+        shutil.copy(ROOT/nova_delivery, self.root/nova_delivery)
         self.stage = self.root/'public/assets/creatures/moa/stage01'
         # Scaffold/partial-clip tests own empty fixture directories, independent of delivery.
         for frame in (self.stage/'idle').glob('*.png'):
