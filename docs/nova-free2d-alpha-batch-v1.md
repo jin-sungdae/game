@@ -1,7 +1,10 @@
 # NOVA FREE_2D Alpha Batch Expansion v1
 
-Representative: EMBER. Consumers: EMBER and NOVA. NOVA is a SUPPLIED consumer pending
-human Production approval, not a separate profile implementation.
+Representative: EMBER. Alpha Production consumers: EMBER and NOVA.
+The user approved NOVA on 2026-10-07 as a consumer of the existing Production
+FREE_2D profile: FLICKER = PRODUCTION, FLOW = PRODUCTION,
+INTENSE = NOT_APPLICABLE. This approval is documentation-only; runtime, assets,
+timing and the shared resolver remain unchanged.
 
 The consumer table in `src/animation/pilot.ts` resolves identity-specific paths into
 the unchanged FREE_2D resolver and loader. Generated static metadata has no runtime
@@ -26,7 +29,9 @@ loads all required clips from actual static metadata/PNG files, verifies profile
 mapping, identity-specific base paths and fail-closed missing-frame behavior.
 Result: Active Alpha 15/15 COMPLETE (100%), NOT_SUPPLIED 0. Provisional15 excluded
 and disabled; no content activation. COMPLETE means required production-state asset
-coverage, not universal human visual approval. NOVA still needs human approval.
+coverage, not universal human visual approval. The user approved this repository
+coverage gate and NOVA Alpha Production consumer status; GUI acceptance remains
+deferred and no NOT_VERIFIED GUI item becomes PASS.
 
 | Profile | Consumers |
 | --- | --- |
@@ -54,6 +59,8 @@ source bounds, preservation hashes, registry coverage and sanitized preflight.
 
 ## Scope freeze
 
-NOVA closes Active Alpha animation consumer expansion. This PR adds no state,
-profile or secondary animation. Next: Monster Visual Regression Sweep -> Alpha
-Integration QA -> Release Candidate. The sweep itself is not performed here.
+Active Alpha Animation scope is frozen following this approval. No new animation
+profile, secondary animation, state, engine, resolver, threshold or timing system
+is introduced. Next: Monster Visual Regression Sweep -> Alpha Integration QA ->
+Release Candidate. The 15-species sweep backlog remains open; the sweep itself is
+not performed here. Provisional15 remain excluded and are not activated.
