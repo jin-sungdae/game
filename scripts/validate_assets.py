@@ -350,6 +350,33 @@ def validate_profile_delivery(root, code, profile, counts, profile_contract, cen
     except (OSError,ValueError,KeyError,TypeError) as e:errors.append(code+' FLYING: '+str(e))
     return errors
 
+def validate_bubu_jump(root=ROOT):
+    import hashlib
+    errors=[];directory=root/'public/assets/monsters/bubu';d=directory/'jump'
+    phases=['NEUTRAL','CROUCH','LAUNCH','ASCEND','APEX','DESCEND','LAND','SETTLE']
+    slots=['NEUTRAL','CROUCH_SLOT','LAUNCH','ASCEND','APEX','DESCEND','LAND','SETTLE_SLOT']
+    try:
+        m=json.loads((directory/'manifest.json').read_text());source=json.loads((d/'manifest.json').read_text())
+        expected={'species':'bubu','stage':1,'canvas':{'width':256,'height':256},'anchor':{'x':.5,'y':1},'display':{'width':82},'animations':{'jump':{'frames':8,'frameDuration':80,'loop':False}},'jumpPhases':phases}
+        if m!=expected or source['batch']!='JUMP_ALPHA_BUBU_V1' or source['character']!='BUBU' or source['movement_profile']!='JUMP' or source['contract_source']!='MELLO':errors.append('BUBU metadata contract')
+        if source['profile']!={'frames':8,'production_phases':phases[2:7],'not_applicable_slots':['CROUCH_SLOT','SETTLE_SLOT']}:errors.append('BUBU phase contract')
+        if source['registration']!={'max_center_x_delta_px':0,'max_center_y_delta_px':0,'max_bottom_delta_px':0,'jump08_equals_jump01':True}:errors.append('BUBU registration contract')
+        names=[f'jump_{i:02}.png' for i in range(1,9)]
+        if sorted(p.name for p in d.iterdir())!=sorted(names+['manifest.json']):errors.append('BUBU filenames')
+        if [f['file'] for f in source['frames']]!=names:errors.append('BUBU phase files')
+        centers=[]
+        for f,phase in zip(source['frames'],slots):
+            if f['file'] not in names:errors.append('BUBU noncanonical path');continue
+            p=d/f['file'];b=[];errors.extend(png_errors(p,True,b))
+            if hashlib.sha256(p.read_bytes()).hexdigest()!=f['sha256'] or f['phase']!=phase:errors.append('BUBU source hash/phase')
+            if len(b)==4:
+                actual=((b[0]+b[2]+1)/2,(b[1]+b[3]+1)/2,b[3]+1);centers.append(actual)
+                if actual!=(f['center_x'],f['center_y'],f['bottom']):errors.append('BUBU registration metadata')
+        if len(centers)!=8 or len(set(centers))!=1:errors.append('BUBU registration drift')
+        if (d/names[0]).read_bytes()!=(d/names[-1]).read_bytes():errors.append('BUBU neutral/settle bytes')
+    except (OSError,ValueError,KeyError,TypeError) as e:errors.append('BUBU JUMP: '+str(e))
+    return errors
+
 def validate_mello_jump(root=ROOT):
     import hashlib
     errors=[];directory=root/'public/assets/monsters/mello';d=directory/'jump'
@@ -489,6 +516,9 @@ def validate_alpha(root=ROOT, strict=False):
                     continue
                 if code == 'CHIRP' and entry.name == 'manifest.json':
                     errors.extend(validate_chirp_flying(root))
+                    continue
+                if code == 'BUBU' and entry.name == 'manifest.json':
+                    errors.extend(validate_bubu_jump(root))
                     continue
                 if code == 'MELLO' and entry.name == 'manifest.json':
                     errors.extend(validate_mello_jump(root))

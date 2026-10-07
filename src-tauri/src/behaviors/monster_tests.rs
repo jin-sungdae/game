@@ -642,3 +642,116 @@ fn ground_batch_consumers_keep_profiles_ground_facing_and_pause() {
         }
     }
 }
+
+#[test]
+fn bubu_jump_batch_playful_short_burst_native_phases_ground_and_facing() {
+    for code in ["MELLO", "BUBU"] {
+        let mut w = world(code);
+        if code == "BUBU" {
+            assert_eq!(
+                w.monster_behavior.as_ref().unwrap().profile,
+                Profile::Playful
+            );
+        }
+        assert_eq!(
+            w.view.monster.as_ref().unwrap().movement_profile,
+            MovementProfile::Jump
+        );
+        w.view.pip.as_mut().unwrap().state = PipState::Roaming;
+        w.monster_behavior.as_mut().unwrap().hold(true);
+        w.monster_behavior.as_mut().unwrap().current.speed = 24.;
+        let area = w.area;
+        let size = w.view.pip.as_ref().unwrap().size;
+        let mut now = 1.;
+        for sign in [1., -1., 0.] {
+            let from = area.ground(-1800., size);
+            {
+                let p = w.view.pip.as_mut().unwrap();
+                p.x = from.0;
+                p.y = from.1;
+                p.facing = -1;
+            }
+            w.monster_movement.start_ambient(
+                MovementProfile::Jump,
+                crate::monster_behavior::Decision {
+                    intent: Intent::ShortBurst,
+                    direction: sign,
+                    distance: 40.,
+                    speed: 24.,
+                },
+                from,
+                None,
+                crate::movement::ambient::Environment {
+                    area,
+                    size,
+                    cursor: FAR,
+                    windows: Some(&[]),
+                },
+            );
+            let mut phases = std::collections::BTreeSet::new();
+            let mut last_progress = 0.;
+            for _ in 0..50 {
+                now += 0.05;
+                w.tick(now, 0.05, FAR, false);
+                let p = w.view.pip.as_ref().unwrap();
+                if sign == 0. {
+                    assert_eq!(p.facing, -1);
+                }
+                if let Some(s) = w.view.animation.jump {
+                    assert!(s.progress >= last_progress);
+                    last_progress = s.progress;
+                    phases.insert(s.phase);
+                    assert_eq!((s.x, s.y), (p.x, p.y));
+                    if s.vx.abs() > crate::movement::FACING_SPEED_EPSILON {
+                        assert_eq!(s.facing, sign as i8);
+                    }
+                    assert_eq!(s.phase == "LAND", s.grounded);
+                    if s.grounded {
+                        assert_eq!(p.y, from.1);
+                        assert_eq!(s.phase, "LAND");
+                    }
+                    if (0.45..=0.55).contains(&s.progress) {
+                        assert_eq!(s.phase, "APEX");
+                    }
+                    if s.phase == "DESCEND" {
+                        assert!(!s.grounded);
+                        assert!(p.y > from.1);
+                    }
+                }
+                inside(&w);
+            }
+            assert_eq!(
+                phases,
+                ["LAUNCH", "ASCEND", "APEX", "DESCEND", "LAND"]
+                    .into_iter()
+                    .collect()
+            );
+            assert_eq!(w.view.pip.as_ref().unwrap().y, from.1);
+            assert!(w.view.animation.jump.is_none());
+        }
+    }
+}
+
+#[test]
+fn bubu_jump_batch_uses_existing_apex_band_boundaries() {
+    for (p, phase) in [
+        (0.449, "ASCEND"),
+        (0.45, "APEX"),
+        (0.5, "APEX"),
+        (0.55, "APEX"),
+        (0.551, "DESCEND"),
+    ] {
+        assert_eq!(
+            crate::movement::jump::sample(p, 16., 1., (10., 10.), 0.).phase,
+            phase
+        );
+    }
+    assert_ne!(
+        crate::movement::jump::sample(1., 16., 1., (10., 10.), 0.).phase,
+        "LAND"
+    );
+    assert_eq!(
+        crate::movement::jump::sample(1., 16., 1., (10., 0.), 0.).phase,
+        "LAND"
+    );
+}

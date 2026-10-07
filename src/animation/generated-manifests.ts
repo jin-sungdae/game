@@ -206,6 +206,38 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "ruu",
     "stage": 1
   },
+  "/assets/monsters/bubu/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "jump": {
+        "frameDuration": 80,
+        "frames": 8,
+        "loop": false
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "jumpPhases": [
+      "NEUTRAL",
+      "CROUCH",
+      "LAUNCH",
+      "ASCEND",
+      "APEX",
+      "DESCEND",
+      "LAND",
+      "SETTLE"
+    ],
+    "species": "bubu",
+    "stage": 1
+  },
   "/assets/monsters/chirp/manifest.json": {
     "anchor": {
       "x": 0.5,

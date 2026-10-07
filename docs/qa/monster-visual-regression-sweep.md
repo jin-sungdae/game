@@ -68,3 +68,12 @@ center-X/center-Y/bottom drift, panel/canvas bounds, clipping and production rec
 remain NOT_VERIFIED. Use the respective `mossy.json`, `pebb.json`, `tikki.json` profiles
 in a future READY sweep with real release app and real Server Encounters. Source 0px
 variation does not establish renderer PASS. No individual follow-up PR is required.
+
+## BUBU — JUMP consumer, DEFERRED_VISUAL_QA
+
+Common #54 preflight: GUI_ENVIRONMENT_BLOCKED / NO_SAFE_CANDIDATE. Actual BUBU
+LAUNCH/ASCEND/APEX/DESCEND/LAND, same-render ground contact, LEFT/RIGHT/vertical facing,
+renderer center-X/center-Y/bottom drift, panel/canvas bounds, clipping and recording
+remain NOT_VERIFIED. Use `scripts/gui_qa/profiles/bubu.json` in a future READY sweep
+with real release app, isolated Server Encounter and unchanged safe-placement.
+Source 0px variation is not renderer proof. No individual follow-up PR is required.

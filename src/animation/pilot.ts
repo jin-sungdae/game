@@ -12,10 +12,11 @@ export type AnimationState = 'IDLE'|'MOVE'|'REACT';
 export type AnimationSequence = AnimationState|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE'|'FLOAT'|'SETTLE'|'PEEK'|'EDGE_MOVE'|'TURN'|'FLICKER'|'FLOW'|'INTENSE';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
 // Readiness describes clip assets, not gameplay triggers (PIP mouse REACT is unavailable).
-export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'|'WISP'|'LUNET'|'NOCT'|'MOSSY'|'PEBB'|'TIKKI'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; groundProfile?:'GROUND'; groundMoveClip?:'walk'|'move'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
+export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'|'WISP'|'LUNET'|'NOCT'|'MOSSY'|'PEBB'|'TIKKI'|'BUBU'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; groundProfile?:'GROUND'; groundMoveClip?:'walk'|'move'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
 export const groundConsumers=[{character:'PIP',status:'IDLE_PRODUCTION',moveClip:'walk',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'},{character:'MOSSY',status:'SUPPLIED',moveClip:'move'},{character:'PEBB',status:'SUPPLIED',moveClip:'move'},{character:'TIKKI',status:'SUPPLIED',moveClip:'move'}] as const;
 // Shared GROUND clip metadata; identity never determines frame count.
 export const groundClips={IDLE:{frames:4,frameDuration:450},MOVE:{frames:8,frameDuration:80}} as const;
+export const jumpConsumers=[{character:'MELLO',status:'JUMP_PRODUCTION'},{character:'BUBU',status:'SUPPLIED'}] as const;
 export const edgeConsumers=[{character:'SHADE',status:'EDGE_PRODUCTION'},{character:'NOCT',status:'SUPPLIED'}] as const;
 export const floatingConsumers=['PUFF','WISP','LUNET'] as const;
 export function pilotDefinition(character:string,stage=1):Pilot|null {
@@ -25,7 +26,11 @@ export function pilotDefinition(character:string,stage=1):Pilot|null {
     const asset=resolveMonster(ground.character)!;
     return {character:ground.character,species:ground.character.toLowerCase(),stage:1,manifest:asset.assetRoot+'/manifest.json',base:asset.baseAsset!,status:ground.status,sourceFacing:'RIGHT',groundProfile:'GROUND',groundMoveClip:ground.moveClip,...('moveStatus' in ground?{moveStatus:ground.moveStatus,reactStatus:ground.reactStatus}:{})};
   }
-  if(character==='MELLO') return {character:'MELLO',species:'mello',stage:1,manifest:resolveMonster('MELLO')!.assetRoot+'/manifest.json',base:resolveMonster('MELLO')!.baseAsset!,status:'JUMP_PRODUCTION',sourceFacing:'RIGHT',jumpProfile:'JUMP'};
+  const jump=jumpConsumers.find(consumer=>consumer.character===character);
+  if(jump) {
+    const asset=resolveMonster(jump.character)!;
+    return {character:jump.character,species:jump.character.toLowerCase(),stage:1,manifest:asset.assetRoot+'/manifest.json',base:asset.baseAsset!,status:jump.status,sourceFacing:'RIGHT',jumpProfile:'JUMP'};
+  }
   const floating=floatingConsumers.find(code=>code===character);
   if(floating) {
     const asset=resolveMonster(floating)!;
