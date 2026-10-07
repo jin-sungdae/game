@@ -452,6 +452,35 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "noct",
     "stage": 1
   },
+  "/assets/monsters/nova/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "flicker": {
+        "firstFrame": 1,
+        "frameDuration": 360,
+        "frames": 5,
+        "loop": true
+      },
+      "flow": {
+        "firstFrame": 1,
+        "frameDuration": 160,
+        "frames": 6,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "nova",
+    "stage": 1
+  },
   "/assets/monsters/pebb/manifest.json": {
     "anchor": {
       "x": 0.5,

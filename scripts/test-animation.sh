@@ -47,3 +47,5 @@ node --test tests/animation/edge-batch.cjs
 node --test tests/animation/ground-batch.cjs
 
 node --test tests/animation/jump-batch.cjs
+node --test tests/animation/free2d-batch.cjs
+node --test tests/animation/alpha-coverage.cjs

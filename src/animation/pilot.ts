@@ -12,10 +12,11 @@ export type AnimationState = 'IDLE'|'MOVE'|'REACT';
 export type AnimationSequence = AnimationState|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE'|'FLOAT'|'SETTLE'|'PEEK'|'EDGE_MOVE'|'TURN'|'FLICKER'|'FLOW'|'INTENSE';
 // SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
 // Readiness describes clip assets, not gameplay triggers (PIP mouse REACT is unavailable).
-export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'|'WISP'|'LUNET'|'NOCT'|'MOSSY'|'PEBB'|'TIKKI'|'BUBU'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; groundProfile?:'GROUND'; groundMoveClip?:'walk'|'move'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
+export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'|'WISP'|'LUNET'|'NOCT'|'MOSSY'|'PEBB'|'TIKKI'|'BUBU'|'NOVA'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; groundProfile?:'GROUND'; groundMoveClip?:'walk'|'move'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
 export const groundConsumers=[{character:'PIP',status:'IDLE_PRODUCTION',moveClip:'walk',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'},{character:'MOSSY',status:'SUPPLIED',moveClip:'move'},{character:'PEBB',status:'SUPPLIED',moveClip:'move'},{character:'TIKKI',status:'SUPPLIED',moveClip:'move'}] as const;
 // Shared GROUND clip metadata; identity never determines frame count.
 export const groundClips={IDLE:{frames:4,frameDuration:450},MOVE:{frames:8,frameDuration:80}} as const;
+export const free2dConsumers=['EMBER','NOVA'] as const;
 export const jumpConsumers=[{character:'MELLO',status:'JUMP_PRODUCTION'},{character:'BUBU',status:'SUPPLIED'}] as const;
 export const edgeConsumers=[{character:'SHADE',status:'EDGE_PRODUCTION'},{character:'NOCT',status:'SUPPLIED'}] as const;
 export const floatingConsumers=['PUFF','WISP','LUNET'] as const;
@@ -43,7 +44,11 @@ export function pilotDefinition(character:string,stage=1):Pilot|null {
     const asset=resolveMonster(edge.character)!;
     return {character:edge.character,species:edge.character.toLowerCase(),stage:1,manifest:asset.assetRoot+'/manifest.json',base:asset.baseAsset!,status:edge.status,sourceFacing:'RIGHT',edgeProfile:'EDGE'};
   }
-  if(character==='EMBER') return {character:'EMBER',species:'ember',stage:1,manifest:resolveMonster('EMBER')!.assetRoot+'/manifest.json',base:resolveMonster('EMBER')!.baseAsset!,status:'SUPPLIED',sourceFacing:'RIGHT',free2dProfile:'FREE_2D'};
+  const free2d=free2dConsumers.find(code=>code===character);
+  if(free2d) {
+    const asset=resolveMonster(free2d)!;
+    return {character:free2d,species:free2d.toLowerCase(),stage:1,manifest:asset.assetRoot+'/manifest.json',base:asset.baseAsset!,status:'SUPPLIED',sourceFacing:'RIGHT',free2dProfile:'FREE_2D'};
+  }
   return null;
 }
 export const pilotFrames = {IDLE:6,MOVE:8,REACT:6} as const;

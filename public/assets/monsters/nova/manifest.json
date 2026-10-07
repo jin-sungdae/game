@@ -1,0 +1,29 @@
+{
+  "species": "nova",
+  "stage": 1,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "display": {
+    "width": 82
+  },
+  "animations": {
+    "flicker": {
+      "frames": 5,
+      "frameDuration": 360,
+      "loop": true,
+      "firstFrame": 1
+    },
+    "flow": {
+      "frames": 6,
+      "frameDuration": 160,
+      "loop": true,
+      "firstFrame": 1
+    }
+  }
+}
