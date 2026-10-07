@@ -1,0 +1,93 @@
+{
+  "batch": "JUMP_ALPHA_BUBU_V1",
+  "character": "BUBU",
+  "movement_profile": "JUMP",
+  "contract_source": "MELLO",
+  "profile": {
+    "frames": 8,
+    "production_phases": [
+      "LAUNCH",
+      "ASCEND",
+      "APEX",
+      "DESCEND",
+      "LAND"
+    ],
+    "not_applicable_slots": [
+      "CROUCH_SLOT",
+      "SETTLE_SLOT"
+    ]
+  },
+  "contract": "world trajectory and ground contact remain MovementController-owned; animation follows movement-owned jump phase",
+  "registration": {
+    "max_center_x_delta_px": 0.0,
+    "max_center_y_delta_px": 0.0,
+    "max_bottom_delta_px": 0,
+    "jump08_equals_jump01": true
+  },
+  "frames": [
+    {
+      "file": "jump_01.png",
+      "phase": "NEUTRAL",
+      "sha256": "be67ef997fbdd7e70f795a7896e31cc56d514a72a1c085f069d21db21b5440ee",
+      "center_x": 129.5,
+      "center_y": 138.5,
+      "bottom": 245
+    },
+    {
+      "file": "jump_02.png",
+      "phase": "CROUCH_SLOT",
+      "sha256": "23de0127cb8e7b7cf6807d8a5b8db1f612ca4c23b55b7cdcb6803c6b86f4cb39",
+      "center_x": 129.5,
+      "center_y": 138.5,
+      "bottom": 245
+    },
+    {
+      "file": "jump_03.png",
+      "phase": "LAUNCH",
+      "sha256": "235cb40a75777cf3979754a0e47fa6d2fbb91da6252a5d28bfa70f851400011b",
+      "center_x": 129.5,
+      "center_y": 138.5,
+      "bottom": 245
+    },
+    {
+      "file": "jump_04.png",
+      "phase": "ASCEND",
+      "sha256": "fd329a24e14d21967c6cc788eca42b231d41b35b8c7340b6babd1341ca087c1d",
+      "center_x": 129.5,
+      "center_y": 138.5,
+      "bottom": 245
+    },
+    {
+      "file": "jump_05.png",
+      "phase": "APEX",
+      "sha256": "948ee18a080df66908a90187d9023e568c6a9582186ea7d3955b60c4d1d696e5",
+      "center_x": 129.5,
+      "center_y": 138.5,
+      "bottom": 245
+    },
+    {
+      "file": "jump_06.png",
+      "phase": "DESCEND",
+      "sha256": "5afd7c346b7f2b391f294eafbd158109636b7ec6189c65fad51bd2505e8d2182",
+      "center_x": 129.5,
+      "center_y": 138.5,
+      "bottom": 245
+    },
+    {
+      "file": "jump_07.png",
+      "phase": "LAND",
+      "sha256": "76e41ceb87600b7b0dff86cd56f7d2137b0416bd4377b57630a78fe46c93cf14",
+      "center_x": 129.5,
+      "center_y": 138.5,
+      "bottom": 245
+    },
+    {
+      "file": "jump_08.png",
+      "phase": "SETTLE_SLOT",
+      "sha256": "be67ef997fbdd7e70f795a7896e31cc56d514a72a1c085f069d21db21b5440ee",
+      "center_x": 129.5,
+      "center_y": 138.5,
+      "bottom": 245
+    }
+  ]
+}

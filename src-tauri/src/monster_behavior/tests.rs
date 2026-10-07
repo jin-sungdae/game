@@ -160,3 +160,11 @@ fn ground_batch_behavior_decisions_keep_existing_profiles() {
     assert_eq!(approach.intent, Intent::ApproachCompanion);
     assert_eq!(approach.speed, 14.);
 }
+
+#[test]
+fn bubu_jump_batch_playful_shortburst_decision_unchanged() {
+    assert_eq!(
+        pick(Profile::Playful, None, MovementProfile::Jump, 0.1),
+        Intent::ShortBurst
+    );
+}

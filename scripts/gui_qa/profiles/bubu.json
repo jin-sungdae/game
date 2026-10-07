@@ -1,0 +1,36 @@
+{
+  "entityId": "BUBU",
+  "entityType": "MONSTER",
+  "label": "BUBU",
+  "window": "pip",
+  "panelSize": [
+    96,
+    104
+  ],
+  "zone": "BOTTOM",
+  "states": {
+    "JUMP": {
+      "frames": 8,
+      "loop": false,
+      "required": true
+    }
+  },
+  "sourceBounds": [
+    24,
+    32,
+    234,
+    244
+  ],
+  "sourceCanvas": [
+    256,
+    256
+  ],
+  "sourceFacing": "RIGHT",
+  "velocityEpsilon": 3,
+  "maxTraceSkewSeconds": 0.05,
+  "pixelMask": {
+    "method": "rgb-threshold",
+    "threshold": 40
+  },
+  "note": "Movement-owned JUMP phase, eight slots; CROUCH and SETTLE NOT_APPLICABLE. No timer-driven cycle. Source bounds are not renderer evidence."
+}
