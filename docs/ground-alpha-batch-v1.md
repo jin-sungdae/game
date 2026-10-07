@@ -61,5 +61,30 @@ NO_SAFE_CANDIDATE after their five-second countdowns. No user windows were moved
 resized or closed; no placement bypass/debug entity was used. Actual GUI playback,
 transition, facing, renderer drift, clipping, observed cycle and recording remain
 NOT_VERIFIED / GUI_VISUAL_QA_DEFERRED in the Monster Visual Regression Sweep backlog.
-Automated gate/CI PASS permits AUTOMATED_ACCEPTED, not GUI PASS. Keep the PR Draft
-for human review; never merge automatically.
+AUTOMATED_ACCEPTED remains separate from GUI acceptance.
+
+## Alpha Production approval — 2026-10-07
+
+Human approval accepts MOSSY, PEBB and TIKKI as Alpha Production consumers of the
+existing PIP GROUND Production Profile.
+
+| Consumer | IDLE | MOVE |
+| --- | --- | --- |
+| MOSSY | PRODUCTION — 4 frames / 1800ms | PRODUCTION — 8 frames / 640ms at 1× |
+| PEBB | PRODUCTION — 4 frames / 1800ms | PRODUCTION — 8 frames / 640ms at 1× |
+| TIKKI | PRODUCTION — 4 frames / 1800ms | PRODUCTION — 8 frames / 640ms at 1× |
+
+The existing bounded 0.5–2× playback and PIP backward compatibility are approved.
+GROUND profile/manifest metadata defines IDLE4/MOVE8 instead of a character == PIP
+frame-count decision. PIP/MOSSY/PEBB/TIKKI share the same resolver/animator contract;
+no new resolver, engine or rate system is introduced.
+
+This finalization changes approval documentation only. Production runtime, assets
+and timing remain unchanged. Existing SUPPLIED values describe delivery readiness;
+this record establishes human Production approval without changing runtime metadata.
+
+GUI_ENVIRONMENT_BLOCKED remains GUI_VISUAL_QA_DEFERRED. All actual GUI NOT_VERIFIED
+items and the Monster Visual Regression Sweep backlog are preserved, not relabeled PASS.
+After final HEAD release validation and CI pass, PR #60 is Ready for Review under
+this human approval. Automatic merge remains prohibited. Final results are recorded
+on the PR against its HEAD.
