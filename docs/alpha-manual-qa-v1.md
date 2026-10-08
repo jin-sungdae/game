@@ -60,7 +60,7 @@ For every row record: asset, scale, bottom-center anchor, RIGHT source/both faci
 | QA-SPEC-TIKKI | Encounter TIKKI | Same procedure | Same contract | NOT_RUN | ___ | ___ |
 | QA-SPEC-MIMI | Encounter MIMI | Same procedure | Same contract | NOT_RUN | ___ | ___ |
 | QA-SPEC-WISP | Encounter WISP | Same procedure | Same contract | NOT_RUN | ___ | ___ |
-| QA-SPEC-SHADE | NIGHT encounter | Observe appearance and motion | Correct NIGHT/FLOATING contract | NOT_RUN | ___ | Time recorded |
+| QA-SPEC-SHADE | NIGHT encounter | Observe appearance and motion | Correct NIGHT/EDGE contract | NOT_RUN | ___ | Time recorded |
 | QA-SPEC-EMBER | Encounter EMBER | Same procedure | Correct registered visual/profile | NOT_RUN | ___ | ___ |
 | QA-SPEC-LUNET | NIGHT encounter | Same procedure | Correct NIGHT contract | NOT_RUN | ___ | Time recorded |
 | QA-SPEC-NOVA | Encounter NOVA | Same procedure | Correct registered visual/profile | NOT_RUN | ___ | ___ |

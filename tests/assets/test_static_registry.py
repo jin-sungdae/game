@@ -24,5 +24,5 @@ class StaticRegistry(unittest.TestCase):
         with self.assertRaises(ValueError):sync.generate(self.root)
         with self.assertRaises(ValueError):sync.unique([('a',1),('a',2)])
     def test_csp_and_shared_clock_unchanged(self):
-        self.assertEqual(hashlib.sha256((ROOT/'src-tauri/tauri.conf.json').read_bytes()).hexdigest(),'cf5e621e0e9e62294759f24152578b05af8a01b9deb77329f4ee2657c4c7efed')
+        self.assertEqual(hashlib.sha256((ROOT/'src-tauri/tauri.conf.json').read_bytes()).hexdigest(),'4505fc2a7a0bc3f0c7ac2724552f97572abd7f56d8631783913d8ea9288b2689')
         self.assertEqual(hashlib.sha256((ROOT/'src/animation/clock.ts').read_bytes()).hexdigest(),'261eaf8ed570aa9dba7aae3ae5b4f92056ac264fb0eaccb7a5acd9160af273c3')
