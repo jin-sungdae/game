@@ -1,0 +1,31 @@
+{
+  "candidate": "docs/evidence/visual-production-v1/mokori-idle-candidate-01.png",
+  "reference": "public/assets/creatures/moa/stage02/base.png",
+  "image": {
+    "status": "NOT_SUPPLIED",
+    "errors": [
+      "dimensions must be 256x256"
+    ],
+    "sha256": "927108d853c1ddd013658a31c2e6088fa53092654301a3351be4a8c8f1a1c984",
+    "bounds": []
+  },
+  "referenceImage": {
+    "status": "ARTWORK_READY",
+    "errors": [],
+    "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+    "bounds": [
+      15,
+      37,
+      240,
+      251
+    ]
+  },
+  "driftPixels": null,
+  "errors": [
+    "dimensions must be 256x256"
+  ],
+  "automated": "FAIL",
+  "guiAcceptance": "NOT_VERIFIED",
+  "identityReview": "MANUAL_VISUAL_REVIEW",
+  "productionEligible": false
+}
