@@ -159,6 +159,53 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "nox",
     "stage": 1
   },
+  "/assets/creatures/nox/stage02/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "frameDuration": 240,
+        "frames": 6,
+        "loop": true
+      },
+      "look": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "react": {
+        "frameDuration": 80,
+        "frames": 6,
+        "loop": false
+      },
+      "sit": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "sleep": {
+        "frameDuration": 150,
+        "frames": 6,
+        "loop": true
+      },
+      "walk": {
+        "frameDuration": 80,
+        "frames": 8,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 130
+    },
+    "species": "nox",
+    "stage": 2
+  },
   "/assets/creatures/ruu/stage01/manifest.json": {
     "anchor": {
       "x": 0.5,

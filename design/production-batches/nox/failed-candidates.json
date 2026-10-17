@@ -1,0 +1,147 @@
+{
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "frames": [
+    {
+      "file": "design/production-batches/nox/stage03/source-base-v1.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "572b6af36d213cab67edb200ac0529093692150e21affc9df5dec4c73ac386fd",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "opaquePixels": 0,
+      "transparentPixels": 967104,
+      "partialPixels": 605760,
+      "registered": false,
+      "normalizedBounds": [
+        35,
+        91,
+        220,
+        233
+      ],
+      "disconnectedPixels": 22,
+      "componentCount": 13,
+      "failureType": "ALPHA_DEFECT",
+      "reason": "Visible purple/gray background haze remains attached to silhouette; not removable as isolated residue",
+      "status": "BLOCKED",
+      "humanReviewRequired": true
+    },
+    {
+      "file": "design/production-batches/nox/stage03/source-base-v2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "104cda1faedc1793a7cb6daab4ab55ce7db1976b41263b1c04577a1c6a87c314",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "opaquePixels": 0,
+      "transparentPixels": 922839,
+      "partialPixels": 650025,
+      "registered": false,
+      "normalizedBounds": [
+        29,
+        91,
+        224,
+        235
+      ],
+      "disconnectedPixels": 18,
+      "componentCount": 11,
+      "failureType": "ALPHA_DEFECT",
+      "reason": "Visible purple/gray background haze remains attached to silhouette; not removable as isolated residue",
+      "status": "BLOCKED",
+      "humanReviewRequired": true
+    },
+    {
+      "file": "design/production-batches/nox/stage04/source-base-v1.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "0cbc36135640214bcc961e11d9d4d1bd8adb0fe13e540785a3cdf7a48f8d201b",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "opaquePixels": 0,
+      "transparentPixels": 838972,
+      "partialPixels": 733892,
+      "registered": false,
+      "normalizedBounds": [
+        16,
+        91,
+        240,
+        237
+      ],
+      "disconnectedPixels": 32,
+      "componentCount": 18,
+      "failureType": "ALPHA_DEFECT",
+      "reason": "Visible purple/gray background haze remains attached to silhouette; not removable as isolated residue",
+      "status": "BLOCKED",
+      "humanReviewRequired": true
+    },
+    {
+      "file": "design/production-batches/nox/stage04/source-base-v2.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "17040e95d4d770949040ddda2ecca969405e35c718f045f17a3bb62cdfb770a0",
+      "alphaRange": [
+        0,
+        254
+      ],
+      "opaquePixels": 0,
+      "transparentPixels": 838253,
+      "partialPixels": 734611,
+      "registered": false,
+      "normalizedBounds": [
+        16,
+        91,
+        240,
+        237
+      ],
+      "disconnectedPixels": 6,
+      "componentCount": 6,
+      "failureType": "ALPHA_DEFECT",
+      "reason": "Visible purple/gray background haze remains attached to silhouette; not removable as isolated residue",
+      "status": "BLOCKED",
+      "humanReviewRequired": true
+    },
+    {
+      "file": "design/production-batches/nox/stage05/source-base-v1.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "d74e8cce578cd1eb376e4d73f514029122d8790192a51983aed58e36083437e1",
+      "alphaRange": [
+        0,
+        255
+      ],
+      "opaquePixels": 1429,
+      "transparentPixels": 871249,
+      "partialPixels": 699838,
+      "registered": false,
+      "normalizedBounds": [
+        18,
+        23,
+        240,
+        235
+      ],
+      "disconnectedPixels": 49,
+      "componentCount": 19,
+      "failureType": "ALPHA_DEFECT",
+      "reason": "Disconnected alpha residue; repair budget exhausted, no cleanup or registration performed",
+      "status": "BLOCKED",
+      "humanReviewRequired": true
+    }
+  ]
+}

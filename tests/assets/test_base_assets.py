@@ -9,12 +9,12 @@ class BaseAssetTests(unittest.TestCase):
     def test_optional_missing_bases(self):
         errors,pending=validator.validate_bases(self.root)
         self.assertEqual(errors,[])
-        self.assertEqual(len(pending),9)
+        self.assertEqual(len(pending),10)
 
     def test_strict_requires_only_moa_pip(self):
         errors,pending=validator.validate_bases(self.root,True)
         self.assertEqual(len(errors),2)
-        self.assertEqual(len(pending),7)
+        self.assertEqual(len(pending),8)
 
     def test_wrong_filename(self):
         (self.stage/'base.PNG').touch()

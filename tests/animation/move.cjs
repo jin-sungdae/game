@@ -65,7 +65,7 @@ test('all fifteen companion identities fail closed except supplied MOA stage one
  for(const species of ['moa','ruu','nox'])for(let stage=1;stage<=5;stage++){
   const pilot=pilotDefinition(species,stage);
   if(species==='moa' && stage===1){for(const action of ['REST','SLEEP','LOOK_AROUND','TURN'])assert.equal(await assets.load(pilot,action),null);}
-  else if(species==='ruu' && [3,4,5].includes(stage)){for(const action of ['REST','SLEEP','LOOK_AROUND','TURN','MOVE','REACT','BLINK','FLY','GLIDE'])assert.equal(await assets.load(pilot,action),null);}
+  else if((species==='ruu' && [3,4,5].includes(stage)) || (species==='nox' && stage===2)){for(const action of ['REST','SLEEP','LOOK_AROUND','TURN','MOVE','REACT','BLINK','FLY','GLIDE'])assert.equal(await assets.load(pilot,action),null);}
   else assert.equal(pilot,null);
  }
 });
@@ -111,4 +111,18 @@ test('RUU mature stages select their own six-frame clips atomically and reset st
   assert.equal(await assets.load({...p,stage:stage===4?5:4},'IDLE'),null);
   for(const action of ['MOVE','TURN','REACT','FLY','GLIDE','REST','SLEEP'])assert.equal(await assets.load(p,action),null);
  }
+});
+
+test('NOX stage two owns six-frame IDLE and fails closed for other stages/actions',async()=>{
+ const p=pilotDefinition('nox',2),assets=new PilotAssets(new AssetLoader({json:browserIO.json,image:async()=>({width:256,height:256})}));
+ const clip=await assets.load(p,'IDLE');assert.ok(clip);assert.equal(clip.urls.length,6);
+ assert.ok(clip.urls.every(url=>url.startsWith('/assets/creatures/nox/stage02/idle/')));
+ const animator=new CharacterAnimator(),frames=[];
+ for(let t=0;t<=1440;t+=10){const f=animator.sample('nox:2:IDLE',clip,t,1,false);if(t%240===0)frames.push(f);}
+ assert.deepEqual(frames,[0,1,2,3,4,5,0]);assert.equal(animator.sample('nox:2:IDLE',clip,1450,1,true),0);
+ for(const stage of [1,3,4,5])assert.equal(pilotDefinition('nox',stage),null);
+ for(const state of ['MOVE','TURN','REACT','REST','SLEEP','BLINK','FLY'])assert.equal(await assets.load(p,state),null);
+ assert.equal(await assets.load({...p,species:'ruu'},'IDLE'),null);
+ const broken=new PilotAssets(new AssetLoader({json:browserIO.json,image:async url=>{if(url.endsWith('idle_05.png'))throw Error('incomplete');return {width:256,height:256};}}));
+ assert.equal(await broken.load(p,'IDLE'),null);
 });
