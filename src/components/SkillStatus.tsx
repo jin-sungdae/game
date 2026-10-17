@@ -1,14 +1,15 @@
-import {useEffect,useRef,useState} from 'react';
+import {useEffect,useState} from 'react';
 import {animationClock} from '../animation/clock';
-import {SkillTimeline,type SkillCue} from '../presentation/skill';
+import {type SkillCue} from '../presentation/skill';
+import {skillTimeline} from '../stores/entities';
 export function SkillStatus({cue}:{cue?:SkillCue|null}) {
- const timeline=useRef(new SkillTimeline());const [phase,setPhase]=useState<string|null>(null);
+ const [phase,setPhase]=useState<string|null>(null);
  useEffect(()=>{
-  if(!cue)return;timeline.current.observe(cue,performance.now());
+  if(!cue){setPhase(null);return;}
   const media=matchMedia('(prefers-reduced-motion: reduce)');
   let stop=()=>{};
   const resume=()=>{stop();stop=()=>{};if(document.hidden){setPhase(null);return;}
-   stop=animationClock.subscribe(time=>{const value=timeline.current.sample(time,media.matches,false);setPhase(old=>old===(value?.phase??null)?old:value?.phase??null);if(!value)stop();});};
+   stop=animationClock.subscribe(time=>{const value=skillTimeline.sample(time,media.matches,false);setPhase(old=>old===(value?.phase??null)?old:value?.phase??null);if(!value)stop();});};
   resume();document.addEventListener('visibilitychange',resume);
   return ()=>{stop();document.removeEventListener('visibilitychange',resume);};
  },[cue?.commandId]);
