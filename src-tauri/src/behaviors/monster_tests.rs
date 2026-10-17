@@ -194,6 +194,8 @@ fn battle(w: &mut World, status: crate::backend::battle::Status, encounter_statu
         events: vec![],
         presentation_events: vec![],
         reward: None,
+        skills: vec![],
+        skill_cue: None,
     });
 }
 #[test]

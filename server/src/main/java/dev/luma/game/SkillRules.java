@@ -25,6 +25,14 @@ public final class SkillRules {
         return Availability.AVAILABLE;
     }
 
+    public static Availability candidateAvailability(SkillCatalog.Entry entry,String species,int stage,int level) {
+        if(entry==null)return Availability.UNKNOWN_SKILL;
+        var skill=entry.definition();
+        if(skill.version()!=SUPPORTED_VERSION)return Availability.UNSUPPORTED_VERSION;
+        if(!skill.enabled())return Availability.DISABLED;
+        if(!unlocked(skill,species,stage,level))return Availability.LOCKED;
+        return Availability.AVAILABLE;
+    }
     /** Arithmetic only: callers must separately check availability before any future execution. */
     public static int power(Definition skill, int level) {
         if (skill == null || skill.version() != SUPPORTED_VERSION || level < 1)
