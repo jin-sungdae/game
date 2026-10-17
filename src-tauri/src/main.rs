@@ -400,7 +400,7 @@ fn main() {
                             let before_moa = (world.view.moa.x, world.view.moa.y);
                             let before_pip = world.view.pip.as_ref().map(|p| (p.x,p.y));
                             world.tick(now, dt, cursor, down);
-                            world.view.animation.moa = presentation::animation::speed(before_moa, (world.view.moa.x,world.view.moa.y),dt,world.view.animation.moa);
+                            world.view.animation.moa = presentation::animation::companion_speed(before_moa, (world.view.moa.x,world.view.moa.y),world.area.ground_y(),dt,world.view.animation.moa,world.view.moa.state);
                             world.view.animation.pip = before_pip.zip(world.view.pip.as_ref()).map_or(0.0, |(before,p)| presentation::animation::speed(before,(p.x,p.y),dt,world.view.animation.pip));
                             if world.take_companion_click() && world.view.bond.request()
                                 && !state.backend.lock().unwrap().request(backend::battle::Command::InteractCompanion) {

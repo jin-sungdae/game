@@ -61,6 +61,7 @@ pub struct BehaviorConfig {
     pub walk_recovery: f64,
     pub walk_radius: f64,
     pub walk_speed: f64,
+    pub walk_acceleration: f64,
     pub cursor_radius: f64,
     pub cursor_cooldown: f64,
     pub click_distance: f64,
@@ -87,6 +88,7 @@ pub const MOA_BEHAVIOR: BehaviorConfig = BehaviorConfig {
     walk_recovery: 0.0,
     walk_radius: 180.0,
     walk_speed: 40.0,
+    walk_acceleration: 0.0,
     cursor_radius: 160.0,
     cursor_cooldown: 15.0,
     click_distance: 5.0,
@@ -175,6 +177,7 @@ pub fn stage_config(species: &str, stage: u32) -> Option<(CompanionPersonality, 
         "NOX" => 1.4,
         _ => 1.,
     };
+    config.walk_acceleration = [0., 160., 120., 90., 70.][(stage - 1) as usize];
     config.walk_preparation = [0., 0.2, 0.3, 0.45, 0.6][(stage - 1) as usize] * cadence;
     config.walk_recovery = [0., 1., 1.5, 2., 3.][(stage - 1) as usize] * cadence;
     Some((personality, config))

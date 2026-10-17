@@ -140,14 +140,25 @@ struct Motion {
 #[derive(Default)]
 pub struct MovementController {
     active: Option<Motion>,
+    ground_acceleration: f64,
+    ground_velocity: f64,
     pub jump: Option<jump::Sample>,
 }
 impl MovementController {
+    /// Opt-in easing; existing callers retain their constant-speed ground profile.
+    pub fn set_ground_acceleration(&mut self, acceleration: f64) {
+        self.ground_acceleration = if acceleration.is_finite() {
+            acceleration.max(0.)
+        } else {
+            0.
+        };
+    }
     pub fn profile(&self) -> Option<MovementProfile> {
         self.active.map(|m| m.intent.profile)
     }
     pub fn cancel(&mut self) {
         self.active = None;
+        self.ground_velocity = 0.;
         self.jump = None;
     }
     pub fn start(
@@ -158,6 +169,7 @@ impl MovementController {
         size: Size,
     ) {
         self.jump = None;
+        self.ground_velocity = 0.;
         intent.duration = intent.duration.max(0.001);
         intent.height = intent.height.max(0.0);
         let mut start = area.clamp(position.0, position.1, size);
@@ -228,7 +240,18 @@ impl MovementController {
         let result = match m.intent.profile {
             MovementProfile::Ground => {
                 let d = target.0 - position.0;
-                let step = ground_speed * dt.clamp(0.0, 0.1);
+                let dt = dt.clamp(0.0, 0.1);
+                let speed = if self.ground_acceleration > 0. {
+                    let acceleration = self.ground_acceleration;
+                    // Reserve braking distance; approach the target without overshooting.
+                    let desired = (2. * acceleration * d.abs()).sqrt().min(ground_speed);
+                    self.ground_velocity += (desired - self.ground_velocity)
+                        .clamp(-acceleration * dt, acceleration * dt);
+                    self.ground_velocity
+                } else {
+                    ground_speed
+                };
+                let step = speed * dt;
                 complete = d.abs() <= step;
                 area.ground(position.0 + d.signum() * d.abs().min(step), size)
             }
