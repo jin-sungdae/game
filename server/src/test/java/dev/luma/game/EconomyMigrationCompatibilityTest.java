@@ -30,10 +30,14 @@ class EconomyMigrationCompatibilityTest {
             db.update("UPDATE game.t_player SET gold=137 WHERE player_id=1");
             db.update("INSERT INTO game.t_inventory(player_id,item_id,quantity) SELECT 1,item_id,3 FROM game.m_item WHERE item_code='SMALL_POTION'");
             var tables=db.queryForList("SELECT tablename FROM pg_tables WHERE schemaname='game' AND tablename<>'flyway_schema_history' ORDER BY tablename",String.class);
+            var existingStages=db.queryForList("SELECT species_id,evolution_stage,name FROM game.m_species_evolution ORDER BY species_id,evolution_stage");
+            tables.remove("m_species_evolution");
             var before=snapshot(db,tables);
             var checksums=db.queryForList("SELECT version,checksum FROM game.flyway_schema_history ORDER BY installed_rank");
             Flyway.configure().dataSource(url,user,password).schemas("game").defaultSchema("game").load().migrate();
             assertEquals(before,snapshot(db,tables));
+            for(var stage:existingStages)assertEquals(stage,db.queryForMap("SELECT species_id,evolution_stage,name FROM game.m_species_evolution WHERE species_id=? AND evolution_stage=?",stage.get("species_id"),stage.get("evolution_stage")));
+            assertEquals(15,db.queryForObject("SELECT count(*) FROM game.m_species_evolution",Integer.class));
             assertEquals(checksums,db.queryForList("SELECT version,checksum FROM game.flyway_schema_history WHERE version IS NULL OR version::int<=11 ORDER BY installed_rank"));
             assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_reward_entitlement",Integer.class));
             assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_economy_reward_ledger",Integer.class));

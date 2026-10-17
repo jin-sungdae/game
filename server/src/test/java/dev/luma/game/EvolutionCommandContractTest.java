@@ -31,6 +31,21 @@ class EvolutionCommandContractTest {
         assertEquals(2,db.queryForObject("SELECT evolution_stage FROM game.t_player_companion WHERE player_companion_id=?",Integer.class,companion));
         assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_command_receipt",Integer.class));
     }
+    @Test void expandedTransitionsCannotBypassReceiptOrSelectionThroughBodylessApi() {
+        try {
+            for(String species:List.of("MOA","RUU","NOX")) {
+                int stage=species.equals("MOA")?3:1;
+                db.update("UPDATE game.t_player_companion SET species_id=(SELECT species_id FROM game.m_species WHERE code=?),evolution_stage=?,level=100,exp=88900,bond=100",species,stage);
+                var legacy=http.postForEntity(url(),null,String.class);
+                assertEquals(409,legacy.getStatusCode().value());assertTrue(legacy.getBody().contains("EVOLUTION_COMMAND_REQUIRED"));
+                var command=http.postForEntity(url(),new EvolutionCommandRequest(UUID.randomUUID(),companion,stage,0),String.class);
+                assertEquals(503,command.getStatusCode().value());assertTrue(command.getBody().contains("BLOCKED_BY_SWITCHING_CONTRACT"));
+                assertEquals(stage,db.queryForObject("SELECT evolution_stage FROM game.t_player_companion WHERE active",Integer.class));
+            }
+            assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_companion_evolution_history",Integer.class));
+            assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_command_receipt",Integer.class));
+        } finally {db.update("UPDATE game.t_player_companion SET species_id=(SELECT species_id FROM game.m_species WHERE code='MOA'),evolution_stage=1");}
+    }
     @Test void strictRequestParsingRejectsIncompleteAmbiguousAndOutOfRangePayloads() {
         String valid="{\"commandId\":\""+UUID.randomUUID()+"\",\"expectedCompanionId\":"+companion+",\"expectedStage\":1,\"expectedSelectionRevision\":0}";
         for(String body:List.of("{}","null","[]",valid+" {}",valid.replace("\"expectedStage\":1","\"expectedStage\":1,\"expectedStage\":2"),
