@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 1,
   "repairLimit": 3,
-  "nextTask": "Validate batch06; M061 batch07 next independent artwork. M024 extra cleanup awaiting explicit approval. No approved Production ID mappings.",
+  "nextTask": "M061\u2013M070 dedicated aquatic joint motion; independent batch08 M071\u2013M080 originals generated, pending import and validation. M024 extra repair remains awaiting approval.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -10748,11 +10748,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -10881,18 +10881,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M061/base-v2.png"
     },
     {
       "creatureId": "M062",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -11021,18 +11022,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M062/base-v2.png"
     },
     {
       "creatureId": "M063",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -11161,18 +11163,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M063/base-v2.png"
     },
     {
       "creatureId": "M064",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -11301,18 +11304,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M064/base-v2.png"
     },
     {
       "creatureId": "M065",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -11441,18 +11445,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M065/base-v2.png"
     },
     {
       "creatureId": "M066",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -11581,18 +11586,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M066/base-v2.png"
     },
     {
       "creatureId": "M067",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -11721,18 +11727,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M067/base-v2.png"
     },
     {
       "creatureId": "M068",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -11861,18 +11868,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M068/base-v2.png"
     },
     {
       "creatureId": "M069",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -12001,18 +12009,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M069/base-v2.png"
     },
     {
       "creatureId": "M070",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -12141,7 +12150,8 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch07/M070/base-v2.png"
     },
     {
       "creatureId": "M071",
@@ -16356,7 +16366,7 @@
     ],
     "nativeGUI": false
   },
-  "repairScope": "monster-batch06",
+  "repairScope": "monster-batch07",
   "batchEvidence": [
     {
       "pr": 95,
@@ -16383,9 +16393,9 @@
     }
   ],
   "currentBatch": {
-    "id": "monster-batch06",
+    "id": "monster-batch07",
     "baseCandidates": 10,
-    "idleCandidateClips": 3,
+    "idleCandidateClips": 0,
     "productionComplete": 0,
     "total": 10,
     "repairIterations": 1,
