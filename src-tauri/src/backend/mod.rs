@@ -391,6 +391,11 @@ impl Backend {
                                 .send(Event::Battle(api.battle(id, Some("attack"))?))
                                 .map_err(|_| "closed")?;
                         }
+                        Some(Command::Skill(id, command, code, turn)) => {
+                            events
+                                .send(Event::Battle(api.skill(id, command, &code, turn)?))
+                                .map_err(|_| "closed")?;
+                        }
                         Some(Command::Capture(id)) => {
                             events
                                 .send(Event::Capture(api.capture(id)?))

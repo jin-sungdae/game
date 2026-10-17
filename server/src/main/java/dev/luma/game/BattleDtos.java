@@ -10,7 +10,8 @@ public final class BattleDtos {
     public record Participant(long playerCompanionId,String species) {}
     public record Battle(UUID battleId,UUID encounterId,int turn,String status,String encounterStatus,
                          Hp companion,Hp monster,List<String> events,Reward reward,List<PresentationEvent> presentationEvents,
-                         Participant participant,String monsterCode) {}
+                         Participant participant,String monsterCode,List<SkillOption> skills) {}
+    public record SkillOption(String code,String name,int readyTurn,String assetStatus) {}
     public record Collected(String monsterCode,String monsterName,long captureCount,Instant firstCapturedAt,Instant lastCapturedAt) {}
     public record Monster(String code,String name) {}
     public record Capture(UUID battleId,UUID encounterId,boolean success,double chance,Monster monster,

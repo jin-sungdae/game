@@ -23,6 +23,7 @@ public final class SkillDefinitions {
         }
     }
 
+    public static List<Definition> reviewCandidates() { return SkillCatalog.all().stream().map(SkillCatalog.Entry::definition).toList(); }
     public static List<Definition> all() { return List.of(); }
     public static Optional<Definition> find(String code) {
         return all().stream().filter(skill -> skill.code().equals(code)).findFirst();
