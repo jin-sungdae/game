@@ -80,20 +80,28 @@ fn action(kind: String, app: tauri::AppHandle) -> Result<(), String> {
                     }
                 }
             }
-            if kind == "evolve"
-                && !world.view.items.busy
-                && !world.view.game.busy
-                && world.view.evolution.request()
-                && !state
-                    .backend
-                    .lock()
-                    .unwrap()
-                    .request(backend::battle::Command::Evolve)
-            {
-                world
+            if kind == "evolve" && !world.view.items.busy && !world.view.game.busy {
+                let bootstrap = world.bootstrap.clone();
+                let command = world
                     .view
                     .evolution
-                    .fail("Request queue unavailable".into());
+                    .command(bootstrap.as_ref())
+                    .map(backend::battle::Command::Evolve)
+                    .or_else(|| {
+                        world
+                            .view
+                            .evolution
+                            .request_legacy(bootstrap.as_ref())
+                            .then_some(backend::battle::Command::EvolveLegacy)
+                    });
+                if let Some(command) = command {
+                    if !state.backend.lock().unwrap().request(command) {
+                        world
+                            .view
+                            .evolution
+                            .fail("Request queue unavailable".into());
+                    }
+                }
             }
             if !world.view.evolution.busy && !world.view.items.busy {
                 let dex_request = matches!(kind.as_str(), "dex" | "dex-refresh");
@@ -282,8 +290,9 @@ fn main() {
                                             world.view.evolution.error = None;
                                         }
                                     }
-                                    backend::Event::Evolved(value) => {
-                                        world.apply_evolved(value, now)
+                                    backend::Event::EvolvedLegacy(value) => world.apply_evolved(value, now),
+                                    backend::Event::EvolvedCommand(request, value, current) => {
+                                        world.apply_evolved_command(request, value, current, now)
                                     }
                                     backend::Event::EvolutionUnavailable(error) => {
                                         world.view.evolution.eligibility = None;

@@ -13,8 +13,8 @@ public class GameRepository {
     private final JdbcTemplate jdbc;
     public GameRepository(JdbcTemplate jdbc) { this.jdbc = jdbc; }
     public GameDtos.Player lockPlayer(long playerId) {
-        var rows = jdbc.query("SELECT player_id,player_name,gold FROM game.t_player WHERE player_id=? FOR UPDATE",
-            (r,n)->new GameDtos.Player(r.getLong(1),r.getString(2),r.getLong(3)), playerId);
+        var rows = jdbc.query("SELECT player_id,player_name,gold,active_selection_revision FROM game.t_player WHERE player_id=? FOR UPDATE",
+            (r,n)->new GameDtos.Player(r.getLong(1),r.getString(2),r.getLong(3),r.getLong(4)), playerId);
         if (rows.size()!=1) throw new GameUnavailable("Local player missing");
         return rows.getFirst();
     }

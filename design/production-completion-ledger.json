@@ -14,7 +14,7 @@
       "id": 2,
       "name": "Five-stage evolution",
       "status": "IN_PROGRESS",
-      "dependency": "PR90 and durable selection follow-up; desktop command client remains pending"
+      "dependency": "PR90 + PR92 + desktop structured command follow-up; no merge or GUI approval implied"
     },
     {
       "id": 3,
@@ -97,7 +97,7 @@
       "id": 17,
       "name": "Persistence/recovery/idempotency",
       "status": "IN_PROGRESS",
-      "dependency": "Selection revision and real ABA integration added; full expanded-content restart acceptance pending"
+      "dependency": "PR92: 340 Java/PostgreSQL and 18/18 Alpha Gate; desktop retry survives transport failures within process, unresolved intent journal across app restart is pending"
     },
     {
       "id": 18,
@@ -861,8 +861,8 @@
     "windowsNative": "DEFERRED_GUI"
   },
   "nextSequentialTasks": [
-    "Finish durable selection tests and Draft delivery",
-    "Connect Rust evolution intent to structured idempotent command",
-    "Continue independent artwork and platform work without resetting blocked PR repair budgets"
+    "Validate desktop command compatibility and Draft delivery",
+    "Persist unresolved evolution command across app restart",
+    "Continue independent RUU Stage3 base/clip validation and platform work"
   ]
 }

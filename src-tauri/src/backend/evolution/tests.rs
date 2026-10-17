@@ -380,3 +380,179 @@ fn live_nebla_natural_production_trace() {
     .unwrap();
     eprintln!("NEBLA LIVE {mode} PASS: real API → compiled World, trace exported");
 }
+
+fn revision_bootstrap(stage: u32, revision: u64) -> Bootstrap {
+    let mut value = bootstrap(stage);
+    value.player.active_selection_revision = Some(revision);
+    value
+}
+#[test]
+fn command_requires_real_revision_and_reuses_ambiguous_intent() {
+    let mut view = Presentation {
+        eligibility: Some(eligibility(Status::Available)),
+        ..Default::default()
+    };
+    assert!(view.command(Some(&bootstrap(1))).is_none());
+    let first = view.command(Some(&revision_bootstrap(1, 7))).unwrap();
+    assert_eq!(first.expected_selection_revision, 7);
+    assert!(view.command(Some(&revision_bootstrap(1, 7))).is_none());
+    view.fail("server unavailable".into());
+    // A poll may already show the committed next stage. This remains the same user intent.
+    assert_eq!(
+        first,
+        view.command(Some(&revision_bootstrap(2, 7))).unwrap()
+    );
+    view.fail("STALE_SELECTION".into());
+    let next = view.command(Some(&revision_bootstrap(1, 9))).unwrap();
+    assert_ne!(first.command_id, next.command_id);
+    assert_eq!(next.expected_selection_revision, 9);
+}
+#[test]
+fn receipt_confirmation_does_not_restore_an_old_selection_or_replay_animation() {
+    let mut w = world();
+    let original = revision_bootstrap(1, 0);
+    w.apply_bootstrap(original.clone());
+    w.view.evolution.eligibility = Some(eligibility(Status::Available));
+    let request = w.view.evolution.command(Some(&original)).unwrap();
+    let mut saved = result(Outcome::Evolved);
+    saved.bootstrap.player.active_selection_revision = Some(0);
+    let mut live = revision_bootstrap(1, 2);
+    live.active_companion.player_companion_id = 2;
+    live.active_companion.species = "RUU".into();
+    live.active_companion.evolution_name = "RUU".into();
+    w.apply_evolved_command(request.clone(), saved.clone(), live.clone(), 1.0);
+    assert_eq!(w.view.identity.as_ref().unwrap().species, "RUU");
+    assert_eq!(w.view.evolution.phase, Phase::Idle);
+    // A duplicate channel delivery cannot overwrite the current bootstrap or start glow.
+    w.apply_evolved_command(request, saved.clone(), saved.bootstrap.clone(), 2.0);
+    assert_eq!(w.view.identity.as_ref().unwrap().species, "RUU");
+    assert_eq!(w.view.evolution.phase, Phase::Idle);
+}
+#[test]
+fn acknowledged_command_plays_once_then_next_user_action_has_new_uuid() {
+    let mut view = Presentation {
+        eligibility: Some(eligibility(Status::Available)),
+        ..Default::default()
+    };
+    let first = view.command(Some(&revision_bootstrap(1, 0))).unwrap();
+    let mut saved = result(Outcome::Evolved);
+    saved.bootstrap.player.active_selection_revision = Some(0);
+    assert!(view.acknowledge_command(&first, &saved, &saved.bootstrap, None, 1.0));
+    assert_eq!(view.phase, Phase::Glow);
+    assert!(!view.acknowledge_command(&first, &saved, &saved.bootstrap, None, 1.2));
+    view.tick(3.0);
+    view.eligibility = Some(eligibility(Status::Available));
+    let next = view.command(Some(&revision_bootstrap(2, 0))).unwrap();
+    assert_ne!(first.command_id, next.command_id);
+    assert_eq!(next.expected_stage, 2);
+}
+#[test]
+fn structured_http_retries_identical_payload_for_all_species_and_stages() {
+    use std::{
+        io::{Read, Write},
+        net::TcpListener,
+    };
+    for species in ["MOA", "RUU", "NOX"] {
+        for stage in 1..=4 {
+            let listener = TcpListener::bind("127.0.0.1:0").unwrap();
+            let url = format!("http://{}", listener.local_addr().unwrap());
+            let request = Request {
+                command_id: uuid::Uuid::new_v4(),
+                expected_companion_id: 1,
+                expected_stage: stage,
+                expected_selection_revision: 4,
+            };
+            let mut response = result(Outcome::Evolved);
+            response.bootstrap.player.active_selection_revision = Some(4);
+            response.bootstrap.active_companion.species = species.into();
+            response.bootstrap.active_companion.evolution_stage = stage + 1;
+            response.evolution.species = species.into();
+            response.evolution.current_stage = stage + 1;
+            response.evolution.next_stage = None;
+            response.evolution.next_name = None;
+            response.evolution.requirements = None;
+            response.evolution.status = if stage == 4 {
+                Status::MaxStage
+            } else {
+                Status::Locked
+            };
+            let body = serde_json::to_string(&response).unwrap();
+            let task = std::thread::spawn(move || {
+                let mut payloads = Vec::new();
+                for _ in 0..2 {
+                    let (mut stream, _) = listener.accept().unwrap();
+                    stream
+                        .set_read_timeout(Some(std::time::Duration::from_secs(3)))
+                        .unwrap();
+                    let mut bytes = Vec::new();
+                    loop {
+                        let mut part = [0; 4096];
+                        let n = stream.read(&mut part).unwrap();
+                        assert!(n > 0);
+                        bytes.extend_from_slice(&part[..n]);
+                        let text = String::from_utf8_lossy(&bytes);
+                        if let Some((header, data)) = text.split_once("\r\n\r\n") {
+                            let length: usize = header
+                                .lines()
+                                .find_map(|l| {
+                                    l.to_ascii_lowercase()
+                                        .strip_prefix("content-length: ")
+                                        .map(|v| v.parse().unwrap())
+                                })
+                                .unwrap();
+                            if data.len() >= length {
+                                assert!(
+                                    header.starts_with("POST /api/v1/companions/active/evolve ")
+                                );
+                                payloads
+                                    .push(serde_json::from_str::<serde_json::Value>(data).unwrap());
+                                break;
+                            }
+                        }
+                    }
+                    write!(
+                        stream,
+                        "HTTP/1.1 200 OK\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{}",
+                        body.len(),
+                        body
+                    )
+                    .unwrap();
+                }
+                payloads
+            });
+            let api = Api::new(&url).unwrap();
+            for _ in 0..2 {
+                assert_eq!(
+                    api.evolve_command(&request)
+                        .unwrap()
+                        .bootstrap
+                        .active_companion
+                        .evolution_stage,
+                    stage + 1
+                );
+            }
+            let bodies = task.join().unwrap();
+            assert_eq!(bodies[0], serde_json::to_value(&request).unwrap());
+            assert_eq!(bodies[0], bodies[1]);
+        }
+    }
+}
+
+#[test]
+fn legacy_compatibility_requires_missing_revision_and_original_moa_scope() {
+    let mut view = Presentation {
+        eligibility: Some(eligibility(Status::Available)),
+        ..Default::default()
+    };
+    assert!(!view.request_legacy(Some(&revision_bootstrap(1, 0))));
+    let mut other = bootstrap(1);
+    other.active_companion.species = "RUU".into();
+    assert!(!view.request_legacy(Some(&other)));
+    assert!(!view.request_legacy(Some(&bootstrap(3))));
+    assert!(view.request_legacy(Some(&bootstrap(1))));
+    assert!(!view.request_legacy(Some(&bootstrap(1))));
+    view.fail("server unavailable".into());
+    assert!(view.command(Some(&revision_bootstrap(1, 0))).is_some());
+    view.fail("server unavailable".into());
+    assert!(!view.request_legacy(Some(&bootstrap(1))));
+}
