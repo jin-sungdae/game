@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "repairIterations": 1,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "baseCandidates": 10,
+  "idleCandidateClips": 5,
+  "idleCandidateFrames": 30,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotionReview": "NOT_VERIFIED",
+  "gui": "NOT_VERIFIED",
+  "deferred": {
+    "M033": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed",
+    "M034": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed",
+    "M035": "Dedicated rigid plate animation needed",
+    "M037": "APPEARANCE_DRIFT: quadruped output instead of reference upright posture",
+    "M038": "Dedicated rigid plate animation needed; initial haze concern not confirmed on gray composite"
+  },
+  "repairHistory": [
+    "Detached low-alpha components removed; connected body unchanged; originals preserved"
+  ],
+  "identityReview": [
+    {
+      "conceptId": "M031",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M032",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M033",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M034",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M035",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M036",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M037",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M038",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M039",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M040",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    }
+  ],
+  "generation": [
+    {
+      "conceptId": "M031",
+      "tool": "built-in image_gen",
+      "subject": "fire cub",
+      "sourceSha256": "3ebd7967165a85357eee85a5a40787c732d968d7b7a33ededb1cf70d2e6ec191"
+    },
+    {
+      "conceptId": "M032",
+      "tool": "built-in image_gen",
+      "subject": "flame salamander",
+      "sourceSha256": "8876808c32a9bd706198281ce117006a2aa0372ed083e1b140fe9e811c6c72c0"
+    },
+    {
+      "conceptId": "M033",
+      "tool": "built-in image_gen",
+      "subject": "rock quadruped",
+      "sourceSha256": "79bd02584ae768cf2655468f45eb179d17243fd235f457157c02eb6f141ad79a"
+    },
+    {
+      "conceptId": "M034",
+      "tool": "built-in image_gen",
+      "subject": "rock quadruped variant",
+      "sourceSha256": "0fa6d744c5e32953cf39af16a1328282e4e6ad903c79e2f8a255b84000fed068"
+    },
+    {
+      "conceptId": "M035",
+      "tool": "built-in image_gen",
+      "subject": "flame crested rock golem",
+      "sourceSha256": "3d23c0984f8a98254c11fc873052dff2e96d02a5e9b748b6f322b45ba5166d85"
+    },
+    {
+      "conceptId": "M036",
+      "tool": "built-in image_gen",
+      "subject": "fire wolf",
+      "sourceSha256": "76650dbc83b817ade286461085b70f6abd290e13316fe34ddccb4b194d0c4665"
+    },
+    {
+      "conceptId": "M037",
+      "tool": "built-in image_gen",
+      "subject": "upright volcanic creature; generated quadruped",
+      "sourceSha256": "165efd7159f46b0b4013e53790ccb940c08836078d76d10295fac0e2b9e7c977"
+    },
+    {
+      "conceptId": "M038",
+      "tool": "built-in image_gen",
+      "subject": "low volcanic rock creature",
+      "sourceSha256": "98c2cdc345fbdfdc88e1e287f56d566222ced9c64ea44484c6e6cd0f15b1f39e"
+    },
+    {
+      "conceptId": "M039",
+      "tool": "built-in image_gen",
+      "subject": "small fire dragon",
+      "sourceSha256": "f78d473a00339cdc066e4759e2f5b8871a8c1f6ecde8305458cbd5f313f9a857"
+    },
+    {
+      "conceptId": "M040",
+      "tool": "built-in image_gen",
+      "subject": "fire deer",
+      "sourceSha256": "e6e11d8652a65db117b4a089306a0fb11c5494cb9a3d46b75ca5adc4b4439294"
+    }
+  ]
+}

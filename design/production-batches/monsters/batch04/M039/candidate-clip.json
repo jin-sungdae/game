@@ -1,0 +1,25 @@
+{
+  "conceptId": "M039",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "identityReview": "HUMAN_REVIEW_REQUIRED",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 6,
+    "frameDuration": 310,
+    "loop": true,
+    "path": "rigged/idle/idle_NN.png"
+  },
+  "gui": "NOT_VERIFIED",
+  "productionEligible": false
+}
