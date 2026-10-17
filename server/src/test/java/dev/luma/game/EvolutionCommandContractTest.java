@@ -19,7 +19,7 @@ class EvolutionCommandContractTest {
     @LocalServerPort int port;
     long companion;
     String url(){return "http://127.0.0.1:"+port+"/api/v1/companions/active/evolve";}
-    @BeforeEach void setup(){clean();companion=db.queryForObject("SELECT player_companion_id FROM game.t_player_companion WHERE player_id=1 AND active",Long.class);db.update("UPDATE game.t_player_companion SET level=6,bond=12");}
+    @BeforeEach void setup(){clean();companion=db.queryForObject("SELECT player_companion_id FROM game.t_player_companion WHERE player_id=1 AND active",Long.class);db.update("UPDATE game.t_player_companion SET level=6,exp=1500,bond=12");}
     @AfterEach void clean(){db.update("DELETE FROM game.t_command_receipt");CompanionBondIntegrationTest.clean(db);}
     @Test void missingSwitchingProviderFailsClosedButBodylessCompatibilityRemains() {
         var response=http.postForEntity(url(),new EvolutionCommandRequest(UUID.randomUUID(),companion,1,0),String.class);
