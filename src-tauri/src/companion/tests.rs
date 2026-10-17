@@ -361,3 +361,54 @@ fn only_completed_click_emits_one_relationship_intent() {
     c.tick(10.0, 0.1, area(), FAR, false);
     assert!(!c.take_click());
 }
+
+#[test]
+fn living_form_coverage_and_stage_policy() {
+    use super::config::*;
+    let mut counts = [0; 3];
+    for species in ["MOA", "RUU", "NOX"] {
+        for stage in 1..=5 {
+            match living_coverage(species, stage).unwrap() {
+                LivingCoverage::Animated => counts[0] += 1,
+                LivingCoverage::BaseOnly => counts[1] += 1,
+                LivingCoverage::AwaitingAssets => {
+                    counts[2] += 1;
+                    assert!(living_config(species, stage).is_none());
+                }
+            }
+        }
+    }
+    assert_eq!(counts, [1, 2, 12]);
+    assert!(living_coverage("UNKNOWN", 1).is_none());
+    assert!(living_config("MOA", 6).is_none());
+    let a = living_config("MOA", 1).unwrap().1;
+    let b = living_config("MOA", 2).unwrap().1;
+    let c = living_config("MOA", 3).unwrap().1;
+    assert!(a.idle.min < b.idle.min && b.idle.min < c.idle.min);
+    assert_eq!(a.walk_speed, c.walk_speed);
+    assert_eq!(a.reaction_duration, c.reaction_duration);
+}
+
+#[test]
+fn living_identity_defers_until_boundary_and_cursor_turn_has_deadband() {
+    let mut c = controller(forced(Behavior::Walking));
+    c.tick(1., 0.03, area(), FAR, false);
+    assert_eq!(c.entity.state, CompanionState::Walking);
+    let old = c.config.idle.min;
+    c.set_identity("MOA", 3);
+    assert_eq!(c.config.idle.min, old);
+    c.tick(1.1, 0.03, area(), FAR, false);
+    assert_eq!(c.config.idle.min, old);
+    c.tick(20., 0.03, area(), FAR, false);
+    assert_eq!(c.entity.state, CompanionState::Idle);
+    assert_eq!(c.config.idle.min, 40.);
+    c.entity.facing = -1;
+    c.face(c.entity.x + 1.9);
+    assert_eq!(c.entity.facing, -1);
+    c.face(c.entity.x + 3.);
+    assert_eq!(c.entity.facing, 1);
+    c.face(c.entity.x - 1.9);
+    assert_eq!(c.entity.facing, 1);
+    c.face(c.entity.x - 3.);
+    assert_eq!(c.entity.facing, -1);
+}

@@ -110,6 +110,10 @@ impl World {
             value.active_companion.species,
             value.active_companion.evolution_stage
         );
+        self.companion.set_identity(
+            &value.active_companion.species,
+            value.active_companion.evolution_stage,
+        );
         self.presentation.bootstrap(&value);
         self.view.identity = Some(value.active_companion.clone());
         self.bootstrap = Some(value);
@@ -279,6 +283,7 @@ impl World {
                     ),
                     now,
                 )
+                .for_species(&identity.monster_code)
             });
         self.pip_deadline = now + crate::presentation::spawn::hold_seconds(&identity.rarity);
         self.view.monster = Some(identity);

@@ -75,7 +75,11 @@ pub fn profile(code: &str) -> Option<Profile> {
         .find(|r| r.monster_code == code)
         .map(|r| r.behavior_profile)
 }
+mod living;
+pub use living::Expression;
+
 pub struct Controller<R = Seeded> {
+    expression: Expression,
     pub profile: Profile,
     pub next_decision_at: f64,
     pub current: Decision,
@@ -90,6 +94,7 @@ impl<R: Random> Controller<R> {
     pub fn new(profile: Profile, random: R, now: f64) -> Self {
         Self {
             profile,
+            expression: Expression::default(),
             random,
             next_decision_at: now,
             current: Decision::pause(),
@@ -99,6 +104,11 @@ impl<R: Random> Controller<R> {
             approaching: false,
             avoiding: false,
         }
+    }
+    /// Bind once at spawn. Unknown/provisional identities retain the old policy.
+    pub fn for_species(mut self, code: &str) -> Self {
+        self.expression = Expression::for_species(code);
+        self
     }
     pub fn hold(&mut self, terminal: bool) {
         self.suspended = true;
@@ -126,8 +136,10 @@ impl<R: Random> Controller<R> {
         }
         let r = self.random.unit().clamp(0.0, 1.0);
         let direction = if self.random.unit() < 0.5 { -1.0 } else { 1.0 };
-        self.next_decision_at =
-            now + MIN_INTERVAL + (MAX_INTERVAL - MIN_INTERVAL) * self.random.unit().clamp(0.0, 1.0);
+        self.next_decision_at = now
+            + self.expression.interval
+                * (MIN_INTERVAL
+                    + (MAX_INTERVAL - MIN_INTERVAL) * self.random.unit().clamp(0.0, 1.0));
         let distance = distance.filter(|d| d.is_finite() && *d >= 0.0);
         let intent = if movement == MovementProfile::Static
             || (self.profile == Profile::Sleepy && (self.decisions == 0 || r < 0.8))
@@ -216,8 +228,8 @@ impl<R: Random> Controller<R> {
         self.current = Decision {
             intent,
             direction,
-            distance: step,
-            speed,
+            distance: step * self.expression.distance,
+            speed: speed * self.expression.speed,
         };
         self.decisions += 1;
         Some(self.current)

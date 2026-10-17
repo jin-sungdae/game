@@ -19,7 +19,12 @@ final class Frames: NSObject, SCStreamOutput, @unchecked Sendable {
         let rep = NSBitmapImageRep(cgImage: image)
         guard let bytes = rep.representation(using: .png, properties: [:]) else { return }
         do { try bytes.write(to: directory.appendingPathComponent(name)) } catch { return }
-        rows.append(["file": name, "pts": CMTimeGetSeconds(sample.presentationTimeStamp), "wallTime": Date().timeIntervalSince1970, "width": image.width, "height": image.height])
+        // Add capture-time correlation without changing legacy callback wallTime semantics.
+        let observed = Date().timeIntervalSince1970
+        let pts = CMTimeGetSeconds(sample.presentationTimeStamp)
+        let age = CMTimeGetSeconds(CMClockGetTime(CMClockGetHostTimeClock())) - pts
+        let captureTime: Any = age.isFinite && age >= 0 && age <= 2 ? observed - age : NSNull()
+        rows.append(["captureWallTime": captureTime, "file": name, "pts": CMTimeGetSeconds(sample.presentationTimeStamp), "wallTime": Date().timeIntervalSince1970, "width": image.width, "height": image.height])
     }
 }
 @main struct RecordWindow {
