@@ -756,3 +756,40 @@ fn bubu_jump_batch_uses_existing_apex_band_boundaries() {
         "LAND"
     );
 }
+
+#[test]
+fn living_all_production_worlds_keep_native_bounds_and_facing() {
+    for code in [
+        "PIP", "MELLO", "MOSSY", "CHIRP", "BUBU", "PEBB", "PUFF", "TIKKI", "MIMI", "WISP", "SHADE",
+        "EMBER", "LUNET", "NOVA", "NOCT",
+    ] {
+        let mut w = world(code);
+        let mut moving = 0;
+        for i in 1..1800 {
+            let previous = w.view.pip.as_ref().map(|p| (p.x, p.y, p.facing));
+            w.tick(f64::from(i) / 30., 1. / 30., FAR, false);
+            if let Some(p) = &w.view.pip {
+                assert!(p.x.is_finite() && p.y.is_finite(), "{code}");
+                assert_eq!((p.x, p.y), w.area.clamp(p.x, p.y, p.size), "{code}");
+                if let Some((x, _, facing)) = previous {
+                    let vx = (p.x - x) * 30.;
+                    if p.state == PipState::Roaming && vx.abs() > 3. && vx.abs() < 256. {
+                        moving += 1;
+                        assert_eq!(p.facing, if vx > 0. { 1 } else { -1 }, "{code}");
+                    } else if p.state == PipState::Roaming && vx == 0. {
+                        assert_eq!(p.facing, facing, "vertical/idle {code}");
+                    }
+                }
+            }
+        }
+        if code == "MIMI" {
+            assert_eq!(moving, 0);
+        }
+        assert!(
+            w.monster_behavior
+                .as_ref()
+                .is_some_and(|b| b.decisions <= 30),
+            "{code}"
+        );
+    }
+}

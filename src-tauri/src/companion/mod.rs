@@ -38,6 +38,7 @@ pub struct CompanionController {
     movement_rng: u64,
     drag: Option<DragGesture>,
     clicked: bool,
+    pending_identity: Option<(CompanionPersonality, BehaviorConfig)>,
 }
 impl CompanionController {
     pub fn new(
@@ -73,9 +74,13 @@ impl CompanionController {
             movement_rng: (seed ^ 0x6c756d615f6d6f76).max(1),
             drag: None,
             clicked: false,
+            pending_identity: None,
         };
         s.duration = config.idle.sample(s.random());
         s
+    }
+    pub fn set_identity(&mut self, species: &str, stage: u32) {
+        self.pending_identity = config::living_config(species, stage);
     }
     pub fn take_click(&mut self) -> bool {
         std::mem::take(&mut self.clicked)
@@ -102,6 +107,11 @@ impl CompanionController {
         let Some(state) = transitions::next(self.entity.state, event) else {
             return;
         };
+        // Apply only at a state boundary; never change speed/target in an active excursion.
+        if let Some((personality, config)) = self.pending_identity.take() {
+            self.personality = personality;
+            self.config = config;
+        }
         let previous = self.entity.state;
         self.movement.cancel();
         self.excursion = None;
@@ -203,7 +213,8 @@ impl CompanionController {
     }
     fn face(&mut self, x: f64) {
         let delta = x - self.entity.x;
-        if delta != 0.0 {
+        if delta.abs() > 2.0 {
+            // Cursor deadband prevents idle facing chatter. Native movement facing is unchanged.
             self.entity.facing = if delta > 0.0 { 1 } else { -1 };
         }
     }
