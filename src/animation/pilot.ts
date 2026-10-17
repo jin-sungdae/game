@@ -22,6 +22,7 @@ export const edgeConsumers=[{character:'SHADE',status:'EDGE_PRODUCTION'},{charac
 export const floatingConsumers=['PUFF','WISP','LUNET'] as const;
 export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
+  if(character==='moa' && [4,5].includes(stage)) return {character:'MOA',species:'moa',stage,manifest:resolveCompanion('moa',stage)!.assetManifest,base:companionBase('moa',stage)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
   if(character==='ruu' && [3,4,5].includes(stage)) return {character:'RUU',species:'ruu',stage,manifest:resolveCompanion('ruu',stage)!.assetManifest,base:companionBase('ruu',stage)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
   if(character==='nox' && stage===2) return {character:'NOX',species:'nox',stage:2,manifest:resolveCompanion('nox',2)!.assetManifest,base:companionBase('nox',2)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
   const ground=groundConsumers.find(consumer=>consumer.character===character);

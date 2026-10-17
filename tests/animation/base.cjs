@@ -76,5 +76,11 @@ test('delivered NEBLA resolves its own base before and after loader restart',asy
 });
 
 test('corrupt companion stages fail closed without borrowing another stage',()=>{
- for(const stage of [-1,0,4,99,NaN,1.5]) assert.equal(companionBase('moa',stage),null);
+ for(const stage of [-1,0,6,99,NaN,1.5]) assert.equal(companionBase('moa',stage),null);
+});
+
+test('mature MOA artwork preserves the seeded database names',()=>{
+ const {resolveCompanion}=require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,'entities/registry.js'));
+ assert.equal(resolveCompanion('moa',4).name,'SYLVAON');
+ assert.equal(resolveCompanion('moa',5).name,'AETHERIA');
 });

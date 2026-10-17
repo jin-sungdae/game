@@ -79,7 +79,7 @@ for(const species of ['moa','ruu','nox']) {
 }
 test('unknown species/stage returns fallback without IO or throwing',async()=>{
  const loader=new AssetLoader({json:async()=>{assert.fail('unexpected IO');},image:async()=>{assert.fail('unexpected IO');}});
- for(const [species,stage] of [['unknown',1],['../moa',1],['constructor',1],['moa',4],['ruu',2],['nox',0],['moa',NaN]]) {
+ for(const [species,stage] of [['unknown',1],['../moa',1],['constructor',1],['moa',6],['ruu',2],['nox',0],['moa',NaN]]) {
   assert.equal(resolveCompanion(species,stage),null);assert.equal(await loader.load(species,stage,'idle'),null);
  }
 });

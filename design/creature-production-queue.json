@@ -11,9 +11,9 @@
   "artworkApproval": "HUMAN_REVIEW_REQUIRED",
   "nativeMacOS": "NOT_VERIFIED",
   "nativeWindows": "NOT_VERIFIED",
-  "repairIterations": 3,
+  "repairIterations": 2,
   "repairLimit": 3,
-  "nextTask": "MOA Stage4/5 independent artwork batch; NOX3/4/5 require human review before further repair; native GUI and full action coverage remain pending",
+  "nextTask": "Monster M001-M010 identity comparison before any production mapping; remaining Companion action-specific poses need artwork. Native macOS/Windows and human artwork review pending.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -394,18 +394,18 @@
       "creatureId": "companion:moa:4",
       "species": "moa",
       "evolutionStage": 4,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
-      "runtimeStatus": "NOT_VERIFIED",
+      "state": "GUI_NOT_VERIFIED",
+      "baseStatus": "BASE_READY",
+      "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
+          "animationStatus": "ANIMATION_READY",
+          "frameCount": 6,
+          "runtimeStatus": "RUNTIME_CONNECTED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
         {
@@ -519,18 +519,18 @@
       "creatureId": "companion:moa:5",
       "species": "moa",
       "evolutionStage": 5,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
-      "runtimeStatus": "NOT_VERIFIED",
+      "state": "GUI_NOT_VERIFIED",
+      "baseStatus": "BASE_READY",
+      "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
+          "animationStatus": "ANIMATION_READY",
+          "frameCount": 6,
+          "runtimeStatus": "RUNTIME_CONNECTED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
         {
@@ -1399,7 +1399,7 @@
       "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
-      "lastValidatedCommit": null,
+      "lastValidatedCommit": "370c2d9c9938a60f9af9c7024b99885102727f68",
       "actions": [
         {
           "action": "IDLE",
@@ -13803,5 +13803,19 @@
     ],
     "nativeGUI": false
   },
-  "repairScope": "NOX batch: Stage3 background edit, Stage2 detached residue cleanup, Stage4 background edit"
+  "repairScope": "MOA batch: disconnected alpha cleanup; missing test import correction",
+  "batchEvidence": [
+    {
+      "pr": 95,
+      "commit": "56eb4578ad5832f3bd131f46a5372e7830e9b6f4",
+      "releaseGate": "18/18 PASS",
+      "manualGate": "MANUAL_QA_REQUIRED"
+    },
+    {
+      "pr": 96,
+      "commit": "370c2d9c9938a60f9af9c7024b99885102727f68",
+      "releaseGate": "RUNNING",
+      "scope": "NOX Stage2"
+    }
+  ]
 }

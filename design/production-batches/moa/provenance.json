@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "reference": "design/visual-reference-v1/companions-concept.png",
+  "prompts": {
+    "stage4": "Standalone transparent PNG game companion BASE sprite of MOA Stage4, the fourth creature in the TOP GREEN ROW of attached concept (concept label TERRA). Preserve exact design direction: mature graceful white quadruped with branching woody antlers, green leaf mane and layered leaf tail, warm gold/brown accents, gentle curious eyes. Stage4 anatomy distinct from small Stage3 and final Stage5. Facing RIGHT in stable neutral stance with four clearly visible planted paws/hooves. Full silhouette with generous empty square margins. Clean opaque painted game sprite body, crisp antialiased cutout readable at256px. Only animal and its attached foliage. Absolutely no background, ground, shadow, aura, mist, sparkles, detached leaves or text. Every pixel outside silhouette truly transparent alpha=0. Redraw reference identity, do not crop concept. This is an individual base for localized torso breathing rig, not animation sheet.",
+    "stage5": "Create exactly one standalone transparent PNG base game sprite of MOA Stage5, top green row FIFTH final evolution (GAIA concept label) in attached Project LUMA sheet. Match final form's majestic tall white stag-like quadruped, broad intricate woody antler crown, green-and-gold leaf mantle, vine details and layered long leaf tail. Preserve the concept's final anatomy and graceful mature proportions, not simply a larger Stage4. Facing RIGHT, stable neutral stance with all four hooves fully visible. Fit entire character inside square with at least12 percent EMPTY margin on EVERY side including all antler tips and tail. Opaque painted character silhouette, clean antialiased alpha edge, readable at256px. Everything outside character alpha=0. Absolutely no ground, shadow, aura, glow, detached leaves, mist, particles, text or backdrop. Redraw individual faithfully; do not crop reference. Base for localized torso/leaf-root breathing, not an animation sheet."
+  },
+  "identity": {
+    "stage4": {
+      "databaseName": "SYLVAON",
+      "conceptLabel": "TERRA"
+    },
+    "stage5": {
+      "databaseName": "AETHERIA",
+      "conceptLabel": "GAIA"
+    },
+    "source": "server/src/main/resources/db/migration/V2__local_master_seed.sql",
+    "databaseModified": false
+  },
+  "repairs": [
+    {
+      "iteration": 1,
+      "action": "Remove only disconnected alpha<128 pixels; preserve connected body"
+    },
+    {
+      "iteration": 2,
+      "action": "Add missing resolveCompanion import to new name-preservation test"
+    }
+  ],
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "nativeGUI": "DEFERRED_GUI",
+  "browser": {
+    "fixture": "tests/live/moa-mature/index.html",
+    "observed": [
+      "SYLVAON frame6",
+      "AETHERIA Stage5 selection",
+      "Facing reversal",
+      "Pause base fallback",
+      "MOVE ASSET_REQUIRED",
+      "Resume IDLE"
+    ],
+    "nativeInput": false
+  }
+}
