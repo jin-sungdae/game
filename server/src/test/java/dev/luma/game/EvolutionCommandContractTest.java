@@ -11,7 +11,7 @@ import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
 import static org.junit.jupiter.api.Assertions.*;
 
-/** Production wiring intentionally has no Selection Revision provider. */
+/** Production wiring uses the durable Switching revision provider. */
 @SpringBootTest(webEnvironment=SpringBootTest.WebEnvironment.RANDOM_PORT)
 class EvolutionCommandContractTest {
     @DynamicPropertySource static void database(DynamicPropertyRegistry r) { GameIntegrationTest.database(r); }
@@ -21,29 +21,28 @@ class EvolutionCommandContractTest {
     String url(){return "http://127.0.0.1:"+port+"/api/v1/companions/active/evolve";}
     @BeforeEach void setup(){clean();companion=db.queryForObject("SELECT player_companion_id FROM game.t_player_companion WHERE player_id=1 AND active",Long.class);db.update("UPDATE game.t_player_companion SET level=6,exp=1500,bond=12");}
     @AfterEach void clean(){db.update("DELETE FROM game.t_command_receipt");CompanionBondIntegrationTest.clean(db);}
-    @Test void missingSwitchingProviderFailsClosedButBodylessCompatibilityRemains() {
+    @Test void durableSelectionProviderEnablesCommandsAndBodylessCompatibilityRemains() {
         var response=http.postForEntity(url(),new EvolutionCommandRequest(UUID.randomUUID(),companion,1,0),String.class);
-        assertEquals(503,response.getStatusCode().value());assertTrue(response.getBody().contains("BLOCKED_BY_SWITCHING_CONTRACT"));
-        assertEquals(1,db.queryForObject("SELECT evolution_stage FROM game.t_player_companion WHERE player_companion_id=?",Integer.class,companion));
-        assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_companion_evolution_history",Integer.class));
-        assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_command_receipt",Integer.class));
-        assertEquals(200,http.postForEntity(url(),null,String.class).getStatusCode().value());
+        assertEquals(200,response.getStatusCode().value());
         assertEquals(2,db.queryForObject("SELECT evolution_stage FROM game.t_player_companion WHERE player_companion_id=?",Integer.class,companion));
-        assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_command_receipt",Integer.class));
+        assertEquals(1,db.queryForObject("SELECT count(*) FROM game.t_command_receipt",Integer.class));
+        assertEquals(200,http.postForEntity(url(),null,String.class).getStatusCode().value());
+        assertEquals(3,db.queryForObject("SELECT evolution_stage FROM game.t_player_companion WHERE player_companion_id=?",Integer.class,companion));
     }
     @Test void expandedTransitionsCannotBypassReceiptOrSelectionThroughBodylessApi() {
         try {
             for(String species:List.of("MOA","RUU","NOX")) {
                 int stage=species.equals("MOA")?3:1;
+                db.update("DELETE FROM game.t_companion_evolution_history");
                 db.update("UPDATE game.t_player_companion SET species_id=(SELECT species_id FROM game.m_species WHERE code=?),evolution_stage=?,level=100,exp=88900,bond=100",species,stage);
                 var legacy=http.postForEntity(url(),null,String.class);
                 assertEquals(409,legacy.getStatusCode().value());assertTrue(legacy.getBody().contains("EVOLUTION_COMMAND_REQUIRED"));
                 var command=http.postForEntity(url(),new EvolutionCommandRequest(UUID.randomUUID(),companion,stage,0),String.class);
-                assertEquals(503,command.getStatusCode().value());assertTrue(command.getBody().contains("BLOCKED_BY_SWITCHING_CONTRACT"));
-                assertEquals(stage,db.queryForObject("SELECT evolution_stage FROM game.t_player_companion WHERE active",Integer.class));
+                assertEquals(200,command.getStatusCode().value());
+                assertEquals(stage+1,db.queryForObject("SELECT evolution_stage FROM game.t_player_companion WHERE active",Integer.class));
             }
-            assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_companion_evolution_history",Integer.class));
-            assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_command_receipt",Integer.class));
+            assertEquals(1,db.queryForObject("SELECT count(*) FROM game.t_companion_evolution_history",Integer.class));
+            assertEquals(3,db.queryForObject("SELECT count(*) FROM game.t_command_receipt",Integer.class));
         } finally {db.update("UPDATE game.t_player_companion SET species_id=(SELECT species_id FROM game.m_species WHERE code='MOA'),evolution_stage=1");}
     }
     @Test void strictRequestParsingRejectsIncompleteAmbiguousAndOutOfRangePayloads() {
