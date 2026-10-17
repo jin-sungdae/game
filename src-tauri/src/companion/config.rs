@@ -57,8 +57,11 @@ pub struct BehaviorConfig {
     pub sleep_after_quiet: f64,
     pub reaction_duration: f64,
     pub walk_duration: f64,
+    pub walk_preparation: f64,
+    pub walk_recovery: f64,
     pub walk_radius: f64,
     pub walk_speed: f64,
+    pub walk_acceleration: f64,
     pub cursor_radius: f64,
     pub cursor_cooldown: f64,
     pub click_distance: f64,
@@ -81,8 +84,11 @@ pub const MOA_BEHAVIOR: BehaviorConfig = BehaviorConfig {
     sleep_after_quiet: 120.0,
     reaction_duration: 1.2,
     walk_duration: 5.0,
+    walk_preparation: 0.0,
+    walk_recovery: 0.0,
     walk_radius: 180.0,
     walk_speed: 40.0,
+    walk_acceleration: 0.0,
     cursor_radius: 160.0,
     cursor_cooldown: 15.0,
     click_distance: 5.0,
@@ -154,26 +160,31 @@ pub fn decision_config(species: &str) -> Option<(CompanionPersonality, BehaviorC
     };
     Some((personality, config))
 }
-/// MOA becomes calmer as it grows. Existing movement speed/physics and reaction timing stay intact.
-/// RUU Sky/Explorer and NOX Night/Mystic require assets and approved activation first.
+/// Growth changes cadence, preparation and recovery rather than sprite scale or top speed.
+/// These simulation policies do not approve or register missing stage artwork.
+pub fn stage_config(species: &str, stage: u32) -> Option<(CompanionPersonality, BehaviorConfig)> {
+    living_coverage(species, stage)?;
+    let (personality, mut config) = decision_config(species)?;
+    let growth = f64::from(stage - 1);
+    config.idle.min += growth * 5.;
+    config.idle.max += growth * 5.;
+    config.weights.nearby_looking_bonus += (stage - 1) * 5;
+    config.cursor_cooldown += growth * 3.;
+    config.walk_radius = [100., 130., 160., 180., 180.][(stage - 1) as usize];
+    // Young forms dart briefly; adults pause deliberately and settle after each excursion.
+    let cadence = match species {
+        "RUU" => 0.6,
+        "NOX" => 1.4,
+        _ => 1.,
+    };
+    config.walk_acceleration = [0., 160., 120., 90., 70.][(stage - 1) as usize];
+    config.walk_preparation = [0., 0.2, 0.3, 0.45, 0.6][(stage - 1) as usize] * cadence;
+    config.walk_recovery = [0., 1., 1.5, 2., 3.][(stage - 1) as usize] * cadence;
+    Some((personality, config))
+}
 pub fn living_config(species: &str, stage: u32) -> Option<(CompanionPersonality, BehaviorConfig)> {
     match living_coverage(species, stage)? {
-        LivingCoverage::AwaitingAssets => return None,
-        LivingCoverage::Animated | LivingCoverage::BaseOnly => {}
+        LivingCoverage::AwaitingAssets => None,
+        LivingCoverage::Animated | LivingCoverage::BaseOnly => stage_config(species, stage),
     }
-    let (personality, mut config) = decision_config(species)?;
-    match stage {
-        2 => {
-            config.idle = DurationRange { min: 35., max: 65. };
-            config.weights.nearby_looking_bonus = 45;
-            config.cursor_cooldown = 18.;
-        }
-        3 => {
-            config.idle = DurationRange { min: 40., max: 70. };
-            config.weights.nearby_looking_bonus = 50;
-            config.cursor_cooldown = 20.;
-        }
-        _ => {}
-    }
-    Some((personality, config))
 }
