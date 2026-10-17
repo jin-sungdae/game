@@ -1,0 +1,60 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "trunk-flex",
+      "x": 145,
+      "y": 148,
+      "rx": 23,
+      "ry": 29,
+      "dx": 0.15,
+      "dy": -0.35,
+      "phase": 0
+    },
+    {
+      "name": "leaf-shoulder-root",
+      "x": 111,
+      "y": 117,
+      "rx": 18,
+      "ry": 16,
+      "dx": -0.25,
+      "dy": -0.5,
+      "phase": -1.0471975511965976
+    }
+  ],
+  "protectedRegions": "y>=182||y<=100||x<=80||x>=188||(x>=151&&y<=123)",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "pixelSha256": "81e9db8718595ce449aa59215a2a99cc7d312fc4e01f280239611c02275f7ee1",
+      "changedPixels": 399,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.13972361972632738
+    },
+    {
+      "file": "idle_01.png",
+      "pixelSha256": "b755c3c0fa31217e1dcf35c3de41318fff75c0134222beea5a58468d90ac0557",
+      "changedPixels": 1071,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.19036746333198673
+    },
+    {
+      "file": "idle_02.png",
+      "pixelSha256": "23dd61da604552f59733fb26d1fef3a8bab9f47f07f06f026c2298f98c5942e9",
+      "changedPixels": 1710,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.4184391307268451
+    },
+    {
+      "file": "idle_03.png",
+      "pixelSha256": "a4a82d578324f9bea1c34da46324e47e31983240178c67ac9948d81a76a341bc",
+      "changedPixels": 1464,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.5199882777175578
+    }
+  ],
+  "repairIteration": 1,
+  "productionEligible": false
+}

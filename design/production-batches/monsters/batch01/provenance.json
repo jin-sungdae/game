@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "prompts": {
+    "M004": "Create one standalone transparent PNG base sprite matching concept M004, the walking tree guardian in the FIRST GREEN REGION top row FOURTH monster of attached collection. This is a MONSTER concept candidate, not MOA companion. Preserve M004's brown bark humanoid/quadrupedal-root guardian silhouette: broad woody trunk torso, branch antlers/canopy carrying green leaves, heavy root-like feet and wooden arms, kind carved face. Faithful anatomy and palette to M004, not a white deer or another species. Neutral grounded pose facing slightly RIGHT with face readable, both rooted feet visible. Entire figure with generous empty square margins, opaque painted body and crisp antialiased alpha, readable at256px. No scenery, grass ground, shadow, glow, detached leaves, particles, labels or borders. Every pixel outside character must be truly transparent. Redraw individual monster, do not crop concept. Intended for localized torso breathing/leaf-root rig.",
+    "M010": "Create one standalone transparent PNG game sprite matching M010 from attached monster collection: the bark wolf in the first GREEN region, second row FIFTH creature. This is an unmapped MONSTER concept candidate, not a companion. Preserve its woody brown canine quadruped body, carved bark plates, twig/branch-like ears and back accents, small sparse green moss/leaves, expressive amber eyes and short woody tail. All four paws visible in a stable neutral stance facing RIGHT. Faithfully distinguish it from M004 tree guardian: lean canine silhouette, not a humanoid trunk or antler deer. Entire animal within square with generous empty margins. Opaque painted game body, crisp antialiased edges, transparent alpha=0 outside silhouette. No ground, shadow, glow, haze, loose leaves, particles, labels, borders or scenery. Redraw individual; do not crop reference. Base for localized chest/shoulder rigging."
+  },
+  "repairIterations": 2,
+  "repairLimit": 3,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "mappingApproval": "HUMAN_REVIEW_REQUIRED",
+  "batchRemaining": [
+    "M001",
+    "M002",
+    "M003",
+    "M005",
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+  ],
+  "nextTask": "Complete first-region candidate artwork after duplicate/identity review; never infer Production IDs from concept numbering"
+}

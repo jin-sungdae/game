@@ -11,9 +11,9 @@
   "artworkApproval": "HUMAN_REVIEW_REQUIRED",
   "nativeMacOS": "NOT_VERIFIED",
   "nativeWindows": "NOT_VERIFIED",
-  "repairIterations": 3,
+  "repairIterations": 2,
   "repairLimit": 3,
-  "nextTask": "Monster M001-M010 identity comparison before any production mapping; remaining Companion action-specific poses need artwork. Native macOS/Windows and human artwork review pending.",
+  "nextTask": "M001/M002/M003/M005/M006/M007/M008/M009 base and clip candidates; resolve identity overlaps before registration. NOX3/4/5 further repairs require human review. Full actions and native GUI remain incomplete.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -399,7 +399,7 @@
       "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
-      "lastValidatedCommit": null,
+      "lastValidatedCommit": "45935cb8f374d182424012f88103b974b81b8e97",
       "actions": [
         {
           "action": "IDLE",
@@ -524,7 +524,7 @@
       "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
-      "lastValidatedCommit": null,
+      "lastValidatedCommit": "45935cb8f374d182424012f88103b974b81b8e97",
       "actions": [
         {
           "action": "IDLE",
@@ -2252,17 +2252,17 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_READY",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "MAPPING_REVIEW_REQUIRED; candidate outside public; no Production Species ID assigned",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_READY",
+          "frameCount": 4,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
@@ -2966,17 +2966,17 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_READY",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "MAPPING_REVIEW_REQUIRED; candidate outside public; no Production Species ID assigned",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_READY",
+          "frameCount": 4,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
@@ -13803,19 +13803,30 @@
     ],
     "nativeGUI": false
   },
-  "repairScope": "MOA batch: alpha cleanup, test import, stale registration expectation",
+  "repairScope": "Monster batch01: detached low-alpha cleanup for M004 and M010 only",
   "batchEvidence": [
     {
       "pr": 95,
       "commit": "56eb4578ad5832f3bd131f46a5372e7830e9b6f4",
       "releaseGate": "18/18 PASS",
-      "manualGate": "MANUAL_QA_REQUIRED"
+      "ci": "4 SUCCESS"
     },
     {
       "pr": 96,
       "commit": "370c2d9c9938a60f9af9c7024b99885102727f68",
+      "releaseGate": "18/18 PASS",
+      "ci": "4 SUCCESS"
+    },
+    {
+      "pr": 97,
+      "commit": "45935cb8f374d182424012f88103b974b81b8e97",
       "releaseGate": "RUNNING",
-      "scope": "NOX Stage2"
+      "ci": "RUNNING",
+      "previousFailure": {
+        "commit": "6cebbb05d71d4c2c9fa836252210b8263693ebb6",
+        "reason": "stale MOA5 unregistered expectation",
+        "status": "FAIL"
+      }
     }
   ]
 }
