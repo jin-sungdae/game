@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "repairIterations": 2,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "baseCandidates": 10,
+  "idleCandidateClips": 7,
+  "idleCandidateFrames": 42,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotionReview": "NOT_VERIFIED",
+  "gui": "NOT_VERIFIED",
+  "prompts": {
+    "M021": {
+      "tool": "built-in image_gen",
+      "subject": "long-eared shadow rabbit",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    },
+    "M022": {
+      "tool": "built-in image_gen",
+      "subject": "angular dark dragon-cat",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    },
+    "M023": {
+      "tool": "built-in image_gen",
+      "subject": "thorn-shell violet orb",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    },
+    "M024": {
+      "tool": "built-in image_gen",
+      "subject": "cream-faced upright night creature; output quadrupedal",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    },
+    "M025": {
+      "tool": "built-in image_gen",
+      "subject": "seated angular gray-purple cat",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    },
+    "M026": {
+      "tool": "built-in image_gen",
+      "subject": "spectral violet wolf",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    },
+    "M027": {
+      "tool": "built-in image_gen",
+      "subject": "low dark dragon",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    },
+    "M028": {
+      "tool": "built-in image_gen",
+      "subject": "violet raven",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    },
+    "M029": {
+      "tool": "built-in image_gen",
+      "subject": "biped orange-eared bat imp",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    },
+    "M030": {
+      "tool": "built-in image_gen",
+      "subject": "stocky violet rock golem",
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+    }
+  },
+  "identityReview": [
+    {
+      "conceptId": "M021",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    },
+    {
+      "conceptId": "M022",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    },
+    {
+      "conceptId": "M023",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    },
+    {
+      "conceptId": "M024",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    },
+    {
+      "conceptId": "M025",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    },
+    {
+      "conceptId": "M026",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    },
+    {
+      "conceptId": "M027",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    },
+    {
+      "conceptId": "M028",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    },
+    {
+      "conceptId": "M029",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    },
+    {
+      "conceptId": "M030",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing SHADOW-themed species and provisional designs; no concept-number mapping. M021/M022/NOX visual similarity does not authorize identity merge."
+    }
+  ],
+  "deferred": {
+    "M023": "Dedicated core motion required; no organic breathing rig",
+    "M024": "APPEARANCE_DRIFT: quadruped output vs upright requested reference; original preserved, no rig",
+    "M030": "Dedicated rigid plate motion required; no organic breathing rig"
+  },
+  "repairHistory": [
+    "Detached low-alpha cleanup, body pixels preserved",
+    "Fix offline ledger writer variable shadowing; no image or validator changes"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "ribcage-breath",
+      "x": 171,
+      "y": 169,
+      "rx": 23,
+      "ry": 17,
+      "dx": 0.4,
+      "dy": -0.85,
+      "phase": 0
+    },
+    {
+      "name": "shoulder-root",
+      "x": 148,
+      "y": 155,
+      "rx": 21,
+      "ry": 13,
+      "dx": -0.25,
+      "dy": -0.5,
+      "phase": -1.047
+    }
+  ],
+  "protectedRegions": "y<=137||y>=190||x<=119||x>=199",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "pixelSha256": "d0cb12b14eac04770495ffb1e853d68ca48d6326a0940d019317569f97a21515",
+      "changedPixels": 155,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.13966402851555115
+    },
+    {
+      "file": "idle_01.png",
+      "pixelSha256": "d8c6b421dbf2860c32aedff1df6820ee805ae2327fdfb29d82ffe06431f938ee",
+      "changedPixels": 424,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.23473042252114606
+    },
+    {
+      "file": "idle_02.png",
+      "pixelSha256": "6071a602d5ce20c5fd35649ebfea9f4172d1f0c9409c3e8d35a6f5a172908078",
+      "changedPixels": 808,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7032361661879692
+    },
+    {
+      "file": "idle_03.png",
+      "pixelSha256": "4fd05a3fcdcde5fb1e1a8a79914ca9a42a15c93e098a81a1b9a389a48fdc21d4",
+      "changedPixels": 1006,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.9383424044160528
+    },
+    {
+      "file": "idle_04.png",
+      "pixelSha256": "db3872066fd3f48fd26926b7d50746ea3a2e976d9947bbf1dcda3d29af119f32",
+      "changedPixels": 992,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7032361661879692
+    },
+    {
+      "file": "idle_05.png",
+      "pixelSha256": "68fc89d0e68a717a20cd56fe9e67c0d4c442d31b12704b69a6dbf4ac6e54b23f",
+      "changedPixels": 711,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.41807569555445834
+    }
+  ],
+  "repairIteration": 1,
+  "productionEligible": false
+}
