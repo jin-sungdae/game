@@ -27,7 +27,7 @@ public class EvolutionRepository {
         return rows.getFirst();
     }
     public boolean completedCurrentEvolution(GameDtos.Companion c) {
-        return "MOA".equals(c.species()) && (c.evolutionStage()==2 || c.evolutionStage()==3) && Boolean.TRUE.equals(jdbc.queryForObject("""
+        return c.evolutionStage() >= 2 && c.evolutionStage() <= 5 && Boolean.TRUE.equals(jdbc.queryForObject("""
             SELECT EXISTS(SELECT 1 FROM game.t_companion_evolution_history h
             JOIN game.m_species s USING(species_id)
             WHERE h.player_companion_id=? AND s.code=? AND from_stage=? AND to_stage=?)
