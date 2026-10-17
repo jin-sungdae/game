@@ -15,7 +15,7 @@ import { directionScale } from '../animation/model';
 import { useVisualBounds } from './BaseVisual';
 const assets=new PilotAssets();
 export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilot;input:AnimationInput;facing:number;name:string;entityId:string}) {
-  const runtime=useMemo(()=>({free2dState:'FLICKER' as Free2dState,edgeState:'IDLE' as EdgeState,floatingState:'HOVER' as FloatingState,flightState:'HOVER' as FlightState,resolver:new AnimationStateResolver(),animator:new CharacterAnimator(),idle:new IdleSequencer(idleRandom()),clips:new Map<AnimationSequence,LoadedClip|null>()}),[entityId,pilot.character]);
+  const runtime=useMemo(()=>({free2dState:'FLICKER' as Free2dState,edgeState:'IDLE' as EdgeState,floatingState:'HOVER' as FloatingState,flightState:'HOVER' as FlightState,resolver:new AnimationStateResolver(),animator:new CharacterAnimator(),idle:new IdleSequencer(idleRandom()),clips:new Map<AnimationSequence,LoadedClip|null>()}),[entityId,pilot.character,pilot.species,pilot.stage,pilot.manifest]);
   const [view,setView]=useState<{runtime:object;state:AnimationSequence;frame:number;suppressed:boolean;asset:LoadedClip|null}>({runtime,state:'IDLE',frame:0,suppressed:false,asset:null});
   const [failed,setFailed]=useState<string|null>(null);
   const reduced=useRef(false);
@@ -27,7 +27,7 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
     let disposed=false;
     const media=matchMedia('(prefers-reduced-motion: reduce)');
     const change=()=>{reduced.current=media.matches;};change();media.addEventListener('change',change);
-    for(const state of ['IDLE','BLINK','MOVE','REACT','JUMP','HOVER','FLY','GLIDE','FLOAT','SETTLE','PEEK','EDGE_MOVE','TURN','FLICKER','FLOW','INTENSE'] as const) void assets.load(pilot,state).then(clip=>{if(!disposed)runtime.clips.set(state,clip);});
+    for(const state of ['REST','SLEEP','LOOK_AROUND','IDLE','BLINK','MOVE','REACT','JUMP','HOVER','FLY','GLIDE','FLOAT','SETTLE','PEEK','EDGE_MOVE','TURN','FLICKER','FLOW','INTENSE'] as const) void assets.load(pilot,state).then(clip=>{if(!disposed)runtime.clips.set(state,clip);});
     const stop=animationClock.subscribe(time=>{
       const free2d=resolveFree2d(latestInput.current,runtime.free2dState);
       if(pilot.free2dProfile) runtime.free2dState=free2d.state;
@@ -37,7 +37,7 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
       if(pilot.floatingProfile) runtime.floatingState=floating.state;
       const flight=resolveFlying(latestInput.current,runtime.flightState);
       if(pilot.flyingProfile) runtime.flightState=flight.state;
-      const resolved=runtime.resolver.sample(time);
+      const resolved=pilot.character==='MOA'?runtime.resolver.sampleCompanion(latestInput.current,time):runtime.resolver.sample(time);
       const breath=runtime.clips.get('IDLE');
       const sequence=runtime.idle.sample(time,resolved.state==='IDLE' && !resolved.suppressed,reduced.current,breath?.manifest.idleSequences,
         (breath?.manifest.animations.blink?.frames??3)*(breath?.manifest.animations.blink?.frameDuration??90));
@@ -57,12 +57,14 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
   const stationary=resolveStatic(input);
   const edge=resolveEdge(input,runtime.edgeState);
   const free2d=resolveFree2d(input,runtime.free2dState);
-  const current=pilot.free2dProfile?{...free2d,frame:view.runtime===runtime && view.state===free2d.state?view.frame:0}:pilot.edgeProfile?{...edge,frame:view.runtime===runtime && view.state===edge.state?view.frame:0}:pilot.staticProfile?{...stationary,frame:view.runtime===runtime && view.state==='IDLE'?view.frame:0}:pilot.floatingProfile?{state:floating.state,frame:view.runtime===runtime && view.state===floating.state?view.frame:0,suppressed:floating.suppressed}:pilot.flyingProfile?{state:flight.state,frame:view.runtime===runtime && view.state===flight.state?view.frame:0,suppressed:flight.suppressed}:pilot.jumpProfile==='JUMP'?{state:(nativeFrame===null?'IDLE':'JUMP') as AnimationSequence,frame:nativeFrame??0,suppressed:input.suppressed || input.state!=='ROAMING'}:view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
+  const companion=runtime.resolver.sampleCompanion(input,performance.now());
+  const companionState:AnimationSequence=companion.state==='IDLE' && view.state==='BLINK'? 'BLINK':companion.state;
+  const current=pilot.character==='MOA'?{...companion,state:companionState,frame:view.runtime===runtime && view.state===companionState?view.frame:0}:pilot.free2dProfile?{...free2d,frame:view.runtime===runtime && view.state===free2d.state?view.frame:0}:pilot.edgeProfile?{...edge,frame:view.runtime===runtime && view.state===edge.state?view.frame:0}:pilot.staticProfile?{...stationary,frame:view.runtime===runtime && view.state==='IDLE'?view.frame:0}:pilot.floatingProfile?{state:floating.state,frame:view.runtime===runtime && view.state===floating.state?view.frame:0,suppressed:floating.suppressed}:pilot.flyingProfile?{state:flight.state,frame:view.runtime===runtime && view.state===flight.state?view.frame:0,suppressed:flight.suppressed}:pilot.jumpProfile==='JUMP'?{state:(nativeFrame===null?'IDLE':'JUMP') as AnimationSequence,frame:nativeFrame??0,suppressed:input.suppressed || input.state!=='ROAMING'}:view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
   const asset=current.suppressed||input.suppressed?null:runtime.clips.get(current.state);
   const clipId=entityId+':'+pilot.character+':'+current.state;
   const animation=asset?.urls[current.frame]??null;
   const url=animation && clipId!==failed?animation:base.url;
-  return <div ref={container} className="companion-visual character-renderer" role="group" aria-label={`${name} ${current.state.toLowerCase()}`} data-character={pilot.character} data-animation-state={current.state} data-animation-source={url===base.url?'base':'animation'}>
+  return <div ref={container} className="companion-visual character-renderer" role="group" aria-label={`${name} ${current.state.toLowerCase()}`} data-character={pilot.character} data-animation-state={current.state} data-animation-source={url===base.url?'base':'animation'} data-animation-readiness={current.suppressed?'SUPPRESSED':animation && clipId!==failed?'FRAMES_READY':'ASSET_REQUIRED'}>
     {url ? <div className="character-facing" style={{...baseSize(bounds.width,bounds.height),transform:`scaleX(${directionScale(facing)})`}}>
       <div className={`character-animation ${(!animation || clipId===failed) && current.state==='IDLE' && !current.suppressed && !input.suppressed?'character-breathing':''}`}>
         <img className="sprite-frame" src={url} alt={`${name} ${current.state} frame ${current.frame+1} ${url===base.url?'base':'animation'}${pilot.floatingProfile?' trace '+JSON.stringify({...input.floating,domainState:input.state,suppressed:current.suppressed,animation:floating.state,rate:floating.rate,rendererFlip:directionScale(facing)}):pilot.jumpProfile==='JUMP'?' trace '+JSON.stringify(input.jump??null):pilot.flyingProfile?' trace '+JSON.stringify({...input.flight,animation:flight.state,rate:flight.rate,rendererFlip:directionScale(facing)}):''}`} draggable={false} style={baseSize(bounds.width,bounds.height)} onError={()=>{if(url===base.url)base.fail();else setFailed(clipId);}}/>

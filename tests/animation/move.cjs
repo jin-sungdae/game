@@ -41,3 +41,37 @@ test('walking intent without measured motion stays idle; unavailable air clips n
  for(const action of ['JUMP','HOVER','FLY','GLIDE']) assert.equal(await assets.load(p,action),null);
  for(const stage of [2,3,4,5]) assert.equal(pilotDefinition('moa',stage),null);
 });
+
+test('companion native snapshot stops WALK before the next animation clock and gates behavior',()=>{
+ const r=new AnimationStateResolver();const input={state:'WALKING',speed:40,suppressed:false};
+ r.observe(input,0);assert.equal(r.sampleCompanion(input,0).state,'MOVE');
+ for(const speed of [0,NaN,Infinity,-1])assert.equal(r.sampleCompanion({...input,speed},1).state,'IDLE');
+ for(const [state,expected] of [['IDLE','IDLE'],['SITTING','REST'],['LOOKING','LOOK_AROUND'],['SLEEPING','SLEEP']])assert.equal(r.sampleCompanion({...input,state},1).state,expected);
+ for(const state of ['BATTLE','EVOLVING','DRAGGING','ENGAGED'])assert.equal(r.sampleCompanion({...input,state},1).suppressed,true);
+ assert.equal(r.sampleCompanion({...input,suppressed:true},1).suppressed,true);
+ assert.equal(r.sampleCompanion(input,2).state,'MOVE');
+});
+test('companion reaction requires a real native edge and cannot leak into rest or battle',()=>{
+ const r=new AnimationStateResolver(),input={state:'IDLE',speed:0,suppressed:false};
+ assert.equal(r.sampleCompanion(input,0).state,'IDLE');
+ r.observe({...input,state:'REACTING'},0);
+ assert.equal(r.sampleCompanion({...input,state:'REACTING'},479).state,'REACT');
+ assert.equal(r.sampleCompanion({...input,state:'REACTING',speed:40},480).state,'IDLE');
+ assert.equal(r.sampleCompanion({...input,state:'SITTING'},100).state,'REST');
+ assert.equal(r.sampleCompanion({...input,state:'BATTLE'},100).suppressed,true);
+});
+test('all fifteen companion identities fail closed except supplied MOA stage one; missing actions never borrow idle',async()=>{
+ const assets=new PilotAssets(new AssetLoader({json:browserIO.json,image:async()=>assert.fail('unsupplied action must not request another clip')}));
+ for(const species of ['moa','ruu','nox'])for(let stage=1;stage<=5;stage++){
+  const pilot=pilotDefinition(species,stage);
+  if(species==='moa' && stage===1){for(const action of ['REST','SLEEP','LOOK_AROUND','TURN'])assert.equal(await assets.load(pilot,action),null);}
+  else assert.equal(pilot,null);
+ }
+});
+test('cached manifest and frames never authorize a different species or evolution stage',async()=>{
+ const p=pilotDefinition('moa'),loader=new AssetLoader({json:browserIO.json,image:async()=>({width:256,height:256})});
+ const original=await loader.loadRegistered('moa',1,p.manifest,'walk');assert.ok(original);
+ assert.equal(await loader.loadRegistered('ruu',1,p.manifest,'walk'),null);
+ assert.equal(await loader.loadRegistered('moa',2,p.manifest,'walk'),null);
+ assert.equal(await loader.loadRegistered('moa',1,p.manifest,'walk'),original);
+});
