@@ -17,7 +17,7 @@ public final class EconomyRestartProcess {
                 "--spring.datasource.url="+url,
                 "--spring.datasource.username="+System.getenv().getOrDefault("LUMA_TEST_DB_USER","luma"),
                 "--spring.datasource.password="+System.getenv().getOrDefault("LUMA_TEST_DB_PASSWORD",""),
-                "--spring.datasource.hikari.maximum-pool-size=1",
+                "--spring.datasource.hikari.maximum-pool-size=2",
                 "--luma.economy.rewards-enabled=true")) {
             long player=Long.parseLong(args[0]);var command=UUID.fromString(args[1]);String mode=args[2];
             var economy=app.getBean(RewardEconomy.class);
