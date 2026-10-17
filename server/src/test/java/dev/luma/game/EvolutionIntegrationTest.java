@@ -147,4 +147,37 @@ class EvolutionIntegrationTest {
         assertEquals(503,http.postForEntity(url("/companions/active/evolve"),null,String.class).getStatusCode().value());
         assertEquals(2,bootstrap().activeCompanion().evolutionStage());assertEquals(2,histories());
     }
+    @Autowired org.springframework.transaction.PlatformTransactionManager transactions;
+
+    @Test void historyUsesExactCompanionSpeciesAndAdjacentStages() {
+        new org.springframework.transaction.support.TransactionTemplate(transactions).executeWithoutResult(tx -> {
+            try {
+                long species=db.queryForObject("SELECT species_id FROM game.m_species WHERE code='MOA'",Long.class);
+                long other=db.queryForObject("INSERT INTO game.t_player_companion(player_id,species_id,evolution_stage,level,exp,bond,active) VALUES(1,?,4,8,2800,20,false) RETURNING player_companion_id",Long.class,species);
+                db.update("INSERT INTO game.t_companion_evolution_history(player_companion_id,species_id,from_stage,to_stage,level_at_evolution,bond_at_evolution) VALUES(?,?,3,4,8,20)",other,species);
+                var repository=new EvolutionRepository(db);
+                assertTrue(repository.completedCurrentEvolution(new GameDtos.Companion(other,"MOA",4,"SYLVAON",8,2800,20)));
+                assertFalse(repository.completedCurrentEvolution(new GameDtos.Companion(other,"MOA",3,"NEBLA",8,2800,20)));
+                assertFalse(repository.completedCurrentEvolution(new GameDtos.Companion(other,"RUU",4,"fixture",8,2800,20)));
+                var active=new GameRepository(db).activeCompanion(1);
+                assertFalse(repository.completedCurrentEvolution(new GameDtos.Companion(active.playerCompanionId(),"MOA",4,"SYLVAON",8,2800,20)));
+                assertTrue(EvolutionRules.next(new GameDtos.Companion(other,"MOA",4,"SYLVAON",100,495000,100)).isEmpty());
+            } finally {tx.setRollbackOnly();}
+        });
+    }
+
+    @Test void evolutionDoesNotChangeOtherOwnedCompanion() {
+        new org.springframework.transaction.support.TransactionTemplate(transactions).executeWithoutResult(tx -> {
+            try {
+                progress(3,5);
+                long other=db.queryForObject("INSERT INTO game.t_player_companion(player_id,species_id,evolution_stage,level,exp,bond,active) SELECT 1,species_id,1,2,100,7,false FROM game.m_species WHERE code='RUU' RETURNING player_companion_id",Long.class);
+                var before=db.queryForMap("SELECT * FROM game.t_player_companion WHERE player_companion_id=?",other);
+                var result=new EvolutionService(new GameRepository(db),new EvolutionRepository(db)).evolve();
+                assertEquals("EVOLVED",result.result());
+                assertEquals("MOA",result.bootstrap().activeCompanion().species());
+                assertEquals(before,db.queryForMap("SELECT * FROM game.t_player_companion WHERE player_companion_id=?",other));
+                assertEquals(0,db.queryForObject("SELECT count(*) FROM game.t_companion_evolution_history WHERE player_companion_id=?",Integer.class,other));
+            } finally {tx.setRollbackOnly();}
+        });
+    }
 }
