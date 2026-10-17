@@ -1,0 +1,60 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "chest",
+      "x": 169,
+      "y": 148,
+      "rx": 17,
+      "ry": 22,
+      "dx": 0.2,
+      "dy": -0.6,
+      "phase": 0
+    },
+    {
+      "name": "shoulder-bark",
+      "x": 145,
+      "y": 140,
+      "rx": 22,
+      "ry": 15,
+      "dx": -0.15,
+      "dy": -0.4,
+      "phase": -1.0471975511965976
+    }
+  ],
+  "protectedRegions": "y>=178||y<=125||x<=97||x>=188",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "pixelSha256": "19efe1d7edec75907d0b95d124ec140154b8a77e65f987786fc1d715fcc92506",
+      "changedPixels": 379,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.10678488092180606
+    },
+    {
+      "file": "idle_01.png",
+      "pixelSha256": "73645d038f8d7f42e3732d4505118633cdd84d72f6bc5f4c0e413d1dbbe0c4a4",
+      "changedPixels": 777,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.31601885394049584
+    },
+    {
+      "file": "idle_02.png",
+      "pixelSha256": "3dafd73a250541ec4f6dabce7df7d71c5eeab9846b92c4316ec1e66f1245b727",
+      "changedPixels": 1241,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.6315641961154275
+    },
+    {
+      "file": "idle_03.png",
+      "pixelSha256": "6dcde9ae164c489d9d661e78d9ba81df13e4ee047384727e64b12cbe187b8f57",
+      "changedPixels": 1174,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.3977982238638199
+    }
+  ],
+  "repairIteration": 2,
+  "productionEligible": false
+}

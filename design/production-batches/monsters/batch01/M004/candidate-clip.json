@@ -1,0 +1,25 @@
+{
+  "conceptId": "M004",
+  "productionSpeciesId": null,
+  "status": "ANIMATION_READY",
+  "runtimeEnabled": false,
+  "identityReview": "HUMAN_REVIEW_REQUIRED",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 4,
+    "frameDuration": 450,
+    "loop": true,
+    "path": "rigged/idle/idle_NN.png"
+  },
+  "gui": "NOT_VERIFIED",
+  "productionEligible": false
+}
