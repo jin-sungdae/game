@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "repairIterations": 1,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "baseCandidates": 10,
+  "idleCandidateClips": 0,
+  "idleCandidateFrames": 0,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotionReview": "NOT_VERIFIED",
+  "gui": "NOT_VERIFIED",
+  "deferred": {
+    "M071": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation",
+    "M072": "APPEARANCE_DRIFT: upright reference became quadrupedal; source preserved, no animation registration",
+    "M073": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation",
+    "M074": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation",
+    "M075": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation",
+    "M076": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation",
+    "M077": "APPEARANCE_DRIFT: upright reference became quadrupedal; source preserved, no animation registration",
+    "M078": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation",
+    "M079": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation",
+    "M080": "Ring mechanism anatomy needs reference review; dedicated mechanical animation required"
+  },
+  "repairHistory": [
+    "Only disconnected components with maximum alpha <=4 removed; connected body preserved"
+  ],
+  "identityReview": [
+    {
+      "conceptId": "M071",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M072",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M073",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M074",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M075",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M076",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M077",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M078",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M079",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M080",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    }
+  ],
+  "generation": [
+    {
+      "conceptId": "M071",
+      "tool": "built-in image_gen",
+      "sourceSha256": "83bbbe3f2116c1c9e037bf3b290282dcea8d7aca515d7c75fc73ef7b147fe4e2",
+      "reference": "Ancient Ruins concept panel"
+    },
+    {
+      "conceptId": "M072",
+      "tool": "built-in image_gen",
+      "sourceSha256": "1b3968ce0cec6b7ca918aaf23e8079841a74516025c9af8d4195d4693c2a1a85",
+      "reference": "Ancient Ruins concept panel"
+    },
+    {
+      "conceptId": "M073",
+      "tool": "built-in image_gen",
+      "sourceSha256": "ab628aa684d0a0db8a75dbbf90024a645f34a634532578e2ce273900efea707e",
+      "reference": "Ancient Ruins concept panel"
+    },
+    {
+      "conceptId": "M074",
+      "tool": "built-in image_gen",
+      "sourceSha256": "3174481ddb4a5eebc8e1f3aef0765ee8b0613bdbe252c6eb4c8a39a53a0f175b",
+      "reference": "Ancient Ruins concept panel"
+    },
+    {
+      "conceptId": "M075",
+      "tool": "built-in image_gen",
+      "sourceSha256": "6c7746acf1f2d43c4559df94acf5258757daceda769d4a2ad70e6b32f6be4301",
+      "reference": "Ancient Ruins concept panel"
+    },
+    {
+      "conceptId": "M076",
+      "tool": "built-in image_gen",
+      "sourceSha256": "1fbff43f88c53659e7d76d79336b86d6d7b53bf117cfd1539cec7d3ed703a921",
+      "reference": "Ancient Ruins concept panel"
+    },
+    {
+      "conceptId": "M077",
+      "tool": "built-in image_gen",
+      "sourceSha256": "b67d4e711ea6aaaf19d7814efae21ee0738e0cadd3253b09977e7ea959444ee2",
+      "reference": "Ancient Ruins concept panel"
+    },
+    {
+      "conceptId": "M078",
+      "tool": "built-in image_gen",
+      "sourceSha256": "1fe08f9deeb1f05d00150c1c0fc07372f7fa4a25d84468dcd6895844129203c1",
+      "reference": "Ancient Ruins concept panel"
+    },
+    {
+      "conceptId": "M079",
+      "tool": "built-in image_gen",
+      "sourceSha256": "f67c6e1eba23a7b177505dc19b71c70305c0875b6fdb5fddca63ecac1e6120c2",
+      "reference": "Ancient Ruins concept panel"
+    },
+    {
+      "conceptId": "M080",
+      "tool": "built-in image_gen",
+      "sourceSha256": "24d1358504f4b6b3d7f0043958a716572e00add6f87adeb94fb8949e86e34952",
+      "reference": "Ancient Ruins concept panel"
+    }
+  ]
+}
