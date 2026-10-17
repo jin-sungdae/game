@@ -20,6 +20,7 @@ impl Behavior {
 pub enum Event {
     Decision(Behavior),
     Finished,
+    Recovery,
     DragStarted,
     DragReleased,
     Reaction,
@@ -33,6 +34,7 @@ pub fn next(state: CompanionState, event: Event) -> Option<CompanionState> {
         (Dragging, Event::DragReleased) => Some(Idle),
         (Dragging, _) => None,
         (_, Event::Reaction) => Some(Reacting),
+        (Walking, Event::Recovery) => Some(Sitting),
         (Idle, Event::Decision(behavior)) => Some(behavior.state()),
         (Idle | Sitting, Event::CursorNearby) => Some(Looking),
         (Walking | Sitting | Looking | Sleeping | Reacting, Event::Finished) => Some(Idle),

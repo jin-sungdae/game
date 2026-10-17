@@ -106,7 +106,7 @@ impl CompanionController {
         (self.movement_rng >> 11) as f64 / ((1u64 << 53) as f64)
     }
     fn apply(&mut self, event: Event, now: f64, area: Area, cursor: (f64, f64)) {
-        let Some(state) = transitions::next(self.entity.state, event) else {
+        let Some(mut state) = transitions::next(self.entity.state, event) else {
             return;
         };
         // Apply only at a state boundary; never change speed/target in an active excursion.
@@ -118,6 +118,12 @@ impl CompanionController {
             self.recent_behavior = Some((behavior, now));
         }
         let previous = self.entity.state;
+        let recovering = matches!(event, Event::Finished)
+            && previous == CompanionState::Walking
+            && self.config.walk_recovery > 0.;
+        if recovering {
+            state = transitions::next(previous, Event::Recovery).unwrap_or(state);
+        }
         self.movement.cancel();
         self.excursion = None;
         if state != CompanionState::Dragging {
@@ -182,6 +188,8 @@ impl CompanionController {
                         }
                     }
                 }
+                self.movement
+                    .set_ground_acceleration(self.config.walk_acceleration);
                 self.movement.start(
                     intent,
                     (self.entity.x, self.entity.y),
@@ -190,8 +198,20 @@ impl CompanionController {
                 );
                 self.entity.facing = if self.target >= self.entity.x { 1 } else { -1 };
                 self.quiet_since = now;
-                self.config.walk_duration
+                let travel = if intent.profile == MovementProfile::Ground
+                    && self.config.walk_acceleration > 0.
+                    && self.config.walk_speed > 0.
+                {
+                    // Leave enough time for both ramps; the controller still stops at the target.
+                    ((self.target - self.entity.x).abs() / self.config.walk_speed
+                        + self.config.walk_speed / self.config.walk_acceleration)
+                        .max(self.config.walk_duration)
+                } else {
+                    self.config.walk_duration
+                };
+                travel + self.config.walk_preparation
             }
+            CompanionState::Sitting if recovering => self.config.walk_recovery,
             CompanionState::Sitting => self.config.sitting.sample(self.random()),
             CompanionState::Looking => {
                 self.face(cursor.0);
@@ -297,6 +317,9 @@ impl CompanionController {
         }
         match self.entity.state {
             CompanionState::Walking => {
+                if now - self.entered_at < self.config.walk_preparation {
+                    return;
+                }
                 self.target = area.ground(self.target, self.entity.size).0;
                 if let Some(Excursion {
                     start,

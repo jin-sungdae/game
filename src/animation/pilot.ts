@@ -9,8 +9,8 @@ import { resolveCompanion } from '../entities/registry';
 import { resolveMonster } from '../entities/monsters';
 import { AssetLoader, type LoadedClip } from './loader';
 export type AnimationState = 'IDLE'|'MOVE'|'REACT';
-export type AnimationSequence = AnimationState|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE'|'FLOAT'|'SETTLE'|'PEEK'|'EDGE_MOVE'|'TURN'|'FLICKER'|'FLOW'|'INTENSE';
-// SLEEP/BATTLE/HAPPY are reserved, not connected to gameplay in v1.
+export type AnimationSequence = AnimationState|'REST'|'SLEEP'|'LOOK_AROUND'|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE'|'FLOAT'|'SETTLE'|'PEEK'|'EDGE_MOVE'|'TURN'|'FLICKER'|'FLOW'|'INTENSE';
+// REST/SLEEP/LOOK_AROUND preserve native behavior identity; their clips are not supplied.
 // Readiness describes clip assets, not gameplay triggers (PIP mouse REACT is unavailable).
 export interface Pilot { character:'MOA'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'|'WISP'|'LUNET'|'NOCT'|'MOSSY'|'PEBB'|'TIKKI'|'BUBU'|'NOVA'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; groundProfile?:'GROUND'; groundMoveClip?:'walk'|'move'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
 export const groundConsumers=[{character:'PIP',status:'IDLE_PRODUCTION',moveClip:'walk',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'},{character:'MOSSY',status:'SUPPLIED',moveClip:'move'},{character:'PEBB',status:'SUPPLIED',moveClip:'move'},{character:'TIKKI',status:'SUPPLIED',moveClip:'move'}] as const;
@@ -57,6 +57,7 @@ export const pilotContract = {canvas:256,anchor:{x:.5,y:1},maxFrames:32,minFrame
 export class PilotAssets {
   constructor(private loader=new AssetLoader()) {}
   async load(p:Pilot,state:AnimationSequence):Promise<LoadedClip|null> {
+    if(state==='REST' || state==='SLEEP' || state==='LOOK_AROUND') return null;
     if(p.groundProfile==='GROUND' && (state==='IDLE' || state==='MOVE')) {
       if(p.status==='NOT_SUPPLIED' || (state==='MOVE' && p.status==='IDLE_PRODUCTION' && p.moveStatus!=='PRODUCTION')) return null;
       const contract=groundClips[state];
@@ -133,6 +134,17 @@ export class AnimationStateResolver {
     this.speed=Number.isFinite(input.speed)?Math.max(0,input.speed):0;
     if(this.blocked) {this.reactUntil=0;this.moving=false;return;}
     this.moving=this.speed>=(this.moving?3:8);
+  }
+  // Read the current native snapshot during render as well as clock ticks.
+  // Missing behavior clips retain their identity instead of borrowing idle motion.
+  sampleCompanion(input:AnimationInput,time:number):{state:AnimationSequence;suppressed:boolean;rate:number} {
+    if(input.suppressed || ['DRAGGING','BATTLE','EVOLVING','ENGAGED'].includes(input.state)) return {state:'IDLE',suppressed:true,rate:1};
+    const behavior=input.state==='SITTING'?'REST':input.state==='SLEEPING'?'SLEEP':input.state==='LOOKING'?'LOOK_AROUND':null;
+    if(behavior) return {state:behavior,suppressed:false,rate:1};
+    if(input.state==='REACTING' && this.reacting && time<this.reactUntil) return {state:'REACT',suppressed:false,rate:1};
+    const speed=Number.isFinite(input.speed)?Math.max(0,input.speed):0;
+    const moving=input.state==='WALKING' && speed>=(this.moving?3:8);
+    return {state:moving?'MOVE':'IDLE',suppressed:false,rate:moving?Math.max(.5,Math.min(2,speed/40)):1};
   }
   sample(time:number) {
     const state:AnimationState=!this.blocked && time<this.reactUntil?'REACT':this.moving?'MOVE':'IDLE';

@@ -24,10 +24,10 @@ export class AssetLoader {
   }
   // Call only with a trusted registry path; identity still validated against the manifest.
   loadRegistered(species:string,stage:number,manifestUrl:string,name:string):Promise<LoadedClip|null> {
-    const base=manifestUrl.slice(0,-'/manifest.json'.length), key=`${base}/${name}`;
-    if(!this.manifests.has(base)) this.manifests.set(base,
+    const base=manifestUrl.slice(0,-'/manifest.json'.length), identity=JSON.stringify([species,stage,manifestUrl]), key=JSON.stringify([identity,name]);
+    if(!this.manifests.has(identity)) this.manifests.set(identity,
       this.io.json(manifestUrl).then(m=>parseManifest(m,species,stage)).catch(()=>null));
-    if(!this.clips.has(key)) this.clips.set(key, this.manifests.get(base)!.then(async manifest => {
+    if(!this.clips.has(key)) this.clips.set(key, this.manifests.get(identity)!.then(async manifest => {
       const clip=manifest && Object.hasOwn(manifest.animations,name)?manifest.animations[name]:null;
       if(!manifest || !clip) return null;
       const urls=frameUrls(base,name,clip);

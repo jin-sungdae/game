@@ -58,7 +58,7 @@ test('16 subscribers share one RAF; last unsubscribe cancels; restart fresh',()=
 test('stable React entity, independent transform layers and native authority preserved',()=>{
  const renderer=fs.readFileSync('src/components/CharacterRenderer.tsx','utf8'),creature=fs.readFileSync('src/components/Creature.tsx','utf8'),css=fs.readFileSync('src/animation/character.css','utf8');
  assert.doesNotMatch(renderer,/\bkey=|setInterval|requestAnimationFrame|action\(/);
- assert.match(renderer,/\[entityId,pilot.character\]/);assert.match(renderer,/disposed=true;stop\(\);media.removeEventListener/);
+ assert.match(renderer,/\[entityId,pilot.character,pilot.species,pilot.stage,pilot.manifest\]/);assert.match(renderer,/disposed=true;stop\(\);media.removeEventListener/);
  assert.match(renderer,/character-facing[\s\S]*character-animation[\s\S]*<img/);
  assert.match(creature,/gp-pose[\s\S]*gp-impulse[\s\S]*gp-visual[\s\S]*evolution-pose[\s\S]*CompanionVisual/);
  assert.match(css,/transform-origin:50% 100%/);assert.match(css,/scaleY\(\.99\)/);assert.doesNotMatch(css,/translate(?:X|Y)?\(/);assert.match(css,/prefers-reduced-motion:reduce/);
