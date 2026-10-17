@@ -400,7 +400,7 @@ fn living_identity_defers_until_boundary_and_cursor_turn_has_deadband() {
     c.tick(1.1, 0.03, area(), FAR, false);
     assert_eq!(c.config.idle.min, old);
     c.tick(20., 0.03, area(), FAR, false);
-    assert_eq!(c.entity.state, CompanionState::Idle);
+    assert_eq!(c.entity.state, CompanionState::Sitting);
     assert_eq!(c.config.idle.min, 40.);
     c.entity.facing = -1;
     c.face(c.entity.x + 1.9);
@@ -464,4 +464,62 @@ fn decision_memory_changes_only_at_autonomous_boundaries() {
     c.begin_drag(1.3, area(), FAR);
     c.tick(50., 0.1, area(), FAR, true);
     assert_eq!(c.recent_behavior, Some((Behavior::Looking, 1.)));
+}
+
+#[test]
+fn fifteen_stage_policies_have_distinct_preparation_and_recovery() {
+    for species in ["MOA", "RUU", "NOX"] {
+        let mut previous = config::stage_config(species, 1).unwrap().1;
+        for stage in 2..=5 {
+            let current = config::stage_config(species, stage).unwrap().1;
+            assert!(current.walk_preparation > previous.walk_preparation);
+            assert!(current.walk_recovery > previous.walk_recovery);
+            assert_eq!(current.walk_speed, previous.walk_speed);
+            previous = current;
+        }
+        assert!(config::stage_config(species, 0).is_none());
+        assert!(config::stage_config(species, 6).is_none());
+    }
+}
+
+#[test]
+fn preparation_holds_position_then_walk_recovers_before_next_decision() {
+    let mut cfg = forced(Behavior::Walking);
+    cfg.walk_preparation = 0.4;
+    cfg.walk_recovery = 2.;
+    let mut c = controller(cfg);
+    c.tick(1., 0.1, area(), FAR, false);
+    let position = (c.entity.x, c.entity.y);
+    c.tick(1.2, 0.1, area(), FAR, false);
+    assert_eq!((c.entity.x, c.entity.y), position);
+    c.tick(1.5, 0.1, area(), FAR, false);
+    assert_ne!(c.entity.x, position.0);
+    c.tick(7., 0.1, area(), FAR, false);
+    assert_eq!(c.entity.state, CompanionState::Sitting);
+    assert_eq!(c.duration, 2.);
+    let position = (c.entity.x, c.entity.y);
+    c.tick(8., 0.1, area(), FAR, false);
+    assert_eq!((c.entity.x, c.entity.y), position);
+    c.tick(9., 0.1, area(), FAR, false);
+    assert_eq!(c.entity.state, CompanionState::Idle);
+}
+
+#[test]
+fn interaction_and_drag_interrupt_growth_preparation_and_recovery() {
+    for stage in 2..=5 {
+        let (personality, cfg) = config::stage_config("MOA", stage).unwrap();
+        let mut c = CompanionController::new(area(), 0., 42, personality, cfg);
+        c.apply(Event::Decision(Behavior::Walking), 1., area(), FAR);
+        c.react(1.1, area(), None);
+        assert_eq!(c.entity.state, CompanionState::Reacting);
+        assert_eq!(c.movement.profile(), None);
+        c.apply(Event::Finished, 3., area(), FAR);
+        c.apply(Event::Decision(Behavior::Walking), 4., area(), FAR);
+        c.apply(Event::Finished, 10., area(), FAR);
+        assert_eq!(c.entity.state, CompanionState::Sitting);
+        let position = (c.entity.x, c.entity.y);
+        c.begin_drag(10.1, area(), position);
+        c.tick(20., 0.1, area(), position, true);
+        assert_eq!(c.entity.state, CompanionState::Dragging);
+    }
 }
