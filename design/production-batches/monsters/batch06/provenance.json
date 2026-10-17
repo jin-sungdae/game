@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "repairIterations": 1,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "baseCandidates": 10,
+  "idleCandidateClips": 3,
+  "idleCandidateFrames": 18,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotionReview": "NOT_VERIFIED",
+  "gui": "NOT_VERIFIED",
+  "deferred": {
+    "M051": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+    "M052": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+    "M054": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+    "M055": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+    "M056": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+    "M057": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+    "M058": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing"
+  },
+  "repairHistory": [
+    "Detached low-alpha cleanup; connected body unchanged; original and pre-cleanup retained"
+  ],
+  "identityReview": [
+    {
+      "conceptId": "M051",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M052",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M053",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M054",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M055",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M056",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M057",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M058",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M059",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M060",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    }
+  ],
+  "generation": [
+    {
+      "conceptId": "M051",
+      "tool": "built-in image_gen",
+      "sourceSha256": "041661f24129762e3c5b82ebfdc474b86f4a7b25784741b18207cb20c5c111ab",
+      "reference": "Sand Ruins concept panel"
+    },
+    {
+      "conceptId": "M052",
+      "tool": "built-in image_gen",
+      "sourceSha256": "9c38b00c6827c06e7195c57d1f9c68358621bc968cf94fda72a06162bbf55307",
+      "reference": "Sand Ruins concept panel"
+    },
+    {
+      "conceptId": "M053",
+      "tool": "built-in image_gen",
+      "sourceSha256": "51ef18007729617f4759b7052ff9fed9e14e80328fa656ba83538266b4257195",
+      "reference": "Sand Ruins concept panel"
+    },
+    {
+      "conceptId": "M054",
+      "tool": "built-in image_gen",
+      "sourceSha256": "d2fb6117c89d01e1c4ae1462bbf28933e7b97e265ba18ffc37ff40ce62b2552e",
+      "reference": "Sand Ruins concept panel"
+    },
+    {
+      "conceptId": "M055",
+      "tool": "built-in image_gen",
+      "sourceSha256": "608575e9189f0c964412ec7af618ad65315c3f28d71b0030ae9b5e2bff50cb64",
+      "reference": "Sand Ruins concept panel"
+    },
+    {
+      "conceptId": "M056",
+      "tool": "built-in image_gen",
+      "sourceSha256": "dabd621ff235bd1b9ce77d342cc874cbc2016fb7bc13c077de35cf3d12cc4162",
+      "reference": "Sand Ruins concept panel"
+    },
+    {
+      "conceptId": "M057",
+      "tool": "built-in image_gen",
+      "sourceSha256": "aec6bbfd31f0b7a7822d6a721154c54384ab5de94bea4b4a2da3d3164ad0166b",
+      "reference": "Sand Ruins concept panel"
+    },
+    {
+      "conceptId": "M058",
+      "tool": "built-in image_gen",
+      "sourceSha256": "b2dddac7fd7879711f875232ee37c2f2ab3b1e7e8f96eff41f95ace40a553707",
+      "reference": "Sand Ruins concept panel"
+    },
+    {
+      "conceptId": "M059",
+      "tool": "built-in image_gen",
+      "sourceSha256": "82a4da667d9772ecc4fbc8f1275a38ca8168fce5412b3caaee1d943c01f98d57",
+      "reference": "Sand Ruins concept panel"
+    },
+    {
+      "conceptId": "M060",
+      "tool": "built-in image_gen",
+      "sourceSha256": "b36546e28018cabe261223849f4bee66a31bb255b7d300eccfc9116518214132",
+      "reference": "Sand Ruins concept panel"
+    }
+  ]
+}
