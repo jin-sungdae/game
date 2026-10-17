@@ -62,6 +62,7 @@ jobs:
         run: |
           clang -fobjc-arc -framework AppKit -framework ApplicationServices scripts/gui_qa/environment_probe.m -o /tmp/luma-environment-probe
           clang -fobjc-arc -framework AppKit -framework ApplicationServices scripts/gui_qa/native.m -o /tmp/luma-native-qa
+          clang -fobjc-arc -Wall -Wextra -Werror -framework AppKit -framework ApplicationServices scripts/gui_qa/input_receiver.m -o /tmp/luma-input-receiver
           swiftc -parse-as-library scripts/gui_qa/record_window.swift -o /tmp/luma-record-window
       - name: Runtime boundary
         run: echo 'PLATFORM_REQUIRED native compile passed; real desktop launch/mouse/typing is MANUAL_REQUIRED, NOT_RUN on hosted CI.'
