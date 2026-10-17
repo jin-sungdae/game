@@ -13,15 +13,19 @@ public final class EvolutionRules {
         }
     }
     private record Key(String species, int fromStage) {}
-    private static final Map<Key, Rule> APPROVED = approved();
-    private static Map<Key, Rule> approved() {
-        var rules = new java.util.HashMap<Key, Rule>();
-        int[] levels = {3,6,30,60}, bonds = {5,12,40,80};
-        for (String species : new String[]{"MOA","RUU","NOX"})
-            for (int stage=1;stage<=4;stage++)
-                rules.put(new Key(species,stage),new Rule(species,stage,stage+1,levels[stage-1],bonds[stage-1]));
-        return Map.copyOf(rules);
-    }
+    private static final Map<Key, Rule> APPROVED = Map.ofEntries(
+        Map.entry(new Key("MOA", 1), new Rule("MOA", 1, 2, 3, 5)),
+        Map.entry(new Key("MOA", 2), new Rule("MOA", 2, 3, 6, 12)),
+        Map.entry(new Key("MOA", 3), new Rule("MOA", 3, 4, 30, 40)),
+        Map.entry(new Key("MOA", 4), new Rule("MOA", 4, 5, 60, 80)),
+        Map.entry(new Key("RUU", 1), new Rule("RUU", 1, 2, 3, 5)),
+        Map.entry(new Key("RUU", 2), new Rule("RUU", 2, 3, 6, 12)),
+        Map.entry(new Key("RUU", 3), new Rule("RUU", 3, 4, 30, 40)),
+        Map.entry(new Key("RUU", 4), new Rule("RUU", 4, 5, 60, 80)),
+        Map.entry(new Key("NOX", 1), new Rule("NOX", 1, 2, 3, 5)),
+        Map.entry(new Key("NOX", 2), new Rule("NOX", 2, 3, 6, 12)),
+        Map.entry(new Key("NOX", 3), new Rule("NOX", 3, 4, 30, 40)),
+        Map.entry(new Key("NOX", 4), new Rule("NOX", 4, 5, 60, 80)));
     public static Optional<Rule> next(GameDtos.Companion c) {
         return Optional.ofNullable(APPROVED.get(new Key(c.species(), c.evolutionStage())));
     }
