@@ -1,6 +1,7 @@
 //! Ambient decisions only: no position mutation, OS calls, backend commands or Companion ownership.
 use crate::movement::MovementProfile;
 use serde::Deserialize;
+pub mod species;
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Deserialize)]
 #[serde(rename_all = "SCREAMING_SNAKE_CASE")]
 pub enum Profile {
@@ -21,6 +22,10 @@ pub enum Intent {
     Pause,
     EdgeShift,
     ShortBurst,
+    Observe,
+    Rest,
+    AvoidCursor,
+    SideStepCursor,
 }
 pub const MIN_INTERVAL: f64 = 2.0;
 pub const MAX_INTERVAL: f64 = 4.0;
@@ -85,6 +90,7 @@ pub struct Controller<R = Seeded> {
     terminal: bool,
     approaching: bool,
     avoiding: bool,
+    living: species::Living,
 }
 impl<R: Random> Controller<R> {
     pub fn new(profile: Profile, random: R, now: f64) -> Self {
@@ -98,9 +104,11 @@ impl<R: Random> Controller<R> {
             terminal: false,
             approaching: false,
             avoiding: false,
+            living: species::Living::default(),
         }
     }
     pub fn hold(&mut self, terminal: bool) {
+        self.living.suspend();
         self.suspended = true;
         self.terminal |= terminal;
         self.current = Decision::pause();
@@ -207,7 +215,7 @@ impl<R: Random> Controller<R> {
             }
         };
         let (step, speed) = match (self.profile, intent) {
-            (_, Intent::Idle | Intent::Pause) => (0.0, 0.0),
+            (_, Intent::Idle | Intent::Pause | Intent::Observe | Intent::Rest) => (0.0, 0.0),
             (Profile::Sleepy, _) => (16.0, 8.0),
             (Profile::Passive, _) => (24.0, 10.0),
             (_, Intent::ShortBurst) => (48.0, 24.0),

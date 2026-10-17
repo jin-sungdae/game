@@ -118,7 +118,7 @@ export class PilotAssets {
     return asset;
   }
 }
-export interface AnimationInput { speed:number;state:string;suppressed:boolean; jump?:JumpSample|null; flight?:FlightMotion|null; floating?:FlightMotion|null }
+export interface AnimationInput { livingCue?:import('./living').LivingCue|null; speed:number;state:string;suppressed:boolean; jump?:JumpSample|null; flight?:FlightMotion|null; floating?:FlightMotion|null }
 export class AnimationStateResolver {
   private speed=0;
   private moving=false;

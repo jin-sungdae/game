@@ -5,7 +5,7 @@ const {resolveFree2d,intenseApplicability}=load('animation/free2d.js');
 const {AssetLoader,browserIO}=load('animation/loader.js');
 const image=async u=>{const b=fs.readFileSync(path.join(process.cwd(),'public',u));return {width:b.readUInt32BE(16),height:b.readUInt32BE(20)}};
 test('EMBER/NOVA share FREE_2D consumer contract; NOVA has no INTENSE delivery',async()=>{
- assert.deepEqual(free2dConsumers,['EMBER','NOVA']);assert.equal(intenseApplicability,'NOT_APPLICABLE');
+ assert.deepEqual(free2dConsumers,['EMBER','NOVA']);assert.equal(intenseApplicability,'NATIVE_ATTENTION');
  assert.equal(await new PilotAssets(new AssetLoader({...browserIO,image})).load(pilotDefinition('NOVA'),'INTENSE'),null);
 });
 for(const code of free2dConsumers){

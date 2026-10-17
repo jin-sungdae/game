@@ -178,6 +178,7 @@ impl World {
             self.monster_behavior = None;
         }
         self.server_encounter = Some((encounter.encounter_id, now + remaining));
+        self.view.animation.monster_cue = None;
         self.view.animation.jump = None;
         self.view.animation.flight = None;
         self.view.animation.floating = None;
@@ -269,17 +270,16 @@ impl World {
             "[LUMA SPAWN] placed {} encounter={} at={:?}",
             identity.monster_code, encounter.encounter_id, intent.position
         );
-        self.monster_behavior =
-            crate::monster_behavior::profile(&identity.monster_code).map(|profile| {
-                let id = encounter.encounter_id.as_u128();
-                crate::monster_behavior::Controller::new(
-                    profile,
-                    crate::monster_behavior::Seeded::new(
-                        self.behavior_seed ^ id as u64 ^ (id >> 64) as u64,
-                    ),
-                    now,
-                )
-            });
+        self.monster_behavior = {
+            let id = encounter.encounter_id.as_u128();
+            crate::monster_behavior::Controller::for_species(
+                &identity.monster_code,
+                crate::monster_behavior::Seeded::new(
+                    self.behavior_seed ^ id as u64 ^ (id >> 64) as u64,
+                ),
+                now,
+            )
+        };
         self.pip_deadline = now + crate::presentation::spawn::hold_seconds(&identity.rarity);
         self.view.monster = Some(identity);
     }
@@ -310,6 +310,9 @@ impl World {
                 p.state = PipState::Engaged;
                 self.view.menu = true;
                 self.view.interaction = InteractionMode::Encounter;
+                if let Some(behavior) = &mut self.monster_behavior {
+                    behavior.interaction();
+                }
             }
         }
     }
@@ -325,6 +328,7 @@ impl World {
         self.companion.set_movement_windows(windows);
     }
     pub fn tick(&mut self, now: f64, dt: f64, cursor: (f64, f64), down: bool) {
+        self.view.animation.monster_cue = None;
         self.view.animation.jump = None;
         self.view.animation.flight = None;
         self.view.animation.floating = None;
@@ -408,11 +412,15 @@ impl World {
                             {
                                 self.monster_movement.cancel();
                             }
-                            if let Some(decision) = behavior.poll(
+                            if let Some(decision) = behavior.poll_species(
                                 now,
-                                distance,
-                                identity.movement_profile,
-                                self.monster_movement.profile().is_some(),
+                                crate::monster_behavior::species::Context {
+                                    position: (p.x, p.y),
+                                    cursor,
+                                    companion_distance: distance,
+                                    movement: identity.movement_profile,
+                                    moving: self.monster_movement.profile().is_some(),
+                                },
                             ) {
                                 self.monster_movement.start_ambient(
                                     identity.movement_profile,
@@ -423,7 +431,7 @@ impl World {
                                 );
                             }
                             let moving = self.monster_movement.profile().is_some();
-                            let position = self.monster_movement.tick_ambient(
+                            let position = self.monster_movement.tick_species(
                                 identity.movement_profile,
                                 (p.x, p.y),
                                 dt,
@@ -476,6 +484,7 @@ impl World {
                                         p.facing,
                                     );
                             }
+                            self.view.animation.monster_cue = behavior.cue(now);
                             p.x = position.0;
                             p.y = position.1;
                         }

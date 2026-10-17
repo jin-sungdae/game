@@ -29,7 +29,12 @@ impl MovementController {
         companion: Option<(f64, f64)>,
         env: Environment<'_>,
     ) {
-        if profile == MovementProfile::Static || matches!(d.intent, Intent::Idle | Intent::Pause) {
+        if profile == MovementProfile::Static
+            || matches!(
+                d.intent,
+                Intent::Idle | Intent::Pause | Intent::Observe | Intent::Rest
+            )
+        {
             self.cancel();
             return;
         }
@@ -52,6 +57,22 @@ impl MovementController {
                 1.0
             };
             vector = (x / norm * sign, y / norm * sign);
+        }
+        if matches!(d.intent, Intent::AvoidCursor | Intent::SideStepCursor) {
+            let away = (position.0 - env.cursor.0, position.1 - env.cursor.1);
+            let norm = away.0.hypot(away.1).max(1.0);
+            vector = if d.intent == Intent::SideStepCursor {
+                // Lateral observation with an outward component: never orbit into the pointer.
+                (
+                    (away.0 - away.1 * d.direction) / norm,
+                    (away.1 + away.0 * d.direction) / norm,
+                )
+            } else {
+                (away.0 / norm, away.1 / norm)
+            };
+            if profile == MovementProfile::Floating && vector.0.abs() < 0.1 {
+                vector.0 = d.direction;
+            }
         }
         if profile == MovementProfile::Edge {
             // Same safe side always; approaching/avoiding projects onto the vertical edge.
@@ -132,6 +153,30 @@ impl MovementController {
         } else {
             self.cancel();
         }
+    }
+    /// Species GROUND easing changes only requested speed, never the existing trajectory/constraints.
+    /// Companion and legacy ambient callers retain their original constant-speed contract.
+    pub fn tick_species(
+        &mut self,
+        profile: MovementProfile,
+        position: (f64, f64),
+        dt: f64,
+        speed: f64,
+        env: Environment<'_>,
+    ) -> (f64, f64) {
+        let speed = if profile == MovementProfile::Ground {
+            let acceleration = (speed * 2.).max(16.);
+            let remaining = self
+                .active
+                .map_or(0., |m| (m.intent.target.0 - position.0).abs());
+            self.ambient_speed = (self.ambient_speed + acceleration * dt.clamp(0., 0.1))
+                .min(speed)
+                .min((2. * acceleration * remaining).sqrt());
+            self.ambient_speed
+        } else {
+            speed
+        };
+        self.tick_ambient(profile, position, dt, speed, env)
     }
     pub fn tick_ambient(
         &mut self,

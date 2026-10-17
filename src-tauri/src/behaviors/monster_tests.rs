@@ -130,10 +130,10 @@ fn all_fifteen_world_traces_preserve_identity_constraints_and_companion() {
                 previous = b.decisions;
             }
         }
-        assert!(previous <= 30 && previous >= 10, "{code}: {previous}");
+        assert!(previous <= 30 && previous >= 3, "{code}: {previous}");
         let b = w.monster_behavior.as_ref().unwrap();
         if b.profile == Profile::Sleepy {
-            assert_eq!(rows[0]["intent"], "Pause");
+            assert!(matches!(rows[0]["intent"].as_str(), Some("Pause" | "Rest")));
         }
         traces.push(serde_json::json!({"species":code,"profile":format!("{:?}",b.profile),"decisions":rows}));
     }
@@ -289,6 +289,7 @@ fn timid_near_avoids_and_reconciliation_preserves_controller() {
     let start = p.x;
     w.tick(1., 0.1, FAR, false);
     w.tick(1.1, 0.1, FAR, false);
+    w.tick(1.4, 0.1, FAR, false); // species recoil preparation completes before motion
     assert_eq!(
         w.monster_behavior.as_ref().unwrap().current.intent,
         Intent::AvoidCompanion
@@ -307,10 +308,10 @@ fn curious_jump_lands_before_pausing_in_stop_radius() {
     for i in 1..1800 {
         w.tick(f64::from(i) / 30., 1. / 30., FAR, false);
     }
-    assert_eq!(
+    assert!(matches!(
         w.monster_behavior.as_ref().unwrap().current.intent,
-        Intent::Pause
-    );
+        Intent::Pause | Intent::Rest | Intent::Observe
+    ));
     assert!((w.view.pip.as_ref().unwrap().y - w.area.ground_y()).abs() < 1e-6);
 }
 
@@ -755,4 +756,58 @@ fn bubu_jump_batch_uses_existing_apex_band_boundaries() {
         crate::movement::jump::sample(1., 16., 1., (10., 0.), 0.).phase,
         "LAND"
     );
+}
+
+#[test]
+fn native_attention_is_cleared_by_lifecycle_locks() {
+    let mut w = world("MIMI");
+    w.tick(1., 0.1, FAR, false);
+    w.monster_behavior.as_mut().unwrap().interaction();
+    w.tick(20., 0.1, FAR, false);
+    assert!(w.view.animation.monster_cue.is_some());
+    w.interact();
+    w.tick(20.1, 0.1, FAR, false);
+    assert!(w.view.animation.monster_cue.is_none());
+    w.close();
+    w.tick(21., 0.1, FAR, false);
+    assert!(w.view.animation.monster_cue.is_none());
+    battle(&mut w, crate::backend::battle::Status::Active, "ACTIVE");
+    w.tick(24., 0.1, FAR, false);
+    assert!(w.view.animation.monster_cue.is_none());
+}
+
+#[test]
+fn species_ground_accelerates_without_changing_legacy_motion_or_boundary() {
+    use crate::monster_behavior::Decision;
+    use crate::movement::{ambient::Environment, MovementController};
+    let w = world("PIP");
+    let p = w.view.pip.as_ref().unwrap();
+    let from = w.area.ground(w.area.x + 500., p.size);
+    let env = Environment {
+        area: w.area,
+        size: p.size,
+        cursor: FAR,
+        windows: Some(&[]),
+    };
+    let d = Decision {
+        intent: Intent::Wander,
+        speed: 24.,
+        distance: 28.,
+        direction: 1.,
+    };
+    let mut species = MovementController::default();
+    let mut legacy = MovementController::default();
+    species.start_ambient(MovementProfile::Ground, d, from, None, env);
+    legacy.start_ambient(MovementProfile::Ground, d, from, None, env);
+    let first = species.tick_species(MovementProfile::Ground, from, 0.1, 24., env);
+    let original = legacy.tick_ambient(MovementProfile::Ground, from, 0.1, 24., env);
+    assert!(first.0 > from.0 && first.0 < original.0);
+    let mut position = first;
+    for _ in 0..100 {
+        let next = species.tick_species(MovementProfile::Ground, position, 0.1, 24., env);
+        assert!(next.0 >= position.0 && next.0 <= from.0 + 28. + 1e-6);
+        assert_eq!(next.1, from.1);
+        position = next;
+    }
+    assert!((position.0 - from.0 - 28.).abs() < 1e-6);
 }

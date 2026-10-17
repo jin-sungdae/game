@@ -10,4 +10,4 @@ export function resolveFloating(input:{floating?:FlightMotion|null;state:string;
   return {state,suppressed:Boolean(suppressed),rate:1};
 }
 export const floatingClips={HOVER:{name:'hover',frames:4,frameDuration:500},FLOAT:{name:'float',frames:6,frameDuration:200},SETTLE:{name:'settle',frames:2,frameDuration:200}} as const;
-export const settleApplicability='NOT_APPLICABLE' as const;
+export const settleApplicability='NATIVE_REST' as const;

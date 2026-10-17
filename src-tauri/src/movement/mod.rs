@@ -141,6 +141,7 @@ struct Motion {
 pub struct MovementController {
     active: Option<Motion>,
     pub jump: Option<jump::Sample>,
+    ambient_speed: f64,
 }
 impl MovementController {
     pub fn profile(&self) -> Option<MovementProfile> {
@@ -149,6 +150,7 @@ impl MovementController {
     pub fn cancel(&mut self) {
         self.active = None;
         self.jump = None;
+        self.ambient_speed = 0.;
     }
     pub fn start(
         &mut self,
@@ -158,6 +160,7 @@ impl MovementController {
         size: Size,
     ) {
         self.jump = None;
+        self.ambient_speed = 0.;
         intent.duration = intent.duration.max(0.001);
         intent.height = intent.height.max(0.0);
         let mut start = area.clamp(position.0, position.1, size);

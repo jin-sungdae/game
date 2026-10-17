@@ -9,7 +9,7 @@ test('STATIC has no movement or synthetic PEEK regardless of speed/facing; input
   const i=Object.freeze({state:'ROAMING',suppressed:false,speed,facing,x:111,y:222});
   assert.deepEqual(resolveStatic(i),{state:'IDLE',suppressed:false,rate:1});assert.equal(i.x,111);assert.equal(i.y,222);assert.equal(i.facing,facing);
  }
- assert.equal(peekApplicability,'NOT_APPLICABLE');
+ assert.equal(peekApplicability,'NATIVE_ATTENTION');
 });
 test('arrival/rarity and all non-roaming lifecycle states suppress immediately, resume IDLE',()=>{
  for(const state of ['SPAWNING','ENGAGED','BATTLE','CAPTURE','CAPTURED','DESPAWNING','EXPIRED','UNKNOWN'])assert.equal(resolveStatic({state,suppressed:false}).suppressed,true);

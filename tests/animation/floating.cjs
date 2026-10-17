@@ -6,7 +6,7 @@ function input(speed,active=true){return {state:'ROAMING',suppressed:false,float
 test('FLOAT follows native excursion through slow apex and ends directly, fixed visual rate',()=>{
  assert.equal(resolveFloating(input(0,false),'FLOAT').state,'HOVER');assert.equal(resolveFloating(input(2),'HOVER').state,'HOVER');
  assert.equal(resolveFloating(input(10),'HOVER').state,'FLOAT');assert.equal(resolveFloating(input(0),'FLOAT').state,'FLOAT');
- assert.equal(resolveFloating(input(20,false),'FLOAT').state,'HOVER');assert.equal(settleApplicability,'NOT_APPLICABLE');
+ assert.equal(resolveFloating(input(20,false),'FLOAT').state,'HOVER');assert.equal(settleApplicability,'NATIVE_REST');
  for(const speed of [0,5,20,100])assert.equal(resolveFloating(input(speed),'FLOAT').rate,1);
  const i=input(10);Object.freeze(i.floating);resolveFloating(i,'HOVER');assert.equal(i.floating.y,10);
 });

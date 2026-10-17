@@ -3,6 +3,7 @@ use serde::Serialize;
 #[derive(Clone, Copy, Debug, Default, PartialEq, Serialize)]
 pub struct Motion {
     pub moa: f64,
+    pub monster_cue: Option<crate::monster_behavior::species::Cue>,
     pub pip: f64,
     pub jump: Option<crate::movement::jump::Sample>,
     pub flight: Option<Flight>,

@@ -6,7 +6,7 @@ const input=speed=>Object.freeze({speed,state:'ROAMING',suppressed:false,x:20,y:
 test('FREE_2D reads accepted speed with hysteresis, stop/resume and fixed flame cadence',()=>{
  let state='FLICKER';for(const [speed,expected] of [[0,'FLICKER'],[7,'FLICKER'],[8,'FLOW'],[4,'FLOW'],[3.001,'FLOW'],[3,'FLICKER'],[2,'FLICKER'],[20,'FLOW'],[0,'FLICKER']]){const i=input(speed),s=resolveFree2d(i,state);assert.equal(s.state,expected);assert.equal(s.rate,1);assert.equal(i.x,20);assert.equal(i.y,60);assert.equal(i.facing,-1);state=s.state;}
  assert.equal(p.status,'SUPPLIED');
- assert.equal(intenseApplicability,'NOT_APPLICABLE');
+ assert.equal(intenseApplicability,'NATIVE_ATTENTION');
 });
 test('lifecycle and invalid motion suppress; no high-speed state is invented',()=>{
  for(const state of ['SPAWNING','ENGAGED','BATTLE','CAPTURE','DESPAWNING','UNKNOWN'])assert.equal(resolveFree2d({...input(20),state},'FLOW').suppressed,true);
