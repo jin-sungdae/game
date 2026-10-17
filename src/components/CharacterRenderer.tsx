@@ -37,7 +37,7 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
       if(pilot.floatingProfile) runtime.floatingState=floating.state;
       const flight=resolveFlying(latestInput.current,runtime.flightState);
       if(pilot.flyingProfile) runtime.flightState=flight.state;
-      const resolved=(pilot.character==='MOA' || pilot.character==='RUU')?runtime.resolver.sampleCompanion(latestInput.current,time):runtime.resolver.sample(time);
+      const resolved=(pilot.character==='MOA' || pilot.character==='RUU' || pilot.character==='NOX')?runtime.resolver.sampleCompanion(latestInput.current,time):runtime.resolver.sample(time);
       const breath=runtime.clips.get('IDLE');
       const sequence=runtime.idle.sample(time,resolved.state==='IDLE' && !resolved.suppressed,reduced.current,breath?.manifest.idleSequences,
         (breath?.manifest.animations.blink?.frames??3)*(breath?.manifest.animations.blink?.frameDuration??90));
@@ -59,7 +59,7 @@ export function CharacterRenderer({pilot,input,facing,name,entityId}:{pilot:Pilo
   const free2d=resolveFree2d(input,runtime.free2dState);
   const companion=runtime.resolver.sampleCompanion(input,performance.now());
   const companionState:AnimationSequence=companion.state==='IDLE' && view.state==='BLINK'? 'BLINK':companion.state;
-  const current=(pilot.character==='MOA' || pilot.character==='RUU')?{...companion,state:companionState,frame:view.runtime===runtime && view.state===companionState?view.frame:0}:pilot.free2dProfile?{...free2d,frame:view.runtime===runtime && view.state===free2d.state?view.frame:0}:pilot.edgeProfile?{...edge,frame:view.runtime===runtime && view.state===edge.state?view.frame:0}:pilot.staticProfile?{...stationary,frame:view.runtime===runtime && view.state==='IDLE'?view.frame:0}:pilot.floatingProfile?{state:floating.state,frame:view.runtime===runtime && view.state===floating.state?view.frame:0,suppressed:floating.suppressed}:pilot.flyingProfile?{state:flight.state,frame:view.runtime===runtime && view.state===flight.state?view.frame:0,suppressed:flight.suppressed}:pilot.jumpProfile==='JUMP'?{state:(nativeFrame===null?'IDLE':'JUMP') as AnimationSequence,frame:nativeFrame??0,suppressed:input.suppressed || input.state!=='ROAMING'}:view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
+  const current=(pilot.character==='MOA' || pilot.character==='RUU' || pilot.character==='NOX')?{...companion,state:companionState,frame:view.runtime===runtime && view.state===companionState?view.frame:0}:pilot.free2dProfile?{...free2d,frame:view.runtime===runtime && view.state===free2d.state?view.frame:0}:pilot.edgeProfile?{...edge,frame:view.runtime===runtime && view.state===edge.state?view.frame:0}:pilot.staticProfile?{...stationary,frame:view.runtime===runtime && view.state==='IDLE'?view.frame:0}:pilot.floatingProfile?{state:floating.state,frame:view.runtime===runtime && view.state===floating.state?view.frame:0,suppressed:floating.suppressed}:pilot.flyingProfile?{state:flight.state,frame:view.runtime===runtime && view.state===flight.state?view.frame:0,suppressed:flight.suppressed}:pilot.jumpProfile==='JUMP'?{state:(nativeFrame===null?'IDLE':'JUMP') as AnimationSequence,frame:nativeFrame??0,suppressed:input.suppressed || input.state!=='ROAMING'}:view.runtime===runtime?view:{state:'IDLE' as const,frame:0,suppressed:true};
   const asset=current.suppressed||input.suppressed?null:runtime.clips.get(current.state);
   const clipId=entityId+':'+pilot.character+':'+current.state;
   const animation=asset?.urls[current.frame]??null;
