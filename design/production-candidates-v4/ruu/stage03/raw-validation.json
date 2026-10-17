@@ -1,0 +1,483 @@
+{
+  "referenceStatus": "CLEAN_BASE_CANDIDATE_NOT_PRODUCTION_APPROVED",
+  "frames": [
+    {
+      "candidate": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_00.png",
+      "reference": "design/production-candidates-v4/ruu/stage03/base-v3.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "7165d24848ac13c297407dfdb5be8f9df1de014cff66ea98d96252a0d51b87ca",
+        "sha256": "e765528af5e322e6c2f00f4b866c9a34f96a7f7717a379a51e861ba31e62cc61",
+        "bounds": [
+          10,
+          27,
+          255,
+          246
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "30662fd88b2c237e28a48d76f9fe2163cba59b57d4e407eb881516220bd93aa7",
+        "sha256": "e2dab22caea9027d86a2b466dbedf20e39d0853901739304943a75c8adfc1862",
+        "bounds": [
+          17,
+          25,
+          238,
+          228
+        ]
+      },
+      "driftPixels": {
+        "centerX": 5.0,
+        "bottom": 18
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "failureTypes": [
+        "ANCHOR_MISMATCH",
+        "APPEARANCE_DRIFT",
+        "ALPHA_DEFECT"
+      ],
+      "visualObservation": "Generated sheet changes overall scale/leg stance from the clean base; translation alone cannot restore it. Visible background flecks remain. Foot-contact coordinates were not instrumentally measured."
+    },
+    {
+      "candidate": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_01.png",
+      "reference": "design/production-candidates-v4/ruu/stage03/base-v3.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1de728136e43cddf44f45f346fc86cf056553f93f95492b46fe80251032f5474",
+        "sha256": "100c82a8d6797850b748c1f4c928745c2fa0ef4bedc57f795a5c45040798d025",
+        "bounds": [
+          13,
+          27,
+          255,
+          254
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "30662fd88b2c237e28a48d76f9fe2163cba59b57d4e407eb881516220bd93aa7",
+        "sha256": "e2dab22caea9027d86a2b466dbedf20e39d0853901739304943a75c8adfc1862",
+        "bounds": [
+          17,
+          25,
+          238,
+          228
+        ]
+      },
+      "driftPixels": {
+        "centerX": 6.5,
+        "bottom": 26
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "failureTypes": [
+        "ANCHOR_MISMATCH",
+        "APPEARANCE_DRIFT",
+        "ALPHA_DEFECT"
+      ],
+      "visualObservation": "Generated sheet changes overall scale/leg stance from the clean base; translation alone cannot restore it. Visible background flecks remain. Foot-contact coordinates were not instrumentally measured."
+    },
+    {
+      "candidate": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_02.png",
+      "reference": "design/production-candidates-v4/ruu/stage03/base-v3.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1a9796ba4fa7dd98762832c2c906f7f4b9895f7a9d716be0b8e98b6c84ca26ee",
+        "sha256": "bb4d20bc4535082734e7c980f2085fad6c221a5e57a44b37b22a43d4ce6a2ac2",
+        "bounds": [
+          0,
+          27,
+          255,
+          250
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "30662fd88b2c237e28a48d76f9fe2163cba59b57d4e407eb881516220bd93aa7",
+        "sha256": "e2dab22caea9027d86a2b466dbedf20e39d0853901739304943a75c8adfc1862",
+        "bounds": [
+          17,
+          25,
+          238,
+          228
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 22
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "failureTypes": [
+        "ANCHOR_MISMATCH",
+        "APPEARANCE_DRIFT",
+        "ALPHA_DEFECT"
+      ],
+      "visualObservation": "Generated sheet changes overall scale/leg stance from the clean base; translation alone cannot restore it. Visible background flecks remain. Foot-contact coordinates were not instrumentally measured."
+    },
+    {
+      "candidate": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_03.png",
+      "reference": "design/production-candidates-v4/ruu/stage03/base-v3.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a615bdc79c0a461bfa9d874d01f33a29791bd0360e525e81cdb121a501dce18b",
+        "sha256": "4ef80a83bfcfac10bce63ba74366b6bf99bdbebb63ab9962a6ac5f3b4e722552",
+        "bounds": [
+          0,
+          27,
+          255,
+          248
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "30662fd88b2c237e28a48d76f9fe2163cba59b57d4e407eb881516220bd93aa7",
+        "sha256": "e2dab22caea9027d86a2b466dbedf20e39d0853901739304943a75c8adfc1862",
+        "bounds": [
+          17,
+          25,
+          238,
+          228
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 20
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "failureTypes": [
+        "ANCHOR_MISMATCH",
+        "APPEARANCE_DRIFT",
+        "ALPHA_DEFECT"
+      ],
+      "visualObservation": "Generated sheet changes overall scale/leg stance from the clean base; translation alone cannot restore it. Visible background flecks remain. Foot-contact coordinates were not instrumentally measured."
+    },
+    {
+      "candidate": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_04.png",
+      "reference": "design/production-candidates-v4/ruu/stage03/base-v3.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "0dfedcd042b297dbd176c447d9dc14242421fa46d90540b3a8c7ee7e95b648dd",
+        "sha256": "d3b112b3e5f9b4206e23f1aeb81615d62afb762bd91ae6286da07ea6db1c6a21",
+        "bounds": [
+          13,
+          27,
+          255,
+          246
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "30662fd88b2c237e28a48d76f9fe2163cba59b57d4e407eb881516220bd93aa7",
+        "sha256": "e2dab22caea9027d86a2b466dbedf20e39d0853901739304943a75c8adfc1862",
+        "bounds": [
+          17,
+          25,
+          238,
+          228
+        ]
+      },
+      "driftPixels": {
+        "centerX": 6.5,
+        "bottom": 18
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "failureTypes": [
+        "ANCHOR_MISMATCH",
+        "APPEARANCE_DRIFT",
+        "ALPHA_DEFECT"
+      ],
+      "visualObservation": "Generated sheet changes overall scale/leg stance from the clean base; translation alone cannot restore it. Visible background flecks remain. Foot-contact coordinates were not instrumentally measured."
+    },
+    {
+      "candidate": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_05.png",
+      "reference": "design/production-candidates-v4/ruu/stage03/base-v3.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "8a1a138532a1f3ab91c15c5b7413ac9b2b5a8ecdcf109383574bcea8e6e3d2ca",
+        "sha256": "1fd640a019fbf3d2ace8d17d354213e959c75da0f9ec465435ed1112913161cd",
+        "bounds": [
+          0,
+          8,
+          255,
+          246
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "30662fd88b2c237e28a48d76f9fe2163cba59b57d4e407eb881516220bd93aa7",
+        "sha256": "e2dab22caea9027d86a2b466dbedf20e39d0853901739304943a75c8adfc1862",
+        "bounds": [
+          17,
+          25,
+          238,
+          228
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 18
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "failureTypes": [
+        "ANCHOR_MISMATCH",
+        "APPEARANCE_DRIFT",
+        "ALPHA_DEFECT"
+      ],
+      "visualObservation": "Generated sheet changes overall scale/leg stance from the clean base; translation alone cannot restore it. Visible background flecks remain. Foot-contact coordinates were not instrumentally measured."
+    },
+    {
+      "candidate": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_06.png",
+      "reference": "design/production-candidates-v4/ruu/stage03/base-v3.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "c076881d65c4e084ab0444763ef82c64d5aca43c23a308423a05156fc33faf8e",
+        "sha256": "29e665ba777d8ec3ad7742645317744df132f8b39b5ffe2d86276f4058d44873",
+        "bounds": [
+          0,
+          0,
+          255,
+          246
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "30662fd88b2c237e28a48d76f9fe2163cba59b57d4e407eb881516220bd93aa7",
+        "sha256": "e2dab22caea9027d86a2b466dbedf20e39d0853901739304943a75c8adfc1862",
+        "bounds": [
+          17,
+          25,
+          238,
+          228
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 18
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "failureTypes": [
+        "ANCHOR_MISMATCH",
+        "APPEARANCE_DRIFT",
+        "ALPHA_DEFECT"
+      ],
+      "visualObservation": "Generated sheet changes overall scale/leg stance from the clean base; translation alone cannot restore it. Visible background flecks remain. Foot-contact coordinates were not instrumentally measured."
+    },
+    {
+      "candidate": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_07.png",
+      "reference": "design/production-candidates-v4/ruu/stage03/base-v3.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "650c8913063c808f80a9157ca34d3355392338d877b40e9ced8225b54cb83613",
+        "sha256": "891cd16a37e554ff6946c7f94bf6c5edd1630e4698fd58a6d4d256ef10a114f8",
+        "bounds": [
+          0,
+          18,
+          255,
+          246
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "30662fd88b2c237e28a48d76f9fe2163cba59b57d4e407eb881516220bd93aa7",
+        "sha256": "e2dab22caea9027d86a2b466dbedf20e39d0853901739304943a75c8adfc1862",
+        "bounds": [
+          17,
+          25,
+          238,
+          228
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 18
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "failureTypes": [
+        "ANCHOR_MISMATCH",
+        "APPEARANCE_DRIFT",
+        "ALPHA_DEFECT"
+      ],
+      "visualObservation": "Generated sheet changes overall scale/leg stance from the clean base; translation alone cannot restore it. Visible background flecks remain. Foot-contact coordinates were not instrumentally measured."
+    }
+  ],
+  "clipFormat": {
+    "idle": {
+      "status": "FRAMES_READY",
+      "errors": [],
+      "frameEvidence": [
+        {
+          "file": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_00.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "7165d24848ac13c297407dfdb5be8f9df1de014cff66ea98d96252a0d51b87ca",
+          "sha256": "e765528af5e322e6c2f00f4b866c9a34f96a7f7717a379a51e861ba31e62cc61",
+          "bounds": [
+            10,
+            27,
+            255,
+            246
+          ]
+        },
+        {
+          "file": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_01.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "1de728136e43cddf44f45f346fc86cf056553f93f95492b46fe80251032f5474",
+          "sha256": "100c82a8d6797850b748c1f4c928745c2fa0ef4bedc57f795a5c45040798d025",
+          "bounds": [
+            13,
+            27,
+            255,
+            254
+          ]
+        },
+        {
+          "file": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_02.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "1a9796ba4fa7dd98762832c2c906f7f4b9895f7a9d716be0b8e98b6c84ca26ee",
+          "sha256": "bb4d20bc4535082734e7c980f2085fad6c221a5e57a44b37b22a43d4ce6a2ac2",
+          "bounds": [
+            0,
+            27,
+            255,
+            250
+          ]
+        },
+        {
+          "file": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_03.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "a615bdc79c0a461bfa9d874d01f33a29791bd0360e525e81cdb121a501dce18b",
+          "sha256": "4ef80a83bfcfac10bce63ba74366b6bf99bdbebb63ab9962a6ac5f3b4e722552",
+          "bounds": [
+            0,
+            27,
+            255,
+            248
+          ]
+        },
+        {
+          "file": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_04.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "0dfedcd042b297dbd176c447d9dc14242421fa46d90540b3a8c7ee7e95b648dd",
+          "sha256": "d3b112b3e5f9b4206e23f1aeb81615d62afb762bd91ae6286da07ea6db1c6a21",
+          "bounds": [
+            13,
+            27,
+            255,
+            246
+          ]
+        },
+        {
+          "file": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_05.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "8a1a138532a1f3ab91c15c5b7413ac9b2b5a8ecdcf109383574bcea8e6e3d2ca",
+          "sha256": "1fd640a019fbf3d2ace8d17d354213e959c75da0f9ec465435ed1112913161cd",
+          "bounds": [
+            0,
+            8,
+            255,
+            246
+          ]
+        },
+        {
+          "file": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_06.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "c076881d65c4e084ab0444763ef82c64d5aca43c23a308423a05156fc33faf8e",
+          "sha256": "29e665ba777d8ec3ad7742645317744df132f8b39b5ffe2d86276f4058d44873",
+          "bounds": [
+            0,
+            0,
+            255,
+            246
+          ]
+        },
+        {
+          "file": "design/production-candidates-v4/ruu/stage03/raw/idle/idle_07.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "650c8913063c808f80a9157ca34d3355392338d877b40e9ced8225b54cb83613",
+          "sha256": "891cd16a37e554ff6946c7f94bf6c5edd1630e4698fd58a6d4d256ef10a114f8",
+          "bounds": [
+            0,
+            18,
+            255,
+            246
+          ]
+        }
+      ],
+      "expectedFrames": 8,
+      "validFrames": 8,
+      "missingOrInvalid": [],
+      "guiAcceptance": "NOT_VERIFIED"
+    }
+  },
+  "productionEligible": false,
+  "registeredClips": 0
+}
