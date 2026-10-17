@@ -258,3 +258,21 @@ fn living_seeded_replay_and_bounded_decision_budget() {
         assert!(a.decisions <= 300); // At most one per two seconds, independent of render FPS.
     }
 }
+
+#[test]
+fn living_ground_speed_still_enters_existing_move_animation() {
+    for code in ["PIP", "MOSSY", "PEBB", "TIKKI"] {
+        let mut c = Controller::new(
+            profile(code).unwrap(),
+            Fixed(if code == "PIP" { 0.7 } else { 0.9 }),
+            0.,
+        )
+        .for_species(code);
+        c.poll(0., None, MovementProfile::Ground, false);
+        let d = c.poll(10., None, MovementProfile::Ground, false).unwrap();
+        assert!(
+            d.speed >= 8.,
+            "{code} must reach existing MOVE entry threshold"
+        );
+    }
+}

@@ -23,7 +23,7 @@ impl Expression {
         // Aerial bodies change excursion extent, never native trajectory or landing ownership.
         let (distance, speed, interval) = match code {
             "PIP" => (0.9, 1.0, 1.0),
-            "MOSSY" => (0.7, 0.85, 1.4),
+            "MOSSY" => (0.7, 1.0, 1.4), // Keep sleepy Ground at the existing 8pt/s MOVE entry.
             "PEBB" => (0.65, 0.8, 1.3),
             "TIKKI" => (1.15, 1.05, 1.1),
             "MELLO" => (0.85, 0.9, 1.2),
