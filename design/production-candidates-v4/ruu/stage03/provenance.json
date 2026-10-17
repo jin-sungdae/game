@@ -15,12 +15,13 @@
   "automatedRepairIterations": 3,
   "automaticRepairLimit": 3,
   "baseState": "USER_APPROVED_RIGGING_BASE",
-  "idleState": "FRAME_VALIDATION_PASS_RUNTIME_TEST_BLOCKED",
+  "idleState": "ANIMATION_CONNECTED_NATIVE_GUI_DEFERRED",
   "registeredProductionPngs": 0,
   "registeredProductionClips": 0,
-  "runtimeConnections": 0,
+  "runtimeConnections": 1,
   "guiState": "BROWSER_FRAME_PREVIEW_VERIFIED_NATIVE_DEFERRED",
-  "nextStep": "HUMAN_REVIEW_REQUIRED: new runtime test used 180ms steps against existing 100ms delta clamp. Await approval to adjust test sampling only; no engine or artwork repair.",
+  "nextStep": "Full Release Gate and native GUI review; missing actions remain ASSET_REQUIRED.",
   "stagedRuntimePngs": 9,
-  "stagedRuntimeClips": 1
+  "stagedRuntimeClips": 1,
+  "humanApprovedTestCorrection": "Only test sampling changed180ms to10ms; existing Clock100ms clamp unchanged. Animation suite PASS."
 }

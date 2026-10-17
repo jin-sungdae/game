@@ -83,7 +83,7 @@ test('RUU stage three IDLE is atomic, identity-bound, and uses the existing cloc
  const clip=await assets.load(p,'IDLE');assert.ok(clip);assert.equal(clip.urls.length,8);
  assert.ok(requests.every(url=>url.startsWith('/assets/creatures/ruu/stage03/idle/')));
  const animator=new CharacterAnimator();const frames=[];
- for(let t=0;t<=1440;t+=180)frames.push(animator.sample('IDLE',clip,t,1,false));
+ for(let t=0;t<=1440;t+=10){const frame=animator.sample('IDLE',clip,t,1,false);if(t%180===0)frames.push(frame);}
  assert.deepEqual(frames,[0,1,2,3,4,5,6,7,0]);
  assert.equal(animator.sample('IDLE',clip,1500,1,true),0);
  const missing=new PilotAssets(new AssetLoader({json:browserIO.json,image:async url=>{if(url.endsWith('idle_07.png'))throw Error('incomplete clip');return {width:256,height:256};}}));

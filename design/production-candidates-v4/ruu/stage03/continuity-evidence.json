@@ -99,6 +99,7 @@
   },
   "nativeGui": "DEFERRED_GUI",
   "productionAcceptance": "NOT_COMPLETE",
-  "runtimeTest": "FAIL: test sample interval180 exceeds CharacterAnimator delta clamp100",
-  "humanReviewRequired": true
+  "runtimeTest": "PASS after human-approved test sampling correction180ms to10ms; original failure remains recorded in PR history",
+  "humanReviewRequired": true,
+  "humanReviewScope": "Production artwork/clip and native GUI acceptance"
 }
