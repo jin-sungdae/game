@@ -13,9 +13,15 @@ public final class EvolutionRules {
         }
     }
     private record Key(String species, int fromStage) {}
-    private static final Map<Key, Rule> APPROVED = Map.of(
-        new Key("MOA", 1), new Rule("MOA", 1, 2, 3, 5),
-        new Key("MOA", 2), new Rule("MOA", 2, 3, 6, 12));
+    private static final Map<Key, Rule> APPROVED = approved();
+    private static Map<Key, Rule> approved() {
+        var rules = new java.util.HashMap<Key, Rule>();
+        int[] levels = {3,6,30,60}, bonds = {5,12,40,80};
+        for (String species : new String[]{"MOA","RUU","NOX"})
+            for (int stage=1;stage<=4;stage++)
+                rules.put(new Key(species,stage),new Rule(species,stage,stage+1,levels[stage-1],bonds[stage-1]));
+        return Map.copyOf(rules);
+    }
     public static Optional<Rule> next(GameDtos.Companion c) {
         return Optional.ofNullable(APPROVED.get(new Key(c.species(), c.evolutionStage())));
     }

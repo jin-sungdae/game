@@ -138,7 +138,7 @@ class EvolutionIntegrationTest {
         assertEquals(before.player(),after.player());assertEquals(before.activeCompanion().level(),after.activeCompanion().level());
         assertEquals(before.activeCompanion().exp(),after.activeCompanion().exp());assertEquals(before.activeCompanion().bond(),after.activeCompanion().bond());
         assertEquals(List.of(2,3),db.queryForList("SELECT to_stage FROM game.t_companion_evolution_history ORDER BY evolution_history_id",Integer.class));
-        assertEquals("ALREADY_EVOLVED",evolve().result());assertEquals(2,histories());assertNull(status().nextStage());
+        assertEquals("ALREADY_EVOLVED",evolve().result());assertEquals(2,histories());assertEquals(4,status().nextStage());
         var fresh=new EvolutionService(new GameRepository(db),new EvolutionRepository(db));assertEquals("NEBLA",fresh.status().currentName());
     }
     @Test void stageThreeHistoryFailureRollsBackStageUpdate() {
@@ -161,7 +161,7 @@ class EvolutionIntegrationTest {
                 assertFalse(repository.completedCurrentEvolution(new GameDtos.Companion(other,"RUU",4,"fixture",8,2800,20)));
                 var active=new GameRepository(db).activeCompanion(1);
                 assertFalse(repository.completedCurrentEvolution(new GameDtos.Companion(active.playerCompanionId(),"MOA",4,"SYLVAON",8,2800,20)));
-                assertTrue(EvolutionRules.next(new GameDtos.Companion(other,"MOA",4,"SYLVAON",100,495000,100)).isEmpty());
+                assertEquals(5,EvolutionRules.next(new GameDtos.Companion(other,"MOA",4,"SYLVAON",100,88900,100)).orElseThrow().toStage());
             } finally {tx.setRollbackOnly();}
         });
     }
