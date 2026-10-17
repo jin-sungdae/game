@@ -412,3 +412,56 @@ fn living_identity_defers_until_boundary_and_cursor_turn_has_deadband() {
     c.face(c.entity.x - 3.);
     assert_eq!(c.entity.facing, -1);
 }
+
+#[test]
+fn species_decisions_differ_without_enabling_missing_art() {
+    let policies: Vec<_> = ["MOA", "RUU", "NOX"]
+        .into_iter()
+        .map(|s| config::decision_config(s).unwrap())
+        .collect();
+    let weights: Vec<_> = policies
+        .iter()
+        .map(|(p, c)| selection::weights(*p, c.weights, false, false))
+        .collect();
+    assert!(weights[1][0] > weights[0][0] && weights[0][0] > weights[2][0]);
+    assert!(policies[1].1.idle.max < policies[2].1.idle.min);
+    assert!(policies[2].1.looking.min > policies[1].1.looking.max);
+    for species in ["RUU", "NOX"] {
+        assert!(config::living_config(species, 1).is_none());
+    }
+    assert!(config::decision_config("UNKNOWN").is_none());
+}
+
+#[test]
+fn recent_selection_preserves_sleep_gate_and_single_eligible_action() {
+    assert_eq!(
+        selection::suppress_recent([40, 20, 60, 0], Some(Behavior::Walking)),
+        [10, 20, 60, 0]
+    );
+    assert_eq!(
+        selection::suppress_recent([40, 20, 60, 0], Some(Behavior::Sleeping)),
+        [40, 20, 60, 0]
+    );
+    assert_eq!(
+        selection::choose(
+            selection::suppress_recent([1, 0, 0, 0], Some(Behavior::Walking)),
+            0.99
+        ),
+        Some(Behavior::Walking)
+    );
+}
+
+#[test]
+fn decision_memory_changes_only_at_autonomous_boundaries() {
+    let mut c = controller(forced(Behavior::Looking));
+    c.tick(1., 0.1, area(), FAR, false);
+    assert_eq!(c.recent_behavior, Some((Behavior::Looking, 1.)));
+    let rng = c.rng;
+    c.tick(1.1, 0.1, area(), FAR, false);
+    assert_eq!(c.rng, rng);
+    c.react(1.2, area(), None);
+    assert_eq!(c.recent_behavior, Some((Behavior::Looking, 1.)));
+    c.begin_drag(1.3, area(), FAR);
+    c.tick(50., 0.1, area(), FAR, true);
+    assert_eq!(c.recent_behavior, Some((Behavior::Looking, 1.)));
+}

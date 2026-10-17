@@ -38,6 +38,7 @@ pub struct CompanionController {
     movement_rng: u64,
     drag: Option<DragGesture>,
     clicked: bool,
+    recent_behavior: Option<(transitions::Behavior, f64)>,
     pending_identity: Option<(CompanionPersonality, BehaviorConfig)>,
 }
 impl CompanionController {
@@ -74,6 +75,7 @@ impl CompanionController {
             movement_rng: (seed ^ 0x6c756d615f6d6f76).max(1),
             drag: None,
             clicked: false,
+            recent_behavior: None,
             pending_identity: None,
         };
         s.duration = config.idle.sample(s.random());
@@ -111,6 +113,9 @@ impl CompanionController {
         if let Some((personality, config)) = self.pending_identity.take() {
             self.personality = personality;
             self.config = config;
+        }
+        if let Event::Decision(behavior) = event {
+            self.recent_behavior = Some((behavior, now));
         }
         let previous = self.entity.state;
         self.movement.cancel();
@@ -274,6 +279,11 @@ impl CompanionController {
                     now - self.quiet_since >= self.config.sleep_after_quiet,
                     nearby,
                 );
+                let recent = self
+                    .recent_behavior
+                    .filter(|(_, at)| now - at < 120.)
+                    .map(|(behavior, _)| behavior);
+                let weights = selection::suppress_recent(weights, recent);
                 if let Some(behavior) = selection::choose(weights, self.random()) {
                     self.apply(Event::Decision(behavior), now, area, cursor);
                 } else {

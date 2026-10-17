@@ -116,6 +116,44 @@ pub fn living_coverage(species: &str, stage: u32) -> Option<LivingCoverage> {
         _ => None,
     }
 }
+/// Decision policy is independent of sprite availability. Runtime activation still uses
+/// living_config, so a policy never substitutes another species' production artwork.
+pub fn decision_config(species: &str) -> Option<(CompanionPersonality, BehaviorConfig)> {
+    let mut config = MOA_BEHAVIOR;
+    let personality = match species {
+        "MOA" => MOA_PERSONALITY,
+        "RUU" => {
+            config.idle = DurationRange { min: 18., max: 32. };
+            config.looking = DurationRange { min: 2., max: 4. };
+            config.cursor_cooldown = 10.;
+            config.weights.base = [35, 5, 15, 5];
+            CompanionPersonality {
+                curiosity: TraitScore::new(95),
+                bravery: TraitScore::new(75),
+                affection: TraitScore::new(60),
+                energy: TraitScore::new(85),
+                mischief: TraitScore::new(60),
+            }
+        }
+        "NOX" => {
+            config.idle = DurationRange { min: 40., max: 70. };
+            config.looking = DurationRange { min: 5., max: 9. };
+            config.cursor_cooldown = 22.;
+            config.weights.base = [3, 20, 25, 5];
+            config.weights.walking_energy = 25;
+            config.weights.nearby_looking_bonus = 65;
+            CompanionPersonality {
+                curiosity: TraitScore::new(65),
+                bravery: TraitScore::new(20),
+                affection: TraitScore::new(45),
+                energy: TraitScore::new(25),
+                mischief: TraitScore::new(10),
+            }
+        }
+        _ => return None,
+    };
+    Some((personality, config))
+}
 /// MOA becomes calmer as it grows. Existing movement speed/physics and reaction timing stay intact.
 /// RUU Sky/Explorer and NOX Night/Mystic require assets and approved activation first.
 pub fn living_config(species: &str, stage: u32) -> Option<(CompanionPersonality, BehaviorConfig)> {
@@ -123,8 +161,7 @@ pub fn living_config(species: &str, stage: u32) -> Option<(CompanionPersonality,
         LivingCoverage::AwaitingAssets => return None,
         LivingCoverage::Animated | LivingCoverage::BaseOnly => {}
     }
-    let mut config = MOA_BEHAVIOR;
-    let personality = MOA_PERSONALITY;
+    let (personality, mut config) = decision_config(species)?;
     match stage {
         2 => {
             config.idle = DurationRange { min: 35., max: 65. };
