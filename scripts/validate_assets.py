@@ -2,6 +2,7 @@
 Default is strict; --allow-missing permits only wholly empty frame directories.
 """
 import argparse
+import hashlib
 import json
 import re
 import struct
@@ -12,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 COUNTS = dict(idle=6, walk=8, sit=4, look=4, sleep=6, react=6)
 
 
-def png_errors(path, require_transparency=False, bounds=None):
+def png_errors(path, require_transparency=False, bounds=None, pixel_digests=None):
     errors = []
     try:
         data = path.read_bytes()
@@ -54,7 +55,8 @@ def png_errors(path, require_transparency=False, bounds=None):
                 raise ValueError('invalid PNG pixel data length')
             if any(raw[i] > 4 for i in range(0, len(raw), 1025)):
                 raise ValueError('invalid PNG row filter')
-            if require_transparency:
+            if require_transparency or pixel_digests is not None:
+                pixels = hashlib.sha256()
                 previous = bytearray(1024)
                 transparent = False
                 ink = []
@@ -81,13 +83,21 @@ def png_errors(path, require_transparency=False, bounds=None):
                     transparent |= any(alpha < 255 for alpha in row[3::4])
                     if bounds is not None:
                         ink.extend((x, start//1025) for x, alpha in enumerate(row[3::4]) if alpha)
+                    if pixel_digests is not None:
+                        visible = bytearray(row)
+                        for x in range(0, 1024, 4):
+                            if visible[x+3] == 0:
+                                visible[x:x+3] = b'\x00\x00\x00'
+                        pixels.update(visible)
                     previous = row
                 if bounds is not None:
                     if not ink:
                         errors.append('empty alpha content')
                     else:
                         bounds.extend([min(x for x,y in ink), min(y for x,y in ink), max(x for x,y in ink), max(y for x,y in ink)])
-                if not transparent:
+                if pixel_digests is not None and not errors:
+                    pixel_digests.append(pixels.hexdigest())
+                if require_transparency and not transparent:
                     errors.append('transparent pixels required; fully opaque RGBA is invalid')
     except (OSError, ValueError, struct.error, zlib.error) as exc:
         errors.append(str(exc))
