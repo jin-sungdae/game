@@ -1,0 +1,1867 @@
+{
+  "companions": [
+    {
+      "species": "moa",
+      "stage": 1,
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "3e2f8a31d71bda3005a0a78eb31ac1ac84a146add959034fdcea3f5c1b765743",
+        "bounds": [
+          14,
+          30,
+          243,
+          247
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 8,
+          "validFrames": 8,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {
+        "idle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "walk": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 8,
+          "validFrames": 8,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "sit": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 4,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage01/sit/sit_00.png",
+            "public/assets/creatures/moa/stage01/sit/sit_01.png",
+            "public/assets/creatures/moa/stage01/sit/sit_02.png",
+            "public/assets/creatures/moa/stage01/sit/sit_03.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "look": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 4,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage01/look/look_00.png",
+            "public/assets/creatures/moa/stage01/look/look_01.png",
+            "public/assets/creatures/moa/stage01/look/look_02.png",
+            "public/assets/creatures/moa/stage01/look/look_03.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "sleep": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage01/sleep/sleep_00.png",
+            "public/assets/creatures/moa/stage01/sleep/sleep_01.png",
+            "public/assets/creatures/moa/stage01/sleep/sleep_02.png",
+            "public/assets/creatures/moa/stage01/sleep/sleep_03.png",
+            "public/assets/creatures/moa/stage01/sleep/sleep_04.png",
+            "public/assets/creatures/moa/stage01/sleep/sleep_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "react": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "breath": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "blink": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 3,
+          "validFrames": 3,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "species": "moa",
+      "stage": 2,
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage02/idle/idle_00.png",
+            "public/assets/creatures/moa/stage02/idle/idle_01.png",
+            "public/assets/creatures/moa/stage02/idle/idle_02.png",
+            "public/assets/creatures/moa/stage02/idle/idle_03.png",
+            "public/assets/creatures/moa/stage02/idle/idle_04.png",
+            "public/assets/creatures/moa/stage02/idle/idle_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 8,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage02/walk/walk_00.png",
+            "public/assets/creatures/moa/stage02/walk/walk_01.png",
+            "public/assets/creatures/moa/stage02/walk/walk_02.png",
+            "public/assets/creatures/moa/stage02/walk/walk_03.png",
+            "public/assets/creatures/moa/stage02/walk/walk_04.png",
+            "public/assets/creatures/moa/stage02/walk/walk_05.png",
+            "public/assets/creatures/moa/stage02/walk/walk_06.png",
+            "public/assets/creatures/moa/stage02/walk/walk_07.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage02/react/react_00.png",
+            "public/assets/creatures/moa/stage02/react/react_01.png",
+            "public/assets/creatures/moa/stage02/react/react_02.png",
+            "public/assets/creatures/moa/stage02/react/react_03.png",
+            "public/assets/creatures/moa/stage02/react/react_04.png",
+            "public/assets/creatures/moa/stage02/react/react_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage02/idle/idle_00.png",
+            "public/assets/creatures/moa/stage02/idle/idle_01.png",
+            "public/assets/creatures/moa/stage02/idle/idle_02.png",
+            "public/assets/creatures/moa/stage02/idle/idle_03.png",
+            "public/assets/creatures/moa/stage02/idle/idle_04.png",
+            "public/assets/creatures/moa/stage02/idle/idle_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "walk": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 8,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage02/walk/walk_00.png",
+            "public/assets/creatures/moa/stage02/walk/walk_01.png",
+            "public/assets/creatures/moa/stage02/walk/walk_02.png",
+            "public/assets/creatures/moa/stage02/walk/walk_03.png",
+            "public/assets/creatures/moa/stage02/walk/walk_04.png",
+            "public/assets/creatures/moa/stage02/walk/walk_05.png",
+            "public/assets/creatures/moa/stage02/walk/walk_06.png",
+            "public/assets/creatures/moa/stage02/walk/walk_07.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "sit": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 4,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage02/sit/sit_00.png",
+            "public/assets/creatures/moa/stage02/sit/sit_01.png",
+            "public/assets/creatures/moa/stage02/sit/sit_02.png",
+            "public/assets/creatures/moa/stage02/sit/sit_03.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "look": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 4,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage02/look/look_00.png",
+            "public/assets/creatures/moa/stage02/look/look_01.png",
+            "public/assets/creatures/moa/stage02/look/look_02.png",
+            "public/assets/creatures/moa/stage02/look/look_03.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "sleep": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage02/sleep/sleep_00.png",
+            "public/assets/creatures/moa/stage02/sleep/sleep_01.png",
+            "public/assets/creatures/moa/stage02/sleep/sleep_02.png",
+            "public/assets/creatures/moa/stage02/sleep/sleep_03.png",
+            "public/assets/creatures/moa/stage02/sleep/sleep_04.png",
+            "public/assets/creatures/moa/stage02/sleep/sleep_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "react": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/moa/stage02/react/react_00.png",
+            "public/assets/creatures/moa/stage02/react/react_01.png",
+            "public/assets/creatures/moa/stage02/react/react_02.png",
+            "public/assets/creatures/moa/stage02/react/react_03.png",
+            "public/assets/creatures/moa/stage02/react/react_04.png",
+            "public/assets/creatures/moa/stage02/react/react_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "species": "moa",
+      "stage": 3,
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "32b21b0b2f0b0c3c2e9172f4f797431e3be369eae93142c2482ecccf6d0db588",
+        "bounds": [
+          30,
+          24,
+          232,
+          250
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "moa",
+      "stage": 4,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "moa",
+      "stage": 5,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "ruu",
+      "stage": 1,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/ruu/stage01/idle/idle_00.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_01.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_02.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_03.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_04.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 8,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/ruu/stage01/walk/walk_00.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_01.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_02.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_03.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_04.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_05.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_06.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_07.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/ruu/stage01/react/react_00.png",
+            "public/assets/creatures/ruu/stage01/react/react_01.png",
+            "public/assets/creatures/ruu/stage01/react/react_02.png",
+            "public/assets/creatures/ruu/stage01/react/react_03.png",
+            "public/assets/creatures/ruu/stage01/react/react_04.png",
+            "public/assets/creatures/ruu/stage01/react/react_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/ruu/stage01/idle/idle_00.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_01.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_02.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_03.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_04.png",
+            "public/assets/creatures/ruu/stage01/idle/idle_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "walk": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 8,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/ruu/stage01/walk/walk_00.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_01.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_02.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_03.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_04.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_05.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_06.png",
+            "public/assets/creatures/ruu/stage01/walk/walk_07.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "sit": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 4,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/ruu/stage01/sit/sit_00.png",
+            "public/assets/creatures/ruu/stage01/sit/sit_01.png",
+            "public/assets/creatures/ruu/stage01/sit/sit_02.png",
+            "public/assets/creatures/ruu/stage01/sit/sit_03.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "look": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 4,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/ruu/stage01/look/look_00.png",
+            "public/assets/creatures/ruu/stage01/look/look_01.png",
+            "public/assets/creatures/ruu/stage01/look/look_02.png",
+            "public/assets/creatures/ruu/stage01/look/look_03.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "sleep": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/ruu/stage01/sleep/sleep_00.png",
+            "public/assets/creatures/ruu/stage01/sleep/sleep_01.png",
+            "public/assets/creatures/ruu/stage01/sleep/sleep_02.png",
+            "public/assets/creatures/ruu/stage01/sleep/sleep_03.png",
+            "public/assets/creatures/ruu/stage01/sleep/sleep_04.png",
+            "public/assets/creatures/ruu/stage01/sleep/sleep_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "react": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/ruu/stage01/react/react_00.png",
+            "public/assets/creatures/ruu/stage01/react/react_01.png",
+            "public/assets/creatures/ruu/stage01/react/react_02.png",
+            "public/assets/creatures/ruu/stage01/react/react_03.png",
+            "public/assets/creatures/ruu/stage01/react/react_04.png",
+            "public/assets/creatures/ruu/stage01/react/react_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "species": "ruu",
+      "stage": 2,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "ruu",
+      "stage": 3,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "ruu",
+      "stage": 4,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "ruu",
+      "stage": 5,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "nox",
+      "stage": 1,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/nox/stage01/idle/idle_00.png",
+            "public/assets/creatures/nox/stage01/idle/idle_01.png",
+            "public/assets/creatures/nox/stage01/idle/idle_02.png",
+            "public/assets/creatures/nox/stage01/idle/idle_03.png",
+            "public/assets/creatures/nox/stage01/idle/idle_04.png",
+            "public/assets/creatures/nox/stage01/idle/idle_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 8,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/nox/stage01/walk/walk_00.png",
+            "public/assets/creatures/nox/stage01/walk/walk_01.png",
+            "public/assets/creatures/nox/stage01/walk/walk_02.png",
+            "public/assets/creatures/nox/stage01/walk/walk_03.png",
+            "public/assets/creatures/nox/stage01/walk/walk_04.png",
+            "public/assets/creatures/nox/stage01/walk/walk_05.png",
+            "public/assets/creatures/nox/stage01/walk/walk_06.png",
+            "public/assets/creatures/nox/stage01/walk/walk_07.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/nox/stage01/react/react_00.png",
+            "public/assets/creatures/nox/stage01/react/react_01.png",
+            "public/assets/creatures/nox/stage01/react/react_02.png",
+            "public/assets/creatures/nox/stage01/react/react_03.png",
+            "public/assets/creatures/nox/stage01/react/react_04.png",
+            "public/assets/creatures/nox/stage01/react/react_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/nox/stage01/idle/idle_00.png",
+            "public/assets/creatures/nox/stage01/idle/idle_01.png",
+            "public/assets/creatures/nox/stage01/idle/idle_02.png",
+            "public/assets/creatures/nox/stage01/idle/idle_03.png",
+            "public/assets/creatures/nox/stage01/idle/idle_04.png",
+            "public/assets/creatures/nox/stage01/idle/idle_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "walk": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 8,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/nox/stage01/walk/walk_00.png",
+            "public/assets/creatures/nox/stage01/walk/walk_01.png",
+            "public/assets/creatures/nox/stage01/walk/walk_02.png",
+            "public/assets/creatures/nox/stage01/walk/walk_03.png",
+            "public/assets/creatures/nox/stage01/walk/walk_04.png",
+            "public/assets/creatures/nox/stage01/walk/walk_05.png",
+            "public/assets/creatures/nox/stage01/walk/walk_06.png",
+            "public/assets/creatures/nox/stage01/walk/walk_07.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "sit": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 4,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/nox/stage01/sit/sit_00.png",
+            "public/assets/creatures/nox/stage01/sit/sit_01.png",
+            "public/assets/creatures/nox/stage01/sit/sit_02.png",
+            "public/assets/creatures/nox/stage01/sit/sit_03.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "look": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 4,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/nox/stage01/look/look_00.png",
+            "public/assets/creatures/nox/stage01/look/look_01.png",
+            "public/assets/creatures/nox/stage01/look/look_02.png",
+            "public/assets/creatures/nox/stage01/look/look_03.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "sleep": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/nox/stage01/sleep/sleep_00.png",
+            "public/assets/creatures/nox/stage01/sleep/sleep_01.png",
+            "public/assets/creatures/nox/stage01/sleep/sleep_02.png",
+            "public/assets/creatures/nox/stage01/sleep/sleep_03.png",
+            "public/assets/creatures/nox/stage01/sleep/sleep_04.png",
+            "public/assets/creatures/nox/stage01/sleep/sleep_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "react": {
+          "status": "NOT_SUPPLIED",
+          "expectedFrames": 6,
+          "validFrames": 0,
+          "missingOrInvalid": [
+            "public/assets/creatures/nox/stage01/react/react_00.png",
+            "public/assets/creatures/nox/stage01/react/react_01.png",
+            "public/assets/creatures/nox/stage01/react/react_02.png",
+            "public/assets/creatures/nox/stage01/react/react_03.png",
+            "public/assets/creatures/nox/stage01/react/react_04.png",
+            "public/assets/creatures/nox/stage01/react/react_05.png"
+          ],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "species": "nox",
+      "stage": 2,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "nox",
+      "stage": 3,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "nox",
+      "stage": 4,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    },
+    {
+      "species": "nox",
+      "stage": 5,
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "requiredAnimations": {
+        "idle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "movement": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turning": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "interaction": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "battle": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "skill": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "hit": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "victory": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "defeat": {
+          "status": "NOT_SUPPLIED",
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      },
+      "suppliedClips": {}
+    }
+  ],
+  "monsters": [
+    {
+      "code": "PIP",
+      "enabled": true,
+      "movementProfile": "GROUND",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "f0e63d1349854c4539f07e402eecd70a7cfcfc789442d9243b5e20e4304487dd",
+        "bounds": [
+          12,
+          41,
+          243,
+          247
+        ]
+      },
+      "clips": {
+        "idle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "walk": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 8,
+          "validFrames": 8,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "react": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "MELLO",
+      "enabled": true,
+      "movementProfile": "JUMP",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "818efb32f7e5a19efcbb87342eb07b55047cd99e15d02dd30f47bca03c85a831",
+        "bounds": [
+          15,
+          24,
+          240,
+          241
+        ]
+      },
+      "clips": {
+        "jump": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 8,
+          "validFrames": 8,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "MOSSY",
+      "enabled": true,
+      "movementProfile": "GROUND",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "6555280c8dc76d8b93ddd348cae1fbf7b27e282bd0bb6bfbec235dcc874afdb1",
+        "bounds": [
+          14,
+          26,
+          239,
+          251
+        ]
+      },
+      "clips": {
+        "idle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "move": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 8,
+          "validFrames": 8,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "CHIRP",
+      "enabled": true,
+      "movementProfile": "FLYING",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "8629ba2cf4f22f3e0946f7d3e030869ce5f38f5a06f2f65ca9af77c14bfba83e",
+        "bounds": [
+          14,
+          73,
+          241,
+          251
+        ]
+      },
+      "clips": {
+        "hover": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "fly": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "glide": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 2,
+          "validFrames": 2,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "MONSTER_005",
+      "enabled": false,
+      "movementProfile": "EDGE",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "BUBU",
+      "enabled": true,
+      "movementProfile": "JUMP",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "979f8a38cc19cc5d3425aebe65142c559466b9ad32d3406f60646dfa1ba6eed4",
+        "bounds": [
+          24,
+          32,
+          234,
+          244
+        ]
+      },
+      "clips": {
+        "jump": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 8,
+          "validFrames": 8,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "PEBB",
+      "enabled": true,
+      "movementProfile": "GROUND",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "52069d2ed348e74d7387ccf07df7c725c2b82400016b6576dd1f28c6cf023ca4",
+        "bounds": [
+          19,
+          47,
+          241,
+          251
+        ]
+      },
+      "clips": {
+        "idle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "move": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 8,
+          "validFrames": 8,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "PUFF",
+      "enabled": true,
+      "movementProfile": "FLOATING",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "8e4414e08d8e1a89a10eff7af0275b72b63eddda3d563d44abd7299c1887984d",
+        "bounds": [
+          20,
+          44,
+          241,
+          250
+        ]
+      },
+      "clips": {
+        "hover": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "float": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "settle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 2,
+          "validFrames": 2,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "MONSTER_009",
+      "enabled": false,
+      "movementProfile": "FLOATING",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "TIKKI",
+      "enabled": true,
+      "movementProfile": "GROUND",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "d234b8bc08e62802d1fe684176208ecd91a798d57d959f2ec9153699a6db8a81",
+        "bounds": [
+          27,
+          30,
+          241,
+          246
+        ]
+      },
+      "clips": {
+        "idle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "move": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 8,
+          "validFrames": 8,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "MONSTER_011",
+      "enabled": false,
+      "movementProfile": "GROUND",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "MONSTER_012",
+      "enabled": false,
+      "movementProfile": "FLOATING",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "MIMI",
+      "enabled": true,
+      "movementProfile": "STATIC",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "b6476e6e585ef6075c131d1fa227304f39a738e87044e71694f3fdee12c41479",
+        "bounds": [
+          21,
+          40,
+          233,
+          248
+        ]
+      },
+      "clips": {
+        "idle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 5,
+          "validFrames": 5,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "peek": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 5,
+          "validFrames": 5,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "WISP",
+      "enabled": true,
+      "movementProfile": "FLOATING",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "9423d6524797e82349ab9f0bf40a4f8be5dacb3683276c0645516c52388e1b3d",
+        "bounds": [
+          18,
+          24,
+          239,
+          250
+        ]
+      },
+      "clips": {
+        "hover": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "float": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "SHADE",
+      "enabled": true,
+      "movementProfile": "EDGE",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "3d2c8330486a197e30d8dc54d2f1b11de2458f982cb00f74ef73c06d4fc72974",
+        "bounds": [
+          22,
+          29,
+          241,
+          242
+        ]
+      },
+      "clips": {
+        "idle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 5,
+          "validFrames": 5,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "edge_move": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "turn": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 3,
+          "validFrames": 3,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "EMBER",
+      "enabled": true,
+      "movementProfile": "FREE_2D",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "a2ea1e16f29e383c6ad29505d8d6ce65750fa11a8216cfb0fde470b5e2cb9f66",
+        "bounds": [
+          21,
+          24,
+          237,
+          251
+        ]
+      },
+      "clips": {
+        "flicker": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 5,
+          "validFrames": 5,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "flow": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "intense": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "MONSTER_017",
+      "enabled": false,
+      "movementProfile": "STATIC",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "MONSTER_018",
+      "enabled": false,
+      "movementProfile": "FLYING",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "LUNET",
+      "enabled": true,
+      "movementProfile": "FLOATING",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "eeba6eeec884e042b32f151f26b5e881a2dd0d3db65a5ba0ef13bf6153765640",
+        "bounds": [
+          17,
+          24,
+          233,
+          247
+        ]
+      },
+      "clips": {
+        "hover": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 4,
+          "validFrames": 4,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "float": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "MONSTER_020",
+      "enabled": false,
+      "movementProfile": "GROUND",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "NOVA",
+      "enabled": true,
+      "movementProfile": "FREE_2D",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "0fd29358f313abafd9286357d57d43aac1114661c2b7f40e75596dd9b744b2a6",
+        "bounds": [
+          17,
+          49,
+          241,
+          245
+        ]
+      },
+      "clips": {
+        "flicker": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 5,
+          "validFrames": 5,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "flow": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "MONSTER_022",
+      "enabled": false,
+      "movementProfile": "FLOATING",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "MONSTER_023",
+      "enabled": false,
+      "movementProfile": "FREE_2D",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "MONSTER_024",
+      "enabled": false,
+      "movementProfile": "FLYING",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "MONSTER_025",
+      "enabled": false,
+      "movementProfile": "STATIC",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "MONSTER_026",
+      "enabled": false,
+      "movementProfile": "JUMP",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "MONSTER_027",
+      "enabled": false,
+      "movementProfile": "FLOATING",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "NOCT",
+      "enabled": true,
+      "movementProfile": "EDGE",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "sha256": "c808c729d22318b7cb544682ce629d2b35eda07f4d199c288b6210ab4c3ba75a",
+        "bounds": [
+          14,
+          35,
+          241,
+          243
+        ]
+      },
+      "clips": {
+        "idle": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 5,
+          "validFrames": 5,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        },
+        "edge_move": {
+          "status": "FRAMES_READY",
+          "expectedFrames": 6,
+          "validFrames": 6,
+          "missingOrInvalid": [],
+          "guiAcceptance": "NOT_VERIFIED"
+        }
+      }
+    },
+    {
+      "code": "MONSTER_029",
+      "enabled": false,
+      "movementProfile": "FREE_2D",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    },
+    {
+      "code": "MONSTER_030",
+      "enabled": false,
+      "movementProfile": "EDGE",
+      "base": {
+        "status": "NOT_SUPPLIED",
+        "errors": [
+          "missing file"
+        ]
+      },
+      "clips": {}
+    }
+  ],
+  "guiAcceptance": "NOT_VERIFIED",
+  "note": "File readiness only. Runtime connection, identity and actual GUI require separate evidence. Missing frame counts are unknown where no approved clip contract exists."
+}
