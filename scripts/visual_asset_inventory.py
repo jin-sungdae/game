@@ -5,6 +5,7 @@ Existing PNG validator is the sole decoder. Does not write assets or runtime reg
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 from validate_assets import ROOT, png_errors
 
@@ -15,10 +16,10 @@ REQUIRED = ('idle', 'movement', 'turning', 'interaction', 'battle', 'skill', 'hi
 def inspect_png(path):
     if not path.is_file():
         return {'status': 'NOT_SUPPLIED', 'errors': ['missing file']}
-    bounds = []
-    errors = png_errors(path, require_transparency=True, bounds=bounds)
+    bounds, pixels = [], []
+    errors = png_errors(path, require_transparency=True, bounds=bounds, pixel_digests=pixels)
     return {'status': 'NOT_SUPPLIED' if errors else 'ARTWORK_READY',
-            'errors': errors, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'bounds': bounds}
+            'errors': errors, 'pixelSha256': pixels[0] if pixels else None, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'bounds': bounds}
 
 def candidate(path, reference):
     result, master = inspect_png(path), inspect_png(reference)
@@ -34,11 +35,23 @@ def candidate(path, reference):
             'automated': 'FAIL' if errors else 'PASS', 'guiAcceptance': 'NOT_VERIFIED',
             'identityReview': 'MANUAL_VISUAL_REVIEW', 'productionEligible': False}
 
-def clips(directory):
+def clips(directory, identity=None):
     path = directory/'manifest.json'
     if not path.is_file():
         return {}
     manifest = json.loads(path.read_text())
+    metadata_errors = []
+    if identity is not None:
+        species, stage = identity
+        if manifest.get('species') != species or type(manifest.get('stage')) is not int or manifest.get('stage') != stage:
+            metadata_errors.append('species/stage mismatch')
+        if manifest.get('canvas') != {'width':256, 'height':256}:
+            metadata_errors.append('canvas must be 256x256')
+        if manifest.get('anchor') != {'x':.5, 'y':1}:
+            metadata_errors.append('anchor must be bottom-center')
+        width = manifest.get('display', {}).get('width')
+        if type(width) not in (int, float) or not math.isfinite(width) or width <= 0:
+            metadata_errors.append('invalid display width')
     result = {}
     for name, clip in manifest.get('animations', {}).items():
         if not name.replace('_','').replace('-','').isalnum():
@@ -52,23 +65,51 @@ def clips(directory):
             raise ValueError('invalid frame naming')
         files = [directory/name/f'{prefix}_{i:02}.png' for i in range(first, first+count)]
         images = [inspect_png(p) for p in files]
-        ready = all(not item['errors'] for item in images)
+        errors = list(metadata_errors)
+        duration = clip.get('frameDuration')
+        if identity is not None and (type(duration) not in (int,float) or not math.isfinite(duration) or duration <= 0 or type(clip.get('loop')) is not bool):
+            errors.append('invalid timing/loop')
+        hashes = [x.get('pixelSha256') for x in images if not x['errors']]
+        if count < 2:
+            errors.append('single frame is artwork, not continuous animation')
+        if hashes and len(hashes) == count and len(set(hashes)) == 1:
+            errors.append('identical decoded frames are not animation')
+        ready = not errors and all(not item['errors'] for item in images)
         result[name] = {'status':'FRAMES_READY' if ready else 'NOT_SUPPLIED',
+                        'errors':errors, 'frameEvidence':[{'file':str(p), **x} for p,x in zip(files,images)],
                         'expectedFrames': count, 'validFrames':sum(not x['errors'] for x in images),
                         'missingOrInvalid':[str(p) for p,x in zip(files,images) if x['errors']],
                         'guiAcceptance':'NOT_VERIFIED'}
     return result
+
+def delivery_contract(species, stage, available):
+    # Delivery preparation only: never install placeholders into public or the registry.
+    actions = {}
+    for action, clip in [('IDLE','idle'),('MOVE','walk'),('TURN','turn'),('INTERACT','react')]:
+        evidence = available.get(clip, {})
+        actions[action] = {
+            'clip':clip, 'status':'FRAMES_READY' if evidence.get('status')=='FRAMES_READY' else 'ASSET_REQUIRED',
+            'frames':evidence.get('expectedFrames'), 'runtimeConnection':'NOT_VERIFIED',
+            'framePath':f'{clip}/{clip}_NN.png',
+        }
+    return {'species':species,'stage':stage,
+            'manifestPath':f'public/assets/creatures/{species}/stage{stage:02}/manifest.json',
+            'canvas':{'width':256,'height':256}, 'anchor':{'x':.5,'y':1},
+            'actions':actions, 'productionEligible':False,
+            'identityReview':'MANUAL_VISUAL_REVIEW', 'registrationReview':'MANUAL_VISUAL_REVIEW',
+            'guiAcceptance':'DEFERRED_GUI'}
 
 def inventory(root):
     companions = []
     for species in ('moa','ruu','nox'):
         for stage in range(1,6):
             directory=root/'public/assets/creatures'/species/f'stage{stage:02}'
-            available=clips(directory)
+            available=clips(directory, (species,stage))
             mapped={key:available.get({'movement':'walk','interaction':'react'}.get(key,key),
                                      {'status':'NOT_SUPPLIED','guiAcceptance':'NOT_VERIFIED'}) for key in REQUIRED}
             companions.append({'species':species,'stage':stage,'base':inspect_png(directory/'base.png'),
-                               'requiredAnimations':mapped,'suppliedClips':available})
+                               'requiredAnimations':mapped,'suppliedClips':available,
+                               'deliveryContract':delivery_contract(species,stage,available)})
     registry=json.loads((root/'src/entities/monsters.json').read_text())
     monsters=[]
     for row in json.loads((root/'src/entities/monster-dex.json').read_text()):
