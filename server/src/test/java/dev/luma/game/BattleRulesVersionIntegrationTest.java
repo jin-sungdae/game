@@ -19,6 +19,7 @@ class BattleRulesVersionIntegrationTest {
     @Autowired JdbcTemplate db;
     @Autowired BattleService battles;
     @Autowired GameService game;
+    @Autowired ItemService items;
     @MockitoBean RandomSource random;
     @BeforeEach void reset(){CompanionBondIntegrationTest.clean(db);when(random.nextLong(anyLong())).thenReturn(0L);}
     @AfterEach void clean(){CompanionBondIntegrationTest.clean(db);}
@@ -35,7 +36,7 @@ class BattleRulesVersionIntegrationTest {
     }
     Map<String,String> snapshot() {
         var state=new LinkedHashMap<String,String>();
-        for(String t:List.of("t_battle","t_encounter","t_reward","t_collection","t_player","t_player_companion","t_battle_item_effect"))
+        for(String t:List.of("t_battle","t_encounter","t_reward","t_collection","t_player","t_player_companion","t_battle_item_effect","t_inventory","t_item_purchase"))
             state.put(t,snapshot(t));
         return state;
     }
@@ -116,8 +117,17 @@ class BattleRulesVersionIntegrationTest {
             for(Runnable action:List.<Runnable>of(
                 ()->battles.get(stored.battleId()),()->battles.start(stored.encounterId()),
                 ()->battles.attack(stored.battleId()),()->battles.capture(stored.battleId()),
-                ()->battles.ignore(stored.encounterId()))) {
+                ()->battles.ignore(stored.encounterId()),
+                ()->items.use("SMALL_POTION",stored.battleId()),
+                ()->items.use("CAPTURE_CHARM",stored.battleId()),
+                ()->items.effects(stored.battleId()))) {
                 assertThrows(GameUnavailable.class,action::run);
+                assertEquals(before,snapshot());
+            }
+            if(victory) {
+                assertThrows(GameUnavailable.class,game::activeEncounter);
+                assertEquals(before,snapshot());
+                assertThrows(GameUnavailable.class,game::createEncounter);
                 assertEquals(before,snapshot());
             }
             verifyNoInteractions(random);
