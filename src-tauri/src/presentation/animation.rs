@@ -21,6 +21,25 @@ pub fn speed(before: (f64, f64), after: (f64, f64), dt: f64, previous: f64) -> f
     }
     (raw / 4.0).round() * 4.0
 }
+/// MOA's supplied MOVE clip is a ground walk, not a jump/flight fallback.
+/// Require contact in both snapshots so landing and native placement cannot drive a walk frame.
+pub fn companion_speed(
+    before: (f64, f64),
+    after: (f64, f64),
+    ground_y: f64,
+    dt: f64,
+    previous: f64,
+    state: crate::entities::CompanionState,
+) -> f64 {
+    if state != crate::entities::CompanionState::Walking
+        || !ground_y.is_finite()
+        || (before.1 - ground_y).abs() > 0.001
+        || (after.1 - ground_y).abs() > 0.001
+    {
+        return 0.;
+    }
+    speed(before, after, dt, previous)
+}
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -90,5 +109,38 @@ mod flight_tests {
             assert!(Flight::measured((0., 0.), (1., 1.), dt, 1., true, 1).is_none());
         }
         assert!(Flight::measured((0., 0.), (1000., 1000.), 0.05, 1., true, 1).is_none());
+    }
+}
+
+#[cfg(test)]
+mod companion_tests {
+    use super::*;
+    use crate::entities::CompanionState::*;
+    #[test]
+    fn only_measured_ground_walking_can_drive_the_supplied_clip() {
+        assert_eq!(
+            companion_speed((0., 10.), (4., 10.), 10., 0.1, 0., Walking),
+            40.
+        );
+        for (before, after) in [
+            ((0., 10.), (0., 10.)),
+            ((0., 10.), (4., 11.)),
+            ((0., 11.), (4., 12.)),
+            ((0., 11.), (4., 10.)),
+        ] {
+            assert_eq!(companion_speed(before, after, 10., 0.1, 40., Walking), 0.);
+        }
+        for state in [Idle, Sitting, Looking, Sleeping, Reacting, Dragging] {
+            assert_eq!(
+                companion_speed((0., 10.), (4., 10.), 10., 0.1, 40., state),
+                0.
+            );
+        }
+        for ground in [f64::NAN, f64::INFINITY] {
+            assert_eq!(
+                companion_speed((0., 10.), (4., 10.), ground, 0.1, 40., Walking),
+                0.
+            );
+        }
     }
 }

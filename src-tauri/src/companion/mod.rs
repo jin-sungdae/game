@@ -188,6 +188,8 @@ impl CompanionController {
                         }
                     }
                 }
+                self.movement
+                    .set_ground_acceleration(self.config.walk_acceleration);
                 self.movement.start(
                     intent,
                     (self.entity.x, self.entity.y),
@@ -196,7 +198,18 @@ impl CompanionController {
                 );
                 self.entity.facing = if self.target >= self.entity.x { 1 } else { -1 };
                 self.quiet_since = now;
-                self.config.walk_duration + self.config.walk_preparation
+                let travel = if intent.profile == MovementProfile::Ground
+                    && self.config.walk_acceleration > 0.
+                    && self.config.walk_speed > 0.
+                {
+                    // Leave enough time for both ramps; the controller still stops at the target.
+                    ((self.target - self.entity.x).abs() / self.config.walk_speed
+                        + self.config.walk_speed / self.config.walk_acceleration)
+                        .max(self.config.walk_duration)
+                } else {
+                    self.config.walk_duration
+                };
+                travel + self.config.walk_preparation
             }
             CompanionState::Sitting if recovering => self.config.walk_recovery,
             CompanionState::Sitting => self.config.sitting.sample(self.random()),

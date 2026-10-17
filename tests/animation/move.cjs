@@ -29,3 +29,15 @@ test('MOVE cancels due/in-progress blink; IDLE resumes breath and fresh interval
  r.observe({speed:40,state:'REACTING',suppressed:false},14000);assert.equal(r.sample(14000).state,'REACT');
  for(const state of ['BATTLE','EVOLVING','DRAGGING']){r.observe({speed:40,state,suppressed:true},15000);assert.equal(r.sample(15000).suppressed,true);}
 });
+
+test('walking intent without measured motion stays idle; unavailable air clips never reuse walk',async()=>{
+ const r=new AnimationStateResolver();
+ for(const speed of [0,40,0,0,40,0]) {
+  r.observe({state:'WALKING',speed,suppressed:false},0);
+  assert.equal(r.sample(0).state,speed===0?'IDLE':'MOVE');
+ }
+ const p=pilotDefinition('moa');
+ const assets=new PilotAssets(new AssetLoader({json:browserIO.json,image:async()=>({width:256,height:256})}));
+ for(const action of ['JUMP','HOVER','FLY','GLIDE']) assert.equal(await assets.load(p,action),null);
+ for(const stage of [2,3,4,5]) assert.equal(pilotDefinition('moa',stage),null);
+});

@@ -479,3 +479,66 @@ fn free2d_vectors_drive_read_only_speed_and_preserve_vertical_facing() {
         assert_eq!(c.tick(p, 0.05, a, SIZE, 14.).0, p);
     }
 }
+
+#[test]
+fn opted_in_ground_motion_accelerates_brakes_and_stops_without_overshoot() {
+    for direction in [-1., 1.] {
+        let a = area();
+        let mut c = MovementController::default();
+        c.set_ground_acceleration(80.);
+        let mut p = a.ground(-700., SIZE);
+        let target = p.0 + direction * 80.;
+        c.start(
+            MovementIntent {
+                profile: MovementProfile::Ground,
+                target: (target, p.1),
+                duration: 5.,
+                height: 0.,
+            },
+            p,
+            a,
+            SIZE,
+        );
+        let mut speeds = Vec::new();
+        let mut complete = false;
+        for _ in 0..100 {
+            let (next, done) = c.tick(p, 0.05, a, SIZE, 40.);
+            let speed = (next.0 - p.0).abs() / 0.05;
+            assert!(speed <= 40. + 1e-9);
+            assert!((target - next.0) * direction >= -1e-9);
+            assert_eq!(next.1, a.ground_y());
+            inside(next, a, SIZE);
+            speeds.push(speed);
+            p = next;
+            if done {
+                complete = true;
+                break;
+            }
+        }
+        assert!(complete);
+        assert_eq!(p.0, target);
+        assert!(speeds[0] < speeds[1] && speeds[1] < speeds[2]);
+        assert!(speeds[speeds.len() - 2] < 40.);
+        assert_eq!(c.tick(p, 0.05, a, SIZE, 40.), (p, true));
+        c.cancel();
+        assert_eq!(c.ground_velocity, 0.);
+    }
+}
+
+#[test]
+fn ground_easing_does_not_change_jump_trajectory_or_legacy_motion() {
+    let a = area();
+    let start = a.ground(-700., SIZE);
+    let mut eased = MovementController::default();
+    let mut original = MovementController::default();
+    eased.set_ground_acceleration(80.);
+    for c in [&mut eased, &mut original] {
+        c.start(intent(MovementProfile::Jump), start, a, SIZE);
+    }
+    let (mut x, mut y) = (start, start);
+    for _ in 0..12 {
+        x = eased.tick(x, 0.1, a, SIZE, 40.).0;
+        y = original.tick(y, 0.1, a, SIZE, 40.).0;
+        assert_eq!(x, y);
+    }
+}
