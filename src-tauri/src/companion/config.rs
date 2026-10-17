@@ -98,3 +98,45 @@ pub const MOA_BEHAVIOR: BehaviorConfig = BehaviorConfig {
         nearby_looking_bonus: 40,
     },
 };
+
+/// All 15 forms have an identity contract; unavailable forms are not runtime-enabled.
+/// Battle/skill/evolution remain authoritative domain events, never autonomous inventions.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum LivingCoverage {
+    Animated,
+    BaseOnly,
+    AwaitingAssets,
+}
+pub fn living_coverage(species: &str, stage: u32) -> Option<LivingCoverage> {
+    use LivingCoverage::*;
+    match (species, stage) {
+        ("MOA", 1) => Some(Animated),
+        ("MOA", 2..=3) => Some(BaseOnly),
+        ("MOA", 4..=5) | ("RUU" | "NOX", 1..=5) => Some(AwaitingAssets),
+        _ => None,
+    }
+}
+/// MOA becomes calmer as it grows. Existing movement speed/physics and reaction timing stay intact.
+/// RUU Sky/Explorer and NOX Night/Mystic require assets and approved activation first.
+pub fn living_config(species: &str, stage: u32) -> Option<(CompanionPersonality, BehaviorConfig)> {
+    match living_coverage(species, stage)? {
+        LivingCoverage::AwaitingAssets => return None,
+        LivingCoverage::Animated | LivingCoverage::BaseOnly => {}
+    }
+    let mut config = MOA_BEHAVIOR;
+    let personality = MOA_PERSONALITY;
+    match stage {
+        2 => {
+            config.idle = DurationRange { min: 35., max: 65. };
+            config.weights.nearby_looking_bonus = 45;
+            config.cursor_cooldown = 18.;
+        }
+        3 => {
+            config.idle = DurationRange { min: 40., max: 70. };
+            config.weights.nearby_looking_bonus = 50;
+            config.cursor_cooldown = 20.;
+        }
+        _ => {}
+    }
+    Some((personality, config))
+}

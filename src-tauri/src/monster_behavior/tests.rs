@@ -181,3 +181,80 @@ fn nova_curious_free2d_approach_and_pause_unchanged() {
         Intent::Pause
     );
 }
+
+#[test]
+fn living_species_are_distinct_bounded_and_provisional_neutral() {
+    let rows: serde_json::Value =
+        serde_json::from_str(include_str!("../../../src/entities/monster-dex.json")).unwrap();
+    let mut expressions = Vec::new();
+    let mut dormant = 0;
+    for row in rows.as_array().unwrap() {
+        let code = row["monsterCode"].as_str().unwrap();
+        let e = Expression::for_species(code);
+        if row["enabled"] == true {
+            assert!(!expressions.contains(&e), "duplicate expression {code}");
+            assert!((0.65..=1.2).contains(&e.distance));
+            assert!((0.8..=1.1).contains(&e.speed));
+            assert!((1.0..=1.5).contains(&e.interval));
+            expressions.push(e);
+        } else {
+            assert_eq!(e, Expression::default());
+            dormant += 1;
+        }
+    }
+    assert_eq!(expressions.len(), 15);
+    assert_eq!(dormant, 15);
+    assert_eq!(Expression::for_species("UNKNOWN"), Expression::default());
+}
+
+#[test]
+fn living_species_preserve_intent_constraints_and_lifecycle() {
+    for code in [
+        "PIP", "MELLO", "MOSSY", "CHIRP", "BUBU", "PEBB", "PUFF", "TIKKI", "MIMI", "WISP", "SHADE",
+        "EMBER", "LUNET", "NOVA", "NOCT",
+    ] {
+        for movement in [
+            MovementProfile::Ground,
+            MovementProfile::Jump,
+            MovementProfile::Flying,
+            MovementProfile::Floating,
+            MovementProfile::Static,
+            MovementProfile::Edge,
+            MovementProfile::Free2d,
+        ] {
+            let p = profile(code).unwrap();
+            let mut baseline = Controller::new(p, Fixed(0.9), 0.);
+            let mut living = Controller::new(p, Fixed(0.9), 0.).for_species(code);
+            let before = baseline.poll(0., Some(600.), movement, false).unwrap();
+            let after = living.poll(0., Some(600.), movement, false).unwrap();
+            assert_eq!(before.intent, after.intent);
+            assert_eq!(before.direction, after.direction);
+            if movement == MovementProfile::Static {
+                assert_eq!(after.speed, 0.);
+                assert_eq!(after.distance, 0.);
+            }
+            assert!(living.poll(100., None, movement, true).is_none());
+            living.hold(false);
+            assert!(living.poll(101., None, movement, false).is_none());
+            assert!(living.poll(102., None, movement, false).is_none());
+            living.hold(true);
+            assert!(living.poll(999., None, movement, false).is_none());
+        }
+    }
+}
+
+#[test]
+fn living_seeded_replay_and_bounded_decision_budget() {
+    for code in ["PIP", "BUBU", "LUNET", "NOCT", "NOVA"] {
+        let mut a = Controller::new(profile(code).unwrap(), Seeded::new(42), 0.).for_species(code);
+        let mut b = Controller::new(profile(code).unwrap(), Seeded::new(42), 0.).for_species(code);
+        for i in 0..18000 {
+            let now = f64::from(i) / 30.;
+            assert_eq!(
+                a.poll(now, Some(600.), MovementProfile::Ground, false),
+                b.poll(now, Some(600.), MovementProfile::Ground, false)
+            );
+        }
+        assert!(a.decisions <= 300); // At most one per two seconds, independent of render FPS.
+    }
+}
