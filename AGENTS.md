@@ -16,3 +16,22 @@
 - state machine 우회, React에 domain logic 집중, responsibility 위반, 불필요한 dependency, 테스트 누락은 MAJOR다.
 - 자동 review 결과는 `.github/codex/review-result.schema.json` 계약으로 제공하고, 실제 실행하지 않은 검증과 원격 task는 NOT_RUN/NOT_VERIFIED로 명시한다.
 - 상세 severity 및 자동화 한계: docs/REVIEW_RULES.md, docs/DEVELOPMENT_WORKFLOW.md.
+
+## Parallel Development
+
+Project LUMA Parallel Development Protocol v1을 모든 병렬 Track에 적용한다.
+
+1. 각 Track은 독립적인 Codex 세션과 별도 Git worktree에서 작업한다.
+2. 각 Track은 최신 `origin/main`을 확인하고 이를 기준으로 시작한다.
+3. 기존 RC `e6dd2c86367262f58147da47ecd4a13e5f1bc6fe`는 이전 Alpha scope의 검증 기준선으로 보존한다. 확장 범위의 검증 완료로 간주하지 않는다.
+4. 기존 코드 구조, 변수명, 함수명, 데이터 모델과 로직을 최대한 유지한다. 불필요한 리팩토링이나 전면 재작성을 하지 않는다.
+5. Track별 파일 소유권과 수정 범위를 분리한다. 범위 밖의 파일은 수정하지 않으며, 다른 Track 소유 파일의 수정이 필요하면 먼저 충돌 가능성과 조정 필요 사항을 보고한다.
+6. 공통 API/schema 변경은 구현 전에 계약을 문서화하고 관련 Track 간 계약을 확정한다.
+7. 각 Track은 독립적으로 테스트하고 acceptance 및 관련 regression 결과를 기록한다.
+8. 다른 PR이 main에 merge되면 최신 main을 반영하고 관련 regression을 재실행한다.
+9. Production code 변경 시 기존 동작과 변경 후 동작을 비교 보고한다.
+10. 테스트 결과가 없는 기능이나 실행하지 않은 검증을 PASS로 기록하지 않는다.
+11. GUI 검증이 불가능하거나 미완료인 항목은 `DEFERRED_GUI`로 분리하고 자동 테스트 PASS와 구분한다. 기존 미검증 evidence를 PASS로 바꾸지 않는다.
+12. 각 Track의 PR은 Draft로 생성한다.
+13. 자동 merge를 하지 않는다.
+14. 최종 통합 시 전체 Release Gate를 재실행한다.
