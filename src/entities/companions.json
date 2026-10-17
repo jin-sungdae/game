@@ -8,8 +8,12 @@
       "2": "/assets/creatures/moa/stage02/manifest.json",
       "3": "/assets/creatures/moa/stage03/manifest.json"
     },
-    "stageAssetStatus": {"3": "PRODUCTION_BASE"},
-    "stageAnimationStatus": {"3": "NOT_SUPPLIED"},
+    "stageAssetStatus": {
+      "3": "PRODUCTION_BASE"
+    },
+    "stageAnimationStatus": {
+      "3": "NOT_SUPPLIED"
+    },
     "stageNames": {
       "2": "MOKORI",
       "3": "NEBLA"
@@ -21,9 +25,15 @@
     "palette": "White + Blue",
     "stages": {
       "1": "/assets/creatures/ruu/stage01/manifest.json",
-      "3": "/assets/creatures/ruu/stage03/manifest.json"
+      "3": "/assets/creatures/ruu/stage03/manifest.json",
+      "4": "/assets/creatures/ruu/stage04/manifest.json",
+      "5": "/assets/creatures/ruu/stage05/manifest.json"
     },
-    "stageNames": {"3": "SKYFIN"}
+    "stageNames": {
+      "3": "SKYFIN",
+      "4": "AERIAL",
+      "5": "ZENITH"
+    }
   },
   "nox": {
     "name": "NOX",

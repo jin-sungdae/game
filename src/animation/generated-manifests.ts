@@ -228,6 +228,100 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "ruu",
     "stage": 3
   },
+  "/assets/creatures/ruu/stage04/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "frameDuration": 220,
+        "frames": 6,
+        "loop": true
+      },
+      "look": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "react": {
+        "frameDuration": 80,
+        "frames": 6,
+        "loop": false
+      },
+      "sit": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "sleep": {
+        "frameDuration": 150,
+        "frames": 6,
+        "loop": true
+      },
+      "walk": {
+        "frameDuration": 80,
+        "frames": 8,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 130
+    },
+    "species": "ruu",
+    "stage": 4
+  },
+  "/assets/creatures/ruu/stage05/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "frameDuration": 260,
+        "frames": 6,
+        "loop": true
+      },
+      "look": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "react": {
+        "frameDuration": 80,
+        "frames": 6,
+        "loop": false
+      },
+      "sit": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "sleep": {
+        "frameDuration": 150,
+        "frames": 6,
+        "loop": true
+      },
+      "walk": {
+        "frameDuration": 80,
+        "frames": 8,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 130
+    },
+    "species": "ruu",
+    "stage": 5
+  },
   "/assets/monsters/bubu/manifest.json": {
     "anchor": {
       "x": 0.5,
