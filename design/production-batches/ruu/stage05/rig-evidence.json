@@ -1,0 +1,74 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "ribcage",
+      "x": 178,
+      "y": 161,
+      "rx": 20,
+      "ry": 26,
+      "dx": 0.35,
+      "dy": -0.9,
+      "phase": 0
+    },
+    {
+      "name": "mantle-root",
+      "x": 150,
+      "y": 130,
+      "rx": 28,
+      "ry": 24,
+      "dx": -0.25,
+      "dy": -0.55,
+      "phase": -0.7853981633974483
+    }
+  ],
+  "protectedRegions": "y>=191||y<=99||x<=100||x>=200||(x>=183&&y<=140)",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "pixelSha256": "1857aa1aeed48fb0d4d63432db1d1f08207a0646a7f169b3fcdc3feab100e596",
+      "changedPixels": 958,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.08847261264548509
+    },
+    {
+      "file": "idle_01.png",
+      "pixelSha256": "06139cefc90a3da168b7179caf5402945699036f7ff572afb7081975e55986c6",
+      "changedPixels": 1084,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.2413470431818147
+    },
+    {
+      "file": "idle_02.png",
+      "pixelSha256": "cc3acc18137b1deab6088d2b4284ce78ab6e57211aa471e56d300a918d802cb6",
+      "changedPixels": 2294,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7235310998214965
+    },
+    {
+      "file": "idle_03.png",
+      "pixelSha256": "de3dc552265a4f1c0b73ffc12ada794202c10f5398f2c253876f0f52cf0103e0",
+      "changedPixels": 2567,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.9647315991879489
+    },
+    {
+      "file": "idle_04.png",
+      "pixelSha256": "a70086830d8bfa5fda2178d23747f2bd65841a264d4eecce2779ba4f612196fb",
+      "changedPixels": 2536,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7235310998214965
+    },
+    {
+      "file": "idle_05.png",
+      "pixelSha256": "9a26dcd4c66ad2c9560ed29b93bb4f0c92c16831ef4c33b338fd0059b6a40114",
+      "changedPixels": 2239,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.3799863003665259
+    }
+  ],
+  "repairIteration": 1,
+  "productionEligible": false
+}

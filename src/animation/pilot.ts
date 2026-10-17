@@ -22,7 +22,7 @@ export const edgeConsumers=[{character:'SHADE',status:'EDGE_PRODUCTION'},{charac
 export const floatingConsumers=['PUFF','WISP','LUNET'] as const;
 export function pilotDefinition(character:string,stage=1):Pilot|null {
   if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
-  if(character==='ruu' && stage===3) return {character:'RUU',species:'ruu',stage:3,manifest:resolveCompanion('ruu',3)!.assetManifest,base:companionBase('ruu',3)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
+  if(character==='ruu' && [3,4,5].includes(stage)) return {character:'RUU',species:'ruu',stage,manifest:resolveCompanion('ruu',stage)!.assetManifest,base:companionBase('ruu',stage)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
   const ground=groundConsumers.find(consumer=>consumer.character===character);
   if(ground) {
     const asset=resolveMonster(ground.character)!;
@@ -60,9 +60,9 @@ export class PilotAssets {
   async load(p:Pilot,state:AnimationSequence):Promise<LoadedClip|null> {
     if(state==='REST' || state==='SLEEP' || state==='LOOK_AROUND') return null;
     if(p.character==='RUU') {
-      if(p.species!=='ruu' || p.stage!==3 || p.status!=='IDLE_PRODUCTION' || state!=='IDLE') return null;
+      if(p.species!=='ruu' || ![3,4,5].includes(p.stage) || p.status!=='IDLE_PRODUCTION' || state!=='IDLE') return null;
       const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,'idle');
-      return asset && asset.manifest.canvas.width===256 && asset.manifest.canvas.height===256 && asset.clip.frames===8 && asset.clip.frameDuration===180 && asset.clip.loop?asset:null;
+      return asset && asset.manifest.canvas.width===256 && asset.manifest.canvas.height===256 && asset.clip.frames===(p.stage===3?8:6) && asset.clip.frameDuration===({3:180,4:220,5:260} as Record<number,number>)[p.stage] && asset.clip.loop?asset:null;
     }
     if(p.groundProfile==='GROUND' && (state==='IDLE' || state==='MOVE')) {
       if(p.status==='NOT_SUPPLIED' || (state==='MOVE' && p.status==='IDLE_PRODUCTION' && p.moveStatus!=='PRODUCTION')) return null;

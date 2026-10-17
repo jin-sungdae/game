@@ -60,12 +60,12 @@ test('companion reaction requires a real native edge and cannot leak into rest o
  assert.equal(r.sampleCompanion({...input,state:'SITTING'},100).state,'REST');
  assert.equal(r.sampleCompanion({...input,state:'BATTLE'},100).suppressed,true);
 });
-test('all fifteen companion identities fail closed except supplied MOA stage one and RUU stage three; missing actions never borrow idle',async()=>{
+test('all fifteen companion identities fail closed except supplied MOA stage one and RUU stages three through five; missing actions never borrow idle',async()=>{
  const assets=new PilotAssets(new AssetLoader({json:browserIO.json,image:async()=>assert.fail('unsupplied action must not request another clip')}));
  for(const species of ['moa','ruu','nox'])for(let stage=1;stage<=5;stage++){
   const pilot=pilotDefinition(species,stage);
   if(species==='moa' && stage===1){for(const action of ['REST','SLEEP','LOOK_AROUND','TURN'])assert.equal(await assets.load(pilot,action),null);}
-  else if(species==='ruu' && stage===3){for(const action of ['REST','SLEEP','LOOK_AROUND','TURN','MOVE','REACT','BLINK','FLY','GLIDE'])assert.equal(await assets.load(pilot,action),null);}
+  else if(species==='ruu' && [3,4,5].includes(stage)){for(const action of ['REST','SLEEP','LOOK_AROUND','TURN','MOVE','REACT','BLINK','FLY','GLIDE'])assert.equal(await assets.load(pilot,action),null);}
   else assert.equal(pilot,null);
  }
 });
@@ -88,11 +88,27 @@ test('RUU stage three IDLE is atomic, identity-bound, and uses the existing cloc
  assert.equal(animator.sample('IDLE',clip,1500,1,true),0);
  const missing=new PilotAssets(new AssetLoader({json:browserIO.json,image:async url=>{if(url.endsWith('idle_07.png'))throw Error('incomplete clip');return {width:256,height:256};}}));
  assert.equal(await missing.load(p,'IDLE'),null);
- for(const stage of [1,2,4,5])assert.equal(pilotDefinition('ruu',stage),null);
+ for(const stage of [1,2])assert.equal(pilotDefinition('ruu',stage),null);
  assert.equal(await assets.load({...p,stage:2},'IDLE'),null);
  assert.equal(await assets.load({...p,species:'nox'},'IDLE'),null);
  const resolver=new AnimationStateResolver(),input={state:'WALKING',speed:40,suppressed:false};resolver.observe(input,0);
  assert.equal(await assets.load(p,resolver.sampleCompanion(input,0).state),null);
  assert.equal(resolver.sampleCompanion({...input,speed:0},1).state,'IDLE');
  assert.equal(resolver.sampleCompanion({...input,state:'BATTLE'},1).suppressed,true);
+});
+
+test('RUU mature stages select their own six-frame clips atomically and reset stage phase',async()=>{
+ const assets=new PilotAssets(new AssetLoader({json:browserIO.json,image:async()=>({width:256,height:256})}));
+ const animator=new CharacterAnimator();
+ for(const [stage,duration] of [[4,220],[5,260]]){
+  const p=pilotDefinition('ruu',stage),clip=await assets.load(p,'IDLE');assert.ok(clip);
+  assert.equal(clip.urls.length,6);assert.ok(clip.urls.every(url=>url.startsWith(`/assets/creatures/ruu/stage0${stage}/idle/`)));
+  const sampled=[];for(let t=0;t<=duration*6;t+=10){const frame=animator.sample(`ruu:${stage}:IDLE`,clip,t,1,false);if(t%duration===0)sampled.push(frame);}
+  assert.deepEqual(sampled,[0,1,2,3,4,5,0]);
+  assert.equal(animator.sample(`ruu:${stage}:IDLE`,clip,duration*6+10,1,true),0);
+  const missing=new PilotAssets(new AssetLoader({json:browserIO.json,image:async url=>{if(url.endsWith('idle_05.png'))throw Error('missing');return {width:256,height:256};}}));
+  assert.equal(await missing.load(p,'IDLE'),null);
+  assert.equal(await assets.load({...p,stage:stage===4?5:4},'IDLE'),null);
+  for(const action of ['MOVE','TURN','REACT','FLY','GLIDE','REST','SLEEP'])assert.equal(await assets.load(p,action),null);
+ }
 });
