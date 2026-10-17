@@ -11,7 +11,7 @@
   "artworkApproval": "HUMAN_REVIEW_REQUIRED",
   "nativeMacOS": "NOT_VERIFIED",
   "nativeWindows": "NOT_VERIFIED",
-  "repairIterations": 2,
+  "repairIterations": 3,
   "repairLimit": 3,
   "nextTask": "Monster M001-M010 identity comparison before any production mapping; remaining Companion action-specific poses need artwork. Native macOS/Windows and human artwork review pending.",
   "creatures": [
@@ -13803,7 +13803,7 @@
     ],
     "nativeGUI": false
   },
-  "repairScope": "MOA batch: disconnected alpha cleanup; missing test import correction",
+  "repairScope": "MOA batch: alpha cleanup, test import, stale registration expectation",
   "batchEvidence": [
     {
       "pr": 95,

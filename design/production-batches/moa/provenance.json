@@ -25,6 +25,10 @@
     {
       "iteration": 2,
       "action": "Add missing resolveCompanion import to new name-preservation test"
+    },
+    {
+      "iteration": 3,
+      "action": "Update stale Phase1 test expectation for newly registered MOA Stage5; verify original AETHERIA name and canonical path"
     }
   ],
   "artworkApproval": "HUMAN_REVIEW_REQUIRED",
@@ -40,5 +44,11 @@
       "Resume IDLE"
     ],
     "nativeInput": false
+  },
+  "failedReleaseGate": {
+    "head": "6cebbb05d71d4c2c9fa836252210b8263693ebb6",
+    "passedTests": 102,
+    "failedTests": 1,
+    "failure": "Phase1 test expected MOA5 unregistered"
   }
 }

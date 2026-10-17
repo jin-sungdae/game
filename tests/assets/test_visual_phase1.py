@@ -49,7 +49,9 @@ class VisualPhase1Tests(unittest.TestCase):
         self.assertEqual(rows['companion:moa:3']['name'], 'NEBLA')
         self.assertEqual(rows['companion:moa:2']['conceptDesign']['conceptStageLabel'], 'LEAFOR')
         self.assertIsNone(rows['companion:moa:2']['conceptDesign']['productionNameOverride'])
-        self.assertFalse(rows['companion:moa:5']['runtimeRegistered'])
+        self.assertTrue(rows['companion:moa:5']['runtimeRegistered'])
+        self.assertEqual(rows['companion:moa:5']['name'], 'AETHERIA')
+        self.assertEqual(rows['companion:moa:5']['assetRoot'], 'public/assets/creatures/moa/stage05')
         self.assertEqual(rows['companion:ruu:1']['baseStatus'], 'ASSET_REQUIRED')
         self.assertEqual(rows['companion:nox:1']['baseStatus'], 'ASSET_REQUIRED')
 
