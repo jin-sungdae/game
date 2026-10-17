@@ -1,0 +1,171 @@
+{
+  "species": "ruu",
+  "stage": 1,
+  "clips": {
+    "idle": {
+      "status": "VALIDATION_FAILED",
+      "errors": [
+        "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_01.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_02.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_03.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_04.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_05.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_06.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_07.png: registration differs from approved master"
+      ],
+      "reference": "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_00.png",
+      "referenceApproval": "NOT_ESTABLISHED_BY_THIS_TOOL",
+      "frames": [
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_00.png",
+          "sha256": "5b442839c16d068665509f9cece25a9acc3862102485886202df1f458aba59fb",
+          "pixelSha256": "8e5a008fd2ee29acaed1f3c27201cfac94472e8b25953418787c27c2b6881d44",
+          "bounds": [
+            19,
+            12,
+            232,
+            252
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_01.png",
+          "sha256": "b01ec98c8be2d069835e3685011d408e40c51a3f83288a4b7756615a3864239a",
+          "pixelSha256": "b7f11509b70b459f5e60e11b4ce736ebfe04ca0b92b24d9019b38c9daca87fd4",
+          "bounds": [
+            22,
+            13,
+            236,
+            252
+          ],
+          "driftPixels": {
+            "centerX": 3.5,
+            "bottom": 0
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_02.png",
+          "sha256": "a0332aa96ed67366b5a066d65ac46a990caca0a7ca1d951bf645f5a215aa2041",
+          "pixelSha256": "59c552142ad20b2d5a4295b0fae1eeef444002fa018b659332402ce97e3f8f6b",
+          "bounds": [
+            19,
+            11,
+            235,
+            253
+          ],
+          "driftPixels": {
+            "centerX": 1.5,
+            "bottom": 1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_03.png",
+          "sha256": "6597b1ec0af4187a56cdaeac028aff1239fafab00152b6437bb37d6773d0b97b",
+          "pixelSha256": "6d57c99382fcd35b78bacd78f4c95a86537d1ced329e3a5da3dc0104d17eebc5",
+          "bounds": [
+            22,
+            14,
+            230,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.5,
+            "bottom": -1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_04.png",
+          "sha256": "177e9bf5537dd79a58b60c6d061422ed9eff961718627e04a7f9e3c15d966068",
+          "pixelSha256": "439213fb26d14f22718a0342f0259d31340e45559d4139427dba96cc1f2e098f",
+          "bounds": [
+            19,
+            12,
+            234,
+            249
+          ],
+          "driftPixels": {
+            "centerX": 1.0,
+            "bottom": -3
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_05.png",
+          "sha256": "55994c191d2dc9033820c4f7c087a9755e8d4bd5c922b31a90c5404f082b646c",
+          "pixelSha256": "552872a19d95d9617ca94ad0d3ef0f46481e41381b5624a1896c51f0d1302e91",
+          "bounds": [
+            21,
+            12,
+            237,
+            250
+          ],
+          "driftPixels": {
+            "centerX": 3.5,
+            "bottom": -2
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_06.png",
+          "sha256": "63eafd8e93f853fae283df48bcf2cdaddb47fb053f035ba4f8bf7d08ca2c7286",
+          "pixelSha256": "80de91c032d1534f2055f56d737c482c04db24b4d410f324e095c69e73b529db",
+          "bounds": [
+            18,
+            14,
+            235,
+            249
+          ],
+          "driftPixels": {
+            "centerX": 1.0,
+            "bottom": -3
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/revision2/idle/idle_07.png",
+          "sha256": "349788e94c703d774b898ecbfd21ed82b760dbb745b45588143d265d421eaf1d",
+          "pixelSha256": "0038f3bab0677152ff9e06ce5ea9f1a7df3e16a06378f6b65d1e0a240bdb0ba3",
+          "bounds": [
+            21,
+            10,
+            237,
+            250
+          ],
+          "driftPixels": {
+            "centerX": 3.5,
+            "bottom": -2
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        }
+      ],
+      "repeatedPixelGroups": []
+    }
+  },
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "visualIdentity": "MANUAL_REVIEW_REQUIRED",
+  "backgroundResidue": "MANUAL_REVIEW_REQUIRED",
+  "anatomicalContinuity": "MANUAL_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI"
+}
