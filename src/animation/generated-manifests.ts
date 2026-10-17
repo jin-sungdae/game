@@ -112,6 +112,100 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "moa",
     "stage": 2
   },
+  "/assets/creatures/moa/stage04/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "frameDuration": 280,
+        "frames": 6,
+        "loop": true
+      },
+      "look": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "react": {
+        "frameDuration": 80,
+        "frames": 6,
+        "loop": false
+      },
+      "sit": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "sleep": {
+        "frameDuration": 150,
+        "frames": 6,
+        "loop": true
+      },
+      "walk": {
+        "frameDuration": 80,
+        "frames": 8,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 130
+    },
+    "species": "moa",
+    "stage": 4
+  },
+  "/assets/creatures/moa/stage05/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "frameDuration": 320,
+        "frames": 6,
+        "loop": true
+      },
+      "look": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "react": {
+        "frameDuration": 80,
+        "frames": 6,
+        "loop": false
+      },
+      "sit": {
+        "frameDuration": 120,
+        "frames": 4,
+        "loop": true
+      },
+      "sleep": {
+        "frameDuration": 150,
+        "frames": 6,
+        "loop": true
+      },
+      "walk": {
+        "frameDuration": 80,
+        "frames": 8,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 130
+    },
+    "species": "moa",
+    "stage": 5
+  },
   "/assets/creatures/nox/stage01/manifest.json": {
     "anchor": {
       "x": 0.5,
