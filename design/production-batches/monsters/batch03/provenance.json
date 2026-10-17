@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "status": "CANDIDATE_ONLY",
   "reference": "design/visual-reference-v1/monsters-concept.png",
-  "repairIterations": 2,
+  "repairIterations": 3,
   "repairLimit": 3,
   "productionRegistered": 0,
   "runtimeConnected": 0,
@@ -31,7 +31,8 @@
     "M024": {
       "tool": "built-in image_gen",
       "subject": "cream-faced upright night creature; output quadrupedal",
-      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels."
+      "constraints": "Faithful individual redraw from supplied reference; full opaque body, right-facing neutral pose, generous square margins, true transparent alpha; no crop, scenery, shadow, aura, particles or labels.",
+      "recovery": "Preserve face/colors, correct only body to upright two-legged short torso with two arms above ground; transparent background; built-in imagegen"
     },
     "M025": {
       "tool": "built-in image_gen",
@@ -138,11 +139,12 @@
   ],
   "deferred": {
     "M023": "Dedicated core motion required; no organic breathing rig",
-    "M024": "APPEARANCE_DRIFT: quadruped output vs upright requested reference; original preserved, no rig",
+    "M024": "ALPHA_DEFECT after posture recovery: 52 detached pixels, maxAlpha2; 3/3 repair budget exhausted; HUMAN_REVIEW_REQUIRED",
     "M030": "Dedicated rigid plate motion required; no organic breathing rig"
   },
   "repairHistory": [
     "Detached low-alpha cleanup, body pixels preserved",
-    "Fix offline ledger writer variable shadowing; no image or validator changes"
+    "Fix offline ledger writer variable shadowing; no image or validator changes",
+    "M024 image-tool upright posture recovery; detached alpha52 pixels remain; further repairs BLOCKED + HUMAN_REVIEW_REQUIRED"
   ]
 }

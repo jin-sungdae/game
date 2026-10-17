@@ -11,9 +11,9 @@
   "artworkApproval": "HUMAN_REVIEW_REQUIRED",
   "nativeMacOS": "NOT_VERIFIED",
   "nativeWindows": "NOT_VERIFIED",
-  "repairIterations": 2,
+  "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "batch03 M024 appearance recovery (one repair remains); M023 core and M030 rigid-plate idle; batch04 M031. Mapping and native GUI pending.",
+  "nextTask": "M023 dedicated core and M030 rigid plate motion review; batch04 M031 artwork. M024 further correction blocked by 3/3 limit. PR99 release gate running; do not duplicate assets.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -5493,7 +5493,7 @@
       "baseStatus": "VALIDATION_FAILED",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "APPEARANCE_DRIFT: quadruped output vs upright requested reference; original preserved, no rig",
+      "blockReason": "ALPHA_DEFECT after posture recovery: 52 detached pixels, maxAlpha2; 3/3 repair budget exhausted; HUMAN_REVIEW_REQUIRED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -5623,7 +5623,7 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "basePath": "design/production-batches/monsters/batch03/M024/base-v2.png"
+      "basePath": "design/production-batches/monsters/batch03/M024/base-v3.png"
     },
     {
       "creatureId": "M025",
@@ -16326,7 +16326,7 @@
     "idleCandidateClips": 7,
     "productionComplete": 0,
     "total": 10,
-    "repairIterations": 2,
+    "repairIterations": 3,
     "humanReviewRequired": true
   }
 }
