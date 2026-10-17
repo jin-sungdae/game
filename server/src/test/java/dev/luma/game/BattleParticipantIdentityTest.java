@@ -56,7 +56,9 @@ class BattleParticipantIdentityTest {
                 assertEquals("PIP",b.monsterCode());
                 JsonNode json=http.getForObject(url(app,"/battles/"+b.battleId()),JsonNode.class);
                 var fields=new HashSet<String>();json.fieldNames().forEachRemaining(fields::add);
-                assertEquals(Set.of("battleId","encounterId","turn","status","encounterStatus","companion","monster","events","reward","presentationEvents","participant","monsterCode"),fields);
+                assertEquals(Set.of("battleId","encounterId","turn","status","encounterStatus","companion","monster","events","reward","presentationEvents","participant","monsterCode","skills"),fields);
+                assertEquals(Set.of("code","name","readyTurn","assetStatus"),fieldNames(json.get("skills").get(0)));
+                assertEquals("ASSET_REQUIRED",json.get("skills").get(0).get("assetStatus").asText());
                 assertEquals(Set.of("hp","maxHp"),fieldNames(json.get("companion")));
                 assertEquals(Set.of("hp","maxHp"),fieldNames(json.get("monster")));
                 assertEquals(Set.of("playerCompanionId","species"),fieldNames(json.get("participant")));
