@@ -14,7 +14,7 @@ public class BattleService {
     private final RandomSource random;
     public BattleService(JdbcTemplate db,GameRepository game,RandomSource random) {this.db=db;this.game=game;this.random=random;}
     record Encounter(UUID id,long monsterId,int level,String rarity,String status,String code,String name) {}
-    record Row(UUID id,UUID encounter,long companionId,int hp,int maxHp,int monsterHp,int monsterMax,int attack,int counter,int turn,String status) {}
+    record Row(UUID id,UUID encounter,long companionId,int hp,int maxHp,int monsterHp,int monsterMax,int attack,int counter,int turn,String status,String rulesVersion) {}
     private void playerLock() {game.lockPlayer(1);game.expire(1,game.now());}
     private Encounter encounter(UUID id) {
         return db.query("""
@@ -25,11 +25,13 @@ public class BattleService {
             .stream().findFirst().orElseThrow(()->new GameFault(404,"ENCOUNTER_NOT_FOUND"));
     }
     private Row row(UUID id) {
-        return db.query("SELECT * FROM game.t_battle WHERE battle_id=? FOR UPDATE",(r,n)->new Row(
+        var battle=db.query("SELECT * FROM game.t_battle WHERE battle_id=? FOR UPDATE",(r,n)->new Row(
             r.getObject("battle_id",UUID.class),r.getObject("encounter_id",UUID.class),r.getLong("player_companion_id"),
             r.getInt("companion_hp"),r.getInt("companion_max_hp"),r.getInt("monster_hp"),r.getInt("monster_max_hp"),
-            r.getInt("companion_attack"),r.getInt("monster_attack"),r.getInt("turn_no"),r.getString("status")),id)
+            r.getInt("companion_attack"),r.getInt("monster_attack"),r.getInt("turn_no"),r.getString("status"),r.getString("rules_version")),id)
             .stream().findFirst().orElseThrow(()->new GameFault(404,"BATTLE_NOT_FOUND"));
+        BattleRulesVersion.requireSupported(battle.rulesVersion);
+        return battle;
     }
     private Encounter lockBattleEncounter(UUID battleId) {
         playerLock();
@@ -63,9 +65,9 @@ public class BattleService {
         active(e);var c=game.activeCompanion(1);var battle=UUID.randomUUID();
         db.update("""
             INSERT INTO game.t_battle(battle_id,encounter_id,player_companion_id,monster_id,companion_hp,companion_max_hp,
-             monster_hp,monster_max_hp,companion_attack,monster_attack,status) VALUES(?,?,?,?,?,?,?,?,?,?,'ACTIVE')
+             monster_hp,monster_max_hp,companion_attack,monster_attack,status,rules_version) VALUES(?,?,?,?,?,?,?,?,?,?,'ACTIVE',?)
             """,battle,id,c.playerCompanionId(),e.monsterId,CombatRules.companionHp(),CombatRules.companionHp(),
-            CombatRules.monsterHp(e.level),CombatRules.monsterHp(e.level),CombatRules.companionAttack(c.level()),CombatRules.monsterAttack(e.level));
+            CombatRules.monsterHp(e.level),CombatRules.monsterHp(e.level),CombatRules.companionAttack(c.level()),CombatRules.monsterAttack(e.level),BattleRulesVersion.ALPHA_V1.name());
         return dto(row(battle),List.of());
     }
     public BattleDtos.Battle get(UUID id) {lockBattleEncounter(id);return dto(row(id),List.of());}
@@ -79,6 +81,7 @@ public class BattleService {
         db.update("UPDATE game.t_encounter SET status=?,resolved_at=clock_timestamp(),updated_at=clock_timestamp() WHERE encounter_id=?",status,id);
     }
     private void reward(Row b,Encounter e,List<String> events) {
+        BattleRulesVersion.requireSupported(b.rulesVersion);
         record Progress(long exp,int level) {}
         db.update("INSERT INTO game.t_reward(reward_id,encounter_id,player_id,gold_reward,exp_reward,bond_reward) VALUES(?,?,1,?,?,0)",UUID.randomUUID(),e.id,CombatRules.gold(e.level),CombatRules.exp(e.level));
         db.update("UPDATE game.t_player SET gold=gold+?,updated_at=clock_timestamp() WHERE player_id=1",CombatRules.gold(e.level));
@@ -143,7 +146,9 @@ public class BattleService {
         return new BattleDtos.Capture(id,e.id,success,chance,new BattleDtos.Monster(e.code,e.name),result.status(),result.encounterStatus(),collection,result,baseChance,itemBonus,chance);
     }
     public BattleDtos.Resolution ignore(UUID id) {
-        playerLock();var e=encounter(id);active(e);resolve(id,"ESCAPED");
+        playerLock();var e=encounter(id);
+        db.queryForList("SELECT battle_id FROM game.t_battle WHERE encounter_id=?",UUID.class,id).forEach(this::row);
+        active(e);resolve(id,"ESCAPED");
         db.update("UPDATE game.t_battle SET status='ESCAPED',ended_at=clock_timestamp(),updated_at=clock_timestamp() WHERE encounter_id=? AND status='ACTIVE'",id);
         return new BattleDtos.Resolution(id,"ESCAPED");
     }

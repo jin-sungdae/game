@@ -14,7 +14,7 @@ public class ItemService {
     private final EvolutionRepository companions;
     public ItemService(JdbcTemplate db,GameRepository game,EvolutionRepository companions) {this.db=db;this.game=game;this.companions=companions;}
     record Item(long id,String code,String type,long price,int maxStack,boolean enabled) {}
-    record Battle(UUID id,int hp,int maxHp,String status,String encounterStatus) {}
+    record Battle(UUID id,int hp,int maxHp,String status,String encounterStatus,String rulesVersion) {}
     private Item item(String code) {
         var item=db.query("SELECT item_id,item_code,item_type,price,max_stack,use_yn FROM game.m_item WHERE item_code=? FOR SHARE",
             (r,n)->new Item(r.getLong(1),r.getString(2),r.getString(3),r.getLong(4),r.getInt(5),r.getBoolean(6)),code)
@@ -31,8 +31,10 @@ public class ItemService {
         var ids=db.query("SELECT e.encounter_id FROM game.t_battle b JOIN game.t_encounter e USING(encounter_id) WHERE b.battle_id=? AND e.player_id=1",(r,n)->r.getObject(1,UUID.class),id);
         if(ids.isEmpty()) throw new GameFault(404,"BATTLE_NOT_FOUND");
         String encounter=db.queryForObject("SELECT status FROM game.t_encounter WHERE encounter_id=? FOR UPDATE",String.class,ids.getFirst());
-        return db.query("SELECT battle_id,companion_hp,companion_max_hp,status FROM game.t_battle WHERE battle_id=? FOR UPDATE",
-            (r,n)->new Battle(r.getObject(1,UUID.class),r.getInt(2),r.getInt(3),r.getString(4),encounter),id).getFirst();
+        var battle=db.query("SELECT battle_id,companion_hp,companion_max_hp,status,rules_version FROM game.t_battle WHERE battle_id=? FOR UPDATE",
+            (r,n)->new Battle(r.getObject(1,UUID.class),r.getInt(2),r.getInt(3),r.getString(4),encounter,r.getString(5)),id).getFirst();
+        BattleRulesVersion.requireSupported(battle.rulesVersion);
+        return battle;
     }
     public List<ItemDtos.ShopItem> shop() {
         game.lockPlayer(1);
