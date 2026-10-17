@@ -1,0 +1,19 @@
+{
+  "tool": "image_gen built-in",
+  "prompts": [
+    "Use case: stylized-concept. Production game sprite animation delivery, NOT a concept poster.\nReference image is character design reference only. Use ONLY RUU Stage 2 GLIDE: middle blue row, second evolution character, a slim young white-and-blue quadrupedal sky creature, long upright blue-tipped ears, azure feather-like shoulder/wing structures, four slender legs, long flowing blue-white tail, same anatomy and palette as that exact reference. Do not use baby Stage1, mature Stage3-5, MOA or NOX.\nGenerate a clean transparent RGBA sprite sheet, 4 columns by 2 rows, eight sequential distinct IDLE frames in reading order. Canvas 2048x1024, each cell 512x512, no gutters, labels, borders or grid. Character faces right in three-quarter side view, body fully inside each cell with large transparent margins. Four feet planted at the same local floor y=448 each frame; body centered around local x=256. The silhouette including tail/ears must fit within x=64..448,y=64..448.\nA genuine gentle IDLE loop: frame0 neutral; 1 small inhale; 2 chest subtly lifted and ear response; 3 exhale starts; 4 relaxed blink; 5 eyes reopen; 6 tiny settling feather motion; 7 returns near neutral ready for frame0. Maintain identical skull, face, eye spacing, torso length, leg count and lengths, wing feather count and tail structure in every frame. Keep planted feet fixed and preserve body scale. Small physical breathing and eyelid animation, not translation/rotation/scaling copies. No walking, flying, morphing, extra legs, particles, floor shadow, scenery, text, detached marks or background color. Fully transparent background with clean antialiased opaque subject. At 256px per frame the silhouette and anatomy must remain readable. All eight poses are for ONE same Stage2 character.",
+    "Edit target: supplied eight-frame RUU Stage2 sprite sheet. Repair ALPHA_DEFECT only, preserving the same character design and eight distinct sequential breathing/blink poses. Remove every detached cyan/blue/white background fleck, halo, fuzzy colored residue and any ground lines. Preserve complete ears, paws, wing feathers and tail. Actual transparent alpha background, not black/white/checkerboard pixels. Keep four columns by two rows, equal square cells, same eight poses in same order, no labels/grid. Crucial clean empty margin: proportionately fit each full character into the central 70% of its cell (at least 15% empty padding on ALL FOUR sides), no feature touches any cell boundary. Do not change anatomy, colors, feather structure, face, facing or character scale between poses. Align the planted feet to exactly the same local baseline within each cell. Do not create extra motion or change the blink sequence. No shadow or glow effects. Output clean high-resolution 2:1 transparent sprite sheet.",
+    null
+  ],
+  "reference": "design/visual-reference-v1/companions-concept.png",
+  "scope": "RUU Stage2 idle; not a replacement of Stage1 or existing Production art",
+  "repairBudget": {
+    "maximum": 3,
+    "previousNOXIdentityRepair": 1,
+    "currentRUUAlphaRepair": 1,
+    "currentRUURebuild": 1,
+    "total": 3
+  },
+  "normalization": "Uniform sheet resize 1024x512 and fixed 4x2 extraction only; no alpha erasure, per-frame rescaling or duplicate poses",
+  "productionEligible": false
+}
