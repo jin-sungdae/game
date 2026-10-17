@@ -1,0 +1,543 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "kind": {
+      "enum": [
+        "transparent",
+        "character",
+        "boundary",
+        "button",
+        "drag"
+      ]
+    },
+    "preflight": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "READY",
+            "FAIL",
+            "GUI_ENVIRONMENT_BLOCKED",
+            "NOT_VERIFIED"
+          ]
+        }
+      },
+      "required": [
+        "status"
+      ]
+    },
+    "coordinate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "y": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "classification": {
+          "enum": [
+            "transparent",
+            "character",
+            "boundary",
+            "button",
+            "drag"
+          ]
+        },
+        "visualVerified": {
+          "type": "boolean"
+        },
+        "frameFile": {
+          "type": "string",
+          "minLength": 1
+        },
+        "frameWallTime": {
+          "type": "number"
+        },
+        "alphaEvidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "verified": {
+              "type": "boolean"
+            },
+            "alpha": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "verified",
+            "alpha"
+          ]
+        },
+        "panelFrame": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            },
+            "width": {
+              "type": "number"
+            },
+            "height": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y",
+            "width",
+            "height"
+          ],
+          "additionalProperties": false
+        },
+        "captureDimensions": {
+          "type": "object",
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "width",
+            "height"
+          ],
+          "additionalProperties": false
+        },
+        "reviewMethod": {
+          "type": "string"
+        },
+        "frameSHA256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "capturePoint": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "x",
+            "y"
+          ],
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            }
+          }
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "classification",
+        "visualVerified"
+      ]
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "enum": [
+              "input",
+              "ready",
+              "heartbeat",
+              "end"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "down",
+              "up",
+              "drag"
+            ]
+          },
+          "source": {
+            "enum": [
+              "receiver",
+              "luma-monitor"
+            ]
+          },
+          "wallTime": {
+            "type": "number"
+          },
+          "uptime": {
+            "type": "number",
+            "minimum": 0
+          },
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          },
+          "windowId": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "pid": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "button": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "observedOnly": {
+            "type": "boolean"
+          },
+          "targetPid": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "observedWallTime": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "type",
+          "source",
+          "wallTime",
+          "uptime",
+          "windowId",
+          "pid",
+          "button",
+          "targetPid"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "input"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "kind",
+                "x",
+                "y"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "minLength": 1
+          },
+          "wallTime": {
+            "type": "number"
+          },
+          "timestampSource": {
+            "const": "log-observed"
+          }
+        },
+        "required": [
+          "kind",
+          "wallTime"
+        ]
+      }
+    },
+    "focus": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "complete": {
+          "type": "boolean"
+        },
+        "activations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "keyWindows": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "complete",
+        "activations",
+        "keyWindows"
+      ]
+    },
+    "recording": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "complete": {
+          "type": "boolean"
+        },
+        "windowId": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "file": {
+                "type": "string",
+                "minLength": 1
+              },
+              "wallTime": {
+                "type": "number"
+              },
+              "pts": {
+                "type": "number"
+              },
+              "width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "captureWallTime": {
+                "type": "number"
+              },
+              "observedWallTime": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "file",
+              "wallTime"
+            ]
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "complete",
+        "windowId",
+        "frames"
+      ]
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lumaPid": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "lumaWindowId": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "receiverPid": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "receiverWindowId": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": []
+    },
+    "interval": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": "number"
+        },
+        "end": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ]
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "complete": {
+          "type": "boolean"
+        },
+        "geometryStable": {
+          "type": "boolean"
+        },
+        "receiverFrontmost": {
+          "type": "boolean"
+        },
+        "monitorInstalled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "complete",
+        "geometryStable",
+        "receiverFrontmost",
+        "monitorInstalled"
+      ]
+    },
+    "expectedAction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "expectedTarget": {
+      "enum": [
+        "receiver",
+        "luma"
+      ]
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "runtimeSafe": {
+      "type": "boolean"
+    },
+    "expectedButton": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "error": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceHead": {
+          "type": "string"
+        },
+        "bundleSHA256": {
+          "type": "string"
+        },
+        "bundleRevisionDeclared": {
+          "type": "string"
+        },
+        "productionContractMatches": {
+          "type": "boolean"
+        }
+      }
+    },
+    "cleanup": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "processes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "process": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "userWindowMutations": {
+          "const": 0
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version",
+    "kind",
+    "preflight",
+    "coordinate",
+    "events",
+    "actions",
+    "focus",
+    "recording",
+    "identity",
+    "interval",
+    "coverage",
+    "completed",
+    "runtimeSafe",
+    "expectedButton"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LUMA native input trial evidence v1",
+  "description": "Collector-produced evidence. Schema validity alone does not mean PASS; input_evidence.analyze_trial checks temporal, identity, focus, visual and count invariants. wallTime is Unix epoch seconds; action times are log-observation times, not native-event timestamps. Coordinates use the collector-agreed global screen point system.",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "enum": [
+              "character",
+              "button",
+              "drag"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "expectedAction"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "drag"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "expectedAction": {
+            "const": "drag"
+          }
+        }
+      }
+    }
+  ]
+}

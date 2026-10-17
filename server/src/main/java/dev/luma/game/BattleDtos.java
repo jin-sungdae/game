@@ -6,8 +6,11 @@ public final class BattleDtos {
     public record PresentationEvent(String type,int damage) {}
     public record Hp(int hp,int maxHp) {}
     public record Reward(long gold,long exp,int bond) {}
+    /** Identity resolved from the persisted battle participant; species is not a start-time snapshot. */
+    public record Participant(long playerCompanionId,String species) {}
     public record Battle(UUID battleId,UUID encounterId,int turn,String status,String encounterStatus,
-                         Hp companion,Hp monster,List<String> events,Reward reward,List<PresentationEvent> presentationEvents) {}
+                         Hp companion,Hp monster,List<String> events,Reward reward,List<PresentationEvent> presentationEvents,
+                         Participant participant,String monsterCode) {}
     public record Collected(String monsterCode,String monsterName,long captureCount,Instant firstCapturedAt,Instant lastCapturedAt) {}
     public record Monster(String code,String name) {}
     public record Capture(UUID battleId,UUID encounterId,boolean success,double chance,Monster monster,
