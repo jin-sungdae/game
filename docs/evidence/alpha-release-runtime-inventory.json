@@ -31,6 +31,7 @@
     ".send(Event::Battle(api.battle(id, None)?))",
     ".send(Event::Battle(api.battle(id, Some(\"attack\"))?))",
     ".send(Event::Battle(api.battle(id, Some(\"start\"))?))",
+    ".send(Event::Battle(api.skill(id, command, &code, turn)?))",
     ".send(Event::Bootstrap(bootstrap))",
     ".send(Event::Bootstrap(bootstrap))",
     ".send(Event::Bootstrap(bootstrap))",

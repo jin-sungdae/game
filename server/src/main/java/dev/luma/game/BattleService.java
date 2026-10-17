@@ -12,7 +12,8 @@ public class BattleService {
     private final JdbcTemplate db;
     private final GameRepository game;
     private final RandomSource random;
-    public BattleService(JdbcTemplate db,GameRepository game,RandomSource random) {this.db=db;this.game=game;this.random=random;}
+    private final SkillStateStore skills;
+    public BattleService(JdbcTemplate db,GameRepository game,RandomSource random,SkillStateStore skills) {this.db=db;this.game=game;this.random=random;this.skills=skills;}
     record Encounter(UUID id,long monsterId,int level,String rarity,String status,String code,String name) {}
     record Row(UUID id,UUID encounter,long companionId,int hp,int maxHp,int monsterHp,int monsterMax,int attack,int counter,int turn,String status,String rulesVersion) {}
     private void playerLock() {game.lockPlayer(1);game.expire(1,game.now());}
@@ -56,7 +57,17 @@ public class BattleService {
             SELECT m.code FROM game.t_battle b JOIN game.m_monster m USING(monster_id) WHERE b.battle_id=?
             """,String.class,b.id);
         return new BattleDtos.Battle(b.id,b.encounter,b.turn,b.status,status,new BattleDtos.Hp(b.hp,b.maxHp),
-            new BattleDtos.Hp(b.monsterHp,b.monsterMax),events,rewards.isEmpty()?null:rewards.getFirst(),presentation,participant,monsterCode);
+            new BattleDtos.Hp(b.monsterHp,b.monsterMax),events,rewards.isEmpty()?null:rewards.getFirst(),presentation,participant,monsterCode,skillOptions(b));
+    }
+    private List<BattleDtos.SkillOption> skillOptions(Row b) {
+        var state=skills.load(b.id);
+        var c=db.queryForMap("SELECT s.code,c.evolution_stage,c.level FROM game.t_player_companion c JOIN game.m_species s USING(species_id) WHERE c.player_companion_id=?",b.companionId);
+        String species=state==null?(String)c.get("code"):state.species;
+        int stage=state==null?((Number)c.get("evolution_stage")).intValue():state.stage;
+        int level=state==null?((Number)c.get("level")).intValue():state.level;
+        final var saved=state;
+        return SkillCatalog.unlocked(species,stage,level).stream().filter(x->x.released()&&x.definition().kind()==SkillDefinitions.Kind.ACTIVE)
+            .map(x->new BattleDtos.SkillOption(x.definition().code(),x.name(),saved==null?0:saved.ready.getOrDefault(x.definition().code(),0),x.assetStatus())).toList();
     }
     public BattleDtos.Battle start(UUID id) {
         playerLock();var e=encounter(id);
@@ -99,6 +110,50 @@ public class BattleService {
             events.add("MONSTER_WAIT");return b.hp;
         }
         events.add("MONSTER_ATTACK");return Math.max(0,b.hp-b.counter);
+    }
+    /** Opt-in skill turn; legacy battles without a state row retain exact ALPHA_V1 behavior. */
+    public BattleDtos.Battle skill(UUID id,SkillCatalog.Entry entry,int expectedTurn) {
+        var e=lockBattleEncounter(id);var b=row(id);
+        if(!b.status.equals("ACTIVE"))throw new GameFault(409,"BATTLE_ALREADY_TERMINAL");active(e);
+        if(b.turn!=expectedTurn)throw new GameFault(409,"STALE_TURN");
+        if(!entry.released()||entry.definition().kind()!=SkillDefinitions.Kind.ACTIVE)throw new GameFault(409,"SKILL_NOT_CASTABLE");
+        var state=skills.load(id);
+        if(state==null){
+            state=new SkillStateStore.State();
+            var identity=db.queryForMap("SELECT s.code,c.evolution_stage,c.level FROM game.t_player_companion c JOIN game.m_species s USING(species_id) WHERE c.player_companion_id=?",b.companionId);
+            state.species=(String)identity.get("code");state.stage=((Number)identity.get("evolution_stage")).intValue();state.level=((Number)identity.get("level")).intValue();
+            state.companion=new SkillResolution.Fighter(b.hp,b.maxHp,0,0,0,0);state.monster=new SkillResolution.Fighter(b.monsterHp,b.monsterMax,0,0,0,0);
+        }
+        if(SkillRules.candidateAvailability(entry,state.species,state.stage,state.level)!=SkillRules.Availability.AVAILABLE)throw new GameFault(409,"SKILL_LOCKED");
+        if(state.ready.getOrDefault(entry.definition().code(),0)>b.turn)throw new GameFault(409,"SKILL_COOLDOWN");
+        state.companion=state.companion.hp(b.hp);state.monster=state.monster.hp(b.monsterHp);
+        // One highest unlocked passive, deterministic and no recursive trigger chain.
+        var passive=SkillCatalog.unlocked(state.species,state.stage,state.level).stream().filter(x->x.definition().kind()==SkillDefinitions.Kind.PASSIVE).max(Comparator.comparingInt(x->x.definition().unlockStage()));
+        if(passive.isPresent()) {var p=SkillResolution.apply(passive.get(),state.level,state.companion,state.monster);state.companion=p.caster();state.monster=p.target();}
+        var result=SkillResolution.apply(entry,state.level,state.companion,state.monster);
+        state.companion=result.caster();state.monster=result.target();
+        state.ready.put(entry.definition().code(),Math.addExact(b.turn,entry.definition().cooldownTurns()+1));
+        var events=new ArrayList<String>();events.add("PLAYER_SKILL");
+        int monster=state.monster.hp(),hp=state.companion.hp();String status="ACTIVE";
+        // Status ticks are part of this authoritative turn, never wall-clock callbacks.
+        state.monster=state.monster.tick();monster=state.monster.hp();
+        if(monster==0){status="VICTORY";events.add("VICTORY");reward(b,e,events);db.update("UPDATE game.t_encounter SET expires_at=clock_timestamp()+interval '60 seconds' WHERE encounter_id=?",e.id);}
+        else {
+            var choice=MonsterSkillPolicy.choose(e.code,e.level,b.turn,monster,b.monsterMax,state.ready).filter(SkillCatalog.Entry::released);
+            if(choice.isPresent()) {
+                var selected=choice.get();var reply=MonsterSkillPolicy.resolve(selected,e.level,state.monster,state.companion);
+                state.monster=reply.caster();state.companion=reply.target();monster=state.monster.hp();
+                state.ready.put(selected.definition().code(),Math.addExact(b.turn,selected.definition().cooldownTurns()+1));events.add("MONSTER_SKILL");
+            } else {
+                int raw=b.hp-counter(b,e,events);
+                int damage=Math.max(0,raw-result.target().weaken()-state.companion.guard());
+                state.companion=state.companion.hp(hp-damage);
+            }
+            state.companion=state.companion.tick();hp=state.companion.hp();
+            if(hp==0){status="DEFEAT";events.add("DEFEAT");resolve(e.id,"PLAYER_DEFEATED");}
+        }
+        skills.save(id,state);save(b,hp,monster,status);
+        return dto(row(id),events,List.of(new BattleDtos.PresentationEvent("PLAYER_SKILL",b.monsterHp-monster)));
     }
     public BattleDtos.Battle attack(UUID id) {
         var e=lockBattleEncounter(id);var b=row(id);

@@ -46,3 +46,19 @@ pub fn choose(weights: [u32; 4], unit: f64) -> Option<Behavior> {
     }
     None // zero weights: safely remain idle and reschedule.
 }
+
+/// Discourage the last autonomous choice without prohibiting the only eligible behavior.
+/// Called at decision boundaries, never during an active action or on every animation frame.
+pub fn suppress_recent(mut weights: [u32; 4], recent: Option<Behavior>) -> [u32; 4] {
+    let index = match recent {
+        Some(Behavior::Walking) => 0,
+        Some(Behavior::Sitting) => 1,
+        Some(Behavior::Looking) => 2,
+        Some(Behavior::Sleeping) => 3,
+        None => return weights,
+    };
+    if weights[index] > 0 {
+        weights[index] = (weights[index] / 4).max(1);
+    }
+    weights
+}

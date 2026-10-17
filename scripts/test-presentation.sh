@@ -18,3 +18,6 @@ node --test tests/presentation/spawn.cjs
 NODE_PATH="$PWD/node_modules" node --test tests/presentation/nebla-ui.cjs
 
 ./node_modules/.bin/tsc tests/live/nebla.tsx --noEmit --module ESNext --moduleResolution bundler --target ES2022 --jsx react-jsx --resolveJsonModule --esModuleInterop --strict --skipLibCheck
+
+./node_modules/.bin/tsc src/presentation/skill.ts --outDir "$LUMA_PRESENTATION_TEST_DIR" --module commonjs --target ES2022 --strict --skipLibCheck
+node --test tests/presentation/skill.cjs

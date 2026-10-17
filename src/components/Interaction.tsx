@@ -1,3 +1,4 @@
+import { SkillStatus } from './SkillStatus';
 import { CollectionDex } from './CollectionDex';
 import { ItemInteraction } from './ItemInteraction';
 import { EvolutionInteraction } from './EvolutionInteraction';
@@ -20,7 +21,9 @@ export function Interaction() {
  {b && <><HpBar name={monsterName} hp={b.monster.hp} max={b.monster.maxHp}/><HpBar name={identity?.evolutionName ?? "MOA"} hp={b.companion.hp} max={b.companion.maxHp}/></>}
  <p className="gp-status" role="status">{g?.busy?(v?.phase==='CAPTURING'?'Capturing…':'Connecting…'):result}</p>
  {g?.error && <p className="gp-error" role="alert">{g.error}. Refresh to check the result.</p>}
+ <SkillStatus cue={b?.skillCue}/>
  <div className="gp-actions">
+ {b?.status==='ACTIVE'&&b.skills?.map(s=><button key={s.code} disabled={g?.busy||items?.busy||s.readyTurn>b.turn} onClick={()=>void action('skill:'+s.code)}>{s.name}{s.readyTurn>b.turn?` · ${s.readyTurn-b.turn} turns`: ''}</button>)}
  {b?.status==='ACTIVE'&&<button disabled={g?.busy||items?.busy} onClick={()=>void action('battle-items')}>ITEM</button>}
  {!b&&g?.encounterId&&<button disabled={g.busy||items?.busy} onClick={()=>void action('battle')}>Start battle</button>}
  {active&&<><button className="gp-primary" disabled={g?.busy||items?.busy||b?.status!=='ACTIVE'} onClick={()=>void action('attack')}>ATTACK</button><button className="gp-capture-button" disabled={g?.busy||items?.busy} onClick={()=>void action('capture')}>CAPTURE</button><button className="gp-quiet" disabled={g?.busy||items?.busy} onClick={()=>void action('ignore')}>Ignore</button></>}

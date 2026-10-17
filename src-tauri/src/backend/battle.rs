@@ -39,6 +39,40 @@ pub struct Battle {
     #[serde(default)]
     pub presentation_events: Vec<DamageEvent>,
     pub reward: Option<Reward>,
+    #[serde(default)]
+    pub skills: Vec<SkillOption>,
+    #[serde(default)]
+    pub skill_cue: Option<SkillCue>,
+}
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
+pub struct SkillOption {
+    pub code: String,
+    pub name: String,
+    pub ready_turn: u32,
+    pub asset_status: String,
+}
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
+pub struct SkillPhase {
+    pub phase: String,
+    pub duration_ms: u32,
+}
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
+pub struct SkillCue {
+    pub command_id: uuid::Uuid,
+    pub skill_code: String,
+    pub species: String,
+    pub cast_motion: String,
+    pub element: String,
+    pub asset_status: String,
+    pub phases: Vec<SkillPhase>,
+}
+#[derive(Deserialize)]
+pub struct SkillResult {
+    pub battle: Battle,
+    pub cue: SkillCue,
 }
 impl Battle {
     fn valid(&self) -> bool {
@@ -97,6 +131,7 @@ pub enum Command {
     Encounter,
     StartBattle(uuid::Uuid),
     Attack(uuid::Uuid),
+    Skill(uuid::Uuid, uuid::Uuid, String, u32),
     Capture(uuid::Uuid),
     LoadCollection,
     Ignore(uuid::Uuid),
@@ -130,6 +165,24 @@ impl Presentation {
             "collection" => Command::LoadCollection,
             "ignore" => Command::Ignore(self.encounter_id?),
             "refresh" => Command::Refresh(self.battle.as_ref()?.battle_id),
+            a if a.starts_with("skill:") => {
+                let battle = self.battle.as_ref()?;
+                let code = a.strip_prefix("skill:")?;
+                if battle.status != Status::Active
+                    || !battle
+                        .skills
+                        .iter()
+                        .any(|s| s.code == code && s.ready_turn <= battle.turn)
+                {
+                    return None;
+                }
+                Command::Skill(
+                    battle.battle_id,
+                    uuid::Uuid::new_v4(),
+                    code.into(),
+                    battle.turn,
+                )
+            }
             _ => return None,
         };
         self.busy = true;
@@ -141,7 +194,12 @@ impl Presentation {
         self.error = error;
     }
     pub fn apply_battle(&mut self, b: Battle) {
-        if self.encounter_id == Some(b.encounter_id) {
+        if self.encounter_id == Some(b.encounter_id)
+            && !self
+                .battle
+                .as_ref()
+                .is_some_and(|old| old.battle_id == b.battle_id && old.turn > b.turn)
+        {
             if !b.events.is_empty() {
                 self.feedback = Some(b.events.join(" · "));
             }
@@ -150,6 +208,47 @@ impl Presentation {
     }
 }
 impl Api {
+    pub fn skill(
+        &self,
+        id: uuid::Uuid,
+        command: uuid::Uuid,
+        code: &str,
+        turn: u32,
+    ) -> Result<Battle, &'static str> {
+        let result: SkillResult = self
+            .request_json(
+                &format!("/api/v1/battles/{id}/skills"),
+                Some(
+                    &serde_json::json!({"commandId":command,"skillCode":code,"expectedTurn":turn}),
+                ),
+            )?
+            .ok_or("missing skill result")?;
+        if !result.battle.valid()
+            || result.battle.battle_id != id
+            || Some(result.battle.turn) != turn.checked_add(1)
+            || result.cue.command_id != command
+            || result.cue.skill_code != code
+            || result.cue.phases.len() != 6
+            || result.cue.phases.iter().enumerate().any(|(i, p)| {
+                let expected = [
+                    "CAST_START",
+                    "CHARGE",
+                    "RELEASE",
+                    "PROJECTILE",
+                    "IMPACT",
+                    "RECOVERY",
+                ][i];
+                (p.phase != expected && !(i == 3 && p.phase == "AREA"))
+                    || p.duration_ms == 0
+                    || p.duration_ms > 2000
+            })
+        {
+            return Err("invalid skill result");
+        }
+        let mut battle = result.battle;
+        battle.skill_cue = Some(result.cue);
+        Ok(battle)
+    }
     pub fn battle(&self, id: uuid::Uuid, action: Option<&str>) -> Result<Battle, &'static str> {
         let path = match action {
             Some("start") => format!("/api/v1/encounters/{id}/battle"),
@@ -205,5 +304,42 @@ impl Api {
             return Err("invalid resolution");
         }
         Ok(r)
+    }
+}
+
+#[cfg(test)]
+mod skill_tests {
+    use super::*;
+    fn battle(turn: u32) -> Battle {
+        serde_json::from_value(serde_json::json!({"battleId":uuid::Uuid::from_u128(2),"encounterId":uuid::Uuid::from_u128(1),"turn":turn,"status":"ACTIVE","encounterStatus":"ACTIVE","companion":{"hp":100,"maxHp":100},"monster":{"hp":30,"maxHp":30},"events":[],"reward":null,"skills":[{"code":"MOA_S1","name":"Heal","readyTurn":2,"assetStatus":"ASSET_REQUIRED"}]})).unwrap()
+    }
+    #[test]
+    fn native_skill_command_uses_server_availability_and_unique_identity() {
+        let mut p = Presentation {
+            encounter_id: Some(uuid::Uuid::from_u128(1)),
+            battle: Some(battle(1)),
+            ..Default::default()
+        };
+        assert!(p.command("skill:MOA_S1").is_none());
+        p.battle = Some(battle(2));
+        assert!(p.command("skill:UNKNOWN").is_none());
+        let Some(Command::Skill(id, command, code, turn)) = p.command("skill:MOA_S1") else {
+            panic!("skill command missing")
+        };
+        assert_eq!(id, uuid::Uuid::from_u128(2));
+        assert!(!command.is_nil());
+        assert_eq!(code, "MOA_S1");
+        assert_eq!(turn, 2);
+        assert!(p.command("skill:MOA_S1").is_none());
+    }
+    #[test]
+    fn stale_replay_cannot_rewind_current_hp_or_turn() {
+        let mut p = Presentation {
+            encounter_id: Some(uuid::Uuid::from_u128(1)),
+            battle: Some(battle(3)),
+            ..Default::default()
+        };
+        p.apply_battle(battle(1));
+        assert_eq!(p.battle.unwrap().turn, 3);
     }
 }
