@@ -26,7 +26,7 @@ class BattleRulesVersionIntegrationTest {
 
     BattleDtos.Battle start(String code,int monsterLevel,int level) {
         db.update("UPDATE game.m_monster SET use_yn=(code=?)",code);
-        db.update("UPDATE game.t_player_companion SET level=?,exp=?",level,50L*level*(level-1));
+        db.update("UPDATE game.t_player_companion SET level=?,exp=?",level,GrowthCurveB.threshold(level));
         var encounter=game.createEncounter();
         db.update("UPDATE game.t_encounter SET monster_level=? WHERE encounter_id=?",monsterLevel,encounter.encounterId());
         return battles.start(encounter.encounterId());

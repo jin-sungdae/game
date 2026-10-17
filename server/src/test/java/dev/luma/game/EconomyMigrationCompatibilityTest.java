@@ -43,7 +43,8 @@ class EconomyMigrationCompatibilityTest {
         var result=new LinkedHashMap<String,String>();
         for(String table:tables){
             if(!table.matches("[a-z_]+"))throw new IllegalArgumentException("Invalid table");
-            result.put(table,db.queryForObject("SELECT md5(COALESCE(jsonb_agg(to_jsonb(t) ORDER BY to_jsonb(t)::text)::text,'[]')) FROM game."+table+" t",String.class));
+            String projection=table.equals("t_player_companion")?"to_jsonb(t)-'growth_policy_version'":"to_jsonb(t)";
+            result.put(table,db.queryForObject("SELECT md5(COALESCE(jsonb_agg("+projection+" ORDER BY ("+projection+")::text)::text,'[]')) FROM game."+table+" t",String.class));
         }
         return result;
     }
