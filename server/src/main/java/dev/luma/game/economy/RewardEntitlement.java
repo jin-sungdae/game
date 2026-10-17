@@ -32,6 +32,7 @@ public record RewardEntitlement(UUID id, Key key, Terms terms) {
             return new Key(player, Type.WEEKLY, week, slot, null, null);
         }
         public static Key collection(long player, String campaign, Type type, long milestone) {
+            if (type == Type.WEEKLY) throw new IllegalArgumentException("Collection type required");
             return new Key(player, type, null, null, campaign, milestone);
         }
     }
