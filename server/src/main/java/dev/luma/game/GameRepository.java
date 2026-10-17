@@ -31,6 +31,12 @@ public class GameRepository {
     public Instant now() { return jdbc.queryForObject("SELECT clock_timestamp()",OffsetDateTime.class).toInstant(); }
     public void expire(long playerId, Instant now) {
         var time=OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC);
+        // Expiry is also a battle outcome mutation: future rules must fail closed.
+        jdbc.queryForList("""
+            SELECT b.rules_version FROM game.t_encounter e
+            JOIN game.t_battle b USING(encounter_id)
+            WHERE e.player_id=? AND e.status='ACTIVE' AND e.expires_at<=? AND b.status<>'ACTIVE'
+            """,String.class,playerId,time).forEach(BattleRulesVersion::requireSupported);
         jdbc.update("""
             UPDATE game.t_encounter e SET status=CASE WHEN EXISTS
               (SELECT 1 FROM game.t_battle b WHERE b.encounter_id=e.encounter_id AND b.status='VICTORY') THEN 'DEFEATED' ELSE 'EXPIRED' END,
