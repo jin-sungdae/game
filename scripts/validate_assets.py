@@ -120,7 +120,9 @@ def validate(root=ROOT, allow_missing=False):
                     raise ValueError('identity/canvas/anchor mismatch')
                 if type(m['display']['width']) not in (int,float) or not 0 < m['display']['width'] <= 256:
                     raise ValueError('invalid display width')
-                counts=dict(COUNTS)
+                # Explicit user-approved partial delivery: RUU Stage3 IDLE only.
+                partial_idle = species == "ruu" and int(stage) == 3
+                counts = dict(idle=8) if partial_idle else dict(COUNTS)
                 if species=='moa' and int(stage)==1 and 'idleSequences' in m:
                     if m['idleSequences']!={'breath':'breath','blink':'blink','blinkIntervalMs':[3000,7000]}:raise ValueError('invalid idle sequences')
                     counts.update(breath=4,blink=3)
@@ -151,6 +153,7 @@ def validate(root=ROOT, allow_missing=False):
                 if len(files) != count:
                     errors.append(f'{prefix}/{clip}: frame count {len(files)}, expected {count}')
                 indices = set()
+                clip_digests = []
                 for p in files:
                     match = re.fullmatch(rf'{clip}_(\d+)\.png', p.name, re.IGNORECASE)
                     if match:
@@ -159,7 +162,9 @@ def validate(root=ROOT, allow_missing=False):
                             errors.append(f'{prefix}/{clip}: duplicate frame index {index}')
                         indices.add(index)
                     if p.suffix.lower() == '.png':
-                        errors.extend(f'{prefix}/{clip}/{p.name}: {e}' for e in png_errors(p))
+                        errors.extend(f'{prefix}/{clip}/{p.name}: {e}' for e in png_errors(p, require_transparency=partial_idle, bounds=[] if partial_idle else None, pixel_digests=clip_digests if partial_idle else None))
+                if partial_idle and len(clip_digests) != len(set(clip_digests)):
+                    errors.append(f'{prefix}/{clip}: duplicate decoded frame pixels')
     pip_errors, pip_pending = validate_pip_animation(root, allow_missing)
     return errors + pip_errors, pending + pip_pending
 

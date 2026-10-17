@@ -56,6 +56,9 @@ class AssetTests(unittest.TestCase):
             for url in definition['stages'].values():
                 stage=(self.root/'public'/url.lstrip('/')).parent
                 if not (stage/'manifest.json').exists(): continue
+                # The independently delivered RUU IDLE is not an empty legacy scaffold.
+                manifest=json.loads((stage/'manifest.json').read_text())
+                if (manifest['species'],manifest['stage']) == ('ruu',3): continue
                 for clip,count in validator.COUNTS.items():
                     for i in range(count):
                         (stage/clip/f'{clip}_{i:02}.png').write_bytes(png())

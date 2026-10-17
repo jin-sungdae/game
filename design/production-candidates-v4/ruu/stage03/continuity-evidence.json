@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "scope": "RUU Stage 3 offline part rig validation; not native GUI acceptance",
+  "baseApproval": "User approved base-v3 and part rigging",
+  "dimensions": [
+    256,
+    256
+  ],
+  "frames": 8,
+  "fixedRegionChangedPixels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "detachedAlphaPixels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "canvasBorderAlphaPixels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "alphaComponents": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "boundsPerFrame": [
+    17,
+    25,
+    238,
+    228
+  ],
+  "anchor": [
+    0.5,
+    1
+  ],
+  "anchorDriftPixels": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "adjacentMeanAbsoluteRGBA": [
+    0.16073989868164062,
+    0.15090179443359375,
+    0.1644134521484375,
+    0.09563064575195312,
+    0.06464385986328125,
+    0.13308334350585938,
+    0.177520751953125,
+    0.19113540649414062
+  ],
+  "loopBoundary": "last array entry is frame7 to frame0; measurement only, no new threshold",
+  "browserReview": {
+    "url": "http://127.0.0.1:5180/tests/live/ruu-stage3-validation.html",
+    "framesInspected": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "backgrounds": [
+      "dark",
+      "light"
+    ],
+    "observed": "Fixed head and feet; subtle torso and folded-wing breathing. Existing AnimationController/Clock advances frames. Play and frame stepping inspected.",
+    "limitations": "Browser diagnostic preview only; native NSPanel, reduced motion, focus and Windows GUI not exercised."
+  },
+  "nativeGui": "DEFERRED_GUI",
+  "productionAcceptance": "NOT_COMPLETE",
+  "runtimeTest": "PASS after human-approved test sampling correction180ms to10ms; original failure remains recorded in PR history",
+  "humanReviewRequired": true,
+  "humanReviewScope": "Production artwork/clip and native GUI acceptance"
+}
