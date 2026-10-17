@@ -36,6 +36,7 @@ class EconomyMigrationCompatibilityTest {
             var checksums=db.queryForList("SELECT version,checksum FROM game.flyway_schema_history ORDER BY installed_rank");
             Flyway.configure().dataSource(url,user,password).schemas("game").defaultSchema("game").load().migrate();
             assertEquals(before,snapshot(db,tables));
+                assertEquals(0,db.queryForObject("SELECT active_selection_revision FROM game.t_player WHERE player_id=1",Long.class));
             for(var stage:existingStages)assertEquals(stage,db.queryForMap("SELECT species_id,evolution_stage,name FROM game.m_species_evolution WHERE species_id=? AND evolution_stage=?",stage.get("species_id"),stage.get("evolution_stage")));
             assertEquals(15,db.queryForObject("SELECT count(*) FROM game.m_species_evolution",Integer.class));
             assertEquals(checksums,db.queryForList("SELECT version,checksum FROM game.flyway_schema_history WHERE version IS NULL OR version::int<=11 ORDER BY installed_rank"));
@@ -47,7 +48,7 @@ class EconomyMigrationCompatibilityTest {
         var result=new LinkedHashMap<String,String>();
         for(String table:tables){
             if(!table.matches("[a-z_]+"))throw new IllegalArgumentException("Invalid table");
-            String projection=table.equals("t_player_companion")?"to_jsonb(t)-'growth_policy_version'":"to_jsonb(t)";
+            String projection=table.equals("t_player_companion")?"to_jsonb(t)-'growth_policy_version'":table.equals("t_player")?"to_jsonb(t)-'active_selection_revision'":"to_jsonb(t)";
             result.put(table,db.queryForObject("SELECT md5(COALESCE(jsonb_agg("+projection+" ORDER BY ("+projection+")::text)::text,'[]')) FROM game."+table+" t",String.class));
         }
         return result;

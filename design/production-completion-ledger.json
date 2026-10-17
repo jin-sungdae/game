@@ -1,0 +1,868 @@
+{
+  "schemaVersion": 1,
+  "overallStatus": "IN_PROGRESS",
+  "mainSha": "b0adfc792bfe667615a05bd982fa4f3dc9229dff",
+  "productionReady": false,
+  "interpretation": "AUTOMATED_READY is scoped test evidence, not merge, deployment, artwork approval or GUI acceptance. Existing Alpha assets remain preserved.",
+  "objectives": [
+    {
+      "id": 1,
+      "name": "Companion species",
+      "status": "IN_PROGRESS"
+    },
+    {
+      "id": 2,
+      "name": "Five-stage evolution",
+      "status": "IN_PROGRESS",
+      "dependency": "PR90 and durable selection follow-up; desktop command client remains pending"
+    },
+    {
+      "id": 3,
+      "name": "Companion production PNG",
+      "status": "ASSET_REQUIRED"
+    },
+    {
+      "id": 4,
+      "name": "Companion production animation",
+      "status": "ASSET_REQUIRED"
+    },
+    {
+      "id": 5,
+      "name": "Companion living behavior",
+      "status": "GUI_NOT_VERIFIED",
+      "dependency": "Existing PR82-84 behavior reused; missing clips prevent full visual acceptance"
+    },
+    {
+      "id": 6,
+      "name": "Monster100 production PNG",
+      "status": "ASSET_REQUIRED"
+    },
+    {
+      "id": 7,
+      "name": "Monster100 production animation",
+      "status": "ASSET_REQUIRED"
+    },
+    {
+      "id": 8,
+      "name": "Monster100 living behavior",
+      "status": "BLOCKED",
+      "dependency": "Approved identity mapping and body-specific production artwork"
+    },
+    {
+      "id": 9,
+      "name": "Level100",
+      "status": "AUTOMATED_READY",
+      "dependency": "PR89 remains Draft; real user save preflight NOT_RUN"
+    },
+    {
+      "id": 10,
+      "name": "Companion active/passive skills",
+      "status": "IN_PROGRESS",
+      "dependency": "Existing server execution reused; unapproved upgrade/balance policies remain blocked"
+    },
+    {
+      "id": 11,
+      "name": "Monster100 skills",
+      "status": "BLOCKED",
+      "dependency": "Identity and skill-balance approval; unreleased catalog is not production execution"
+    },
+    {
+      "id": 12,
+      "name": "Skill VFX",
+      "status": "ASSET_REQUIRED"
+    },
+    {
+      "id": 13,
+      "name": "Evolution VFX",
+      "status": "ASSET_REQUIRED"
+    },
+    {
+      "id": 14,
+      "name": "Battle VFX",
+      "status": "ASSET_REQUIRED"
+    },
+    {
+      "id": 15,
+      "name": "Monster tier/spawn",
+      "status": "BLOCKED",
+      "dependency": "Tier bands approved; per-species identity/tier/rarity mapping not approved"
+    },
+    {
+      "id": 16,
+      "name": "Capture/discovery/collection",
+      "status": "IN_PROGRESS",
+      "dependency": "Existing30 identity retained; new100 mapping pending"
+    },
+    {
+      "id": 17,
+      "name": "Persistence/recovery/idempotency",
+      "status": "IN_PROGRESS",
+      "dependency": "Selection revision and real ABA integration added; full expanded-content restart acceptance pending"
+    },
+    {
+      "id": 18,
+      "name": "macOS release",
+      "status": "GUI_NOT_VERIFIED"
+    },
+    {
+      "id": 19,
+      "name": "Windows release",
+      "status": "NOT_STARTED"
+    },
+    {
+      "id": 20,
+      "name": "Full release validation",
+      "status": "IN_PROGRESS",
+      "dependency": "Alpha regression gates do not certify expanded production content"
+    }
+  ],
+  "companions": [
+    {
+      "species": "MOA",
+      "stage": 1,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "MOA",
+      "stage": 2,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "MOA",
+      "stage": 3,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "MOA",
+      "stage": 4,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "MOA",
+      "stage": 5,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "RUU",
+      "stage": 1,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "BLOCKED",
+      "blockingPr": 87
+    },
+    {
+      "species": "RUU",
+      "stage": 2,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "BLOCKED",
+      "blockingPr": 88
+    },
+    {
+      "species": "RUU",
+      "stage": 3,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "RUU",
+      "stage": 4,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "RUU",
+      "stage": 5,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "NOX",
+      "stage": 1,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "BLOCKED",
+      "blockingPr": 88
+    },
+    {
+      "species": "NOX",
+      "stage": 2,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "NOX",
+      "stage": 3,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "NOX",
+      "stage": 4,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    },
+    {
+      "species": "NOX",
+      "stage": 5,
+      "status": "ASSET_REQUIRED",
+      "fullRequiredActionCoverage": false,
+      "repairState": "NOT_STARTED",
+      "blockingPr": null
+    }
+  ],
+  "monsters": [
+    {
+      "conceptId": "M001",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M002",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M003",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M004",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M005",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M006",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M007",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M008",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M009",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M010",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M011",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M012",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M013",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M014",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M015",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M016",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M017",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M018",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M019",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M020",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M021",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M022",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M023",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M024",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M025",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M026",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M027",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M028",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M029",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M030",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M031",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M032",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M033",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M034",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M035",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M036",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M037",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M038",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M039",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M040",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M041",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M042",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M043",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M044",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M045",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M046",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M047",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M048",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M049",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M050",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M051",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M052",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M053",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M054",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M055",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M056",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M057",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M058",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M059",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M060",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M061",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M062",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M063",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M064",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M065",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M066",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M067",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M068",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M069",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M070",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M071",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M072",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M073",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M074",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M075",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M076",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M077",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M078",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M079",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M080",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M081",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M082",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M083",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M084",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M085",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M086",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M087",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M088",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M089",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M090",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M091",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M092",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M093",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M094",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M095",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M096",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M097",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M098",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M099",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    },
+    {
+      "conceptId": "M100",
+      "productionSpeciesId": null,
+      "status": "BLOCKED",
+      "reason": "MAPPING_REVIEW_REQUIRED; no automatic mapping to existing30"
+    }
+  ],
+  "assetRecovery": {
+    "pr87": {
+      "status": "BLOCKED",
+      "reason": "AUTO_REVIEW_MAX_ITERATIONS=3; HUMAN_REVIEW_REQUIRED",
+      "approvedFrames": 0,
+      "registeredClips": 0
+    },
+    "pr88": {
+      "status": "BLOCKED",
+      "reason": "AUTO_REVIEW_MAX_ITERATIONS=3; HUMAN_REVIEW_REQUIRED",
+      "approvedFrames": 0,
+      "registeredClips": 0
+    },
+    "otherForms": "Independent production work remains available; these PR limits do not block unrelated tasks"
+  },
+  "gui": {
+    "diagnosticBrowser": "RUU Stage2 candidate loop inspected; VALIDATION_FAILED",
+    "macOSNative": "DEFERRED_GUI",
+    "windowsNative": "DEFERRED_GUI"
+  },
+  "nextSequentialTasks": [
+    "Finish durable selection tests and Draft delivery",
+    "Connect Rust evolution intent to structured idempotent command",
+    "Continue independent artwork and platform work without resetting blocked PR repair budgets"
+  ]
+}

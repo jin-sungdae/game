@@ -18,6 +18,9 @@ public class EvolutionRepository {
         if (rows.size()!=1) throw new GameUnavailable("Exactly one active companion required");
         return rows.getFirst();
     }
+    public long selectionRevision(long playerId) {
+        return jdbc.queryForObject("SELECT active_selection_revision FROM game.t_player WHERE player_id=?",Long.class,playerId);
+    }
     public String nextName(String species, int stage) {
         var rows = jdbc.query("""
             SELECT e.name FROM game.m_species_evolution e JOIN game.m_species s USING(species_id)
