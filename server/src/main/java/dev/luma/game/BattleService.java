@@ -45,8 +45,16 @@ public class BattleService {
         var rewards=db.query("SELECT gold_reward,exp_reward,bond_reward FROM game.t_reward WHERE encounter_id=?",
             (r,n)->new BattleDtos.Reward(r.getLong(1),r.getLong(2),r.getInt(3)),b.encounter);
         String status=db.queryForObject("SELECT status FROM game.t_encounter WHERE encounter_id=?",String.class,b.encounter);
+        // Follow the battle FK, never the currently active companion. No historical stage/level is stored.
+        var participant=db.queryForObject("""
+            SELECT c.player_companion_id,s.code FROM game.t_player_companion c
+            JOIN game.m_species s USING(species_id) WHERE c.player_companion_id=?
+            """,(r,n)->new BattleDtos.Participant(r.getLong(1),r.getString(2)),b.companionId);
+        String monsterCode=db.queryForObject("""
+            SELECT m.code FROM game.t_battle b JOIN game.m_monster m USING(monster_id) WHERE b.battle_id=?
+            """,String.class,b.id);
         return new BattleDtos.Battle(b.id,b.encounter,b.turn,b.status,status,new BattleDtos.Hp(b.hp,b.maxHp),
-            new BattleDtos.Hp(b.monsterHp,b.monsterMax),events,rewards.isEmpty()?null:rewards.getFirst(),presentation);
+            new BattleDtos.Hp(b.monsterHp,b.monsterMax),events,rewards.isEmpty()?null:rewards.getFirst(),presentation,participant,monsterCode);
     }
     public BattleDtos.Battle start(UUID id) {
         playerLock();var e=encounter(id);
