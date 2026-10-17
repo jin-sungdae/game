@@ -8,9 +8,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.test.context.*;
+import org.springframework.test.annotation.DirtiesContext;
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
+@SpringBootTest(properties="spring.datasource.hikari.maximum-pool-size=2")
 @DirtiesContext(classMode=DirtiesContext.ClassMode.AFTER_CLASS)
 class EconomyMigrationCompatibilityTest {
     @DynamicPropertySource static void database(DynamicPropertyRegistry r){GameIntegrationTest.database(r);}
