@@ -118,6 +118,23 @@ impl World {
         self.view.identity = Some(value.active_companion.clone());
         self.bootstrap = Some(value);
     }
+    pub fn apply_evolved_command(
+        &mut self,
+        request: crate::backend::evolution::Request,
+        value: crate::backend::evolution::Result,
+        current: crate::backend::Bootstrap,
+        now: f64,
+    ) {
+        if self.view.evolution.acknowledge_command(
+            &request,
+            &value,
+            &current,
+            self.view.identity.clone(),
+            now,
+        ) {
+            self.apply_bootstrap(current);
+        }
+    }
     pub fn apply_evolved(&mut self, value: crate::backend::evolution::Result, now: f64) {
         self.view
             .evolution

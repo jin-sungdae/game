@@ -21,6 +21,8 @@ pub struct Player {
     pub player_id: u64,
     pub name: String,
     pub gold: u64,
+    #[serde(default)]
+    pub active_selection_revision: Option<u64>,
 }
 #[derive(Clone, Debug, Deserialize, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -185,6 +187,11 @@ impl Api {
                     Some("INVALID_BATTLE_STATE") => "INVALID_BATTLE_STATE",
                     Some("EFFECT_ALREADY_ACTIVE") => "EFFECT_ALREADY_ACTIVE",
                     Some("INVALID_QUANTITY") => "INVALID_QUANTITY",
+                    Some("COMMAND_ID_REUSED") => "COMMAND_ID_REUSED",
+                    Some("STALE_SELECTION") => "STALE_SELECTION",
+                    Some("STALE_STAGE") => "STALE_STAGE",
+                    Some("COMPANION_MISMATCH") => "COMPANION_MISMATCH",
+                    Some("EVOLUTION_COMMAND_REQUIRED") => "EVOLUTION_COMMAND_REQUIRED",
                     Some("NOT_ELIGIBLE") => "Evolution not eligible; refresh status",
                     Some("MAX_STAGE") => "Maximum evolution stage",
                     Some("INVALID_STATE") => "Invalid game state; refresh state",
@@ -234,7 +241,8 @@ pub enum Event {
     ItemUsed(items::Used),
     ItemsFinished(Option<String>),
     Evolution(evolution::Eligibility),
-    Evolved(evolution::Result),
+    EvolvedCommand(evolution::Request, evolution::Result, Bootstrap),
+    EvolvedLegacy(evolution::Result),
     EvolutionFailed(String),
     EvolutionUnavailable(String),
     Bootstrap(Bootstrap),
@@ -328,7 +336,7 @@ impl Backend {
                     continue;
                 }
                 let explicit = command.is_some();
-                let evolving = matches!(command, Some(Command::Evolve));
+                let evolving = matches!(command, Some(Command::Evolve(_) | Command::EvolveLegacy));
                 let item_request = matches!(
                     command,
                     Some(Command::LoadItems(_) | Command::Purchase(_) | Command::UseItem(..))
@@ -376,9 +384,17 @@ impl Backend {
                                     .map_err(|_| "closed")?;
                             }
                         }
-                        Some(Command::Evolve) => {
+                        Some(Command::EvolveLegacy) => {
                             events
-                                .send(Event::Evolved(api.evolve()?))
+                                .send(Event::EvolvedLegacy(api.evolve()?))
+                                .map_err(|_| "closed")?;
+                        }
+                        Some(Command::Evolve(request)) => {
+                            let result = api.evolve_command(&request)?;
+                            // A receipt is historical. Reconcile live state before presenting success.
+                            let current = api.bootstrap()?;
+                            events
+                                .send(Event::EvolvedCommand(request, result, current))
                                 .map_err(|_| "closed")?;
                         }
                         Some(Command::StartBattle(id)) => {
