@@ -1,0 +1,485 @@
+{
+  "species": "ruu",
+  "stage": 1,
+  "clips": {
+    "idle": {
+      "status": "VALIDATION_FAILED",
+      "errors": [
+        "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_01.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_02.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_03.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_04.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_05.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_06.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_07.png: registration differs from approved master"
+      ],
+      "reference": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_00.png",
+      "referenceApproval": "NOT_ESTABLISHED_BY_THIS_TOOL",
+      "frames": [
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_00.png",
+          "sha256": "8b3e41b526dec2e094c736e05e41250cb7819bd26ffd38af0ac07846052599e7",
+          "pixelSha256": "6a257746c741333d561f748ed0c02aa3569fc921b846177abdea5c4465b992d1",
+          "bounds": [
+            20,
+            11,
+            233,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_01.png",
+          "sha256": "080e85a9344b342ba45a75aabb953651d09deacfab544925cb83fb2a8cd29416",
+          "pixelSha256": "5c00b7486fbfc95528c8e70acbe8c9d59f2d779a6d89ca7d178d3ce790d77f1b",
+          "bounds": [
+            22,
+            12,
+            236,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 2.5,
+            "bottom": 0
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_02.png",
+          "sha256": "25bd770d97b0ef7d4d0649281797814be3d041d0a9fbc677f13dba29c2582ddc",
+          "pixelSha256": "441f8695a83814406b3cacade6ef3a2395136f48873d4f527c694e0827e1d822",
+          "bounds": [
+            18,
+            10,
+            234,
+            252
+          ],
+          "driftPixels": {
+            "centerX": -0.5,
+            "bottom": 1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_03.png",
+          "sha256": "15047dd3f0357d6e40091ef3157816fd8d1d39c8da38a021d549e177d06a07db",
+          "pixelSha256": "da46d5255966b591f224f6e1c4ffaa8b708431eb695516293587b157b6a22706",
+          "bounds": [
+            22,
+            13,
+            230,
+            250
+          ],
+          "driftPixels": {
+            "centerX": -0.5,
+            "bottom": -1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_04.png",
+          "sha256": "f5731d8da29ec721fa8f7428f8622091feac83e9f7c93d464fb2ef93d6b8f02e",
+          "pixelSha256": "6644b5e915cc86b25ee08de9c36facb8ededfaa952f70b8089be64d391d618ce",
+          "bounds": [
+            20,
+            13,
+            235,
+            250
+          ],
+          "driftPixels": {
+            "centerX": 1.0,
+            "bottom": -1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_05.png",
+          "sha256": "55994c191d2dc9033820c4f7c087a9755e8d4bd5c922b31a90c5404f082b646c",
+          "pixelSha256": "552872a19d95d9617ca94ad0d3ef0f46481e41381b5624a1896c51f0d1302e91",
+          "bounds": [
+            21,
+            12,
+            237,
+            250
+          ],
+          "driftPixels": {
+            "centerX": 2.5,
+            "bottom": -1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_06.png",
+          "sha256": "77e5ca57a23e32a7bb27f8489e00f42555e26a4b0645d21e357b0805fcb332e5",
+          "pixelSha256": "a5e71d6fc320955ec899abe933820009b53dc18ecce8e15c9eb65a002cdb225b",
+          "bounds": [
+            18,
+            15,
+            235,
+            250
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": -1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_07.png",
+          "sha256": "5e24a0fe9110c02c6ff075aaea1233089515401239d2bc7204a23a360eec4200",
+          "pixelSha256": "0e748db0c5e0f5ef2586201ea022395604ad47f8252e9408a09b9155bd9fa575",
+          "bounds": [
+            22,
+            10,
+            238,
+            250
+          ],
+          "driftPixels": {
+            "centerX": 3.5,
+            "bottom": -1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        }
+      ],
+      "repeatedPixelGroups": []
+    }
+  },
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "visualIdentity": "MANUAL_REVIEW_REQUIRED",
+  "backgroundResidue": "MANUAL_REVIEW_REQUIRED",
+  "anatomicalContinuity": "MANUAL_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "baseComparisons": [
+    {
+      "candidate": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_00.png",
+      "reference": "design/production-candidates-v1/ruu/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "6a257746c741333d561f748ed0c02aa3569fc921b846177abdea5c4465b992d1",
+        "sha256": "8b3e41b526dec2e094c736e05e41250cb7819bd26ffd38af0ac07846052599e7",
+        "bounds": [
+          20,
+          11,
+          233,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a455d9c1a3393d50a8aa79cad056222830b4d52cb9f37807f49232cc0144f102",
+        "sha256": "a8baf4333dcb4ba9e0b9dcba0ded119d4ddbc027253d10291573d978c738baf6",
+        "bounds": [
+          25,
+          9,
+          235,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": -3.5,
+        "bottom": -4
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_01.png",
+      "reference": "design/production-candidates-v1/ruu/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "5c00b7486fbfc95528c8e70acbe8c9d59f2d779a6d89ca7d178d3ce790d77f1b",
+        "sha256": "080e85a9344b342ba45a75aabb953651d09deacfab544925cb83fb2a8cd29416",
+        "bounds": [
+          22,
+          12,
+          236,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a455d9c1a3393d50a8aa79cad056222830b4d52cb9f37807f49232cc0144f102",
+        "sha256": "a8baf4333dcb4ba9e0b9dcba0ded119d4ddbc027253d10291573d978c738baf6",
+        "bounds": [
+          25,
+          9,
+          235,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": -1.0,
+        "bottom": -4
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_02.png",
+      "reference": "design/production-candidates-v1/ruu/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "441f8695a83814406b3cacade6ef3a2395136f48873d4f527c694e0827e1d822",
+        "sha256": "25bd770d97b0ef7d4d0649281797814be3d041d0a9fbc677f13dba29c2582ddc",
+        "bounds": [
+          18,
+          10,
+          234,
+          252
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a455d9c1a3393d50a8aa79cad056222830b4d52cb9f37807f49232cc0144f102",
+        "sha256": "a8baf4333dcb4ba9e0b9dcba0ded119d4ddbc027253d10291573d978c738baf6",
+        "bounds": [
+          25,
+          9,
+          235,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": -4.0,
+        "bottom": -3
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_03.png",
+      "reference": "design/production-candidates-v1/ruu/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "da46d5255966b591f224f6e1c4ffaa8b708431eb695516293587b157b6a22706",
+        "sha256": "15047dd3f0357d6e40091ef3157816fd8d1d39c8da38a021d549e177d06a07db",
+        "bounds": [
+          22,
+          13,
+          230,
+          250
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a455d9c1a3393d50a8aa79cad056222830b4d52cb9f37807f49232cc0144f102",
+        "sha256": "a8baf4333dcb4ba9e0b9dcba0ded119d4ddbc027253d10291573d978c738baf6",
+        "bounds": [
+          25,
+          9,
+          235,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": -4.0,
+        "bottom": -5
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_04.png",
+      "reference": "design/production-candidates-v1/ruu/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "6644b5e915cc86b25ee08de9c36facb8ededfaa952f70b8089be64d391d618ce",
+        "sha256": "f5731d8da29ec721fa8f7428f8622091feac83e9f7c93d464fb2ef93d6b8f02e",
+        "bounds": [
+          20,
+          13,
+          235,
+          250
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a455d9c1a3393d50a8aa79cad056222830b4d52cb9f37807f49232cc0144f102",
+        "sha256": "a8baf4333dcb4ba9e0b9dcba0ded119d4ddbc027253d10291573d978c738baf6",
+        "bounds": [
+          25,
+          9,
+          235,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": -2.5,
+        "bottom": -5
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_05.png",
+      "reference": "design/production-candidates-v1/ruu/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "552872a19d95d9617ca94ad0d3ef0f46481e41381b5624a1896c51f0d1302e91",
+        "sha256": "55994c191d2dc9033820c4f7c087a9755e8d4bd5c922b31a90c5404f082b646c",
+        "bounds": [
+          21,
+          12,
+          237,
+          250
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a455d9c1a3393d50a8aa79cad056222830b4d52cb9f37807f49232cc0144f102",
+        "sha256": "a8baf4333dcb4ba9e0b9dcba0ded119d4ddbc027253d10291573d978c738baf6",
+        "bounds": [
+          25,
+          9,
+          235,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": -1.0,
+        "bottom": -5
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_06.png",
+      "reference": "design/production-candidates-v1/ruu/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a5e71d6fc320955ec899abe933820009b53dc18ecce8e15c9eb65a002cdb225b",
+        "sha256": "77e5ca57a23e32a7bb27f8489e00f42555e26a4b0645d21e357b0805fcb332e5",
+        "bounds": [
+          18,
+          15,
+          235,
+          250
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a455d9c1a3393d50a8aa79cad056222830b4d52cb9f37807f49232cc0144f102",
+        "sha256": "a8baf4333dcb4ba9e0b9dcba0ded119d4ddbc027253d10291573d978c738baf6",
+        "bounds": [
+          25,
+          9,
+          235,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": -3.5,
+        "bottom": -5
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-candidates-v1/ruu/stage01/recovery-v1/v2/idle/idle_07.png",
+      "reference": "design/production-candidates-v1/ruu/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "0e748db0c5e0f5ef2586201ea022395604ad47f8252e9408a09b9155bd9fa575",
+        "sha256": "5e24a0fe9110c02c6ff075aaea1233089515401239d2bc7204a23a360eec4200",
+        "bounds": [
+          22,
+          10,
+          238,
+          250
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a455d9c1a3393d50a8aa79cad056222830b4d52cb9f37807f49232cc0144f102",
+        "sha256": "a8baf4333dcb4ba9e0b9dcba0ded119d4ddbc027253d10291573d978c738baf6",
+        "bounds": [
+          25,
+          9,
+          235,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": -5
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    }
+  ]
+}
