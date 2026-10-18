@@ -28,3 +28,11 @@ class MonsterIdentityReviewTests(unittest.TestCase):
         self.assertFalse((folder/'candidate-clip.json').exists())
         self.assertEqual(test_assets.validator.png_errors(folder/'base-v1.png',True,[],[]),[])
         self.assertFalse(json.loads((folder/'provenance.json').read_text())['productionEligible'])
+
+    def test_inventory_includes_new_sleep_sources_without_counting_completed_clips(self):
+        root=test_assets.ROOT
+        queue=json.loads((root/'design/creature-production-queue.json').read_text())
+        assets=root/'design/production-batches/monsters'
+        self.assertEqual(queue['candidateInventory']['allCandidatePng'],len(list(assets.rglob('*.png'))))
+        self.assertEqual(queue['candidateInventory']['sourcePngIncludingRecovery'],len(list(assets.rglob('source*.png'))))
+        self.assertEqual(queue['currentBatch']['completedAnimationClips'],0)
