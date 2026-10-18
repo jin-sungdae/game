@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "M023 dedicated core and M030 rigid plate motion review; batch04 M031 artwork. M024 further correction blocked by 3/3 limit. PR99 release gate running; do not duplicate assets.",
+  "nextTask": "M024 alpha cleanup completed under one-time approval; artwork review and actual IDLE frames remain required. No further automatic repair authorized.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -5489,11 +5489,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BLOCKED",
-      "baseStatus": "VALIDATION_FAILED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "ALPHA_DEFECT after posture recovery: 52 detached pixels, maxAlpha2; 3/3 repair budget exhausted; HUMAN_REVIEW_REQUIRED",
+      "blockReason": "Approved one-time alpha cleanup PASS; artwork approval, identity mapping, animation and GUI remain incomplete",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -5623,7 +5623,14 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "basePath": "design/production-batches/monsters/batch03/M024/base-v3.png"
+      "basePath": "design/production-batches/monsters/batch03/M024/base-v4.png",
+      "alphaRecovery": {
+        "status": "PASS",
+        "removedPixels": 52,
+        "bodyPixelChanges": 0,
+        "approvedExtraCorrectionsUsed": 1,
+        "originalFailurePreserved": true
+      }
     },
     {
       "creatureId": "M025",
