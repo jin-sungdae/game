@@ -1,0 +1,2026 @@
+{
+  "schemaVersion": 1,
+  "interpretation": "Different hashes do not prove distinct design. Missing legacy art prevents full visual comparison.",
+  "legacy": [
+    {
+      "species": "PIP",
+      "productionStatus": "PRODUCTION",
+      "archetype": "BEAST",
+      "asset": {
+        "path": "public/assets/monsters/pip/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "f0e63d1349854c4539f07e402eecd70a7cfcfc789442d9243b5e20e4304487dd",
+        "pixelHash": "a6c95e2195caff0ce6de955135067ed85491293281b12aca0e531d46652b5eac",
+        "errors": []
+      }
+    },
+    {
+      "species": "MELLO",
+      "productionStatus": "PRODUCTION",
+      "archetype": "SLIME",
+      "asset": {
+        "path": "public/assets/monsters/mello/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "818efb32f7e5a19efcbb87342eb07b55047cd99e15d02dd30f47bca03c85a831",
+        "pixelHash": "2662e0a8102704c62b155dbb563302d7cb5770c93ddf6ec6bc55cc5a1b4df1f6",
+        "errors": []
+      }
+    },
+    {
+      "species": "MOSSY",
+      "productionStatus": "PRODUCTION",
+      "archetype": "PLANT",
+      "asset": {
+        "path": "public/assets/monsters/mossy/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "6555280c8dc76d8b93ddd348cae1fbf7b27e282bd0bb6bfbec235dcc874afdb1",
+        "pixelHash": "686263c55ff5f041d998edeeb88c9cc3ffa86060e425954f170a734067b51604",
+        "errors": []
+      }
+    },
+    {
+      "species": "CHIRP",
+      "productionStatus": "PRODUCTION",
+      "archetype": "BIRD",
+      "asset": {
+        "path": "public/assets/monsters/chirp/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "8629ba2cf4f22f3e0946f7d3e030869ce5f38f5a06f2f65ca9af77c14bfba83e",
+        "pixelHash": "9c4a5722cfc01c5adbb069367cc70431c48ca47b864bae3c9accb4b5b30f9f65",
+        "errors": []
+      }
+    },
+    {
+      "species": "MONSTER_005",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "INSECT",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "BUBU",
+      "productionStatus": "PRODUCTION",
+      "archetype": "AQUATIC",
+      "asset": {
+        "path": "public/assets/monsters/bubu/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "979f8a38cc19cc5d3425aebe65142c559466b9ad32d3406f60646dfa1ba6eed4",
+        "pixelHash": "553ad5260be5080065110812fe669d918a25eb10b668197218f09bd1a7148aaf",
+        "errors": []
+      }
+    },
+    {
+      "species": "PEBB",
+      "productionStatus": "PRODUCTION",
+      "archetype": "ROCK",
+      "asset": {
+        "path": "public/assets/monsters/pebb/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "52069d2ed348e74d7387ccf07df7c725c2b82400016b6576dd1f28c6cf023ca4",
+        "pixelHash": "1d61bccc4c5110acdc73e5476ee0acbf128d84bf25497d9c804084991024b373",
+        "errors": []
+      }
+    },
+    {
+      "species": "PUFF",
+      "productionStatus": "PRODUCTION",
+      "archetype": "SPIRIT",
+      "asset": {
+        "path": "public/assets/monsters/puff/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "8e4414e08d8e1a89a10eff7af0275b72b63eddda3d563d44abd7299c1887984d",
+        "pixelHash": "c766fedc93603370fb2c34bc8e74045f05ba189bcdb05915989bfa72ed416d6f",
+        "errors": []
+      }
+    },
+    {
+      "species": "MONSTER_009",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "SPIRIT",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "TIKKI",
+      "productionStatus": "PRODUCTION",
+      "archetype": "MECHANICAL",
+      "asset": {
+        "path": "public/assets/monsters/tikki/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "d234b8bc08e62802d1fe684176208ecd91a798d57d959f2ec9153699a6db8a81",
+        "pixelHash": "aa1f5dda9c72d924a984b4c40010ebab988383663262cd95d102385fca9c89f6",
+        "errors": []
+      }
+    },
+    {
+      "species": "MONSTER_011",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "MECHANICAL",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "MONSTER_012",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "COSMIC",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "MIMI",
+      "productionStatus": "PRODUCTION",
+      "archetype": "MIMIC",
+      "asset": {
+        "path": "public/assets/monsters/mimi/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "b6476e6e585ef6075c131d1fa227304f39a738e87044e71694f3fdee12c41479",
+        "pixelHash": "e7897930f217bd5f474bf5fc95bc613a27d70724f8cf8a0f098046a949bcb2be",
+        "errors": []
+      }
+    },
+    {
+      "species": "WISP",
+      "productionStatus": "PRODUCTION",
+      "archetype": "SPIRIT",
+      "asset": {
+        "path": "public/assets/monsters/wisp/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "9423d6524797e82349ab9f0bf40a4f8be5dacb3683276c0645516c52388e1b3d",
+        "pixelHash": "e00893d92f19d6adde081b86c933cd0bdee90f9ad73e336e07fcb64dbd0992d4",
+        "errors": []
+      }
+    },
+    {
+      "species": "SHADE",
+      "productionStatus": "PRODUCTION",
+      "archetype": "SHADOW",
+      "asset": {
+        "path": "public/assets/monsters/shade/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "3d2c8330486a197e30d8dc54d2f1b11de2458f982cb00f74ef73c06d4fc72974",
+        "pixelHash": "99acf992b1c49e13b8b8b2dc1e717d8ac83f2bb87d4c3458fefad48e5bec8184",
+        "errors": []
+      }
+    },
+    {
+      "species": "EMBER",
+      "productionStatus": "PRODUCTION",
+      "archetype": "FIRE",
+      "asset": {
+        "path": "public/assets/monsters/ember/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "a2ea1e16f29e383c6ad29505d8d6ce65750fa11a8216cfb0fde470b5e2cb9f66",
+        "pixelHash": "3248f4b8cd69169a7ab71c767be943d6848b0b7063cba234453ba2254441ff21",
+        "errors": []
+      }
+    },
+    {
+      "species": "MONSTER_017",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "ROCK",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "MONSTER_018",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "BIRD",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "LUNET",
+      "productionStatus": "PRODUCTION",
+      "archetype": "MOON",
+      "asset": {
+        "path": "public/assets/monsters/lunet/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "eeba6eeec884e042b32f151f26b5e881a2dd0d3db65a5ba0ef13bf6153765640",
+        "pixelHash": "af48fe89d067cfd69339421ccc66ad429316d43d7f717445f8b40464461d07c2",
+        "errors": []
+      }
+    },
+    {
+      "species": "MONSTER_020",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "BEAST",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "NOVA",
+      "productionStatus": "PRODUCTION",
+      "archetype": "COSMIC",
+      "asset": {
+        "path": "public/assets/monsters/nova/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "0fd29358f313abafd9286357d57d43aac1114661c2b7f40e75596dd9b744b2a6",
+        "pixelHash": "43d245c95fa2f1ca2f7110aea2ab2584d101df73fa9eda5218baa2823aeaa829",
+        "errors": []
+      }
+    },
+    {
+      "species": "MONSTER_022",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "SPIRIT",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "MONSTER_023",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "SHADOW",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "MONSTER_024",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "COSMIC",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "MONSTER_025",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "PLANT",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "MONSTER_026",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "ROCK",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "MONSTER_027",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "COSMIC",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "NOCT",
+      "productionStatus": "PRODUCTION",
+      "archetype": "NIGHT",
+      "asset": {
+        "path": "public/assets/monsters/noct/base.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "c808c729d22318b7cb544682ce629d2b35eda07f4d199c288b6210ab4c3ba75a",
+        "pixelHash": "0b242ea6dd896899f2fd6d116d106a8b125c9370671ef6ad29c39296535e3f4c",
+        "errors": []
+      }
+    },
+    {
+      "species": "MONSTER_029",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "AQUATIC",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    },
+    {
+      "species": "MONSTER_030",
+      "productionStatus": "PROVISIONAL",
+      "archetype": "MECHANICAL",
+      "asset": {
+        "status": "ASSET_REQUIRED"
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "M001",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M001/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "98817c90a6e847b6e81f227b64f5ee12e9caf720b063cdb21088a16ac03bfa95",
+        "pixelHash": "dc2dff6cdd708ce6f934012c3ae7d3738f12a610b5655db6d3cf9feef4d461b2",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M002",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M002/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "672445fa1aa3be16cd6c8dbbeb88326fa51130f5fecd23f623dc9e80ee085e45",
+        "pixelHash": "c37e4f48b2bd861897f0ac8d7167c67854a55fc2698b8b20caca2af6edc3c5d5",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M003",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M003/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "b0874739d457e9ce6ba41f6d882f4c981f3e3f560a44eddcf521a45647069f23",
+        "pixelHash": "68beec0c6bf7c382e9cf94282c979b01ec55fa700a17b28c8403929b2f877940",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M004",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M004/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "c8d37c5aa3e54426e35f06ce38e41d1915f8ac1e2945a512b07e3096be412c9e",
+        "pixelHash": "6da7186be94f4f6eaffd4fa970e472c239537abff51d804ed163691fa8aebdf4",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "MAPPING_REVIEW_REQUIRED; candidate outside public; no Production Species ID assigned",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M005",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M005/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "c48e0d3f3ba31e5abdf91260544740921fbe1e20790128378f7f8aa2908a6927",
+        "pixelHash": "9261f2374eb03daa114673b0adc4418695ce9d3d4baa2925ec407f7824e4863c",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M006",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M006/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "32bfd767af8d5fda585aec42f90c33c7926e9f3ab8352aa043d105544d620cd5",
+        "pixelHash": "bee77718017af75ee75692712b667a93693952a035b50a27ab8dae77f9c06dd2",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M007",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M007/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "e36fa5408c81c9a7ec899768729d35456b4f81c0bc8b94a30b45666684597f0f",
+        "pixelHash": "0720671c3fa8edad7de5ef36f6ee9d11173dc14e343df165c8ea9bac2af5203c",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "VALIDATION_FAILED",
+      "existingBlockReason": "APPEARANCE_DRIFT; HUMAN_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M008",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M008/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "6404543c680172575138f1a613e97fb923cea39e0b4cd505cc59aaa654c70a2b",
+        "pixelHash": "9befb5db09e7162945af4bd1cc2439624fc24fbdeb608823acfa8a03140b7b21",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M009",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M009/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "91d3bd28696e74cc337eb24a5a5f244576ce4edfb7a65fc627e4e5a6bfa9e907",
+        "pixelHash": "248e22e7af9579da652eedd7edc6316e1a76743f1a24f19302873e673057546d",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M010",
+      "asset": {
+        "path": "design/production-batches/monsters/batch01/M010/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "998d1abef825ff5faa4c4a35d5ee59ac4f6585e0fb571b73fa97013ec5bfe2a2",
+        "pixelHash": "90144853acbbdb3f647a51ba1ef2f7d57a149fecc9384b45cf61c38738c33bbd",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "MAPPING_REVIEW_REQUIRED; candidate outside public; no Production Species ID assigned",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M011",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M011/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "60bba545ad85f2b1fa8ae91f169d3064a62d1919e2d96d2a598737166ed33666",
+        "pixelHash": "590bc6a3491536d0ec2262ce459737481d4ece038bd6b231b64f7e1fc3111bf2",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M012",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M012/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "6f02d3328e7d8a5125ace7e4a91fd7a9d9429304846a9d90000dfe4289beba5a",
+        "pixelHash": "be7ccc4da2608f86f01ec26cbbba741a18f5b421af2a0f6969d4f8d4d5f4f3b7",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M013",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M013/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "da7aac511ca6088a442b09cdcf36ca1a5f766123425927c3213dfa43bc6cc924",
+        "pixelHash": "ffe34c0994f46867d73ae8711358f65127ad2772e40e80a25ada5d88641f77cf",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M014",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M014/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "ab27a810759fbc73731fb42fd6cd292e009ce25b5b54f197c4234dcff3e41a95",
+        "pixelHash": "8517b479e1544cd8bb7b5525da97aaaabe89139cb2193d64b0e40ec3aedabbc3",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M015",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M015/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "ea54d8e3a228986dedb7b46a46ae0efd095fad4e35c2fbdb0e4cc5e07869a755",
+        "pixelHash": "400bee6f3260907ab2529774ac54c8e2a91bc1bbb4731e88dc9fc60fef52c115",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M016",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M016/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "b0ec4b98ab0b9c82c9bbdb77d9106b1ad3e6872c5ed235178d84ccf11762be06",
+        "pixelHash": "58d56b8e8dd89e9bd52521aa32e3ca9a781426638816f04f6f69dd769323e738",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M017",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M017/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "711edbdbdbe567b450329941e0e8a0e06a546aeb88f3a0eb1c788e85e73652e7",
+        "pixelHash": "292a8279a19c1fd406c4501debde4465f0ab22eaf17dcda006e0b27cff6851cd",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M018",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M018/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "fa6b7a74ef097cebe233c52246e2f4f5c5d7a83fee6452423d8435cb0335ae89",
+        "pixelHash": "76253a0a919299f8ab98f11d954bedb81310653e5d474ceb7bd3809867fc8f1f",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M019",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M019/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "4b82040492f1607fb941482fba44ff889d0ce10fe08820578f3de5a74276ed23",
+        "pixelHash": "737541b8247df9d0cc9b35e65174d2f99adea8ebf541a529523e9cca10861e31",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M020",
+      "asset": {
+        "path": "design/production-batches/monsters/batch02/M020/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "fabaf04b52bf55365c8aa0fe575c617215249f1c14fae9a5798849d59d6d588f",
+        "pixelHash": "c21433e88db0c123ae5767e61115ab0dbf146e50e55849cc8760223219ab9613",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M021",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M021/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "e439800ce6fa9dfb2cace88d70d832d2e36566f0511744d4597cad6390722b8c",
+        "pixelHash": "eaa09db45ed1868e7540b974172671387f34d46dac8329cac9e1380cb19e65df",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M022",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M022/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "c2f0a85144e342da8c4d4a2f9ed509c5f379fdbbf10234a2b37036e2a8fcedae",
+        "pixelHash": "887e9efc99ed1562fb1d6f98a6cfb2fc429cc10f2612e0d2ff2408489b54a508",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M023",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M023/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "c15c9d309e02ce3279e420940c72b81b6cd30423763ac2bfd6f3fdb5c796bf7c",
+        "pixelHash": "d23bf7c5793e720aadf16fd9b79085784ae29c70448915950a429feeac0e6e0d",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "Dedicated core motion required; no organic breathing rig",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M024",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M024/base-v4.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "685761c9392378e491cddfe5c37d2655ac526c0c351d42672f571eba182374de",
+        "pixelHash": "2e534ffee599253e2ba468ec01e69d0b3d864b3c6a140278d4e8fedaa39f16c9",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Approved one-time alpha cleanup PASS; artwork approval, identity mapping, animation and GUI remain incomplete",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M025",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M025/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "15e193969dae56eb6acf34c1b6bf9eb8b33602bd5dc4703f86fb69bb4741cb49",
+        "pixelHash": "48c94c7fa6acd990eeb4b40244db310323a7ac37b179d697f75f46f0df14e51a",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M026",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M026/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "f203d183a0e71bec210395b61bfb70dc23f5d2ba2cd0bdc472828008d50d7e27",
+        "pixelHash": "fb03916b4e4e44bb1edcc41399348ef97e8bf7438ab386cc741d16dfb92a3787",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M027",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M027/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "4b0d84452e15bbcaaacfcc8802b7c342d042c5b884ea9ede6e0ccead0f6f3cbc",
+        "pixelHash": "bef92906320b47bf4982d2384d1e7e33bbb1b9efcd9d73db2807987f7ea55ece",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M028",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M028/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "cd45c742ec370ff2370b67845c50e78824902ab3ff9d2aca4d03826391bfca61",
+        "pixelHash": "3cf401670daf2585eda3440d4c2fe57c623961fedfe0efcbb121a4159f0968dd",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M029",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M029/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "25345108e6e0a4c396fa68ec45f48e51f0a8e2bf09612380e0bf2315448b4a79",
+        "pixelHash": "48bdc6388bd9df193711e103c6e7d97934fa07d03d76b1c185a4a279b924a6cd",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M030",
+      "asset": {
+        "path": "design/production-batches/monsters/batch03/M030/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "f2795301554d89888cee4dc2affc70286c5ee8f2c61dc3ac1e07689df0fb6112",
+        "pixelHash": "f39c6a0adc630970f7d73374c9cc6b5e0a3a4137962ba82e8fc10e8adec408f9",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_READY",
+      "existingBlockReason": "Dedicated rigid plate motion required; no organic breathing rig",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M031",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M031/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "c44a3689983a14a8ba3efb883fcddf8e3c039f43cc1e61cae34caac417f5f813",
+        "pixelHash": "6670ffdaafabc9c635286178bb5aa5d159bfeb4b796dd27f00db9ea2fef892e8",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M032",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M032/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "23237c557da92af6eb73455850eff10e43548ba9242a0108ebed24db3529ff0c",
+        "pixelHash": "95d07a26ab288fa3a643732e058df83c612d7589ccd0ef46ecbafe29797f418b",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M033",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M033/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "a8056b0f58a5acaff494893d2ab7757d922a2c07a33e9882c28599737b7e7f11",
+        "pixelHash": "8fe4f6ffb37609c2c0638b3f949aedacce9350eb522976e41dc6ba6dd1cd26bd",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M034",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M034/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "e1e9a59bc1873cd97f568e2e3cdf3a1a516e8e5e33b5fa539ce92cab663053b3",
+        "pixelHash": "89e608e6a1f54e144ca8aa6e952d1d8cc6c4718d7db47e2c75e58b4871cc4118",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M035",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M035/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "59e82fe4b74ae3e4939dc9a4bbae55c80bef757134608f8f49d61769ec574c53",
+        "pixelHash": "8ca9d6e177718b727324f222381568beccb53d4d1e5f0ffa8921aacf82cfdbb0",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated rigid plate animation needed",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M036",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M036/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "888222c17db31d82c44dfaa49328bd37774f7faaa9e6dd3315f5fb86764d6699",
+        "pixelHash": "c8e45d2a349990e4f51ae381c681d94eba1327554f4e91ea7ff979433eefcca7",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M037",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M037/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "9e531e940cceec43483f72181cf9444262e163d4fb200aaaeb721dab39e6763c",
+        "pixelHash": "7bae131147af398fd4afe32ae80036d2c15213b751c9b1a306c92624f1fdf518",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "VALIDATION_FAILED",
+      "existingBlockReason": "APPEARANCE_DRIFT: quadruped output instead of reference upright posture",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M038",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M038/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "8cd47ab7193bcacf13b46454ea5834508a15731989088a9b359f7c55414d9ea7",
+        "pixelHash": "26b7fe3148d123d6b07c78bb7cc9ed5ed7aa15472e02606c919db2a1626873f7",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated rigid plate animation needed; initial haze concern not confirmed on gray composite",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M039",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M039/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "77e8563b8b736e08fb8e11a760df04e14667eb7b1cb431f02f3f6c5d4acebe20",
+        "pixelHash": "c9c1ba00f48ba533c8dd3386faee21883b6a1d0721bc9b233f5b8f5f7f17a164",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M040",
+      "asset": {
+        "path": "design/production-batches/monsters/batch04/M040/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "e5e8f1bde30073f8608c8d4daa73d4df2677cdf3dc0a5870df5d7315b439e8c1",
+        "pixelHash": "2ead326a2f54a5dafb4f55d68810003a1bc7b4f4437e36663d7b921468e9a604",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M041",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M041/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "b20e9d206a3207570d7f19a662eb5f38b423cb6a2c7b0b679a925ca274780cb5",
+        "pixelHash": "fabccaaeab2cc1e3ab0a37ea89d5c5a8e9b969daa69eea3a0fc9318f2fabfccd",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M042",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M042/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "65e00e86c5b41b66e38417410c2a306815ba6aecd551e1b66649e5307ce0420b",
+        "pixelHash": "7cd4d3a50b842684f6d4c341caca36e4c49d6ab2abcaf72fead37c14e35ca498",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M043",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M043/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "5f3fbd655cb557ebd101f2051e3696761db2ac93217f494a4c649ba955b542fe",
+        "pixelHash": "fe80a856a7bff4c1b23bdb8d0f60eece84330e483db5752a67efaa53a5f9862e",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Rigid ice plates require dedicated joint or plate animation; no soft breathing warp",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M044",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M044/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "d9dd9df4e8ce38d50a356513f005a8800076fb356c32cb2c0005f83f550f5264",
+        "pixelHash": "618ed46f16ba163116d8506287df9d624dd8da2606ea7206730702b56e6aca6c",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M045",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M045/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "dff45457ba9393b686c9eff67394ff8ad40a439b102f81342144abcbe1b72c56",
+        "pixelHash": "b91e9de500c62d67d4b049f07ebfc4f8b3eb6709fbcf844eb0f51f6c7b748879",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M046",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M046/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "800e6cf5bc51f448bb32cecb5f33dec27b16d07f890a22b9457626009db5a83f",
+        "pixelHash": "b9a73b4887c711cbf9d086e9dc249fc95f145c9106e25e4353cd6a1f14f5e43c",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M047",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M047/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "497f77d5a792a23e55d444bd7e0a75a282a372ce59f15c66d4a43b051a7d7954",
+        "pixelHash": "7ddd73aabe7ccceb077e0844d2cb36a723c858ec354c172b697d086686ed8997",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M048",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M048/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "4e55c83b1d21ceaaa46cfb1a8e825e21f21f693aeeb44cf1ee6edc2d459f1dcf",
+        "pixelHash": "693975e3ed4c6d104cf43ef5ba229d811656c19ebab0d40c2dfb09081ec16c63",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Rigid ice plates require dedicated joint or plate animation; no soft breathing warp",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M049",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M049/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "8b7debf323657ed1be68d5227e6c4896639f0b206f4829db6c178ce53a3ac61b",
+        "pixelHash": "71f067ff18282b533b55654a78f734b28474fd6dd9d8f81796f2200610605ea6",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M050",
+      "asset": {
+        "path": "design/production-batches/monsters/batch05/M050/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "17c76efd14ee01fb342bb99e30ecb25cfd7a1ff2d557aa3bf82aee84486a35fd",
+        "pixelHash": "f8ec71380b8835938ca9369cae377351416d7188f3a6db87f0f98a504164bd85",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M051",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M051/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "4e600cf478a9a732a0a6fa135c4a95743c932b3a9c3e5a67781e37ad3de5c595",
+        "pixelHash": "0b831453225dfbbaa5821e09ed61de6acdbe79db9b30b8ef628666f2e8e9f2ff",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M052",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M052/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "ecbcef8c287310628b349c30f326d72b7a277824a292e2b267e92eee4872516c",
+        "pixelHash": "7a169835b1945bf0e9c1bbbc37bb3723fd9c8f7eab7e50ce2b4eadd5d52ce207",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M053",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M053/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "8907c5f7155d785925d7ccb025fb4c5699073ca8eec0a180e0af4e39dedbae0a",
+        "pixelHash": "753596ea60e07c80c89cdc8f5dde5ee1c86bc9ecab8decd24abc186dd045bd13",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M054",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M054/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "3f2f8254f0528d77a9a240cbee1d2f6b54378cb53becd28e5ec63627a5b59e73",
+        "pixelHash": "6761807e87e9e859cac74232d516b32f372f465039e3fd8a3194f31ccec024ac",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M055",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M055/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "4118b54838ad27afeaf3992bd8c77680d86a8ee69a7ec62623f7130d8609ffa1",
+        "pixelHash": "b7f4e14f0319ef7ac887db29a985dfb8def20a2d2c1cdc2b3d3586073bb1589b",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M056",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M056/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "1cbbd19ff079e8a06e57cfbb0c31c727cfc73392caac33100d4d9397c21359bf",
+        "pixelHash": "5869f03382db7fe3e054455316eb1e2120721baa1e8c499f60331604b7c70157",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M057",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M057/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "238ccd8b3d61271ed4a25281c6f9b0b7b89b84d21486d1eb2f8ec57b01904e1f",
+        "pixelHash": "7250a3e355f6d76e63109fdeecf4262d09f8312f2ba23e2e7bb70986379d52eb",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M058",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M058/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "ed62cc0ac1d66569c39493f5db8c8dd7bf9c049eeedf397a5ccc710c99f93a16",
+        "pixelHash": "e06b39744ba37512463db47f2a17e4d9ad6156956cef21833f4fedd66187bddc",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M059",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M059/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "2553082b6439f4eb305acb4cbfba83872f6c011a58f6e69ed24d168d9064f4d9",
+        "pixelHash": "ce655a979047447319ddd4dadb591a3e58a21b9b64b41fb7e59a76fbfba4589d",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M060",
+      "asset": {
+        "path": "design/production-batches/monsters/batch06/M060/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "3376a1a72d7a9dab556ea3be28cdd725d3ca4b86873a6148c61f78075edb6f26",
+        "pixelHash": "8098918ce43b267a6c544985b9e5be2a8849a9ff2cf08f7d165d6c82200b4869",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M061",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M061/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "3238b7778c418ec293124c179bde059befaf62940a4ac45bc178e6428e130911",
+        "pixelHash": "82dd23ac3df09c4104ea141fe7125fe0be14335b9f74c7067159d2e368ec84b8",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M062",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M062/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "8f821168fd0fa322952d5269bbb6d9ad7cfd5e246611907018a23f3c111da0e2",
+        "pixelHash": "1d0ba4bde604d0e69c4577cde930f83582dd6ce089e0144bddb9100eedd2ce32",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M063",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M063/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "a36b765263317f525eb066e7a7c2c4515252a879d3d7427b08e441043c81166b",
+        "pixelHash": "c62579a92eaaa61ce6b80f3cb19ecf1f2f591b6ad6b3be62a8f2d165eb404c44",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M064",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M064/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "c63604e1ec3a9bcbb79055b6e2ddde2fc7e20b0f2237f79b529425cf358a7d46",
+        "pixelHash": "d5ffd23d6fdbaa35ff1a3da24a36e6407a04ef7847a2b9a8fdd706a63e98783f",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M065",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M065/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "4c462ea398cfbfce94185c1f81876d0dea3a3cf9a1cf7ba4e454523f14401a1f",
+        "pixelHash": "3675b7f138675a99c654cc351f2e650b12af0bc8f6ba1b6d8ee6efd64fa1f5a6",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M066",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M066/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "d282a5f795ec82df1badb7dedad4ed994e4d1506a60633fd3028d6282aa9b4e0",
+        "pixelHash": "3551f498457ca9b12eb2c8b370e2dab3abd279325dd71eda982d0bf70f528c66",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M067",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M067/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "1b543157dc9001a3e1a87d6f3a44bb96eb86cbbc862932bcb3ae0d1d512af21d",
+        "pixelHash": "3a94f3da821f7fab118d43d2f52f4d6b2c522009a31070579fb170bbe1dc6b03",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M068",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M068/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "87f91bf20443aabbf7c9e6baf8d3f8d2fcde49d9aa79a3cb3acc095e481eefdc",
+        "pixelHash": "0b7e9620c625366acb59a0307ea69ecef66db3bb131f4d1ff7a48b61637943e0",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M069",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M069/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "3a78dd023820cc7647270d2f49526268af63d371d48bd0900d803376ae55e0dd",
+        "pixelHash": "e3229b05b80dcc4906ade45a287aa0be53eb5ceee86a658637588964c2f12be4",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M070",
+      "asset": {
+        "path": "design/production-batches/monsters/batch07/M070/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "f9f54ef88c38a7cea3d6fe950ecbe8d5f7cdb4e834a38fbf0c2a83cb00398c2e",
+        "pixelHash": "bc5e97751890698c8541060cdad732bbbc652187f47576b05388febf90772842",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M071",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M071/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "913515d4535ce4d03bc5e16f3fe17c5db16fc54b1ee249dfd629b6d3a8d03c31",
+        "pixelHash": "c4db149d9a13c38c4ba23cfaeb08114f1075326f104da816406dfe4e4e57fef3",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M072",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M072/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "904d6c9bd4ffbb9b6b46d6fd030e64dce7104c858f351a302c30fa61235b3340",
+        "pixelHash": "923ae52746f47a3f4d370ba08bbe7fc8d6922728123f0d47cc4f6962440224b3",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "VALIDATION_FAILED",
+      "existingBlockReason": "APPEARANCE_DRIFT: upright reference became quadrupedal; source preserved, no animation registration; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M073",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M073/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "fd54d0fd0505a40b25bf6d76ecccb538c7f7b18728ad04b0582dedf20ee55002",
+        "pixelHash": "fb8a4b9fd71e70a23824c1fbfa8cd4a5e3e588f5f4f676c3c9128bb71330a7f4",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M074",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M074/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "f176445afafba684d5dc6fc53ccbfe76395287d3a615fdbe2d5097ad84de3ac3",
+        "pixelHash": "db5a8819d4a209013ca69991da5fc31b188eb488d007b6744c7de8da57026545",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M075",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M075/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "272180aeffab50d79c21322ccebc878db44c6bd9577758648ca7ddf97c0b5ba9",
+        "pixelHash": "d0fd2938e7c03ff88c2c64916dde64886418e89dd204c1cb11a8deb4b69d0a82",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M076",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M076/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "27177d5731826c7b7ea3275eab95a8c2dbe9bb2a14818bcc6a8d545c88977b74",
+        "pixelHash": "f1934a1de952f3de05db782d4d794a9a1e5b082f1a6bb32811963c6d38b7c82e",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M077",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M077/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "6b1a4cba88caee973f8c6e1d3e015b2403281ae4d1864a7c12950322f434e9c9",
+        "pixelHash": "43f1b7cf74f330a35840a9495ae58c431e7f3f0a5f5fa030f537db124356b757",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "VALIDATION_FAILED",
+      "existingBlockReason": "APPEARANCE_DRIFT: upright reference became quadrupedal; source preserved, no animation registration; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M078",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M078/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "5efc383b3c6b39c898030b6aa54e2f9d81ac89dbae37bb9c8b1304c224ca925e",
+        "pixelHash": "79c9a52259c5f7311bfd5e7a94b770539b17d2475f5f10d68d88ded82826db62",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M079",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M079/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "edd17cd5c3384c27d7c734aa27aa29be9e86dd7c39d0ed3e21e145185fad3cac",
+        "pixelHash": "2af00399a06b3867f2fdf166f6b5c63ba4c091385483d3c7183c3f1bf2cf5969",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated mechanical joint/core animation required; rigid plates must not use organic breathing deformation; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M080",
+      "asset": {
+        "path": "design/production-batches/monsters/batch08/M080/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "edc509aa01364ed9a4ce18684b405bb5e93458ca1eadb772dfc198c4d10f9e89",
+        "pixelHash": "b1cc1e71f142f7577d1850063bf9a8af6cc712fdb166fc1e4e4dc0e262cbc6f6",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Ring mechanism anatomy needs reference review; dedicated mechanical animation required; ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M081",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M081/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "2089f03d127a5ed04ebf035ccafc62f13fe9c9fd82dddea35eb8ea243950ffb4",
+        "pixelHash": "94078af428dc7d6c0bcf4254fc0d2bbe4532072124aa1b35fc45a38e9d021163",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M082",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M082/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "7dce6b54184691d29f0d1209954ca4f7ad0d22abd64bbe1bfe3a28f8b045e34a",
+        "pixelHash": "878e76aa355e2e230305e7195b9cdbb315625a2a9ea77acbaa5669fcf2a55028",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M083",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M083/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "c03da44a26017e52fee208e21a32f196df658ba674d7f64513523691a61ddd2f",
+        "pixelHash": "f351e16ed888af80e63e21ebe7334176a2b04f9e2444a39329c0b7d978387e1c",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M084",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M084/base-v1.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "4a5c9f800e17fc389bd827cf11614d02118e2682f4ff2b3574a3fb155810972d",
+        "pixelHash": "edc3976708938cfac6b0aa00bc41576a60e19a19ebb09b148613ef0a1dc146f5",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "VALIDATION_FAILED",
+      "existingBlockReason": "ALPHA_DEFECT: detached alpha maximum6 exceeds cleanup limit4; source and base-v1 retained without cleanup or animation; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M085",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M085/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "8a45fa5c705f9d301f782572a8e1abc90b92000b14ff926b476ac24b12c5e99f",
+        "pixelHash": "20c3669de539d7a98a33621f630a93f98f6ef779c3bcc3a7a17c765436c14c60",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M086",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M086/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "f125cd7c2ab3ea0c9adfa61fc47dbe1ba54c6d3e531eeac8e5ebb535086cd941",
+        "pixelHash": "7820a427cf12a79ee9234952c9ac338a952f70bd0b1e9325c57ebde9636e6ac7",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M087",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M087/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "61e06f24df80551a1655d89aeb77d885ee5e9a38d83850dd97a74fff057768ad",
+        "pixelHash": "c17b69ee046639f762731ef6ac06ce4c5cd422f11c2ce8ba717d5598bdff59db",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M088",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M088/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "bc6682a290e4ce9276eddd0ea41692e9ebbe56df09d6ff28c9adc6b788723ef6",
+        "pixelHash": "4511be2f340d0ed7fc191c7fc0f0ddc9b52d45d6436cf5673d6bc8ac446c497a",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M089",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M089/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "4134f578e610b250fab0fd6d470dc8c543f57d3439a6b12b3b7d8edd4ec04e8b",
+        "pixelHash": "71a5e172d035d7678989bbb250c75c0bb97aaa3007f43db4706ed58ec6347453",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M090",
+      "asset": {
+        "path": "design/production-batches/monsters/batch09/M090/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "35bb93c3872ee534e43c4c26dd7b2cc2193839a58b1005a1e9d14edabc3935cd",
+        "pixelHash": "99f8f28ee024aa74e56a815555cec4dadc9c3ee94c27964fb48ed7b6c2c263ca",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M091",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M091/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "c3a2ced4fc9a26d971992e10a6aabd01f24cf6a275421cc57ea98686428a3398",
+        "pixelHash": "474edc91dc566197f428bf94ca590d39406a56c69c8779869929117d81931d1f",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "APPEARANCE_REVIEW_REQUIRED",
+      "existingBlockReason": "ANATOMY_REVIEW_REQUIRED: ambiguous extra leg, no rig; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M092",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M092/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+        "pixelHash": "912e2a3968154399812467ce247ae6fcd83a6c9dc4059528aff5a3961f400d9d",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M093",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M093/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "9d29eb468dcf6245d68e83ee15960ff107acf1bae16e016dba887a7d8924dd72",
+        "pixelHash": "62c7da01bfacacbe2220d5d03da2ae2c83a6398428d08fd6fa1661f20fc165dd",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "VALIDATION_FAILED",
+      "existingBlockReason": "APPEARANCE_DRIFT: upright yeti concept became quadrupedal antlered creature; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M094",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M094/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "d99f5211caf97e9be5f38bb88913ff27acc148fab56337898202cfcc45ca5ffe",
+        "pixelHash": "24e10eb4090c3d8d3270851a3daf5db7b844ec20c19e3a39f7e0279da7e3adae",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "VALIDATION_FAILED",
+      "existingBlockReason": "APPEARANCE_DRIFT: orbital mechanism became quadruped; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M095",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M095/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "ab5ab5e1889e091e28bd89c372430ebf8cdd77b5233bc7b95c0f5a874a9bb3f7",
+        "pixelHash": "d53f2a129de4fb9bc13c0a61bda2e4bacbe2536408e48446fb23aa6e1319a436",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M096",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M096/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "ff07558fd18331b6294a60921308a2edf45cb008450a78327157e32c1372188d",
+        "pixelHash": "cf9facd88acdb2e73c48bff25e1a48c35f040bfbb04fb07de669ade99f5ee676",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M097",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M097/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "03a77a1b3730c75ca66a7b0ee4b0c49284344fb97a9d60edcffe956d3511f443",
+        "pixelHash": "074df1f771450ece04bd3791b3afa1bf1f5ad7268e0fa64edf0251529d20a22f",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "VALIDATION_FAILED",
+      "existingBlockReason": "APPEARANCE_DRIFT: upright reference became quadruped; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M098",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M098/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "23ec7e9bfa28262d396619b655ef7affa7734ca187532d61ca5b4031b777dbe6",
+        "pixelHash": "4abb44b006fb521dc861f30ef09d8928c30fc7188038e0b340fa8f087222fa29",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M099",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M099/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "4426ebff1c48ae824a8ff2260ec8a4035341990d0e9b6a9dbea2289d8f126305",
+        "pixelHash": "4b93690b056e475c21a4569b1ab43f48fa31bc7068b8188532bddd86859b3ca4",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "APPEARANCE_REVIEW_REQUIRED",
+      "existingBlockReason": "ANATOMY_REVIEW_REQUIRED: ambiguous extra leg, no rig; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M100",
+      "asset": {
+        "path": "design/production-batches/monsters/batch10/M100/base-v2.png",
+        "status": "PNG_FORMAT_VALID",
+        "sha256": "70df6474b3a68693047ba90d965befabd3584c5988c776eed5981d9727782eec",
+        "pixelHash": "1bd68d20e3aac145d0f46782a4d548cf955949e9a5582df8007bd0085003e99c",
+        "errors": []
+      },
+      "exactLegacyPixelMatches": [],
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "artworkStatus": "BASE_CANDIDATE",
+      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "runtimeEnabled": false
+    }
+  ],
+  "productionMappingsApproved": 0,
+  "missingLegacyArtwork": [
+    "MONSTER_005",
+    "MONSTER_009",
+    "MONSTER_011",
+    "MONSTER_012",
+    "MONSTER_017",
+    "MONSTER_018",
+    "MONSTER_020",
+    "MONSTER_022",
+    "MONSTER_023",
+    "MONSTER_024",
+    "MONSTER_025",
+    "MONSTER_026",
+    "MONSTER_027",
+    "MONSTER_029",
+    "MONSTER_030"
+  ]
+}

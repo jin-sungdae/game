@@ -1,0 +1,16 @@
+{
+  "conceptId": "M005",
+  "action": "SLEEP",
+  "status": "CANDIDATE_ONLY",
+  "tool": "built-in image_gen",
+  "reference": "design/production-batches/monsters/batch01/M005/base-v2.png",
+  "sourceOriginal": "source-base-v1.png",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "prompt": "Project LUMA M005 new authored SLEEP key pose. Use attached image as exact CHARACTER IDENTITY reference. One isolated full-body transparent RGBA sprite, same red mushroom cap and cream spots, gill rim, tiny cream humanoid body, two arms and two feet, same face proportions and palette. Peacefully seated with knees folded, hands in lap, eyes gently closed, cap slightly forward. No new clothing or accessories. Same right-facing three-quarter camera. Actual new resting pose, not whole-image scaling or shifting. Entire cap and feet visible, transparent margins, contact point near bottom. Prefer256x256. No scene, floor, ground shadow, glow, particles, Z symbols, text, borders or fake checkerboard. Candidate key pose, not full animation.",
+  "validationStatus": "VALIDATION_FAILED",
+  "blockReason": "9 disconnected alpha pixels, maxAlpha1; one-time code cleanup requested and not yet approved",
+  "repairIterations": 0,
+  "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+  "identityReview": "CAPLET proposed; NOT_APPROVED"
+}
