@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "repairIterations": 1,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "baseCandidates": 10,
+  "idleCandidateClips": 0,
+  "idleCandidateFrames": 0,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotionReview": "NOT_VERIFIED",
+  "gui": "NOT_VERIFIED",
+  "deferred": {
+    "M061": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+    "M062": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+    "M063": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+    "M064": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+    "M065": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+    "M066": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+    "M067": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+    "M068": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+    "M069": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted",
+    "M070": "Dedicated fin, bell, tentacle or swimming joint animation required; no ground breathing clip substituted"
+  },
+  "repairHistory": [
+    "Only disconnected components with maximum alpha <=4 removed; connected body preserved"
+  ],
+  "identityReview": [
+    {
+      "conceptId": "M061",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M062",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M063",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M064",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M065",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M066",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M067",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M068",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M069",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M070",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    }
+  ],
+  "generation": [
+    {
+      "conceptId": "M061",
+      "tool": "built-in image_gen",
+      "sourceSha256": "36de781f0f9dfce4960f9f2a42cd0a08fd9accb5fdb7322afac69ba76f01ff87",
+      "reference": "Deep Ocean concept panel"
+    },
+    {
+      "conceptId": "M062",
+      "tool": "built-in image_gen",
+      "sourceSha256": "2e911b8f1889010616b0a0ca010deda3b1738e7d8b947c2093fc3e304124e644",
+      "reference": "Deep Ocean concept panel"
+    },
+    {
+      "conceptId": "M063",
+      "tool": "built-in image_gen",
+      "sourceSha256": "85d9d9bf37d57ba8ebdad57119f22b85801e502e50ad7abfaaf3140d43d7bf41",
+      "reference": "Deep Ocean concept panel"
+    },
+    {
+      "conceptId": "M064",
+      "tool": "built-in image_gen",
+      "sourceSha256": "5875dfa317bbbd0c14d54b9305cfcfbf96fbad4410f6d85da073d568ae47ea23",
+      "reference": "Deep Ocean concept panel"
+    },
+    {
+      "conceptId": "M065",
+      "tool": "built-in image_gen",
+      "sourceSha256": "a91c092a39b2d94529e9268d8f8e7f88e1c819faff02b6c1eceebb6b1de8b121",
+      "reference": "Deep Ocean concept panel"
+    },
+    {
+      "conceptId": "M066",
+      "tool": "built-in image_gen",
+      "sourceSha256": "ad62c59926c44c4054b987b474680fceff8c50634c257234b290b2f175fb9d38",
+      "reference": "Deep Ocean concept panel"
+    },
+    {
+      "conceptId": "M067",
+      "tool": "built-in image_gen",
+      "sourceSha256": "051c5b27c6f4027e8dd976ffac66f86d316de59446498a73635fd2964ae8778e",
+      "reference": "Deep Ocean concept panel"
+    },
+    {
+      "conceptId": "M068",
+      "tool": "built-in image_gen",
+      "sourceSha256": "1d919b67ac79083ef9b09b6b10d654601dc9f785d3c53c8a7bedb1156a59c4a3",
+      "reference": "Deep Ocean concept panel"
+    },
+    {
+      "conceptId": "M069",
+      "tool": "built-in image_gen",
+      "sourceSha256": "6190f0808bd283fbe776948a7bed3490f3511986b2aed0bdc5dbbf13044e0dab",
+      "reference": "Deep Ocean concept panel"
+    },
+    {
+      "conceptId": "M070",
+      "tool": "built-in image_gen",
+      "sourceSha256": "c022f60227638f6ce0b641c9a343d971a0a447710bed82f820b8dde08224f577",
+      "reference": "Deep Ocean concept panel"
+    }
+  ]
+}
