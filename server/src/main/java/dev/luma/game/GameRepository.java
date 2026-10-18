@@ -31,6 +31,9 @@ public class GameRepository {
     public Instant now() { return jdbc.queryForObject("SELECT clock_timestamp()",OffsetDateTime.class).toInstant(); }
     public void expire(long playerId, Instant now) {
         var time=OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC);
+        // Reject unsupported pending encounters before any expiry mutation.
+        jdbc.queryForList("SELECT rules_version FROM game.t_encounter WHERE player_id=? AND status='ACTIVE'",
+            String.class,playerId).forEach(BattleRulesVersion::requireSupported);
         // Expiry is also a battle outcome mutation: future rules must fail closed.
         jdbc.queryForList("""
             SELECT b.rules_version FROM game.t_encounter e
@@ -59,14 +62,16 @@ public class GameRepository {
         return jdbc.query("SELECT monster_id,code,name,rarity,movement_profile,min_level,max_level,encounter_weight FROM game.m_monster WHERE use_yn AND encounter_weight>0 ORDER BY monster_id",
             (r,n)->new MonsterSelector.Monster(r.getLong(1),r.getString(2),r.getString(3),r.getString(4),r.getString(5),r.getInt(6),r.getInt(7),r.getInt(8))).stream().filter(MonsterContent::eligible).toList();
     }
-    public GameDtos.Encounter create(long playerId, MonsterSelector.Selection selection, Instant now) {
+    public GameDtos.Encounter create(long playerId, MonsterSelector.Selection selection, Instant now, int companionLevel) {
+        var tier=MonsterTier.forLevel(companionLevel);
         var m=selection.monster(); var id=UUID.randomUUID(); var expires=now.plusSeconds(60);
         jdbc.update("""
-            INSERT INTO game.t_encounter(encounter_id,player_id,monster_id,monster_level,rarity,status,spawned_at,expires_at,created_at,updated_at)
-            VALUES (?,?,?,?,?,'ACTIVE',?,?,?,?)
+            INSERT INTO game.t_encounter(encounter_id,player_id,monster_id,monster_level,rarity,status,spawned_at,expires_at,created_at,updated_at,rules_version,spawn_tier)
+            VALUES (?,?,?,?,?,'ACTIVE',?,?,?,?,?,?)
             """,id,playerId,m.id(),selection.level(),m.rarity(),
             OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC),OffsetDateTime.ofInstant(expires,java.time.ZoneOffset.UTC),
-            OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC),OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC));
+            OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC),OffsetDateTime.ofInstant(now,java.time.ZoneOffset.UTC),
+            BattleRulesVersion.ALPHA_V1.name(),tier.number());
         return new GameDtos.Encounter(id,new GameDtos.Monster(m.code(),m.name(),selection.level(),m.rarity(),m.movementProfile()),now,expires,null,false);
     }
 }
