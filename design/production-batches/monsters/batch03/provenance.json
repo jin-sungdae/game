@@ -139,12 +139,20 @@
   ],
   "deferred": {
     "M023": "Dedicated core motion required; no organic breathing rig",
-    "M024": "ALPHA_DEFECT after posture recovery: 52 detached pixels, maxAlpha2; 3/3 repair budget exhausted; HUMAN_REVIEW_REQUIRED",
+    "M024": "Alpha recovery PASS after explicitly approved one-time cleanup; artwork/identity review and IDLE frames remain required. Original failure preserved.",
     "M030": "Dedicated rigid plate motion required; no organic breathing rig"
   },
   "repairHistory": [
     "Detached low-alpha cleanup, body pixels preserved",
     "Fix offline ledger writer variable shadowing; no image or validator changes",
     "M024 image-tool upright posture recovery; detached alpha52 pixels remain; further repairs BLOCKED + HUMAN_REVIEW_REQUIRED"
-  ]
+  ],
+  "approvedExtraCorrections": {
+    "M024": {
+      "authorized": 1,
+      "used": 1,
+      "scope": "Remove52 disconnected pixels with alpha<=2 only; no body change",
+      "evidence": "M024/cleanup-approved-validation.json"
+    }
+  }
 }
