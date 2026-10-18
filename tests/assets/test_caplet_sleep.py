@@ -26,4 +26,7 @@ class CapletSleepTests(unittest.TestCase):
             changed=sum(x!=y for x,y in zip(a,b))
             self.assertGreater(changed,0)
             self.assertLessEqual(changed,300)
-        self.assertFalse((test_assets.ROOT/'public/assets/monsters/caplet').exists())
+        public=test_assets.ROOT/'public/assets/monsters/caplet'
+        for frame in frames:
+            self.assertEqual(frame.read_bytes(),(public/'sleep'/frame.name).read_bytes())
+        self.assertEqual((public/'base.png').read_bytes(),(test_assets.ROOT/'design/production-batches/monsters/batch01/M005/base-v2.png').read_bytes())

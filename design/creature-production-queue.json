@@ -2785,7 +2785,7 @@
       "productionSpeciesId": "CAPLET",
       "state": "ANIMATION_IN_PROGRESS",
       "baseStatus": "BASE_READY",
-      "runtimeStatus": "BLOCKED",
+      "runtimeStatus": "PARTIAL_PRESENTATION_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": "ANIMATION_REQUIRED; RUNTIME_NOT_CONNECTED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": "a621f92fce032cc41f615a3fbf41032205baf00e",
@@ -2843,12 +2843,14 @@
         },
         {
           "action": "SLEEP",
-          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "animationStatus": "ANIMATION_READY",
           "frameCount": 6,
-          "runtimeStatus": "BLOCKED",
+          "runtimeStatus": "RUNTIME_CONNECTED",
           "guiStatus": "GUI_NOT_VERIFIED",
           "keyPosePath": "design/production-batches/monsters/sleep-pilot/M005/base-v2.png",
-          "blockReason": "Registration blocked pending appearance continuity approval; candidate runtime only"
+          "blockReason": "Native gameplay behavior and platform QA pending",
+          "artworkReview": "USER_APPROVED",
+          "manifestPath": "public/assets/monsters/caplet/manifest.json"
         },
         {
           "action": "CURSOR_REACT",
@@ -16514,15 +16516,16 @@
     "id": "monster-sleep-pilot-M005",
     "generatedOriginalPng": 1,
     "normalizedCandidatePng": 1,
-    "productionValidatedPng": 0,
-    "registeredPng": 0,
-    "completedAnimationClips": 0,
-    "runtimeConnections": 0,
+    "productionValidatedPng": 6,
+    "registeredPng": 7,
+    "completedAnimationClips": 1,
+    "runtimeConnections": 1,
     "skillConnections": 0,
-    "status": "BLOCKED_ARTWORK_REVIEW",
-    "repairIterations": 2,
+    "status": "SLEEP_REGISTERED_NATIVE_QA_PENDING",
+    "repairIterations": 3,
     "approvedCleanupCount": 1,
-    "generatedAnimationPng": 6
+    "generatedAnimationPng": 6,
+    "runtimeScope": "Presentation only; native spawning and behavior selection not enabled"
   },
   "browserCandidatePreview": {
     "url": "http://127.0.0.1:5185/index.html",

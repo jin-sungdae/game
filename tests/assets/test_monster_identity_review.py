@@ -35,7 +35,7 @@ class MonsterIdentityReviewTests(unittest.TestCase):
         assets=root/'design/production-batches/monsters'
         self.assertEqual(queue['candidateInventory']['allCandidatePng'],len(list(assets.rglob('*.png'))))
         self.assertEqual(queue['candidateInventory']['sourcePngIncludingRecovery'],len(list(assets.rglob('source*.png'))))
-        self.assertEqual(queue['currentBatch']['completedAnimationClips'],0)
+        self.assertEqual(queue['currentBatch']['completedAnimationClips'],1)
 
     def test_approved_cleanup_preserves_body_and_rgb(self):
         from PIL import Image

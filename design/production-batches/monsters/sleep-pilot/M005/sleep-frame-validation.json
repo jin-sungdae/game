@@ -98,8 +98,8 @@
     "x": 0.5,
     "y": 1
   },
-  "productionEligible": false,
-  "appearanceContinuity": "MANUAL_REVIEW_REQUIRED",
+  "productionEligible": true,
+  "appearanceContinuity": "USER_APPROVED",
   "gui": "DEFERRED_GUI",
   "browserPreview": {
     "url": "http://127.0.0.1:5186/tests/live/caplet-sleep/",
@@ -112,5 +112,7 @@
     ],
     "scope": "candidate AssetLoader and CharacterAnimator only; not native Living Behavior",
     "nativeGUI": "DEFERRED_GUI"
-  }
+  },
+  "registeredManifest": "public/assets/monsters/caplet/manifest.json",
+  "runtimeScope": "Registered SLEEP presentation; native behavior selection not enabled"
 }
