@@ -135,7 +135,7 @@ class CollectionEncounterFoundationTest {
         assertEquals("CANCELLED",foundation.reserve(id,"PIP",1).status());
         assertThrows(GameFault.class,()->foundation.reserve(UUID.randomUUID(),"MONSTER_022",1));
     }
-    UUID newPip() {return repo.create(1,new MonsterSelector.Selection(repo.monsters().getFirst(),1),repo.now()).encounterId();}
+    UUID newPip() {return repo.create(1,new MonsterSelector.Selection(repo.monsters().getFirst(),1),repo.now(),repo.activeCompanion(1).level()).encounterId();}
     @Test void consumptionBindsFreshEncounterAtomicallyAndDoesNotFarmObservation() {
         award();var id=UUID.randomUUID();foundation.reserve(id,"PIP",1);
         var eid=new TransactionTemplate(manager).execute(s->{repo.lockPlayer(1);var e=newPip();foundation.consume(id,e);return e;});

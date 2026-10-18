@@ -17,10 +17,10 @@ public class GameService {
     @Transactional
     public GameDtos.Encounter createEncounter() {
         repository.lockPlayer(LOCAL_PLAYER); // Serialize this player's requests before observing DB time.
-        repository.activeCompanion(LOCAL_PLAYER);
+        var companion=repository.activeCompanion(LOCAL_PLAYER);
         var now=repository.now();
         repository.expire(LOCAL_PLAYER,now);
-        return repository.active(LOCAL_PLAYER).orElseGet(()->repository.create(LOCAL_PLAYER,selector.select(repository.monsters()),now));
+        return repository.active(LOCAL_PLAYER).orElseGet(()->repository.create(LOCAL_PLAYER,selector.select(repository.monsters(),companion.level()),now,companion.level()));
     }
     @Transactional
     public Optional<GameDtos.Encounter> activeEncounter() {

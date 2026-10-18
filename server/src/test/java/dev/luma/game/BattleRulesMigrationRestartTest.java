@@ -16,7 +16,7 @@ class BattleRulesMigrationRestartTest {
     Map<String,String> snapshot(JdbcTemplate db) {
         var state=new LinkedHashMap<String,String>();
         for(String t:List.of("t_battle","t_encounter","t_reward","t_player","t_player_companion")) {
-            String value=t.equals("t_battle")?"to_jsonb(t)-'rules_version'":t.equals("t_player_companion")?"to_jsonb(t)-'growth_policy_version'":t.equals("t_player")?"to_jsonb(t)-'active_selection_revision'":"to_jsonb(t)";
+            String value=t.equals("t_encounter")?"to_jsonb(t)-'rules_version'-'spawn_tier'":t.equals("t_battle")?"to_jsonb(t)-'rules_version'":t.equals("t_player_companion")?"to_jsonb(t)-'growth_policy_version'":t.equals("t_player")?"to_jsonb(t)-'active_selection_revision'":"to_jsonb(t)";
             state.put(t,db.queryForObject("SELECT COALESCE(jsonb_agg("+value+" ORDER BY ("+value+")::text),'[]'::jsonb)::text FROM game."+t+" t",String.class));
         }
         return state;
