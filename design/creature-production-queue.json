@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 1,
   "repairLimit": 3,
-  "nextTask": "Validate aggregate candidate rigs and browser playback. Then first missing authored action M001 MOVE; new poses required.  Artwork, identity mapping and native GUI not approved. M024 approved alpha cleanup complete; artwork/animation review remains.",
+  "nextTask": "M005 CAPLET animation completion and runtime validation; no skill balance approval",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -2782,12 +2782,12 @@
       "creatureId": "M005",
       "species": null,
       "evolutionStage": null,
-      "productionSpeciesId": null,
+      "productionSpeciesId": "CAPLET",
       "state": "ANIMATION_IN_PROGRESS",
       "baseStatus": "BASE_READY",
-      "runtimeStatus": "BLOCKED",
+      "runtimeStatus": "PARTIAL_PRESENTATION_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
+      "blockReason": "ANIMATION_REQUIRED; RUNTIME_NOT_CONNECTED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": "a621f92fce032cc41f615a3fbf41032205baf00e",
       "actions": [
         {
@@ -2843,10 +2843,14 @@
         },
         {
           "action": "SLEEP",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_READY",
+          "frameCount": 6,
+          "runtimeStatus": "RUNTIME_CONNECTED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "keyPosePath": "design/production-batches/monsters/sleep-pilot/M005/base-v2.png",
+          "blockReason": "Native gameplay behavior and platform QA pending",
+          "artworkReview": "USER_APPROVED",
+          "manifestPath": "public/assets/monsters/caplet/manifest.json"
         },
         {
           "action": "CURSOR_REACT",
@@ -2920,7 +2924,9 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch01/M005/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "identityMappingApproved": true,
+      "baseAppearanceApproved": true
     },
     {
       "creatureId": "M006",
@@ -16507,13 +16513,19 @@
     }
   ],
   "currentBatch": {
-    "id": "monster-batch10",
-    "baseCandidates": 10,
-    "idleCandidateClips": 5,
-    "productionComplete": 0,
-    "total": 10,
-    "repairIterations": 1,
-    "humanReviewRequired": true
+    "id": "monster-sleep-pilot-M005",
+    "generatedOriginalPng": 1,
+    "normalizedCandidatePng": 1,
+    "productionValidatedPng": 6,
+    "registeredPng": 7,
+    "completedAnimationClips": 1,
+    "runtimeConnections": 1,
+    "skillConnections": 0,
+    "status": "SLEEP_REGISTERED_NATIVE_QA_PENDING",
+    "repairIterations": 3,
+    "approvedCleanupCount": 1,
+    "generatedAnimationPng": 6,
+    "runtimeScope": "Presentation only; native spawning and behavior selection not enabled"
   },
   "browserCandidatePreview": {
     "url": "http://127.0.0.1:5185/index.html",
@@ -16526,8 +16538,8 @@
   },
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
-    "sourcePngIncludingRecovery": 101,
-    "allCandidatePng": 598,
+    "sourcePngIncludingRecovery": 102,
+    "allCandidatePng": 607,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,

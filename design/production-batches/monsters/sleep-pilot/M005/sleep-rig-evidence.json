@@ -1,0 +1,74 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User approved CAPLET identity and requested SLEEP part rigging; clip appearance review pending",
+  "parts": [
+    {
+      "name": "seated-chest-breath",
+      "x": 136,
+      "y": 182,
+      "rx": 9,
+      "ry": 12,
+      "dx": 0.3,
+      "dy": -0.65,
+      "phase": 0
+    },
+    {
+      "name": "resting-forearm",
+      "x": 142,
+      "y": 190,
+      "rx": 7,
+      "ry": 8,
+      "dx": -0.2,
+      "dy": -0.3,
+      "phase": -1.047
+    }
+  ],
+  "protectedRegions": "y<=168||y>=201||x<=120||x>=154",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "sleep_00.png",
+      "pixelSha256": "5967c3a180d28ff5ace02cd8196b9d259e24aa7e4bf12a1a2820adc744b241fb",
+      "changedPixels": 61,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.0900704521231583
+    },
+    {
+      "file": "sleep_01.png",
+      "pixelSha256": "1c8dbd9572e1300f8377da535c4664d971a18294686009743da51935ac5f0d30",
+      "changedPixels": 135,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.17883725865974745
+    },
+    {
+      "file": "sleep_02.png",
+      "pixelSha256": "3b5f72384ffbe41b9c0174fb9757f765f46af0468ea71084bfd3022bdcdd16a4",
+      "changedPixels": 247,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.5333103867052915
+    },
+    {
+      "file": "sleep_03.png",
+      "pixelSha256": "13f939d7f8655cd57e115e88e4dbd504a04758b2b6974900888adc1178e44544",
+      "changedPixels": 282,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7116738815182098
+    },
+    {
+      "file": "sleep_04.png",
+      "pixelSha256": "e6d1dad436e2dcbd73f376ef04db9aa4e2c39f824832e3b348444ba8e135cc43",
+      "changedPixels": 275,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.5333103867052915
+    },
+    {
+      "file": "sleep_05.png",
+      "pixelSha256": "aaad3d94887568bc08d5afcc480bffb93ae0d357a98acf018ed1b96af1fcd818",
+      "changedPixels": 220,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.26940416327039896
+    }
+  ],
+  "repairIteration": 0,
+  "productionEligible": false
+}

@@ -495,6 +495,28 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "bubu",
     "stage": 1
   },
+  "/assets/monsters/caplet/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "sleep": {
+        "frameDuration": 400,
+        "frames": 6,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 82
+    },
+    "species": "caplet",
+    "stage": 1
+  },
   "/assets/monsters/chirp/manifest.json": {
     "anchor": {
       "x": 0.5,

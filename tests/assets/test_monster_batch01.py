@@ -23,8 +23,12 @@ class MonsterBatch01Tests(unittest.TestCase):
     def test_existing_thirty_identities_and_fifteen_artworks_unchanged(self):
         p=test_assets.ROOT/'design/production-batches/monsters/batch01/identity-review.json';review=json.loads(p.read_text())
         self.assertEqual(review['existingDexCount'],30);self.assertEqual(review['existingPngCount'],15)
-        for file,key in [('src/entities/monster-dex.json','existingIdentitySha256'),('src/entities/monsters.json','productionRegistrySha256')]:
+        for file,key in [('src/entities/monster-dex.json','existingIdentitySha256')]:
             self.assertEqual(hashlib.sha256((test_assets.ROOT/file).read_bytes()).hexdigest(),review[key])
+        registry=json.loads((test_assets.ROOT/'src/entities/monsters.json').read_text())
+        historical=json.loads((test_assets.ROOT/'design/production-batches/monsters/sleep-pilot/legacy-registry.json').read_text())
+        self.assertEqual({k:v for k,v in registry.items() if k!='CAPLET'},historical)
+        self.assertEqual(hashlib.sha256((test_assets.ROOT/'design/production-batches/monsters/sleep-pilot/legacy-registry.json').read_bytes()).hexdigest(),review['productionRegistrySha256'])
         for row in review['existingPngs']:
             self.assertEqual(hashlib.sha256((test_assets.ROOT/row['path']).read_bytes()).hexdigest(),row['sha256'])
         for row in review['rows']:
