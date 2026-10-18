@@ -382,11 +382,11 @@
         "errors": []
       },
       "exactLegacyPixelMatches": [],
-      "productionSpeciesId": null,
-      "mappingApproved": false,
+      "productionSpeciesId": "CAPLET",
+      "mappingApproved": true,
       "artworkStatus": "BASE_READY",
-      "existingBlockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
-      "identityStatus": "HUMAN_REVIEW_REQUIRED",
+      "existingBlockReason": "ANIMATION_REQUIRED; RUNTIME_NOT_CONNECTED; GUI_NOT_VERIFIED",
+      "identityStatus": "USER_APPROVED",
       "runtimeEnabled": false
     },
     {
@@ -2005,7 +2005,7 @@
       "runtimeEnabled": false
     }
   ],
-  "productionMappingsApproved": 0,
+  "productionMappingsApproved": 1,
   "missingLegacyArtwork": [
     "MONSTER_005",
     "MONSTER_009",

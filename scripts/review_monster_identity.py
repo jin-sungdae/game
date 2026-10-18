@@ -38,11 +38,11 @@ def review():
         evidence = asset(str(selected.relative_to(ROOT)))
         matches = [old['species'] for old in legacy if evidence.get('pixelHash') and old['asset'].get('pixelHash') == evidence['pixelHash']]
         candidates.append({'conceptId': code, 'asset': evidence, 'exactLegacyPixelMatches': matches,
-                           'productionSpeciesId': None, 'mappingApproved': False,
+                           'productionSpeciesId': row.get('productionSpeciesId') if row.get('identityMappingApproved') else None, 'mappingApproved': bool(row.get('identityMappingApproved')),
                            'artworkStatus': row['baseStatus'], 'existingBlockReason': row['blockReason'],
-                           'identityStatus': 'HUMAN_REVIEW_REQUIRED', 'runtimeEnabled': False})
+                           'identityStatus': 'USER_APPROVED' if row.get('identityMappingApproved') else 'HUMAN_REVIEW_REQUIRED', 'runtimeEnabled': False})
     return {'schemaVersion': 1, 'interpretation': 'Different hashes do not prove distinct design. Missing legacy art prevents full visual comparison.',
-            'legacy': legacy, 'candidates': candidates, 'productionMappingsApproved': 0,
+            'legacy': legacy, 'candidates': candidates, 'productionMappingsApproved': sum(x['mappingApproved'] for x in candidates),
             'missingLegacyArtwork': [x['species'] for x in legacy if x['asset']['status']=='ASSET_REQUIRED']}
 
 if __name__ == '__main__':
