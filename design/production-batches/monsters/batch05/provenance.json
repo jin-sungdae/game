@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "repairIterations": 1,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "baseCandidates": 10,
+  "idleCandidateClips": 8,
+  "idleCandidateFrames": 48,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotionReview": "NOT_VERIFIED",
+  "gui": "NOT_VERIFIED",
+  "deferred": {
+    "M043": "Rigid ice plates require dedicated joint or plate animation; no soft breathing warp",
+    "M048": "Rigid ice plates require dedicated joint or plate animation; no soft breathing warp"
+  },
+  "repairHistory": [
+    "Detached low-alpha cleanup; connected body pixels unchanged; source and pre-cleanup versions retained"
+  ],
+  "identityReview": [
+    {
+      "conceptId": "M041",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M042",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M043",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M044",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M045",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M046",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M047",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M048",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M049",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M050",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    }
+  ],
+  "generation": [
+    {
+      "conceptId": "M041",
+      "tool": "built-in image_gen",
+      "sourceSha256": "52d8bde57bcc231d92306923aa1417a14130737c8c5decaf732dd2abdfc14871",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    },
+    {
+      "conceptId": "M042",
+      "tool": "built-in image_gen",
+      "sourceSha256": "9fe2eabcabdc5531f911b03d1d1f9755a55a4487b8f36ba5bf7785bc45a21fd4",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    },
+    {
+      "conceptId": "M043",
+      "tool": "built-in image_gen",
+      "sourceSha256": "8337ba0f115e7b916c84cfba03a850b9752073a3ab65c97143265c50bb42514a",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    },
+    {
+      "conceptId": "M044",
+      "tool": "built-in image_gen",
+      "sourceSha256": "62fb753093de7e699cf44c6c99c60574d9678dfb99a7407595254509bcca0adb",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    },
+    {
+      "conceptId": "M045",
+      "tool": "built-in image_gen",
+      "sourceSha256": "33554b2a92b2bcea147c41d6998264935b5917e63044a1c58a851820221abf55",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    },
+    {
+      "conceptId": "M046",
+      "tool": "built-in image_gen",
+      "sourceSha256": "c9d02a962e10c93afd78bea7628769b9b5d6e38165929447fb44e275fdf286ae",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    },
+    {
+      "conceptId": "M047",
+      "tool": "built-in image_gen",
+      "sourceSha256": "b98ea774558dc3eec351fa2dc9f5610b1c891d931912281beba815a9f291c096",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    },
+    {
+      "conceptId": "M048",
+      "tool": "built-in image_gen",
+      "sourceSha256": "500230d28621624d3e097b0ff5c961dd9f7999265923bb15a8df64fe42eab7ab",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    },
+    {
+      "conceptId": "M049",
+      "tool": "built-in image_gen",
+      "sourceSha256": "469736cafddd1614da9cbac9ed3f6a62c43e3f5d04d6132b8b9212a827cb62d8",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    },
+    {
+      "conceptId": "M050",
+      "tool": "built-in image_gen",
+      "sourceSha256": "c88ef5faff9da7fc11b8b07a227a78582aacd43ba0bcb58755063f903be19345",
+      "reference": "Frozen Tundra concept panel",
+      "constraints": "Faithful full-body neutral right-facing redraw; opaque character; transparent background; no shadow, scenery, text or outside glow"
+    }
+  ]
+}
