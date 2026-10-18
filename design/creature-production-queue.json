@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 1,
   "repairLimit": 3,
-  "nextTask": "Validate aggregate candidate rigs and browser playback. Then first missing authored action M001 MOVE; new poses required. M024 extra cleanup remains awaiting approval. Artwork, identity mapping and native GUI not approved.",
+  "nextTask": "Validate aggregate candidate rigs and browser playback. Then first missing authored action M001 MOVE; new poses required.  Artwork, identity mapping and native GUI not approved. M024 approved alpha cleanup complete; artwork/animation review remains.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -5512,12 +5512,12 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BLOCKED",
-      "baseStatus": "VALIDATION_FAILED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "ALPHA_DEFECT after posture recovery: 52 detached pixels, maxAlpha2; 3/3 repair budget exhausted; HUMAN_REVIEW_REQUIRED",
-      "lastValidatedCommit": "7c5dc28c4e838a00e018d06dec1de34711671793",
+      "blockReason": "Approved one-time alpha cleanup PASS; artwork approval, identity mapping, animation and GUI remain incomplete",
+      "lastValidatedCommit": "610ac84fdc055142ad23a3be14ddb614cf3427dc",
       "actions": [
         {
           "action": "IDLE",
@@ -5646,8 +5646,15 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "basePath": "design/production-batches/monsters/batch03/M024/base-v3.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "basePath": "design/production-batches/monsters/batch03/M024/base-v4.png",
+      "validationScope": "Approved alpha cleanup and batch03/ledger checks; artwork and runtime unverified",
+      "alphaRecovery": {
+        "status": "PASS",
+        "removedPixels": 52,
+        "bodyPixelChanges": 0,
+        "approvedExtraCorrectionsUsed": 1,
+        "originalFailurePreserved": true
+      }
     },
     {
       "creatureId": "M025",
@@ -16520,7 +16527,7 @@
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
     "sourcePngIncludingRecovery": 101,
-    "allCandidatePng": 597,
+    "allCandidatePng": 598,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,
