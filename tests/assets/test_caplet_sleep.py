@@ -1,6 +1,6 @@
 import json
 import unittest
-from PIL import Image
+from test_moa_blink_v2 import rgba
 import test_assets
 
 class CapletSleepTests(unittest.TestCase):
@@ -8,13 +8,13 @@ class CapletSleepTests(unittest.TestCase):
         folder=test_assets.ROOT/'design/production-batches/monsters/sleep-pilot/M005'
         frames=sorted((folder/'rigged/sleep').glob('*.png'))
         self.assertEqual(len(frames),6)
-        source=list(Image.open(folder/'base-v2.png').getdata())
+        raw=rgba(folder/'base-v2.png'); source=[tuple(raw[i:i+4]) for i in range(0,len(raw),4)]
         hashes=[]; decoded=[]
         for frame in frames:
             bounds=[]
             self.assertEqual(test_assets.validator.png_errors(frame,True,bounds,hashes),[])
             self.assertEqual(bounds,[59,62,204,214])
-            data=list(Image.open(frame).getdata());decoded.append(data)
+            raw=rgba(frame); data=[tuple(raw[i:i+4]) for i in range(0,len(raw),4)];decoded.append(data)
             for i,(before,after) in enumerate(zip(source,data)):
                 x,y=i%256,i//256
                 if y<=168 or y>=201 or x<=120 or x>=154:

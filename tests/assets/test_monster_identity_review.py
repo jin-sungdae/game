@@ -38,10 +38,10 @@ class MonsterIdentityReviewTests(unittest.TestCase):
         self.assertEqual(queue['currentBatch']['completedAnimationClips'],1)
 
     def test_approved_cleanup_preserves_body_and_rgb(self):
-        from PIL import Image
+        from test_moa_blink_v2 import rgba
         folder=test_assets.ROOT/'design/production-batches/monsters/sleep-pilot/M005'
-        before=list(Image.open(folder/'base-v1.png').getdata())
-        after=list(Image.open(folder/'base-v2.png').getdata())
+        raw=rgba(folder/'base-v1.png'); before=[tuple(raw[i:i+4]) for i in range(0,len(raw),4)]
+        raw=rgba(folder/'base-v2.png'); after=[tuple(raw[i:i+4]) for i in range(0,len(raw),4)]
         changed=[(a,b) for a,b in zip(before,after) if a!=b]
         self.assertEqual(len(changed),9)
         self.assertTrue(all(a[:3]==b[:3] and a[3]==1 and b[3]==0 for a,b in changed))
