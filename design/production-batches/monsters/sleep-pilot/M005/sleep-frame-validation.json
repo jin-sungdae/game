@@ -1,0 +1,116 @@
+{
+  "frames": [
+    {
+      "file": "sleep_00.png",
+      "errors": [],
+      "bounds": [
+        59,
+        62,
+        204,
+        214
+      ],
+      "hash": "190d9a21b8db452f6eb9cc2a4523f4e815810f106a688c622cf17534c2504562"
+    },
+    {
+      "file": "sleep_01.png",
+      "errors": [],
+      "bounds": [
+        59,
+        62,
+        204,
+        214
+      ],
+      "hash": "a514e76d06f2b7fec9bc469db0efeb389a3ab0a06c8629a4ebc56c436d60a9b8"
+    },
+    {
+      "file": "sleep_02.png",
+      "errors": [],
+      "bounds": [
+        59,
+        62,
+        204,
+        214
+      ],
+      "hash": "5b31a764f0148777bcd2aeb2f7e10d03ca2c92cf0240301ceddfc83a888746ea"
+    },
+    {
+      "file": "sleep_03.png",
+      "errors": [],
+      "bounds": [
+        59,
+        62,
+        204,
+        214
+      ],
+      "hash": "ebfafb42ebc59196acba746e755544f0089fc1be85d12101372807679f44840f"
+    },
+    {
+      "file": "sleep_04.png",
+      "errors": [],
+      "bounds": [
+        59,
+        62,
+        204,
+        214
+      ],
+      "hash": "f81a95870da26f38f9917828edbf01f5c50a6cb74578944cb33b7b745047f616"
+    },
+    {
+      "file": "sleep_05.png",
+      "errors": [],
+      "bounds": [
+        59,
+        62,
+        204,
+        214
+      ],
+      "hash": "c06d3352cad1960e250d72a08d7aa523e15c583f7524e560d7ab93d488dfc76a"
+    }
+  ],
+  "uniquePixelHashes": 6,
+  "adjacentIncludingLoop": [
+    {
+      "changedPixels": 187,
+      "meanAbsoluteChannelDelta": 0.005382537841796875
+    },
+    {
+      "changedPixels": 246,
+      "meanAbsoluteChannelDelta": 0.010242462158203125
+    },
+    {
+      "changedPixels": 240,
+      "meanAbsoluteChannelDelta": 0.0063629150390625
+    },
+    {
+      "changedPixels": 222,
+      "meanAbsoluteChannelDelta": 0.005126953125
+    },
+    {
+      "changedPixels": 261,
+      "meanAbsoluteChannelDelta": 0.01021575927734375
+    },
+    {
+      "changedPixels": 219,
+      "meanAbsoluteChannelDelta": 0.0065460205078125
+    }
+  ],
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "productionEligible": false,
+  "appearanceContinuity": "MANUAL_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "browserPreview": {
+    "url": "http://127.0.0.1:5186/tests/live/caplet-sleep/",
+    "observed": [
+      "image decoded",
+      "frame progression",
+      "pause/resume",
+      "reduced motion frame zero",
+      "facing mirror"
+    ],
+    "scope": "candidate AssetLoader and CharacterAnimator only; not native Living Behavior",
+    "nativeGUI": "DEFERRED_GUI"
+  }
+}

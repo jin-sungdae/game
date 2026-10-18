@@ -2843,12 +2843,12 @@
         },
         {
           "action": "SLEEP",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED",
           "keyPosePath": "design/production-batches/monsters/sleep-pilot/M005/base-v2.png",
-          "blockReason": "Keypose alpha corrected; continuous SLEEP frames not supplied"
+          "blockReason": "Registration blocked pending appearance continuity approval; candidate runtime only"
         },
         {
           "action": "CURSOR_REACT",
@@ -16519,9 +16519,10 @@
     "completedAnimationClips": 0,
     "runtimeConnections": 0,
     "skillConnections": 0,
-    "status": "KEYPOSE_VALIDATED_ANIMATION_REQUIRED",
+    "status": "BLOCKED_ARTWORK_REVIEW",
     "repairIterations": 2,
-    "approvedCleanupCount": 1
+    "approvedCleanupCount": 1,
+    "generatedAnimationPng": 6
   },
   "browserCandidatePreview": {
     "url": "http://127.0.0.1:5185/index.html",
@@ -16535,7 +16536,7 @@
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
     "sourcePngIncludingRecovery": 102,
-    "allCandidatePng": 601,
+    "allCandidatePng": 607,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,
