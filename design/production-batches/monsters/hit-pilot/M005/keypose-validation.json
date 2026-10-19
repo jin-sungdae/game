@@ -1,0 +1,21 @@
+{
+  "status": "VALIDATION_FAILED",
+  "pngErrors": [],
+  "bounds": [
+    21,
+    18,
+    253,
+    250
+  ],
+  "pixelHash": "1ea6fe821cf41226dd85ecc316a9ac44d1c70ec1b999734b9cecc8ad2c5c48db",
+  "detachedAlphaPixels": 60,
+  "productionEligible": false,
+  "animationClipComplete": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "appearance": "Generated flinch expression and arm pose require comparison against approved BASE; no final approval inferred",
+  "repairIterations": 3,
+  "sourceBase": "public/assets/monsters/caplet/base.png",
+  "generationTool": "builtin_image_gen",
+  "normalization": "Existing proportional 256x256 RGBA canvas preparation; not production approval",
+  "prompt": "Use case: identity-preserve. Asset type: Project LUMA CAPLET isolated HIT keypose candidate, not production approval. Input image 1 is the approved CAPLET BASE identity reference and edit target. Make one full-body transparent PNG of the exact same small upright mushroom creature briefly flinching from a harmless game hit: a slight protective hunch, short arms drawn close to the chest, eyes winced but unmistakably awake, feet still planted at the same ground baseline. Keep the red cap, ALL white spot locations and shapes, cap rim and underside gills, face/head proportions, eye locations, ivory torso, arms, hands and feet anatomy and painterly style identical to the reference. Preserve right-facing three-quarter viewpoint and original scale and framing. Head and cap should remain stable; no dramatic leaning or horizontal translation. 256x256 RGBA canvas, complete uncropped character, actual transparent alpha background; clean tightly antialiased silhouette with NO detached pixels, dust, particles, shadows, floating glow, floor or backdrop. No words, labels, grid, effects, weapons, blood, extra appendages, costume, or new design. This is a dedicated flinch keypose for later anatomical rigging; do not output a sprite sheet."
+}

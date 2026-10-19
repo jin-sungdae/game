@@ -1,0 +1,41 @@
+{
+  "conceptId": "M009",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M009/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 6,
+    "frameDuration": 145,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 152,
+      "y": 82,
+      "rx": 5.8,
+      "ry": 6.8
+    },
+    {
+      "x": 179.5,
+      "y": 85,
+      "rx": 2.7,
+      "ry": 5.3
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review only; no gameplay frequency change",
+  "anatomyScope": "M009 gentle rounded-eye blink; ears, leaf cape, muzzle, round torso, short arms and planted feet fixed"
+}

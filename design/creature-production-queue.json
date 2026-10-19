@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "CAPLET MOVE/TURN failed keypose recovery remains BLOCKED at 3/3; batch appearance/loop review of M003 BLINK, M006 BLINK, RUU Stage 3 LOOK. Next independent queue: M004 LOOK and NOX Stage 2 LOOK, after anatomy/preflight. No unapproved Production registration or gameplay activation.",
+  "nextTask": "Batch review M004 LOOK, NOX Stage 2 LOOK, M008 LOOK, RUU Stage 4 BLINK, M009 BLINK, RUU Stage 5 LOOK. CAPLET REST/INTERACT/MOVE/TURN/HIT recovery BLOCKED at 3/3. Next independent first attempts: M010 LOOK and NOX Stage 2 BLINK after source anatomy preflight. No unapproved Production registration or gameplay activation.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -1332,10 +1332,15 @@
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/ruu/stage04",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "LOOK",
@@ -1455,14 +1460,15 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 16,
         "completeActions": 0
-      }
+      },
+      "basePath": "public/assets/creatures/ruu/stage04/base.png"
     },
     {
       "creatureId": "companion:ruu:5",
@@ -1498,10 +1504,15 @@
         },
         {
           "action": "LOOK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/ruu/stage05",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "MOVE",
@@ -1614,14 +1625,15 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 16,
         "completeActions": 0
-      }
+      },
+      "basePath": "public/assets/creatures/ruu/stage05/base.png"
     },
     {
       "creatureId": "companion:nox:1",
@@ -1816,10 +1828,15 @@
         },
         {
           "action": "LOOK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/nox/stage02",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "MOVE",
@@ -1932,14 +1949,15 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 16,
         "completeActions": 0
-      }
+      },
+      "basePath": "public/assets/creatures/nox/stage02/base.png"
     },
     {
       "creatureId": "companion:nox:3",
@@ -2955,10 +2973,15 @@
         },
         {
           "action": "LOOK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M004",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "MOVE",
@@ -3065,14 +3088,15 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 2,
-        "automatedCandidateActions": 2,
-        "artworkReviewPendingActions": 2,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
-      }
+      },
+      "basePath": "design/production-batches/monsters/batch01/M004/base-v2.png"
     },
     {
       "creatureId": "M005",
@@ -3217,10 +3241,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/monsters/hit-pilot/M005",
+          "recoveryPath": "design/production-batches/monsters/hit-pilot/M005/keypose.png",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "ALPHA_DEFECT: 60 detached pixels; generated flinch keypose retained without recovery/rigging/registration; PR repair limit 3/3"
         },
         {
           "action": "VICTORY",
@@ -3290,7 +3319,7 @@
         "candidateActions": 6,
         "automatedCandidateActions": 6,
         "artworkReviewPendingActions": 5,
-        "validationFailedActions": 4,
+        "validationFailedActions": 5,
         "missingFrameSetActions": 9,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -3658,10 +3687,15 @@
         },
         {
           "action": "LOOK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M008",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "MOVE",
@@ -3769,11 +3803,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 2,
-        "automatedCandidateActions": 2,
-        "artworkReviewPendingActions": 2,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -3812,10 +3846,15 @@
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M009",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "LOOK",
@@ -3930,11 +3969,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 2,
-        "automatedCandidateActions": 2,
-        "artworkReviewPendingActions": 2,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -18231,7 +18270,7 @@
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
     "sourcePngIncludingRecovery": 102,
-    "allCandidatePng": 672,
+    "allCandidatePng": 674,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,
@@ -18462,11 +18501,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 94,
-    "automatedCandidateActions": 93,
-    "artworkReviewPendingActions": 93,
-    "validationFailedActions": 5,
-    "missingFrameSetActions": 1641,
+    "candidateActions": 100,
+    "automatedCandidateActions": 99,
+    "artworkReviewPendingActions": 99,
+    "validationFailedActions": 6,
+    "missingFrameSetActions": 1635,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
@@ -19104,7 +19143,7 @@
       "proposedChange": "Change only pilotDefinition('RUU', 3) to pilotDefinition('ruu', 3)",
       "approval": "USER_APPROVED: 테스트 입력 1건 수정 승인",
       "repairIterations": 3,
-      "releaseGate": "PENDING_FINAL_HEAD_REVALIDATION",
+      "releaseGate": "PASS_18_OF_18_AT_784628d4ff5129f4af31b0ba351ec3d4a54e0a71",
       "productionCodeChanged": false,
       "resolution": "pilotDefinition('RUU', 3) -> pilotDefinition('ruu', 3); test input only",
       "animationRegression": {
@@ -19112,7 +19151,56 @@
         "passed": 182,
         "failed": 0
       },
-      "priorReleaseGate": "FAIL_animation-content at 223820561fd2a095078a21a330f2668443058a08; original failure evidence preserved"
+      "priorReleaseGate": "FAIL_animation-content at 223820561fd2a095078a21a330f2668443058a08; original failure evidence preserved",
+      "githubCI": "SUCCESS_4_OF_4_RUN_39273100446"
+    }
+  },
+  "post114LookContinuation": {
+    "baselineCommit": "784628d4ff5129f4af31b0ba351ec3d4a54e0a71",
+    "originMain": "b0adfc792bfe667615a05bd982fa4f3dc9229dff",
+    "repairIterations": 3,
+    "repairPolicy": "Independent first attempts only; no failed task recovery or limit reset",
+    "candidateClips": 6,
+    "candidateFrames": 44,
+    "candidatePng": 52,
+    "productionRegistrations": 0,
+    "runtimeConnections": 0,
+    "livingBehaviorConnections": 0,
+    "battleSkillConnections": 0,
+    "approvedUnconnectedAssets": [],
+    "capletSleep": "ALREADY_CONNECTED; unchanged",
+    "legacyProductionAudit": "Existing 30 identities and 15 registered base assets preserved; source component warnings remain review-only, not retrospective rejection of existing approval",
+    "failedKeypose": "CAPLET HIT; 60 detached alpha pixels; no recovery",
+    "newCases": {
+      "M004": "M004",
+      "companion:nox:2": "nox/stage02",
+      "M008": "M008",
+      "companion:ruu:4": "ruu/stage04",
+      "M009": "M009",
+      "companion:ruu:5": "ruu/stage05"
+    },
+    "nativeMacOS": "DEFERRED_GUI",
+    "nativeWindows": "DEFERRED_GUI",
+    "preview": "tests/live/creature-review/",
+    "finalHeadEvidence": "Recorded in PR #114 after clean-HEAD Release Gate and CI; no old-SHA evidence reused",
+    "browserPreview": {
+      "scope": "ISOLATED_BROWSER_ONLY",
+      "loadedCandidates": 6,
+      "frameProgressObserved": [
+        "M004 LOOK",
+        "NOX Stage 2 LOOK",
+        "RUU Stage 5 LOOK"
+      ],
+      "pauseResume": "OBSERVED_RUU_STAGE5",
+      "reducedMotion": "OBSERVED_RUU_STAGE5",
+      "nativeGUI": "DEFERRED_GUI",
+      "artworkApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    "focusedValidation": {
+      "assetTests": 3,
+      "assetPassed": 3,
+      "animationTests": 188,
+      "animationPassed": 188
     }
   }
 }

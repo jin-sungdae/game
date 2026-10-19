@@ -1,0 +1,36 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 5,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage05/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 225,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 211.5,
+      "y": 91,
+      "rx": 4.5,
+      "ry": 2.8,
+      "dx": 0.65
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review only; no gameplay frequency change",
+  "anatomyScope": "RUU Stage 5 deliberate horizon scan; horn arcs, crown, beak, long wing feathers, torso and four feet fixed"
+}

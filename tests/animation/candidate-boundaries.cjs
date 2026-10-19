@@ -2,7 +2,7 @@ const {test}=require('node:test'),assert=require('node:assert/strict'),fs=requir
 const load=f=>require(path.join(process.env.LUMA_ANIMATION_TEST_DIR,f));
 const {AssetLoader}=load('animation/loader.js');
 const {CharacterAnimator,PilotAssets,pilotDefinition,AnimationStateResolver}=load('animation/pilot.js');
-for(const code of ['M003','M006','ruu/stage03'])test(`${code} candidate uses real frames and existing clock only in isolated review`,async()=>{
+for(const code of ['M003','M006','ruu/stage03','M004','nox/stage02','M008','ruu/stage04','M009','ruu/stage05'])test(`${code} candidate uses real frames and existing clock only in isolated review`,async()=>{
  const root=`design/production-batches/action-followup/${code}`;
  const spec=JSON.parse(fs.readFileSync(`${root}/candidate-clip.json`));
  const name=spec.clip.name.toLowerCase();
@@ -22,9 +22,10 @@ for(const code of ['M003','M006','ruu/stage03'])test(`${code} candidate uses rea
 });
 test('candidate files cannot activate CAPLET MOVE/TURN or RUU LOOK; native sleep remains stationary',async()=>{
  const assets=new PilotAssets(new AssetLoader({json:async()=>{throw Error('unapproved assets must not be loaded')},image:async()=>{throw Error('unapproved frame')}}));
- for(const state of ['MOVE','TURN','REACT','REST'])assert.equal(await assets.load(pilotDefinition('CAPLET'),state),null);
+ for(const state of ['MOVE','TURN','REACT','REST','HIT'])assert.equal(await assets.load(pilotDefinition('CAPLET'),state),null);
  assert.equal(await assets.load(pilotDefinition('ruu',3),'LOOK_AROUND'),null);
- assert.equal(pilotDefinition('M003'),null);assert.equal(pilotDefinition('M006'),null);
+ for(const [species,stage,state] of [['nox',2,'LOOK_AROUND'],['ruu',4,'BLINK'],['ruu',5,'LOOK_AROUND']])assert.equal(await assets.load(pilotDefinition(species,stage),state),null);
+ for(const code of ['M003','M006','M004','M008','M009'])assert.equal(pilotDefinition(code),null);
  const resolver=new AnimationStateResolver();
  const input=Object.freeze({state:'SLEEPING',speed:40,suppressed:false,x:80,y:120,facing:-1});
  assert.equal(resolver.sampleCompanion(input,0).state,'SLEEP');assert.deepEqual([input.x,input.y,input.facing],[80,120,-1]);

@@ -1,0 +1,43 @@
+{
+  "conceptId": "M004",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M004/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 240,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 175,
+      "y": 102,
+      "rx": 5,
+      "ry": 5,
+      "dx": 0.75
+    },
+    {
+      "x": 192.5,
+      "y": 108,
+      "rx": 2.7,
+      "ry": 3.3,
+      "dx": 0.32
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review only; no gameplay frequency change",
+  "anatomyScope": "M004 rooted tree guardian slow eye scan; branch crown, bark face, torso, arms, roots and feet fixed"
+}
