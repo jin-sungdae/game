@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "CAPLET BLINK artwork candidate; batch review pending for IDLE/BREATH. No Production registration before artwork approval.",
+  "nextTask": "CAPLET LOOK keypose; M006 BREATH or next missing independent candidate. BLINK and BREATH final artwork review pending.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -2528,10 +2528,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M003",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -2670,10 +2674,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M004",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -2827,10 +2835,14 @@
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/monsters/blink-pilot/M005",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "LOOK",
@@ -16578,7 +16590,7 @@
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
     "sourcePngIncludingRecovery": 102,
-    "allCandidatePng": 635,
+    "allCandidatePng": 643,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,
@@ -16598,5 +16610,29 @@
     "nativeGui": "DEFERRED_GUI",
     "artwork": "HUMAN_REVIEW_REQUIRED",
     "ciBlocker": "PR111 prior HEAD inventory count stale (607 versus 619); automatic repair limit reached. HUMAN_REVIEW_REQUIRED; test and stale count preserved."
+  },
+  "blinkFollowup": {
+    "basePr": 111,
+    "recoveryHead": "977694460f051fe85fee00f073677dff59e86122",
+    "recoveryGate": "18/18 PASS",
+    "newCandidateClips": 3,
+    "newCandidateFrames": 22,
+    "productionRegistrations": 0,
+    "runtimeConnections": 0,
+    "repairIterations": 1,
+    "repairLimit": 3,
+    "repairScope": "new BLINK/followup candidate branch only; PR111 stays 3/3 plus explicitly approved count correction",
+    "failuresPreserved": [
+      "M005 keypose-tool-reference.png: wrong canvas and appearance drift",
+      "M004 failed-framecount-v1: 4 instead of 8 frames"
+    ],
+    "review": "HUMAN_REVIEW_REQUIRED",
+    "nativeGui": "DEFERRED_GUI",
+    "browserPreview": {
+      "frameProgression": "PASS",
+      "pauseReducedMotion": "PASS",
+      "nativeGui": "DEFERRED_GUI",
+      "url": "http://127.0.0.1:5187/tests/live/creature-review/"
+    }
   }
 }
