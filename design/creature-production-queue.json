@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 1,
   "repairLimit": 3,
-  "nextTask": "Review existing M005/CAPLET IDLE six-frame candidate; other keyposes ASSET_REQUIRED; do not enable Spawn or Skill",
+  "nextTask": "Review CAPLET IDLE v2 appearance and motion before registration; then BREATH / BLINK; Spawn and Skill remain blocked",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -2797,7 +2797,10 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED",
           "automated": "PASS",
-          "naturalMotion": "NOT_VERIFIED"
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "designDirection": "APPROVED",
+          "candidatePath": "design/production-batches/monsters/idle-revision/M005",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BREATH",

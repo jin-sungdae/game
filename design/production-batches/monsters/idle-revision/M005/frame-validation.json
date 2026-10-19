@@ -1,0 +1,86 @@
+{
+  "automated": "PASS",
+  "scope": "PNG, fixed anatomy and alpha, unique decoded hashes, bounded per-frame pixel changes including wrap; not artistic approval",
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "bounds": [
+        50,
+        33,
+        208,
+        219
+      ],
+      "pixelHash": "6ccfe5d80f3a82af4d5dd5433be691d18cfdce7ec29c887b4c67073df12ab59f",
+      "errors": []
+    },
+    {
+      "file": "idle_01.png",
+      "bounds": [
+        50,
+        33,
+        208,
+        219
+      ],
+      "pixelHash": "93332efcabe9feb298793a90f97f8becf48c431e79c7c3df02c0b3e78a660465",
+      "errors": []
+    },
+    {
+      "file": "idle_02.png",
+      "bounds": [
+        50,
+        33,
+        208,
+        219
+      ],
+      "pixelHash": "c9c5c0b966cec0cb737c4a1a1a05109ee984ff1067a0f1a54dc65cdfacdb15d1",
+      "errors": []
+    },
+    {
+      "file": "idle_03.png",
+      "bounds": [
+        50,
+        33,
+        208,
+        219
+      ],
+      "pixelHash": "8a9627f81654a8bc3af2a47da7dfe6daf781a133076ff0d3d60b8e20fddafa76",
+      "errors": []
+    },
+    {
+      "file": "idle_04.png",
+      "bounds": [
+        50,
+        33,
+        208,
+        219
+      ],
+      "pixelHash": "8e264baa3bf11871eae9f6c08e52f36d759facef1c8fc4ed83140925701c2bb1",
+      "errors": []
+    },
+    {
+      "file": "idle_05.png",
+      "bounds": [
+        50,
+        33,
+        208,
+        219
+      ],
+      "pixelHash": "6373c8e76fcb1d11418d89a8196d5b96d099f86a582d7a4ca8df98c153ec71a1",
+      "errors": []
+    }
+  ],
+  "adjacentChangedPixelsIncludingLoop": [
+    53,
+    126,
+    149,
+    130,
+    156,
+    102
+  ],
+  "fixedRegionPixelChanges": 0,
+  "alphaChangesDuringRig": 0,
+  "anchorDriftPixels": 0,
+  "naturalMotionReview": "HUMAN_REVIEW_REQUIRED",
+  "baseIdentityAppearanceReview": "HUMAN_REVIEW_REQUIRED",
+  "productionEligible": false
+}
