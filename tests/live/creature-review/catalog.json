@@ -3437,7 +3437,8 @@
           "candidatePath": "design/production-batches/monsters/rest-pilot/M005",
           "automated": "VALIDATION_FAILED",
           "naturalMotion": "NOT_VERIFIED",
-          "blockReason": "ALPHA_DEFECT; CLEANUP_APPEARANCE_REVIEW_REQUIRED"
+          "blockReason": "BLOCKED; HUMAN_REVIEW_REQUIRED; ALPHA_DEFECT: recovery v3 has 1 detached alpha=1 pixel; AUTO_REVIEW_MAX_ITERATIONS=3",
+          "recoveryPath": "design/production-batches/monsters/rest-pilot/M005/keypose-recovery-v3.png"
         },
         {
           "action": "SLEEP",
@@ -5640,10 +5641,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M013",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -5738,6 +5743,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M013/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M013/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M013/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M013/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M013/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M013/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M013/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M013/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M013/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 580,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ]
+          ],
+          "pixelHashes": [
+            "21b8822ada0f07059c68225d747fd4c02f23144ba3499acff73d91b452ed98f2",
+            "ec8be540968d5f589088071e5ef2726b035feed0e81a6fa877c5d22cef44b55c",
+            "9a44dea0a6331d7036def92d0fb1d6cc47d9ceca299d63426265fe968b0d2f24",
+            "255d6f38af0a528e80ce1e2d42cfe18408e1654f682f21e6abb242664996ed65",
+            "1697df12c2364a762c037ec103a2371f894a3e79f3ed42886c708663b8139169",
+            "bf6c322f0beaaf215aeb1fe53cf20859100539a800e91d6896357171bed5c6be",
+            "cfd42a0a86a3f9bd9ae4f127a4d3e8d47f2e6c696c0a0753a41c20a8da1e3ca2",
+            "38160bebff778ac16eec6b78ff0bb973ffa7eaa880734d2a3a3defc79e394229"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M013/rigged/idle",
@@ -5822,10 +5908,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M014",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -5920,6 +6010,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M014/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M014/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M014/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M014/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M014/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M014/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M014/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M014/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M014/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 640,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ]
+          ],
+          "pixelHashes": [
+            "89c3bf24119af809c8e7009b814221ee6d41997992d8034bf7e31672a5b4d3ae",
+            "60d2555ef444b95ef1c69fd07c6bbb07158ab5f1053ace514af8e68e8adac56c",
+            "5b6c93f1825d8b947aaa1f49edcc25f04967fe188fb1942566f07baa5a504394",
+            "9b58ee15e9d50ea2b291949a9f9896441183c4bd5bfae82e27aab5ea62d25064",
+            "adedea6a1494a48a54e8c19a24e1a1eee8a4736e26ca90ce39ea6a9d632f1b5f",
+            "192c725fcb2cb31245825f0211b078404a289b6f5ea1941908d483375b37d612",
+            "95fc4ca2be87021648cac2d8a33a0ad9d7a53bf9caa07ed36f6b17da8f889191",
+            "03c1df8ec1c97d545528d59dbbf86c3153c5bd1538271b3b9d6153e15dd121ea"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M014/rigged/idle",
@@ -6004,10 +6175,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M015",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -6102,6 +6277,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M015/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M015/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M015/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M015/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M015/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M015/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M015/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M015/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M015/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 700,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              30,
+              17,
+              232,
+              237
+            ],
+            [
+              30,
+              17,
+              232,
+              237
+            ],
+            [
+              30,
+              17,
+              232,
+              237
+            ],
+            [
+              30,
+              17,
+              232,
+              237
+            ],
+            [
+              30,
+              17,
+              232,
+              237
+            ],
+            [
+              30,
+              17,
+              232,
+              237
+            ],
+            [
+              30,
+              17,
+              232,
+              237
+            ],
+            [
+              30,
+              17,
+              232,
+              237
+            ]
+          ],
+          "pixelHashes": [
+            "f46f328d34cfe37d79272084b97c81ad8dc1695927cf4843ed268fad3028827e",
+            "3e546eed15c5c3b70a8fd92a6aa9819c1bdfb8dc82ccf631c0ac719c587f69b4",
+            "5b9b8e4c119fe6a90369f5a400096bce967077672690053c0791cec7616f1555",
+            "75843733b19291ffcde982c5bb35bcc1399a3c1db81f4212ea9e59c56b7846ce",
+            "8de5556a75ca55939293b02c34216209c29f32f1db0353a805f6a01e524cd5a6",
+            "c091fd99f7248c9d37fb637896d6f1ed9610b6c9c1454d30014eff0fe0c18cc1",
+            "a40bd4b8c1e4449b230b0e240dbae15595125ae5772ac41f00b4b59d234e4bac",
+            "62199c065ba4b60b13e051818dafed74f4450a7f19609343fc72e808c6635391"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M015/rigged/idle",
@@ -6186,10 +6442,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M016",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -6284,6 +6544,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M016/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M016/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M016/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M016/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M016/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M016/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M016/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M016/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M016/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 430,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              40,
+              43,
+              216,
+              218
+            ],
+            [
+              40,
+              43,
+              216,
+              218
+            ],
+            [
+              40,
+              43,
+              216,
+              218
+            ],
+            [
+              40,
+              43,
+              216,
+              218
+            ],
+            [
+              40,
+              43,
+              216,
+              218
+            ],
+            [
+              40,
+              43,
+              216,
+              218
+            ],
+            [
+              40,
+              43,
+              216,
+              218
+            ],
+            [
+              40,
+              43,
+              216,
+              218
+            ]
+          ],
+          "pixelHashes": [
+            "60718e6cd0816cac48db06b2e241c1a2f5ee5b762d291e10f6fed788614bbf2f",
+            "065900f0643694beb906e4b9798719cf685ba987a5619bd98b84e35095321684",
+            "400f38d56b09b479e389d7c517697cf3db5d6602bf16ef67730b9d710d05b672",
+            "616027ac13944bb2f1cbe0ddb4566a8e284d5732a8fefd2d3b04881c775f44c3",
+            "42a8b40e085548f3d307b3784e77449afc0c25a67b0b4bcd8c381bef29a1119f",
+            "d8d0d7beb26e9e7816ae880ea30947811ecca6fa7e7e66031877929612fc6fba",
+            "12bdffe4bb2dc9d9cbc1755be4afe81f5e8f78aca8343093ae12d4152e38b63c",
+            "aeb019f0eba77f3d045961b1d52896f9d0732715860e4c35b4ec4591793cc49b"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M016/rigged/idle",
@@ -6368,10 +6709,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M017",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -6466,6 +6811,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M017/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M017/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M017/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M017/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M017/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M017/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M017/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M017/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M017/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 500,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              28,
+              43,
+              226,
+              212
+            ],
+            [
+              28,
+              43,
+              226,
+              212
+            ],
+            [
+              28,
+              43,
+              226,
+              212
+            ],
+            [
+              28,
+              43,
+              226,
+              212
+            ],
+            [
+              28,
+              43,
+              226,
+              212
+            ],
+            [
+              28,
+              43,
+              226,
+              212
+            ],
+            [
+              28,
+              43,
+              226,
+              212
+            ],
+            [
+              28,
+              43,
+              226,
+              212
+            ]
+          ],
+          "pixelHashes": [
+            "17aad84de119956d52f8377bdf0e897333859ace2576bed682548d4807ae762e",
+            "b8254fb6500c9d4b6ebd56447ea5f441b77360acc3e0ffc1e2e9e4e342a4ae4a",
+            "7c67b7a05ca55b07ea639e1005b18a2c69d4b921737bfe5c3d863efc6029a997",
+            "93c3df391c060b8e843417ff88819b9c407e03c647d2cc04f2de7a8c682ec861",
+            "d0bbe0c1c8d98b741f1d89bec65cf84068aa66f2e4c0d89a3c71750c3099ba52",
+            "129877e7feaaade2b4e3ed7ac4d24c01ab0e146b7c1dc72194f6c8b2e20c9716",
+            "cd2af4e76c71ec5a250158d904cafcda77734151419ccf7e0c42af512e7d8de4",
+            "63bfa25ebd1468400c3403ed925a101ea1693e1b5660f6360df5fc5d577cc645"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M017/rigged/idle",
@@ -6550,10 +6976,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M018",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -6648,6 +7078,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M018/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M018/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M018/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M018/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M018/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M018/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M018/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M018/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M018/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 620,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              32,
+              37,
+              219,
+              218
+            ],
+            [
+              32,
+              37,
+              219,
+              218
+            ],
+            [
+              32,
+              37,
+              219,
+              218
+            ],
+            [
+              32,
+              37,
+              219,
+              218
+            ],
+            [
+              32,
+              37,
+              219,
+              218
+            ],
+            [
+              32,
+              37,
+              219,
+              218
+            ],
+            [
+              32,
+              37,
+              219,
+              218
+            ],
+            [
+              32,
+              37,
+              219,
+              218
+            ]
+          ],
+          "pixelHashes": [
+            "d02604cad6d394be684438278b5e87d80a54135fe597c5dae872f46bd4482944",
+            "afaecf8aa7d8eeb5f1d30ec9ca66e255ecabb4c104f44de81c02652fa45e6750",
+            "3d82d4f4c2bbff06a656e9e0826e6c11607a80527ddce919a86ca9f363ce4e44",
+            "5787df03f57935d3846a0eeeb58d99e5de4c94f1555cee175bfcf6cd810a19f5",
+            "f28f1fdd3f8506998ebd24d2614b26eaece507af603cc6f2ea2bf5e179cd4660",
+            "23232a59bc966fe2befb2010f88aeaa98e23fd039deb6a05e328f2639b3ed3cf",
+            "4825d82dbac34ca339cb72d2e85065c23ea4507fd5ac1cb8b83fcb5abf3d7100",
+            "ac2493b93153286b17f81d404b694ee943755e8f33e81fa8196f481361ba29a2"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M018/rigged/idle",
@@ -6732,10 +7243,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M019",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -6830,6 +7345,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M019/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M019/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M019/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M019/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M019/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M019/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M019/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M019/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M019/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 420,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              46,
+              16,
+              212,
+              236
+            ],
+            [
+              46,
+              16,
+              212,
+              236
+            ],
+            [
+              46,
+              16,
+              212,
+              236
+            ],
+            [
+              46,
+              16,
+              212,
+              236
+            ],
+            [
+              46,
+              16,
+              212,
+              236
+            ],
+            [
+              46,
+              16,
+              212,
+              236
+            ],
+            [
+              46,
+              16,
+              212,
+              236
+            ],
+            [
+              46,
+              16,
+              212,
+              236
+            ]
+          ],
+          "pixelHashes": [
+            "ad31a1fcf407dc1896f0cbb2ffce6c4d78c02ff550b2bf2b6e319daf354e5cbe",
+            "1b79b5a1b15252703a135c064f0f22198f2c75f940f2febfc9012b8989865c7e",
+            "96f51e0cf6224fb20e13c4c8175e3637761560d530dba714c80f2bee685855d2",
+            "495e1c8ed240c4f6daeb404c8c8d6a9a7d7d8e83f9cb3ff716bea6179be864a2",
+            "5e2a68b37c78decb489f83d9c94b9d3147d98d0ac172eeec0bc280303a1cf1ac",
+            "098dcaae2b18980ccf59346a92af9d43280b06cb5a3103bfe7d3ffa3aa945ea5",
+            "80e55ea023140968658ffa1fb9f6c2a18eb00e41240adc0f60ae18085bacd7e4",
+            "cd33ba3825e3f7f507f61b57accacaf7272f2349066e25b73476acf3b9e203db"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M019/rigged/idle",
@@ -6914,10 +7510,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M020",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -7012,6 +7612,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M020/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M020/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M020/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M020/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M020/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M020/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M020/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M020/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M020/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 760,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              27,
+              41,
+              231,
+              218
+            ],
+            [
+              27,
+              41,
+              231,
+              218
+            ],
+            [
+              27,
+              41,
+              231,
+              218
+            ],
+            [
+              27,
+              41,
+              231,
+              218
+            ],
+            [
+              27,
+              41,
+              231,
+              218
+            ],
+            [
+              27,
+              41,
+              231,
+              218
+            ],
+            [
+              27,
+              41,
+              231,
+              218
+            ],
+            [
+              27,
+              41,
+              231,
+              218
+            ]
+          ],
+          "pixelHashes": [
+            "872ef79e570909ae1d72d5f156996a8111b4526bdeef74ee3e55c33485ec0bb7",
+            "afd2e482213e4b7fb17f20d2d6084bee1855243afa20f156769b1441da0801b7",
+            "c25b65a4a2dc408c0285dd1c64a3797dc6e272a15fa5781d880f10c02de80749",
+            "bf08a66362a8688f6435fdafd7c1c403efec6305e8a15cbfdfa94bf07ef868d2",
+            "1e9f86f49cbf1550e645c888f293c1d1e207a9925925e5ca44e7f7c663e15a4a",
+            "ab57c2553d59663b7215111f4f25f7af3718edbf3d5b1eed513433e5a86786d1",
+            "d8cc7fe26d34b418b9dc8e63974f769cc63fc7ffeefe9046bc52de65889c36d9",
+            "dcdba321c567931f7e490c629c793a2d86782562226b06308b9501551f3ce34d"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M020/rigged/idle",

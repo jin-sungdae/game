@@ -1,0 +1,30 @@
+{
+  "conceptId": "M013",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M013/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 580,
+    "loop": true
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "candidate preview only",
+  "anatomyScope": "puffy chest and folded cloud-feather root; eyes, crest and feet fixed",
+  "movementPolicy": "Existing concept proposal only; no native activation",
+  "proposedMovementProfile": {
+    "status": "PROPOSED",
+    "value": "JUMP"
+  }
+}

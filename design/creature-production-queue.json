@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "CAPLET REST clean identity-preserving keypose required; M013 next independent missing BREATH. M007 APPEARANCE_DRIFT remains BLOCKED. Batch artwork review before Production registration.",
+  "nextTask": "CAPLET REST BLOCKED at repair 3/3: review recovery v3 and explicit limited cleanup authorization required before rigging. Next independent Monster M021 BREATH after Ledger/artwork review. M007 APPEARANCE_DRIFT remains BLOCKED. Companion 15-form missing actions remain queued; no unapproved Production activation.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -2878,7 +2878,8 @@
           "candidatePath": "design/production-batches/monsters/rest-pilot/M005",
           "automated": "VALIDATION_FAILED",
           "naturalMotion": "NOT_VERIFIED",
-          "blockReason": "ALPHA_DEFECT; CLEANUP_APPEARANCE_REVIEW_REQUIRED"
+          "blockReason": "BLOCKED; HUMAN_REVIEW_REQUIRED; ALPHA_DEFECT: recovery v3 has 1 detached alpha=1 pixel; AUTO_REVIEW_MAX_ITERATIONS=3",
+          "recoveryPath": "design/production-batches/monsters/rest-pilot/M005/keypose-recovery-v3.png"
         },
         {
           "action": "SLEEP",
@@ -4037,10 +4038,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M013",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -4181,10 +4186,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M014",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -4325,10 +4334,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M015",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -4469,10 +4482,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M016",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -4613,10 +4630,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M017",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -4757,10 +4778,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M018",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -4901,10 +4926,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M019",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -5045,10 +5074,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M020",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -16622,7 +16655,7 @@
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
     "sourcePngIncludingRecovery": 102,
-    "allCandidatePng": 656,
+    "allCandidatePng": 658,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,
@@ -16692,13 +16725,13 @@
   "restFollowup": {
     "basePr": 113,
     "baseHead": "1cbed69cef132e8986db23fc54daa292cbb2ee89",
-    "candidateClips": 2,
-    "candidateFrames": 16,
+    "candidateClips": 10,
+    "candidateFrames": 80,
     "productionRegistrations": 0,
     "runtimeConnections": 0,
-    "repairIterations": 2,
+    "repairIterations": 3,
     "repairLimit": 3,
-    "restStatus": "VALIDATION_FAILED",
+    "restStatus": "BLOCKED_HUMAN_REVIEW_REQUIRED",
     "m011Status": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
     "nativeGui": "DEFERRED_GUI",
     "windowsGui": "DEFERRED_GUI",
@@ -16706,14 +16739,33 @@
     "inventoryScope": "Existing Monster *.png and source*.png only; refresh through build_creature_review.py --refresh-inventory",
     "repairReasons": [
       "REST image-tool cleanup rejected for appearance change",
-      "CI desktop-static timeout budget 10 to 20 minutes; all checks retained"
+      "CI desktop-static timeout budget 10 to 20 minutes; all checks retained",
+      "REST identity-preserving image regeneration v3: one detached alpha=1 pixel remains; no further automatic repair"
     ],
     "baseCi": "desktop-static timed out at 10m; server-java PASS; macos-native SKIPPED; review-result FAILURE",
     "reviewCatalog": {
       "creatures": 115,
-      "candidateClips": 72,
-      "candidateFrames": 456
+      "candidateClips": 80,
+      "candidateFrames": 520
     },
-    "approvalAudit": "Explicit USER_APPROVED action M005 SLEEP already Runtime connected; no new approved unconnected action identified"
+    "approvalAudit": "Explicit USER_APPROVED action M005 SLEEP already Runtime connected; no new approved unconnected action identified",
+    "continuationFromHead": "58075e6c78368adb029273ea2ac71dfae3bd5248",
+    "newCandidateCreatures": [
+      "M013",
+      "M014",
+      "M015",
+      "M016",
+      "M017",
+      "M018",
+      "M019",
+      "M020"
+    ],
+    "loopBoundaryReview": [
+      "M014",
+      "M015",
+      "M018",
+      "M020"
+    ],
+    "continuationBrowserPreview": "PASS: REST failed keypose and blocker visible; M013/M020 loaded, M020 frame 1 to 5, filter, pause and reduced frame 1; isolated browser only"
   }
 }

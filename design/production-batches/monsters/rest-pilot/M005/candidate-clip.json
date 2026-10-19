@@ -9,10 +9,20 @@
     "ALPHA_DEFECT: normalized keypose has six disconnected alpha=1 pixels",
     "APPEARANCE_REVIEW_REQUIRED: cleanup redraw changes scale and facial details; not adopted"
   ],
-  "repairIterations": 1,
+  "repairIterations": 3,
   "clip": {
     "name": "REST",
     "frames": 0
   },
-  "next": "Preserve both references; obtain identity-preserving clean REST keypose before rigging"
+  "next": "No additional automatic repair; preserve original and recovery. REST rigging requires clean identity-preserving keypose.",
+  "recoveryStatus": "BLOCKED_HUMAN_REVIEW_REQUIRED",
+  "recoveryAttempts": [
+    {
+      "path": "keypose-recovery-v3.png",
+      "pngFormat": "PASS",
+      "detachedAlphaPixels": 1,
+      "maxDetachedAlpha": 1,
+      "status": "VALIDATION_FAILED"
+    }
+  ]
 }
