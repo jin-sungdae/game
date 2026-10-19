@@ -388,7 +388,7 @@ impl World {
                         p.state = PipState::Roaming;
                     }
                 }
-                PipState::Roaming => {
+                PipState::Roaming | PipState::Sleeping => {
                     if self.view.monster.is_some() && locked {
                         // Interaction/battle ownership freezes ambient motion, not entity identity.
                     } else if let Some(identity) = &self.view.monster {
@@ -427,14 +427,24 @@ impl World {
                                     env,
                                 );
                             }
+                            if behavior.sleep_pose() {
+                                self.monster_movement.cancel();
+                                p.state = PipState::Sleeping;
+                            } else if p.state == PipState::Sleeping {
+                                p.state = PipState::Roaming;
+                            }
                             let moving = self.monster_movement.profile().is_some();
-                            let position = self.monster_movement.tick_ambient(
-                                identity.movement_profile,
-                                (p.x, p.y),
-                                dt,
-                                behavior.current.speed,
-                                env,
-                            );
+                            let position = if p.state == PipState::Sleeping {
+                                (p.x, p.y)
+                            } else {
+                                self.monster_movement.tick_ambient(
+                                    identity.movement_profile,
+                                    (p.x, p.y),
+                                    dt,
+                                    behavior.current.speed,
+                                    env,
+                                )
+                            };
                             if moving
                                 && identity.movement_profile
                                     != crate::movement::MovementProfile::Static
