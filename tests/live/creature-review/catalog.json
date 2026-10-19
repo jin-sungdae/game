@@ -120,7 +120,62 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 5,
+        "recordedRuntimeActions": 5,
+        "manifestFileSetsPresent": 5,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 11,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        },
+        "sit": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "look": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "breath": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        },
+        "blink": {
+          "declaredFrames": 3,
+          "presentFrames": 3,
+          "completeFileSet": true
+        }
+      }
     },
     {
       "id": "companion:moa:2",
@@ -241,7 +296,52 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sit": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "look": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        }
+      }
     },
     {
       "id": "companion:moa:3",
@@ -362,7 +462,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "companion:moa:4",
@@ -390,10 +504,15 @@
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "VALIDATION_FAILED",
+          "frameCount": 6,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/action-followup/moa/stage04",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "DUPLICATE_PIXEL_HASH: 5 unique of 6; source eye too small for current closure sampling; original preserved; PR repair limit 3/3"
         },
         {
           "action": "LOOK",
@@ -488,6 +607,73 @@
         }
       ],
       "clips": [
+        {
+          "action": "blink",
+          "directory": "/design/production-batches/action-followup/moa/stage04/rigged/blink",
+          "urls": [
+            "/design/production-batches/action-followup/moa/stage04/rigged/blink/blink_00.png",
+            "/design/production-batches/action-followup/moa/stage04/rigged/blink/blink_01.png",
+            "/design/production-batches/action-followup/moa/stage04/rigged/blink/blink_02.png",
+            "/design/production-batches/action-followup/moa/stage04/rigged/blink/blink_03.png",
+            "/design/production-batches/action-followup/moa/stage04/rigged/blink/blink_04.png",
+            "/design/production-batches/action-followup/moa/stage04/rigged/blink/blink_05.png"
+          ],
+          "frameCount": 6,
+          "frameDuration": 105,
+          "timingSource": "candidate contract",
+          "automated": "VALIDATION_FAILED",
+          "errors": [
+            "DUPLICATE_OR_UNDECODABLE_PIXELS"
+          ],
+          "bounds": [
+            [
+              19,
+              23,
+              237,
+              234
+            ],
+            [
+              19,
+              23,
+              237,
+              234
+            ],
+            [
+              19,
+              23,
+              237,
+              234
+            ],
+            [
+              19,
+              23,
+              237,
+              234
+            ],
+            [
+              19,
+              23,
+              237,
+              234
+            ],
+            [
+              19,
+              23,
+              237,
+              234
+            ]
+          ],
+          "pixelHashes": [
+            "a111a0a1bc59916c7305455da6e0b65ea23645eb411fd4b7bf4dd8980f256e77",
+            "2abf820e0c20b5a5d1b1c29e29499b72b8750f952b2233bee8c0568471d340b2",
+            "e0a839e5fc53f7ec8612d497d2d619d7e1473b2772117169d0006e17a9e1b95b",
+            "e0a839e5fc53f7ec8612d497d2d619d7e1473b2772117169d0006e17a9e1b95b",
+            "fe5549cbf084b5e46746c4b36bd9ed626bcf0371d76cdc9b31db6f7efd23fd08",
+            "4abaf16884bc85a4933b860ad95a13d5b0ac90ebcccf7ad024f9c6af5aab054b"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "breath",
           "directory": "/design/production-batches/breath-followup/moa/stage04/rigged/breath",
@@ -634,7 +820,52 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 3,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 3,
+        "validationFailedActions": 1,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sit": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "look": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        }
+      }
     },
     {
       "id": "companion:moa:5",
@@ -906,7 +1137,52 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sit": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "look": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        }
+      }
     },
     {
       "id": "companion:ruu:1",
@@ -1027,7 +1303,52 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sit": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "look": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        }
+      }
     },
     {
       "id": "companion:ruu:2",
@@ -1148,7 +1469,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "companion:ruu:3",
@@ -1351,7 +1686,27 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        }
+      }
     },
     {
       "id": "companion:ruu:4",
@@ -1538,7 +1893,52 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sit": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "look": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        }
+      }
     },
     {
       "id": "companion:ruu:5",
@@ -1725,7 +2125,52 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sit": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "look": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        }
+      }
     },
     {
       "id": "companion:nox:1",
@@ -1846,7 +2291,52 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sit": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "look": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        }
+      }
     },
     {
       "id": "companion:nox:2",
@@ -2033,7 +2523,52 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sit": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "look": {
+          "declaredFrames": 4,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 0,
+          "completeFileSet": false
+        }
+      }
     },
     {
       "id": "companion:nox:3",
@@ -2154,7 +2689,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "companion:nox:4",
@@ -2275,7 +2824,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "companion:nox:5",
@@ -2396,7 +2959,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M001",
@@ -2433,10 +3010,15 @@
         },
         {
           "action": "LOOK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M001",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "MOVE",
@@ -2517,6 +3099,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "look",
+          "directory": "/design/production-batches/action-followup/M001/rigged/look",
+          "urls": [
+            "/design/production-batches/action-followup/M001/rigged/look/look_00.png",
+            "/design/production-batches/action-followup/M001/rigged/look/look_01.png",
+            "/design/production-batches/action-followup/M001/rigged/look/look_02.png",
+            "/design/production-batches/action-followup/M001/rigged/look/look_03.png",
+            "/design/production-batches/action-followup/M001/rigged/look/look_04.png",
+            "/design/production-batches/action-followup/M001/rigged/look/look_05.png",
+            "/design/production-batches/action-followup/M001/rigged/look/look_06.png",
+            "/design/production-batches/action-followup/M001/rigged/look/look_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 210,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              49,
+              24,
+              212,
+              221
+            ],
+            [
+              49,
+              24,
+              212,
+              221
+            ],
+            [
+              49,
+              24,
+              212,
+              221
+            ],
+            [
+              49,
+              24,
+              212,
+              221
+            ],
+            [
+              49,
+              24,
+              212,
+              221
+            ],
+            [
+              49,
+              24,
+              212,
+              221
+            ],
+            [
+              49,
+              24,
+              212,
+              221
+            ],
+            [
+              49,
+              24,
+              212,
+              221
+            ]
+          ],
+          "pixelHashes": [
+            "643431e74854a2beb3a9c0687b04ba1f349be3a8bc130939741d1f48f53b0ae3",
+            "ffb08bd57eae0f934e728b596921705c938b3e79605a08d6885ae3de9e4207a9",
+            "a32de0e6242d72ff3d0c291ff56a5650059b4fb831e2f1373dd3be5a6051662e",
+            "9de20190954cc15faa6a6f26a32c8a78c7026f6c282f7f764feb7f9ea009cb34",
+            "0037e249047af147f484d832ee00baad8556b28588e16730c39d88064ed8b918",
+            "20eb8e66fdb5a96e5b7e961e89ffa927e24696d7480e4482ba775f60f72d4db2",
+            "5d7eebd3105d055afcbe41e08d1c63333e9c870695b05fb34398e6c9c5278c2b",
+            "0e2df7624c99cedb54aa1358399c27d680c6dd4951d72919ca0a3b7c8f05f6d4"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "breath",
           "directory": "/design/production-batches/breath-followup/M001/rigged/breath",
@@ -2663,7 +3326,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 12,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M002",
@@ -2693,10 +3370,15 @@
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M002",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "LOOK",
@@ -2784,6 +3466,71 @@
         }
       ],
       "clips": [
+        {
+          "action": "blink",
+          "directory": "/design/production-batches/action-followup/M002/rigged/blink",
+          "urls": [
+            "/design/production-batches/action-followup/M002/rigged/blink/blink_00.png",
+            "/design/production-batches/action-followup/M002/rigged/blink/blink_01.png",
+            "/design/production-batches/action-followup/M002/rigged/blink/blink_02.png",
+            "/design/production-batches/action-followup/M002/rigged/blink/blink_03.png",
+            "/design/production-batches/action-followup/M002/rigged/blink/blink_04.png",
+            "/design/production-batches/action-followup/M002/rigged/blink/blink_05.png"
+          ],
+          "frameCount": 6,
+          "frameDuration": 85,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              60,
+              18,
+              216,
+              236
+            ],
+            [
+              60,
+              18,
+              216,
+              236
+            ],
+            [
+              60,
+              18,
+              216,
+              236
+            ],
+            [
+              60,
+              18,
+              216,
+              236
+            ],
+            [
+              60,
+              18,
+              216,
+              236
+            ],
+            [
+              60,
+              18,
+              216,
+              236
+            ]
+          ],
+          "pixelHashes": [
+            "4d61a5f7ccf45ac5ff4b8e59810db4c0248bdccf67fa7292d640957c92aa57cb",
+            "fa1f10036902884b970efcc93a88fc754e5a71db766cc00279c33f49baf3c5c9",
+            "88cb84aabb210348508060ada96d9d3ebd436e1676b770b736890bcfa2272717",
+            "38605d535d400d8b6a10b652c182dd2653ecce1f27b187aeff5c7a7656c25f21",
+            "5ff09c15f4fb7963755ee736390497f9d716867106fba54dc7c0cbbd02e1a42f",
+            "f5d2526a17fc36dcd913f39964d11f25dc7ce90743adf21497c66df9a909d9b0"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "breath",
           "directory": "/design/production-batches/breath-followup/M002/rigged/breath",
@@ -2930,7 +3677,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 12,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M003",
@@ -3197,7 +3958,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M004",
@@ -3446,7 +4221,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M005",
@@ -3504,14 +4293,16 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "ASSET_REQUIRED: distinct planted/swing limb and alternate-view keyposes required; existing eye/torso rigs do not prove gait or body turn; no whole-image translation substitute"
         },
         {
           "action": "TURN",
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "ASSET_REQUIRED: distinct planted/swing limb and alternate-view keyposes required; existing eye/torso rigs do not prove gait or body turn; no whole-image translation substitute"
         },
         {
           "action": "REST",
@@ -3549,10 +4340,15 @@
         },
         {
           "action": "INTERACT",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/monsters/interact-pilot/M005",
+          "recoveryPath": "design/production-batches/monsters/interact-pilot/M005/keypose.png",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "ALPHA_DEFECT: 21 detached pixels; PNG format passes but image quality fails; no rig or cleanup after PR repair limit 3/3"
         },
         {
           "action": "ATTACK",
@@ -4094,7 +4890,27 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 6,
+        "automatedCandidateActions": 6,
+        "artworkReviewPendingActions": 5,
+        "validationFailedActions": 2,
+        "missingFrameSetActions": 9,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {
+        "sleep": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        }
+      }
     },
     {
       "id": "M006",
@@ -4361,7 +5177,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M007",
@@ -4475,7 +5305,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M008",
@@ -4742,7 +5586,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M009",
@@ -5009,7 +5867,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M010",
@@ -5258,7 +6130,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M011",
@@ -5525,7 +6411,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M012",
@@ -5792,7 +6692,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M013",
@@ -6059,7 +6973,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M014",
@@ -6326,7 +7254,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M015",
@@ -6593,7 +7535,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M016",
@@ -6860,7 +7816,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M017",
@@ -7127,7 +8097,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M018",
@@ -7394,7 +8378,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M019",
@@ -7661,7 +8659,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M020",
@@ -7928,7 +8940,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M021",
@@ -8195,7 +9221,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M022",
@@ -8462,7 +9502,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M023",
@@ -8576,7 +9630,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M024",
@@ -8690,7 +9758,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M025",
@@ -8957,7 +10039,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M026",
@@ -9224,7 +10320,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M027",
@@ -9491,7 +10601,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M028",
@@ -9758,7 +10882,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M029",
@@ -10025,7 +11163,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M030",
@@ -10139,7 +11291,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M031",
@@ -10321,7 +11487,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M032",
@@ -10503,7 +11683,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M033",
@@ -10617,7 +11811,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M034",
@@ -10731,7 +11939,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M035",
@@ -10845,7 +12067,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M036",
@@ -11027,7 +12263,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M037",
@@ -11141,7 +12391,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M038",
@@ -11255,7 +12519,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M039",
@@ -11437,7 +12715,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M040",
@@ -11619,7 +12911,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M041",
@@ -11801,7 +13107,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M042",
@@ -11983,7 +13303,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M043",
@@ -12097,7 +13431,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M044",
@@ -12279,7 +13627,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M045",
@@ -12461,7 +13823,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M046",
@@ -12643,7 +14019,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M047",
@@ -12825,7 +14215,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M048",
@@ -12939,7 +14343,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M049",
@@ -13121,7 +14539,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M050",
@@ -13303,7 +14735,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M051",
@@ -13417,7 +14863,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M052",
@@ -13531,7 +14991,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M053",
@@ -13713,7 +15187,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M054",
@@ -13827,7 +15315,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M055",
@@ -13941,7 +15443,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M056",
@@ -14055,7 +15571,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M057",
@@ -14169,7 +15699,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M058",
@@ -14283,7 +15827,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M059",
@@ -14465,7 +16023,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M060",
@@ -14647,7 +16219,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M061",
@@ -14761,7 +16347,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M062",
@@ -14875,7 +16475,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M063",
@@ -14989,7 +16603,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M064",
@@ -15103,7 +16731,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M065",
@@ -15217,7 +16859,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M066",
@@ -15331,7 +16987,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M067",
@@ -15445,7 +17115,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M068",
@@ -15559,7 +17243,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M069",
@@ -15673,7 +17371,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M070",
@@ -15787,7 +17499,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M071",
@@ -15901,7 +17627,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M072",
@@ -16015,7 +17755,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M073",
@@ -16129,7 +17883,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M074",
@@ -16243,7 +18011,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M075",
@@ -16357,7 +18139,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M076",
@@ -16471,7 +18267,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M077",
@@ -16585,7 +18395,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M078",
@@ -16699,7 +18523,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M079",
@@ -16813,7 +18651,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M080",
@@ -16927,7 +18779,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M081",
@@ -17107,7 +18973,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M082",
@@ -17287,7 +19167,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M083",
@@ -17401,7 +19295,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M084",
@@ -17515,7 +19423,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M085",
@@ -17629,7 +19551,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M086",
@@ -17743,7 +19679,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M087",
@@ -17857,7 +19807,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M088",
@@ -17971,7 +19935,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M089",
@@ -18085,7 +20063,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M090",
@@ -18265,7 +20257,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M091",
@@ -18379,7 +20385,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M092",
@@ -18559,7 +20579,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M093",
@@ -18673,7 +20707,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M094",
@@ -18787,7 +20835,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M095",
@@ -18967,7 +21029,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M096",
@@ -19147,7 +21223,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M097",
@@ -19261,7 +21351,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M098",
@@ -19441,7 +21545,21 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M099",
@@ -19555,7 +21673,21 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": []
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     },
     {
       "id": "M100",
@@ -19735,8 +21867,490 @@
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
         }
-      ]
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
     }
   ],
-  "productionRegistration": false
+  "productionRegistration": false,
+  "coverageSummary": {
+    "requiredActions": 1740,
+    "recordedReadyActions": 14,
+    "recordedRuntimeActions": 12,
+    "manifestFileSetsPresent": 12,
+    "candidateActions": 91,
+    "automatedCandidateActions": 90,
+    "artworkReviewPendingActions": 90,
+    "validationFailedActions": 3,
+    "missingFrameSetActions": 1644,
+    "guiPendingActions": 1740,
+    "completeActions": 0,
+    "creatures": 115,
+    "completeCreatures": 0
+  },
+  "coverageScope": "Counts are per action, not per candidate version. File presence is not PNG validation, artwork approval, native runtime or GUI proof. Completion requires all four recorded readiness/runtime/file/GUI conditions.",
+  "legacyProductionAudit": [
+    {
+      "speciesId": "PIP",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MELLO",
+      "movementProfile": "JUMP",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "jump": {
+          "declaredFrames": 8,
+          "presentFrames": 7,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MOSSY",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        },
+        "move": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "CHIRP",
+      "movementProfile": "FLYING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "hover": {
+          "declaredFrames": 4,
+          "presentFrames": 3,
+          "completeFileSet": false
+        },
+        "fly": {
+          "declaredFrames": 6,
+          "presentFrames": 5,
+          "completeFileSet": false
+        },
+        "glide": {
+          "declaredFrames": 2,
+          "presentFrames": 1,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_005",
+      "movementProfile": "EDGE",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "BUBU",
+      "movementProfile": "JUMP",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "jump": {
+          "declaredFrames": 8,
+          "presentFrames": 7,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "PEBB",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        },
+        "move": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "PUFF",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "hover": {
+          "declaredFrames": 4,
+          "presentFrames": 3,
+          "completeFileSet": false
+        },
+        "float": {
+          "declaredFrames": 6,
+          "presentFrames": 5,
+          "completeFileSet": false
+        },
+        "settle": {
+          "declaredFrames": 2,
+          "presentFrames": 1,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_009",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "TIKKI",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        },
+        "move": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_011",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_012",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MIMI",
+      "movementProfile": "STATIC",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "peek": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "WISP",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "hover": {
+          "declaredFrames": 4,
+          "presentFrames": 3,
+          "completeFileSet": false
+        },
+        "float": {
+          "declaredFrames": 6,
+          "presentFrames": 5,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "SHADE",
+      "movementProfile": "EDGE",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "edge_move": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "turn": {
+          "declaredFrames": 3,
+          "presentFrames": 3,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "EMBER",
+      "movementProfile": "FREE_2D",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "flicker": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "flow": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "intense": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_017",
+      "movementProfile": "STATIC",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_018",
+      "movementProfile": "FLYING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "LUNET",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "hover": {
+          "declaredFrames": 4,
+          "presentFrames": 3,
+          "completeFileSet": false
+        },
+        "float": {
+          "declaredFrames": 6,
+          "presentFrames": 5,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_020",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "NOVA",
+      "movementProfile": "FREE_2D",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "flicker": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "flow": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_022",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_023",
+      "movementProfile": "FREE_2D",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_024",
+      "movementProfile": "FLYING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_025",
+      "movementProfile": "STATIC",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_026",
+      "movementProfile": "JUMP",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_027",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "NOCT",
+      "movementProfile": "EDGE",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "edge_move": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_029",
+      "movementProfile": "FREE_2D",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_030",
+      "movementProfile": "EDGE",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    }
+  ]
 }

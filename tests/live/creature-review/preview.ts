@@ -7,11 +7,14 @@ const animation=document.querySelector<HTMLSelectElement>('#animation')!;
 const section=document.querySelector<HTMLElement>('#clips')!;
 const summary=document.querySelector<HTMLElement>('#summary')!;
 for(const row of catalog.creatures){const o=document.createElement('option');o.value=row.id;o.textContent=`${row.id} — 후보 ${row.clips.length}개`;select.append(o);}
+const totals=catalog.coverageSummary;
+document.querySelector('#totals')!.textContent=`전체 ${totals.creatures} Creature · 완료 ${totals.completeActions}/${totals.requiredActions} 행동 · 전체 완료 ${totals.completeCreatures}/${totals.creatures} · 기존 30종은 Concept ID와 별도 집계`;
 select.value='M005';let paused=false,reduced=false,elapsed=0,last=performance.now(),generation=0;
 let views:{image:HTMLImageElement;status:HTMLElement;clip:LoadedClip;animator:CharacterAnimator;key:string;bounds:number[][]}[]=[];
 async function show(){const current=++generation;views=[];section.replaceChildren();elapsed=0;
  const row=catalog.creatures.find(r=>r.id===select.value)!;
- summary.textContent=`${row.productionStatus} · 실제 연결 완료 행동 ${row.actions.filter(a=>a.runtimeStatus==='RUNTIME_CONNECTED').length}개 · 후보 자동 검사는 최종 Artwork 승인이 아닙니다.`;
+ const c=row.coverage;
+ summary.textContent=`${row.productionStatus} · 완료 ${c.completeActions}/${c.requiredActions} · Ledger Runtime ${c.recordedRuntimeActions} · 실제 Manifest 파일 세트 ${c.manifestFileSetsPresent} · 후보 행동 ${c.candidateActions} (자동 PNG 통과 ${c.automatedCandidateActions}) · 미공급 ${c.missingFrameSetActions} · 실패 ${c.validationFailedActions} · GUI 대기 ${c.guiPendingActions} · 자동 검사와 파일 존재는 Production 승인·Native GUI 증거가 아닙니다.`;
  for(const action of row.actions){
   if(!('recoveryPath' in action) || typeof action.recoveryPath!=='string')continue;
   const article=document.createElement('article');article.dataset.action=action.action.toLowerCase();
@@ -20,7 +23,7 @@ async function show(){const current=++generation;views=[];section.replaceChildre
   const reason=document.createElement('p');reason.textContent='blockReason' in action ? String(action.blockReason) : 'VALIDATION_FAILED';
   article.append(title,image,reason);section.append(article);
  }
- if(!row.clips.length){section.textContent='보존된 rigged 후보가 없습니다. 기존 Ledger의 미공급·실패 상태를 유지합니다.';return;}
+ if(!row.clips.length){const empty=document.createElement('p');empty.textContent='보존된 rigged 후보가 없습니다. 기존 Ledger의 미공급·실패 상태를 유지합니다.';section.append(empty);animation.replaceChildren(new Option('전체 Animation','all'));return;}
  animation.replaceChildren(new Option('전체 Animation','all'),...Array.from(new Set([...row.clips.map(c=>c.action),...row.actions.filter(a=>'recoveryPath' in a).map(a=>a.action.toLowerCase())])).map(a=>new Option(a.toUpperCase(),a)));
  for(const [n,c] of row.clips.entries()){
   const article=document.createElement('article');article.dataset.action=c.action;const title=document.createElement('h2');title.textContent=`${c.action.toUpperCase()} / ${n+1}`;

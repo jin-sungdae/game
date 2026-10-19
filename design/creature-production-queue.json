@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "M031 BREATH after existing artwork/anatomy review; M023 core, M024 anatomy review and M030 rigid plates remain independently blocked. CAPLET MOVE/TURN/INTERACT need dedicated keyposes. REST repair remains 3/3 BLOCKED; M007 APPEARANCE_DRIFT preserved. Companion missing actions remain queued; no unapproved Production activation.",
+  "nextTask": "CAPLET MOVE/TURN dedicated anatomical keyposes, then M003 BLINK and companion action diversity. Preserve REST/INTERACT and MOA Stage 4 BLINK failures at PR repair limit 3/3. Batch review of pending LOOK/BLINK; do not activate unapproved artwork or gameplay.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -159,7 +159,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 5,
+        "recordedRuntimeActions": 5,
+        "manifestFileSetsPresent": 5,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 11,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:moa:2",
@@ -305,7 +318,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:moa:3",
@@ -451,7 +477,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:moa:4",
@@ -484,10 +523,15 @@
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "VALIDATION_FAILED",
+          "frameCount": 6,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/action-followup/moa/stage04",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "DUPLICATE_PIXEL_HASH: 5 unique of 6; source eye too small for current closure sampling; original preserved; PR repair limit 3/3"
         },
         {
           "action": "LOOK",
@@ -601,7 +645,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 3,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 3,
+        "validationFailedActions": 1,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:moa:5",
@@ -751,7 +808,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:ruu:1",
@@ -897,7 +967,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:ruu:2",
@@ -1043,7 +1126,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:ruu:3",
@@ -1189,7 +1285,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:ruu:4",
@@ -1335,7 +1444,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:ruu:5",
@@ -1481,7 +1603,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:nox:1",
@@ -1627,7 +1762,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:nox:2",
@@ -1773,7 +1921,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:nox:3",
@@ -1919,7 +2080,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:nox:4",
@@ -2065,7 +2239,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "companion:nox:5",
@@ -2211,7 +2398,20 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "animationCoverage": {
+        "requiredActions": 16,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 16,
+        "guiPendingActions": 16,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M001",
@@ -2254,10 +2454,15 @@
         },
         {
           "action": "LOOK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M001",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "MOVE",
@@ -2359,7 +2564,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch01/M001/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 12,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M002",
@@ -2395,10 +2613,15 @@
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M002",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "LOOK",
@@ -2507,7 +2730,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch01/M002/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 12,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M003",
@@ -2655,7 +2891,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch01/M003/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M004",
@@ -2800,7 +3049,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M005",
@@ -2864,14 +3126,16 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "ASSET_REQUIRED: distinct planted/swing limb and alternate-view keyposes required; existing eye/torso rigs do not prove gait or body turn; no whole-image translation substitute"
         },
         {
           "action": "TURN",
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "ASSET_REQUIRED: distinct planted/swing limb and alternate-view keyposes required; existing eye/torso rigs do not prove gait or body turn; no whole-image translation substitute"
         },
         {
           "action": "REST",
@@ -2909,10 +3173,15 @@
         },
         {
           "action": "INTERACT",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/monsters/interact-pilot/M005",
+          "recoveryPath": "design/production-batches/monsters/interact-pilot/M005/keypose.png",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "ALPHA_DEFECT: 21 detached pixels; PNG format passes but image quality fails; no rig or cleanup after PR repair limit 3/3"
         },
         {
           "action": "ATTACK",
@@ -2994,6 +3263,19 @@
       },
       "battle": {
         "status": "BLOCKED_UNAPPROVED_CONTRACT"
+      },
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 1,
+        "manifestFileSetsPresent": 1,
+        "candidateActions": 6,
+        "automatedCandidateActions": 6,
+        "artworkReviewPendingActions": 5,
+        "validationFailedActions": 2,
+        "missingFrameSetActions": 9,
+        "guiPendingActions": 15,
+        "completeActions": 0
       }
     },
     {
@@ -3142,7 +3424,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch01/M006/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M007",
@@ -3284,7 +3579,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch01/M007/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M008",
@@ -3432,7 +3740,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch01/M008/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M009",
@@ -3580,7 +3901,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch01/M009/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M010",
@@ -3725,7 +4059,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M011",
@@ -3873,7 +4220,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M011/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M012",
@@ -4021,7 +4381,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M012/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M013",
@@ -4169,7 +4542,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M013/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M014",
@@ -4317,7 +4703,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M014/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M015",
@@ -4465,7 +4864,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M015/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M016",
@@ -4613,7 +5025,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M016/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M017",
@@ -4761,7 +5186,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M017/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M018",
@@ -4909,7 +5347,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M018/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M019",
@@ -5057,7 +5508,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M019/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M020",
@@ -5205,7 +5669,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch02/M020/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M021",
@@ -5353,7 +5830,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch03/M021/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M022",
@@ -5501,7 +5991,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch03/M022/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M023",
@@ -5643,7 +6146,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch03/M023/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M024",
@@ -5792,6 +6308,19 @@
         "bodyPixelChanges": 0,
         "approvedExtraCorrectionsUsed": 1,
         "originalFailurePreserved": true
+      },
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
       }
     },
     {
@@ -5940,7 +6469,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch03/M025/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M026",
@@ -6088,7 +6630,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch03/M026/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M027",
@@ -6236,7 +6791,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch03/M027/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M028",
@@ -6384,7 +6952,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch03/M028/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M029",
@@ -6532,7 +7113,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch03/M029/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 13,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M030",
@@ -6674,7 +7268,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch03/M030/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M031",
@@ -6818,7 +7425,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M031/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M032",
@@ -6962,7 +7582,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M032/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M033",
@@ -7104,7 +7737,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M033/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M034",
@@ -7246,7 +7892,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M034/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M035",
@@ -7388,7 +8047,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M035/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M036",
@@ -7532,7 +8204,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M036/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M037",
@@ -7674,7 +8359,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M037/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M038",
@@ -7816,7 +8514,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M038/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M039",
@@ -7960,7 +8671,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M039/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M040",
@@ -8104,7 +8828,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch04/M040/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M041",
@@ -8248,7 +8985,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M041/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M042",
@@ -8392,7 +9142,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M042/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M043",
@@ -8534,7 +9297,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M043/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M044",
@@ -8678,7 +9454,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M044/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M045",
@@ -8822,7 +9611,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M045/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M046",
@@ -8966,7 +9768,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M046/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M047",
@@ -9110,7 +9925,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M047/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M048",
@@ -9252,7 +10080,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M048/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M049",
@@ -9396,7 +10237,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M049/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M050",
@@ -9540,7 +10394,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch05/M050/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M051",
@@ -9682,7 +10549,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M051/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M052",
@@ -9824,7 +10704,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M052/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M053",
@@ -9968,7 +10861,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M053/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M054",
@@ -10110,7 +11016,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M054/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M055",
@@ -10252,7 +11171,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M055/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M056",
@@ -10394,7 +11326,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M056/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M057",
@@ -10536,7 +11481,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M057/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M058",
@@ -10678,7 +11636,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M058/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M059",
@@ -10822,7 +11793,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M059/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M060",
@@ -10966,7 +11950,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch06/M060/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M061",
@@ -11108,7 +12105,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M061/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M062",
@@ -11250,7 +12260,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M062/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M063",
@@ -11392,7 +12415,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M063/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M064",
@@ -11534,7 +12570,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M064/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M065",
@@ -11676,7 +12725,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M065/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M066",
@@ -11818,7 +12880,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M066/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M067",
@@ -11960,7 +13035,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M067/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M068",
@@ -12102,7 +13190,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M068/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M069",
@@ -12244,7 +13345,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M069/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M070",
@@ -12386,7 +13500,20 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "basePath": "design/production-batches/monsters/batch07/M070/base-v2.png",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M071",
@@ -12527,7 +13654,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M072",
@@ -12668,7 +13808,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M073",
@@ -12809,7 +13962,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M074",
@@ -12950,7 +14116,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M075",
@@ -13091,7 +14270,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M076",
@@ -13232,7 +14424,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M077",
@@ -13373,7 +14578,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M078",
@@ -13514,7 +14732,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M079",
@@ -13655,7 +14886,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M080",
@@ -13796,7 +15040,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M081",
@@ -13937,7 +15194,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M082",
@@ -14078,7 +15348,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M083",
@@ -14219,7 +15502,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M084",
@@ -14360,7 +15656,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M085",
@@ -14501,7 +15810,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M086",
@@ -14642,7 +15964,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M087",
@@ -14783,7 +16118,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M088",
@@ -14924,7 +16272,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M089",
@@ -15065,7 +16426,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M090",
@@ -15206,7 +16580,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved"
+      "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M091",
@@ -15347,7 +16734,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M092",
@@ -15488,7 +16888,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M093",
@@ -15629,7 +17042,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M094",
@@ -15770,7 +17196,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M095",
@@ -15911,7 +17350,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M096",
@@ -16052,7 +17504,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M097",
@@ -16193,7 +17658,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M098",
@@ -16334,7 +17812,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M099",
@@ -16475,7 +17966,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     },
     {
       "creatureId": "M100",
@@ -16616,7 +18120,20 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
-      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved"
+      "validationScope": "Automated PNG/bounds/frame checks only; appearance and anatomy holds preserved",
+      "animationCoverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 14,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      }
     }
   ],
   "browserFixture": {
@@ -16691,7 +18208,7 @@
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
     "sourcePngIncludingRecovery": 102,
-    "allCandidatePng": 666,
+    "allCandidatePng": 668,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,
@@ -16878,5 +18395,511 @@
     "runtimeConnectedActions": 12,
     "productionCompleteCreatures": 0,
     "reviewUrl": "http://127.0.0.1:5192/tests/live/creature-review/"
-  }
+  },
+  "actionDiversityFollowup": {
+    "scope": "Independent initial action candidates; no failed-candidate repair",
+    "repairIterations": 3,
+    "newFrames": 20,
+    "automatedPassFrames": 14,
+    "newCandidateClips": 3,
+    "automatedPassClips": 2,
+    "productionRegisteredClips": 0,
+    "runtimeConnectedClips": 0,
+    "newProductionPng": 0,
+    "newActions": [
+      "M001 LOOK",
+      "M002 BLINK",
+      "MOA Stage 4 BLINK (VALIDATION_FAILED)",
+      "CAPLET INTERACT keypose (VALIDATION_FAILED)"
+    ],
+    "legacyBaseAudit": [
+      {
+        "species": "PIP",
+        "base": "public/assets/monsters/pip/base.png",
+        "detachedAlphaPixels": 25,
+        "newCandidateStatus": "BLOCKED",
+        "existingAsset": "UNCHANGED"
+      },
+      {
+        "species": "MOA",
+        "stage": 2,
+        "base": "public/assets/creatures/moa/stage02/base.png",
+        "detachedAlphaPixels": 25,
+        "newCandidateStatus": "BLOCKED",
+        "existingAsset": "UNCHANGED"
+      }
+    ],
+    "nativeGui": "DEFERRED_GUI",
+    "appearance": "HUMAN_REVIEW_REQUIRED",
+    "skills": "BLOCKED_UNAPPROVED_CONTRACT",
+    "conditionalActions": "JUMP/FLY/HOVER/LAND/CHARGE/RECOVERY need individual anatomy/contract review; no new Production requirement or capability inferred"
+  },
+  "animationCoverageSummary": {
+    "requiredActions": 1740,
+    "recordedReadyActions": 14,
+    "recordedRuntimeActions": 12,
+    "manifestFileSetsPresent": 12,
+    "candidateActions": 91,
+    "automatedCandidateActions": 90,
+    "artworkReviewPendingActions": 90,
+    "validationFailedActions": 3,
+    "missingFrameSetActions": 1644,
+    "guiPendingActions": 1740,
+    "completeActions": 0,
+    "creatures": 115,
+    "completeCreatures": 0
+  },
+  "animationCoverageScope": "Counts are per action, not per candidate version. File presence is not PNG validation, artwork approval, native runtime or GUI proof. Completion requires all four recorded readiness/runtime/file/GUI conditions.",
+  "legacyProductionAudit": [
+    {
+      "speciesId": "PIP",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        },
+        "walk": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        },
+        "react": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MELLO",
+      "movementProfile": "JUMP",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "jump": {
+          "declaredFrames": 8,
+          "presentFrames": 7,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MOSSY",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        },
+        "move": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "CHIRP",
+      "movementProfile": "FLYING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "hover": {
+          "declaredFrames": 4,
+          "presentFrames": 3,
+          "completeFileSet": false
+        },
+        "fly": {
+          "declaredFrames": 6,
+          "presentFrames": 5,
+          "completeFileSet": false
+        },
+        "glide": {
+          "declaredFrames": 2,
+          "presentFrames": 1,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_005",
+      "movementProfile": "EDGE",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "BUBU",
+      "movementProfile": "JUMP",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "jump": {
+          "declaredFrames": 8,
+          "presentFrames": 7,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "PEBB",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        },
+        "move": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "PUFF",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "hover": {
+          "declaredFrames": 4,
+          "presentFrames": 3,
+          "completeFileSet": false
+        },
+        "float": {
+          "declaredFrames": 6,
+          "presentFrames": 5,
+          "completeFileSet": false
+        },
+        "settle": {
+          "declaredFrames": 2,
+          "presentFrames": 1,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_009",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "TIKKI",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        },
+        "move": {
+          "declaredFrames": 8,
+          "presentFrames": 8,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_011",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_012",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MIMI",
+      "movementProfile": "STATIC",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "peek": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "WISP",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "hover": {
+          "declaredFrames": 4,
+          "presentFrames": 3,
+          "completeFileSet": false
+        },
+        "float": {
+          "declaredFrames": 6,
+          "presentFrames": 5,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "SHADE",
+      "movementProfile": "EDGE",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "edge_move": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "turn": {
+          "declaredFrames": 3,
+          "presentFrames": 3,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "EMBER",
+      "movementProfile": "FREE_2D",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "flicker": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "flow": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        },
+        "intense": {
+          "declaredFrames": 4,
+          "presentFrames": 4,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_017",
+      "movementProfile": "STATIC",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_018",
+      "movementProfile": "FLYING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "LUNET",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "hover": {
+          "declaredFrames": 4,
+          "presentFrames": 3,
+          "completeFileSet": false
+        },
+        "float": {
+          "declaredFrames": 6,
+          "presentFrames": 5,
+          "completeFileSet": false
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_020",
+      "movementProfile": "GROUND",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "NOVA",
+      "movementProfile": "FREE_2D",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "flicker": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "flow": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_022",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_023",
+      "movementProfile": "FREE_2D",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_024",
+      "movementProfile": "FLYING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_025",
+      "movementProfile": "STATIC",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_026",
+      "movementProfile": "JUMP",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_027",
+      "movementProfile": "FLOATING",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "NOCT",
+      "movementProfile": "EDGE",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": true,
+      "manifestSupply": {
+        "idle": {
+          "declaredFrames": 5,
+          "presentFrames": 5,
+          "completeFileSet": true
+        },
+        "edge_move": {
+          "declaredFrames": 6,
+          "presentFrames": 6,
+          "completeFileSet": true
+        }
+      },
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_029",
+      "movementProfile": "FREE_2D",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    },
+    {
+      "speciesId": "MONSTER_030",
+      "movementProfile": "EDGE",
+      "conceptMapping": "NOT_ASSUMED",
+      "registeredArtwork": false,
+      "manifestSupply": {},
+      "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
+      "fullActionGui": "NOT_VERIFIED"
+    }
+  ]
 }
