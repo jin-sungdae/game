@@ -795,3 +795,56 @@ fn living_all_production_worlds_keep_native_bounds_and_facing() {
         );
     }
 }
+
+#[test]
+fn caplet_sleep_reuses_decisions_keeps_position_and_wakes() {
+    // Placement fixture only: no new production spawn/rate/rarity is approved here.
+    let mut w = world("MOSSY");
+    for i in 0..100 {
+        w.tick(i as f64 * 0.05, 0.05, FAR, false);
+    }
+    w.view.monster.as_mut().unwrap().monster_code = "CAPLET".into();
+    w.view.pip.as_mut().unwrap().state = PipState::Roaming;
+    w.monster_movement.cancel();
+    w.monster_behavior = Some(
+        crate::monster_behavior::Controller::new(
+            crate::monster_behavior::profile("CAPLET").unwrap(),
+            crate::monster_behavior::Seeded::new(42),
+            5.,
+        )
+        .for_species("CAPLET"),
+    );
+    w.tick(5., 0.05, FAR, false);
+    let initial = w.view.pip.as_ref().unwrap().clone();
+    assert_eq!(initial.state, PipState::Sleeping);
+    assert!(w.monster_movement.profile().is_none());
+    for i in 1..20 {
+        w.tick(5. + i as f64 * 0.05, 0.05, FAR, false);
+        let p = w.view.pip.as_ref().unwrap();
+        assert_eq!(
+            (p.x, p.y, p.facing, p.state),
+            (initial.x, initial.y, initial.facing, PipState::Sleeping)
+        );
+    }
+    let mut trace = vec![
+        serde_json::json!({"time":5.,"state":initial.state,"x":initial.x,"y":initial.y,"facing":initial.facing}),
+    ];
+    let mut woke = false;
+    for i in 120..1800 {
+        w.tick(i as f64 * 0.05, 0.05, FAR, false);
+        let p = w.view.pip.as_ref().unwrap();
+        trace.push(serde_json::json!({"time":i as f64*0.05,"state":p.state,"x":p.x,"y":p.y,"facing":p.facing}));
+        if p.state == PipState::Sleeping {
+            assert_eq!((p.x, p.y, p.facing), (initial.x, initial.y, initial.facing));
+        }
+        if p.state == PipState::Roaming {
+            woke = true;
+            break;
+        }
+    }
+    assert!(woke, "existing seeded Sleepy policy must return to roaming");
+    assert!(crate::spawn::identity("CAPLET").is_none());
+    if let Ok(path) = std::env::var("LUMA_CAPLET_TRACE") {
+        std::fs::write(path, serde_json::to_vec_pretty(&trace).unwrap()).unwrap();
+    }
+}
