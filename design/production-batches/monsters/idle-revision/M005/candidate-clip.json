@@ -1,0 +1,27 @@
+{
+  "conceptId": "M005",
+  "productionSpeciesId": "CAPLET",
+  "designDirection": "APPROVED",
+  "status": "ANIMATION_REVIEW_PENDING",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 6,
+    "frameDuration": 400,
+    "loop": true,
+    "path": "rigged/idle/idle_NN.png"
+  },
+  "naturalMotionReview": "HUMAN_REVIEW_REQUIRED",
+  "productionArtworkApproval": "PENDING",
+  "gui": "DEFERRED_GUI"
+}
