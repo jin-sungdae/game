@@ -1,0 +1,59 @@
+{
+  "source": "public/assets/creatures/ruu/stage03/base.png",
+  "eyes": [
+    {
+      "x": 222.5,
+      "y": 94,
+      "rx": 4.5,
+      "ry": 3.5,
+      "dx": 0.8
+    }
+  ],
+  "frames": [
+    {
+      "file": "look_00.png",
+      "gaze": 0.12,
+      "pixelSha256": "2cf96a0e1b2d913c261957419fb904377f188d8222b7f1d9677bc790e66f2fa8"
+    },
+    {
+      "file": "look_01.png",
+      "gaze": 0.5,
+      "pixelSha256": "907a59dd8c2e184012c195c0a2df2ea9de16ff945cd74dbfa7d7a490ed8d9b2a"
+    },
+    {
+      "file": "look_02.png",
+      "gaze": 0.92,
+      "pixelSha256": "826940e0b40de2809475b427ca9ed9523ff06c32933b3f9e72d22dbfdd0a8edc"
+    },
+    {
+      "file": "look_03.png",
+      "gaze": 0.65,
+      "pixelSha256": "4f4eff098038a31af9c671b8e2b6ba8e4f32f9d1ef627c823b015ce2db1bce21"
+    },
+    {
+      "file": "look_04.png",
+      "gaze": -0.12,
+      "pixelSha256": "36f0f1e4a6f93e6bd56d8a53d482ef38b7f74edca38617b2dbe3dff9c27eb4e3"
+    },
+    {
+      "file": "look_05.png",
+      "gaze": -0.55,
+      "pixelSha256": "aa4047773a3fc4253d26da93133cc2c9026a25eca29556f5c67a5db176bcf564"
+    },
+    {
+      "file": "look_06.png",
+      "gaze": -0.88,
+      "pixelSha256": "220d63ae82fe750a7ef78d21e979d219d81200aaed1d7fc3f617c72c4a26ceba"
+    },
+    {
+      "file": "look_07.png",
+      "gaze": -0.38,
+      "pixelSha256": "af52dcb549a42f7f20fa31865d5c1139312f70d664f0bfdf7ed8a6eea6b7ff6c"
+    }
+  ],
+  "alphaPolicy": "unchanged",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 0
+}

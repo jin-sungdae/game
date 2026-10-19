@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "CAPLET MOVE/TURN dedicated anatomical keyposes, then M003 BLINK and companion action diversity. Preserve REST/INTERACT and MOA Stage 4 BLINK failures at PR repair limit 3/3. Batch review of pending LOOK/BLINK; do not activate unapproved artwork or gameplay.",
+  "nextTask": "CAPLET MOVE/TURN failed keypose recovery remains BLOCKED at 3/3; batch appearance/loop review of M003 BLINK, M006 BLINK, RUU Stage 3 LOOK. Next independent queue: M004 LOOK and NOX Stage 2 LOOK, after anatomy/preflight. No unapproved Production registration or gameplay activation.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -1175,10 +1175,15 @@
         },
         {
           "action": "LOOK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/ruu/stage03",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "MOVE",
@@ -1291,11 +1296,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 16,
         "completeActions": 0
       }
@@ -2779,10 +2784,15 @@
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M003",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "LOOK",
@@ -2897,11 +2907,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 2,
-        "automatedCandidateActions": 2,
-        "artworkReviewPendingActions": 2,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -3123,19 +3133,27 @@
         },
         {
           "action": "MOVE",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED",
-          "blockReason": "ASSET_REQUIRED: distinct planted/swing limb and alternate-view keyposes required; existing eye/torso rigs do not prove gait or body turn; no whole-image translation substitute"
+          "blockReason": "ALPHA_DEFECT: 30 detached pixels; original and normalized keypose retained; no rig/clip/registration; repair limit 3/3",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/monsters/move-pilot/M005",
+          "recoveryPath": "design/production-batches/monsters/move-pilot/M005/keypose.png",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "TURN",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED",
-          "blockReason": "ASSET_REQUIRED: distinct planted/swing limb and alternate-view keyposes required; existing eye/torso rigs do not prove gait or body turn; no whole-image translation substitute"
+          "blockReason": "ALPHA_DEFECT: 38 detached pixels; original and normalized keypose retained; no rig/clip/registration; repair limit 3/3",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/monsters/turn-pilot/M005",
+          "recoveryPath": "design/production-batches/monsters/turn-pilot/M005/keypose.png",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "REST",
@@ -3272,7 +3290,7 @@
         "candidateActions": 6,
         "automatedCandidateActions": 6,
         "artworkReviewPendingActions": 5,
-        "validationFailedActions": 2,
+        "validationFailedActions": 4,
         "missingFrameSetActions": 9,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -3312,10 +3330,15 @@
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M006",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "LOOK",
@@ -3430,11 +3453,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 2,
-        "automatedCandidateActions": 2,
-        "artworkReviewPendingActions": 2,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -18208,7 +18231,7 @@
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
     "sourcePngIncludingRecovery": 102,
-    "allCandidatePng": 668,
+    "allCandidatePng": 672,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,
@@ -18439,11 +18462,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 91,
-    "automatedCandidateActions": 90,
-    "artworkReviewPendingActions": 90,
-    "validationFailedActions": 3,
-    "missingFrameSetActions": 1644,
+    "candidateActions": 94,
+    "automatedCandidateActions": 93,
+    "artworkReviewPendingActions": 93,
+    "validationFailedActions": 5,
+    "missingFrameSetActions": 1641,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
@@ -18901,5 +18924,188 @@
       "runtimeCoverage": "NOT_INFERRED_FROM_FILES",
       "fullActionGui": "NOT_VERIFIED"
     }
-  ]
+  ],
+  "continuation114": {
+    "baselineCommit": "2feede523eb1de6057453be67834a9f83412c32e",
+    "repairIterations": 3,
+    "newFrames": 20,
+    "newCandidateClips": 3,
+    "newPngFiles": 27,
+    "productionRegisteredClips": 0,
+    "runtimeConnectedClips": 0,
+    "livingBehaviorConnections": 0,
+    "battleSkillConnections": 0,
+    "candidatePassScope": "PNG/Alpha/Bounds/Anchor/unique hashes/protected anatomy only; natural loop/appearance require review",
+    "legacyBaseAudit": [
+      {
+        "speciesId": "PIP",
+        "sourceBase": "public/assets/monsters/pip/base.png",
+        "detachedAlphaPixels": 25,
+        "detachedMaxAlpha": 3,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "MELLO",
+        "sourceBase": "public/assets/monsters/mello/base.png",
+        "detachedAlphaPixels": 1644,
+        "detachedMaxAlpha": 255,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "MOSSY",
+        "sourceBase": "public/assets/monsters/mossy/base.png",
+        "detachedAlphaPixels": 39,
+        "detachedMaxAlpha": 4,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "CHIRP",
+        "sourceBase": "public/assets/monsters/chirp/base.png",
+        "detachedAlphaPixels": 17,
+        "detachedMaxAlpha": 4,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "BUBU",
+        "sourceBase": "public/assets/monsters/bubu/base.png",
+        "detachedAlphaPixels": 1525,
+        "detachedMaxAlpha": 255,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "PEBB",
+        "sourceBase": "public/assets/monsters/pebb/base.png",
+        "detachedAlphaPixels": 221,
+        "detachedMaxAlpha": 255,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "PUFF",
+        "sourceBase": "public/assets/monsters/puff/base.png",
+        "detachedAlphaPixels": 7,
+        "detachedMaxAlpha": 1,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "TIKKI",
+        "sourceBase": "public/assets/monsters/tikki/base.png",
+        "detachedAlphaPixels": 6,
+        "detachedMaxAlpha": 2,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "MIMI",
+        "sourceBase": "public/assets/monsters/mimi/base.png",
+        "detachedAlphaPixels": 5,
+        "detachedMaxAlpha": 4,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "WISP",
+        "sourceBase": "public/assets/monsters/wisp/base.png",
+        "detachedAlphaPixels": 3111,
+        "detachedMaxAlpha": 255,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "SHADE",
+        "sourceBase": "public/assets/monsters/shade/base.png",
+        "detachedAlphaPixels": 533,
+        "detachedMaxAlpha": 255,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "EMBER",
+        "sourceBase": "public/assets/monsters/ember/base.png",
+        "detachedAlphaPixels": 431,
+        "detachedMaxAlpha": 255,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "LUNET",
+        "sourceBase": "public/assets/monsters/lunet/base.png",
+        "detachedAlphaPixels": 43,
+        "detachedMaxAlpha": 4,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "NOVA",
+        "sourceBase": "public/assets/monsters/nova/base.png",
+        "detachedAlphaPixels": 417,
+        "detachedMaxAlpha": 255,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "NOCT",
+        "sourceBase": "public/assets/monsters/noct/base.png",
+        "detachedAlphaPixels": 22,
+        "detachedMaxAlpha": 127,
+        "newCandidateUse": "HUMAN_REVIEW_REQUIRED",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      },
+      {
+        "speciesId": "CAPLET",
+        "sourceBase": "public/assets/monsters/caplet/base.png",
+        "detachedAlphaPixels": 0,
+        "detachedMaxAlpha": 0,
+        "newCandidateUse": "PNG_PREFLIGHT_CLEAR",
+        "existingApproval": "UNCHANGED",
+        "measurementScope": "Disconnected alpha components are not automatically background defects; effects/anatomy require review before new artwork."
+      }
+    ],
+    "runtimeAudit": {
+      "approvedUnconnectedActions": [],
+      "capletSleep": "ALREADY_CONNECTED",
+      "shadeTurn": "NOT_APPLICABLE per src/animation/edge.ts and docs/evidence/shade-edge-v1/acceptance.json; no invented native corner event",
+      "candidateRuntime": "ISOLATED_PREVIEW_ONLY",
+      "nativeGui": "DEFERRED_GUI",
+      "windowsGui": "DEFERRED_GUI"
+    },
+    "failedKeyposes": [
+      "CAPLET MOVE: detached 30",
+      "CAPLET TURN: detached 38"
+    ],
+    "existingFailures": "REST / INTERACT / MOA Stage 4 BLINK / M007 appearance / M015 M028 identity / M023 M024 M030 anatomy preserved",
+    "validationBlocker": {
+      "status": "BLOCKED",
+      "review": "HUMAN_REVIEW_REQUIRED",
+      "file": "tests/animation/candidate-boundaries.cjs",
+      "line": 26,
+      "cause": "pilotDefinition('RUU', 3) returns null; existing Companion API expects lowercase 'ruu'",
+      "proposedChange": "Change only pilotDefinition('RUU', 3) to pilotDefinition('ruu', 3)",
+      "approval": "PENDING",
+      "repairIterations": 3,
+      "releaseGate": "FAIL_animation-content",
+      "productionCodeChanged": false
+    }
+  }
 }
