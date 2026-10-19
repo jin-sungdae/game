@@ -6,7 +6,7 @@ import test_assets
 class LookFollowupTests(unittest.TestCase):
     def test_new_candidates_keep_anatomy_alpha_anchor_and_distinct_frames(self):
         root=test_assets.ROOT/'design/production-batches'
-        cases=[('monsters/look-pilot/M005','monsters/batch01/M005','look',8,lambda x,y:((x-137.5)/8.5)**2+((y-122)/11)**2<1 or ((x-164)/4)**2+((y-120)/10)**2<1),('breath-followup/M006','monsters/batch01/M006','breath',8,lambda x,y:not(y<=172 or y>=197 or x<=82 or x>=171)),('breath-followup/M008','monsters/batch01/M008','breath',8,lambda x,y:not(y<=158 or y>=204 or x<=90 or x>=181))]
+        cases=[('breath-followup/M009','monsters/batch01/M009','breath',8,lambda x,y:not(y<=138 or y>=215 or x<=79 or x>=197)),('breath-followup/M010','monsters/batch01/M010','breath',8,lambda x,y:not(y>=178 or y<=125 or x<=97 or x>=188)),('monsters/look-pilot/M005','monsters/batch01/M005','look',8,lambda x,y:((x-137.5)/8.5)**2+((y-122)/11)**2<1 or ((x-164)/4)**2+((y-120)/10)**2<1),('breath-followup/M006','monsters/batch01/M006','breath',8,lambda x,y:not(y<=172 or y>=197 or x<=82 or x>=171)),('breath-followup/M008','monsters/batch01/M008','breath',8,lambda x,y:not(y<=158 or y>=204 or x<=90 or x>=181))]
         for destination,source,action,count,movable in cases:
             with self.subTest(creature=destination):
                 base=rgba(root/source/'base-v2.png');bounds=[];self.assertEqual(test_assets.validator.png_errors(root/source/'base-v2.png',True,bounds),[])
