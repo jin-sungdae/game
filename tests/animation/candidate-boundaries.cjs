@@ -23,7 +23,7 @@ for(const code of ['M003','M006','ruu/stage03'])test(`${code} candidate uses rea
 test('candidate files cannot activate CAPLET MOVE/TURN or RUU LOOK; native sleep remains stationary',async()=>{
  const assets=new PilotAssets(new AssetLoader({json:async()=>{throw Error('unapproved assets must not be loaded')},image:async()=>{throw Error('unapproved frame')}}));
  for(const state of ['MOVE','TURN','REACT','REST'])assert.equal(await assets.load(pilotDefinition('CAPLET'),state),null);
- assert.equal(await assets.load(pilotDefinition('RUU',3),'LOOK_AROUND'),null);
+ assert.equal(await assets.load(pilotDefinition('ruu',3),'LOOK_AROUND'),null);
  assert.equal(pilotDefinition('M003'),null);assert.equal(pilotDefinition('M006'),null);
  const resolver=new AnimationStateResolver();
  const input=Object.freeze({state:'SLEEPING',speed:40,suppressed:false,x:80,y:120,facing:-1});

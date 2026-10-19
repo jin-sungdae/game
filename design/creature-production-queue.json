@@ -19096,16 +19096,23 @@
     ],
     "existingFailures": "REST / INTERACT / MOA Stage 4 BLINK / M007 appearance / M015 M028 identity / M023 M024 M030 anatomy preserved",
     "validationBlocker": {
-      "status": "BLOCKED",
-      "review": "HUMAN_REVIEW_REQUIRED",
+      "status": "RESOLVED_TEST_INPUT",
+      "review": "USER_APPROVED_EXACT_ONE_CHANGE",
       "file": "tests/animation/candidate-boundaries.cjs",
       "line": 26,
       "cause": "pilotDefinition('RUU', 3) returns null; existing Companion API expects lowercase 'ruu'",
       "proposedChange": "Change only pilotDefinition('RUU', 3) to pilotDefinition('ruu', 3)",
-      "approval": "PENDING",
+      "approval": "USER_APPROVED: 테스트 입력 1건 수정 승인",
       "repairIterations": 3,
-      "releaseGate": "FAIL_animation-content",
-      "productionCodeChanged": false
+      "releaseGate": "PENDING_FINAL_HEAD_REVALIDATION",
+      "productionCodeChanged": false,
+      "resolution": "pilotDefinition('RUU', 3) -> pilotDefinition('ruu', 3); test input only",
+      "animationRegression": {
+        "tests": 182,
+        "passed": 182,
+        "failed": 0
+      },
+      "priorReleaseGate": "FAIL_animation-content at 223820561fd2a095078a21a330f2668443058a08; original failure evidence preserved"
     }
   }
 }
