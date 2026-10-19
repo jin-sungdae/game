@@ -4,6 +4,7 @@
     {
       "id": "companion:moa:1",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -124,6 +125,7 @@
     {
       "id": "companion:moa:2",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -244,6 +246,7 @@
     {
       "id": "companion:moa:3",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -364,6 +367,7 @@
     {
       "id": "companion:moa:4",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -635,6 +639,7 @@
     {
       "id": "companion:moa:5",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -821,6 +826,7 @@
     {
       "id": "companion:ruu:1",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -941,6 +947,7 @@
     {
       "id": "companion:ruu:2",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -1061,6 +1068,7 @@
     {
       "id": "companion:ruu:3",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -1263,6 +1271,7 @@
     {
       "id": "companion:ruu:4",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -1449,6 +1458,7 @@
     {
       "id": "companion:ruu:5",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -1635,6 +1645,7 @@
     {
       "id": "companion:nox:1",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -1755,6 +1766,7 @@
     {
       "id": "companion:nox:2",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -1941,6 +1953,7 @@
     {
       "id": "companion:nox:3",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -2061,6 +2074,7 @@
     {
       "id": "companion:nox:4",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -2181,6 +2195,7 @@
     {
       "id": "companion:nox:5",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -2301,6 +2316,7 @@
     {
       "id": "M001",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M001/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -2567,6 +2583,7 @@
     {
       "id": "M002",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M002/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -2833,6 +2850,7 @@
     {
       "id": "M003",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M003/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -3099,6 +3117,7 @@
     {
       "id": "M004",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -3347,6 +3366,7 @@
     {
       "id": "M005",
       "productionSpeciesId": "CAPLET",
+      "basePath": "/design/production-batches/monsters/batch01/M005/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -3410,10 +3430,14 @@
         },
         {
           "action": "REST",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "candidatePath": "design/production-batches/monsters/rest-pilot/M005",
+          "automated": "VALIDATION_FAILED",
+          "naturalMotion": "NOT_VERIFIED",
+          "blockReason": "ALPHA_DEFECT; CLEANUP_APPEARANCE_REVIEW_REQUIRED"
         },
         {
           "action": "SLEEP",
@@ -3904,6 +3928,7 @@
     {
       "id": "M006",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M006/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -4170,6 +4195,7 @@
     {
       "id": "M007",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M007/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -4283,6 +4309,7 @@
     {
       "id": "M008",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M008/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -4549,6 +4576,7 @@
     {
       "id": "M009",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M009/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -4815,6 +4843,7 @@
     {
       "id": "M010",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -5063,6 +5092,7 @@
     {
       "id": "M011",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M011/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -5076,10 +5106,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M011",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -5174,6 +5208,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M011/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M011/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M011/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M011/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M011/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M011/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M011/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M011/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M011/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 520,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              27,
+              26,
+              230,
+              228
+            ],
+            [
+              27,
+              26,
+              230,
+              228
+            ],
+            [
+              27,
+              26,
+              230,
+              228
+            ],
+            [
+              27,
+              26,
+              230,
+              228
+            ],
+            [
+              27,
+              26,
+              230,
+              228
+            ],
+            [
+              27,
+              26,
+              230,
+              228
+            ],
+            [
+              27,
+              26,
+              230,
+              228
+            ],
+            [
+              27,
+              26,
+              230,
+              228
+            ]
+          ],
+          "pixelHashes": [
+            "bc7d7337562b0e45fe4fe65a0f1656e65db1e479b45bd4f77539981ec94e2184",
+            "f65bb126209b7759d03389171eece63ce0ad577d57d89766c8b70a20e971e5c2",
+            "48c05bf5dd9e278e289c15559d8b5c067dc160cd799b5377e18c3e607a6dd8e0",
+            "8edd14cf6271339738285c18e2ce50f9de0a412292f200c351376d2650e4dfb4",
+            "532af38dd76f945dcab5e88e1267221f48fb79299eb3c5419d6808d051a39e3a",
+            "65c20d25db3a82e1d2b565e6231e9084e8ef1e3fe67d28042fe9455dbecc3fca",
+            "99dfcb5a838ebb50db6bc2dc0cc8f4a2b9676399236841048079400a063419cd",
+            "29b2c31e99079fc6b56f5e0ea3ed892258803b2a0951caba1f6864c9cf56b1dc"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M011/rigged/idle",
@@ -5244,6 +5359,7 @@
     {
       "id": "M012",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M012/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -5257,10 +5373,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M012",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -5356,6 +5476,87 @@
       ],
       "clips": [
         {
+          "action": "breath",
+          "directory": "/design/production-batches/breath-followup/M012/rigged/breath",
+          "urls": [
+            "/design/production-batches/breath-followup/M012/rigged/breath/breath_00.png",
+            "/design/production-batches/breath-followup/M012/rigged/breath/breath_01.png",
+            "/design/production-batches/breath-followup/M012/rigged/breath/breath_02.png",
+            "/design/production-batches/breath-followup/M012/rigged/breath/breath_03.png",
+            "/design/production-batches/breath-followup/M012/rigged/breath/breath_04.png",
+            "/design/production-batches/breath-followup/M012/rigged/breath/breath_05.png",
+            "/design/production-batches/breath-followup/M012/rigged/breath/breath_06.png",
+            "/design/production-batches/breath-followup/M012/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 460,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              24,
+              30,
+              232,
+              219
+            ],
+            [
+              24,
+              30,
+              232,
+              219
+            ],
+            [
+              24,
+              30,
+              232,
+              219
+            ],
+            [
+              24,
+              30,
+              232,
+              219
+            ],
+            [
+              24,
+              30,
+              232,
+              219
+            ],
+            [
+              24,
+              30,
+              232,
+              219
+            ],
+            [
+              24,
+              30,
+              232,
+              219
+            ],
+            [
+              24,
+              30,
+              232,
+              219
+            ]
+          ],
+          "pixelHashes": [
+            "2b21d3fc5db0da6df4a8ea0590be67a5193a9d903d2eb5ad4ab7d2c7adc660c5",
+            "f68a5b0696b833159a67d20665765aeb0bca8f0d77b8edcfcd44109087546265",
+            "31828d486782f600ad43f0ca393e1ffb64bf8d45c319227899e0ee91791563a8",
+            "d3fea5eee1583270aa492f67db2194fa537fd48bddd888f53e91237d5370c9dc",
+            "6ad367d374066e487f35e5674365071aa89342024c37f0b138eec94a4b55690f",
+            "ca2326ead2af9eebae8c0afd6f89e9ed4b139c33fb90645a405410b058965855",
+            "6532eec7814b836a8c8bcf1c35a9400d9afa75d74c019af098b8d4d4e765a092",
+            "a27e3c408acfd77a22eb329488a0de3508e8639a1e08443cf944dd5cf91bba02"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch02/M012/rigged/idle",
           "urls": [
@@ -5425,6 +5626,7 @@
     {
       "id": "M013",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M013/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -5606,6 +5808,7 @@
     {
       "id": "M014",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M014/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -5787,6 +5990,7 @@
     {
       "id": "M015",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M015/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -5968,6 +6172,7 @@
     {
       "id": "M016",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M016/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -6149,6 +6354,7 @@
     {
       "id": "M017",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M017/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -6330,6 +6536,7 @@
     {
       "id": "M018",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M018/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -6511,6 +6718,7 @@
     {
       "id": "M019",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M019/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -6692,6 +6900,7 @@
     {
       "id": "M020",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch02/M020/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -6873,6 +7082,7 @@
     {
       "id": "M021",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M021/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -7054,6 +7264,7 @@
     {
       "id": "M022",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M022/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -7235,6 +7446,7 @@
     {
       "id": "M023",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M023/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -7348,6 +7560,7 @@
     {
       "id": "M024",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M024/base-v4.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -7461,6 +7674,7 @@
     {
       "id": "M025",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M025/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -7642,6 +7856,7 @@
     {
       "id": "M026",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M026/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -7823,6 +8038,7 @@
     {
       "id": "M027",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M027/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -8004,6 +8220,7 @@
     {
       "id": "M028",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M028/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -8185,6 +8402,7 @@
     {
       "id": "M029",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M029/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -8366,6 +8584,7 @@
     {
       "id": "M030",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch03/M030/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -8479,6 +8698,7 @@
     {
       "id": "M031",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M031/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -8660,6 +8880,7 @@
     {
       "id": "M032",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M032/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -8841,6 +9062,7 @@
     {
       "id": "M033",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M033/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -8954,6 +9176,7 @@
     {
       "id": "M034",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M034/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -9067,6 +9290,7 @@
     {
       "id": "M035",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M035/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -9180,6 +9404,7 @@
     {
       "id": "M036",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M036/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -9361,6 +9586,7 @@
     {
       "id": "M037",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M037/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -9474,6 +9700,7 @@
     {
       "id": "M038",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M038/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -9587,6 +9814,7 @@
     {
       "id": "M039",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M039/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -9768,6 +9996,7 @@
     {
       "id": "M040",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch04/M040/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -9949,6 +10178,7 @@
     {
       "id": "M041",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M041/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -10130,6 +10360,7 @@
     {
       "id": "M042",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M042/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -10311,6 +10542,7 @@
     {
       "id": "M043",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M043/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -10424,6 +10656,7 @@
     {
       "id": "M044",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M044/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -10605,6 +10838,7 @@
     {
       "id": "M045",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M045/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -10786,6 +11020,7 @@
     {
       "id": "M046",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M046/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -10967,6 +11202,7 @@
     {
       "id": "M047",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M047/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -11148,6 +11384,7 @@
     {
       "id": "M048",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M048/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -11261,6 +11498,7 @@
     {
       "id": "M049",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M049/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -11442,6 +11680,7 @@
     {
       "id": "M050",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch05/M050/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -11623,6 +11862,7 @@
     {
       "id": "M051",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M051/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -11736,6 +11976,7 @@
     {
       "id": "M052",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M052/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -11849,6 +12090,7 @@
     {
       "id": "M053",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M053/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -12030,6 +12272,7 @@
     {
       "id": "M054",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M054/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -12143,6 +12386,7 @@
     {
       "id": "M055",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M055/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -12256,6 +12500,7 @@
     {
       "id": "M056",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M056/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -12369,6 +12614,7 @@
     {
       "id": "M057",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M057/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -12482,6 +12728,7 @@
     {
       "id": "M058",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M058/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -12595,6 +12842,7 @@
     {
       "id": "M059",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M059/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -12776,6 +13024,7 @@
     {
       "id": "M060",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch06/M060/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -12957,6 +13206,7 @@
     {
       "id": "M061",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M061/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -13070,6 +13320,7 @@
     {
       "id": "M062",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M062/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -13183,6 +13434,7 @@
     {
       "id": "M063",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M063/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -13296,6 +13548,7 @@
     {
       "id": "M064",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M064/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -13409,6 +13662,7 @@
     {
       "id": "M065",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M065/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -13522,6 +13776,7 @@
     {
       "id": "M066",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M066/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -13635,6 +13890,7 @@
     {
       "id": "M067",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M067/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -13748,6 +14004,7 @@
     {
       "id": "M068",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M068/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -13861,6 +14118,7 @@
     {
       "id": "M069",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M069/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -13974,6 +14232,7 @@
     {
       "id": "M070",
       "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch07/M070/base-v2.png",
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -14087,6 +14346,7 @@
     {
       "id": "M071",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -14200,6 +14460,7 @@
     {
       "id": "M072",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -14313,6 +14574,7 @@
     {
       "id": "M073",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -14426,6 +14688,7 @@
     {
       "id": "M074",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -14539,6 +14802,7 @@
     {
       "id": "M075",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -14652,6 +14916,7 @@
     {
       "id": "M076",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -14765,6 +15030,7 @@
     {
       "id": "M077",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -14878,6 +15144,7 @@
     {
       "id": "M078",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -14991,6 +15258,7 @@
     {
       "id": "M079",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -15104,6 +15372,7 @@
     {
       "id": "M080",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -15217,6 +15486,7 @@
     {
       "id": "M081",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -15396,6 +15666,7 @@
     {
       "id": "M082",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -15575,6 +15846,7 @@
     {
       "id": "M083",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -15688,6 +15960,7 @@
     {
       "id": "M084",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -15801,6 +16074,7 @@
     {
       "id": "M085",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -15914,6 +16188,7 @@
     {
       "id": "M086",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -16027,6 +16302,7 @@
     {
       "id": "M087",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -16140,6 +16416,7 @@
     {
       "id": "M088",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -16253,6 +16530,7 @@
     {
       "id": "M089",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -16366,6 +16644,7 @@
     {
       "id": "M090",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -16545,6 +16824,7 @@
     {
       "id": "M091",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -16658,6 +16938,7 @@
     {
       "id": "M092",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -16837,6 +17118,7 @@
     {
       "id": "M093",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -16950,6 +17232,7 @@
     {
       "id": "M094",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -17063,6 +17346,7 @@
     {
       "id": "M095",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -17242,6 +17526,7 @@
     {
       "id": "M096",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -17421,6 +17706,7 @@
     {
       "id": "M097",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -17534,6 +17820,7 @@
     {
       "id": "M098",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -17713,6 +18000,7 @@
     {
       "id": "M099",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {
@@ -17826,6 +18114,7 @@
     {
       "id": "M100",
       "productionSpeciesId": null,
+      "basePath": null,
       "productionStatus": "NOT_PRODUCTION_READY",
       "actions": [
         {

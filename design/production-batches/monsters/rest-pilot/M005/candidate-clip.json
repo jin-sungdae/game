@@ -1,0 +1,18 @@
+{
+  "conceptId": "M005",
+  "productionSpeciesId": "CAPLET",
+  "status": "VALIDATION_FAILED",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M005/base-v2.png",
+  "failures": [
+    "ALPHA_DEFECT: normalized keypose has six disconnected alpha=1 pixels",
+    "APPEARANCE_REVIEW_REQUIRED: cleanup redraw changes scale and facial details; not adopted"
+  ],
+  "repairIterations": 1,
+  "clip": {
+    "name": "REST",
+    "frames": 0
+  },
+  "next": "Preserve both references; obtain identity-preserving clean REST keypose before rigging"
+}

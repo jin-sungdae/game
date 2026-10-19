@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Read-only asset inspection; writes only an isolated review catalog, never registries."""
+import argparse
 import json
 import re
 from pathlib import Path
@@ -7,9 +8,21 @@ from validate_assets import png_errors
 
 ROOT=Path(__file__).resolve().parents[1]
 
+def inventory_counts(root=ROOT):
+    monsters=root/'design/production-batches/monsters'
+    return {'allCandidatePng':len(list(monsters.rglob('*.png'))),
+            'sourcePngIncludingRecovery':len(list(monsters.rglob('source*.png')))}
+
+def refresh_inventory():
+    path=ROOT/'design/creature-production-queue.json'
+    queue=json.loads(path.read_text())
+    queue['candidateInventory'].update(inventory_counts())
+    path.write_text(json.dumps(queue,indent=2,ensure_ascii=False)+'\n')
+
 def build():
     queue=json.loads((ROOT/'design/creature-production-queue.json').read_text())
     rows={r['creatureId']:{'id':r['creatureId'],'productionSpeciesId':r.get('productionSpeciesId'),
+          'basePath':('/'+r['basePath']) if r.get('basePath') else None,
           'productionStatus':r['productionStatus'],'actions':r['actions'],'clips':[]} for r in queue['creatures']}
     for directory in sorted((ROOT/'design').glob('**/rigged/*')):
         if not directory.is_dir(): continue
@@ -46,6 +59,10 @@ def build():
             'creatures':list(rows.values()),'productionRegistration':False}
 
 if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--refresh-inventory',action='store_true',help='Refresh only measured Monster PNG counts; never approval or Runtime fields')
+    args=parser.parse_args()
+    if args.refresh_inventory: refresh_inventory()
     data=build(); p=ROOT/'tests/live/creature-review/catalog.json';p.write_text(json.dumps(data,indent=2)+'\n')
     clips=[c for r in data['creatures'] for c in r['clips']]
     print(json.dumps({'creatures':len(data['creatures']),'clips':len(clips),'automatedPass':sum(c['automated']=='PASS' for c in clips),'needsReviewOrFailed':sum(c['automated']!='PASS' for c in clips)}))
