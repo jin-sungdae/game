@@ -1,0 +1,31 @@
+{
+  "conceptId": "M028",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M028/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 640,
+    "loop": true
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "candidate preview only",
+  "anatomyScope": "bird chest and folded-feather root; beak, crest, outer wings, tail and talons fixed",
+  "proposedMovementProfile": {
+    "status": "PROPOSED",
+    "value": "STATIC"
+  },
+  "movementPolicy": "Existing proposal only; stationary breath is not movement or native activation",
+  "identityReviewNote": "Concept catalog says hooded shade / STATIC; existing batch03 base is a feathered bird. Preserve both and require mapping review; no ID or movement activation."
+}

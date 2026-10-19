@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "CAPLET REST BLOCKED at repair 3/3: review recovery v3 and explicit limited cleanup authorization required before rigging. Next independent Monster M021 BREATH after Ledger/artwork review. M007 APPEARANCE_DRIFT remains BLOCKED. Companion 15-form missing actions remain queued; no unapproved Production activation.",
+  "nextTask": "M031 BREATH after existing artwork/anatomy review; M023 core, M024 anatomy review and M030 rigid plates remain independently blocked. CAPLET MOVE/TURN/INTERACT need dedicated keyposes. REST repair remains 3/3 BLOCKED; M007 APPEARANCE_DRIFT preserved. Companion missing actions remain queued; no unapproved Production activation.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -623,10 +623,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/moa/stage05",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -2894,10 +2898,14 @@
         },
         {
           "action": "CURSOR_REACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/monsters/cursor-react-pilot/M005",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "INTERACT",
@@ -5222,10 +5230,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M021",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -5366,10 +5378,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M022",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -5801,10 +5817,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M025",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -5945,10 +5965,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M026",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -6089,10 +6113,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M027",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -6233,10 +6261,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M028",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_DESCRIPTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -6377,10 +6409,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M029",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -16655,7 +16691,7 @@
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
     "sourcePngIncludingRecovery": 102,
-    "allCandidatePng": 658,
+    "allCandidatePng": 666,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,
@@ -16767,5 +16803,80 @@
       "M020"
     ],
     "continuationBrowserPreview": "PASS: REST failed keypose and blocker visible; M013/M020 loaded, M020 frame 1 to 5, filter, pause and reduced frame 1; isolated browser only"
+  },
+  "post114Followup": {
+    "baseHead": "9a40ca37279833991131e3f8ad342a82e179522a",
+    "pr": 114,
+    "scope": "New independent candidate actions; existing failures and 3/3 repair count unchanged",
+    "candidateClips": 9,
+    "candidateFrames": 72,
+    "productionRegistrations": 0,
+    "runtimeConnections": 0,
+    "repairIterations": 3,
+    "repairLimit": 3,
+    "automaticRepairPerformed": false,
+    "sourceEnvironmentRetry": "M021 invocation lacked LUMA_SHARP_MODULE; same unmodified rig rerun with existing Sharp path. No code or validator repair.",
+    "loopBoundaryReview": [
+      {
+        "creatureId": "M005",
+        "action": "CURSOR_REACT",
+        "boundaryDelta": 844
+      },
+      {
+        "creatureId": "M026",
+        "action": "BREATH",
+        "boundaryDelta": 9015
+      },
+      {
+        "creatureId": "companion:moa:5",
+        "action": "BREATH",
+        "boundaryDelta": 12526
+      }
+    ],
+    "identityReview": [
+      "M028 existing concept text hooded shade vs preserved bird base; mapping remains blocked",
+      "M015 existing cloud owl vs shaggy base discrepancy preserved"
+    ],
+    "approvalAudit": "Explicit USER_APPROVED action M005 SLEEP is already connected; no approved unconnected action identified",
+    "initialCandidateValidation": {
+      "candidateClips": 80,
+      "candidateFrames": 520,
+      "pngValidationPass": 80,
+      "scope": "Existing Validator, canonical filenames, counts, distinct pixel hashes and stable alpha bounds",
+      "appearance": "HUMAN_REVIEW_REQUIRED",
+      "anatomicalAnchor": "MANUAL_REQUIRED; canvas anchor does not prove contact anatomy",
+      "naturalLoop": "HUMAN_REVIEW_REQUIRED",
+      "existingBoundaryFlags": [
+        "M014",
+        "M015",
+        "M018",
+        "M020"
+      ],
+      "runtimeApproval": "Review catalog is candidate-only; existing Production approvals unchanged"
+    },
+    "capletDeferredActions": {
+      "MOVE": "ASSET_REQUIRED: gait contact keyposes missing",
+      "TURN": "ASSET_REQUIRED: alternate facing anatomy missing; mirroring not accepted as turn",
+      "INTERACT": "ASSET_REQUIRED: dedicated arm/gesture keypose missing",
+      "REST": "BLOCKED_HUMAN_REVIEW_REQUIRED: prior alpha failure and repair limit unchanged"
+    },
+    "companionCoverage": {
+      "forms": 15,
+      "scope": "Existing Species/Stage selection and Rust stage policies preserved; per-action Ledger remains authoritative",
+      "newAction": "MOA Stage 5 BREATH candidate",
+      "gameplayPolicy": "No evolution, skill unlock or gameplay balance changes"
+    },
+    "nativeGui": "DEFERRED_GUI",
+    "windowsGui": "DEFERRED_GUI",
+    "browserPreview": "PASS: CAPLET CURSOR_REACT frame 3 to 7, pause held frame 7, reduced motion frame 1; M021 frame 1 to 4; MOA Stage 5 loaded with preserved IDLE. Existing CharacterAnimator in isolated browser; not native gameplay or artwork approval.",
+    "reviewCatalog": {
+      "creatures": 115,
+      "candidateClips": 89,
+      "candidateFrames": 592
+    },
+    "productionPng": 271,
+    "runtimeConnectedActions": 12,
+    "productionCompleteCreatures": 0,
+    "reviewUrl": "http://127.0.0.1:5192/tests/live/creature-review/"
   }
 }
