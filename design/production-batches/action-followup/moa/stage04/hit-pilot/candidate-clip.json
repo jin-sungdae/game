@@ -1,0 +1,94 @@
+{
+  "conceptId": null,
+  "species": "moa",
+  "evolutionStage": 4,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/moa/stage04/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 115,
+    "loop": false
+  },
+  "movableRect": [
+    68,
+    92,
+    244,
+    205
+  ],
+  "parts": [
+    {
+      "name": "mature-shoulder-brace",
+      "x": 211,
+      "y": 138,
+      "rx": 30,
+      "ry": 35,
+      "dx": -2.5,
+      "dy": 1.8,
+      "samples": [
+        0.02,
+        0.5,
+        1,
+        0.85,
+        0.62,
+        0.37,
+        0.14,
+        0.04
+      ]
+    },
+    {
+      "name": "chest-recovery",
+      "x": 192,
+      "y": 172,
+      "rx": 25,
+      "ry": 25,
+      "dx": -1.4,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.16,
+        0.67,
+        1,
+        0.82,
+        0.5,
+        0.21,
+        0.03
+      ]
+    },
+    {
+      "name": "leaf-mantle-follow-through",
+      "x": 111,
+      "y": 146,
+      "rx": 32,
+      "ry": 30,
+      "dx": 1.8,
+      "dy": 1.2,
+      "samples": [
+        0.01,
+        0.05,
+        0.25,
+        0.6,
+        1,
+        0.87,
+        0.41,
+        0.06
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot HIT; no invented server event or battle value",
+  "anatomyScope": "A grounded Stage 4 impact: shoulder brace, chest compression and delayed leaf mantle response. Antlers, face, lower legs and planted feet fixed; no whole-image transform.",
+  "behaviorContract": "Existing MOA Nature/Balance mature posture: restrained grounded recoil and delayed mantle recovery; candidate only, no damage or battle trigger.",
+  "alphaPolicy": "Existing local inverse-sampling RGBA rig; face/feet fixed, silhouette allowed only in body-part regions; PNG Validator unchanged"
+}

@@ -1,0 +1,135 @@
+{
+  "reference": "public/assets/creatures/ruu/stage04/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "explorer-wing-brace",
+      "x": 130,
+      "y": 125,
+      "rx": 40,
+      "ry": 23,
+      "dx": -2.7,
+      "dy": 1.7,
+      "samples": [
+        0.03,
+        0.92,
+        1,
+        0.66,
+        0.3,
+        0.17,
+        0.08,
+        0.04
+      ]
+    },
+    {
+      "name": "chest-impact-catch",
+      "x": 209,
+      "y": 153,
+      "rx": 23,
+      "ry": 30,
+      "dx": -1.5,
+      "dy": -1.8,
+      "samples": [
+        0.01,
+        0.34,
+        0.86,
+        1,
+        0.73,
+        0.39,
+        0.15,
+        0.05
+      ]
+    },
+    {
+      "name": "rear-feather-settle",
+      "x": 95,
+      "y": 164,
+      "rx": 24,
+      "ry": 19,
+      "dx": 1.4,
+      "dy": 1.6,
+      "samples": [
+        0.01,
+        0.05,
+        0.19,
+        0.53,
+        1,
+        0.81,
+        0.32,
+        0.06
+      ]
+    }
+  ],
+  "protectedRegions": "y>=188||y<=99||x<=66||x>=239",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "5e98513c74a64f99d509bfaa41e7a216108d05ca026fbae4144d18a72f235ea6",
+      "changedPixels": 1766,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 81,
+      "maxInverseDisplacementPixels": 0.09571574755899345
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "89a32fa86c2491db8b4bda4b970bc706a8554d9b1bd37ffef0ee23cac147ed15",
+      "changedPixels": 3984,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 499,
+      "maxInverseDisplacementPixels": 2.9308962482423366
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "01971503b8c62e5c7e873af3e5d645de87eba640f7d554c0df4f84b560b466cb",
+      "changedPixels": 4397,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 637,
+      "maxInverseDisplacementPixels": 3.1884254083276895
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "2325762588c263d39b2d0303bd258de03495e76314a0503cb7ef90787838d34e",
+      "changedPixels": 4490,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 614,
+      "maxInverseDisplacementPixels": 2.3394643347349913
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "03601c99c0df7b46e5c9431ef1edf1dd35ba3c1de68876739951f04f1b29d824",
+      "changedPixels": 4351,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 522,
+      "maxInverseDisplacementPixels": 2.1214114562126976
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "82b8ee1e9031cb60f60d047b91a2c25f076a6cbc62d81fcac621622a23b273bd",
+      "changedPixels": 4071,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 379,
+      "maxInverseDisplacementPixels": 1.720680240780028
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "194d8215054b3341b4e5e2f63df26377195f893a304daabfe6f45c57c4370e43",
+      "changedPixels": 3531,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 245,
+      "maxInverseDisplacementPixels": 0.6782695795530366
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "1df75c043c6534bc416e9441322e9a15031eca5f6ac6e8061a4dfce242c19851",
+      "changedPixels": 2678,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 150,
+      "maxInverseDisplacementPixels": 0.12761831190643627
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}
