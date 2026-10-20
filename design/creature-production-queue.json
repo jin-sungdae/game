@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "M007 INTERACT anatomy preflight, then M009 INTERACT; select independent REST/MOVE keyposes where anatomy permits. Preserve M008 REST and other failures without recovery at 3/3.",
+  "nextTask": "M009 INTERACT anatomy preflight, then M011 INTERACT; BASE_READY and action ASSET_REQUIRED confirmed. M007 skipped: existing BASE appearance drift is BLOCKED. Preserve M008 REST and other failures without recovery at 3/3.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -19460,7 +19460,7 @@
     "lastValidatedCommit": "ad89fb7935c380a53a91c1638919c1a51dc36903",
     "lastValidatedCommitScope": "Previous exact baseline only: Release Gate 18/18 and CI 4/4. Final new HEAD evidence is recorded in PR #114.",
     "currentTask": "Candidate batch verified in isolated browser; final committed-HEAD full Release Gate and remote CI evidence will be attached to PR #114",
-    "nextTask": "M007 INTERACT anatomy preflight, then M009 INTERACT; select independent REST/MOVE keyposes where anatomy permits. Preserve M008 REST and other failures without recovery at 3/3.",
+    "nextTask": "M009 INTERACT anatomy preflight, then M011 INTERACT; BASE_READY and action ASSET_REQUIRED confirmed. M007 skipped: existing BASE appearance drift is BLOCKED. Preserve M008 REST and other failures without recovery at 3/3.",
     "blockers": [
       "Final artwork and natural-motion review for candidate-only clips",
       "M008 REST Alpha residue and earlier failures preserved at 3/3",
@@ -19472,8 +19472,9 @@
     "nativeWindows": "DEFERRED_GUI",
     "validationEvidence": {
       "pullRequest": "https://github.com/jin-sungdae/game/pull/114",
-      "localReleaseResult": "/tmp/luma-pr114-response-release/release-result.json",
-      "instruction": "Read result HEAD and PR checks for final validation; baseline is not proof for new changes."
+      "localReleaseResult": "/tmp/luma-pr114-response-final-release/release-result.json",
+      "instruction": "Read result HEAD and PR checks for final validation; baseline is not proof for new changes.",
+      "preliminaryRun": "/tmp/luma-pr114-response-release: interrupted before completion to validate final Ledger commit; NOT_PASS"
     },
     "focusedValidation": {
       "assetTests": 3,
@@ -19497,6 +19498,13 @@
       ],
       "artworkApproval": "HUMAN_REVIEW_REQUIRED",
       "nativeGui": "DEFERRED_GUI"
-    }
+    },
+    "skippedNextCandidates": [
+      {
+        "identity": "M007",
+        "baseStatus": "VALIDATION_FAILED",
+        "reason": "Existing APPEARANCE_DRIFT; no recovery or duplicate generation"
+      }
+    ]
   }
 }
