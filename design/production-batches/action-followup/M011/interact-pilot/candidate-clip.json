@@ -1,0 +1,74 @@
+{
+  "conceptId": "M011",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M011/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 165,
+    "loop": false
+  },
+  "movableRect": [
+    37,
+    48,
+    169,
+    179
+  ],
+  "parts": [
+    {
+      "name": "gentle-inner-ear-attention",
+      "x": 148,
+      "y": 77,
+      "rx": 13,
+      "ry": 20,
+      "dx": 0.45,
+      "dy": -0.8,
+      "samples": [
+        0.03,
+        0.13,
+        0.39,
+        0.8,
+        1,
+        0.65,
+        0.29,
+        0.08
+      ]
+    },
+    {
+      "name": "tail-plume-soft-settle",
+      "x": 67,
+      "y": 137,
+      "rx": 24,
+      "ry": 27,
+      "dx": -0.9,
+      "dy": 0.55,
+      "samples": [
+        0.02,
+        0.05,
+        0.17,
+        0.41,
+        0.76,
+        0.98,
+        0.62,
+        0.12
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "Interior ear fur and tail plume response only. Eye placement, muzzle, skull, paws, ear tips and outer tail silhouette stay fixed; not a whole-tail wag, head rotation or flight.",
+  "behaviorContract": "Existing PROPOSED gentle/GROUND sky-fox catalog: small attention response followed by an unhurried tail-fur settle. No new identity mapping, chase behavior or gameplay trigger."
+}
