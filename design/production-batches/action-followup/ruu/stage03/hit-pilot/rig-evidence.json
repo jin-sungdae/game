@@ -1,0 +1,116 @@
+{
+  "reference": "public/assets/creatures/ruu/stage03/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "explorer-wing-coverts-brace",
+      "x": 134,
+      "y": 128,
+      "rx": 30,
+      "ry": 22,
+      "dx": -2.5,
+      "dy": 2.5,
+      "samples": [
+        0.03,
+        0.9,
+        1,
+        0.55,
+        0.28,
+        0.15,
+        0.07,
+        0.04
+      ]
+    },
+    {
+      "name": "upper-chest-recovery",
+      "x": 194,
+      "y": 161,
+      "rx": 22,
+      "ry": 28,
+      "dx": -2,
+      "dy": -1.5,
+      "samples": [
+        0.02,
+        0.4,
+        0.95,
+        1,
+        0.6,
+        0.25,
+        0.12,
+        0.03
+      ]
+    }
+  ],
+  "protectedRegions": "y>=191||y<=111||x<=84||x>=224",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "2c725269552132af716f7840ad856f65fd0492554a9c460edbb50b8941802422",
+      "changedPixels": 1291,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 86,
+      "maxInverseDisplacementPixels": 0.10606033108529322
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "e81d1fb7cdb104dd4371aa4bb60bc321c83c44f51b02b437199f016c1cd347e0",
+      "changedPixels": 2885,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 528,
+      "maxInverseDisplacementPixels": 3.180105456095072
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "f91e9285637d6b1f1a39d2a38582cab0ed0410c1b7b6f86e56ca87737fd57e23",
+      "changedPixels": 3025,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 667,
+      "maxInverseDisplacementPixels": 3.52731170161881
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "7fcf47f85d36747c2123090ab725db360ce7456abd3bd56f11ccf5f453d26584",
+      "changedPixels": 2946,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 577,
+      "maxInverseDisplacementPixels": 2.4976227522434558
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "71025cd67c4d2a21e97c7335d208037855821368443500189a4841e0c0911d12",
+      "changedPixels": 2770,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 408,
+      "maxInverseDisplacementPixels": 1.4995717199081013
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "8556388899453d88002bc7957cd1a732999a1572e5818b20ee038e23b3c7dfec",
+      "changedPixels": 2482,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 235,
+      "maxInverseDisplacementPixels": 0.6237015083564131
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "776436a3aa281666d3f97bed016d9f22debd1dae577bc170db0e7fb2225be7de",
+      "changedPixels": 2109,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 167,
+      "maxInverseDisplacementPixels": 0.2998558604053869
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "f5672ab20f42181c0af7c8b4faa221e69889f1406852d0f42a2259b198816366",
+      "changedPixels": 1543,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 99,
+      "maxInverseDisplacementPixels": 0.14140787940269353
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

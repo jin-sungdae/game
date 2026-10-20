@@ -921,10 +921,16 @@
         },
         {
           "action": "REST",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "NOT_VERIFIED",
+          "candidatePath": "design/production-batches/action-followup/moa/stage05/rest-pilot",
+          "recoveryPath": "design/production-batches/action-followup/moa/stage05/rest-pilot/keypose.png",
+          "blockReason": "ALPHA_DEFECT: 91 detached pixels; raw/256 dedicated keypose retained; no cleanup, rig or completed clip at PR limit 3/3"
         },
         {
           "action": "SLEEP",
@@ -1318,7 +1324,7 @@
         "candidateActions": 4,
         "automatedCandidateActions": 4,
         "artworkReviewPendingActions": 4,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 12,
         "guiPendingActions": 16,
         "completeActions": 0
@@ -1759,10 +1765,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/ruu/stage03/hit-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; local physical HIT candidate, no server Battle event or Native trigger connected"
         },
         {
           "action": "VICTORY",
@@ -1787,6 +1798,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 80,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ]
+          ],
+          "pixelHashes": [
+            "3e006cec0d1a577f9c7eb4926873ce2336b3fba39ba0a0587b89ef309f401a83",
+            "a2db30d5e94f652254ee0395d0f580fc2f695d6beddb3ff0a0117742455f009b",
+            "343d7c8cc0e123f784d19fd4dc5fd5cd8947da8cae7a88893e71bf4029fdf6c4",
+            "b8042bbefef65bf153bb57612c58235f798a8ed93a647874eaf1bacf9976a9ab",
+            "249faa7c97193c2d1283cb4c6b5312d025534f7fbce976b971a71b2112c8b757",
+            "b601c171def06121315bc4334b2ed72975f975c5a260d78f5a01274d043eceb0",
+            "aa317973ce71632ce24d09741b5062ddc1cff20976630bfb57323fc42166ea1c",
+            "50a76ad49db064c5622a0ad73290151fd9c6ee479c8d1fb38675bf757a47ec11"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "interact",
           "directory": "/design/production-batches/action-followup/ruu/stage03/interact-pilot/rigged/interact",
@@ -2036,11 +2128,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 3,
-        "automatedCandidateActions": 3,
-        "artworkReviewPendingActions": 3,
+        "candidateActions": 4,
+        "automatedCandidateActions": 4,
+        "artworkReviewPendingActions": 4,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 16,
         "completeActions": 0
       },
@@ -3122,10 +3214,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/nox/stage02/hit-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; local physical HIT candidate, no server Battle event or Native trigger connected"
         },
         {
           "action": "VICTORY",
@@ -3213,6 +3310,87 @@
             "ae2e276d1964f364c266ca0d87c1f9c7f3c59ccce035e7e39c63bca44bca6821",
             "75ab97065591584126909d5c48e8274803109411f583f9acea1ebfb93c3d48c1",
             "be052ed1722e00f8224aaa543fbdd5da76ba72b1a5385f00abef798fe20ba4af"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/nox/stage02/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/nox/stage02/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/nox/stage02/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/nox/stage02/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/nox/stage02/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/nox/stage02/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/nox/stage02/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/nox/stage02/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/nox/stage02/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 110,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ]
+          ],
+          "pixelHashes": [
+            "94df86d461aa3a59212cdbde50b6f6815d5a841d6c872277c3e4ba61d6b45a71",
+            "a6d7d54ac7ce9070e7bc4701d72fdfcb1bbb4aec08fc60c5bf18d6024259fcec",
+            "60c895d793001fac1b81a52d8467f80119c0a48cadb23598d8836ae33cc52f70",
+            "b603d8b1875e5bb6d0098c3cf88b6732e0a44435a7361cbbe36bed488d522ebf",
+            "d6582713b81b252ea1412fcb4f5ca98bd695f7389836fb9137c4b6b5598f37a3",
+            "34f976701e96cb39ddbdd766d5db513b4245fa97f905c57d31416c144ac90087",
+            "70c5e3e38013cbde6b4d3dc1b47a32d1b6df3569270d824036afcda43e5a3c02",
+            "df9ecb540f52e8a97eadaf7ec091c4433a522955348ddb52a1c20717f7fb9881"
           ],
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
@@ -3450,11 +3628,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 4,
-        "automatedCandidateActions": 3,
-        "artworkReviewPendingActions": 4,
+        "candidateActions": 5,
+        "automatedCandidateActions": 4,
+        "artworkReviewPendingActions": 5,
         "validationFailedActions": 2,
-        "missingFrameSetActions": 12,
+        "missingFrameSetActions": 11,
         "guiPendingActions": 16,
         "completeActions": 0
       },
@@ -8493,10 +8671,16 @@
         },
         {
           "action": "MOVE",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "NOT_VERIFIED",
+          "candidatePath": "design/production-batches/action-followup/M012/move-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M012/move-pilot/keypose.png",
+          "blockReason": "ALPHA_DEFECT: 206 detached pixels; raw/256 dedicated keypose retained; no cleanup, rig or completed clip at PR limit 3/3"
         },
         {
           "action": "TURN",
@@ -8811,7 +8995,7 @@
         "candidateActions": 3,
         "automatedCandidateActions": 3,
         "artworkReviewPendingActions": 3,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -8916,10 +9100,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M013/hit-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; local physical HIT candidate, no server Battle event or Native trigger connected"
         },
         {
           "action": "VICTORY",
@@ -8937,6 +9126,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M013/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M013/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M013/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M013/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M013/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M013/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M013/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M013/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M013/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 75,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ],
+            [
+              52,
+              44,
+              203,
+              220
+            ]
+          ],
+          "pixelHashes": [
+            "3925d9d00928be88173413d0ce2f46ec7bdc67fc8163bd103b9d99dcc7a24231",
+            "6a390fa99afd418ce9b8ffce52a1a4e306eec62d4821fff85aed9203875554c8",
+            "38445ed47109ae993dd023387b6b6ed0ea203d8519234df81fa26190ee764573",
+            "634b50261ec2eaa70729a5c97caa52d1cceaed405b9a5200d6ce3555fa8fcdcc",
+            "f47c281897ede4d837b126f80a063551aa840558ee91f1798c6918489b5d9293",
+            "ec36b0deadeb2953cee3b7b015221d81c81ffff726a67365fcd4a5bc93b0a4e7",
+            "f03fd52569cf48db99b67cf99ca54f57c0738b824577a58d31e41a020d10b093",
+            "3fbca4b6a61af3e4f7cbe625357636f5651e55e643eb14a1b452859058c6529b"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "breath",
           "directory": "/design/production-batches/breath-followup/M013/rigged/breath",
@@ -9089,11 +9359,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 2,
-        "automatedCandidateActions": 2,
-        "artworkReviewPendingActions": 2,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -9197,10 +9467,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M014/hit-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; local physical HIT candidate, no server Battle event or Native trigger connected"
         },
         {
           "action": "VICTORY",
@@ -9218,6 +9493,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M014/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M014/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M014/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M014/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M014/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M014/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M014/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M014/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M014/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 95,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ],
+            [
+              36,
+              23,
+              219,
+              226
+            ]
+          ],
+          "pixelHashes": [
+            "579d47a0e0d2ea7156672cc8d10cd59b35e7137ef2fa4a937646ef43fee99c06",
+            "ff1e0d2ec7b6dc90d02b5392a3417c039ba0e821c4bfebf3124530d863fa5866",
+            "2e6192f87e90585cd498fbc23e3d465d25fff6791c4fbded06a68a596303945b",
+            "240833e331860d1a8ff4144aeb2d8238abe93e8ef72dd013ee5d9b579212fb74",
+            "758bdb0afa0a682b4ebd4ec9619b4a1ee3e49336962641a44bf996f304928de7",
+            "73437794ba7b258b3d202819f8d75ce110be0351472a96710f3d262b3c3dd7cd",
+            "950072f4d4c162bf9368e76cf2302cf0e61094b0e6c3446e8e5467495ae22eae",
+            "eca05ac70a180cb2b790a422f6604b6359a244d73ef02b24195baf606cf0aea9"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "breath",
           "directory": "/design/production-batches/breath-followup/M014/rigged/breath",
@@ -9370,11 +9726,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 2,
-        "automatedCandidateActions": 2,
-        "artworkReviewPendingActions": 2,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -9745,10 +10101,16 @@
         },
         {
           "action": "ATTACK",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "NOT_VERIFIED",
+          "candidatePath": "design/production-batches/action-followup/M016/attack-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M016/attack-pilot/keypose.png",
+          "blockReason": "ALPHA_DEFECT: 132 detached pixels; raw/256 dedicated keypose retained; no cleanup, rig or completed clip at PR limit 3/3"
         },
         {
           "action": "SKILL_CAST",
@@ -9935,7 +10297,7 @@
         "candidateActions": 2,
         "automatedCandidateActions": 2,
         "artworkReviewPendingActions": 2,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -24000,11 +24362,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 116,
-    "automatedCandidateActions": 114,
-    "artworkReviewPendingActions": 115,
-    "validationFailedActions": 12,
-    "missingFrameSetActions": 1619,
+    "candidateActions": 120,
+    "automatedCandidateActions": 118,
+    "artworkReviewPendingActions": 119,
+    "validationFailedActions": 15,
+    "missingFrameSetActions": 1615,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,

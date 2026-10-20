@@ -1,0 +1,75 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 3,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage03/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 80,
+    "loop": false
+  },
+  "movableRect": [
+    84,
+    111,
+    224,
+    191
+  ],
+  "parts": [
+    {
+      "name": "explorer-wing-coverts-brace",
+      "x": 134,
+      "y": 128,
+      "rx": 30,
+      "ry": 22,
+      "dx": -2.5,
+      "dy": 2.5,
+      "samples": [
+        0.03,
+        0.9,
+        1,
+        0.55,
+        0.28,
+        0.15,
+        0.07,
+        0.04
+      ]
+    },
+    {
+      "name": "upper-chest-recovery",
+      "x": 194,
+      "y": 161,
+      "rx": 22,
+      "ry": 28,
+      "dx": -2,
+      "dy": -1.5,
+      "samples": [
+        0.02,
+        0.4,
+        0.95,
+        1,
+        0.6,
+        0.25,
+        0.12,
+        0.03
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot impact candidate; only server-authoritative battle events may trigger production HIT after separate approval",
+  "anatomyScope": "Stage 3 stationary impact recoil through wing coverts and upper chest. Eyes, face, crown, tail tips and planted feet remain fixed; actual local feather/body outline moves. No flight, walking, damage calculation or Native event activation.",
+  "behaviorContract": "Existing RUU Sky/Explorer energetic direction: quick wing brace then chest recovery; candidate timing only.",
+  "alphaPolicy": "Anatomical part silhouette changes via existing inverse-sampling rig. Fixed regions and outer canvas bounds remain unchanged; existing PNG validator unchanged."
+}
