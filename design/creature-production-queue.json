@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "M019 ATTACK dedicated keypose, then MOA Stage 5 HIT with existing BASE. Both currently ASSET_REQUIRED; preserve all failed poses and 3/3 repair limit.",
+  "nextTask": "M023 INTERACT feasibility from existing BASE, then RUU Stage 5 CURSOR_REACT. Check ledger and source alpha first; skip failed/blocked candidates; keep PR #114 repair limit 3/3.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -782,10 +782,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/moa/stage05/hit-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; isolated one-shot local silhouette response; no Native event or Production activation"
         },
         {
           "action": "VICTORY",
@@ -835,11 +840,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 4,
-        "automatedCandidateActions": 4,
-        "artworkReviewPendingActions": 4,
+        "candidateActions": 5,
+        "automatedCandidateActions": 5,
+        "artworkReviewPendingActions": 5,
         "validationFailedActions": 1,
-        "missingFrameSetActions": 12,
+        "missingFrameSetActions": 11,
         "guiPendingActions": 16,
         "completeActions": 0
       },
@@ -1620,10 +1625,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/ruu/stage05/hit-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; isolated one-shot local silhouette response; no Native event or Production activation"
         },
         {
           "action": "VICTORY",
@@ -1673,11 +1683,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 3,
-        "automatedCandidateActions": 3,
-        "artworkReviewPendingActions": 3,
+        "candidateActions": 4,
+        "automatedCandidateActions": 4,
+        "artworkReviewPendingActions": 4,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 16,
         "completeActions": 0
       },
@@ -5680,10 +5690,16 @@
         },
         {
           "action": "ATTACK",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "NOT_VERIFIED",
+          "candidatePath": "design/production-batches/action-followup/M019/attack-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M019/attack-pilot/keypose.png",
+          "blockReason": "ALPHA_DEFECT: 9 detached pixels; source alpha measured before preparation; original retained without cleanup or rig at PR repair limit 3/3"
         },
         {
           "action": "SKILL_CAST",
@@ -5745,7 +5761,7 @@
         "candidateActions": 2,
         "automatedCandidateActions": 2,
         "artworkReviewPendingActions": 2,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -5972,10 +5988,16 @@
         },
         {
           "action": "TURN",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "NOT_VERIFIED",
+          "candidatePath": "design/production-batches/action-followup/M021/turn-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M021/turn-pilot/keypose.png",
+          "blockReason": "ALPHA_DEFECT: 582 detached pixels; source alpha measured before preparation; original retained without cleanup or rig at PR repair limit 3/3"
         },
         {
           "action": "REST",
@@ -6072,7 +6094,7 @@
         "candidateActions": 2,
         "automatedCandidateActions": 2,
         "artworkReviewPendingActions": 2,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -6161,10 +6183,15 @@
         },
         {
           "action": "INTERACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M022/interact-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; isolated one-shot local silhouette response; no Native event or Production activation"
         },
         {
           "action": "ATTACK",
@@ -6230,11 +6257,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 2,
-        "automatedCandidateActions": 2,
-        "artworkReviewPendingActions": 2,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -18672,11 +18699,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 123,
-    "automatedCandidateActions": 121,
-    "artworkReviewPendingActions": 122,
-    "validationFailedActions": 17,
-    "missingFrameSetActions": 1612,
+    "candidateActions": 126,
+    "automatedCandidateActions": 124,
+    "artworkReviewPendingActions": 125,
+    "validationFailedActions": 19,
+    "missingFrameSetActions": 1609,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
@@ -21646,5 +21673,101 @@
       "artworkApproval": "HUMAN_REVIEW_REQUIRED",
       "nativeGui": "DEFERRED_GUI"
     }
+  },
+  "newPoseQualityContinuation": {
+    "baselineCommit": "972ce7280577b183cb9b92eed2fad0b5b93c374e",
+    "baselineCI": "39376473209: 4 SUCCESS",
+    "originMain": "b0adfc792bfe667615a05bd982fa4f3dc9229dff",
+    "repairIterations": 3,
+    "repairLimit": 3,
+    "policy": "Independent first attempts only. Source-alpha inspection precedes normalization. No old failed pose repair, alpha cleanup, threshold relaxation or counter reset.",
+    "newCases": {
+      "companion:moa:5 HIT": "moa/stage05/hit-pilot",
+      "M022 INTERACT": "M022/interact-pilot",
+      "companion:ruu:5 HIT": "ruu/stage05/hit-pilot"
+    },
+    "candidateClips": 3,
+    "candidateFrames": 24,
+    "candidatePng": 31,
+    "automatedPassedClips": 3,
+    "automatedPassedFrames": 24,
+    "failedKeyposes": [
+      {
+        "identity": "M019",
+        "action": "ATTACK",
+        "path": "design/production-batches/action-followup/M019/attack-pilot",
+        "detachedAlphaPixels": 9,
+        "sourceDetachedAlphaPixels": 102,
+        "status": "VALIDATION_FAILED",
+        "frames": 0
+      },
+      {
+        "identity": "M021",
+        "action": "TURN",
+        "path": "design/production-batches/action-followup/M021/turn-pilot",
+        "detachedAlphaPixels": 582,
+        "sourceDetachedAlphaPixels": 8225,
+        "status": "VALIDATION_FAILED",
+        "frames": 0
+      }
+    ],
+    "qualityFindings": {
+      "baseReference": "Both new dedicated poses used their existing BASE as exact identity reference; original/prompt retained in generation.json.",
+      "transparentPrompt": "Explicit alpha-zero background, connected contour, no haze/shadow/particles. M019 raw102/prepared9; M021 raw8225/prepared582. Prompt wording does not reliably prevent source contamination.",
+      "normalization": "Same existing proportional Lanczos3 RGBA preparation; no pixel cleanup. Source faults observed before resizing. Prior six-case kernel evidence remains unchanged.",
+      "rigging": "Existing part-weighted inverse RGBA sampler reused with creature-specific parts/timing. Changed alpha support proves local outline movement; protected pixels/feet/face remain identical. No new engine or global transform.",
+      "baseComparison": "Read-only alpha-weighted 64-bin palette L1, canvas-aligned alpha IoU and Bounds/baseline deltas; metrics are diagnostic, not identity approval.",
+      "appearanceObservations": {
+        "M019 ATTACK": "Forward paw extension and braced stance visible; enlarged occupied width, toe/forearm proportions and extended-paw anatomy require review. No complete attack clip.",
+        "M021 TURN": "Front paw and chest appear more viewer-facing; turn amplitude and relative ear/head/body proportions remain review questions. Alpha contamination reaches canvas border; no TURN clip."
+      }
+    },
+    "productionRegistrations": 0,
+    "runtimeConnections": 0,
+    "skillConnections": 0,
+    "approvedUnconnectedAssets": [],
+    "approvalAudit": "CAPLET SLEEP USER_APPROVED and already RUNTIME_CONNECTED. M004/M010 ready records still unmapped/unapproved. No approved unconnected clip found. Production/Spawn/Rarity/Capture/Skill unchanged.",
+    "nativeMacOS": "DEFERRED_GUI",
+    "nativeWindows": "DEFERRED_GUI",
+    "artworkReview": "HUMAN_REVIEW_REQUIRED",
+    "validation": {
+      "focusedAssets": "PASS: 3/3 new acceptance tests",
+      "animationRegression": "PASS: 213/213 existing clock/loader/state regression checks",
+      "releaseGate": "FINAL_HEAD_EVIDENCE_REQUIRED",
+      "releaseGateOutput": "/tmp/luma-pr114-new-pose-quality-release/release-result.json",
+      "ci": "FINAL_HEAD_EVIDENCE_REQUIRED"
+    },
+    "lastValidatedCommit": "972ce7280577b183cb9b92eed2fad0b5b93c374e",
+    "lastValidatedCommitScope": "Previously validated baseline only. Final commit proof must be read from the exact-SHA Release Gate artifact and PR #114 CI; never reuse baseline evidence.",
+    "lastCompletedWork": "MOA5 HIT, M022 INTERACT, RUU5 HIT candidate frames and measurements; M019 ATTACK/M021 TURN failure evidence preserved.",
+    "nextTask": "M023 INTERACT feasibility from existing BASE, then RUU Stage 5 CURSOR_REACT. Check ledger and source alpha first; skip failed/blocked candidates; keep PR #114 repair limit 3/3.",
+    "browserPreview": {
+      "status": "NOT_RUN",
+      "reason": "Local browser use is disabled in Work settings",
+      "url": "http://127.0.0.1:5192/tests/live/creature-review/",
+      "catalogUpdated": true
+    },
+    "coverageAtCheckpoint": {
+      "requiredActions": 1740,
+      "recordedReadyActions": 14,
+      "recordedRuntimeActions": 12,
+      "manifestFileSetsPresent": 12,
+      "candidateActions": 126,
+      "automatedCandidateActions": 124,
+      "artworkReviewPendingActions": 125,
+      "validationFailedActions": 19,
+      "missingFrameSetActions": 1609,
+      "guiPendingActions": 1740,
+      "completeActions": 0,
+      "creatures": 115,
+      "completeCreatures": 0
+    },
+    "candidateCatalogAtCheckpoint": {
+      "clips": 127,
+      "frames": 882,
+      "automatedPassClips": 125,
+      "failedClips": 2
+    },
+    "finalValidationContract": "Run Full Release Gate on the committed clean HEAD. Its release-result.json records the exact commit; publish final SHA and GitHub CI in PR #114 and delivery. Pending fields are not a pass claim."
   }
 }

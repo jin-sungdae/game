@@ -1,0 +1,94 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 5,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage05/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 95,
+    "loop": false
+  },
+  "movableRect": [
+    32,
+    72,
+    220,
+    198
+  ],
+  "parts": [
+    {
+      "name": "crest-wing-reflex",
+      "x": 96,
+      "y": 106,
+      "rx": 38,
+      "ry": 24,
+      "dx": -1.3,
+      "dy": -2.3,
+      "samples": [
+        0.03,
+        0.8,
+        1,
+        0.69,
+        0.4,
+        0.21,
+        0.12,
+        0.04
+      ]
+    },
+    {
+      "name": "flight-chest-brace",
+      "x": 184,
+      "y": 151,
+      "rx": 24,
+      "ry": 33,
+      "dx": -1.9,
+      "dy": 1,
+      "samples": [
+        0.01,
+        0.3,
+        0.83,
+        1,
+        0.78,
+        0.49,
+        0.22,
+        0.05
+      ]
+    },
+    {
+      "name": "long-tail-feather-recovery",
+      "x": 72,
+      "y": 176,
+      "rx": 28,
+      "ry": 20,
+      "dx": -1.2,
+      "dy": 1.4,
+      "samples": [
+        0.01,
+        0.04,
+        0.14,
+        0.45,
+        0.83,
+        1,
+        0.61,
+        0.06
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot HIT; no invented server event or battle value",
+  "anatomyScope": "Stage 5 RUU stationary impact candidate: rear wing contour reflex, chest brace and long tail-feather recovery. Face, crown tips, feet and far tail tip stable. No invented flight or full-body displacement.",
+  "behaviorContract": "RUU Sky/Explorer final-stage posture: faster feather reflex preceding torso and tail recovery; candidate presentation only, no native flight or battle trigger.",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold change"
+}
