@@ -1,0 +1,74 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 4,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage04/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 95,
+    "loop": false
+  },
+  "movableRect": [
+    92,
+    91,
+    177,
+    155
+  ],
+  "parts": [
+    {
+      "name": "near-wing-covert-attention",
+      "x": 146,
+      "y": 112,
+      "rx": 21,
+      "ry": 12,
+      "dx": 1.1,
+      "dy": -0.85,
+      "samples": [
+        0.04,
+        0.55,
+        1,
+        0.68,
+        0.29,
+        0.15,
+        0.08,
+        0.02
+      ]
+    },
+    {
+      "name": "trailing-feather-response",
+      "x": 119,
+      "y": 135,
+      "rx": 20,
+      "ry": 14,
+      "dx": -0.7,
+      "dy": 0.95,
+      "samples": [
+        0.02,
+        0.16,
+        0.61,
+        1,
+        0.74,
+        0.38,
+        0.13,
+        0.05
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "RUU Stage 4 quick near-wing feather attention and delayed trailing-feather settle. Crest, face, neck, torso, tail edge, legs, paws and outer alpha fixed. Interior feather response only; no flight, wing extension or locomotion.",
+  "behaviorContract": "Existing RUU explorer curiosity and stage_config; no native cursor event, response frequency or movement change"
+}

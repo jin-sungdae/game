@@ -1,0 +1,74 @@
+{
+  "conceptId": null,
+  "species": "nox",
+  "evolutionStage": 2,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/nox/stage02/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 175,
+    "loop": false
+  },
+  "movableRect": [
+    30,
+    124,
+    99,
+    204
+  ],
+  "parts": [
+    {
+      "name": "lower-tail-fur-release",
+      "x": 56,
+      "y": 171,
+      "rx": 19,
+      "ry": 22,
+      "dx": -0.95,
+      "dy": 0.65,
+      "samples": [
+        0.03,
+        0.1,
+        0.28,
+        0.62,
+        1,
+        0.72,
+        0.33,
+        0.09
+      ]
+    },
+    {
+      "name": "upper-tail-follow-through",
+      "x": 68,
+      "y": 141,
+      "rx": 16,
+      "ry": 11,
+      "dx": 0.6,
+      "dy": 0.5,
+      "samples": [
+        0.04,
+        0.07,
+        0.16,
+        0.39,
+        0.8,
+        1,
+        0.53,
+        0.12
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot review only; no native interaction frequency or gameplay trigger change",
+  "anatomyScope": "Cautious NOX slowly relaxes lower-tail fur, followed by upper-tail fur. Head, ears, eyes, torso, legs, paws and outer alpha fixed. Interior fur deformation only; not a full tail wag.",
+  "behaviorContract": "Existing NOX cautious low-energy decision_config; no movement profile or state changes"
+}

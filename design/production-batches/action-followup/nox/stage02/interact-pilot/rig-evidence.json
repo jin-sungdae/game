@@ -1,0 +1,107 @@
+{
+  "reference": "public/assets/creatures/nox/stage02/base.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "lower-tail-fur-release",
+      "x": 56,
+      "y": 171,
+      "rx": 19,
+      "ry": 22,
+      "dx": -0.95,
+      "dy": 0.65,
+      "samples": [
+        0.03,
+        0.1,
+        0.28,
+        0.62,
+        1,
+        0.72,
+        0.33,
+        0.09
+      ]
+    },
+    {
+      "name": "upper-tail-follow-through",
+      "x": 68,
+      "y": 141,
+      "rx": 16,
+      "ry": 11,
+      "dx": 0.6,
+      "dy": 0.5,
+      "samples": [
+        0.04,
+        0.07,
+        0.16,
+        0.39,
+        0.8,
+        1,
+        0.53,
+        0.12
+      ]
+    }
+  ],
+  "protectedRegions": "y>=204||y<=124||x<=30||x>=99",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "62ef27d8fe2557d09363930b67d2b5cec0e623fd4de615dbdf31ce1723a112f3",
+      "changedPixels": 291,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.03453227882072347
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "de24c33f7920d515f22b0de910471dcf10ea69eda4e5cd281c1b166be0803775",
+      "changedPixels": 511,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.11509699946602985
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "4806ab103d8756115cfc4516f03bc2def09b95429550ce0dec5fdffada44851d",
+      "changedPixels": 797,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.3220489878427301
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "3abfb058c19bdc620b95fdcc765ac649ca8393c91180f47754fafaaf33bbbc67",
+      "changedPixels": 1080,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7119512343933548
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "e9a04cf71be9f6d07fc01cd548794ebcd5e20f5c1afcad4ff0d5ba4c8453eba1",
+      "changedPixels": 1227,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.1501854867513734
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "34c312fa8ad7c9fba433865418c4b02a230cb167a9b9d5a9e81f2aeca4e6cfc2",
+      "changedPixels": 1186,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8269690609227607
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "38092eb50d1b4707ef7055e1f818e7af00700ca9ca2a1a1b1989a68d92d26153",
+      "changedPixels": 948,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.4127401652978055
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "83cacf64c2a9fff3ec1dd5aa3ad55ba38628201814047d6be970c33c5816474e",
+      "changedPixels": 536,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.10358929041084346
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #114; independent first attempt; no failure recovery",
+  "productionEligible": false
+}

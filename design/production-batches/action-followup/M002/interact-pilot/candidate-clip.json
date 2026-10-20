@@ -1,0 +1,74 @@
+{
+  "conceptId": "M002",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M002/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 135,
+    "loop": false
+  },
+  "movableRect": [
+    126,
+    71,
+    182,
+    164
+  ],
+  "parts": [
+    {
+      "name": "near-ear-inner-fold",
+      "x": 143,
+      "y": 82,
+      "rx": 12,
+      "ry": 6,
+      "dx": -0.7,
+      "dy": -0.9,
+      "samples": [
+        0.04,
+        0.24,
+        0.72,
+        1,
+        0.58,
+        0.25,
+        0.13,
+        0.06
+      ]
+    },
+    {
+      "name": "neck-leaf-follow-through",
+      "x": 167,
+      "y": 145,
+      "rx": 11,
+      "ry": 17,
+      "dx": 0.45,
+      "dy": 0.85,
+      "samples": [
+        0.03,
+        0.09,
+        0.21,
+        0.48,
+        0.87,
+        1,
+        0.51,
+        0.12
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot candidate only; no native behavior or gameplay trigger change",
+  "anatomyScope": "M002 gentle near-ear inner fold then neck-leaf follow-through. Antlers, face, eyes, body, legs, hooves and outer alpha fixed; no full ear rotation or neck bend.",
+  "behaviorContract": "Forest deer concept response; production Personality/MovementProfile/SpeciesBehavior remain NOT_VERIFIED and unmapped"
+}
