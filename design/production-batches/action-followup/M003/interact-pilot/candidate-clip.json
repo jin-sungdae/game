@@ -1,0 +1,74 @@
+{
+  "conceptId": "M003",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M003/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 155,
+    "loop": false
+  },
+  "movableRect": [
+    62,
+    93,
+    140,
+    166
+  ],
+  "parts": [
+    {
+      "name": "near-shoulder-leaf-ruffle",
+      "x": 118,
+      "y": 139,
+      "rx": 17,
+      "ry": 21,
+      "dx": 0.7,
+      "dy": -1.25,
+      "samples": [
+        0.04,
+        0.18,
+        0.54,
+        1,
+        0.78,
+        0.38,
+        0.16,
+        0.07
+      ]
+    },
+    {
+      "name": "back-leaf-follow-through",
+      "x": 89,
+      "y": 117,
+      "rx": 16,
+      "ry": 13,
+      "dx": -0.85,
+      "dy": 0.6,
+      "samples": [
+        0.02,
+        0.09,
+        0.23,
+        0.59,
+        0.95,
+        0.83,
+        0.42,
+        0.1
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "M003 leaf-furred cub receives interaction with a near-shoulder ruffle followed by a back-leaf settle. Head, ears, eyes, face, belly, paws and outside alpha remain fixed. Interior layered-leaf response only; no body squash, limb motion or locomotion.",
+  "behaviorContract": "Leaf-furred forest concept only. Production Personality/MovementProfile/SpeciesBehavior remain unmapped; no native policy activation."
+}

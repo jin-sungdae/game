@@ -1,0 +1,74 @@
+{
+  "conceptId": null,
+  "species": "RUU",
+  "evolutionStage": 5,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage05/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 145,
+    "loop": false
+  },
+  "movableRect": [
+    85,
+    77,
+    164,
+    134
+  ],
+  "parts": [
+    {
+      "name": "near-wing-secondary-feather-ruffle",
+      "x": 111,
+      "y": 96,
+      "rx": 21,
+      "ry": 11,
+      "dx": -1.1,
+      "dy": -0.55,
+      "samples": [
+        0.03,
+        0.24,
+        0.72,
+        1,
+        0.66,
+        0.33,
+        0.13,
+        0.05
+      ]
+    },
+    {
+      "name": "lower-wing-covert-follow-through",
+      "x": 139,
+      "y": 118,
+      "rx": 15,
+      "ry": 11,
+      "dx": 0.75,
+      "dy": 0.8,
+      "samples": [
+        0.02,
+        0.07,
+        0.19,
+        0.52,
+        0.94,
+        1,
+        0.51,
+        0.1
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "Interior wing-feather ruffle only; crown, head, beak, face, legs, planted feet, tail and alpha silhouette remain fixed. No wing-root rotation, flight or whole-image transform.",
+  "behaviorContract": "Alert feather ruffle with delayed lower covert settle, distinct from juvenile face reactions and Stage 4 cursor response; no native interaction or skill activation."
+}
