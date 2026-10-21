@@ -1,0 +1,56 @@
+{
+  "creatureId": "M042",
+  "action": "REST",
+  "sourceBase": "design/production-batches/monsters/batch05/M042/base-v2.png",
+  "sourceSha256": "65e00e86c5b41b66e38417410c2a306815ba6aecd551e1b66649e5307ce0420b",
+  "movementProfile": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "personality": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "speciesBehavior": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "anatomy": "Small wingless ice fox cub with four paws, pointed ears and fluffy tail. Dedicated awake crouched REST, not a scaled standing image.",
+  "feasibility": "DEDICATED_REST_KEYPOSE_REQUIRED",
+  "speciesIdentity": "CONCEPT_ONLY_MAPPING_UNAPPROVED",
+  "productionSpeciesId": null,
+  "manifest": null,
+  "provenance": "design/production-batches/monsters/batch05/provenance.json",
+  "existingCandidateClips": [
+    "idle"
+  ],
+  "duplicateActionFound": false,
+  "policyChanged": false,
+  "newBodyParts": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "proposedCatalogContract": {
+    "observedForm": "ice fox",
+    "personality": {
+      "status": "PROPOSED",
+      "trait": "curious"
+    },
+    "movementProfile": {
+      "status": "PROPOSED",
+      "value": "GROUND"
+    },
+    "speciesBehavior": {
+      "status": "PROPOSED",
+      "frequency": "frequent short excursions with observation pauses; attention centers on the ice habitat of the ice fox",
+      "preparation": "scan both sides before committing direction; preserve the ice fox silhouette",
+      "transition": "insert a look-around beat between movement and rest; recover the ice fox resting anatomy",
+      "reaction": "approach once then respect personal space; keep the ice fox characteristic gesture"
+    },
+    "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+    "runtimeEnabled": false
+  },
+  "catalogSource": "design/visual-reference-v1/catalog.json",
+  "catalogComparisonTiming": "Before candidate creation",
+  "anatomyContractConflict": false,
+  "result": "RAW_ALPHA_FAILED_NO_NORMALIZATION"
+}

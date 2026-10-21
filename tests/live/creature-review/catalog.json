@@ -4423,8 +4423,9 @@
           "action": "CURSOR_REACT",
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "Existing BASE Alpha defect:18 detached pixels; repair3/3; HUMAN_REVIEW_REQUIRED. No new frame or recovery."
         },
         {
           "action": "INTERACT",
@@ -16526,10 +16527,14 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/action-followup/M039/hit-pilot",
+          "blockReason": "Raw source detached Alpha 267 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "VICTORY",
@@ -16621,7 +16626,7 @@
         "candidateActions": 1,
         "automatedCandidateActions": 1,
         "artworkReviewPendingActions": 1,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 14,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -16918,10 +16923,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M041/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -16939,6 +16949,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M041/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M041/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M041/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M041/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M041/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M041/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M041/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M041/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M041/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              40,
+              16,
+              216,
+              237
+            ],
+            [
+              40,
+              16,
+              216,
+              237
+            ],
+            [
+              40,
+              16,
+              216,
+              237
+            ],
+            [
+              40,
+              16,
+              216,
+              237
+            ],
+            [
+              40,
+              16,
+              216,
+              237
+            ],
+            [
+              40,
+              16,
+              216,
+              237
+            ],
+            [
+              40,
+              16,
+              216,
+              237
+            ],
+            [
+              40,
+              16,
+              216,
+              237
+            ]
+          ],
+          "pixelHashes": [
+            "549e72ce1094de7199550ba8183eae7192fa968f373fe4021b87e30f3ceae9d1",
+            "337367a77910d47ed89aafa85e8b8e4d39bb4de82a23da9dba9a449f688ccbf9",
+            "d978933f0e931a97158aff3383f9b0906f9bb450fa3d4b04e73b8f64c7f9b221",
+            "a8ec24937b7a8e552feb9d52c0b9fd91a66d2d98f6cbe9ad163b2c8b2f49f51a",
+            "73c6f2edeb69bd71400352b1304c0e4164ee07a85296399887dc44f3db4729d1",
+            "d4e14428c39afdbf135cadbb74f022355cc745d7e019340135a19ebf300fafc7",
+            "f2d4f9aa7f5dec2ae8e26c5d73b547b5551639dba721f9b6ff88ce89492e199a",
+            "c18fa69a75781c8cafb17d1e55778f5b3895d653761d804efeb8bc4984e193f0"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch05/M041/rigged/idle",
@@ -17010,11 +17101,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -17072,10 +17163,14 @@
         },
         {
           "action": "REST",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/action-followup/M042/rest-pilot",
+          "blockReason": "Raw source detached Alpha 517 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "SLEEP",
@@ -17209,7 +17304,7 @@
         "candidateActions": 1,
         "automatedCandidateActions": 1,
         "artworkReviewPendingActions": 1,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 14,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -25787,11 +25882,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 136,
-    "automatedCandidateActions": 134,
-    "artworkReviewPendingActions": 135,
-    "validationFailedActions": 23,
-    "missingFrameSetActions": 1599,
+    "candidateActions": 137,
+    "automatedCandidateActions": 135,
+    "artworkReviewPendingActions": 136,
+    "validationFailedActions": 25,
+    "missingFrameSetActions": 1598,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
