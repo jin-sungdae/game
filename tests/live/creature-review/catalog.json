@@ -2859,10 +2859,15 @@
         },
         {
           "action": "CURSOR_REACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/ruu/stage05/cursor-react-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; one-shot local silhouette response; no Native event or Production activation"
         },
         {
           "action": "INTERACT",
@@ -2925,6 +2930,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "cursor_react",
+          "directory": "/design/production-batches/action-followup/ruu/stage05/cursor-react-pilot/rigged/cursor_react",
+          "urls": [
+            "/design/production-batches/action-followup/ruu/stage05/cursor-react-pilot/rigged/cursor_react/cursor_react_00.png",
+            "/design/production-batches/action-followup/ruu/stage05/cursor-react-pilot/rigged/cursor_react/cursor_react_01.png",
+            "/design/production-batches/action-followup/ruu/stage05/cursor-react-pilot/rigged/cursor_react/cursor_react_02.png",
+            "/design/production-batches/action-followup/ruu/stage05/cursor-react-pilot/rigged/cursor_react/cursor_react_03.png",
+            "/design/production-batches/action-followup/ruu/stage05/cursor-react-pilot/rigged/cursor_react/cursor_react_04.png",
+            "/design/production-batches/action-followup/ruu/stage05/cursor-react-pilot/rigged/cursor_react/cursor_react_05.png",
+            "/design/production-batches/action-followup/ruu/stage05/cursor-react-pilot/rigged/cursor_react/cursor_react_06.png",
+            "/design/production-batches/action-followup/ruu/stage05/cursor-react-pilot/rigged/cursor_react/cursor_react_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 90,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              21,
+              21,
+              231,
+              229
+            ],
+            [
+              21,
+              21,
+              231,
+              229
+            ],
+            [
+              21,
+              21,
+              231,
+              229
+            ],
+            [
+              21,
+              21,
+              231,
+              229
+            ],
+            [
+              21,
+              21,
+              231,
+              229
+            ],
+            [
+              21,
+              21,
+              231,
+              229
+            ],
+            [
+              21,
+              21,
+              231,
+              229
+            ],
+            [
+              21,
+              21,
+              231,
+              229
+            ]
+          ],
+          "pixelHashes": [
+            "088c51487813ace2a5040516f9ecde1165ea5e9ff1151de652b0aeb9c194f1b4",
+            "4bb56f4f0ea67133d194947aa19474674e3721e11ebeafd3d270664e3742f219",
+            "01829bfb10f6953164fc9a294cdf9969d54d4f94558e064febe6ce6a1e8c81e2",
+            "861167339f4f6f40755139fbd8332e2ba9e07d778eec78bfd6762a43f43a4470",
+            "4316fe35537befb09bf13afb9b5b8aed71ed638f838a113c709fa088ff90b5b6",
+            "5f9b5dc250104d3f731af27bd914bfbdb73c522748944e786a996317be7de2f0",
+            "988c7e84100c3ca2692f1c132d3eccaf1a6611738acaf90854e4559a5c79cfe6",
+            "b0babf58c8441beb0e5b9f0521dc5e80e8f545b302f62372b06662dee42c2f51"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "hit",
           "directory": "/design/production-batches/action-followup/ruu/stage05/hit-pilot/rigged/hit",
@@ -3239,11 +3325,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 4,
-        "automatedCandidateActions": 4,
-        "artworkReviewPendingActions": 4,
+        "candidateActions": 5,
+        "automatedCandidateActions": 5,
+        "artworkReviewPendingActions": 5,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 12,
+        "missingFrameSetActions": 11,
         "guiPendingActions": 16,
         "completeActions": 0
       },
@@ -12599,10 +12685,15 @@
         },
         {
           "action": "INTERACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M023/interact-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; one-shot local silhouette response; no Native event or Production activation"
         },
         {
           "action": "ATTACK",
@@ -12640,17 +12731,99 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": [],
+      "clips": [
+        {
+          "action": "interact",
+          "directory": "/design/production-batches/action-followup/M023/interact-pilot/rigged/interact",
+          "urls": [
+            "/design/production-batches/action-followup/M023/interact-pilot/rigged/interact/interact_00.png",
+            "/design/production-batches/action-followup/M023/interact-pilot/rigged/interact/interact_01.png",
+            "/design/production-batches/action-followup/M023/interact-pilot/rigged/interact/interact_02.png",
+            "/design/production-batches/action-followup/M023/interact-pilot/rigged/interact/interact_03.png",
+            "/design/production-batches/action-followup/M023/interact-pilot/rigged/interact/interact_04.png",
+            "/design/production-batches/action-followup/M023/interact-pilot/rigged/interact/interact_05.png",
+            "/design/production-batches/action-followup/M023/interact-pilot/rigged/interact/interact_06.png",
+            "/design/production-batches/action-followup/M023/interact-pilot/rigged/interact/interact_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 140,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              36,
+              27,
+              222,
+              225
+            ],
+            [
+              36,
+              27,
+              222,
+              225
+            ],
+            [
+              36,
+              27,
+              222,
+              225
+            ],
+            [
+              36,
+              27,
+              222,
+              225
+            ],
+            [
+              36,
+              27,
+              222,
+              225
+            ],
+            [
+              36,
+              27,
+              222,
+              225
+            ],
+            [
+              36,
+              27,
+              222,
+              225
+            ],
+            [
+              36,
+              27,
+              222,
+              225
+            ]
+          ],
+          "pixelHashes": [
+            "a89acab97ea7811bb9103216310053fd4ef6bae10e7f3a4e261c81cc1fe93de5",
+            "802fbe9353c601b2aec8f3cb1d530395070c4623bcff37afe152ed2079c44fa9",
+            "452987b05254eed79961c69ff50f99ac24b3691972de9c7170f3fc03eb5d5be0",
+            "17211d61068784023c315ec69a8eb247e9fcbd58f2e2a519e6349a263dbd5a27",
+            "898919071c908c0385770fc2d714560dd5563e55924a340112581a76c7a90480",
+            "fda44265c30bafad408ea070e3fe7a3a10716a60f284642407643154687d3287",
+            "b6997cec352409b1fb9cecf7f856e73b4940a7c8642f0d6c69dc12ada896957f",
+            "f676376e5e80d0fae56962c144058d77c143cad342e1f5961526eb532c7a0904"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
       "coverage": {
         "requiredActions": 15,
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 0,
-        "automatedCandidateActions": 0,
-        "artworkReviewPendingActions": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -12748,10 +12921,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M024/hit-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; one-shot local silhouette response; no Native event or Production activation"
         },
         {
           "action": "VICTORY",
@@ -12768,17 +12946,99 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": [],
+      "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M024/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M024/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M024/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M024/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M024/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M024/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M024/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M024/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M024/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 115,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              50,
+              23,
+              211,
+              233
+            ],
+            [
+              50,
+              23,
+              211,
+              233
+            ],
+            [
+              50,
+              23,
+              211,
+              233
+            ],
+            [
+              50,
+              23,
+              211,
+              233
+            ],
+            [
+              50,
+              23,
+              211,
+              233
+            ],
+            [
+              50,
+              23,
+              211,
+              233
+            ],
+            [
+              50,
+              23,
+              211,
+              233
+            ],
+            [
+              50,
+              23,
+              211,
+              233
+            ]
+          ],
+          "pixelHashes": [
+            "84a97060f8a157a87f67d28017be60cd9fb5c9a5abc568485226eed1e55c9f92",
+            "3847035a711caae3e2658c0fbcbbe37c68e632eec1e11d201745a12f124d6818",
+            "e2ccc26b8de6a3e9136b52d80515574b06cb10ca64380930abbc5388feb54d6c",
+            "515c3c632b46d5507ffecfba90e8ca2186aa1e3ceef3974f022612aa053eb3b9",
+            "88ad1b2f10e7427c0962c30c1ced5d5c7835d8976be2142cc9e3f37ab1dc8777",
+            "10fc9ba6de87dabf4beaecb731f828f37b944d54f42b38f6c26c0a7aaa7b0a7b",
+            "a12481f082a95b794f81bb27741b8d21e00c431398ccc4227225c0876804c6aa",
+            "94a342053a3a96bd343a22dfcc00948bc276e89d39cce50575fca3c3ad8a5f53"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
       "coverage": {
         "requiredActions": 15,
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 0,
-        "automatedCandidateActions": 0,
-        "artworkReviewPendingActions": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -12833,10 +13093,14 @@
         },
         {
           "action": "TURN",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "recoveryPath": "design/production-batches/action-followup/M025/turn-pilot/keypose-tool-reference.png",
+          "blockReason": "RAW_ALPHA_DEFECT: 7557 detached pixels before normalization; no resized image, rig or clip; PR repair limit 3/3"
         },
         {
           "action": "REST",
@@ -13058,7 +13322,7 @@
         "candidateActions": 2,
         "automatedCandidateActions": 2,
         "artworkReviewPendingActions": 2,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -24900,11 +25164,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 126,
-    "automatedCandidateActions": 124,
-    "artworkReviewPendingActions": 125,
-    "validationFailedActions": 19,
-    "missingFrameSetActions": 1609,
+    "candidateActions": 129,
+    "automatedCandidateActions": 127,
+    "artworkReviewPendingActions": 128,
+    "validationFailedActions": 20,
+    "missingFrameSetActions": 1606,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,

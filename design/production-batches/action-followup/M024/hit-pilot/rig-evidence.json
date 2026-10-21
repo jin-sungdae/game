@@ -1,0 +1,135 @@
+{
+  "reference": "design/production-batches/monsters/batch03/M024/base-v4.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "upright-torso-brace",
+      "x": 157,
+      "y": 180,
+      "rx": 24,
+      "ry": 26,
+      "dx": -2,
+      "dy": 1.2,
+      "samples": [
+        0.02,
+        0.64,
+        1,
+        0.86,
+        0.57,
+        0.31,
+        0.12,
+        0.03
+      ]
+    },
+    {
+      "name": "fluffy-tail-recoil",
+      "x": 76,
+      "y": 167,
+      "rx": 28,
+      "ry": 25,
+      "dx": -1.3,
+      "dy": 1.9,
+      "samples": [
+        0.01,
+        0.14,
+        0.47,
+        0.88,
+        1,
+        0.73,
+        0.32,
+        0.05
+      ]
+    },
+    {
+      "name": "near-forearm-guard",
+      "x": 185,
+      "y": 181,
+      "rx": 12,
+      "ry": 21,
+      "dx": -1.6,
+      "dy": 0.8,
+      "samples": [
+        0.01,
+        0.41,
+        0.93,
+        1,
+        0.73,
+        0.39,
+        0.16,
+        0.04
+      ]
+    }
+  ],
+  "protectedRegions": "y>=211||y<=139||x<=40||x>=199",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "6d2e1597aabed8250546db4e9287eb9d118faae2fffa6c91d376be7a6caad872",
+      "changedPixels": 664,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 90,
+      "maxInverseDisplacementPixels": 0.046647107200307354
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "3a66a26ae9b0a6dc3500f7bb9129ce70bc9463f9655b2835c8ed311f220c868f",
+      "changedPixels": 2750,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 355,
+      "maxInverseDisplacementPixels": 1.4917598731460306
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "a2ea3cea86697a1c98e9d49973e028093bdb3b0a6aef9cafb5d4be56193fe5a6",
+      "changedPixels": 3145,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 499,
+      "maxInverseDisplacementPixels": 2.331967628669539
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "38f292e8c931a0152594edf427466bf4ce0d9c3b9a3432b6c496f9db5367d6b1",
+      "changedPixels": 3219,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 541,
+      "maxInverseDisplacementPixels": 2.0247005766565525
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "3989b17c90e836e42b3908f1fefb65eb2622c8d29085c05cf1fe3ea084f3faaf",
+      "changedPixels": 3165,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 536,
+      "maxInverseDisplacementPixels": 2.301270698862564
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "56814ee0979e9f6cdbfbf20220311dae9a58ebd948c0e7221cf6881877a6c661",
+      "changedPixels": 2945,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 477,
+      "maxInverseDisplacementPixels": 1.6793674358784698
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "f7526a81b50fabb2e1cec181f6173424eac2b2ca91849c12ae1d21dbf2d190f1",
+      "changedPixels": 2457,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 383,
+      "maxInverseDisplacementPixels": 0.7356635883341276
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "6a64c19077aaca55017e2cafe4b78b39c567967bac8ce101f05a8fd7abe8f998",
+      "changedPixels": 1386,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 203,
+      "maxInverseDisplacementPixels": 0.11510179780400392
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}
