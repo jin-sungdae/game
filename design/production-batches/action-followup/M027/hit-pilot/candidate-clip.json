@@ -1,0 +1,113 @@
+{
+  "conceptId": "M027",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M027/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 105,
+    "loop": false
+  },
+  "movableRect": [
+    25,
+    70,
+    230,
+    190
+  ],
+  "parts": [
+    {
+      "name": "armored-neck-recoil",
+      "x": 204,
+      "y": 147,
+      "rx": 29,
+      "ry": 32,
+      "dx": -3.4,
+      "dy": 1.4,
+      "samples": [
+        0.02,
+        0.74,
+        1,
+        0.81,
+        0.52,
+        0.28,
+        0.12,
+        0.03
+      ]
+    },
+    {
+      "name": "shoulder-brace",
+      "x": 161,
+      "y": 165,
+      "rx": 32,
+      "ry": 24,
+      "dx": -2.4,
+      "dy": 1.8,
+      "samples": [
+        0.01,
+        0.42,
+        0.91,
+        1,
+        0.74,
+        0.47,
+        0.2,
+        0.04
+      ]
+    },
+    {
+      "name": "tail-counter-curl",
+      "x": 55,
+      "y": 140,
+      "rx": 27,
+      "ry": 27,
+      "dx": 1.7,
+      "dy": -1.5,
+      "samples": [
+        0.01,
+        0.04,
+        0.26,
+        0.69,
+        1,
+        0.83,
+        0.39,
+        0.06
+      ]
+    },
+    {
+      "name": "crest-follow-through",
+      "x": 160,
+      "y": 103,
+      "rx": 27,
+      "ry": 24,
+      "dx": -1.4,
+      "dy": 1.1,
+      "samples": [
+        0.01,
+        0.13,
+        0.58,
+        0.96,
+        1,
+        0.63,
+        0.29,
+        0.05
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate; no native battle event activation",
+  "anatomyScope": "Low armored quadruped recoils through neck and shoulder with delayed tail and crest response; planted claws and outer anchor remain fixed. Local silhouette changes, not a whole-image transform. Face and armor identity require visual review.",
+  "behaviorContract": "M027 identity/personality/movement policy remain unapproved. Local stationary impact proposal only; no damage, spawn or gameplay state changes.",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no cleanup or alpha threshold changes"
+}

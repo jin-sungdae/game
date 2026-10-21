@@ -1,0 +1,135 @@
+{
+  "reference": "public/assets/creatures/nox/stage02/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "cautious-ear-incline",
+      "x": 184,
+      "y": 60,
+      "rx": 20,
+      "ry": 24,
+      "dx": -1.2,
+      "dy": 1,
+      "samples": [
+        0.01,
+        0.21,
+        0.59,
+        1,
+        0.93,
+        0.62,
+        0.28,
+        0.04
+      ]
+    },
+    {
+      "name": "ruff-protective-draw",
+      "x": 176,
+      "y": 121,
+      "rx": 32,
+      "ry": 26,
+      "dx": -1.6,
+      "dy": 1.3,
+      "samples": [
+        0.01,
+        0.08,
+        0.41,
+        0.86,
+        1,
+        0.81,
+        0.45,
+        0.07
+      ]
+    },
+    {
+      "name": "tail-guard-curl",
+      "x": 63,
+      "y": 149,
+      "rx": 21,
+      "ry": 33,
+      "dx": 1.5,
+      "dy": -1,
+      "samples": [
+        0.01,
+        0.03,
+        0.18,
+        0.57,
+        0.91,
+        1,
+        0.63,
+        0.08
+      ]
+    }
+  ],
+  "protectedRegions": "y>=193||y<=31||x<=37||x>=216",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "pixelSha256": "4cbd3ec626da8d9fbd639ee70e933d5938bb2eba6ce12545a2c243ec756c6729",
+      "changedPixels": 949,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 247,
+      "maxInverseDisplacementPixels": 0.02061549720489759
+    },
+    {
+      "file": "cursor_react_01.png",
+      "pixelSha256": "b60b838e27bad9c16346ee098cb58bee893f2146c5cbfd2de52dca674f20fd1e",
+      "changedPixels": 2380,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 554,
+      "maxInverseDisplacementPixels": 0.32779928818480764
+    },
+    {
+      "file": "cursor_react_02.png",
+      "pixelSha256": "f4c74279e0e7d0842e0d6641f370092ff1ae237fa8d70dc84a4510c5d8d717af",
+      "changedPixels": 3565,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 920,
+      "maxInverseDisplacementPixels": 0.9202060334506524
+    },
+    {
+      "file": "cursor_react_03.png",
+      "pixelSha256": "ad13f08074e640abc17a29c250a6700ef5001b9bb69637d725deeeb5df3c36bd",
+      "changedPixels": 4120,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1172,
+      "maxInverseDisplacementPixels": 1.7720951967100753
+    },
+    {
+      "file": "cursor_react_04.png",
+      "pixelSha256": "edb9e90ebe7ed0d8731ef3c3444ce7b77452b0916923262a41716583c9aa640a",
+      "changedPixels": 4238,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1237,
+      "maxInverseDisplacementPixels": 2.0597630372582527
+    },
+    {
+      "file": "cursor_react_05.png",
+      "pixelSha256": "f44ff4fa88008b2c729462168464bf2e43c3a52db5da4095ebc08742364b0a50",
+      "changedPixels": 4153,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1198,
+      "maxInverseDisplacementPixels": 1.7997422708952908
+    },
+    {
+      "file": "cursor_react_06.png",
+      "pixelSha256": "f17ed1b248984e057bd8ce1e303e5248e44524483e15f3c5d6bf5d3399109050",
+      "changedPixels": 3789,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1016,
+      "maxInverseDisplacementPixels": 1.1352961070466006
+    },
+    {
+      "file": "cursor_react_07.png",
+      "pixelSha256": "e9f7ac1c84da6f236b5e0879f747a71c711a0fb0b74a6dad962e937a9689fcb6",
+      "changedPixels": 2271,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 534,
+      "maxInverseDisplacementPixels": 0.14429809202604424
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}
