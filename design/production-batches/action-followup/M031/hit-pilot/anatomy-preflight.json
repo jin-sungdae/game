@@ -28,5 +28,28 @@
   "policyChanged": false,
   "newBodyParts": false,
   "artworkReview": "HUMAN_REVIEW_REQUIRED",
-  "nativeGui": "DEFERRED_GUI"
+  "nativeGui": "DEFERRED_GUI",
+  "proposedCatalogContract": {
+    "observedForm": "fire horn cub",
+    "personality": {
+      "status": "PROPOSED",
+      "trait": "gentle"
+    },
+    "movementProfile": {
+      "status": "PROPOSED",
+      "value": "GROUND"
+    },
+    "speciesBehavior": {
+      "status": "PROPOSED",
+      "frequency": "brief inspections between long rests; attention centers on the fire habitat of the fire horn cub",
+      "preparation": "tilt toward the stimulus before leaving rest; preserve the fire horn cub silhouette",
+      "transition": "ease into rest after the excursion; recover the fire horn cub resting anatomy",
+      "reaction": "observe a nearby cursor without chasing it; keep the fire horn cub characteristic gesture"
+    },
+    "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+    "runtimeEnabled": false
+  },
+  "catalogSource": "design/visual-reference-v1/catalog.json",
+  "catalogComparisonTiming": "Additional read-only cross-check after initial candidate creation; original Ledger policy remains unapproved",
+  "anatomyContractConflict": false
 }

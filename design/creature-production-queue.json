@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "M036 ATTACK dedicated keypose anatomy/source-alpha preflight, then RUU Stage3 CURSOR_REACT feasibility. Preserve M026 anatomy conflict and all raw failures at3/3; do not repeat existing candidates.",
+  "nextTask": "M039 HIT anatomy/BASE/original Catalog preflight, then NOX Stage3 CURSOR_REACT feasibility. M026/M030/M036 anatomy conflicts and raw failures stay blocked. Reuse existing candidates; no repeat.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -1247,10 +1247,15 @@
         },
         {
           "action": "CURSOR_REACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/ruu/stage03/cursor-react-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "INTERACT",
@@ -1338,11 +1343,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 4,
-        "automatedCandidateActions": 4,
-        "artworkReviewPendingActions": 4,
+        "candidateActions": 5,
+        "automatedCandidateActions": 5,
+        "artworkReviewPendingActions": 5,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 12,
+        "missingFrameSetActions": 11,
         "guiPendingActions": 16,
         "completeActions": 0
       },
@@ -7527,7 +7532,8 @@
           "naturalMotion": "NOT_VERIFIED",
           "artworkReview": "HUMAN_REVIEW_REQUIRED",
           "recoveryPath": "design/production-batches/action-followup/M030/attack-pilot/keypose-tool-reference.png",
-          "blockReason": "RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3"
+          "blockReason": "PROPOSED_FLOATING_ORB_BEARER_VS_RIGID_GOLEM_BASE: original concept catalog and current batch03 BASE/provenance conflict; user-requested rigid-body candidate remains unregistered; HUMAN_REVIEW_REQUIRED; RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
+          "identityBlocker": "PROPOSED_FLOATING_ORB_BEARER_VS_RIGID_GOLEM_BASE: original concept catalog and current batch03 BASE/provenance conflict; user-requested rigid-body candidate remains unregistered; HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "SKILL_CAST",
@@ -8478,7 +8484,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "identityBlocker": "PROPOSED_FLYING_VS_WINGLESS_BASE: flight mechanism and anatomy need review before attack/body contract is selected; no wings added",
+          "blockReason": "PROPOSED_FLYING_VS_WINGLESS_BASE: flight mechanism and anatomy need review before attack/body contract is selected; no wings added; HUMAN_REVIEW_REQUIRED; no new keypose or clip"
         },
         {
           "action": "SKILL_CAST",
@@ -18766,11 +18774,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 135,
-    "automatedCandidateActions": 133,
-    "artworkReviewPendingActions": 134,
+    "candidateActions": 136,
+    "automatedCandidateActions": 134,
+    "artworkReviewPendingActions": 135,
     "validationFailedActions": 23,
-    "missingFrameSetActions": 1600,
+    "missingFrameSetActions": 1599,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
@@ -21902,16 +21910,16 @@
     "approvalAudit": {
       "scope": "All existing candidate clip versions; categories overlap. Automated PNG catalog checks are not full appearance/motion approval. Registered legacy action records are separately listed without re-approving missing approval fields.",
       "summary": {
-        "candidateClips": 136,
-        "candidateFrames": 954,
-        "automatedPngPassClips": 134,
+        "candidateClips": 137,
+        "candidateFrames": 962,
+        "automatedPngPassClips": 135,
         "automatedPngFailedClips": 2,
-        "artworkReviewPendingClips": 135,
-        "naturalMotionReviewPendingClips": 135,
+        "artworkReviewPendingClips": 136,
+        "naturalMotionReviewPendingClips": 136,
         "identityReviewRequiredClips": 100,
         "productionApprovedClips": 1,
         "approvedRuntimePendingClips": 0,
-        "guiPendingClips": 136,
+        "guiPendingClips": 137,
         "guiPassedClips": 0,
         "validationFailedActionsIncludingKeyposes": 23
       },
@@ -22065,6 +22073,21 @@
           "guiStatus": "GUI_NOT_VERIFIED",
           "detailedEvidence": "design/production-batches/moa/stage05/frame-validation.json",
           "detailedAutomated": "PER_FRAME_LIST_NO_AGGREGATE_CLAIM"
+        },
+        {
+          "creatureId": "companion:ruu:3",
+          "action": "CURSOR_REACT",
+          "directory": "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react",
+          "frames": 8,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": false,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/frame-validation.json",
+          "detailedAutomated": "PASS"
         },
         {
           "creatureId": "companion:ruu:3",
@@ -24085,7 +24108,7 @@
         {
           "creatureId": "M030",
           "action": "ATTACK",
-          "reason": "RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
+          "reason": "PROPOSED_FLOATING_ORB_BEARER_VS_RIGID_GOLEM_BASE: original concept catalog and current batch03 BASE/provenance conflict; user-requested rigid-body candidate remains unregistered; HUMAN_REVIEW_REQUIRED; RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
           "evidence": "design/production-batches/action-followup/M030/attack-pilot/keypose-tool-reference.png"
         },
         {
@@ -24364,12 +24387,13 @@
     "newCases": {
       "companion:moa:4 CURSOR_REACT": "moa/stage04/cursor-react-pilot",
       "M031 HIT": "M031/hit-pilot",
-      "M032 INTERACT": "M032/interact-pilot"
+      "M032 INTERACT": "M032/interact-pilot",
+      "companion:ruu:3 CURSOR_REACT": "ruu/stage03/cursor-react-pilot"
     },
-    "candidateClips": 3,
-    "candidateFrames": 24,
-    "candidatePng": 29,
-    "automatedPassedFrames": 24,
+    "candidateClips": 4,
+    "candidateFrames": 32,
+    "candidatePng": 38,
+    "automatedPassedFrames": 32,
     "failedKeyposes": [
       {
         "creatureId": "M030",
@@ -24407,7 +24431,9 @@
         "M031 HIT rendered frame3 with original BASE comparison and Runtime BLOCKED",
         "M032 INTERACT rendered frame2; TURN source-alpha1515 failure displayed without clip",
         "M030 raw-alpha2582 failure displayed with no rigged candidate",
-        "136 clips and separated approval categories visible; approved-unconnected0"
+        "137 clips and separated approval categories; approved-unconnected0 after final catalog refresh",
+        "RUU Stage3 CURSOR_REACT rendered frame4 and frame7 with BASE comparison; unchanged bounds and Runtime BLOCKED",
+        "M030 FLOATING/orb-bearer versus rock-golem conflict and M036 FLYING/wingless conflict visible in original review UI"
       ],
       "limitations": [
         "Existing review loops one-shot candidates; isolated Clock tests verify actual nonloop end hold",
@@ -24416,55 +24442,96 @@
       ]
     },
     "validation": {
-      "focusedAssets": "PASS:4/4; /tmp/luma-pr114-creature-anatomy-focused.log",
-      "animationRegression": "PASS:222/222; /tmp/luma-pr114-creature-anatomy-animation.log",
+      "focusedAssets": "PASS:5/5; /tmp/luma-pr114-creature-anatomy-final-focused.log",
+      "animationRegression": "PASS:223/223; /tmp/luma-pr114-creature-anatomy-final-animation.log",
       "releaseGate": "FINAL_HEAD_EVIDENCE_REQUIRED",
-      "releaseGateOutput": "/tmp/luma-pr114-creature-anatomy-release/release-result.json",
+      "releaseGateOutput": "/tmp/luma-pr114-creature-anatomy-final-release/release-result.json",
       "ci": "FINAL_HEAD_EVIDENCE_REQUIRED",
-      "existingApprovalAudit": "PASS:4/4; /tmp/luma-pr114-creature-anatomy-audit.log",
-      "finalHeadEvidencePolicy": "After commit, execute full Release Gate and GitHub CI on the exact clean HEAD. Read the recorded release-result path and PR checks; never treat baseline results as final."
+      "existingApprovalAudit": "PASS:4/4; /tmp/luma-pr114-creature-anatomy-final-audit.log",
+      "finalHeadEvidencePolicy": "After commit, execute full Release Gate and GitHub CI on the exact clean HEAD. Read the recorded release-result path and PR checks; never treat baseline results as final.",
+      "supersededGate": {
+        "head": "62a2e85f849ff2e6dbcd31db582916ea48deb49f",
+        "status": "INTERRUPTED_FOR_ADDITIONAL_CONTRACT_EVIDENCE",
+        "path": "/tmp/luma-pr114-creature-anatomy-release/release-result.json",
+        "scope": "Frontend/Animation/Presentation passed; Asset run manually interrupted to record new anatomy contract conflict. Not a completed test-failure or full PASS result."
+      }
     },
     "lastValidatedCommit": "a5e13aa76e3a0df85861643d2b534208206a2f65",
     "lastValidatedCommitScope": "Previously validated baseline only; final clean HEAD evidence must come from release-result.json and PR checks.",
-    "lastCompletedWork": "MOA Stage4 CURSOR_REACT, M031 HIT and M032 INTERACT 8-frame independent candidates; M030 ATTACK and M032 TURN raw-alpha failures preserved before any normalization.",
-    "nextTask": "M036 ATTACK dedicated keypose anatomy/source-alpha preflight, then RUU Stage3 CURSOR_REACT feasibility. Preserve M026 anatomy conflict and all raw failures at3/3; do not repeat existing candidates.",
+    "lastCompletedWork": "MOA Stage4 CURSOR_REACT, M031 HIT, M032 INTERACT and RUU Stage3 CURSOR_REACT each8-frame candidates; M030 ATTACK and M032 TURN raw-alpha failures; M030/M036 catalog anatomy review blockers preserved.",
+    "nextTask": "M039 HIT anatomy/BASE/original Catalog preflight, then NOX Stage3 CURSOR_REACT feasibility. M026/M030/M036 anatomy conflicts and raw failures stay blocked. Reuse existing candidates; no repeat.",
     "blockers": [
       "M026 wingless BASE versus requested flight contract remains blocked; no anatomy changes",
+      "M030 original catalog PROPOSED FLOATING/shrouded orb bearer conflicts with current rigid rock golem BASE; identity/behavior resolution requires human review",
       "M030 ATTACK raw2582 and M032 TURN raw1515 detached alpha; recovery blocked3/3",
       "All new artwork and motion await human review; no approved unconnected assets",
       "Existing review loops one-shot clips; exact end hold tested only by isolated clock",
-      "Native macOS/Windows GUI DEFERRED_GUI"
+      "Native macOS/Windows GUI DEFERRED_GUI",
+      "M036 proposed FLYING versus wingless BASE requires anatomy/flight mechanism review before dedicated attack work; no candidate generated"
     ],
     "coverageAtCheckpoint": {
       "requiredActions": 1740,
       "recordedReadyActions": 14,
       "recordedRuntimeActions": 12,
       "manifestFileSetsPresent": 12,
-      "candidateActions": 135,
-      "automatedCandidateActions": 133,
-      "artworkReviewPendingActions": 134,
+      "candidateActions": 136,
+      "automatedCandidateActions": 134,
+      "artworkReviewPendingActions": 135,
       "validationFailedActions": 23,
-      "missingFrameSetActions": 1600,
+      "missingFrameSetActions": 1599,
       "guiPendingActions": 1740,
       "completeActions": 0,
       "creatures": 115,
       "completeCreatures": 0
     },
     "approvalSummaryAtCheckpoint": {
-      "candidateClips": 136,
-      "candidateFrames": 954,
-      "automatedPngPassClips": 134,
+      "candidateClips": 137,
+      "candidateFrames": 962,
+      "automatedPngPassClips": 135,
       "automatedPngFailedClips": 2,
-      "artworkReviewPendingClips": 135,
-      "naturalMotionReviewPendingClips": 135,
+      "artworkReviewPendingClips": 136,
+      "naturalMotionReviewPendingClips": 136,
       "identityReviewRequiredClips": 100,
       "productionApprovedClips": 1,
       "approvedRuntimePendingClips": 0,
-      "guiPendingClips": 136,
+      "guiPendingClips": 137,
       "guiPassedClips": 0,
       "validationFailedActionsIncludingKeyposes": 23
     },
     "productionPngCountAtCheckpoint": 271,
-    "scope": "Only independent design candidates, provenance, existing Ledger/catalog and tests; production assets, runtime engines, native behavior and server gameplay unchanged."
+    "scope": "Only independent design candidates, provenance, existing Ledger/catalog and tests; production assets, runtime engines, native behavior and server gameplay unchanged.",
+    "additionalContractFinding": {
+      "creatureId": "M030",
+      "source": "design/visual-reference-v1/catalog.json",
+      "proposed": {
+        "status": "PROPOSED",
+        "value": "FLOATING"
+      },
+      "observedForm": "shrouded orb bearer",
+      "existingBase": "stocky violet rock golem (batch03 provenance and inspected BASE)",
+      "status": "BLOCKED + HUMAN_REVIEW_REQUIRED",
+      "policyChanged": false,
+      "pngChanged": false,
+      "discovered": "Additional original-catalog comparison after initial candidate creation; initial preflight consulted Ledger NOT_VERIFIED policy",
+      "resolution": "Preserve both records; no automatic identity or movement contract correction"
+    },
+    "nextAnatomyReview": {
+      "creatureId": "M036",
+      "action": "ATTACK",
+      "sourceBase": "design/production-batches/monsters/batch04/M036/base-v2.png",
+      "sourceSha256": "888222c17db31d82c44dfaa49328bd37774f7faaa9e6dd3315f5fb86764d6699",
+      "catalogSource": "design/visual-reference-v1/catalog.json",
+      "proposedMovement": "FLYING",
+      "observedBase": "Wingless flame drake quadruped with long flame tail",
+      "status": "BLOCKED + HUMAN_REVIEW_REQUIRED",
+      "generatedPng": 0,
+      "policyChanged": false,
+      "reason": "Flight mechanism is not established; preserve proposed contract and existing BASE, do not invent wings"
+    },
+    "candidatePngBreakdown": {
+      "uniqueAnimationFrames": 32,
+      "keyposeComparisonCopiesOfPeakFrame": 4,
+      "failedUnnormalizedImageToolSources": 2
+    }
   }
 }

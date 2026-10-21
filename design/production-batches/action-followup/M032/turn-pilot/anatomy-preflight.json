@@ -25,5 +25,28 @@
   "anatomy": "Wingless low quadrupedal armored fire lizard; pivot at planted limbs, no added wings/limbs",
   "feasibility": "DEDICATED_ARTICULATED_KEYPOSE_REQUIRED",
   "sourceAlphaCheckedBeforeNormalization": true,
-  "result": "RAW_ALPHA_FAILED_NO_NORMALIZATION"
+  "result": "RAW_ALPHA_FAILED_NO_NORMALIZATION",
+  "proposedCatalogContract": {
+    "observedForm": "flame lizard",
+    "personality": {
+      "status": "PROPOSED",
+      "trait": "curious"
+    },
+    "movementProfile": {
+      "status": "PROPOSED",
+      "value": "GROUND"
+    },
+    "speciesBehavior": {
+      "status": "PROPOSED",
+      "frequency": "frequent short excursions with observation pauses; attention centers on the fire habitat of the flame lizard",
+      "preparation": "scan both sides before committing direction; preserve the flame lizard silhouette",
+      "transition": "insert a look-around beat between movement and rest; recover the flame lizard resting anatomy",
+      "reaction": "approach once then respect personal space; keep the flame lizard characteristic gesture"
+    },
+    "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+    "runtimeEnabled": false
+  },
+  "catalogSource": "design/visual-reference-v1/catalog.json",
+  "catalogComparisonTiming": "Additional read-only cross-check after initial candidate creation; original Ledger policy remains unapproved",
+  "anatomyContractConflict": false
 }

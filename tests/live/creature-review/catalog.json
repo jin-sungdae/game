@@ -1990,10 +1990,15 @@
         },
         {
           "action": "CURSOR_REACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/ruu/stage03/cursor-react-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "INTERACT",
@@ -2056,6 +2061,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "cursor_react",
+          "directory": "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react",
+          "urls": [
+            "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react/cursor_react_00.png",
+            "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react/cursor_react_01.png",
+            "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react/cursor_react_02.png",
+            "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react/cursor_react_03.png",
+            "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react/cursor_react_04.png",
+            "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react/cursor_react_05.png",
+            "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react/cursor_react_06.png",
+            "/design/production-batches/action-followup/ruu/stage03/cursor-react-pilot/rigged/cursor_react/cursor_react_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 100,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ],
+            [
+              17,
+              25,
+              238,
+              228
+            ]
+          ],
+          "pixelHashes": [
+            "f87c93202bcb5b911b052127521ba8f601511220e6802cc08356cb37fba5dc9d",
+            "d42d678b9c82564d9ab0f23c929fe7d6e4b1df865b71a97fabaad408fdf34b6b",
+            "3610a19f6f5eea432073418d51eeeb1238e200aa168c20e6b6229b957bd44be5",
+            "853c323eaf527f90c7d2ccc63f8cd4ad30c00106a5a17a4a94b3a96c5d80ec11",
+            "bc85a26215af9e36220024ab8a42cd4ac986ad94a14cbe595c03a1a92bea4683",
+            "49e76ff2224f67bf0ed22189ec1037b095fc43ff1e29a4114c3c15a65e301872",
+            "3d2e53ab64fb79d071ff3243aab48295a2c004e6e6db1cceffb4fb5213003ad8",
+            "56e50648b418290dd5b373ce05c2a41e98fd0fac302a14b9b94c7dff46fd8cf5"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "hit",
           "directory": "/design/production-batches/action-followup/ruu/stage03/hit-pilot/rigged/hit",
@@ -2386,11 +2472,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 4,
-        "automatedCandidateActions": 4,
-        "artworkReviewPendingActions": 4,
+        "candidateActions": 5,
+        "automatedCandidateActions": 5,
+        "artworkReviewPendingActions": 5,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 12,
+        "missingFrameSetActions": 11,
         "guiPendingActions": 16,
         "completeActions": 0
       },
@@ -14891,7 +14977,8 @@
           "naturalMotion": "NOT_VERIFIED",
           "artworkReview": "HUMAN_REVIEW_REQUIRED",
           "recoveryPath": "design/production-batches/action-followup/M030/attack-pilot/keypose-tool-reference.png",
-          "blockReason": "RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3"
+          "blockReason": "PROPOSED_FLOATING_ORB_BEARER_VS_RIGID_GOLEM_BASE: original concept catalog and current batch03 BASE/provenance conflict; user-requested rigid-body candidate remains unregistered; HUMAN_REVIEW_REQUIRED; RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
+          "identityBlocker": "PROPOSED_FLOATING_ORB_BEARER_VS_RIGID_GOLEM_BASE: original concept catalog and current batch03 BASE/provenance conflict; user-requested rigid-body candidate remains unregistered; HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "SKILL_CAST",
@@ -15974,7 +16061,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "identityBlocker": "PROPOSED_FLYING_VS_WINGLESS_BASE: flight mechanism and anatomy need review before attack/body contract is selected; no wings added",
+          "blockReason": "PROPOSED_FLYING_VS_WINGLESS_BASE: flight mechanism and anatomy need review before attack/body contract is selected; no wings added; HUMAN_REVIEW_REQUIRED; no new keypose or clip"
         },
         {
           "action": "SKILL_CAST",
@@ -25698,11 +25787,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 135,
-    "automatedCandidateActions": 133,
-    "artworkReviewPendingActions": 134,
+    "candidateActions": 136,
+    "automatedCandidateActions": 134,
+    "artworkReviewPendingActions": 135,
     "validationFailedActions": 23,
-    "missingFrameSetActions": 1600,
+    "missingFrameSetActions": 1599,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,

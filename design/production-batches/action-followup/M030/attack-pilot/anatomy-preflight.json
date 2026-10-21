@@ -25,5 +25,29 @@
   "anatomy": "Wingless stocky rigid rock golem; articulated fist strike only, no organic breathing or body inflation",
   "feasibility": "DEDICATED_ARTICULATED_KEYPOSE_REQUIRED",
   "sourceAlphaCheckedBeforeNormalization": true,
-  "result": "RAW_ALPHA_FAILED_NO_NORMALIZATION"
+  "result": "RAW_ALPHA_FAILED_NO_NORMALIZATION",
+  "proposedCatalogContract": {
+    "observedForm": "shrouded orb bearer",
+    "personality": {
+      "status": "PROPOSED",
+      "trait": "exploratory"
+    },
+    "movementProfile": {
+      "status": "PROPOSED",
+      "value": "FLOATING"
+    },
+    "speciesBehavior": {
+      "status": "PROPOSED",
+      "frequency": "long exploration intervals followed by recovery; attention centers on the shadow habitat of the shrouded orb bearer",
+      "preparation": "lean toward open space before starting; preserve the shrouded orb bearer silhouette",
+      "transition": "look back once at the end of an excursion; recover the shrouded orb bearer resting anatomy",
+      "reaction": "inspect the direction of interaction then resume exploration; keep the shrouded orb bearer characteristic gesture"
+    },
+    "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+    "runtimeEnabled": false
+  },
+  "catalogSource": "design/visual-reference-v1/catalog.json",
+  "catalogComparisonTiming": "Additional read-only cross-check after initial candidate creation; original Ledger policy remains unapproved",
+  "anatomyContractConflict": true,
+  "contractConflict": "PROPOSED_FLOATING_ORB_BEARER_VS_RIGID_GOLEM_BASE; no approved resolution or identity reassignment"
 }

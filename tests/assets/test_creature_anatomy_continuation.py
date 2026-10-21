@@ -8,7 +8,8 @@ from test_creature_new_pose_quality import measure_parts
 
 BATCH = ROOT / 'design/production-batches/action-followup'
 CASES = {'companion:moa:4 CURSOR_REACT': 'moa/stage04/cursor-react-pilot',
-         'M031 HIT': 'M031/hit-pilot', 'M032 INTERACT': 'M032/interact-pilot'}
+         'M031 HIT': 'M031/hit-pilot', 'M032 INTERACT': 'M032/interact-pilot',
+         'companion:ruu:3 CURSOR_REACT': 'ruu/stage03/cursor-react-pilot'}
 FAILED = {'M030 ATTACK': ('M030/attack-pilot', 2582),
           'M032 TURN': ('M032/turn-pilot', 1515)}
 
@@ -87,10 +88,10 @@ class CreatureAnatomyContinuationTests(unittest.TestCase):
         queue = json.loads((ROOT / 'design/creature-production-queue.json').read_text())
         run = queue['creatureAnatomyContinuation']
         self.assertEqual(run['newCases'], CASES)
-        self.assertEqual(run['candidateFrames'], 24)
-        self.assertEqual(run['candidatePng'], 29)
+        self.assertEqual(run['candidateFrames'], 32)
+        self.assertEqual(run['candidatePng'], 38)
         paths = list(CASES.values()) + [v[0] for v in FAILED.values()]
-        self.assertEqual(sum(len(list((BATCH / p).rglob('*.png'))) for p in paths), 29)
+        self.assertEqual(sum(len(list((BATCH / p).rglob('*.png'))) for p in paths), 38)
         self.assertEqual(queue['repairIterations'], 3)
         self.assertEqual(run['repairIterations'], 3)
         self.assertEqual(run['productionRegistrations'], 0)
@@ -109,3 +110,28 @@ class CreatureAnatomyContinuationTests(unittest.TestCase):
         catalog = json.loads((ROOT / 'tests/live/creature-review/catalog.json').read_text())
         self.assertEqual(audit['summary']['candidateClips'], sum(len(r['clips']) for r in catalog['creatures']))
         self.assertTrue(queue['nextTask'])
+
+    def test_original_concept_conflicts_stay_blocked_without_anatomy_replacement(self):
+        queue = json.loads((ROOT / 'design/creature-production-queue.json').read_text())
+        catalog = json.loads((ROOT / 'design/visual-reference-v1/catalog.json').read_text())
+        concepts = {r['conceptId']: r for r in catalog['monsterConcepts']}
+        self.assertEqual(concepts['M030']['movementProfile'], {'status': 'PROPOSED', 'value': 'FLOATING'})
+        self.assertEqual(concepts['M030']['observedForm'], 'shrouded orb bearer')
+        pre = json.loads((BATCH / 'M030/attack-pilot/anatomy-preflight.json').read_text())
+        self.assertTrue(pre['anatomyContractConflict'])
+        self.assertEqual(pre['proposedCatalogContract']['movementProfile'], concepts['M030']['movementProfile'])
+        for identity in ['M030', 'M036']:
+            row = next(r for r in queue['creatures'] if r['creatureId'] == identity)
+            action = next(a for a in row['actions'] if a['action'] == 'ATTACK')
+            self.assertEqual(action['frameCount'], 0)
+            self.assertEqual(action['runtimeStatus'], 'BLOCKED')
+            self.assertIn('HUMAN_REVIEW_REQUIRED', action['blockReason'])
+            self.assertTrue(action['identityBlocker'])
+            self.assertIsNone(row['productionSpeciesId'])
+        blocked = queue['creatureAnatomyContinuation']['nextAnatomyReview']
+        self.assertEqual(blocked['creatureId'], 'M036')
+        self.assertEqual(blocked['generatedPng'], 0)
+        self.assertFalse(blocked['policyChanged'])
+        self.assertEqual(concepts['M036']['movementProfile']['value'], 'FLYING')
+        self.assertEqual(hashlib.sha256((ROOT / blocked['sourceBase']).read_bytes()).hexdigest(), blocked['sourceSha256'])
+        self.assertFalse((BATCH / 'M036/attack-pilot').exists())
