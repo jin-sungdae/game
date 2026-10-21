@@ -1943,7 +1943,7 @@
           "action": "CURSOR_REACT",
           "animationStatus": "ANIMATION_IN_PROGRESS",
           "frameCount": 8,
-          "runtimeStatus": "NOT_VERIFIED",
+          "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED",
           "automated": "PASS",
           "artworkReview": "HUMAN_REVIEW_REQUIRED",
@@ -22244,7 +22244,7 @@
           "naturalMotion": "HUMAN_REVIEW_REQUIRED",
           "identityReviewRequired": false,
           "productionApproval": "NOT_APPROVED",
-          "runtimeStatus": "NOT_VERIFIED",
+          "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED",
           "detailedEvidence": "design/production-batches/action-followup/nox/stage02/cursor-react-pilot/frame-validation.json",
           "detailedAutomated": "PASS"
@@ -24178,7 +24178,8 @@
         "M027 HIT rendered frame3/8; Pause held frame1 across observations",
         "M029 CURSOR_REACT rendered frame7; Reduced Motion returned frame1",
         "NOX2 CURSOR_REACT rendered frame8; NOT_VERIFIED runtime status visible and unresolved",
-        "M026 anatomy conflict and M028 raw842-alpha failure displayed"
+        "M026 anatomy conflict and M028 raw842-alpha failure displayed",
+        "After approved correction, NOX2 CURSOR_REACT visibly Runtime BLOCKED; frame1/8 displayed"
       ],
       "limitations": [
         "Existing preview repeats one-shot clips; isolated clock tests alone cover final-frame hold",
@@ -24187,13 +24188,32 @@
       ]
     },
     "validation": {
-      "focusedAssets": "FAIL: 3 PASS / 1 FAIL; NOX2 CURSOR_REACT runtimeStatus NOT_VERIFIED vs expected BLOCKED. Original log /tmp/luma-pr114-flight-anatomy-focused.log. No repair at3/3; separate approval requested.",
+      "focusedAssets": "PASS: 4/4 after one explicitly approved Ledger status correction; original failure log retained; /tmp/luma-pr114-flight-anatomy-recovered-focused.log",
       "animationRegression": "PASS: 219/219; /tmp/luma-pr114-flight-anatomy-animation.log",
       "releaseGate": "FINAL_HEAD_EVIDENCE_REQUIRED",
-      "releaseGateOutput": "/tmp/luma-pr114-flight-anatomy-release/release-result.json",
+      "releaseGateOutput": "/tmp/luma-pr114-flight-anatomy-recovered-release/release-result.json",
       "ci": "FINAL_HEAD_EVIDENCE_REQUIRED",
       "existingApprovalAudit": "PASS: 4/4; /tmp/luma-pr114-flight-anatomy-audit.log",
-      "reviewTypecheck": "PASS; /tmp/luma-pr114-flight-anatomy-preview-typecheck.log"
+      "reviewTypecheck": "PASS; /tmp/luma-pr114-flight-anatomy-preview-typecheck.log",
+      "initialFocusedAssets": "FAIL: 3 PASS / 1 FAIL; NOX2 CURSOR_REACT runtimeStatus NOT_VERIFIED vs expected BLOCKED. Original log /tmp/luma-pr114-flight-anatomy-focused.log. No repair at3/3; separate approval requested.",
+      "supersededGate": {
+        "head": "d0c7379b7c05be84663b4ba1271cf004ecbf94bc",
+        "status": "INTERRUPTED_AFTER_EXPLICIT_CORRECTION_APPROVAL",
+        "path": "/tmp/luma-pr114-flight-anatomy-release/release-result.json",
+        "scope": "Frontend/Animation/Presentation passed; Asset suite interrupted for approved correction. Not a completed full Gate."
+      },
+      "independentServerBaseline": {
+        "head": "d0c7379b7c05be84663b4ba1271cf004ecbf94bc",
+        "tests": 327,
+        "suites": 42,
+        "failures": 0,
+        "skipped": 0,
+        "postgres": "PASS",
+        "restartCount": 2,
+        "path": "/tmp/luma-pr114-flight-anatomy-server/run.json",
+        "scope": "Prior checkpoint only; full final HEAD Gate rerun required"
+      },
+      "finalCI": "FINAL_HEAD_EVIDENCE_REQUIRED"
     },
     "lastValidatedCommit": "68bb1eaea7015068d355cd560ef33dc259460dac",
     "lastValidatedCommitScope": "Previously validated baseline only; final clean HEAD evidence in release-result.json and PR checks, never inferred from prior HEAD.",
@@ -24204,8 +24224,7 @@
       "M028 raw flight alpha failure842; no normalization/rigging, recovery blocked3/3",
       "Existing review repeats one-shot candidates; exact end hold tested in isolated clock only, preview repair remains separately blocked",
       "Artwork/motion and identity approval pending; no approved unconnected assets",
-      "Native macOS/Windows GUI DEFERRED_GUI",
-      "New test FAIL: NOX2 CURSOR_REACT runtimeStatus NOT_VERIFIED vs BLOCKED; single-field Ledger correction awaiting explicit approval"
+      "Native macOS/Windows GUI DEFERRED_GUI"
     ],
     "coverageAtCheckpoint": {
       "requiredActions": 1740,
@@ -24237,7 +24256,7 @@
       "validationFailedActionsIncludingKeyposes": 21
     },
     "pendingExtraCorrection": {
-      "status": "BLOCKED + HUMAN_REVIEW_REQUIRED",
+      "status": "APPROVED_APPLIED_FOCUSED_PASS",
       "file": "design/creature-production-queue.json",
       "creatureId": "companion:nox:2",
       "action": "CURSOR_REACT",
@@ -24249,8 +24268,9 @@
         "tests/live/creature-review/catalog.json"
       ],
       "scope": "One status field plus derived catalog/audit only; PNG/Validator/tests/runtime unchanged",
-      "authorization": "PENDING",
-      "reason": "New focused test fails; PR-wide automatic repair limit3/3 preserved"
+      "authorization": "User: Ledger 상태 수정 1회 승인",
+      "reason": "New focused test fails; PR-wide automatic repair limit3/3 preserved",
+      "used": 1
     }
   }
 }
