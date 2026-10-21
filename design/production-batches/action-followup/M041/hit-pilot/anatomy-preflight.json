@@ -1,0 +1,55 @@
+{
+  "creatureId": "M041",
+  "action": "HIT",
+  "sourceBase": "design/production-batches/monsters/batch05/M041/base-v2.png",
+  "sourceSha256": "b20e9d206a3207570d7f19a662eb5f38b423cb6a2c7b0b679a925ca274780cb5",
+  "movementProfile": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "personality": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "speciesBehavior": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "anatomy": "Wingless ice stag with branching crystalline antlers, four slender legs, feather-like icy coat and long tail. Brief shoulder recoil, foreleg brace and delayed flank/tail counterbalance; crown, face and hoof contact pixels fixed. Local silhouette changes only; not a full-body translation or locomotion.",
+  "feasibility": "LOCAL_PART_REACTION_CANDIDATE_ONLY",
+  "speciesIdentity": "CONCEPT_ONLY_MAPPING_UNAPPROVED",
+  "productionSpeciesId": null,
+  "manifest": null,
+  "provenance": "design/production-batches/monsters/batch05/provenance.json",
+  "existingCandidateClips": [
+    "idle"
+  ],
+  "duplicateActionFound": false,
+  "policyChanged": false,
+  "newBodyParts": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "proposedCatalogContract": {
+    "observedForm": "ice stag",
+    "personality": {
+      "status": "PROPOSED",
+      "trait": "gentle"
+    },
+    "movementProfile": {
+      "status": "PROPOSED",
+      "value": "GROUND"
+    },
+    "speciesBehavior": {
+      "status": "PROPOSED",
+      "frequency": "brief inspections between long rests; attention centers on the ice habitat of the ice stag",
+      "preparation": "tilt toward the stimulus before leaving rest; preserve the ice stag silhouette",
+      "transition": "ease into rest after the excursion; recover the ice stag resting anatomy",
+      "reaction": "observe a nearby cursor without chasing it; keep the ice stag characteristic gesture"
+    },
+    "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+    "runtimeEnabled": false
+  },
+  "catalogSource": "design/visual-reference-v1/catalog.json",
+  "catalogComparisonTiming": "Before candidate creation",
+  "anatomyContractConflict": false
+}

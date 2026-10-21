@@ -1,0 +1,25 @@
+{
+  "species": "moa",
+  "evolutionStage": 5,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/moa/stage05/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 760,
+    "loop": true
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "candidate preview only",
+  "anatomyScope": "mature ribcage and leaf mantle root; face, antlers, exterior leaves and feet fixed; existing Stage 5 IDLE unchanged"
+}

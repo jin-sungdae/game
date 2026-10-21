@@ -1,0 +1,154 @@
+{
+  "reference": "design/production-batches/monsters/batch03/M029/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "near-ear-orient",
+      "x": 86,
+      "y": 83,
+      "rx": 24,
+      "ry": 30,
+      "dx": -1.6,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        0.82,
+        1,
+        0.63,
+        0.37,
+        0.19,
+        0.08,
+        0.03
+      ]
+    },
+    {
+      "name": "left-wing-alert",
+      "x": 77,
+      "y": 165,
+      "rx": 32,
+      "ry": 29,
+      "dx": -2.6,
+      "dy": -1.5,
+      "samples": [
+        0.01,
+        0.25,
+        0.87,
+        1,
+        0.74,
+        0.43,
+        0.2,
+        0.04
+      ]
+    },
+    {
+      "name": "right-wing-counter",
+      "x": 201,
+      "y": 164,
+      "rx": 19,
+      "ry": 29,
+      "dx": 1.9,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.18,
+        0.72,
+        1,
+        0.81,
+        0.47,
+        0.21,
+        0.05
+      ]
+    },
+    {
+      "name": "tail-late-relax",
+      "x": 67,
+      "y": 198,
+      "rx": 25,
+      "ry": 12,
+      "dx": -1.1,
+      "dy": 1,
+      "samples": [
+        0.01,
+        0.03,
+        0.16,
+        0.49,
+        0.87,
+        1,
+        0.52,
+        0.06
+      ]
+    }
+  ],
+  "protectedRegions": "y>=211||y<=52||x<=38||x>=224",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "pixelSha256": "5df201e602d62e43e6b3993bfc1069bc888d726e5608cec7ac636d649e9ea955",
+      "changedPixels": 1017,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 325,
+      "maxInverseDisplacementPixels": 0.0399997098715744
+    },
+    {
+      "file": "cursor_react_01.png",
+      "pixelSha256": "3ba962a4a1580766fd50b3549c1dddb8fc1209bb338363b1389529098aa55bab",
+      "changedPixels": 3051,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1079,
+      "maxInverseDisplacementPixels": 1.6391707052302509
+    },
+    {
+      "file": "cursor_react_02.png",
+      "pixelSha256": "0ceeb81f7874de6f0bade18c45fc8fdde8321c9158a82c4378eb6e7da7292308",
+      "changedPixels": 3521,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1434,
+      "maxInverseDisplacementPixels": 2.6100668110248324
+    },
+    {
+      "file": "cursor_react_03.png",
+      "pixelSha256": "9fd90f5d30203ebb2b9926ab0bea7696062cad9d69aefd1638dc615bd1182a9c",
+      "changedPixels": 3558,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1517,
+      "maxInverseDisplacementPixels": 2.997580965227015
+    },
+    {
+      "file": "cursor_react_04.png",
+      "pixelSha256": "11689240af8755891476d85dba8211657fb3245de423c361363cce11943c0677",
+      "changedPixels": 3390,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1445,
+      "maxInverseDisplacementPixels": 2.2210995331060057
+    },
+    {
+      "file": "cursor_react_05.png",
+      "pixelSha256": "36db16c2e7a3c2a13ab32245e59f61b9dbccd8f353473e46c05b088d0e8fd24c",
+      "changedPixels": 3067,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1329,
+      "maxInverseDisplacementPixels": 1.4865355939384444
+    },
+    {
+      "file": "cursor_react_06.png",
+      "pixelSha256": "a61bdb7def13ccd5eb4c6ced2c13d134ba079e85f1b511e83d65fc0e4a89e28d",
+      "changedPixels": 2518,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1054,
+      "maxInverseDisplacementPixels": 0.7685970008820847
+    },
+    {
+      "file": "cursor_react_07.png",
+      "pixelSha256": "c6e3f77c6253bd41c1a43dd9c21d08789560bf8e812641a9021907777d381e02",
+      "changedPixels": 1567,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 531,
+      "maxInverseDisplacementPixels": 0.12006130222346378
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

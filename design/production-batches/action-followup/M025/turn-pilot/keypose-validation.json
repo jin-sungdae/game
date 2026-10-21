@@ -1,0 +1,127 @@
+{
+  "status": "VALIDATION_FAILED",
+  "failureTypes": [
+    "ALPHA_DEFECT",
+    "APPEARANCE_REVIEW_REQUIRED"
+  ],
+  "inspectionStage": "ORIGINAL_BEFORE_NORMALIZATION",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 1254,
+    "height": 1254,
+    "mainPixels": 514901,
+    "mainBounds": [
+      268,
+      97,
+      1139,
+      1108
+    ],
+    "detachedPixels": 7557,
+    "detachedComponents": 1166,
+    "detachedAlphaHistogram": {
+      "1": 7555,
+      "2": 2
+    },
+    "largestDetached": [
+      {
+        "n": 1108,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          408,
+          1187,
+          487,
+          1229
+        ]
+      },
+      {
+        "n": 790,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          893,
+          1207,
+          962,
+          1245
+        ]
+      },
+      {
+        "n": 692,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          240,
+          994,
+          270,
+          1044
+        ]
+      },
+      {
+        "n": 347,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          385,
+          1173,
+          407,
+          1203
+        ]
+      },
+      {
+        "n": 249,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          130,
+          571,
+          144,
+          594
+        ]
+      },
+      {
+        "n": 173,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          636,
+          120,
+          652,
+          141
+        ]
+      },
+      {
+        "n": 147,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          174,
+          738,
+          190,
+          755
+        ]
+      },
+      {
+        "n": 141,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          646,
+          1197,
+          662,
+          1216
+        ]
+      }
+    ]
+  },
+  "sourceSha256": "bd7f008f919e8236f625dd69c6b17ae6baa88ba5259a1a60768ac0901a8b7e4b",
+  "pngErrors": [
+    "dimensions must be 256x256"
+  ],
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "animationClipComplete": false,
+  "frames": 0,
+  "productionEligible": false,
+  "appearanceObservations": "Tail changes side and seated torso/forepaws face more toward viewer, but head remains right-facing rather than a completed left turn. Relative muzzle/ear proportions require review. Raw alpha failure blocks further preparation.",
+  "blockReason": "BLOCKED + HUMAN_REVIEW_REQUIRED; source detached alpha; PR repair limit remains 3/3; no cleanup or retry"
+}

@@ -1,0 +1,94 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 4,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage04/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 85,
+    "loop": false
+  },
+  "movableRect": [
+    66,
+    99,
+    239,
+    188
+  ],
+  "parts": [
+    {
+      "name": "explorer-wing-brace",
+      "x": 130,
+      "y": 125,
+      "rx": 40,
+      "ry": 23,
+      "dx": -2.7,
+      "dy": 1.7,
+      "samples": [
+        0.03,
+        0.92,
+        1,
+        0.66,
+        0.3,
+        0.17,
+        0.08,
+        0.04
+      ]
+    },
+    {
+      "name": "chest-impact-catch",
+      "x": 209,
+      "y": 153,
+      "rx": 23,
+      "ry": 30,
+      "dx": -1.5,
+      "dy": -1.8,
+      "samples": [
+        0.01,
+        0.34,
+        0.86,
+        1,
+        0.73,
+        0.39,
+        0.15,
+        0.05
+      ]
+    },
+    {
+      "name": "rear-feather-settle",
+      "x": 95,
+      "y": 164,
+      "rx": 24,
+      "ry": 19,
+      "dx": 1.4,
+      "dy": 1.6,
+      "samples": [
+        0.01,
+        0.05,
+        0.19,
+        0.53,
+        1,
+        0.81,
+        0.32,
+        0.06
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot HIT; no invented server event or battle value",
+  "anatomyScope": "Grounded mature RUU wing-root shield response, chest brace and delayed rear feather settling. Crest, face, neck top, lower legs, paws and outer tail tip fixed; not flight or global movement.",
+  "behaviorContract": "Existing RUU explorer Stage 4 identity; rapid local wing brace followed by measured feather recovery. Candidate-only HIT, no native trigger or skill/damage change.",
+  "alphaPolicy": "Existing local inverse-sampling RGBA rig; face/feet fixed, silhouette allowed only in body-part regions; PNG Validator unchanged"
+}

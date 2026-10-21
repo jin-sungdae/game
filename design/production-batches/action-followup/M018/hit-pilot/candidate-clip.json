@@ -1,0 +1,94 @@
+{
+  "conceptId": "M018",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M018/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 100,
+    "loop": false
+  },
+  "movableRect": [
+    92,
+    112,
+    216,
+    186
+  ],
+  "parts": [
+    {
+      "name": "slender-shoulder-recoil",
+      "x": 184,
+      "y": 146,
+      "rx": 23,
+      "ry": 27,
+      "dx": -2,
+      "dy": 1.7,
+      "samples": [
+        0.02,
+        0.63,
+        1,
+        0.79,
+        0.48,
+        0.23,
+        0.1,
+        0.03
+      ]
+    },
+    {
+      "name": "mane-root-delay",
+      "x": 160,
+      "y": 130,
+      "rx": 24,
+      "ry": 15,
+      "dx": 1.4,
+      "dy": 1.8,
+      "samples": [
+        0.01,
+        0.13,
+        0.69,
+        1,
+        0.75,
+        0.41,
+        0.16,
+        0.04
+      ]
+    },
+    {
+      "name": "haunch-stabilize",
+      "x": 124,
+      "y": 161,
+      "rx": 22,
+      "ry": 19,
+      "dx": -1.1,
+      "dy": -0.8,
+      "samples": [
+        0.01,
+        0.04,
+        0.3,
+        0.71,
+        1,
+        0.68,
+        0.26,
+        0.05
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot HIT; no invented server event or battle value",
+  "anatomyScope": "Slender quadruped braced HIT: shoulder recoil, delayed mane and small haunch brace. Head, ornaments, full tail curl, long lower legs and planted hooves remain fixed.",
+  "behaviorContract": "Existing GROUND concept proposal; light defensive brace and quicker recovery than mature MOA. No identity mapping, stat, spawn or battle event activation.",
+  "alphaPolicy": "Existing local inverse-sampling RGBA rig; face/feet fixed, silhouette allowed only in body-part regions; PNG Validator unchanged"
+}

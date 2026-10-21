@@ -1,0 +1,43 @@
+{
+  "conceptId": "M008",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M008/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 260,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 144,
+      "y": 120,
+      "rx": 5.5,
+      "ry": 6.5,
+      "dx": 0.9
+    },
+    {
+      "x": 163,
+      "y": 120,
+      "rx": 2.4,
+      "ry": 4.8,
+      "dx": 0.35
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review only; no gameplay frequency change",
+  "anatomyScope": "M008 patient leaf-cloaked elder gaze; hat, beard, leaf mantle, hands and grounded shoes fixed"
+}

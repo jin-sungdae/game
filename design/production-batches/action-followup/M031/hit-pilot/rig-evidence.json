@@ -1,0 +1,154 @@
+{
+  "reference": "design/production-batches/monsters/batch04/M031/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "cub-shoulder-flinch",
+      "x": 162,
+      "y": 161,
+      "rx": 28,
+      "ry": 26,
+      "dx": -2.5,
+      "dy": 1.7,
+      "samples": [
+        0.02,
+        0.83,
+        1,
+        0.71,
+        0.45,
+        0.24,
+        0.1,
+        0.03
+      ]
+    },
+    {
+      "name": "chest-brace",
+      "x": 174,
+      "y": 181,
+      "rx": 23,
+      "ry": 17,
+      "dx": -1.6,
+      "dy": -1.1,
+      "samples": [
+        0.01,
+        0.37,
+        0.87,
+        1,
+        0.78,
+        0.43,
+        0.19,
+        0.05
+      ]
+    },
+    {
+      "name": "flame-tail-countercurl",
+      "x": 64,
+      "y": 127,
+      "rx": 22,
+      "ry": 27,
+      "dx": 1.8,
+      "dy": -1.3,
+      "samples": [
+        0.01,
+        0.05,
+        0.29,
+        0.73,
+        1,
+        0.86,
+        0.41,
+        0.06
+      ]
+    },
+    {
+      "name": "back-flame-follow-through",
+      "x": 145,
+      "y": 123,
+      "rx": 24,
+      "ry": 23,
+      "dx": -1.3,
+      "dy": 1.2,
+      "samples": [
+        0.01,
+        0.17,
+        0.63,
+        1,
+        0.88,
+        0.54,
+        0.27,
+        0.04
+      ]
+    }
+  ],
+  "protectedRegions": "y>=201||y<=95||x<=40||x>=199",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "76808d0a441ff9c1a95889b5f2b2dff1955116a7533e44a759218daa83b22955",
+      "changedPixels": 915,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 29,
+      "maxInverseDisplacementPixels": 0.06046397723965282
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "d4f1eea6c7376211efd333857cfff5a1de66c328068d954b9a19ac27921a260e",
+      "changedPixels": 3487,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 136,
+      "maxInverseDisplacementPixels": 2.5073694820106756
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "263ef534c6a9dfca238517d905b27e373235b55297f17aa92d7c83822c612d22",
+      "changedPixels": 4440,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 289,
+      "maxInverseDisplacementPixels": 3.0191658402411488
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "274bd32568262255ca214e704ba9b7179a01651fdb12e4eadf03a35f675805ba",
+      "changedPixels": 4661,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 366,
+      "maxInverseDisplacementPixels": 2.1456781532853357
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "3d918faebeb22006169899d2773c025ac4c7f90795fdab8294692a2b5bd88e77",
+      "changedPixels": 4616,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 373,
+      "maxInverseDisplacementPixels": 2.2189860113855273
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "168d6a9e956df6b03d825be34f8f5056657a7fdfe2e4f984d762949d78027b2c",
+      "changedPixels": 4333,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 296,
+      "maxInverseDisplacementPixels": 1.9069640885624484
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "ba6c9882e6f058d25723e8c7d4545a712d73e2637e03db25364ed66dcd2158d7",
+      "changedPixels": 3654,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 195,
+      "maxInverseDisplacementPixels": 0.9091385297112802
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "fa48592f4ec0f6bbdc2aa15c53f5188352083b3c2d70eaa85105489116763636",
+      "changedPixels": 1895,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 86,
+      "maxInverseDisplacementPixels": 0.13320865574373822
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

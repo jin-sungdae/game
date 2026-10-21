@@ -1,0 +1,12 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: identity-preserve. Asset type: one dedicated ATTACK keypose candidate for Project LUMA concept M030, not a sprite sheet.\nUse the attached BASE as the exact character reference. It is a stocky wingless violet rock golem, not an organic animal. Preserve the same faceted dark-purple stone head, purple eyes, rigid shoulder/back plates, the same glowing magenta cracks and purple crystal spikes, thick angular forearms with rocky fists, compact torso and two short planted rock feet. Do not change identity, add wings, weapons, fingers, limbs, effects, scenery, particles, a glow halo or ground shadow.\nChange only the articulated attack pose: three-quarter facing RIGHT, planted feet spread firmly, rigid torso rotates a little at the waist, near/right-side stone fist extends forward at shoulder height in a short decisive punch to screen right, far forearm drawn back as a guard. All hard plates keep their shapes and thickness; pose changes at joints, no organic rubber bending or enlarged torso. Entire silhouette and every spike/foot visible with generous empty margins.\nMatch the reference's painted game illustration, palette and line density. Single full-body isolated golem on truly transparent alpha, clean cutout. Background alpha must be exactly zero everywhere beyond the contiguous body edge; no detached specks, faint alpha dust, motion trails, transparent haze or decorative sparkles. Opaque body with antialiasing only at its boundary. Square image, no text, no frame border, no labels. This is an independent first keypose attempt; preserve reference species anatomy.",
+  "sourceBase": "design/production-batches/monsters/batch03/M030/base-v2.png",
+  "rawSource": "/Users/jinseongdae/.codex/generated_images/01a147ba-533d-7df3-9182-e5758bddbee8/exec-20cdcf5f-59ac-4fc6-bc49-0f9ad61c6725.png",
+  "candidateOnly": true,
+  "firstIndependentAttempt": true,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "rawSha256": "d0f5556661658ccc9e5f0c3754b40fb33865a8fd754fb37f305903079301b503",
+  "sourceBaseSha256": "f2795301554d89888cee4dc2affc70286c5ee8f2c61dc3ac1e07689df0fb6112"
+}

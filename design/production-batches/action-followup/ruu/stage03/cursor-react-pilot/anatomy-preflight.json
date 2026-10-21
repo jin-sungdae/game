@@ -1,0 +1,44 @@
+{
+  "creatureId": "companion:ruu:3",
+  "action": "CURSOR_REACT",
+  "sourceBase": "public/assets/creatures/ruu/stage03/base.png",
+  "sourceSha256": "e2dab22caea9027d86a2b466dbedf20e39d0853901739304943a75c8adfc1862",
+  "movementProfile": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "personality": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "speciesBehavior": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "anatomy": "Existing Stage3 winged quadruped and long layered blue feathers. Quick coverts attention, chest readiness, delayed feather tuck and tail balance, all from existing anatomy. Head/eyes/crown and planted lower paws fixed. This stationary reaction is not flight or locomotion.",
+  "feasibility": "LOCAL_PART_REACTION_CANDIDATE_ONLY",
+  "speciesIdentity": "ruu",
+  "productionSpeciesId": null,
+  "manifest": "public/assets/creatures/ruu/stage03/manifest.json",
+  "provenance": "src-tauri/src/companion/config.rs",
+  "catalogSource": "design/visual-reference-v1/catalog.json",
+  "proposedCatalogContract": {
+    "observedForm": "balanced winged quadruped",
+    "movementIntentProposal": "coordinate hind legs and wings before movement",
+    "personality": "Sky / Explorer; active and exploratory",
+    "behaviorStatus": "PROPOSED_REQUIRES_NATIVE_OWNER_REVIEW"
+  },
+  "catalogComparisonTiming": "Before new candidate construction",
+  "anatomyContractConflict": false,
+  "existingCandidateClips": [
+    "hit",
+    "interact",
+    "look",
+    "idle"
+  ],
+  "duplicateActionFound": false,
+  "policyChanged": false,
+  "newBodyParts": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI"
+}

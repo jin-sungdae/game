@@ -1,0 +1,7 @@
+{
+  "tool": "builtin_image_gen",
+  "sourceBase": "public/assets/monsters/caplet/base.png",
+  "prompt": "Use case: identity-preserve. Asset type: Project LUMA CAPLET VICTORY keypose candidate. Input image is the approved CAPLET BASE, the identity reference and edit target. Create one full-body transparent PNG of exactly this small upright mushroom creature quietly celebrating a victory: short arms lifted slightly out and up from the shoulders, small hands relaxed, pleased open-eyed smile, both feet planted, torso upright. Keep the red mushroom cap, all its white spot positions and shapes, cap rim and gills, head and face proportions, eye placement, ivory body proportions, hand and foot shapes and existing painterly rendering identical to the reference. Same right-facing three-quarter viewpoint, cap stable, no leap or whole-body translation. No trophies, sparkles, particles, ground shadow, glow, dust, backdrop, labels or extra objects. A complete unclipped character centered on a 256x256 RGBA canvas with bottom-center anchor and generous transparent margin. Use true transparent Alpha and a clean connected silhouette with no detached pixels. Dedicated keypose only, not a sheet or finished animation. Preserve original artwork identity; change only arm pose and gentle celebratory facial expression.",
+  "productionEligible": false,
+  "repairIterations": 3
+}

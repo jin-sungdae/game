@@ -1,0 +1,40 @@
+{
+  "status": "VALIDATION_FAILED",
+  "pngErrors": [],
+  "bounds": [
+    28,
+    9,
+    247,
+    244
+  ],
+  "pixelHash": "f12df09f8d0a5d1b7dce5535e9eff8b5a006256516c25f56dfbd64b70b2e77a6",
+  "detachedAlphaPixels": 9,
+  "productionEligible": false,
+  "animationClipComplete": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "normalization": "Same proportional 256 RGBA Lanczos3 preparation; no alpha threshold, cleanup or recovery",
+  "baseComparison": {
+    "sourceBase": "design/production-batches/monsters/batch02/M019/base-v2.png",
+    "baseFileSha256": "4b82040492f1607fb941482fba44ff889d0ce10fe08820578f3de5a74276ed23",
+    "keyposeFileSha256": "d722a39c19064c151cfed59d92f03b2a2f2e7f4dacdbd425f61af35d967455a8",
+    "baseBounds": [
+      46,
+      16,
+      212,
+      236
+    ],
+    "candidateBounds": [
+      28,
+      9,
+      247,
+      244
+    ],
+    "canvasAlignedAlphaIoU": 0.668924,
+    "alphaWeightedPaletteL1": 0.20461,
+    "boundsBottomDelta": 8,
+    "scope": "Read-only same-canvas geometry and palette comparison; pose/scale differences affect metrics. No semantic species, head, limb, face, or natural-motion approval inferred.",
+    "identityReview": "HUMAN_REVIEW_REQUIRED"
+  },
+  "rawSha256": "43ed10d9dbe88069da142abd3f521c376b0fd13bf5d86ae231d918d9096da1e5"
+}

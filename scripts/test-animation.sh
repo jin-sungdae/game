@@ -19,6 +19,7 @@ node --test tests/animation/monster-content.cjs
 node --test tests/animation/pilot.cjs
 node --test tests/animation/caplet-sleep.cjs
 node --test tests/animation/caplet-native.cjs
+node --test tests/animation/candidate-boundaries.cjs
 ./node_modules/.bin/tsc tests/live/animation-clock.tsx --noEmit --resolveJsonModule --esModuleInterop --module ESNext --moduleResolution bundler --target ES2022 --jsx react-jsx --strict --skipLibCheck
 node --test tests/animation/static-registry.cjs
 

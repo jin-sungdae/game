@@ -1,0 +1,74 @@
+{
+  "conceptId": "M004",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M004/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 165,
+    "loop": false
+  },
+  "movableRect": [
+    80,
+    27,
+    220,
+    85
+  ],
+  "parts": [
+    {
+      "name": "left-crown-leaf-attention",
+      "x": 107,
+      "y": 52,
+      "rx": 19,
+      "ry": 12,
+      "dx": 1.15,
+      "dy": -0.7,
+      "samples": [
+        0.03,
+        0.14,
+        0.44,
+        0.9,
+        1,
+        0.57,
+        0.23,
+        0.08
+      ]
+    },
+    {
+      "name": "right-crown-leaf-settle",
+      "x": 194,
+      "y": 61,
+      "rx": 15,
+      "ry": 15,
+      "dx": -0.55,
+      "dy": 0.9,
+      "samples": [
+        0.02,
+        0.05,
+        0.16,
+        0.42,
+        0.81,
+        0.96,
+        0.5,
+        0.1
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "M004 rooted tree guardian responds with a slow left crown-leaf ripple then right crown-leaf settle. Eyes, bark face, trunk, arms, branches outside the leaf masks, roots and external alpha remain fixed. Leaf surface motion only; not trunk bending, branch rotation or movement.",
+  "behaviorContract": "Rooted tree concept attention candidate. No Production Species mapping, Personality, MovementProfile or Native cursor event activation."
+}

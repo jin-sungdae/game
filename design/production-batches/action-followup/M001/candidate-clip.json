@@ -1,0 +1,43 @@
+{
+  "conceptId": "M001",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M001/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 210,
+    "loop": true
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review loop only; no live event or gameplay registration",
+  "anatomyScope": "eye interiors only; alpha, outline, head, torso, limbs and feet unchanged",
+  "eyes": [
+    {
+      "x": 153,
+      "y": 132,
+      "rx": 9,
+      "ry": 12,
+      "dx": 1.3
+    },
+    {
+      "x": 188,
+      "y": 131,
+      "rx": 4.5,
+      "ry": 10,
+      "dx": 0.5
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "reference": "public/assets/creatures/ruu/stage04/base.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "near-wing-covert-attention",
+      "x": 146,
+      "y": 112,
+      "rx": 21,
+      "ry": 12,
+      "dx": 1.1,
+      "dy": -0.85,
+      "samples": [
+        0.04,
+        0.55,
+        1,
+        0.68,
+        0.29,
+        0.15,
+        0.08,
+        0.02
+      ]
+    },
+    {
+      "name": "trailing-feather-response",
+      "x": 119,
+      "y": 135,
+      "rx": 20,
+      "ry": 14,
+      "dx": -0.7,
+      "dy": 0.95,
+      "samples": [
+        0.02,
+        0.16,
+        0.61,
+        1,
+        0.74,
+        0.38,
+        0.13,
+        0.05
+      ]
+    }
+  ],
+  "protectedRegions": "y>=155||y<=91||x<=92||x>=177",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "pixelSha256": "55815820f7d5e758f556d36d5a332f24d97ce5aa668b5cff60d9c684f77c64d9",
+      "changedPixels": 359,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.0556036837743715
+    },
+    {
+      "file": "cursor_react_01.png",
+      "pixelSha256": "a98ee24c606c57edd20090e89cbf6d072e509548986868a17596516ab39f00dd",
+      "changedPixels": 965,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7603190021161979
+    },
+    {
+      "file": "cursor_react_02.png",
+      "pixelSha256": "de148a358d443ea12312d41993623857a003d123a7701213ba194c81a434916a",
+      "changedPixels": 1187,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.3893949447303227
+    },
+    {
+      "file": "cursor_react_03.png",
+      "pixelSha256": "54bb6155ad721a3c074581b8bf6ec97ed1cf6449a9540ca5da62017ccc176162",
+      "changedPixels": 1195,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.1791969852109503
+    },
+    {
+      "file": "cursor_react_04.png",
+      "pixelSha256": "d653ab169f72cacfe7c455459c0ab5ba12d9c89b1124e74977bc3c056763ae57",
+      "changedPixels": 1095,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8705059422678905
+    },
+    {
+      "file": "cursor_react_05.png",
+      "pixelSha256": "f689f072835790954bd4c9a450864b60aa305e689366a3f149c0d9f49355a0b8",
+      "changedPixels": 950,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.44729030303455797
+    },
+    {
+      "file": "cursor_react_06.png",
+      "pixelSha256": "4b9998faa414c32da741934b6087324a55d987e09344b177ca126bbf11a68e77",
+      "changedPixels": 721,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.15336019903752565
+    },
+    {
+      "file": "cursor_react_07.png",
+      "pixelSha256": "428f78e323c50a1e863897a81538c385035121330a06340258a6012ba5a23431",
+      "changedPixels": 406,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.058999539182144005
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #114; independent first attempt; no failure recovery",
+  "productionEligible": false
+}

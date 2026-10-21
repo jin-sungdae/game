@@ -1,0 +1,75 @@
+{
+  "source": "design/production-batches/monsters/batch01/M005/base-v2.png",
+  "eyes": [
+    {
+      "x": 137.5,
+      "y": 122,
+      "rx": 8.5,
+      "ry": 11,
+      "dx": 1.15
+    },
+    {
+      "x": 164,
+      "y": 120,
+      "rx": 4,
+      "ry": 10,
+      "dx": 0.55
+    }
+  ],
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "gaze": 0.08,
+      "closure": 0,
+      "pixelSha256": "254054e08fe842c28e7ac7430c0bf2ee294937b04e2390b176d1ecb0bd7817d5"
+    },
+    {
+      "file": "cursor_react_01.png",
+      "gaze": 0.25,
+      "closure": 0.35,
+      "pixelSha256": "16110916e5deb3a2682452901e92bdc4691e76c14b0c54fbf8d06fd4af8d5b82"
+    },
+    {
+      "file": "cursor_react_02.png",
+      "gaze": 0.9,
+      "closure": 0.7,
+      "pixelSha256": "bf2c387a30cc5899eed2439b4e960f5975ef0c1555b0e6dee2d8656d744fa715"
+    },
+    {
+      "file": "cursor_react_03.png",
+      "gaze": 1,
+      "closure": 0.18,
+      "pixelSha256": "841373dc65b55aedb6fcc9adaed3b348cc64c14df935dc1fcd68b641550fb150"
+    },
+    {
+      "file": "cursor_react_04.png",
+      "gaze": 0.8,
+      "closure": 0,
+      "pixelSha256": "a2bf36d9622eb2d25617c06fa4e26212d4a8e65cf05d872a6c1f0ecd9d06c64a"
+    },
+    {
+      "file": "cursor_react_05.png",
+      "gaze": 0.55,
+      "closure": 0.04,
+      "pixelSha256": "024a3ac4b672ca298782c969f4135b820817153230c416d74909ee6b4dd5e00f"
+    },
+    {
+      "file": "cursor_react_06.png",
+      "gaze": 0.32,
+      "closure": 0,
+      "pixelSha256": "b2423a1c71f2b086b16b800fca4f3481671d646805e20b39ee9a43b6a41902d9"
+    },
+    {
+      "file": "cursor_react_07.png",
+      "gaze": 0.14,
+      "closure": 0,
+      "pixelSha256": "835f08882698fcefd235c4213e17fd094dc85f428687e0ff78840752dd951e6e"
+    }
+  ],
+  "alphaPolicy": "unchanged",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 0,
+  "behaviorScope": "isolated visual cue only; no cursor event or Spawn activation"
+}

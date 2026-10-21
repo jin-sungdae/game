@@ -1,0 +1,56 @@
+{
+  "creatureId": "M039",
+  "action": "HIT",
+  "sourceBase": "design/production-batches/monsters/batch04/M039/base-v2.png",
+  "sourceSha256": "77e8563b8b736e08fb8e11a760df04e14667eb7b1cb431f02f3f6c5d4acebe20",
+  "movementProfile": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "personality": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "speciesBehavior": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "anatomy": "Rigid armored four-legged ember beast; articulated braced HIT keypose required. No wings or soft-body inflation.",
+  "feasibility": "DEDICATED_ARTICULATED_KEYPOSE_REQUIRED",
+  "speciesIdentity": "CONCEPT_ONLY_MAPPING_UNAPPROVED",
+  "productionSpeciesId": null,
+  "manifest": null,
+  "provenance": "design/production-batches/monsters/batch04/provenance.json",
+  "existingCandidateClips": [
+    "idle"
+  ],
+  "duplicateActionFound": false,
+  "policyChanged": false,
+  "newBodyParts": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "proposedCatalogContract": {
+    "observedForm": "ember beast",
+    "personality": {
+      "status": "PROPOSED",
+      "trait": "watchful"
+    },
+    "movementProfile": {
+      "status": "PROPOSED",
+      "value": "GROUND"
+    },
+    "speciesBehavior": {
+      "status": "PROPOSED",
+      "frequency": "repeated scanning before a single move; attention centers on the fire habitat of the ember beast",
+      "preparation": "pause and recheck the destination; preserve the ember beast silhouette",
+      "transition": "return to the home orientation before resting; recover the ember beast resting anatomy",
+      "reaction": "look away briefly before looking back; keep the ember beast characteristic gesture"
+    },
+    "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+    "runtimeEnabled": false
+  },
+  "catalogSource": "design/visual-reference-v1/catalog.json",
+  "catalogComparisonTiming": "Before candidate creation",
+  "anatomyContractConflict": false,
+  "result": "RAW_ALPHA_FAILED_NO_NORMALIZATION"
+}

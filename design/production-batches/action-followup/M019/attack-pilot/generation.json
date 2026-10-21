@@ -1,0 +1,8 @@
+{
+  "tool": "builtin_image_gen",
+  "sourceBase": "design/production-batches/monsters/batch02/M019/base-v2.png",
+  "prompt": "Use case: identity-preserve. Asset type: LUMA M019 ATTACK dedicated keypose candidate, one full-body sprite. Input image is the existing M019 BASE and is the exact identity reference, not a style suggestion. Preserve its pink/cream fox anatomy: same large ears and inner fur tufts, same cream face shape and magenta eyes, single curled fluffy tail, short forearms, two short legs and paws, same outline and shading. Change only pose to a readable playful but forceful forward paw swipe toward screen right: torso leans slightly forward, near forearm extends forward, far arm counterbalances, knees brace with both feet visible. Preserve head/body ratio and all appendages; no weapons, no extra fingers, no effects. Match BASE three-quarter right-facing camera and approximate full-body scale. Square sprite, all ear/tail/paw tips safely inside canvas with a clear 8 percent transparent margin; feet on one stable bottom baseline. True RGBA transparent background: every pixel outside the connected character silhouette must be fully alpha zero. No glow, haze, shadow, ground, dust, sparks, detached particles, or semitransparent background remnants. Anti-alias only the directly connected contour. Opaque solid interior shading. No checkerboard baked in, no text, no grid, one pose only. This is a keypose candidate, not a complete animation.",
+  "productionEligible": false,
+  "repairIterations": 3,
+  "scope": "Independent first attempt; raw inspected before 256 preparation; no alpha cleanup"
+}

@@ -1,0 +1,75 @@
+{
+  "conceptId": "M013",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M013/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 75,
+    "loop": false
+  },
+  "movableRect": [
+    56,
+    126,
+    207,
+    202
+  ],
+  "parts": [
+    {
+      "name": "cautious-flipper-flinch",
+      "x": 88,
+      "y": 159,
+      "rx": 29,
+      "ry": 26,
+      "dx": -2.4,
+      "dy": -2.2,
+      "samples": [
+        0.03,
+        0.87,
+        1,
+        0.62,
+        0.36,
+        0.2,
+        0.1,
+        0.04
+      ]
+    },
+    {
+      "name": "round-breast-compression",
+      "x": 170,
+      "y": 177,
+      "rx": 26,
+      "ry": 22,
+      "dx": -1,
+      "dy": 2.2,
+      "samples": [
+        0.02,
+        0.36,
+        0.94,
+        1,
+        0.64,
+        0.34,
+        0.16,
+        0.05
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot impact candidate; only server-authoritative battle events may trigger production HIT after separate approval",
+  "anatomyScope": "Stationary guarded flinch: flipper silhouette recoils and lower breast compresses; face, crest and feet are fixed. Actual local RGBA contour movement; no whole-sprite displacement, jump, flight, battle event or damage claim.",
+  "behaviorContract": "Existing PROPOSED cautious/JUMP cloud penguin. Quick flipper guard and delayed breast recovery; no gameplay activation.",
+  "alphaPolicy": "Anatomical part silhouette changes via existing inverse-sampling rig. Fixed regions and outer canvas bounds remain unchanged; existing PNG validator unchanged."
+}

@@ -1,0 +1,135 @@
+{
+  "reference": "public/assets/creatures/ruu/stage05/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "primary-feather-alert",
+      "x": 84,
+      "y": 88,
+      "rx": 31,
+      "ry": 20,
+      "dx": -1.8,
+      "dy": -2.5,
+      "samples": [
+        0.03,
+        0.85,
+        1,
+        0.64,
+        0.33,
+        0.16,
+        0.08,
+        0.02
+      ]
+    },
+    {
+      "name": "secondary-fan-response",
+      "x": 118,
+      "y": 123,
+      "rx": 25,
+      "ry": 22,
+      "dx": -1,
+      "dy": -2,
+      "samples": [
+        0.01,
+        0.28,
+        0.83,
+        1,
+        0.72,
+        0.39,
+        0.18,
+        0.04
+      ]
+    },
+    {
+      "name": "tail-feather-counterbalance",
+      "x": 70,
+      "y": 179,
+      "rx": 28,
+      "ry": 17,
+      "dx": -0.7,
+      "dy": 1.1,
+      "samples": [
+        0.01,
+        0.03,
+        0.13,
+        0.42,
+        0.82,
+        1,
+        0.57,
+        0.05
+      ]
+    }
+  ],
+  "protectedRegions": "y>=196||y<=67||x<=33||x>=201",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "pixelSha256": "cfbbacd97dd8c423b5d508ac2eccfdfbae1141e0c04b3d54be0afd011a1e4282",
+      "changedPixels": 1212,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 334,
+      "maxInverseDisplacementPixels": 0.09241279122869843
+    },
+    {
+      "file": "cursor_react_01.png",
+      "pixelSha256": "91c1be7b190f2bd8334b10496ff77947a6fcb7dcc0b9c4b3b6c6a9286928f8a1",
+      "changedPixels": 2615,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 867,
+      "maxInverseDisplacementPixels": 2.6163835815536136
+    },
+    {
+      "file": "cursor_react_02.png",
+      "pixelSha256": "2b4d6e532aa843534340e08f31bd1196a0bd6e364d15b4b4a5d7844aab280506",
+      "changedPixels": 3027,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1051,
+      "maxInverseDisplacementPixels": 3.0745273066342387
+    },
+    {
+      "file": "cursor_react_03.png",
+      "pixelSha256": "82da94e529c8ad4984e68d63f20fe90b7b1c5348ad2259b9a36a9a2aeeef50fd",
+      "changedPixels": 3153,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1123,
+      "maxInverseDisplacementPixels": 2.23606797749979
+    },
+    {
+      "file": "cursor_react_04.png",
+      "pixelSha256": "fa9ddba652a5883dde8686bf3e43705a82080a9949ab8e4c2409350b5799c9f6",
+      "changedPixels": 3140,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1109,
+      "maxInverseDisplacementPixels": 1.6074473036822632
+    },
+    {
+      "file": "cursor_react_05.png",
+      "pixelSha256": "a203441667b7bdb7b448dd778489d056144bba549bc72ee3d948a959ebd217af",
+      "changedPixels": 3015,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1018,
+      "maxInverseDisplacementPixels": 1.3032565860534675
+    },
+    {
+      "file": "cursor_react_06.png",
+      "pixelSha256": "5c31aa61d231695ba9f0722d3a0a81baa415d1284edb5a9130bda8a529c7ed75",
+      "changedPixels": 2800,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 813,
+      "maxInverseDisplacementPixels": 0.7416584550127204
+    },
+    {
+      "file": "cursor_react_07.png",
+      "pixelSha256": "7dd9b32b8e32bc14544c424e056ce434df14c658e259c896e839674fb2f6a700",
+      "changedPixels": 1959,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 440,
+      "maxInverseDisplacementPixels": 0.08943848450681595
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

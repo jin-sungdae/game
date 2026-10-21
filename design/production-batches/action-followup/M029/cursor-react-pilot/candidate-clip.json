@@ -1,0 +1,113 @@
+{
+  "conceptId": "M029",
+  "species": null,
+  "evolutionStage": null,
+  "sourceBase": "design/production-batches/monsters/batch03/M029/base-v2.png",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 95,
+    "loop": false
+  },
+  "movableRect": [
+    38,
+    52,
+    224,
+    211
+  ],
+  "parts": [
+    {
+      "name": "near-ear-orient",
+      "x": 86,
+      "y": 83,
+      "rx": 24,
+      "ry": 30,
+      "dx": -1.6,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        0.82,
+        1,
+        0.63,
+        0.37,
+        0.19,
+        0.08,
+        0.03
+      ]
+    },
+    {
+      "name": "left-wing-alert",
+      "x": 77,
+      "y": 165,
+      "rx": 32,
+      "ry": 29,
+      "dx": -2.6,
+      "dy": -1.5,
+      "samples": [
+        0.01,
+        0.25,
+        0.87,
+        1,
+        0.74,
+        0.43,
+        0.2,
+        0.04
+      ]
+    },
+    {
+      "name": "right-wing-counter",
+      "x": 201,
+      "y": 164,
+      "rx": 19,
+      "ry": 29,
+      "dx": 1.9,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.18,
+        0.72,
+        1,
+        0.81,
+        0.47,
+        0.21,
+        0.05
+      ]
+    },
+    {
+      "name": "tail-late-relax",
+      "x": 67,
+      "y": 198,
+      "rx": 25,
+      "ry": 12,
+      "dx": -1.1,
+      "dy": 1,
+      "samples": [
+        0.01,
+        0.03,
+        0.16,
+        0.49,
+        0.87,
+        1,
+        0.52,
+        0.06
+      ]
+    }
+  ],
+  "anatomyScope": "Small upright bat imp orients an ear, lifts short wing membranes and settles tail with staggered timing. Face, eyes, nose, feet and outer tips remain stable; not a flying or walking clip.",
+  "behaviorContract": "Distinct small bat anatomy response candidate; M029 personality/identity not approved, no native behavior or spawn activation.",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate only; no native event activation",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no cleanup or threshold changes"
+}

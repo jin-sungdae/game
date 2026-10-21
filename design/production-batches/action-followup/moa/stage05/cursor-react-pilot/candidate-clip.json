@@ -1,0 +1,74 @@
+{
+  "conceptId": null,
+  "species": "MOA",
+  "evolutionStage": 5,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/moa/stage05/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 205,
+    "loop": false
+  },
+  "movableRect": [
+    102,
+    33,
+    158,
+    144
+  ],
+  "parts": [
+    {
+      "name": "mature-crown-leaf-attention",
+      "x": 122,
+      "y": 49,
+      "rx": 14,
+      "ry": 11,
+      "dx": -0.55,
+      "dy": 0.65,
+      "samples": [
+        0.02,
+        0.08,
+        0.23,
+        0.55,
+        0.92,
+        1,
+        0.51,
+        0.08
+      ]
+    },
+    {
+      "name": "upper-shoulder-leaf-return",
+      "x": 130,
+      "y": 128,
+      "rx": 20,
+      "ry": 11,
+      "dx": 0.65,
+      "dy": -0.45,
+      "samples": [
+        0.01,
+        0.03,
+        0.12,
+        0.31,
+        0.66,
+        0.96,
+        0.72,
+        0.14
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "Small interior crown-leaf and upper-shoulder-leaf response only. Face, eye placement, antler silhouette, body contour, tail and planted feet remain fixed. No branch rotation or whole-body turn is represented.",
+  "behaviorContract": "Existing Nature/Balance gentle and curious Stage 5 direction: unhurried crown attention with delayed shoulder settle. Mature timing differs from M012 quick feather response; no native cursor trigger or gameplay change."
+}

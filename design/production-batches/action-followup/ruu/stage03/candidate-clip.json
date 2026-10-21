@@ -1,0 +1,36 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 3,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage03/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 135,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 222.5,
+      "y": 94,
+      "rx": 4.5,
+      "ry": 3.5,
+      "dx": 0.8
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review only; no gameplay frequency change",
+  "anatomyScope": "RUU Stage 3 alert lateral eye scan; beak, crest, wings, chest and feet fixed"
+}

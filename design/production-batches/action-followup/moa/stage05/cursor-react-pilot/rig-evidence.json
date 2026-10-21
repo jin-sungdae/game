@@ -1,0 +1,107 @@
+{
+  "reference": "public/assets/creatures/moa/stage05/base.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "mature-crown-leaf-attention",
+      "x": 122,
+      "y": 49,
+      "rx": 14,
+      "ry": 11,
+      "dx": -0.55,
+      "dy": 0.65,
+      "samples": [
+        0.02,
+        0.08,
+        0.23,
+        0.55,
+        0.92,
+        1,
+        0.51,
+        0.08
+      ]
+    },
+    {
+      "name": "upper-shoulder-leaf-return",
+      "x": 130,
+      "y": 128,
+      "rx": 20,
+      "ry": 11,
+      "dx": 0.65,
+      "dy": -0.45,
+      "samples": [
+        0.01,
+        0.03,
+        0.12,
+        0.31,
+        0.66,
+        0.96,
+        0.72,
+        0.14
+      ]
+    }
+  ],
+  "protectedRegions": "y>=144||y<=33||x<=102||x>=158",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "pixelSha256": "f88f37a70c894d265e910f971161d60e3bce23d823b090313c55480900ac0b65",
+      "changedPixels": 143,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.01702928347371775
+    },
+    {
+      "file": "cursor_react_01.png",
+      "pixelSha256": "df2f004e97d04b84fc6220c303779254a13efb54c749bb819489b6a4b5d4d944",
+      "changedPixels": 357,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.0681109617547987
+    },
+    {
+      "file": "cursor_react_02.png",
+      "pixelSha256": "996195b3d1b66841e3c0f716aa3326cdae2a928c2bbd1dbd4e184216e0a57db7",
+      "changedPixels": 594,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.1956817458912961
+    },
+    {
+      "file": "cursor_react_03.png",
+      "pixelSha256": "bcb6a32a2afc2de4ad2165d6815f6d004cdc6cb7fcb8d03090ab4f77791f6458",
+      "changedPixels": 727,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.4661907623245271
+    },
+    {
+      "file": "cursor_react_04.png",
+      "pixelSha256": "896371dda0d0a398dc9772ace958b78fcb42df3af77defb424674b6b77e9ecf8",
+      "changedPixels": 809,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7771817956904453
+    },
+    {
+      "file": "cursor_react_05.png",
+      "pixelSha256": "23b83c6cbf1cc02ad561c68446809d7460647c1c8e414e146a36da183de1eb0a",
+      "changedPixels": 839,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8461542961539279
+    },
+    {
+      "file": "cursor_react_06.png",
+      "pixelSha256": "90675e474158f4a8000f451f2a3fad9a6d75942120bcfdbe53e6ee244b5323d9",
+      "changedPixels": 786,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.566817094332857
+    },
+    {
+      "file": "cursor_react_07.png",
+      "pixelSha256": "f76ab08517c7ffaa061def34016b5a687e8d7acf4c60e7458c84c4b4adc00a81",
+      "changedPixels": 537,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.11066195928268296
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #114; independent first attempt; no failure recovery",
+  "productionEligible": false
+}
