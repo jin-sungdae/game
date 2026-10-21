@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "M030 ATTACK dedicated rigid-body keypose source-alpha inspection, then MOA Stage4 CURSOR_REACT feasibility; keep M026 anatomy conflict and M028 raw failure blocked. No repeat of existing candidates.",
+  "nextTask": "M036 ATTACK dedicated keypose anatomy/source-alpha preflight, then RUU Stage3 CURSOR_REACT feasibility. Preserve M026 anatomy conflict and all raw failures at3/3; do not repeat existing candidates.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -570,10 +570,15 @@
         },
         {
           "action": "CURSOR_REACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/moa/stage04/cursor-react-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "INTERACT",
@@ -656,11 +661,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 4,
-        "automatedCandidateActions": 3,
-        "artworkReviewPendingActions": 4,
+        "candidateActions": 5,
+        "automatedCandidateActions": 4,
+        "artworkReviewPendingActions": 5,
         "validationFailedActions": 1,
-        "missingFrameSetActions": 12,
+        "missingFrameSetActions": 11,
         "guiPendingActions": 16,
         "completeActions": 0
       }
@@ -7514,10 +7519,15 @@
         },
         {
           "action": "ATTACK",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "naturalMotion": "NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "recoveryPath": "design/production-batches/action-followup/M030/attack-pilot/keypose-tool-reference.png",
+          "blockReason": "RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3"
         },
         {
           "action": "SKILL_CAST",
@@ -7579,7 +7589,7 @@
         "candidateActions": 0,
         "automatedCandidateActions": 0,
         "artworkReviewPendingActions": 0,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 15,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -7685,10 +7695,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M031/hit-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "VICTORY",
@@ -7733,11 +7748,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -7793,10 +7808,15 @@
         },
         {
           "action": "TURN",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "naturalMotion": "NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "recoveryPath": "design/production-batches/action-followup/M032/turn-pilot/keypose-tool-reference.png",
+          "blockReason": "RAW_ALPHA_DEFECT: 1515 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3"
         },
         {
           "action": "REST",
@@ -7821,10 +7841,15 @@
         },
         {
           "action": "INTERACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M032/interact-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
         },
         {
           "action": "ATTACK",
@@ -7890,11 +7915,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
-        "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
+        "validationFailedActions": 1,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -18741,11 +18766,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 132,
-    "automatedCandidateActions": 130,
-    "artworkReviewPendingActions": 131,
-    "validationFailedActions": 21,
-    "missingFrameSetActions": 1603,
+    "candidateActions": 135,
+    "automatedCandidateActions": 133,
+    "artworkReviewPendingActions": 134,
+    "validationFailedActions": 23,
+    "missingFrameSetActions": 1600,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
@@ -21877,20 +21902,35 @@
     "approvalAudit": {
       "scope": "All existing candidate clip versions; categories overlap. Automated PNG catalog checks are not full appearance/motion approval. Registered legacy action records are separately listed without re-approving missing approval fields.",
       "summary": {
-        "candidateClips": 133,
-        "candidateFrames": 930,
-        "automatedPngPassClips": 131,
+        "candidateClips": 136,
+        "candidateFrames": 954,
+        "automatedPngPassClips": 134,
         "automatedPngFailedClips": 2,
-        "artworkReviewPendingClips": 132,
-        "naturalMotionReviewPendingClips": 132,
-        "identityReviewRequiredClips": 98,
+        "artworkReviewPendingClips": 135,
+        "naturalMotionReviewPendingClips": 135,
+        "identityReviewRequiredClips": 100,
         "productionApprovedClips": 1,
         "approvedRuntimePendingClips": 0,
-        "guiPendingClips": 133,
+        "guiPendingClips": 136,
         "guiPassedClips": 0,
-        "validationFailedActionsIncludingKeyposes": 21
+        "validationFailedActionsIncludingKeyposes": 23
       },
       "clips": [
+        {
+          "creatureId": "companion:moa:4",
+          "action": "CURSOR_REACT",
+          "directory": "/design/production-batches/action-followup/moa/stage04/cursor-react-pilot/rigged/cursor_react",
+          "frames": 8,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": false,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/action-followup/moa/stage04/cursor-react-pilot/frame-validation.json",
+          "detailedAutomated": "PASS"
+        },
         {
           "creatureId": "companion:moa:4",
           "action": "HIT",
@@ -23526,6 +23566,21 @@
         },
         {
           "creatureId": "M031",
+          "action": "HIT",
+          "directory": "/design/production-batches/action-followup/M031/hit-pilot/rigged/hit",
+          "frames": 8,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/action-followup/M031/hit-pilot/frame-validation.json",
+          "detailedAutomated": "PASS"
+        },
+        {
+          "creatureId": "M031",
           "action": "IDLE",
           "directory": "/design/production-batches/monsters/batch04/M031/rigged/idle",
           "frames": 6,
@@ -23537,6 +23592,21 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED",
           "detailedEvidence": "design/production-batches/monsters/batch04/M031/frame-validation.json",
+          "detailedAutomated": "PASS"
+        },
+        {
+          "creatureId": "M032",
+          "action": "INTERACT",
+          "directory": "/design/production-batches/action-followup/M032/interact-pilot/rigged/interact",
+          "frames": 8,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/action-followup/M032/interact-pilot/frame-validation.json",
           "detailedAutomated": "PASS"
         },
         {
@@ -24011,6 +24081,18 @@
           "action": "MOVE",
           "reason": "RAW_ALPHA_DEFECT: 842 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
           "evidence": "design/production-batches/action-followup/M028/move-pilot/keypose-tool-reference.png"
+        },
+        {
+          "creatureId": "M030",
+          "action": "ATTACK",
+          "reason": "RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
+          "evidence": "design/production-batches/action-followup/M030/attack-pilot/keypose-tool-reference.png"
+        },
+        {
+          "creatureId": "M032",
+          "action": "TURN",
+          "reason": "RAW_ALPHA_DEFECT: 1515 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
+          "evidence": "design/production-batches/action-followup/M032/turn-pilot/keypose-tool-reference.png"
         }
       ],
       "recordedReadyActions": [
@@ -24272,5 +24354,117 @@
       "reason": "New focused test fails; PR-wide automatic repair limit3/3 preserved",
       "used": 1
     }
+  },
+  "creatureAnatomyContinuation": {
+    "baselineCommit": "a5e13aa76e3a0df85861643d2b534208206a2f65",
+    "originMain": "b0adfc792bfe667615a05bd982fa4f3dc9229dff",
+    "baselineCI": "39528355424: 4 SUCCESS; baseline only",
+    "repairIterations": 3,
+    "repairLimit": 3,
+    "newCases": {
+      "companion:moa:4 CURSOR_REACT": "moa/stage04/cursor-react-pilot",
+      "M031 HIT": "M031/hit-pilot",
+      "M032 INTERACT": "M032/interact-pilot"
+    },
+    "candidateClips": 3,
+    "candidateFrames": 24,
+    "candidatePng": 29,
+    "automatedPassedFrames": 24,
+    "failedKeyposes": [
+      {
+        "creatureId": "M030",
+        "action": "ATTACK",
+        "path": "design/production-batches/action-followup/M030/attack-pilot",
+        "sourceDetachedAlphaPixels": 2582,
+        "status": "VALIDATION_FAILED",
+        "normalizationPerformed": false,
+        "riggingPerformed": false,
+        "frames": 0
+      },
+      {
+        "creatureId": "M032",
+        "action": "TURN",
+        "path": "design/production-batches/action-followup/M032/turn-pilot",
+        "sourceDetachedAlphaPixels": 1515,
+        "status": "VALIDATION_FAILED",
+        "normalizationPerformed": false,
+        "riggingPerformed": false,
+        "frames": 0
+      }
+    ],
+    "productionRegistrations": 0,
+    "runtimeConnections": 0,
+    "skillConnections": 0,
+    "approvedUnconnectedAssets": [],
+    "artworkReview": "HUMAN_REVIEW_REQUIRED",
+    "nativeMacOS": "DEFERRED_GUI",
+    "nativeWindows": "DEFERRED_GUI",
+    "browserPreview": {
+      "status": "PARTIAL_PASS",
+      "url": "http://127.0.0.1:5192/tests/live/creature-review/",
+      "checked": [
+        "MOA Stage4 CURSOR_REACT rendered frame8; Pause held frame6 across separate observations; Reduced Motion returned frame1",
+        "M031 HIT rendered frame3 with original BASE comparison and Runtime BLOCKED",
+        "M032 INTERACT rendered frame2; TURN source-alpha1515 failure displayed without clip",
+        "M030 raw-alpha2582 failure displayed with no rigged candidate",
+        "136 clips and separated approval categories visible; approved-unconnected0"
+      ],
+      "limitations": [
+        "Existing review loops one-shot candidates; isolated Clock tests verify actual nonloop end hold",
+        "No final artwork/natural-motion approval or native macOS/Windows GUI proof",
+        "Tool screenshots displayed; no saved screenshot artifact claimed"
+      ]
+    },
+    "validation": {
+      "focusedAssets": "PASS:4/4; /tmp/luma-pr114-creature-anatomy-focused.log",
+      "animationRegression": "PASS:222/222; /tmp/luma-pr114-creature-anatomy-animation.log",
+      "releaseGate": "FINAL_HEAD_EVIDENCE_REQUIRED",
+      "releaseGateOutput": "/tmp/luma-pr114-creature-anatomy-release/release-result.json",
+      "ci": "FINAL_HEAD_EVIDENCE_REQUIRED",
+      "existingApprovalAudit": "PASS:4/4; /tmp/luma-pr114-creature-anatomy-audit.log",
+      "finalHeadEvidencePolicy": "After commit, execute full Release Gate and GitHub CI on the exact clean HEAD. Read the recorded release-result path and PR checks; never treat baseline results as final."
+    },
+    "lastValidatedCommit": "a5e13aa76e3a0df85861643d2b534208206a2f65",
+    "lastValidatedCommitScope": "Previously validated baseline only; final clean HEAD evidence must come from release-result.json and PR checks.",
+    "lastCompletedWork": "MOA Stage4 CURSOR_REACT, M031 HIT and M032 INTERACT 8-frame independent candidates; M030 ATTACK and M032 TURN raw-alpha failures preserved before any normalization.",
+    "nextTask": "M036 ATTACK dedicated keypose anatomy/source-alpha preflight, then RUU Stage3 CURSOR_REACT feasibility. Preserve M026 anatomy conflict and all raw failures at3/3; do not repeat existing candidates.",
+    "blockers": [
+      "M026 wingless BASE versus requested flight contract remains blocked; no anatomy changes",
+      "M030 ATTACK raw2582 and M032 TURN raw1515 detached alpha; recovery blocked3/3",
+      "All new artwork and motion await human review; no approved unconnected assets",
+      "Existing review loops one-shot clips; exact end hold tested only by isolated clock",
+      "Native macOS/Windows GUI DEFERRED_GUI"
+    ],
+    "coverageAtCheckpoint": {
+      "requiredActions": 1740,
+      "recordedReadyActions": 14,
+      "recordedRuntimeActions": 12,
+      "manifestFileSetsPresent": 12,
+      "candidateActions": 135,
+      "automatedCandidateActions": 133,
+      "artworkReviewPendingActions": 134,
+      "validationFailedActions": 23,
+      "missingFrameSetActions": 1600,
+      "guiPendingActions": 1740,
+      "completeActions": 0,
+      "creatures": 115,
+      "completeCreatures": 0
+    },
+    "approvalSummaryAtCheckpoint": {
+      "candidateClips": 136,
+      "candidateFrames": 954,
+      "automatedPngPassClips": 134,
+      "automatedPngFailedClips": 2,
+      "artworkReviewPendingClips": 135,
+      "naturalMotionReviewPendingClips": 135,
+      "identityReviewRequiredClips": 100,
+      "productionApprovedClips": 1,
+      "approvedRuntimePendingClips": 0,
+      "guiPendingClips": 136,
+      "guiPassedClips": 0,
+      "validationFailedActionsIncludingKeyposes": 23
+    },
+    "productionPngCountAtCheckpoint": 271,
+    "scope": "Only independent design candidates, provenance, existing Ledger/catalog and tests; production assets, runtime engines, native behavior and server gameplay unchanged."
   }
 }

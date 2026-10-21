@@ -1,0 +1,154 @@
+{
+  "reference": "design/production-batches/monsters/batch04/M032/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "lizard-neck-acknowledgement",
+      "x": 202,
+      "y": 138,
+      "rx": 20,
+      "ry": 25,
+      "dx": 1.8,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        0.22,
+        0.71,
+        1,
+        0.92,
+        0.62,
+        0.29,
+        0.04
+      ]
+    },
+    {
+      "name": "near-shoulder-response",
+      "x": 163,
+      "y": 163,
+      "rx": 22,
+      "ry": 21,
+      "dx": 1.4,
+      "dy": -1,
+      "samples": [
+        0.01,
+        0.1,
+        0.45,
+        0.89,
+        1,
+        0.81,
+        0.4,
+        0.06
+      ]
+    },
+    {
+      "name": "segmented-tail-counterflex",
+      "x": 57,
+      "y": 141,
+      "rx": 17,
+      "ry": 29,
+      "dx": -1.7,
+      "dy": -0.9,
+      "samples": [
+        0.01,
+        0.04,
+        0.18,
+        0.54,
+        0.91,
+        1,
+        0.63,
+        0.08
+      ]
+    },
+    {
+      "name": "dorsal-flame-settle",
+      "x": 123,
+      "y": 123,
+      "rx": 25,
+      "ry": 22,
+      "dx": -1.1,
+      "dy": 1.3,
+      "samples": [
+        0.01,
+        0.06,
+        0.28,
+        0.66,
+        1,
+        0.93,
+        0.51,
+        0.05
+      ]
+    }
+  ],
+  "protectedRegions": "y>=193||y<=94||x<=37||x>=226",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "fd6911d86f024ea969fc0e492e6c5ba7abe853944dfc9fbad659fb4eeb4ee2ab",
+      "changedPixels": 1040,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 171,
+      "maxInverseDisplacementPixels": 0.04326607514626782
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "0d868fa01aa8b9c3c3264ba81b4a003ae8772a1be270cea3d99e7d31ba91c374",
+      "changedPixels": 2794,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 419,
+      "maxInverseDisplacementPixels": 0.47521631816825066
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "eefe342592db350c41d40275081fb74c73f1624dcd1363a506f013cef58aec1e",
+      "changedPixels": 3937,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 645,
+      "maxInverseDisplacementPixels": 1.5349176032732823
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "b43bb160ca9284ee347ed5012ab4f5b6eb8006cdf5dbb0757b7d924f749791b6",
+      "changedPixels": 4352,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 825,
+      "maxInverseDisplacementPixels": 2.162263257740531
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "8f2e300c0b8c29055cce8fc55af3cb4c592cca0635f1f3ed69a7041303688b39",
+      "changedPixels": 4478,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 886,
+      "maxInverseDisplacementPixels": 1.9883810763350847
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "4393504f654832080431a3ee30e267fc4eb00a809da840318e7259ab32f33bab",
+      "changedPixels": 4419,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 859,
+      "maxInverseDisplacementPixels": 1.921651949203829
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "1fcf9ebe112e9a9a457445443a5cea0f5041cb8e03aaf4ed3335a23c6113699c",
+      "changedPixels": 4075,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 731,
+      "maxInverseDisplacementPixels": 1.2109553529628447
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "3679df06436ba383b48224e2cf5ab45ec507cd1e5c5dcf0c4f3795d8e79b53bd",
+      "changedPixels": 2445,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 335,
+      "maxInverseDisplacementPixels": 0.15385069719475067
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

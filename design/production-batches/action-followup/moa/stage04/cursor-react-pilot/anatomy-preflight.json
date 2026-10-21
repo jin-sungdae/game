@@ -1,0 +1,35 @@
+{
+  "creatureId": "companion:moa:4",
+  "action": "CURSOR_REACT",
+  "sourceBase": "public/assets/creatures/moa/stage04/base.png",
+  "sourceSha256": "ba00d0f7cbe37a77e49c29b34d5baba92eef4baf5dd32483b74862c2a3c7d744",
+  "movementProfile": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "personality": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "speciesBehavior": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "anatomy": "Grounded mature quadruped with branching antlers, leaf ears and layered foliage mantle/tail. No wings. Gentle ear attention, neck inclination and delayed leaf settle; feet, face and outer antler tips remain anchored. Not locomotion or a full head turn.",
+  "feasibility": "LOCAL_PART_REACTION_CANDIDATE_ONLY",
+  "speciesIdentity": "moa",
+  "productionSpeciesId": null,
+  "manifest": "public/assets/creatures/moa/stage04/manifest.json",
+  "provenance": "src-tauri/src/companion/config.rs",
+  "existingCandidateClips": [
+    "hit",
+    "blink",
+    "breath",
+    "idle"
+  ],
+  "duplicateActionFound": false,
+  "policyChanged": false,
+  "newBodyParts": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI"
+}

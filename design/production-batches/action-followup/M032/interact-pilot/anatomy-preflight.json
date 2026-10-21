@@ -1,0 +1,32 @@
+{
+  "creatureId": "M032",
+  "action": "INTERACT",
+  "sourceBase": "design/production-batches/monsters/batch04/M032/base-v2.png",
+  "sourceSha256": "23237c557da92af6eb73455850eff10e43548ba9242a0108ebed24db3529ff0c",
+  "movementProfile": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "personality": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "speciesBehavior": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "anatomy": "Wingless armored quadrupedal fire lizard, long segmented tail and dorsal flames, two forelimbs and two hindlimbs. Small attentive neck/shoulder response with delayed tail and crest follow-through. Feet, eye, snout and outer tail tip fixed; no humanoid arms or wings added.",
+  "feasibility": "LOCAL_PART_REACTION_CANDIDATE_ONLY",
+  "speciesIdentity": "CONCEPT_ONLY_MAPPING_UNAPPROVED",
+  "productionSpeciesId": null,
+  "manifest": null,
+  "provenance": "design/production-batches/monsters/batch04/provenance.json",
+  "existingCandidateClips": [
+    "idle"
+  ],
+  "duplicateActionFound": false,
+  "policyChanged": false,
+  "newBodyParts": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI"
+}

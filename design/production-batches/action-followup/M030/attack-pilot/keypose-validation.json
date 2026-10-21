@@ -1,0 +1,125 @@
+{
+  "status": "VALIDATION_FAILED",
+  "sourceSha256": "d0f5556661658ccc9e5f0c3754b40fb33865a8fd754fb37f305903079301b503",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 1254,
+    "height": 1254,
+    "mainPixels": 550554,
+    "mainBounds": [
+      61,
+      198,
+      1236,
+      1064
+    ],
+    "detachedPixels": 2582,
+    "detachedComponents": 596,
+    "detachedAlphaHistogram": {
+      "1": 2560,
+      "2": 21,
+      "3": 1
+    },
+    "largestDetached": [
+      {
+        "n": 662,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          686,
+          1136,
+          733,
+          1173
+        ]
+      },
+      {
+        "n": 163,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          304,
+          1181,
+          333,
+          1199
+        ]
+      },
+      {
+        "n": 95,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          39,
+          990,
+          50,
+          1005
+        ]
+      },
+      {
+        "n": 85,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1126,
+          306,
+          1137,
+          321
+        ]
+      },
+      {
+        "n": 51,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          899,
+          224,
+          907,
+          236
+        ]
+      },
+      {
+        "n": 50,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          0,
+          980,
+          2,
+          1021
+        ]
+      },
+      {
+        "n": 50,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          31,
+          1029,
+          39,
+          1042
+        ]
+      },
+      {
+        "n": 32,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          988,
+          235,
+          992,
+          248
+        ]
+      }
+    ]
+  },
+  "pngErrors": [
+    "dimensions must be 256x256"
+  ],
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "blockReason": "RAW_SOURCE_DETACHED_ALPHA; recovery blocked at PR-wide limit3/3",
+  "visualObservation": "Raised forward rocky fist and planted feet are present. Taller torso and altered plate proportions versus BASE require separate anatomy/identity review; no identity approval inferred.",
+  "scope": "Original alpha checked before any resize or rigging. No normalized keypose or animation produced."
+}
