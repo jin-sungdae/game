@@ -77,6 +77,31 @@ class FollowupTests(unittest.TestCase):
         self.assertIn("if: always() && inputs.mode != 'analyze'", workflow)
         self.assertIn("if: always() && inputs.mode == 'analyze'", workflow)
 
+    def test_analysis_retry_is_explicit_bounded_and_charged(self):
+        s = state()
+        with self.assertRaisesRegex(ValueError, 'FAILED_PREVIOUS'):
+            f.reserve_analysis(s, analysis(), 'r2', 0, 2)
+        t = f.reserve_analysis(s, analysis(), 'r1', 0)
+        f.finish(s, t['key'], 'r1', 'FAILED')
+        t2 = f.reserve_analysis(s, analysis(), 'r2', 0, 2)
+        f.finish(s, t2['key'], 'r2', 'ANALYZED')
+        self.assertEqual(s['runs'][t['key']]['status'], 'FAILED')
+        self.assertEqual(s['days']['1970-01-01']['modelInvocations'], 2)
+        self.assertEqual(s['roots']['1']['attempts'], 0)
+        with self.assertRaisesRegex(ValueError, 'DUPLICATE_HEAD'):
+            f.reserve_analysis(s, analysis(), 'r2again', 0, 2)
+        with self.assertRaisesRegex(ValueError, 'FAILED_PREVIOUS'):
+            f.reserve_analysis(s, analysis(), 'r3', 0, 3)
+        with self.assertRaisesRegex(ValueError, 'RETRY_LIMIT'):
+            f.reserve_analysis(s, analysis(), 'r4', 0, 4)
+
+    def test_model_input_does_not_embed_unbounded_evidence(self):
+        a = analysis(); a['hugeSource'] = 'x' * 2200000
+        reference = json.dumps(f.analysis_reference(a))
+        self.assertLess(len(reference), 1000)
+        self.assertNotIn('hugeSource', reference)
+        self.assertIn('evidence.json', reference)
+
     def test_duplicate_head_and_new_head_failure_counter(self):
         s=state();t=f.reserve(s,analysis(),'1',0);f.finish(s,t['key'],'1','FAILED')
         with self.assertRaisesRegex(ValueError,'DUPLICATE_HEAD'):f.reserve(s,analysis(),'2',1)
