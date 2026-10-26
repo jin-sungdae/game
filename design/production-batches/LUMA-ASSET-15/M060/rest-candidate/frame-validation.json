@@ -1,0 +1,23 @@
+{
+  "conceptId": "M060",
+  "action": "REST",
+  "automated": "VALIDATION_FAILED",
+  "errors": [
+    "FRAME_COUNT_MISMATCH"
+  ],
+  "sourceBase": "design/production-batches/monsters/batch06/M060/base-v2.png",
+  "sourceSha256": "3376a1a72d7a9dab556ea3be28cdd725d3ca4b86873a6148c61f78075edb6f26",
+  "frames": [],
+  "expectedFrames": 8,
+  "actualFrames": 0,
+  "loopSeamMeanRgbaDelta": null,
+  "continuityScope": "Numerical delta only; anatomical and perceived continuity require human review",
+  "appearanceScope": "Fixed pixels, local change area and registration only; identity is not automatically approved",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairPerformed": false,
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI"
+}

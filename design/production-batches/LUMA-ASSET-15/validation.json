@@ -1,0 +1,341 @@
+{
+  "sessionId": "LUMA-ASSET-15",
+  "candidateClips": 36,
+  "automatedPassedClips": 28,
+  "failedClips": 8,
+  "framePngs": 256,
+  "productionApprovedClips": 0,
+  "runtimeConnectedClips": 0,
+  "rawKeypose": {
+    "status": "VALIDATION_FAILED",
+    "sourceSha256": "2b9d22f7a475c53dbaaa803d391972d7111fdd79a9f55ac9c5c6bb3424d10ab9",
+    "sourceAlpha": {
+      "threshold": 0,
+      "width": 1254,
+      "height": 1254,
+      "mainPixels": 507261,
+      "detachedPixels": 3302,
+      "detachedComponents": 807,
+      "detachedAlphaHistogram": {
+        "1": 3291,
+        "2": 11
+      }
+    },
+    "normalizationPerformed": false,
+    "riggingPerformed": false,
+    "repairIterations": 3,
+    "repairLimit": 3,
+    "productionEligible": false,
+    "artworkReview": "HUMAN_REVIEW_REQUIRED",
+    "appearanceReview": "MANUAL_REQUIRED: image generation is a keypose proposal, not approved joint separation"
+  },
+  "results": [
+    {
+      "conceptId": "M057",
+      "action": "ATTACK",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M057",
+      "action": "BLINK",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 6,
+      "actualFrames": 6
+    },
+    {
+      "conceptId": "M057",
+      "action": "CURSOR_REACT",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M057",
+      "action": "IDLE",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M057",
+      "action": "INTERACT",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M057",
+      "action": "LOOK",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M057",
+      "action": "RECOVERY",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M057",
+      "action": "REST",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M057",
+      "action": "VICTORY",
+      "automated": "VALIDATION_FAILED",
+      "errors": [
+        "victory_00.png: NO_SILHOUETTE_SUPPORT_MOTION",
+        "victory_07.png: NO_SILHOUETTE_SUPPORT_MOTION"
+      ],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M058",
+      "action": "BLINK",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 6,
+      "actualFrames": 6
+    },
+    {
+      "conceptId": "M058",
+      "action": "BREATH",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M058",
+      "action": "CURSOR_REACT",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M058",
+      "action": "IDLE",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M058",
+      "action": "INTERACT",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M058",
+      "action": "LOOK",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M058",
+      "action": "RECOVERY",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M058",
+      "action": "REST",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M058",
+      "action": "VICTORY",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M059",
+      "action": "ATTACK",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M059",
+      "action": "BLINK",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 6,
+      "actualFrames": 6
+    },
+    {
+      "conceptId": "M059",
+      "action": "BREATH",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M059",
+      "action": "CURSOR_REACT",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M059",
+      "action": "HIT",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M059",
+      "action": "INTERACT",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M059",
+      "action": "LOOK",
+      "automated": "VALIDATION_FAILED",
+      "errors": [
+        "look_00.png: NO_SILHOUETTE_SUPPORT_MOTION",
+        "look_01.png: NO_SILHOUETTE_SUPPORT_MOTION",
+        "look_07.png: NO_SILHOUETTE_SUPPORT_MOTION"
+      ],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M059",
+      "action": "RECOVERY",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M059",
+      "action": "REST",
+      "automated": "VALIDATION_FAILED",
+      "errors": [
+        "rest_00.png: NO_SILHOUETTE_SUPPORT_MOTION"
+      ],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M059",
+      "action": "VICTORY",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M060",
+      "action": "BLINK",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 6,
+      "actualFrames": 6
+    },
+    {
+      "conceptId": "M060",
+      "action": "BREATH",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M060",
+      "action": "HIT",
+      "automated": "VALIDATION_FAILED",
+      "errors": [
+        "FRAME_COUNT_MISMATCH"
+      ],
+      "expectedFrames": 8,
+      "actualFrames": 0
+    },
+    {
+      "conceptId": "M060",
+      "action": "INTERACT",
+      "automated": "VALIDATION_FAILED",
+      "errors": [
+        "interact_00.png: NO_SILHOUETTE_SUPPORT_MOTION"
+      ],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M060",
+      "action": "LOOK",
+      "automated": "VALIDATION_FAILED",
+      "errors": [
+        "FRAME_COUNT_MISMATCH"
+      ],
+      "expectedFrames": 8,
+      "actualFrames": 0
+    },
+    {
+      "conceptId": "M060",
+      "action": "RECOVERY",
+      "automated": "PASS",
+      "errors": [],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    },
+    {
+      "conceptId": "M060",
+      "action": "REST",
+      "automated": "VALIDATION_FAILED",
+      "errors": [
+        "FRAME_COUNT_MISMATCH"
+      ],
+      "expectedFrames": 8,
+      "actualFrames": 0
+    },
+    {
+      "conceptId": "M060",
+      "action": "VICTORY",
+      "automated": "VALIDATION_FAILED",
+      "errors": [
+        "victory_00.png: NO_SILHOUETTE_SUPPORT_MOTION"
+      ],
+      "expectedFrames": 8,
+      "actualFrames": 8
+    }
+  ]
+}

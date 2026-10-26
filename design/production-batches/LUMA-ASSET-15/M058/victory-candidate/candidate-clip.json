@@ -1,0 +1,77 @@
+{
+  "conceptId": "M058",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M058/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "VICTORY",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    39,
+    112,
+    224,
+    216
+  ],
+  "parts": [
+    {
+      "x": 193,
+      "y": 141,
+      "rx": 25,
+      "ry": 27,
+      "dx": 0.8,
+      "dy": -2.2,
+      "name": "serpent-neck",
+      "samples": [
+        0.02,
+        0.35,
+        1,
+        0.65,
+        0.95,
+        0.5,
+        0.18,
+        0.04
+      ]
+    },
+    {
+      "x": 65,
+      "y": 170,
+      "rx": 20,
+      "ry": 31,
+      "dx": -2,
+      "dy": -0.5,
+      "name": "segmented-tail",
+      "samples": [
+        0.01,
+        0.12,
+        0.6,
+        1,
+        0.65,
+        0.8,
+        0.3,
+        0.03
+      ]
+    }
+  ],
+  "anatomyScope": "목을 두 번 곧추세우는 절제된 승리 제스처",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 첫 시도; 실패 시 수정 없이 보존",
+  "rigReuse": "design/production-batches/action-followup/M057/hit-pilot/rig-hit.cjs"
+}

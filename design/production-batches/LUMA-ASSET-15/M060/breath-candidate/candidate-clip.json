@@ -1,0 +1,77 @@
+{
+  "conceptId": "M060",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M060/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 240,
+    "loop": true
+  },
+  "movableRect": [
+    31,
+    149,
+    221,
+    212
+  ],
+  "parts": [
+    {
+      "x": 196,
+      "y": 168,
+      "rx": 19,
+      "ry": 22,
+      "dx": 0.8,
+      "dy": -1,
+      "name": "ribcage-or-forearm",
+      "samples": [
+        0.03,
+        0.2,
+        0.6,
+        0.94,
+        1,
+        0.65,
+        0.25,
+        0.05
+      ]
+    },
+    {
+      "x": 59,
+      "y": 174,
+      "rx": 23,
+      "ry": 32,
+      "dx": 0.5,
+      "dy": 0.7,
+      "name": "tail-or-counterarm",
+      "samples": [
+        0.04,
+        0.08,
+        0.3,
+        0.65,
+        1,
+        0.85,
+        0.45,
+        0.1
+      ]
+    }
+  ],
+  "anatomyScope": "몸통 호흡과 작은 꼬리 균형",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 첫 시도; 실패 시 수정 없이 보존",
+  "rigReuse": "design/production-batches/action-followup/M057/hit-pilot/rig-hit.cjs"
+}

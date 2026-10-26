@@ -1,0 +1,77 @@
+{
+  "conceptId": "M057",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M057/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 8,
+    "frameDuration": 220,
+    "loop": true
+  },
+  "movableRect": [
+    70,
+    36,
+    198,
+    214
+  ],
+  "parts": [
+    {
+      "x": 99,
+      "y": 64,
+      "rx": 22,
+      "ry": 31,
+      "dx": 1.8,
+      "dy": -0.6,
+      "name": "near-ear-or-forearm",
+      "samples": [
+        0.03,
+        0.2,
+        0.65,
+        1,
+        0.7,
+        0.35,
+        0.12,
+        0.05
+      ]
+    },
+    {
+      "x": 128,
+      "y": 185,
+      "rx": 18,
+      "ry": 25,
+      "dx": 0.5,
+      "dy": -0.7,
+      "name": "far-ear-arm-or-tail",
+      "samples": [
+        0.04,
+        0.08,
+        0.2,
+        0.5,
+        1,
+        0.7,
+        0.3,
+        0.06
+      ]
+    }
+  ],
+  "anatomyScope": "귀의 경계 이동과 팔의 작은 대기 제스처",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 첫 시도; 실패 시 수정 없이 보존",
+  "rigReuse": "design/production-batches/action-followup/M057/hit-pilot/rig-hit.cjs"
+}
