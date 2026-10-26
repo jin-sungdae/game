@@ -1,0 +1,267 @@
+{
+  "M041": {
+    "eyes": [
+      {
+        "x": 196,
+        "y": 102,
+        "rx": 6,
+        "ry": 6
+      }
+    ],
+    "gesture": [
+      {
+        "name": "ear-fur-attention",
+        "x": 174,
+        "y": 88,
+        "rx": 12,
+        "ry": 10,
+        "dx": 1,
+        "dy": -1,
+        "delay": 0
+      },
+      {
+        "name": "neck-fur-follow",
+        "x": 174,
+        "y": 127,
+        "rx": 17,
+        "ry": 17,
+        "dx": 0.5,
+        "dy": -0.7,
+        "delay": 2
+      }
+    ],
+    "acknowledge": [
+      {
+        "name": "neck-fur-incline",
+        "x": 176,
+        "y": 129,
+        "rx": 17,
+        "ry": 19,
+        "dx": 0.6,
+        "dy": 1.2,
+        "delay": 0
+      },
+      {
+        "name": "tail-tip-answer",
+        "x": 62,
+        "y": 160,
+        "rx": 16,
+        "ry": 15,
+        "dx": 0.5,
+        "dy": -1,
+        "delay": 3
+      }
+    ],
+    "timing": 180,
+    "source": "design/production-batches/monsters/batch05/M041/base-v2.png",
+    "breathRig": "design/production-batches/monsters/batch05/M041/rig-evidence.json"
+  },
+  "M042": {
+    "eyes": [
+      {
+        "x": 156,
+        "y": 123,
+        "rx": 12,
+        "ry": 13
+      },
+      {
+        "x": 185,
+        "y": 122,
+        "rx": 6,
+        "ry": 9
+      }
+    ],
+    "gesture": [
+      {
+        "name": "near-ear-orient",
+        "x": 122,
+        "y": 82,
+        "rx": 18,
+        "ry": 24,
+        "dx": 1.4,
+        "dy": -1.2,
+        "delay": 0
+      },
+      {
+        "name": "far-ear-follow",
+        "x": 185,
+        "y": 86,
+        "rx": 12,
+        "ry": 18,
+        "dx": -0.6,
+        "dy": -0.8,
+        "delay": 2
+      },
+      {
+        "name": "tail-curiosity",
+        "x": 78,
+        "y": 144,
+        "rx": 18,
+        "ry": 23,
+        "dx": -1,
+        "dy": -0.8,
+        "delay": 3
+      }
+    ],
+    "acknowledge": [
+      {
+        "name": "cheek-answer",
+        "x": 145,
+        "y": 146,
+        "rx": 16,
+        "ry": 13,
+        "dx": 0.7,
+        "dy": 0.9,
+        "delay": 0
+      },
+      {
+        "name": "tail-tip-wag",
+        "x": 74,
+        "y": 140,
+        "rx": 15,
+        "ry": 19,
+        "dx": 1.7,
+        "dy": -0.8,
+        "delay": 2
+      }
+    ],
+    "timing": 110,
+    "source": "design/production-batches/monsters/batch05/M042/base-v2.png",
+    "breathRig": "design/production-batches/monsters/batch05/M042/rig-evidence.json"
+  },
+  "M043": {
+    "eyes": [
+      {
+        "x": 217,
+        "y": 111,
+        "rx": 4,
+        "ry": 3
+      }
+    ],
+    "gesture": [],
+    "acknowledge": [],
+    "timing": 170,
+    "source": "design/production-batches/monsters/batch05/M043/base-v2.png",
+    "breathRig": null
+  },
+  "M044": {
+    "eyes": [
+      {
+        "x": 207,
+        "y": 93,
+        "rx": 5,
+        "ry": 4
+      }
+    ],
+    "gesture": [
+      {
+        "name": "neck-mane-attention",
+        "x": 194,
+        "y": 117,
+        "rx": 14,
+        "ry": 20,
+        "dx": 0.7,
+        "dy": -0.9,
+        "delay": 0
+      },
+      {
+        "name": "tail-tendril-follow",
+        "x": 62,
+        "y": 127,
+        "rx": 20,
+        "ry": 20,
+        "dx": -1.2,
+        "dy": 0.8,
+        "delay": 3
+      }
+    ],
+    "acknowledge": [
+      {
+        "name": "neck-mane-answer",
+        "x": 196,
+        "y": 120,
+        "rx": 14,
+        "ry": 20,
+        "dx": 0.6,
+        "dy": 1.2,
+        "delay": 0
+      },
+      {
+        "name": "tail-plume-answer",
+        "x": 54,
+        "y": 168,
+        "rx": 20,
+        "ry": 18,
+        "dx": -0.8,
+        "dy": -1,
+        "delay": 3
+      }
+    ],
+    "timing": 220,
+    "source": "design/production-batches/monsters/batch05/M044/base-v2.png",
+    "breathRig": "design/production-batches/monsters/batch05/M044/rig-evidence.json"
+  },
+  "M045": {
+    "eyes": [
+      {
+        "x": 160,
+        "y": 112,
+        "rx": 11,
+        "ry": 12
+      },
+      {
+        "x": 184,
+        "y": 114,
+        "rx": 5,
+        "ry": 8
+      }
+    ],
+    "gesture": [
+      {
+        "name": "near-ear-alert",
+        "x": 115,
+        "y": 67,
+        "rx": 19,
+        "ry": 25,
+        "dx": -0.9,
+        "dy": -0.7,
+        "delay": 0
+      },
+      {
+        "name": "far-ear-delayed",
+        "x": 175,
+        "y": 66,
+        "rx": 13,
+        "ry": 23,
+        "dx": 0.7,
+        "dy": -0.5,
+        "delay": 3
+      }
+    ],
+    "acknowledge": [
+      {
+        "name": "chest-ruff-answer",
+        "x": 147,
+        "y": 154,
+        "rx": 20,
+        "ry": 18,
+        "dx": 0.4,
+        "dy": -1,
+        "delay": 0
+      },
+      {
+        "name": "tail-tip-answer",
+        "x": 88,
+        "y": 169,
+        "rx": 17,
+        "ry": 22,
+        "dx": -1,
+        "dy": 0.6,
+        "delay": 3
+      }
+    ],
+    "timing": 180,
+    "source": "design/production-batches/monsters/batch05/M045/base-v2.png",
+    "breathRig": "design/production-batches/monsters/batch05/M045/rig-evidence.json"
+  }
+}

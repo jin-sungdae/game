@@ -1,0 +1,216 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M045",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M045/base-v2.png",
+  "sourcePixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+  "reuse": "design/production-batches/action-followup/M002/rig-blink.cjs",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 16,
+    "frameDuration": 180,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "chest-ruff-answer",
+      "x": 147,
+      "y": 154,
+      "rx": 20,
+      "ry": 18,
+      "dx": 0.4,
+      "dy": -1,
+      "delay": 0
+    },
+    {
+      "name": "tail-tip-answer",
+      "x": 88,
+      "y": 169,
+      "rx": 17,
+      "ry": 22,
+      "dx": -1,
+      "dy": 0.6,
+      "delay": 3
+    }
+  ],
+  "eyes": [
+    {
+      "x": 160,
+      "y": 112,
+      "rx": 11,
+      "ry": 12
+    },
+    {
+      "x": 184,
+      "y": 114,
+      "rx": 5,
+      "ry": 8
+    }
+  ],
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+      "partAmounts": [
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "f63246443113eab9057cf80e4e1904eb484258898422d13e98caa90cc992f979",
+      "partAmounts": [
+        0.1,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "366f9ee98d9439f7b30a185a4d44acf2d01cea678caa0ff9152e5615ef85a8df",
+      "partAmounts": [
+        0.35,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "66dc3dd2ac21a7aba0bd5daadda9422c0de124348a0793d2681b56eeab0b9239",
+      "partAmounts": [
+        0.72,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "2044e896f777e3db27be84f3c1d8613d74bcbba426b73c02545cd89c5f1e00c2",
+      "partAmounts": [
+        1,
+        0.1
+      ],
+      "eyeClosure": 0.136
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "f3bdeae6954540e4f0646db98148c272897ca7a84cb32c403c4afe151eba6500",
+      "partAmounts": [
+        0.91,
+        0.35
+      ],
+      "eyeClosure": 0.51
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "0041643ca4a60dc9df8e7929a5160ccb3cd3904b39e458cb8386baafe43e29f1",
+      "partAmounts": [
+        0.7,
+        0.72
+      ],
+      "eyeClosure": 0.85
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "a8081911d3b096619fc6e974627a98344e6433b264f8bab24ef9e3bd1a8d5844",
+      "partAmounts": [
+        0.43,
+        1
+      ],
+      "eyeClosure": 0.748
+    },
+    {
+      "file": "interact_08.png",
+      "pixelSha256": "18983136a854e610f534760ced43a9fffc1460a56faa3bc44f2412bd108ab281",
+      "partAmounts": [
+        0.2,
+        0.91
+      ],
+      "eyeClosure": 0.3145
+    },
+    {
+      "file": "interact_09.png",
+      "pixelSha256": "08f203ad9ef9c33ca6f2b6464620cac6f0e3ddbee100ee4fb0d18dd242616011",
+      "partAmounts": [
+        0.07,
+        0.7
+      ],
+      "eyeClosure": 0.068
+    },
+    {
+      "file": "interact_10.png",
+      "pixelSha256": "d7ebacced654046cf54c3dd91ef68de60827c798b3ef9f7e300216f05240917e",
+      "partAmounts": [
+        0.015,
+        0.43
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "interact_11.png",
+      "pixelSha256": "98138b5392c0a72ed0e714a8a6d9f0b01eaa6e7e4a590cdcdc1b4e20938ff0d1",
+      "partAmounts": [
+        0,
+        0.2
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "interact_12.png",
+      "pixelSha256": "1107ea70de5f023db78716e0c8b8bb313a330271078520293ef90d52efbd25bf",
+      "partAmounts": [
+        0,
+        0.07
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "interact_13.png",
+      "pixelSha256": "d44fc85eca33a3b02e2fec79fcf48275c5a3766cc453c5ae8f7560844fe0b364",
+      "partAmounts": [
+        0,
+        0.015
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "interact_14.png",
+      "pixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+      "partAmounts": [
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "interact_15.png",
+      "pixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+      "partAmounts": [
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    }
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "NOT_VERIFIED",
+  "scope": "Stationary acknowledgement with delayed blink and local body gesture; no gameplay effect"
+}
