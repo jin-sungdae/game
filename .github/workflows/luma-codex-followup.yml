@@ -287,8 +287,59 @@ jobs:
           path: validated/change.patch
           if-no-files-found: error
 
-  publish:
+  review:
     needs: [prepare, validate]
+    environment: luma-codex-approval
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: controller
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.head }}
+          path: source
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-continuation-ticket
+          path: followup
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-codex-validated
+          path: validated
+      - name: Prepare independent review of the tested diff
+        run: |
+          python3 controller/scripts/ci/codex_review.py --ticket followup/ticket.json --patch validated/change.patch --prompt review-prompt.txt
+          sudo chown -R root:root controller followup validated review-prompt.txt
+          sudo chmod -R a-w controller followup validated review-prompt.txt
+          touch independent-review.json
+          sudo chown root:root "$GITHUB_WORKSPACE"
+          sudo chmod 755 "$GITHUB_WORKSPACE"
+      - name: Independent reviewer (fresh context, no developer report)
+        uses: openai/codex-action@bdf19a4a223ec2549a3e2274a0cf61556bc07675
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          permission-profile: ':read-only'
+          safety-strategy: drop-sudo
+          allow-bots: true
+          working-directory: source
+          prompt-file: review-prompt.txt
+          output-schema-file: controller/scripts/ci/codex_review.schema.json
+          output-file: independent-review.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: luma-independent-review
+          path: independent-review.json
+          if-no-files-found: error
+      - name: Bind review to exact source and tested patch
+        run: python3 controller/scripts/ci/codex_review.py --ticket followup/ticket.json --patch validated/change.patch --review independent-review.json
+
+  publish:
+    needs: [prepare, validate, review]
     environment: luma-codex-publish
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -311,6 +362,10 @@ jobs:
         with:
           name: luma-codex-validated
           path: validated
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-independent-review
+          path: review
       - name: Publication-only installation token (never supplied to PR code)
         id: app
         uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
@@ -329,10 +384,10 @@ jobs:
           GH_REPO: ${{ github.repository }}
         run: |
           gh auth setup-git
-          python3 controller/scripts/ci/codex_followup.py publish --repo "$GH_REPO" --source source --ticket followup/ticket.json --patch validated/change.patch
+          python3 controller/scripts/ci/codex_followup.py publish --repo "$GH_REPO" --source source --ticket followup/ticket.json --patch validated/change.patch --review review/independent-review.json
 
   finalize:
-    needs: [prepare, analyze, authorize, implement, validate, publish]
+    needs: [prepare, analyze, authorize, implement, validate, review, publish]
     if: always() && needs.prepare.outputs.selected == 'true' && needs.prepare.outputs.live == 'true' && needs.publish.result != 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 5

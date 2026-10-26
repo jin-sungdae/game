@@ -108,7 +108,7 @@ def reserve(state, analysis, run_id, now):
     require(root['attempts'] < min(POLICY['maxRootAttempts'], repair_gate.AUTO_REVIEW_MAX_ITERATIONS), 'REPAIR_LIMIT')
     day = datetime.fromtimestamp(now, timezone.utc).date().isoformat()
     budget = state['days'].setdefault(day, {'sessions': 0, 'modelInvocations': 0})
-    require(budget['sessions'] < POLICY['maxDailySessions'] and budget['modelInvocations'] + 2 <= POLICY['maxDailyModelInvocations'], 'DAILY_API_BUDGET')
+    require(budget['sessions'] < POLICY['maxDailySessions'] and budget['modelInvocations'] + 3 <= POLICY['maxDailyModelInvocations'], 'DAILY_API_BUDGET')
     choices = [c for c in candidates(analysis, lineage['root']) if c['id'] not in state['tasks']]
     require(choices, 'NO_UNFINISHED_AUTOMATABLE_TASK')
     root['attempts'] = max(root['attempts'], analysis['ledgerSummary']['repairIterations'])
@@ -116,7 +116,7 @@ def reserve(state, analysis, run_id, now):
     require(gate.get('dispatch') is True, 'REPAIR_LIMIT')
     root['attempts'] = gate['reserved_iteration']  # Every attempt is charged, including model failures.
     budget['sessions'] += 1
-    budget['modelInvocations'] += 2  # Reserve both calls in advance, never refund on failure.
+    budget['modelInvocations'] += 3  # Reserve analysis, development and independent review calls in advance, never refund on failure.
     ticket = {'key': key, 'pr': pr, 'head': head, 'base': analysis['base'], 'baseRef': analysis['baseRef'],
               'root': lineage['root'], 'depth': lineage['depth'], 'runId': str(run_id),
               'status': 'ANALYZING', 'startedAt': now, 'expiresAt': now + POLICY['maxLeaseMinutes'] * 60,
@@ -285,6 +285,7 @@ def main():
     parser.add_argument('--output', type=Path, default=Path('followup'))
     parser.add_argument('--ticket', type=Path)
     parser.add_argument('--proposal', type=Path)
+    parser.add_argument('--review', type=Path)
     parser.add_argument('--source', type=Path)
     parser.add_argument('--patch', type=Path)
     parser.add_argument('--dry-run', action='store_true')
@@ -376,6 +377,9 @@ def main():
         check_identity(api, current)
         authorize(state, ticket['key'], args.run_id, json.loads(args.proposal.read_text()))
     elif args.command == 'publish':
+        from codex_review import verify
+        require(args.review is not None, 'INDEPENDENT_REVIEW_REQUIRED')
+        verify(json.loads(args.review.read_text()), current, args.patch.read_bytes())
         pr = check_identity(api, current)
         require(current['status'] == 'IMPLEMENTING', 'INVALID_TRANSITION')
         require(int(datetime.now(timezone.utc).timestamp()) < current['expiresAt'], 'LEASE_EXPIRED')
