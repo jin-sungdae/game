@@ -1,0 +1,354 @@
+name: LUMA Codex AI follow-up (approval gated)
+
+on:
+  workflow_run:
+    workflows: [LUMA PR watch (15 min)]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Dry-run by default; implement requires enrollment, secrets and protected environments'
+        type: choice
+        options: [dry-run, implement]
+        default: dry-run
+      test_pr:
+        description: 'Optional single pilot PR; implement requires matching LUMA_CODEX_TEST_PR and environment approval'
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+  pull-requests: read
+  actions: read
+  checks: read
+  statuses: read
+
+# A single coordinator and durable CAS lock also protect against manual overlapping runs.
+concurrency:
+  group: luma-codex-continuation
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    if: >-
+      (github.event_name == 'workflow_dispatch' && github.ref_name == github.event.repository.default_branch) ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+      pull-requests: read
+      actions: read
+      checks: read
+      statuses: read
+    outputs:
+      selected: ${{ steps.prepare.outputs.selected }}
+      head: ${{ steps.prepare.outputs.head }}
+      live: ${{ steps.mode.outputs.live }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: controller
+          persist-credentials: false
+      - id: mode
+        env:
+          REQUESTED_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || vars.LUMA_CODEX_MODE || 'dry-run' }}
+          ENABLED: ${{ vars.LUMA_CODEX_ENABLED }}
+          EVENT_NAME: ${{ github.event_name }}
+          TEST_PR: ${{ inputs.test_pr }}
+          APPROVED_TEST_PR: ${{ vars.LUMA_CODEX_TEST_PR }}
+        run: |
+          live=false
+          if [[ "$REQUESTED_MODE" == "implement" && "$ENABLED" == "true" ]]; then live=true; fi
+          if [[ "$EVENT_NAME" == "workflow_dispatch" && "$REQUESTED_MODE" == "implement" && "$TEST_PR" =~ ^[1-9][0-9]*$ && "$TEST_PR" == "$APPROVED_TEST_PR" ]]; then live=true; fi
+          echo "live=$live" >> "$GITHUB_OUTPUT"
+      - name: Existing watcher checkpoint (never trust a PR artifact as authorization)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 controller/scripts/ci/pr_pipeline_restore.py --repo "$GH_REPO" --destination snapshot --require-existing
+      - id: prepare
+        name: Recheck CI/source and atomically reserve a bounded attempt
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          LIVE: ${{ steps.mode.outputs.live }}
+          TEST_PR: ${{ inputs.test_pr }}
+        run: |
+          args=()
+          if [[ -n "$TEST_PR" ]]; then
+            [[ "$TEST_PR" =~ ^[1-9][0-9]*$ ]] || exit 1
+            args+=(--pr "$TEST_PR")
+          fi
+          if [[ "$LIVE" != "true" ]]; then args+=(--dry-run); fi
+          python3 controller/scripts/ci/codex_followup.py prepare --repo "$GH_REPO" --snapshot snapshot/state.json --output followup "${args[@]}"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: luma-continuation-ticket
+          path: followup/
+          if-no-files-found: error
+          retention-days: 30
+
+  analyze:
+    needs: prepare
+    if: needs.prepare.outputs.selected == 'true' && needs.prepare.outputs.live == 'true'
+    environment: luma-codex-approval
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: controller
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.head }}
+          path: source
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: luma-continuation-ticket
+          path: followup
+      - name: Protect trusted instructions from PR code
+        run: |
+          sudo chown -R root:root controller followup
+          sudo chmod -R a-w controller followup
+          touch proposal.json
+          sudo chown root:root "$GITHUB_WORKSPACE"
+          sudo chmod 755 "$GITHUB_WORKSPACE"
+      - name: Codex deep analysis (no GitHub write credential)
+        uses: openai/codex-action@bdf19a4a223ec2549a3e2274a0cf61556bc07675 # v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          permission-profile: ':read-only'
+          safety-strategy: drop-sudo
+          allow-bots: true
+          working-directory: source
+          prompt-file: followup/analysis-prompt.txt
+          output-schema-file: controller/scripts/ci/codex_analysis.schema.json
+          output-file: proposal.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: luma-ai-analysis
+          path: proposal.json
+          if-no-files-found: error
+          retention-days: 30
+
+  authorize:
+    needs: [prepare, analyze]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: read
+      actions: read
+      checks: read
+      statuses: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: controller
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-continuation-ticket
+          path: followup
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-ai-analysis
+          path: analysis
+      - name: Validate AI task against trusted budget, scope and current HEAD
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 controller/scripts/ci/codex_followup.py authorize --repo "$GH_REPO" --ticket followup/ticket.json --proposal analysis/proposal.json
+
+  implement:
+    needs: [prepare, authorize]
+    runs-on: ubuntu-latest
+    environment: luma-codex-approval
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: controller
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.head }}
+          path: source
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-continuation-ticket
+          path: followup
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-ai-analysis
+          path: analysis
+      - name: Protect controller and supply immutable task data
+        run: |
+          cp followup/ticket.json /tmp/luma-ticket.json
+          cp analysis/proposal.json /tmp/luma-proposal.json
+          sudo chown -R root:root controller followup analysis /tmp/luma-ticket.json /tmp/luma-proposal.json
+          sudo chmod -R a-w controller followup analysis /tmp/luma-ticket.json /tmp/luma-proposal.json
+          mkdir proposal
+          touch implementation.txt
+          sudo chown root:root "$GITHUB_WORKSPACE"
+          sudo chmod 755 "$GITHUB_WORKSPACE"
+      - name: Codex implementation (one reserved task, no push)
+        uses: openai/codex-action@bdf19a4a223ec2549a3e2274a0cf61556bc07675
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          permission-profile: ':workspace'
+          safety-strategy: drop-sudo
+          allow-bots: true
+          working-directory: source
+          prompt-file: followup/implement-prompt.txt
+          output-file: implementation.txt
+      - name: Export guarded patch including new files
+        env:
+          GH_REPO: ${{ github.repository }}
+        run: python3 controller/scripts/ci/codex_followup.py export --repo "$GH_REPO" --source source --ticket followup/ticket.json --output proposal
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: luma-codex-proposal
+          path: |
+            proposal/change.patch
+            implementation.txt
+          if-no-files-found: error
+          retention-days: 30
+
+  validate:
+    needs: [prepare, implement]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: controller
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.head }}
+          path: source
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-continuation-ticket
+          path: followup
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-codex-proposal
+          path: proposal
+      - name: Independently apply and verify patch
+        env:
+          GH_REPO: ${{ github.repository }}
+        run: |
+          sudo chown -R root:root controller followup proposal
+          sudo chmod -R a-w controller followup proposal
+          python3 controller/scripts/ci/codex_followup.py verify --repo "$GH_REPO" --source source --ticket followup/ticket.json --patch proposal/proposal/change.patch --output validated
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Protect validated patch and remove elevation before proposal tests
+        run: |
+          sudo chown -R root:root validated
+          sudo chmod -R a-w validated
+          mkdir tested
+          sudo chown root:root "$GITHUB_WORKSPACE"
+          sudo chmod 755 "$GITHUB_WORKSPACE"
+          sudo chmod 000 /usr/bin/sudo
+      - name: Fixed test commands, no AI shell interpolation, no secrets
+        working-directory: source
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run build
+          npm run test:animation
+          npm run test:presentation
+          PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests/automation -v
+          python3 ../controller/scripts/ci/codex_followup_tests.py
+          git diff --check
+      - name: Ensure tests did not alter the proposal
+        env:
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 controller/scripts/ci/codex_followup.py export --repo "$GH_REPO" --source source --ticket followup/ticket.json --output tested
+          cmp tested/change.patch validated/change.patch
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: luma-codex-validated
+          path: validated/change.patch
+          if-no-files-found: error
+
+  publish:
+    needs: [prepare, validate]
+    environment: luma-codex-publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: controller
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ needs.prepare.outputs.head }}
+          path: source
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-continuation-ticket
+          path: followup
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-codex-validated
+          path: validated
+      - name: Publication-only installation token (never supplied to PR code)
+        id: app
+        uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
+        with:
+          app-id: ${{ vars.LUMA_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.LUMA_AUTOMATION_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+          permission-issues: write
+          permission-actions: read
+          permission-checks: read
+          permission-statuses: read
+      - name: Revalidate and publish stacked Draft only
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh auth setup-git
+          python3 controller/scripts/ci/codex_followup.py publish --repo "$GH_REPO" --source source --ticket followup/ticket.json --patch validated/change.patch
+
+  finalize:
+    needs: [prepare, analyze, authorize, implement, validate, publish]
+    if: always() && needs.prepare.outputs.selected == 'true' && needs.prepare.outputs.live == 'true' && needs.publish.result != 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: luma-continuation-ticket
+          path: followup
+      - name: Charge failed attempt; retain ambiguous publication locks
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 scripts/ci/codex_followup.py finish --repo "$GH_REPO" --ticket followup/ticket.json --result FAILED
