@@ -4,13 +4,23 @@ on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
+    inputs:
+      bootstrap:
+        description: 'First deployment only: initialize checkpoint after checking no prior pipeline state exists'
+        type: boolean
+        default: false
   pull_request_target:
     types: [opened, reopened, synchronize, closed, ready_for_review, converted_to_draft]
+  workflow_run:
+    workflows: [LUMA PR Validation]
+    types: [completed]
 
 permissions:
   contents: read
   pull-requests: read
   actions: read
+  checks: read
+  statuses: read
 
 concurrency:
   group: luma-pr-watch
@@ -18,50 +28,42 @@ concurrency:
 
 jobs:
   snapshot:
+    # Only trusted default-branch workflow/controller; never execute PR code with this token.
+    if: >-
+      (github.event_name != 'pull_request_target' || github.event.pull_request.base.ref == github.event.repository.default_branch) &&
+      (github.event_name != 'workflow_dispatch' || github.ref_name == github.event.repository.default_branch)
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: Capture PR heads and compare with previous snapshot
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - name: Restore checkpoint and generate review prompts (execution disabled)
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
+          BOOTSTRAP: ${{ github.event_name == 'workflow_dispatch' && inputs.bootstrap }}
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p pr-watch
-          gh api --paginate "repos/$GH_REPO/pulls?state=all&per_page=100" \
-            --jq '.[] | {number, state, draft, head_sha: .head.sha, base: .base.ref, updated_at, url: .html_url}' \
-            | jq -s 'sort_by(.number)' > pr-watch/current.json
-          previous=""
-          while IFS= read -r run_id; do
-            if gh run download "$run_id" -n luma-pr-snapshot -D pr-watch/previous-download >/dev/null 2>&1; then
-              previous="pr-watch/previous-download/current.json"
-              break
-            fi
-          done < <(gh run list --workflow "luma-pr-watch-15min.yml" --status success --limit 10 --json databaseId --jq '.[].databaseId')
-          if [[ -n "$previous" && -f "$previous" ]]; then
-            jq -n --slurpfile current pr-watch/current.json --slurpfile previous "$previous" '
-              ($previous[0] | map({key:(.number|tostring),value:.}) | from_entries) as $old |
-              [$current[0][] | . as $pr | ($old[($pr.number|tostring)] // null) as $prior |
-               select($prior == null or $prior.head_sha != $pr.head_sha or $prior.state != $pr.state or $prior.draft != $pr.draft) |
-               {number,head_sha,state,draft,url,change:(if $prior == null then "new" else "updated" end)}]
-            ' > pr-watch/changes.json
-          else
-            echo '[]' > pr-watch/changes.json
-            echo "No previous snapshot available; establishing baseline." >> "$GITHUB_STEP_SUMMARY"
-          fi
-          count=$(jq 'length' pr-watch/changes.json)
-          echo "### LUMA PR watch" >> "$GITHUB_STEP_SUMMARY"
-          echo "Changed PRs since previous successful snapshot: $count" >> "$GITHUB_STEP_SUMMARY"
-          jq -r '.[] | "- PR #\(.number) (\(.change)): \(.head_sha) — \(.url)"' pr-watch/changes.json >> "$GITHUB_STEP_SUMMARY"
-      - name: Save snapshot and changes
-        uses: actions/upload-artifact@v4
+          restore_args=(--require-existing)
+          if [[ "$BOOTSTRAP" == "true" ]]; then restore_args=(); fi
+          previous=$(python3 scripts/ci/pr_pipeline_restore.py --repo "$GH_REPO" --destination previous-pipeline "${restore_args[@]}")
+          args=()
+          if [[ -n "$previous" ]]; then args+=(--previous "$previous"); fi
+          python3 scripts/ci/pr_pipeline.py --repo "$GH_REPO" --output pr-watch "${args[@]}"
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          r=json.loads(Path('pr-watch/result.json').read_text())
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:
+              f.write(f"LUMA PR watch: {r['observed']} PRs, {r['changes']} changes, {len(r['generated'])} prompts. Codex execution OFF; automatic merge OFF.\n")
+          PY
+      - name: Save atomic checkpoint, changes, source evidence and Korean prompts
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: luma-pr-snapshot
-          path: pr-watch/current.json
-          retention-days: 14
-      - name: Save change report
-        uses: actions/upload-artifact@v4
-        with:
-          name: luma-pr-changes
-          path: pr-watch/changes.json
-          retention-days: 14
+          name: luma-pr-pipeline
+          path: pr-watch/
+          retention-days: 90
+          if-no-files-found: error
