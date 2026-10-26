@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "repairIterations": 1,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "baseCandidates": 10,
+  "idleCandidateClips": 10,
+  "idleCandidateFrames": 60,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotionReview": "NOT_VERIFIED",
+  "gui": "NOT_VERIFIED",
+  "prompts": {
+    "M011": {
+      "tool": "built-in image_gen",
+      "subject": "white-blue sky fox",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    },
+    "M012": {
+      "tool": "built-in image_gen",
+      "subject": "blue orange-accented crested bird",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    },
+    "M013": {
+      "tool": "built-in image_gen",
+      "subject": "rounded cloud bird",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    },
+    "M014": {
+      "tool": "built-in image_gen",
+      "subject": "gold-antler winged deer-dragon",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    },
+    "M015": {
+      "tool": "built-in image_gen",
+      "subject": "large shaggy sky beast",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    },
+    "M016": {
+      "tool": "built-in image_gen",
+      "subject": "small blue yellow-beaked sky creature",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    },
+    "M017": {
+      "tool": "built-in image_gen",
+      "subject": "long-bodied gliding creature",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    },
+    "M018": {
+      "tool": "built-in image_gen",
+      "subject": "slender blue-gold deer-dragon",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    },
+    "M019": {
+      "tool": "built-in image_gen",
+      "subject": "pink fluffy biped",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    },
+    "M020": {
+      "tool": "built-in image_gen",
+      "subject": "compact cloud gorilla",
+      "constraints": "Faithful individual redraw from supplied concept; neutral right-facing grounded pose, full opaque body, generous square margins, transparent alpha; no crop, scenery, shadow, glow, particles or labels."
+    }
+  },
+  "identityReview": [
+    {
+      "conceptId": "M011",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M012",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M013",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M014",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M015",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M016",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M017",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M018",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M019",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M020",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false,
+      "reviewRequired": "Compare existing 30 identities including provisional designs; blue/white palette and bird/fox themes are not proof of identity.",
+      "anatomyApproval": "HUMAN_REVIEW_REQUIRED"
+    }
+  ]
+}
