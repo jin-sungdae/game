@@ -1,0 +1,148 @@
+{
+  "sessionId": "LUMA-ASSET-06",
+  "automated": "VALIDATION_FAILED",
+  "errors": [
+    "BASE_RETURN_DISCONTINUITY"
+  ],
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "611613323f4f66df4647cfdc0b9409632bc9f0944c596e2d9bc270de553cfbb3",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.6843719482421875
+    },
+    {
+      "file": "interact_01.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "19bb6a12c835a9d2654cac899e91c29fd6b663f39b9f0b631cdf21f990b8ea78",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.7521018981933594
+    },
+    {
+      "file": "interact_02.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "180c7e555bd41cb2dd2ef9ae75aaeacfdbd6aa93d2db838bd831104a59b7790c",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.8846435546875
+    },
+    {
+      "file": "interact_03.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "06b59f7e6ba00d636fd832f616ff2f802cf87d2176b49b37392d28f9ae72e6dc",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 1.1014213562011719
+    },
+    {
+      "file": "interact_04.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "7230ee91a688925f4a989a04a33d7d5bcbfc44ec7780a2686fe7b645b00d9879",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 1.2397918701171875
+    },
+    {
+      "file": "interact_05.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "b4084fc25ff8a57eefd47f95634c4dbcba98a4f54cb287f62b001b7e5a0f2b80",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 1.1854133605957031
+    },
+    {
+      "file": "interact_06.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "47c9fce4e067304d8f9465938d7abe15889b80500f1b422508b31192b1478fbe",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.9547767639160156
+    },
+    {
+      "file": "interact_07.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "8c6e80a6c9d4bb0d7f9c40ab8f938419768787f5c9ecd4048d0b018e676ebab2",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.7350311279296875
+    }
+  ],
+  "uniquePixelHashes": 8,
+  "adjacentMeanAbsoluteByteDifferences": [
+    0.07111740112304688,
+    0.13949203491210938,
+    0.22856521606445312,
+    0.15055465698242188,
+    0.12681198120117188,
+    0.246124267578125,
+    0.22805404663085938
+  ],
+  "maxEndpointDifferenceFromBase": 0.7350311279296875,
+  "continuityScope": "Quantitative <=2 byte mean adjacent delta, <=0.15 endpoint delta; visual acceptance separate",
+  "appearance": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "productionEligible": false,
+  "nativeGui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "sourceSha256": "ab27a810759fbc73731fb42fd6cd292e009ce25b5b54f197c4234dcff3e41a95"
+}

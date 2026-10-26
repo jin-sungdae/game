@@ -1,0 +1,19 @@
+{
+  "sessionId": "LUMA-ASSET-06",
+  "automated": "VALIDATION_FAILED",
+  "errors": [
+    "INCOMPLETE_CLIP_RIG_REJECTED_NO_RETRY"
+  ],
+  "frames": [],
+  "uniquePixelHashes": 0,
+  "adjacentMeanAbsoluteByteDifferences": [],
+  "maxEndpointDifferenceFromBase": null,
+  "continuityScope": "Quantitative <=2 byte mean adjacent delta, <=0.15 endpoint delta; visual acceptance separate",
+  "appearance": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "productionEligible": false,
+  "nativeGui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "sourceSha256": "6f02d3328e7d8a5125ace7e4a91fd7a9d9429304846a9d90000dfe4289beba5a"
+}
