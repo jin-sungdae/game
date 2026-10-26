@@ -1,0 +1,941 @@
+{
+  "sessionId": "LUMA-ASSET-14",
+  "baseCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "status": "BLOCKED_HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairsPerformed": 0,
+  "productionApproved": false,
+  "runtimeConnected": false,
+  "monsters": [
+    {
+      "conceptId": "M051",
+      "basePath": "design/production-batches/monsters/batch06/M051/base-v2.png",
+      "baseValidation": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "0b831453225dfbbaa5821e09ed61de6acdbe79db9b30b8ef628666f2e8e9f2ff",
+        "sha256": "4e600cf478a9a732a0a6fa135c4a95743c932b3a9c3e5a67781e37ad3de5c595",
+        "bounds": [
+          48,
+          33,
+          212,
+          223
+        ]
+      },
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "gentle"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "GROUND"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "brief inspections between long rests; attention centers on the sand habitat of the block automaton",
+        "preparation": "tilt toward the stimulus before leaving rest; preserve the block automaton silhouette",
+        "transition": "ease into rest after the excursion; recover the block automaton resting anatomy",
+        "reaction": "observe a nearby cursor without chasing it; keep the block automaton characteristic gesture"
+      },
+      "observedFormProposal": "block automaton",
+      "productionSpeciesId": null,
+      "runtimeApproved": false,
+      "existingRig": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "VALIDATION_FAILED",
+          "reason": "신규 독립 원본: 1774x887, detached Alpha, Bounds/Anchor 불일치. 보정 및 재시도 없음.",
+          "completed": false
+        },
+        {
+          "action": "BREATH",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "BLINK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "LOOK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "MOVE",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "TURN",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "REST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "SLEEP",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "INTERACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "ATTACK",
+          "existingStatus": "VALIDATION_FAILED",
+          "sessionStatus": "BLOCKED",
+          "reason": "Raw source detached Alpha 1554 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음. SERVER_CONTRACT_REQUIRED: skill identity 미확정.",
+          "completed": false
+        },
+        {
+          "action": "HIT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "VICTORY",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "DEFEAT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        }
+      ],
+      "newRawPngs": 1,
+      "new256Pngs": 0,
+      "newCompletedClips": 0
+    },
+    {
+      "conceptId": "M052",
+      "basePath": "design/production-batches/monsters/batch06/M052/base-v2.png",
+      "baseValidation": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "7a169835b1945bf0e9c1bbbc37bb3723fd9c8f7eab7e50ce2b4eadd5d52ce207",
+        "sha256": "ecbcef8c287310628b349c30f326d72b7a277824a292e2b267e92eee4872516c",
+        "bounds": [
+          30,
+          29,
+          230,
+          221
+        ]
+      },
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "curious"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "GROUND"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "frequent short excursions with observation pauses; attention centers on the sand habitat of the small scorpion",
+        "preparation": "scan both sides before committing direction; preserve the small scorpion silhouette",
+        "transition": "insert a look-around beat between movement and rest; recover the small scorpion resting anatomy",
+        "reaction": "approach once then respect personal space; keep the small scorpion characteristic gesture"
+      },
+      "observedFormProposal": "small scorpion",
+      "productionSpeciesId": null,
+      "runtimeApproved": false,
+      "existingRig": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "VALIDATION_FAILED",
+          "reason": "신규 독립 원본: 1774x887, detached Alpha, Bounds/Anchor 불일치. 보정 및 재시도 없음.",
+          "completed": false
+        },
+        {
+          "action": "BREATH",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "BLINK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "LOOK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "MOVE",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "TURN",
+          "existingStatus": "VALIDATION_FAILED",
+          "sessionStatus": "BLOCKED",
+          "reason": "Raw source detached Alpha 986 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "REST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "SLEEP",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "INTERACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "ATTACK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음. SERVER_CONTRACT_REQUIRED: skill identity 미확정.",
+          "completed": false
+        },
+        {
+          "action": "HIT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "VICTORY",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "DEFEAT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "RIG_REQUIRED: 해당 종의 분절 관절 리깅 및 동작 keypose 없음. IDLE 원본도 검증 실패; 공용 soft-body 리깅으로 대체하지 않음.",
+          "completed": false
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        }
+      ],
+      "newRawPngs": 1,
+      "new256Pngs": 0,
+      "newCompletedClips": 0
+    },
+    {
+      "conceptId": "M053",
+      "basePath": "design/production-batches/monsters/batch06/M053/base-v2.png",
+      "baseValidation": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "753596ea60e07c80c89cdc8f5dde5ee1c86bc9ecab8decd24abc186dd045bd13",
+        "sha256": "8907c5f7155d785925d7ccb025fb4c5699073ca8eec0a180e0af4e39dedbae0a",
+        "bounds": [
+          73,
+          19,
+          194,
+          235
+        ]
+      },
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "cautious"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "JUMP"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "rare advances after repeated scans; attention centers on the sand habitat of the desert fox",
+        "preparation": "lower the body before starting; preserve the desert fox silhouette",
+        "transition": "settle the body before returning to idle; recover the desert fox resting anatomy",
+        "reaction": "retreat slightly then resume watching; keep the desert fox characteristic gesture"
+      },
+      "observedFormProposal": "desert fox",
+      "productionSpeciesId": null,
+      "runtimeApproved": false,
+      "existingRig": "design/production-batches/monsters/batch06/M053/rig-idle.cjs",
+      "actions": [
+        {
+          "action": "IDLE",
+          "existingStatus": "ANIMATION_IN_PROGRESS",
+          "sessionStatus": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 6프레임 후보 유지; 재제작하지 않음. 자연스러움 및 정체성 미승인.",
+          "completed": false
+        },
+        {
+          "action": "BREATH",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "BLINK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "LOOK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "MOVE",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "TURN",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "REST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "SLEEP",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "INTERACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "ATTACK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED SERVER_CONTRACT_REQUIRED: skill identity 미확정.",
+          "completed": false
+        },
+        {
+          "action": "HIT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "VICTORY",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "DEFEAT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Desert fox proposal versus tall upright ears, short muzzle and short fluffy tail BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        }
+      ],
+      "newRawPngs": 0,
+      "new256Pngs": 0,
+      "newCompletedClips": 0
+    },
+    {
+      "conceptId": "M054",
+      "basePath": "design/production-batches/monsters/batch06/M054/base-v2.png",
+      "baseValidation": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "6761807e87e9e859cac74232d516b32f372f465039e3fd8a3194f31ccec024ac",
+        "sha256": "3f2f8254f0528d77a9a240cbee1d2f6b54378cb53becd28e5ec63627a5b59e73",
+        "bounds": [
+          34,
+          24,
+          234,
+          228
+        ]
+      },
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "patient"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "GROUND"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "long pauses interrupted by deliberate steps; attention centers on the sand habitat of the armored sand guardian",
+        "preparation": "shift weight before advancing; preserve the armored sand guardian silhouette",
+        "transition": "complete weight transfer before changing action; recover the armored sand guardian resting anatomy",
+        "reaction": "turn slowly toward interaction without displacement; keep the armored sand guardian characteristic gesture"
+      },
+      "observedFormProposal": "armored sand guardian",
+      "productionSpeciesId": null,
+      "runtimeApproved": false,
+      "existingRig": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "BREATH",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "BLINK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "LOOK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "MOVE",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "TURN",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "REST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "SLEEP",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "INTERACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "ATTACK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED SERVER_CONTRACT_REQUIRED: skill identity 미확정.",
+          "completed": false
+        },
+        {
+          "action": "HIT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "VICTORY",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "DEFEAT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Armored sand guardian proposal versus coiled hooded serpent BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        }
+      ],
+      "newRawPngs": 0,
+      "new256Pngs": 0,
+      "newCompletedClips": 0
+    },
+    {
+      "conceptId": "M055",
+      "basePath": "design/production-batches/monsters/batch06/M055/base-v2.png",
+      "baseValidation": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "b7f4e14f0319ef7ac887db29a985dfb8def20a2d2c1cdc2b3d3586073bb1589b",
+        "sha256": "4118b54838ad27afeaf3992bd8c77680d86a8ee69a7ec62623f7130d8609ffa1",
+        "bounds": [
+          24,
+          49,
+          237,
+          208
+        ]
+      },
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "proud"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "JUMP"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "short activity after a stable idle period; attention centers on the sand habitat of the curled sand beast",
+        "preparation": "hold the silhouette still before a small start; preserve the curled sand beast silhouette",
+        "transition": "hold the terminal pose before relaxing; recover the curled sand beast resting anatomy",
+        "reaction": "hold position and answer with a small gesture; keep the curled sand beast characteristic gesture"
+      },
+      "observedFormProposal": "curled sand beast",
+      "productionSpeciesId": null,
+      "runtimeApproved": false,
+      "existingRig": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "BREATH",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "BLINK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "LOOK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "MOVE",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "TURN",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "REST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "SLEEP",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "INTERACT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "ATTACK",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED SERVER_CONTRACT_REQUIRED: skill identity 미확정.",
+          "completed": false
+        },
+        {
+          "action": "HIT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "VICTORY",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "DEFEAT",
+          "existingStatus": "ASSET_REQUIRED",
+          "sessionStatus": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: Identity review: Curled sand beast proposal versus stone segmented biped with two arms BASE; no identity or artwork change; HUMAN_REVIEW_REQUIRED",
+          "completed": false
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "GROUND 제안 및 날개 없는 BASE: 비행/부유 계약 없음.",
+          "completed": false
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "종/이동 계약과 관절 리깅 및 선행 동작이 확정되지 않음.",
+          "completed": false
+        }
+      ],
+      "newRawPngs": 0,
+      "new256Pngs": 0,
+      "newCompletedClips": 0
+    }
+  ],
+  "scope": "담당 5종의 기계 판독용 감사 결과. 공유 Completion Ledger는 변경하지 않음.",
+  "integrationRequests": [
+    {
+      "target": "Completion Ledger",
+      "request": "담당 5종의 본 세션 상태 및 새 실패 원본 경로를 검토 후 통합. 기존 3/3 및 실패 기록 보존."
+    },
+    {
+      "target": "Species Identity",
+      "request": "M053 desert fox / 토끼형 BASE, M054 armored guardian / 뱀형 BASE, M055 curled beast / 분절 이족형 BASE 불일치에 대한 사람 판단 필요."
+    },
+    {
+      "target": "Creature Review Catalog",
+      "request": "M051/M052 source-idle.png를 실패 원본으로 표시. rigged clip으로 등록하지 말 것."
+    },
+    {
+      "target": "Part Rigging",
+      "request": "M051 rigid shoulder/elbow/wrist, M052 tail/pincer hinge의 검수 가능한 분리 파트 필요. 기존 M053 호흡 warp를 갑각/석재에 재사용하지 말 것."
+    },
+    {
+      "target": "Animation Manifest / Production Registry / Runtime",
+      "request": "승인 전 변경 없음. 완성 Clip 0개이므로 연결 금지."
+    }
+  ],
+  "nextAction": "사람의 정체성 판단 및 분절 파트/원본 검토 후 독립 작업 가능 여부 재평가. 실패 후보의 자동 복구는 3/3 한도로 차단."
+}
