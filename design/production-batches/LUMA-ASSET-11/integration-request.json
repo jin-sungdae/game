@@ -1095,8 +1095,54 @@
       "id": "ASSET11-03",
       "request": "M036 BREATH/LOOK 16프레임의 외형·움직임·종 매핑 승인 후에만 Animation Manifest 및 Production Registry 연결 검토. 실패 41개 행동은 3/3 상태로 보존.",
       "status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "id": "ASSET11-04",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "request": "기존 PASS 후보의 BASE 복귀 연속성을 Review에서 별도 검수. BREATH 마지막→BASE 858픽셀, LOOK 79픽셀 차이. 기존 PNG PASS를 자연스러운 복귀 PASS로 해석하지 말 것. repair3/3 유지, 프레임 변경 없음.",
+      "evidence": "design/production-batches/LUMA-ASSET-11/continuation-continuity.json"
     }
   ],
   "nativeGui": "DEFERRED_GUI",
-  "remainingIndependentWork": "모든 21개 행동/종을 검토. 현 시점 남은 항목은 원본 실패, 신체 계약 또는 승인에 의존. 실패 재생성 및 승인 우회 없음."
+  "remainingIndependentWork": "모든 21개 행동/종을 검토. 현 시점 남은 항목은 원본 실패, 신체 계약 또는 승인에 의존. 실패 재생성 및 승인 우회 없음.",
+  "continuationReview": {
+    "verifiedSourceHead": "300693afd4f2fcb07dd71644c108ad2ce68f6077",
+    "newClips": 0,
+    "newFrames": 0,
+    "newPng": 0,
+    "all67PngPreserved": true,
+    "actionStatusCounts": {
+      "M036": {
+        "EXISTING_CANDIDATE_PRESERVED": 1,
+        "CANDIDATE_AUTOMATED_PASS": 2,
+        "VALIDATION_FAILED": 9,
+        "BLOCKED": 9
+      },
+      "M037": {
+        "BLOCKED": 21
+      },
+      "M038": {
+        "VALIDATION_FAILED": 16,
+        "BLOCKED": 2,
+        "NOT_APPLICABLE_PROPOSED": 3
+      },
+      "M039": {
+        "EXISTING_CANDIDATE_PRESERVED": 1,
+        "VALIDATION_FAILED": 16,
+        "BLOCKED": 1,
+        "NOT_APPLICABLE_PROPOSED": 3
+      },
+      "M040": {
+        "EXISTING_CANDIDATE_PRESERVED": 1,
+        "BLOCKED": 20
+      }
+    },
+    "independentWorkConclusion": "현재 제작 가능한 독립 행동 없음. 기존 실패를 다른 Rig/새 세션으로 재시도하면 3/3 우회. M036 이동 계열 및 M037/M040은 신체 계약/Identity 승인 전 보류. M038 JUMP/RECOVERY는 유효 관절 전이 포즈와 착지/복귀 계약 필요.",
+    "identityCauses": {
+      "M036": "원본 Catalog는 FLYING 제안이나 기존 BASE에는 날개 또는 승인된 비행 기제가 없다. 비행/이동 계약을 임의로 지상으로 바꾸지 않음.",
+      "M037": "원본 Catalog lava gorilla 직립 형상과 기존 BASE의 사족 갑옷형 형상이 다름. 기존 VALIDATION_FAILED 복구 금지.",
+      "M040": "원본 Catalog flame-tail fox와 기존 BASE의 긴 목·가느다란 다리·발굽 유사 발 형태가 다름. Species mapping 승인 전 제작/등록 보류."
+    },
+    "nextResumePoint": "로컬 Release Gate 및 새 evidence commit CI 완료 확인. 이후 ASSET11-02 Identity 결정과 실패 복구의 명시 승인 전까지 신규 제작 보류. M036 BREATH/LOOK BASE 복귀는 ASSET11-04로 사람 검토."
+  }
 }

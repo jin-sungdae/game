@@ -19,13 +19,14 @@
     {
       "name": "asset-tests",
       "category": "AUTOMATED",
-      "status": "RUNNING_NOT_VERIFIED",
-      "evidence": "/tmp/luma-asset-11-assets-initial.log"
+      "status": "INTERRUPTED_SUPERSEDED",
+      "evidence": "/tmp/luma-asset-11-assets-initial.log",
+      "reason": "이전 시작시점 불명확 검증을 이 세션에서 중단하고 300693a clean HEAD로 Release Gate 재실행. 코드 실패 판정 아님."
     },
     {
       "name": "release-gate",
       "category": "AUTOMATED",
-      "status": "RUNNING_NOT_VERIFIED",
+      "status": "INTERRUPTED_SUPERSEDED",
       "completedSteps": [
         "frontend-build",
         "animation-content",
@@ -33,7 +34,8 @@
       ],
       "currentStep": "asset-tests",
       "evidence": "/tmp/luma-asset-11-release.log",
-      "scope": "Started before commit; candidate assets unchanged since validation. Not a clean-HEAD release approval."
+      "scope": "Started before commit; candidate assets unchanged since validation. Not a clean-HEAD release approval.",
+      "reason": "이전 시작시점 불명확 검증을 이 세션에서 중단하고 300693a clean HEAD로 Release Gate 재실행. 코드 실패 판정 아님."
     },
     {
       "name": "appearance-natural-motion",
@@ -57,5 +59,69 @@
   "repairIterations": 3,
   "repairLimit": 3,
   "nextAction": "HUMAN_REVIEW_REQUIRED",
-  "releaseReady": false
+  "releaseReady": false,
+  "historicalSnapshot": true,
+  "continuation": {
+    "verifiedSourceHead": "300693afd4f2fcb07dd71644c108ad2ce68f6077",
+    "github": {
+      "runId": 40313643378,
+      "url": "https://github.com/jin-sungdae/game/actions/runs/40313643378",
+      "status": "SUCCESS",
+      "jobs": [
+        {
+          "name": "server-java",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "desktop-static",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "macos-native",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "review-result",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ],
+      "assetTests": 230,
+      "reviewResult": "PASS / READY_FOR_HUMAN_REVIEW; human_review_required=true"
+    },
+    "local": {
+      "frontendBuild": "PASS",
+      "animationRegression": {
+        "status": "PASS",
+        "tests": 236
+      },
+      "rust": {
+        "status": "PASS",
+        "passed": 189,
+        "ignored": 16
+      },
+      "clippy": "PASS",
+      "javaPostgreSQL": {
+        "status": "PASS",
+        "tests": 346,
+        "postgresVersion": "16.9",
+        "scope": "새 격리 DB; fresh/offline/progress/restored; DB 중단 503; 비밀정보 비노출; 임시 서버 종료"
+      },
+      "releaseGate": {
+        "status": "RUNNING_NOT_VERIFIED",
+        "output": "/tmp/luma-asset11-300693a-release",
+        "note": "300693a clean HEAD에서 시작. 최종 결과는 PR #147의 해당 HEAD 증거와 대조. 이 파일은 시점별 snapshot이며 최종 PASS가 아님."
+      }
+    },
+    "productionApproved": false,
+    "runtimeConnected": false,
+    "nativeGui": "DEFERRED_GUI",
+    "newClips": 0,
+    "newFrames": 0,
+    "repairIterations": 3,
+    "repairLimit": 3
+  }
 }
