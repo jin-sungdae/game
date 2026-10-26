@@ -1,0 +1,729 @@
+{
+  "sessionId": "LUMA-ASSET-07",
+  "baselineCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "apiCalls": 0,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairPerformed": false,
+  "status": "BLOCKED_WITH_REVIEW_CANDIDATES",
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "sharedLedgerModified": false,
+  "preservedFileSha256": {
+    "design/creature-production-queue.json": "b0a804319729400cf80dac3b195f9bb70dcff18f576bbe2cd0ad160389efec68",
+    "design/monster-identity-review.json": "d701dd23d862838018c292e756fdc6196262f046e4cb22af37dc11451d9482a1",
+    "design/production-batches/action-followup/M016/attack-pilot/generation.json": "d79d5459459938a7917da2c5770fa421f0e8ef1db2840dd49c9dc5e64598dd51",
+    "design/production-batches/action-followup/M016/attack-pilot/keypose-tool-reference.png": "96ed1b0950280e505bbf6353aec0025f61a17f20e6085813d1afa35eb46132a2",
+    "design/production-batches/action-followup/M016/attack-pilot/keypose-validation.json": "b8994d4f50389e30b31bfe68bd58aa805f79ba0a411f76d9144d56e8a410e7f6",
+    "design/production-batches/action-followup/M016/attack-pilot/keypose.png": "dbc5f2ad901b717a0e0787dd100b3dab1afdcee2b542375bb3e499731f71a9da",
+    "design/production-batches/action-followup/M017/turn-pilot/generation.json": "6094f1e9f81ad61d6b9f1ab35abe1239202e4c3731e01a94cbcf80d1951d9f9a",
+    "design/production-batches/action-followup/M017/turn-pilot/keypose-tool-reference.png": "5004d862ea62cc08a5ff908c2d0dd83d39861bc6b81609437e34976083b69995",
+    "design/production-batches/action-followup/M017/turn-pilot/keypose-validation.json": "2d05424a4a6f8c94abb2d2de8c3c10e6817009ed3e542bb19f0764dba39f6627",
+    "design/production-batches/action-followup/M017/turn-pilot/keypose.png": "56d897cea00e1a678f5100b161007b4d3f97dbe0263c2c8338258471d9006204",
+    "design/production-batches/action-followup/M018/hit-pilot/candidate-clip.json": "8c660af69f41a71a425fba7a2a5b763670d2ff81954a0868b200257f0d38ccff",
+    "design/production-batches/action-followup/M018/hit-pilot/frame-validation.json": "f6f28a4c95373e9b5fd1f9d2aae68da1201cae7034d50010c1bca092ff250d42",
+    "design/production-batches/action-followup/M018/hit-pilot/keypose.png": "4754d56c9a5ac28b03c2aa37c047193d8a717163d58e8c9ab52a029974e03f4f",
+    "design/production-batches/action-followup/M018/hit-pilot/rig-evidence.json": "2207afba042b94dbcd62b70c5caeb703667d844a23c5a88ad8d33fee73d1201f",
+    "design/production-batches/action-followup/M018/hit-pilot/rig-hit.cjs": "a3f158f2784e8dd55f259307874845e9b9179dc6892d99a713dca00cd8d4638b",
+    "design/production-batches/action-followup/M018/hit-pilot/rigged/hit/hit_00.png": "2b00aee41a3f3d6d02ef8021e9ca5c29a922dc8790091ac0d36f2a13e8bf950a",
+    "design/production-batches/action-followup/M018/hit-pilot/rigged/hit/hit_01.png": "eafc00ccc637509075408710512c80830294bcd8135e32acfcc5a0c5a990cae8",
+    "design/production-batches/action-followup/M018/hit-pilot/rigged/hit/hit_02.png": "209c37b3e34fe6406974c33fc4c4ea7711b7d83888fb9dd0d13e8bc38b1b040d",
+    "design/production-batches/action-followup/M018/hit-pilot/rigged/hit/hit_03.png": "4754d56c9a5ac28b03c2aa37c047193d8a717163d58e8c9ab52a029974e03f4f",
+    "design/production-batches/action-followup/M018/hit-pilot/rigged/hit/hit_04.png": "631bf2afcd139f522ebb1526133779c583e02cc1672026f484761b939a6e9899",
+    "design/production-batches/action-followup/M018/hit-pilot/rigged/hit/hit_05.png": "3f85b06a5ac64f21da490382bb9a607db8a55434581d2125ab97d889558ceb7f",
+    "design/production-batches/action-followup/M018/hit-pilot/rigged/hit/hit_06.png": "ab6ea187b1b19f5db2519320a2eb29de9398d44196fb0a405f6ad08d91ee675b",
+    "design/production-batches/action-followup/M018/hit-pilot/rigged/hit/hit_07.png": "502182b1b19a23642a73f270a223dba47fd956c9e0ab5f9a08cc6ee74d8519cc",
+    "design/production-batches/action-followup/M019/attack-pilot/generation.json": "bf9d7b50fc65888b5d50236a96a2342e7b73d4bb2a7e0045fb41728b58672ac0",
+    "design/production-batches/action-followup/M019/attack-pilot/keypose-tool-reference.png": "43ed10d9dbe88069da142abd3f521c376b0fd13bf5d86ae231d918d9096da1e5",
+    "design/production-batches/action-followup/M019/attack-pilot/keypose-validation.json": "7ad5e691344d2b03258dc466d0e78e4364e58bc97cf4fafa0926853f27a5a9e8",
+    "design/production-batches/action-followup/M019/attack-pilot/keypose.png": "d722a39c19064c151cfed59d92f03b2a2f2e7f4dacdbd425f61af35d967455a8",
+    "design/production-batches/action-followup/M019/attack-pilot/source-alpha.json": "8c405376f04f634dfda1690f88232dbb5f0b0a215b765b41b294a50cd68b6460",
+    "design/production-batches/action-followup/M020/rest-pilot/generation.json": "a10d4a4888a3e3eb79863b86cc9f924f7edea1586616e599fa380c6e7a9e7178",
+    "design/production-batches/action-followup/M020/rest-pilot/keypose-tool-reference.png": "f57622b9c6de4ec5b131c7167b3623b94aefb87b6a8af1461461ebd3dcd37020",
+    "design/production-batches/action-followup/M020/rest-pilot/keypose-validation.json": "a43b4327bdbb801976763eb42a0d449828dbd395dc48a32f64845093407681e1",
+    "design/production-batches/action-followup/M020/rest-pilot/keypose.png": "15bdfd45cd8ddb51dc3eff3887a4c66b62df7434b079736431b723fc25ec49df",
+    "design/production-batches/breath-followup/M016/candidate-clip.json": "cca059eb5e90110e160b230de982d91e5dccbfe594838d2bec138c1a64f5ee3d",
+    "design/production-batches/breath-followup/M016/frame-validation.json": "a3bc98e609b5d610212ec0898e12f6d7c5f32abf2271d6c4a24666607cbcbdf8",
+    "design/production-batches/breath-followup/M016/rig-breath.cjs": "f457248f649e6d5d66593d2b2188162668d610b2c96d331cbcb16832b88f57db",
+    "design/production-batches/breath-followup/M016/rig-evidence.json": "f4086e19f7b649316e5fea18a0759b62ee4fe270d4a51e9b8f40f756dbfa7d7c",
+    "design/production-batches/breath-followup/M016/rigged/breath/breath_00.png": "f836b929371a5a893b4f6affff659eaa24237f228b4cb079b741816e44c684ce",
+    "design/production-batches/breath-followup/M016/rigged/breath/breath_01.png": "858b9db5d821e238f700c2f5894b088d090d90c39fd22a8b9ad311a6e498195d",
+    "design/production-batches/breath-followup/M016/rigged/breath/breath_02.png": "f7f7f6a1b4d95437cb5447416eebfd1de0ef2552d031e547f9c15488d73ef43b",
+    "design/production-batches/breath-followup/M016/rigged/breath/breath_03.png": "1456c829f3577fa903a20727a4c0355e4b94cb1baacaf32d799f6afc8f43676b",
+    "design/production-batches/breath-followup/M016/rigged/breath/breath_04.png": "0dc5355b6b366fdffccdbca44fce42aa7bb4f7933010620de83f90283fdcb785",
+    "design/production-batches/breath-followup/M016/rigged/breath/breath_05.png": "766f303d3486614755ba567b7ab7f9df61a7c777eac488253ea82d5da5c2819e",
+    "design/production-batches/breath-followup/M016/rigged/breath/breath_06.png": "207e9a5097bd547063bf1e4500f2e9a316e19e8d8addf88de3dd48ef36922219",
+    "design/production-batches/breath-followup/M016/rigged/breath/breath_07.png": "db368e40d8db4a003bef68b88a46c5278eee3c20a8a70a8d129ff629c4ec0b40",
+    "design/production-batches/breath-followup/M017/candidate-clip.json": "753e3a2261d772e0feadfceb27b7d859cd4636e99e386f5a4fa1e024aca01f0c",
+    "design/production-batches/breath-followup/M017/frame-validation.json": "98a667c80848e46348ae25f563abedcb2ba8280d566f4827be4f67f8802fefed",
+    "design/production-batches/breath-followup/M017/rig-breath.cjs": "65175f5d0e17369060c4a3210a67dd06be0b89a677141840195add322f132fec",
+    "design/production-batches/breath-followup/M017/rig-evidence.json": "bb13118b023ec1cc274b55dc89f4222c58c2dd8c305db6978295b9a6b84de144",
+    "design/production-batches/breath-followup/M017/rigged/breath/breath_00.png": "12bd6853ddf23b610e1c7d607d3f114674da6ca0f9c0c665e31613f184b5399e",
+    "design/production-batches/breath-followup/M017/rigged/breath/breath_01.png": "6b62210bc8431eff9d12f3ced16a8cafec450c5f0bcda3c023aadb1a24fa00ab",
+    "design/production-batches/breath-followup/M017/rigged/breath/breath_02.png": "a8546764b98db0fd41dfa795d575d121c72cc8ba8a6c7c6498feea2c9814136c",
+    "design/production-batches/breath-followup/M017/rigged/breath/breath_03.png": "270ace0935297a20cf65ba67bd1fd6297eb933d88da9b37ff6df733787c89e5b",
+    "design/production-batches/breath-followup/M017/rigged/breath/breath_04.png": "075330acd53875f96f511308745ffa94ac1c6a54b433e45d5f98a6222cbc499f",
+    "design/production-batches/breath-followup/M017/rigged/breath/breath_05.png": "ea039250fa5b78d9076888c8a1a3052278633eca32724342c0aaef4ad4cd5008",
+    "design/production-batches/breath-followup/M017/rigged/breath/breath_06.png": "d98effb1cf66c5970f94051d3656c80e4999785974462b2b35de8678f5e22ca6",
+    "design/production-batches/breath-followup/M017/rigged/breath/breath_07.png": "8208de6fbe50726d06946d609f221071ce74e9d21cd06fe480e6deaa92d82eec",
+    "design/production-batches/breath-followup/M018/candidate-clip.json": "d49fbb7a644557434c86ebd00ef7442dc7ac18b2e1719416f57b8845a9c877b5",
+    "design/production-batches/breath-followup/M018/frame-validation.json": "c538375a343184de2d9f86be9612299e134502a8b6c5a8a6a54b6d11d1fe2d1d",
+    "design/production-batches/breath-followup/M018/rig-breath.cjs": "e8d917cbf39e556e4e99e5c43e9b0a5906f8d3afd4cd765ef84b5b8ef36b56dc",
+    "design/production-batches/breath-followup/M018/rig-evidence.json": "b4d5d8c8fbd474070ef7a5c37d55f4a44ded94885570940a615d3b951f9e8b3e",
+    "design/production-batches/breath-followup/M018/rigged/breath/breath_00.png": "d987a4108455be5b86fa85660ae348c20b9615fb8628b2c572d2cb5d63a2c5c9",
+    "design/production-batches/breath-followup/M018/rigged/breath/breath_01.png": "1c7558dcacfcb187537b97f9352f43e489588666f5589e3ce18134d306546afc",
+    "design/production-batches/breath-followup/M018/rigged/breath/breath_02.png": "020c20d5f26aa9bf3bc5ad9948e75953ff8592b19a6e5cc378a1f5a6d54269ee",
+    "design/production-batches/breath-followup/M018/rigged/breath/breath_03.png": "2d9a5e54d527a71f9864c792dd25b1a88531992f6f8c90b2eb2c8e806d4d7a43",
+    "design/production-batches/breath-followup/M018/rigged/breath/breath_04.png": "f62b70c93f7d16a7b8d1dae86875b09defcc33f151a6cd95cec6f99c8e1e410b",
+    "design/production-batches/breath-followup/M018/rigged/breath/breath_05.png": "3df36b2b7f4d56eec993b1a5433300e918c4eb6041125aaf77c79ff474d3ba86",
+    "design/production-batches/breath-followup/M018/rigged/breath/breath_06.png": "d5fa56a6da32b31b9f567302b44c9d4ea0ea20f498f158ec4675beceb3995c93",
+    "design/production-batches/breath-followup/M018/rigged/breath/breath_07.png": "9edeaf6edc8edc38345b73f0bc84515b5df61556e5067be32376cc320dbc672b",
+    "design/production-batches/breath-followup/M019/candidate-clip.json": "455767793c3568e90a073afbda4cd9fd7904d1ccbdfd3058f6a83d56c9941ada",
+    "design/production-batches/breath-followup/M019/frame-validation.json": "f78708cbac2303c6e726eed6489e9d478bb9a718294a158d7f3705c10e46ffeb",
+    "design/production-batches/breath-followup/M019/rig-breath.cjs": "fc6e271517555f11f3c0dc55e83eb412791aa9b2949b2f2c100d5081d05ef414",
+    "design/production-batches/breath-followup/M019/rig-evidence.json": "81b1349a99b018402fee38691c0c8ec2bb355c9e5b578f519777e38b4153b84d",
+    "design/production-batches/breath-followup/M019/rigged/breath/breath_00.png": "69df21a6d2116b0f7b0c209d7c75c4e4796469b11b41b3a97ea2fcd9d3399722",
+    "design/production-batches/breath-followup/M019/rigged/breath/breath_01.png": "99bd167615d7e62134b781f3745c1cb793da1ac679bddec232f15c1896d94fd0",
+    "design/production-batches/breath-followup/M019/rigged/breath/breath_02.png": "93480a8a341716bd76e554a6e950a3b68d77e5f7d9d307136da0ba0f19465c87",
+    "design/production-batches/breath-followup/M019/rigged/breath/breath_03.png": "4dd6d8570e8c8aad06ecd7edc5efe9ecd641c06b37be16d9f33c22f4aa2094d1",
+    "design/production-batches/breath-followup/M019/rigged/breath/breath_04.png": "0427bc701388788bf4c5278365e56995989e680c7cc8662d39cadd9271362870",
+    "design/production-batches/breath-followup/M019/rigged/breath/breath_05.png": "b8c8c1a0b7f4f6ca01588e546df78f043cb2d881ea29707ea431798c65e5fd85",
+    "design/production-batches/breath-followup/M019/rigged/breath/breath_06.png": "385a9f47ad62b4e9d79d739edcd238743c490e6a689a93aa9548ab5fd44f4872",
+    "design/production-batches/breath-followup/M019/rigged/breath/breath_07.png": "ab1b3cdcbcb9010866370b877ad4db165b5d942e5a7f54d16b2f3f171f3b3305",
+    "design/production-batches/breath-followup/M020/candidate-clip.json": "a09f69093b78e875cfcbe10c647803ad2ba7051f8d75934c4cbe8efabc424e8c",
+    "design/production-batches/breath-followup/M020/frame-validation.json": "0e764f468f2f38b2b8c2355b5005272d5a9148986bf5c19280798486d9a7226b",
+    "design/production-batches/breath-followup/M020/rig-breath.cjs": "787be42b71a56a4e4258ccefdea1d611190edf27f787ff71335f3a57815fba6a",
+    "design/production-batches/breath-followup/M020/rig-evidence.json": "71a1f2300ea9fb301d4b1ca42819573c62d0ec61ca5e421175d48fde4ce9c438",
+    "design/production-batches/breath-followup/M020/rigged/breath/breath_00.png": "3a89ba8b97f99e9d7e5a56aa5b9d0e8f3057dd2e7e1452a52588223f9e3a1372",
+    "design/production-batches/breath-followup/M020/rigged/breath/breath_01.png": "ca27a83e33cd9be941252ce3bb02c243beedecd95219964d6c43853c8aacac8c",
+    "design/production-batches/breath-followup/M020/rigged/breath/breath_02.png": "0df9ebff4cd6a3dd37c788e1e7fe9345760d43b64d5e8956cdeece60adbbe627",
+    "design/production-batches/breath-followup/M020/rigged/breath/breath_03.png": "d5b00f5759f4a47e707cd8a4dfe20e3d82d248f2e8a39bd30d7f4a406ec98489",
+    "design/production-batches/breath-followup/M020/rigged/breath/breath_04.png": "05fc8492592106542d8e676dbc04b355797b70cc785eb595af911a0f2c08a44e",
+    "design/production-batches/breath-followup/M020/rigged/breath/breath_05.png": "106175947ae8276fab9be615e0b9d32bc3794778af7e849d200574940c4f62b4",
+    "design/production-batches/breath-followup/M020/rigged/breath/breath_06.png": "7dcaf1a7a7bb79f42c373a69dc6a1766a3db9e908230e985fbc6b1cc927412b3",
+    "design/production-batches/breath-followup/M020/rigged/breath/breath_07.png": "8c0ec46a3c2771cd080ee6bde3a1407758a0bcbb5ed4edafd802570e6d6808e9",
+    "design/production-batches/monsters/batch02/M016/base-measurement.json": "505ac9a9100532f8a3b1b8e8532f5368080122f7b304f59a421b3cafe8ba8275",
+    "design/production-batches/monsters/batch02/M016/base-v1.png": "20fef8cfeee231d2699bb70bb862a70d1e03f23f02f2ca45727d0532db1fb5de",
+    "design/production-batches/monsters/batch02/M016/base-v2.png": "b0ec4b98ab0b9c82c9bbdb77d9106b1ad3e6872c5ed235178d84ccf11762be06",
+    "design/production-batches/monsters/batch02/M016/candidate-clip.json": "81150ff8e5d0ee01409a18c6ba321da947c3ead829aa3294a74fcaab596ad81e",
+    "design/production-batches/monsters/batch02/M016/cleanup-validation.json": "877561e8a3536b00a3cb0e49eef67c9db637cf4e15b49c488125e8ba33a96526",
+    "design/production-batches/monsters/batch02/M016/frame-validation.json": "8e103046e42ee44a2f36383962e9e5551b6d60745c553bae286f611e2c9d9637",
+    "design/production-batches/monsters/batch02/M016/rig-evidence.json": "ad220c9292f058ce8cc1caa568feb7b2d739fa845e5787c1dd106d2f588d96d4",
+    "design/production-batches/monsters/batch02/M016/rig-idle.cjs": "7a9b7803c1dbbf434ddc78b37b234af5ced64f8a7b3cad512254899958611afe",
+    "design/production-batches/monsters/batch02/M016/rigged/idle/idle_00.png": "a042ba0abc00f1189b72e5ac797788a406e4513f5748c049861bed8d0298ea91",
+    "design/production-batches/monsters/batch02/M016/rigged/idle/idle_01.png": "22a083d28d4dee246de004b6e1100e91a6c9fc5c0cd82badc97d991124f83aac",
+    "design/production-batches/monsters/batch02/M016/rigged/idle/idle_02.png": "fd06d3f322810694ff189a1834c2f2526846b4be749d400662cb3b5a0e5315cd",
+    "design/production-batches/monsters/batch02/M016/rigged/idle/idle_03.png": "3c926463f949cdff821d1af0e72a50462b3dd4e062b95259e094132ac128ff91",
+    "design/production-batches/monsters/batch02/M016/rigged/idle/idle_04.png": "19b02bc264568b2973469852149bf2f2d3ab9fca23a76f948881bdc4672bd790",
+    "design/production-batches/monsters/batch02/M016/rigged/idle/idle_05.png": "7a0f62daf8bb2dfa8fa9eb44640ad0fc756efb087b695b4f57a687b08f59a58f",
+    "design/production-batches/monsters/batch02/M016/source-base-v1.png": "6ad4ee40f2eab86150a6142436c55f17a55e308b29f51349d79271d8ed3c0949",
+    "design/production-batches/monsters/batch02/M017/base-measurement.json": "778f0c772a11f4901fa29eab3a3c5916f1778be26ccbe9ebf83b19bdd9bc54e1",
+    "design/production-batches/monsters/batch02/M017/base-v1.png": "3aaed2dee56ec7cef6660c09419581fb7bf3debdb3ceccb9d92844c8638ba34e",
+    "design/production-batches/monsters/batch02/M017/base-v2.png": "711edbdbdbe567b450329941e0e8a0e06a546aeb88f3a0eb1c788e85e73652e7",
+    "design/production-batches/monsters/batch02/M017/candidate-clip.json": "2a93ed0554e60c5e5a9ca7504df01ec8a4bb2ed2853b421c1952fa94fc835505",
+    "design/production-batches/monsters/batch02/M017/cleanup-validation.json": "f15916c90de3282827bd4f5fc9d25a1b4b197c59d0a086ebb43b2e24887cf0fb",
+    "design/production-batches/monsters/batch02/M017/frame-validation.json": "bcb02aa389b29bfdb18dee7917b01813b8a53bd61b1f2baffa2464a91120353f",
+    "design/production-batches/monsters/batch02/M017/rig-evidence.json": "0ca9706db4d47884bc0bbe0217e53a50cda081b2c37307b1137818125f7e6ff8",
+    "design/production-batches/monsters/batch02/M017/rig-idle.cjs": "733e1d5482ff72de9f8d8a080d5c0ccda68eb134ea6ada5164a9e64579f5a651",
+    "design/production-batches/monsters/batch02/M017/rigged/idle/idle_00.png": "0ff1929c5bc623df74b03b0297232e4518c544aa75b1444bfb0e68401e0d60f5",
+    "design/production-batches/monsters/batch02/M017/rigged/idle/idle_01.png": "03aabd3058402f2b4142897300e17a54c7fc4799cea3bb0e991c369c2d1a431f",
+    "design/production-batches/monsters/batch02/M017/rigged/idle/idle_02.png": "a50736f7945eaf46d3290ea8ae7b3b97a56af8c82c1f3ad792cafdc125e4346e",
+    "design/production-batches/monsters/batch02/M017/rigged/idle/idle_03.png": "e3465d72a4d0b7c607230b6446937f5043dae771152c207db5ea2da2b19d6780",
+    "design/production-batches/monsters/batch02/M017/rigged/idle/idle_04.png": "cf2922bc44bc73b256428222469b5b8897212d0a0be6c83a6f60b17c88682844",
+    "design/production-batches/monsters/batch02/M017/rigged/idle/idle_05.png": "a113e8e6c055bb62977da0d48fa3c09c49f10bd33af4468366102484cee491b8",
+    "design/production-batches/monsters/batch02/M017/source-base-v1.png": "112b3831be68d38a2e9e9983b97734242b042278ae4ac466721ddb36b2d42e61",
+    "design/production-batches/monsters/batch02/M018/base-measurement.json": "3a98cef745384dfbd441434d68ca3be1d78e2f39f2bcae98fb155e5eab796288",
+    "design/production-batches/monsters/batch02/M018/base-v1.png": "e7e9491b368bbbb69392bd2a9d7e9884ce1f90963b501933c33dea287fae29a7",
+    "design/production-batches/monsters/batch02/M018/base-v2.png": "fa6b7a74ef097cebe233c52246e2f4f5c5d7a83fee6452423d8435cb0335ae89",
+    "design/production-batches/monsters/batch02/M018/candidate-clip.json": "73f6334e6606a5c7d337c533c6d56f5296cd8112fe7999dfc74919f7a8f12638",
+    "design/production-batches/monsters/batch02/M018/cleanup-validation.json": "9aff27673cf5c6727d753e12c6aa910c60a67645955a655177bbae263b990e1c",
+    "design/production-batches/monsters/batch02/M018/frame-validation.json": "e91617c027b809a7d266f5857401b12bc9d2ac5490cdf08a7f9c2190105af526",
+    "design/production-batches/monsters/batch02/M018/rig-evidence.json": "9f9845a8fdf6931abc197981d5a59ef31a35eecf86b9f6b9da0241a12899f0fe",
+    "design/production-batches/monsters/batch02/M018/rig-idle.cjs": "b4e6aa7373e58f5177d88160019f90e39549adef2f944e9dc94af0bd6332f736",
+    "design/production-batches/monsters/batch02/M018/rigged/idle/idle_00.png": "d4067a64fdc63864d228a0b46b74e23f1ecc362d5e5891f7efbb423284be590c",
+    "design/production-batches/monsters/batch02/M018/rigged/idle/idle_01.png": "e46cfd06315600678299585063e700c684276d9954ee2721a79f8c8b2f0b5bf6",
+    "design/production-batches/monsters/batch02/M018/rigged/idle/idle_02.png": "b858075940f2d13db1ee56e231d0fd3ce727b8ad083b7212ac3a60c9cfffad1e",
+    "design/production-batches/monsters/batch02/M018/rigged/idle/idle_03.png": "b45089a9e3b8af48fc7ddae5b1891ad4c85900e18fdd5df72f23b9fc79fbff11",
+    "design/production-batches/monsters/batch02/M018/rigged/idle/idle_04.png": "35ffde79909e5c2baefd934edc5d345f57f828d4998ca62ef0368ff3887f831b",
+    "design/production-batches/monsters/batch02/M018/rigged/idle/idle_05.png": "70c9a3db9b78b662309482b3ac0377cd57e921013d96544794a4da9c237a23e0",
+    "design/production-batches/monsters/batch02/M018/source-base-v1.png": "eb2607097d22bcb9095b53d958af95ca2d60175533924ab7d4bd83173ac922a7",
+    "design/production-batches/monsters/batch02/M019/base-measurement.json": "eea7b2f1c1939980766dbe0024f3312bf3ef4667f0692ca7553aea299d358fdb",
+    "design/production-batches/monsters/batch02/M019/base-v1.png": "089fa20eb95f91a6c610bf76c5f6332f11fe55f7f339e5aa8fe34247c942d091",
+    "design/production-batches/monsters/batch02/M019/base-v2.png": "4b82040492f1607fb941482fba44ff889d0ce10fe08820578f3de5a74276ed23",
+    "design/production-batches/monsters/batch02/M019/candidate-clip.json": "dbc43c1573163ab23ecb8220f56059dd17b0edf1a86675e8ac13568ab3eea2e1",
+    "design/production-batches/monsters/batch02/M019/cleanup-validation.json": "507423f3c45b9fa50b4c948347292d43ee663fd3a10c00e200dbf4a83e0fecdf",
+    "design/production-batches/monsters/batch02/M019/frame-validation.json": "513f479a6034cafa757b7da8f342ed9366c40088ca881ee5d4502b55a537ba03",
+    "design/production-batches/monsters/batch02/M019/rig-evidence.json": "868784c67dd5cbf868d42c97843147c82ea7c631f75efdccc94635395fc1bfea",
+    "design/production-batches/monsters/batch02/M019/rig-idle.cjs": "e8676ba11aa7874c3faa00b65e4ad8d90a34e6a7e1f5906245e5a786f3d66d16",
+    "design/production-batches/monsters/batch02/M019/rigged/idle/idle_00.png": "b146b93dccbb39edd3a163d2f083123ca343212a11573e5bfb2162eb8cb231c4",
+    "design/production-batches/monsters/batch02/M019/rigged/idle/idle_01.png": "2dab83a08d051d44c051f82d2f8396f10a532457fd5f8e7466a73a7762acf33f",
+    "design/production-batches/monsters/batch02/M019/rigged/idle/idle_02.png": "a8ab6a25908202b99fccd968e902a94bed732e7aa5f4b50a7007f8aa43033aa1",
+    "design/production-batches/monsters/batch02/M019/rigged/idle/idle_03.png": "7872923ad14524a6c7cdc9962c43063b6e2048351648beb6d21a94b5c674e889",
+    "design/production-batches/monsters/batch02/M019/rigged/idle/idle_04.png": "511101c59cfd3ce0a2147c1cf99601cc289ddfb0a2b5f13fd8f083cec20b3343",
+    "design/production-batches/monsters/batch02/M019/rigged/idle/idle_05.png": "eadd619308a75e178ab3e6f9a0404f57a58a8b73f501f6eb8a5689e0051fb804",
+    "design/production-batches/monsters/batch02/M019/source-base-v1.png": "4bebbe571854101e20672345d1d91a8c7ac17adfb5825088ec56c3bf364a34de",
+    "design/production-batches/monsters/batch02/M020/base-measurement.json": "2e0b2073899d0ddbf090e5bf650a4c42985ebdac03ee79dfbcfbbb18a0bcc2d9",
+    "design/production-batches/monsters/batch02/M020/base-v1.png": "d2a4a9a0ee72d4a80e3b57ae56fa11a92614bbdcafb1fff9b31a96732092e67d",
+    "design/production-batches/monsters/batch02/M020/base-v2.png": "fabaf04b52bf55365c8aa0fe575c617215249f1c14fae9a5798849d59d6d588f",
+    "design/production-batches/monsters/batch02/M020/candidate-clip.json": "bfea00cac33a5dff60872ec7cb777fa3fdddec08f30598406c1f100eb7441974",
+    "design/production-batches/monsters/batch02/M020/cleanup-validation.json": "f5a650d67dd1377d451de71188e4c232b35c5a6da44d863a741008b63f5ec327",
+    "design/production-batches/monsters/batch02/M020/frame-validation.json": "a99034558b9bc8a1d1b2dc0e08f2e63c586bb81a3f156e10a92e382fa898a66a",
+    "design/production-batches/monsters/batch02/M020/rig-evidence.json": "58a9f033cd45ba0b1305fdf8e99938eff91f5cfc7ce855d535ad9c4a9f87a277",
+    "design/production-batches/monsters/batch02/M020/rig-idle.cjs": "d3189e653ae6a63a1fa1547fe1e8e7579224fd2c90b1da4e4639282ef5afde54",
+    "design/production-batches/monsters/batch02/M020/rigged/idle/idle_00.png": "877ab74a381f0d291e9cb5fcc8c7fb043db130a9a00ebbcec5ab4856fb87317d",
+    "design/production-batches/monsters/batch02/M020/rigged/idle/idle_01.png": "e96f92721f3722758d6a744ac3c6bab24c0012f59a0565c06ab87501c177fb39",
+    "design/production-batches/monsters/batch02/M020/rigged/idle/idle_02.png": "d98351f37351b50e2d9271e902bb78fd10a79226708f761965b068bdacd9ed36",
+    "design/production-batches/monsters/batch02/M020/rigged/idle/idle_03.png": "1f2f624cda608551696c48983a20ff6abd00040242438b6ca195ca7ab668d182",
+    "design/production-batches/monsters/batch02/M020/rigged/idle/idle_04.png": "6822318b8edc3fe5b68eda91396aa7fcb3a9cdc1c392db30d104cfef34c7e0ce",
+    "design/production-batches/monsters/batch02/M020/rigged/idle/idle_05.png": "a4395f9db3fa5085d80cc10699d4b1314e215d88a048976b39174934a80fe2af",
+    "design/production-batches/monsters/batch02/M020/source-base-v1.png": "815d77362745bd7cce07b387c834943b0d8b91c790daae7874c7d02db29e8429",
+    "design/production-completion-ledger.json": "ae4d4062b0bdc36095af1f6141abea8675505b61592e7a8bd3b5d3cfa5e31aac"
+  },
+  "coverage": [
+    {
+      "conceptId": "M016",
+      "productionSpeciesId": null,
+      "basePath": "design/production-batches/monsters/batch02/M016/base-v2.png",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "기존 후보 재제작 금지"
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_BLOCKED",
+          "reason": "외형 결함; M018은 중복 프레임도 발생"
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "reason": "기존 eye rig 재사용"
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "CURSOR_REACT는 입력에 따른 방향 계약 미확정"
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "GENERATION_BLOCKED",
+          "reason": "rig samples 입력 계약 불일치; 수정 한도 3/3 유지"
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "VALIDATION_FAILED",
+          "result": "PRESERVED",
+          "reason": "ALPHA_DEFECT: 132 detached pixels; raw/256 dedicated keypose retained; no cleanup, rig or completed clip at PR limit 3/3"
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        }
+      ]
+    },
+    {
+      "conceptId": "M017",
+      "productionSpeciesId": null,
+      "basePath": "design/production-batches/monsters/batch02/M017/base-v2.png",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "기존 후보 재제작 금지"
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_BLOCKED",
+          "reason": "외형 결함; M018은 중복 프레임도 발생"
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "reason": "기존 eye rig 재사용"
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "VALIDATION_FAILED",
+          "result": "PRESERVED",
+          "reason": "DETACHED_ALPHA 147; raw and prepared pose preserved; no rigging or repair at PR limit 3/3"
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "CURSOR_REACT는 입력에 따른 방향 계약 미확정"
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "GENERATION_BLOCKED",
+          "reason": "rig samples 입력 계약 불일치; 수정 한도 3/3 유지"
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        }
+      ]
+    },
+    {
+      "conceptId": "M018",
+      "productionSpeciesId": null,
+      "basePath": "design/production-batches/monsters/batch02/M018/base-v2.png",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "기존 후보 재제작 금지"
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_BLOCKED",
+          "reason": "외형 결함; M018은 중복 프레임도 발생"
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "reason": "기존 eye rig 재사용"
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "CURSOR_REACT는 입력에 따른 방향 계약 미확정"
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "GENERATION_BLOCKED",
+          "reason": "rig samples 입력 계약 불일치; 수정 한도 3/3 유지"
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        }
+      ]
+    },
+    {
+      "conceptId": "M019",
+      "productionSpeciesId": null,
+      "basePath": "design/production-batches/monsters/batch02/M019/base-v2.png",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "기존 후보 재제작 금지"
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_BLOCKED",
+          "reason": "외형 결함; M018은 중복 프레임도 발생"
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "reason": "기존 eye rig 재사용"
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "CURSOR_REACT는 입력에 따른 방향 계약 미확정"
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "GENERATION_BLOCKED",
+          "reason": "rig samples 입력 계약 불일치; 수정 한도 3/3 유지"
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "VALIDATION_FAILED",
+          "result": "PRESERVED",
+          "reason": "ALPHA_DEFECT: 9 detached pixels; source alpha measured before preparation; original retained without cleanup or rig at PR repair limit 3/3"
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        }
+      ]
+    },
+    {
+      "conceptId": "M020",
+      "productionSpeciesId": null,
+      "basePath": "design/production-batches/monsters/batch02/M020/base-v2.png",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "기존 후보 재제작 금지"
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "result": "PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_BLOCKED",
+          "reason": "외형 결함; M018은 중복 프레임도 발생"
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NEW_CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "reason": "기존 eye rig 재사용"
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "VALIDATION_FAILED",
+          "result": "PRESERVED",
+          "reason": "DETACHED_ALPHA 187; raw and prepared pose preserved; no rigging or repair at PR limit 3/3"
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "CURSOR_REACT는 입력에 따른 방향 계약 미확정"
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "GENERATION_BLOCKED",
+          "reason": "rig samples 입력 계약 불일치; 수정 한도 3/3 유지"
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "result": "NOT_PRODUCED",
+          "reason": "새 anatomy/keypose 또는 행동 계약 검토 필요; 비용 없는 현재 eye rig 범위로 완성 처리하지 않음"
+        }
+      ]
+    }
+  ]
+}

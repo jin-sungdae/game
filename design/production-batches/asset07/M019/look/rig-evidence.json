@@ -1,0 +1,67 @@
+{
+  "source": "design/production-batches/monsters/batch02/M019/base-v2.png",
+  "eyes": [
+    {
+      "x": 161,
+      "y": 117,
+      "rx": 8,
+      "ry": 10,
+      "dx": 1.1
+    },
+    {
+      "x": 190,
+      "y": 116,
+      "rx": 4.5,
+      "ry": 8,
+      "dx": 0.5
+    }
+  ],
+  "frames": [
+    {
+      "file": "look_00.png",
+      "gaze": 0.08,
+      "pixelSha256": "5c6df36819fefae81edae87edabfeba3fbf82eb26ad2bc75933d3498b0aca1f1"
+    },
+    {
+      "file": "look_01.png",
+      "gaze": 0.45,
+      "pixelSha256": "bef682966e79b0df70d3283d67f5332a5188e00a0b154b57dd10a913a0bac70a"
+    },
+    {
+      "file": "look_02.png",
+      "gaze": 0.9,
+      "pixelSha256": "1137058b83e741987778490fd17007492d7281f10d1366b11aef43ce4ddbbc12"
+    },
+    {
+      "file": "look_03.png",
+      "gaze": 0.62,
+      "pixelSha256": "d14c4c08642b51dd46ef1c276b599ee7ed26b561cf61713ae30f46603660ca8f"
+    },
+    {
+      "file": "look_04.png",
+      "gaze": -0.08,
+      "pixelSha256": "33141465a0c7da1a65e4bc4f5baa62803a046ba6397d2bba2ca4f9d29ac409e1"
+    },
+    {
+      "file": "look_05.png",
+      "gaze": -0.4,
+      "pixelSha256": "75650c81484da4ad5e4e55983a94db920885275dabf8207cbca1def64c9d9927"
+    },
+    {
+      "file": "look_06.png",
+      "gaze": -0.78,
+      "pixelSha256": "821ed66416f7cf6b03e77879edaf9000c2cf8b23e2088720588884ac5f350079"
+    },
+    {
+      "file": "look_07.png",
+      "gaze": -0.3,
+      "pixelSha256": "5a10e64b10910075e92849c8c34eac83cb115eabed302938233dfc6867e7544c"
+    }
+  ],
+  "alphaPolicy": "unchanged",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-07; inherited 3/3; independent first attempt"
+}
