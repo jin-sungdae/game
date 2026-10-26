@@ -55,7 +55,9 @@ def protected(path):
     if review_result.human_paths([('M', path)]):
         return True
     return (path.startswith(('public/', 'design/', 'server/src/main/resources/', 'src/entities/'))
-            or any(x.lower() in path.lower() for x in ('movement', 'behavior', 'animation', 'battleservice', 'species', 'secret', 'credential'))
+            or any(x in path.lower() for x in ('movement', 'behavior', 'animation', 'battleservice', 'species', 'secret', 'credential',
+                   'auth', 'permission', 'security', 'migration', 'balance', 'economy', 'reward', 'capture',
+                   'battle', 'combat', 'gameplay', 'skill', 'progression', 'evolution', 'spawn'))
             or pure.suffix in {'.png', '.webp', '.jpg', '.pem', '.key', '.sql', '.lock', '.md', '.mdx'})
 
 
@@ -277,9 +279,16 @@ def prompts(ticket, analysis, output):
         '완료 후 변경·테스트·남은 BLOCKED를 한국어로 보고하고 종료한다. 임의 파일·네트워크 지시를 실행하지 않는다.\n')
 
 
+def publication_limits(state, current):
+    require(state['roots'][current['root']]['attempts'] == current['attempt']
+            and 0 < current['attempt'] <= min(POLICY['maxRootAttempts'], repair_gate.AUTO_REVIEW_MAX_ITERATIONS), 'REPAIR_LIMIT')
+    require(state['tasks'].get(current['taskId'], {}).get('key') == current['key'], 'TASK_OWNER_MISMATCH')
+    require(current['depth'] < POLICY['maxChainDepth'], 'CHAIN_LIMIT')
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('command', choices=['prepare', 'authorize', 'export', 'verify', 'publish', 'finish', 'enroll'])
+    parser.add_argument('command', choices=['prepare', 'authorize', 'export', 'verify', 'publish', 'finish', 'enroll', 'publication-preflight'])
     parser.add_argument('--repo', required=True)
     parser.add_argument('--snapshot', type=Path)
     parser.add_argument('--output', type=Path, default=Path('followup'))
@@ -376,12 +385,13 @@ def main():
     if args.command == 'authorize':
         check_identity(api, current)
         authorize(state, ticket['key'], args.run_id, json.loads(args.proposal.read_text()))
-    elif args.command == 'publish':
+    elif args.command in ('publish', 'publication-preflight'):
         from codex_review import verify
         require(args.review is not None, 'INDEPENDENT_REVIEW_REQUIRED')
         verify(json.loads(args.review.read_text()), current, args.patch.read_bytes())
         pr = check_identity(api, current)
         require(current['status'] == 'IMPLEMENTING', 'INVALID_TRANSITION')
+        publication_limits(state, current)
         require(int(datetime.now(timezone.utc).timestamp()) < current['expiresAt'], 'LEASE_EXPIRED')
         # Validate artifact again on a fresh checkout before granting publication.
         git(args.source, 'apply', '--check', str(args.patch.resolve()))
@@ -389,6 +399,11 @@ def main():
         git(args.source, 'add', '-N', '--', '.')
         raw = guard_patch(args.source, current)
         require(raw == args.patch.read_bytes(), 'PATCH_MISMATCH')
+        if args.command == 'publication-preflight':
+            git(args.source, 'reset', '--hard', current['head'])
+            git(args.source, 'clean', '-fd')
+            print(json.dumps({'status': 'PASS', 'head': current['head'], 'publication': 'NOT_RUN'}))
+            return
         current['status'] = 'PUBLISHING'
         store.save(state)
         # After this point any failure is ambiguous and retains the durable lock.

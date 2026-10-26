@@ -1,4 +1,4 @@
-name: LUMA Codex AI follow-up (approval gated)
+name: LUMA Codex AI follow-up (bounded execution)
 
 on:
   workflow_run:
@@ -91,9 +91,11 @@ jobs:
           retention-days: 30
 
   analyze:
+    permissions:
+      contents: read
     needs: prepare
     if: needs.prepare.outputs.selected == 'true' && needs.prepare.outputs.live == 'true'
-    environment: luma-codex-approval
+    environment: luma-codex-unattended
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -167,9 +169,11 @@ jobs:
         run: python3 controller/scripts/ci/codex_followup.py authorize --repo "$GH_REPO" --ticket followup/ticket.json --proposal analysis/proposal.json
 
   implement:
+    permissions:
+      contents: read
     needs: [prepare, authorize]
     runs-on: ubuntu-latest
-    environment: luma-codex-approval
+    environment: luma-codex-unattended
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -224,6 +228,8 @@ jobs:
           retention-days: 30
 
   validate:
+    permissions:
+      contents: read
     needs: [prepare, implement]
     runs-on: ubuntu-latest
     timeout-minutes: 30
@@ -288,8 +294,10 @@ jobs:
           if-no-files-found: error
 
   review:
+    permissions:
+      contents: read
     needs: [prepare, validate]
-    environment: luma-codex-approval
+    environment: luma-codex-unattended
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -340,7 +348,7 @@ jobs:
 
   publish:
     needs: [prepare, validate, review]
-    environment: luma-codex-publish
+    environment: luma-codex-draft
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -366,11 +374,17 @@ jobs:
         with:
           name: luma-independent-review
           path: review
+      - name: Recheck source and bounds before requesting publication token
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 controller/scripts/ci/codex_followup.py publication-preflight --repo "$GH_REPO" --source source --ticket followup/ticket.json --patch validated/change.patch --review review/independent-review.json
       - name: Publication-only installation token (never supplied to PR code)
         id: app
         uses: actions/create-github-app-token@fee1f7d63c2ff003460e3d139729b119787bc349 # v2
         with:
           app-id: ${{ vars.LUMA_AUTOMATION_APP_ID }}
+          repositories: ${{ github.event.repository.name }}
           private-key: ${{ secrets.LUMA_AUTOMATION_APP_PRIVATE_KEY }}
           permission-contents: write
           permission-pull-requests: write
