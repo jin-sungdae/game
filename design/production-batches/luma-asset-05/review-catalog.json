@@ -1,0 +1,2139 @@
+{
+  "scope": "LUMA-ASSET-05 only; 18 candidates; shared catalog integration requested, production approval absent",
+  "creatures": [
+    {
+      "id": "M006",
+      "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M006/base-v2.png",
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "actions": [
+        {
+          "action": "IDLE",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
+        },
+        {
+          "action": "BREATH",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M006",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M006",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
+        },
+        {
+          "action": "LOOK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "MOVE",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "TURN",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "REST",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "SLEEP",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "INTERACT",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M006/interact-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; isolated non-looping response; no Native trigger"
+        },
+        {
+          "action": "ATTACK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "SKILL_CAST",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "HIT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "VICTORY",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "DEFEAT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        }
+      ],
+      "clips": [
+        {
+          "action": "cursor_react",
+          "directory": "/design/production-batches/luma-asset-05/M006/cursor_react/rigged/cursor_react",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M006/cursor_react/rigged/cursor_react/cursor_react_00.png",
+            "/design/production-batches/luma-asset-05/M006/cursor_react/rigged/cursor_react/cursor_react_01.png",
+            "/design/production-batches/luma-asset-05/M006/cursor_react/rigged/cursor_react/cursor_react_02.png",
+            "/design/production-batches/luma-asset-05/M006/cursor_react/rigged/cursor_react/cursor_react_03.png",
+            "/design/production-batches/luma-asset-05/M006/cursor_react/rigged/cursor_react/cursor_react_04.png",
+            "/design/production-batches/luma-asset-05/M006/cursor_react/rigged/cursor_react/cursor_react_05.png",
+            "/design/production-batches/luma-asset-05/M006/cursor_react/rigged/cursor_react/cursor_react_06.png",
+            "/design/production-batches/luma-asset-05/M006/cursor_react/rigged/cursor_react/cursor_react_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 160,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ]
+          ],
+          "pixelHashes": [
+            "bee77718017af75ee75692712b667a93693952a035b50a27ab8dae77f9c06dd2",
+            "9652d7978cbb2a4ce0137eed48a0ac7808cc5e10b7d36edefa26e610f982bc93",
+            "c63a6bfe0c262191c9bc2d661c7b5581285f872d7d75916be5b6a1da88e1bacc",
+            "5a305d34453a05d9eccf2dc7daad0e09c6203f23b49b61d374071d451a6ffe82",
+            "3e53ffd9331d4001c2a73655a96ebbaf0d6c9c74bb0ac73d67fb195dd7b7c1c0",
+            "bd3d6b515c1a045f99836c25b5e51af7bf9eab822692a417bf596bc6a0756c2a",
+            "bbba2077406f56009ba2a3270e4d6e0b3a591aee14bba98743ba975a91ad9ace",
+            "bc6e882866e00af3aa8ad519e1c532fb0876ce0231378c99461a005591d89ba7"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/luma-asset-05/M006/hit/rigged/hit",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M006/hit/rigged/hit/hit_00.png",
+            "/design/production-batches/luma-asset-05/M006/hit/rigged/hit/hit_01.png",
+            "/design/production-batches/luma-asset-05/M006/hit/rigged/hit/hit_02.png",
+            "/design/production-batches/luma-asset-05/M006/hit/rigged/hit/hit_03.png",
+            "/design/production-batches/luma-asset-05/M006/hit/rigged/hit/hit_04.png",
+            "/design/production-batches/luma-asset-05/M006/hit/rigged/hit/hit_05.png",
+            "/design/production-batches/luma-asset-05/M006/hit/rigged/hit/hit_06.png",
+            "/design/production-batches/luma-asset-05/M006/hit/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 75,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ]
+          ],
+          "pixelHashes": [
+            "15bfe349e2c1d25ccc725798c413d7705b39251ffa9b00cfa2332f7243934f61",
+            "0e74b44528aa4fd359c92d2082ead8588987f179a783ed3ab355b2a565bfee47",
+            "31c96111edfe51816a15e299064fc14263ecb258ebba5a6fe2fcdf0928d8de71",
+            "63133d32447b612a791e8a5709b6e71c58fbca350caedcb2fc3772dc8ea1d230",
+            "1d1390bed712463b6b0c22069e63df65cc75d28053bb2a42cc3fc42255693146",
+            "bead93db3141859a2282bd383fe690b459a9eb272cdaffa6141ea4f747088369",
+            "2dcd5c13ac5427aa74c4f256a367d8b2ccdc011b9723339e4c914ae4ea7f2c3b",
+            "c221dd2c49ca7aaf1da88b1eecfa2175569f4f28ee57b75913e501893a644f66"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "look",
+          "directory": "/design/production-batches/luma-asset-05/M006/look/rigged/look",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M006/look/rigged/look/look_00.png",
+            "/design/production-batches/luma-asset-05/M006/look/rigged/look/look_01.png",
+            "/design/production-batches/luma-asset-05/M006/look/rigged/look/look_02.png",
+            "/design/production-batches/luma-asset-05/M006/look/rigged/look/look_03.png",
+            "/design/production-batches/luma-asset-05/M006/look/rigged/look/look_04.png",
+            "/design/production-batches/luma-asset-05/M006/look/rigged/look/look_05.png",
+            "/design/production-batches/luma-asset-05/M006/look/rigged/look/look_06.png",
+            "/design/production-batches/luma-asset-05/M006/look/rigged/look/look_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 160,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ]
+          ],
+          "pixelHashes": [
+            "d71b98c1774893b7ce3885d4bed4f6b647cb81d501809bfe5c171d8a0c03fe41",
+            "a2ebb3e02db28f40965639de79a5bd3b27c3b7d8d77164582475a777354f065d",
+            "5a305d34453a05d9eccf2dc7daad0e09c6203f23b49b61d374071d451a6ffe82",
+            "d161fb094195df0559b07b654ae26eaf72aadeb25bb1a1246c26a19db091cf03",
+            "b9f4183854d188adc23ce985062955a6183c257cc5b30d1ca2c07c7d5c197d5f",
+            "ac47dabb4b6beb22f1891a0d60d23c82245df6f672f7975b8707f6296d3d9cb7",
+            "775a7525a599c2dcd8102fda3a9f25cd0435c381b00798877fd9faf2e351fe3c",
+            "b1558fefc2da2b15fb15fe28bd74b25e0215b8088eb1d6560e7d921b56946704"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "recovery",
+          "directory": "/design/production-batches/luma-asset-05/M006/recovery/rigged/recovery",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M006/recovery/rigged/recovery/recovery_00.png",
+            "/design/production-batches/luma-asset-05/M006/recovery/rigged/recovery/recovery_01.png",
+            "/design/production-batches/luma-asset-05/M006/recovery/rigged/recovery/recovery_02.png",
+            "/design/production-batches/luma-asset-05/M006/recovery/rigged/recovery/recovery_03.png",
+            "/design/production-batches/luma-asset-05/M006/recovery/rigged/recovery/recovery_04.png",
+            "/design/production-batches/luma-asset-05/M006/recovery/rigged/recovery/recovery_05.png",
+            "/design/production-batches/luma-asset-05/M006/recovery/rigged/recovery/recovery_06.png",
+            "/design/production-batches/luma-asset-05/M006/recovery/rigged/recovery/recovery_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 110,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ],
+            [
+              22,
+              51,
+              233,
+              205
+            ]
+          ],
+          "pixelHashes": [
+            "c221dd2c49ca7aaf1da88b1eecfa2175569f4f28ee57b75913e501893a644f66",
+            "b3c5242bd6003fa923fc4fc4f9113300c920cd4b425e48a467397ada04abf8d9",
+            "439166028adfc937ce7913ae55bb254fbb03b2b9116f7973fefccae1049df074",
+            "652ddb3816faf10db6af1deb783796ede2d00e49f708983325e3874ba0692920",
+            "a377e2d12b11b95b0f53452a12a40edd863b24afdefff736dde01560da3223ef",
+            "1afc4c5c0e814b362a5abf76d79c9dfd508618b4448819830c4d1a4b8d85cf2a",
+            "4b9b6e7bcc083a2c526bfe5098ea2e976fa5884b6f1a83625f579b6c939d887a",
+            "b279f0986187c6dff4aa50f2b210cfddc82a240ca9e50ea0071126b6001aa8b0"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 12,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
+    },
+    {
+      "id": "M007",
+      "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M007/base-v2.png",
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "actions": [
+        {
+          "action": "IDLE",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "BREATH",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "BLINK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "LOOK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "MOVE",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "TURN",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "REST",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "SLEEP",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "INTERACT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "ATTACK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "SKILL_CAST",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "HIT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "VICTORY",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "DEFEAT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        }
+      ],
+      "clips": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
+    },
+    {
+      "id": "M008",
+      "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M008/base-v2.png",
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "actions": [
+        {
+          "action": "IDLE",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
+        },
+        {
+          "action": "BREATH",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M008",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "LOOK",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M008",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "TURN",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "REST",
+          "animationStatus": "VALIDATION_FAILED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M008/rest-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M008/rest-pilot/keypose.png",
+          "blockReason": "ALPHA_DEFECT: 93 detached pixels; seated REST keypose and raw output preserved; no cleanup or rig at PR limit 3/3"
+        },
+        {
+          "action": "SLEEP",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "INTERACT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "ATTACK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "SKILL_CAST",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "HIT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "VICTORY",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "DEFEAT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        }
+      ],
+      "clips": [
+        {
+          "action": "blink",
+          "directory": "/design/production-batches/luma-asset-05/M008/blink/rigged/blink",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M008/blink/rigged/blink/blink_00.png",
+            "/design/production-batches/luma-asset-05/M008/blink/rigged/blink/blink_01.png",
+            "/design/production-batches/luma-asset-05/M008/blink/rigged/blink/blink_02.png",
+            "/design/production-batches/luma-asset-05/M008/blink/rigged/blink/blink_03.png",
+            "/design/production-batches/luma-asset-05/M008/blink/rigged/blink/blink_04.png",
+            "/design/production-batches/luma-asset-05/M008/blink/rigged/blink/blink_05.png"
+          ],
+          "frameCount": 6,
+          "frameDuration": 100,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ]
+          ],
+          "pixelHashes": [
+            "674b76f2fecfb0e00aa0f84db316124cbe19f5869340132e28ef997d806e4f51",
+            "34e565cb06a4786d861f01b6ab852b5435afdc7ccd7916bffb32079180e4d544",
+            "b84f982feee2f8c46c10caada1b65f5fa4eea7ab12315b422750825bc522a29b",
+            "acb904270c9a82cb01f7ee98943ec9ba955cab390b92332f892e1b8b40d69c40",
+            "0e2067a91c80d764ec45077e160187b392999a2233ac348cc507e2bf269f7bee",
+            "2da53da2742c0474ccc3b742b4f7d7d897aec38a42d96f796cfe1413336a9186"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "cursor_react",
+          "directory": "/design/production-batches/luma-asset-05/M008/cursor_react/rigged/cursor_react",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M008/cursor_react/rigged/cursor_react/cursor_react_00.png",
+            "/design/production-batches/luma-asset-05/M008/cursor_react/rigged/cursor_react/cursor_react_01.png",
+            "/design/production-batches/luma-asset-05/M008/cursor_react/rigged/cursor_react/cursor_react_02.png",
+            "/design/production-batches/luma-asset-05/M008/cursor_react/rigged/cursor_react/cursor_react_03.png",
+            "/design/production-batches/luma-asset-05/M008/cursor_react/rigged/cursor_react/cursor_react_04.png",
+            "/design/production-batches/luma-asset-05/M008/cursor_react/rigged/cursor_react/cursor_react_05.png",
+            "/design/production-batches/luma-asset-05/M008/cursor_react/rigged/cursor_react/cursor_react_06.png",
+            "/design/production-batches/luma-asset-05/M008/cursor_react/rigged/cursor_react/cursor_react_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 160,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ]
+          ],
+          "pixelHashes": [
+            "9befb5db09e7162945af4bd1cc2439624fc24fbdeb608823acfa8a03140b7b21",
+            "02dd04f8de4a8c8225d2416e4a145989a64f7d29b017dceedeef9dad482b9276",
+            "6e3aecb83333bb3d9655699394368a7ac57258e60350b2a67e5dd89f6218ce9a",
+            "0d11c4e7241b0ed3710b03e1ff1733cb38b4e1faf334a56f147821ca16307fa7",
+            "201434dc042cf5298b95b698959e1bfe8b1483c9bcd9251e8801916fd57f787e",
+            "3c44070ccb19701b7aee79347df7e370c01a9d7e3b2e9c2a7dce8527bd805f31",
+            "4f573a9d62f0a818206051215666c9494f840e261ae302b6864fbdf10739f2d7",
+            "26957d02f0795bf3ba2af8c9cd69702cfb9ee8f5b8bd13b03e86f55d8c11c092"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/luma-asset-05/M008/hit/rigged/hit",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M008/hit/rigged/hit/hit_00.png",
+            "/design/production-batches/luma-asset-05/M008/hit/rigged/hit/hit_01.png",
+            "/design/production-batches/luma-asset-05/M008/hit/rigged/hit/hit_02.png",
+            "/design/production-batches/luma-asset-05/M008/hit/rigged/hit/hit_03.png",
+            "/design/production-batches/luma-asset-05/M008/hit/rigged/hit/hit_04.png",
+            "/design/production-batches/luma-asset-05/M008/hit/rigged/hit/hit_05.png",
+            "/design/production-batches/luma-asset-05/M008/hit/rigged/hit/hit_06.png",
+            "/design/production-batches/luma-asset-05/M008/hit/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 75,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ]
+          ],
+          "pixelHashes": [
+            "099542dd4f1d1a3168ea99d986c7431b0c273b0d2e33f688160886528b3f827e",
+            "0aa6573e7b53e494eea9381e0e72bd4e5249b10dc7796db1d1e90fe507a5ae9e",
+            "f46eaa712e1d418f2dc71743d6b55ea589550fa0ae8d2ef14d5bf0f5a1424f47",
+            "7f89f8097c8111bd65b5fb7a7bc99a30aa5cc85f8639af01cf0ef1939948d0be",
+            "df88baf33161f463fb9f3d2cc6261b445444d24b95ec7b00f7f5dfc4115feeb5",
+            "bb582ff4577ef09f2bdca38bd3417ebe5120e08935fbd5adc21e25cd6e353bd0",
+            "47b58b43c0e8e62034e9e0da787bc33600366a78459d4c40c0ab8ab0590c4340",
+            "27685451c7dca21868006d61fd234a4825e93b02a635a326657fe779f2d9eb5c"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "interact",
+          "directory": "/design/production-batches/luma-asset-05/M008/interact/rigged/interact",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M008/interact/rigged/interact/interact_00.png",
+            "/design/production-batches/luma-asset-05/M008/interact/rigged/interact/interact_01.png",
+            "/design/production-batches/luma-asset-05/M008/interact/rigged/interact/interact_02.png",
+            "/design/production-batches/luma-asset-05/M008/interact/rigged/interact/interact_03.png",
+            "/design/production-batches/luma-asset-05/M008/interact/rigged/interact/interact_04.png",
+            "/design/production-batches/luma-asset-05/M008/interact/rigged/interact/interact_05.png",
+            "/design/production-batches/luma-asset-05/M008/interact/rigged/interact/interact_06.png",
+            "/design/production-batches/luma-asset-05/M008/interact/rigged/interact/interact_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 140,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ]
+          ],
+          "pixelHashes": [
+            "bb61313b5a3222d92144c9c07bfbae9596505ce7b26b395395ddedfa8f6dd4dd",
+            "4c45c05b21add97e57da06e43d38bdf2d21eb582e1d681065daefc7f8683d4ef",
+            "4243e76f6436c0a463da02e9b89414ac3c563637adf732eb617ca445f3087e01",
+            "98c792ccfec8197f071826ed6656e075c19bc22e6db0de068b20b23d785abb46",
+            "3504abe22c1fac7fac6cd490d7420783783ef561360ef23ccaa879c35de419b1",
+            "33fd2a4de6ff2a65511a3ffd79b001642fca92be632864beb70b17538b2d2184",
+            "292836f91b19271d797ad882f739a62e47614f9539aa6dbeb492337f3dc36ccd",
+            "9ab1c3ecebc8cc62309456aad433d8d26406cd9c9f8832dc04b3dd4e93e5eea7"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "recovery",
+          "directory": "/design/production-batches/luma-asset-05/M008/recovery/rigged/recovery",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M008/recovery/rigged/recovery/recovery_00.png",
+            "/design/production-batches/luma-asset-05/M008/recovery/rigged/recovery/recovery_01.png",
+            "/design/production-batches/luma-asset-05/M008/recovery/rigged/recovery/recovery_02.png",
+            "/design/production-batches/luma-asset-05/M008/recovery/rigged/recovery/recovery_03.png",
+            "/design/production-batches/luma-asset-05/M008/recovery/rigged/recovery/recovery_04.png",
+            "/design/production-batches/luma-asset-05/M008/recovery/rigged/recovery/recovery_05.png",
+            "/design/production-batches/luma-asset-05/M008/recovery/rigged/recovery/recovery_06.png",
+            "/design/production-batches/luma-asset-05/M008/recovery/rigged/recovery/recovery_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 110,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ],
+            [
+              49,
+              45,
+              211,
+              215
+            ]
+          ],
+          "pixelHashes": [
+            "27685451c7dca21868006d61fd234a4825e93b02a635a326657fe779f2d9eb5c",
+            "ad0ffc140868b0f0dfdf7c2b4628baa90c5a0837f561413806ab778ff878f873",
+            "120251add13debc05140b2a25f3a114bc7f9d13b9094942aee98fda6376cf74c",
+            "93bf1c031d987e39c6dc3f8fbf0864b558403f3228d623a6526dd9b9eed41783",
+            "300b3ab5dbd0055da4638fab48766f83540aa136821e2e45872761c3bbd3a030",
+            "f848ddb9c6464cb12fa4278453ed8b0ad307140c852efa15dd72b0bb367ed96b",
+            "b902587bfaa0f8f440c6347490c4945ddf03b479d6cb0ea419d1f9919d17c295",
+            "22dff9fd6528c9f34b7572b20d5abaa0d13855c3d26e045bec674c7480c76026"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 4,
+        "automatedCandidateActions": 4,
+        "artworkReviewPendingActions": 4,
+        "validationFailedActions": 1,
+        "missingFrameSetActions": 11,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
+    },
+    {
+      "id": "M009",
+      "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M009/base-v2.png",
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "actions": [
+        {
+          "action": "IDLE",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
+        },
+        {
+          "action": "BREATH",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M009",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M009",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
+        },
+        {
+          "action": "LOOK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "MOVE",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "TURN",
+          "animationStatus": "VALIDATION_FAILED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M009/turn-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M009/turn-pilot/keypose.png",
+          "blockReason": "ALPHA_DEFECT: 536 detached pixels; dedicated pose raw/256 output retained; no cleanup, rig or completed clip at PR limit 3/3"
+        },
+        {
+          "action": "REST",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "SLEEP",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "INTERACT",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M009/interact-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; stationary one-shot response only; no Native trigger or locomotion"
+        },
+        {
+          "action": "ATTACK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "SKILL_CAST",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "HIT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "VICTORY",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "DEFEAT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        }
+      ],
+      "clips": [
+        {
+          "action": "cursor_react",
+          "directory": "/design/production-batches/luma-asset-05/M009/cursor_react/rigged/cursor_react",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M009/cursor_react/rigged/cursor_react/cursor_react_00.png",
+            "/design/production-batches/luma-asset-05/M009/cursor_react/rigged/cursor_react/cursor_react_01.png",
+            "/design/production-batches/luma-asset-05/M009/cursor_react/rigged/cursor_react/cursor_react_02.png",
+            "/design/production-batches/luma-asset-05/M009/cursor_react/rigged/cursor_react/cursor_react_03.png",
+            "/design/production-batches/luma-asset-05/M009/cursor_react/rigged/cursor_react/cursor_react_04.png",
+            "/design/production-batches/luma-asset-05/M009/cursor_react/rigged/cursor_react/cursor_react_05.png",
+            "/design/production-batches/luma-asset-05/M009/cursor_react/rigged/cursor_react/cursor_react_06.png",
+            "/design/production-batches/luma-asset-05/M009/cursor_react/rigged/cursor_react/cursor_react_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 160,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ]
+          ],
+          "pixelHashes": [
+            "248e22e7af9579da652eedd7edc6316e1a76743f1a24f19302873e673057546d",
+            "0dbe369b38bb685b8b3c676aa255af7773a88219299e300181a7908d991ce1f9",
+            "cdd71f48ae57347a85cf15670526b191afa035639f6e3b5eb278f68d2a2407b8",
+            "2486b3873f99e2aef59b4230a732315823993c095aa6c3df7eb3d950ecd48c2b",
+            "dca64568aeca9d1521e67772c729f44e53b21cc3a20b1045919b11928fe310f7",
+            "3cd84e3be591b0a3e947c70e94ede65088bd63bcc362d019b5ff2107f6fd7db5",
+            "3d67aa14c1ec2a8c979ce5cfa516234c979031308532bf92721a99cd241f6d9a",
+            "31dd8a82a0e11c8b23e6b4fd387c9ab064b443a8572a056367a246a12be0e974"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/luma-asset-05/M009/hit/rigged/hit",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M009/hit/rigged/hit/hit_00.png",
+            "/design/production-batches/luma-asset-05/M009/hit/rigged/hit/hit_01.png",
+            "/design/production-batches/luma-asset-05/M009/hit/rigged/hit/hit_02.png",
+            "/design/production-batches/luma-asset-05/M009/hit/rigged/hit/hit_03.png",
+            "/design/production-batches/luma-asset-05/M009/hit/rigged/hit/hit_04.png",
+            "/design/production-batches/luma-asset-05/M009/hit/rigged/hit/hit_05.png",
+            "/design/production-batches/luma-asset-05/M009/hit/rigged/hit/hit_06.png",
+            "/design/production-batches/luma-asset-05/M009/hit/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 75,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ]
+          ],
+          "pixelHashes": [
+            "f7e1cd37a2da74cb91a5c19308bb96d722b9b103885e281e8fb00eb4d831fea3",
+            "79610a9341956ec36835e047137d97a8ae68d4882581c0b713237b8f1beb0f34",
+            "4047ce2fe9c4d4dac06cade3e0afb8b414dadc1981eb6005843c16e50d0e5e8f",
+            "32a5a9770dfbacb139a8944579fb7f043dd8f2834108fa6efc582a4c1e406914",
+            "7673a067b020b5a55170564d4e0613f17874260fce67431f5b122ebb704809ec",
+            "3cd40b00b21e2bfab10111dc9f22c92848e31c443cb89f6c160d09cd95a713e2",
+            "b5e6718cdc8e6619595565b454b9c548851d380fb0d398fc9ee0ea17b59a14ad",
+            "46d98a171cefa7ccdecd5c8c628b0325714c181e7e95032f9c26164b56db887e"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "look",
+          "directory": "/design/production-batches/luma-asset-05/M009/look/rigged/look",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M009/look/rigged/look/look_00.png",
+            "/design/production-batches/luma-asset-05/M009/look/rigged/look/look_01.png",
+            "/design/production-batches/luma-asset-05/M009/look/rigged/look/look_02.png",
+            "/design/production-batches/luma-asset-05/M009/look/rigged/look/look_03.png",
+            "/design/production-batches/luma-asset-05/M009/look/rigged/look/look_04.png",
+            "/design/production-batches/luma-asset-05/M009/look/rigged/look/look_05.png",
+            "/design/production-batches/luma-asset-05/M009/look/rigged/look/look_06.png",
+            "/design/production-batches/luma-asset-05/M009/look/rigged/look/look_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 160,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ]
+          ],
+          "pixelHashes": [
+            "11f709b67764bf41a65dd00afbadb5a23979b33edcece28c0df0b0f6c158d107",
+            "72740ad10fad175ebb5c5c4967ecac258be878a7b41fe9594df77c72160496ca",
+            "2486b3873f99e2aef59b4230a732315823993c095aa6c3df7eb3d950ecd48c2b",
+            "92d58ac62adba446287142b84bd5d9fa58f87952e6bb8b220779ab6ac555838c",
+            "288ea884bbbeb276c4eba798d45f3b1c49cd41fec03f51d9a79681709bbc86ef",
+            "4c4808d0eadb6b478417c54e28c4818a60f4ad64b5e60c87e589fe3eaa996e71",
+            "46e9a1958c3b29df595607fe561a02502ce407191fd9b26c1e3bef45219b3681",
+            "f5dd9fda6369fc0175d7691bd6726e7b13a293f3eedb8e0fd7e192fe1e04f826"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "recovery",
+          "directory": "/design/production-batches/luma-asset-05/M009/recovery/rigged/recovery",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M009/recovery/rigged/recovery/recovery_00.png",
+            "/design/production-batches/luma-asset-05/M009/recovery/rigged/recovery/recovery_01.png",
+            "/design/production-batches/luma-asset-05/M009/recovery/rigged/recovery/recovery_02.png",
+            "/design/production-batches/luma-asset-05/M009/recovery/rigged/recovery/recovery_03.png",
+            "/design/production-batches/luma-asset-05/M009/recovery/rigged/recovery/recovery_04.png",
+            "/design/production-batches/luma-asset-05/M009/recovery/rigged/recovery/recovery_05.png",
+            "/design/production-batches/luma-asset-05/M009/recovery/rigged/recovery/recovery_06.png",
+            "/design/production-batches/luma-asset-05/M009/recovery/rigged/recovery/recovery_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 110,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ],
+            [
+              39,
+              21,
+              216,
+              234
+            ]
+          ],
+          "pixelHashes": [
+            "46d98a171cefa7ccdecd5c8c628b0325714c181e7e95032f9c26164b56db887e",
+            "4ca94d8ee3742df242310a736551995bc3bdc3c6d0615a784af0014a1025e53e",
+            "8ce02fb09db3d852ccc822b87d8be6c06b50362ab3da417e7e1ee6359e9e0d90",
+            "023d21e02d0265e26d452ce3ae4a7c29b73eb475e83e7f2cadd3c69e5242038c",
+            "e368726743c93b2f8d59c164e135007dec26898705fb33d4300e627bf9e2bf4c",
+            "f499d55ee6556c4c1aff0703a9965b7ab28397b78b4e1cc15e34bec598e37dc1",
+            "43452de28236e23723d5c6228f581c91e4a28672bc161231b39513b1b651886a",
+            "18b9f7804d29e9f548bb934aacf2dcd8fae6d48c84ffb5d9dd4948773522b15a"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 3,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 3,
+        "validationFailedActions": 1,
+        "missingFrameSetActions": 12,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
+    },
+    {
+      "id": "M010",
+      "productionSpeciesId": null,
+      "basePath": "/design/production-batches/monsters/batch01/M010/base-v2.png",
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "actions": [
+        {
+          "action": "IDLE",
+          "animationStatus": "ANIMATION_READY",
+          "frameCount": 4,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "BREATH",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M010",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "LOOK",
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M010",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "TURN",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "REST",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "SLEEP",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "INTERACT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "ATTACK",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "SKILL_CAST",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "HIT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "VICTORY",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "DEFEAT",
+          "animationStatus": "ASSET_REQUIRED",
+          "frameCount": 0,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED"
+        }
+      ],
+      "clips": [
+        {
+          "action": "blink",
+          "directory": "/design/production-batches/luma-asset-05/M010/blink/rigged/blink",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M010/blink/rigged/blink/blink_00.png",
+            "/design/production-batches/luma-asset-05/M010/blink/rigged/blink/blink_01.png",
+            "/design/production-batches/luma-asset-05/M010/blink/rigged/blink/blink_02.png",
+            "/design/production-batches/luma-asset-05/M010/blink/rigged/blink/blink_03.png",
+            "/design/production-batches/luma-asset-05/M010/blink/rigged/blink/blink_04.png",
+            "/design/production-batches/luma-asset-05/M010/blink/rigged/blink/blink_05.png"
+          ],
+          "frameCount": 6,
+          "frameDuration": 100,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ]
+          ],
+          "pixelHashes": [
+            "e34879818e1fa285bed2334088313ddb4900c90376260d27e8cc226bba9ba6f2",
+            "d9ff42a6ce5d85f8b648912f920770efea93fb0f8d12a11df4e094115f70237c",
+            "1ebf3bd39614d11312f54e19584e7164fb8f105217073f0a728bb247a90471c7",
+            "90889c6132a128a7fff88bdc5ef4cb62a58d6e9862ce8e2585f4810fe3c007dd",
+            "de1bf3183fe603b35e4f9b535aa845dfa5594a0505cc1a18477914998e8977ac",
+            "e30afe9fbe49de9c80b35a053afd7e512abff64cef1b1ca6a64f1c7b9fbd1e15"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "cursor_react",
+          "directory": "/design/production-batches/luma-asset-05/M010/cursor_react/rigged/cursor_react",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M010/cursor_react/rigged/cursor_react/cursor_react_00.png",
+            "/design/production-batches/luma-asset-05/M010/cursor_react/rigged/cursor_react/cursor_react_01.png",
+            "/design/production-batches/luma-asset-05/M010/cursor_react/rigged/cursor_react/cursor_react_02.png",
+            "/design/production-batches/luma-asset-05/M010/cursor_react/rigged/cursor_react/cursor_react_03.png",
+            "/design/production-batches/luma-asset-05/M010/cursor_react/rigged/cursor_react/cursor_react_04.png",
+            "/design/production-batches/luma-asset-05/M010/cursor_react/rigged/cursor_react/cursor_react_05.png",
+            "/design/production-batches/luma-asset-05/M010/cursor_react/rigged/cursor_react/cursor_react_06.png",
+            "/design/production-batches/luma-asset-05/M010/cursor_react/rigged/cursor_react/cursor_react_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 160,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ]
+          ],
+          "pixelHashes": [
+            "90144853acbbdb3f647a51ba1ef2f7d57a149fecc9384b45cf61c38738c33bbd",
+            "478c945d93d26b4f680c4858e2a85af0b9a02dbd29cb0fb093029137e64d25a9",
+            "a30a5cfdba877f643432eb0d525ac95df71fe4ca51a8f934bfe01d4810a78bb0",
+            "905c812d7d306f487747b52bb25f69be769a626a5e4f13790f026841b8f537fc",
+            "ea309dea56ecfda8798fa8ba5917b6360661c4df35143f6d535c84fe9e75a9c6",
+            "ecc428f536be943a2db418f5c117cdab48614f442f7ae789af6fe60ed2987608",
+            "05ee71a31b829d97d8768ea03d4dd74560984a755a41ad742e57419e18fde73e",
+            "097fd4b72671aa362d83b7deb7db6c461191a1fdd5fe17393df4eb01c7269207"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/luma-asset-05/M010/hit/rigged/hit",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M010/hit/rigged/hit/hit_00.png",
+            "/design/production-batches/luma-asset-05/M010/hit/rigged/hit/hit_01.png",
+            "/design/production-batches/luma-asset-05/M010/hit/rigged/hit/hit_02.png",
+            "/design/production-batches/luma-asset-05/M010/hit/rigged/hit/hit_03.png",
+            "/design/production-batches/luma-asset-05/M010/hit/rigged/hit/hit_04.png",
+            "/design/production-batches/luma-asset-05/M010/hit/rigged/hit/hit_05.png",
+            "/design/production-batches/luma-asset-05/M010/hit/rigged/hit/hit_06.png",
+            "/design/production-batches/luma-asset-05/M010/hit/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 75,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ]
+          ],
+          "pixelHashes": [
+            "2182a15d809eed143bec004d9bbdb81ace0666be64babce0b52f481776d8fe48",
+            "469d247966311f3799ca94566f56a162730c76cc7c2bc71df10f33bdaba093e3",
+            "35999d56dd5969738a7ebeb6fb29525473213d53d50ccead531445c206a0439e",
+            "ce0c3e861255f89d28a33032900e71f91e77ecba55ef533f16713b28752917a2",
+            "ba7e6f00eb271455fa8149b669ea55247ed7320fa8018dc8af6dbfabe26afbf3",
+            "26fdbeedcebf479aa2b0a90db73540b1dfbff6b5295ff7357028416b91bc5474",
+            "11326960edb654113e72c7e840f02c0369fa094270fce4d711b02ddee4370213",
+            "0a15ea60fc5acb81f565e768f9ec39d9bd99ce15cbac7bfd26720587830ca0ac"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "interact",
+          "directory": "/design/production-batches/luma-asset-05/M010/interact/rigged/interact",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M010/interact/rigged/interact/interact_00.png",
+            "/design/production-batches/luma-asset-05/M010/interact/rigged/interact/interact_01.png",
+            "/design/production-batches/luma-asset-05/M010/interact/rigged/interact/interact_02.png",
+            "/design/production-batches/luma-asset-05/M010/interact/rigged/interact/interact_03.png",
+            "/design/production-batches/luma-asset-05/M010/interact/rigged/interact/interact_04.png",
+            "/design/production-batches/luma-asset-05/M010/interact/rigged/interact/interact_05.png",
+            "/design/production-batches/luma-asset-05/M010/interact/rigged/interact/interact_06.png",
+            "/design/production-batches/luma-asset-05/M010/interact/rigged/interact/interact_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 140,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ]
+          ],
+          "pixelHashes": [
+            "ac3a210c7363865131c954bc60d9ebe2d56d13081c61e259d142d8f53abcbb2d",
+            "fdad58d1254cb2d6e9ab02b8fb34948fd066638796370a1600649f1bb6f4d505",
+            "69d344b19edce727f8635c9e1175af3fb748364278091f853415ab21128906a7",
+            "7945f8ce29fdb2d0307f80ef27dd0712abd9fb487df51efa263040a22a2344bc",
+            "d53e0b319fc245b29b4971131c1e59769f9bd0a7852a11455406f8eb4a01f257",
+            "142905968b25bca34e8f979990a11a8894eea9dfc32da424a339d1721b818f22",
+            "bce13b931ca32e66cc31b22bf160b55ffb5d3bb4f4d6cb9dd685345b04834c72",
+            "418cfc3ced98d990a49457552146aca64e89842c9ba4293d2b7978d5fbd98209"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "recovery",
+          "directory": "/design/production-batches/luma-asset-05/M010/recovery/rigged/recovery",
+          "urls": [
+            "/design/production-batches/luma-asset-05/M010/recovery/rigged/recovery/recovery_00.png",
+            "/design/production-batches/luma-asset-05/M010/recovery/rigged/recovery/recovery_01.png",
+            "/design/production-batches/luma-asset-05/M010/recovery/rigged/recovery/recovery_02.png",
+            "/design/production-batches/luma-asset-05/M010/recovery/rigged/recovery/recovery_03.png",
+            "/design/production-batches/luma-asset-05/M010/recovery/rigged/recovery/recovery_04.png",
+            "/design/production-batches/luma-asset-05/M010/recovery/rigged/recovery/recovery_05.png",
+            "/design/production-batches/luma-asset-05/M010/recovery/rigged/recovery/recovery_06.png",
+            "/design/production-batches/luma-asset-05/M010/recovery/rigged/recovery/recovery_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 110,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ],
+            [
+              33,
+              42,
+              229,
+              216
+            ]
+          ],
+          "pixelHashes": [
+            "0a15ea60fc5acb81f565e768f9ec39d9bd99ce15cbac7bfd26720587830ca0ac",
+            "1204138a4ecba133b0d31a95d6d52b00f3673953426e5cff867faccabeefe0d0",
+            "901723addf6ef079bc478c9384397be02d0711cc1e9a4c3d905bf2e4aeb5e1b5",
+            "96ddcf5afe68300a2a4577df7ec8d9a4b3128bfb078d27b425cb1d7733cb8f79",
+            "1f7804610bcbd5901c86630ba6787cc6cbd6bf7ab4bb96358f00da6f61da93ca",
+            "6fd56baaaaf92dfdda5b23c7cc836df1f4f7f3cfc3823a2d9f84e83b70f01ef1",
+            "d328514eec616f3f65c791ad2fc80512928d4e62981d47feaad236dbe2c29e99",
+            "051eb3c854fdfe71e4dd2a6bc36eb7bba29a37b9b3296b4aefbeb1f00c1109da"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 1,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 4,
+        "automatedCandidateActions": 4,
+        "artworkReviewPendingActions": 4,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 11,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "manifestSupply": {}
+    }
+  ],
+  "productionRegistration": false,
+  "coverageScope": "Counts are per action, not per candidate version. File presence is not PNG validation, artwork approval, native runtime or GUI proof. Completion requires all four recorded readiness/runtime/file/GUI conditions."
+}

@@ -1,0 +1,70 @@
+{
+  "conceptId": "M010",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M010/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 140,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "upper-mane-acknowledgement",
+      "x": 177,
+      "y": 136,
+      "rx": 13,
+      "ry": 14,
+      "dx": 0.9,
+      "dy": -1.4,
+      "samples": [
+        0.03,
+        0.15,
+        0.48,
+        0.86,
+        1,
+        0.68,
+        0.28,
+        0.06
+      ]
+    },
+    {
+      "name": "shoulder-leaf-release",
+      "x": 145,
+      "y": 140,
+      "rx": 22,
+      "ry": 15,
+      "dx": -0.6,
+      "dy": -0.8,
+      "samples": [
+        0.03,
+        0.15,
+        0.48,
+        0.86,
+        1,
+        0.68,
+        0.28,
+        0.06
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "apiCalls": 0,
+  "scope": "stationary local body response; no whole-body pose, combat event or runtime connection",
+  "sequence": "independent greeting gesture"
+}
