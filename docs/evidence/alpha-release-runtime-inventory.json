@@ -16,6 +16,7 @@
     "let rows: Vec<Entry> = self.request(\"/api/v1/dex\", false)?.ok_or(\"missing Dex\")?;"
   ],
   "src-tauri/src/backend/evolution.rs": [
+    "&& self.request()",
     ".request(\"/api/v1/companions/active/evolution\", false)?",
     ".request(\"/api/v1/companions/active/evolve\", true)?"
   ],
@@ -38,7 +39,8 @@
     ".send(Event::Capture(api.capture(id)?))",
     ".send(Event::Encounter(api.encounter(true)?))",
     ".send(Event::EvolutionUnavailable(e.into()))",
-    ".send(Event::Evolved(api.evolve()?))",
+    ".send(Event::EvolvedCommand(request, result, current))",
+    ".send(Event::EvolvedLegacy(api.evolve()?))",
     ".send(Event::ItemUsed(api.use_item(&code, id)?))",
     ".send(Event::Items(api.items(last_battle)?))",
     ".send(Event::Purchased(api.purchase(&code, 1)?))",
@@ -71,8 +73,6 @@
   ],
   "src-tauri/src/main.rs": [
     "&& !state.backend.lock().unwrap().request(backend::battle::Command::InteractCompanion) {",
-    "&& world.view.evolution.request()",
-    ".request(backend::battle::Command::Evolve)",
     ".request(backend::battle::Command::Spawn(action))",
     "Err(error) => eprintln!(\"[LUMA DISCOVERY] {error}; retained for bounded retry\"),",
     "eprintln!(",
@@ -84,6 +84,7 @@
     "eprintln!(\"[LUMA SMOKE] normal exit\");",
     "eprintln!(\"[LUMA] emit: {e}\");",
     "if !state.backend.lock().unwrap().request(backend::battle::Command::Discover(job.clone())) {",
+    "if !state.backend.lock().unwrap().request(command) {",
     "if !state.backend.lock().unwrap().request(command) {",
     "if !state.backend.lock().unwrap().request(command) {",
     "if world.take_companion_click() && world.view.bond.request()",

@@ -56,7 +56,65 @@ pub struct Result {
     pub evolution: Eligibility,
     pub bootstrap: Bootstrap,
 }
+#[derive(Clone, Debug, Deserialize, Serialize, PartialEq)]
+#[serde(rename_all = "camelCase")]
+pub struct Request {
+    pub command_id: uuid::Uuid,
+    pub expected_companion_id: u64,
+    pub expected_stage: u32,
+    pub expected_selection_revision: u64,
+}
+impl Request {
+    fn from_bootstrap(value: &Bootstrap) -> Option<Self> {
+        let revision = value.player.active_selection_revision?;
+        if !value.valid()
+            || revision > i64::MAX as u64
+            || !matches!(
+                value.active_companion.species.as_str(),
+                "MOA" | "RUU" | "NOX"
+            )
+            || !(1..=4).contains(&value.active_companion.evolution_stage)
+        {
+            return None;
+        }
+        Some(Self {
+            command_id: uuid::Uuid::new_v4(),
+            expected_companion_id: value.active_companion.player_companion_id,
+            expected_stage: value.active_companion.evolution_stage,
+            expected_selection_revision: revision,
+        })
+    }
+}
 impl Api {
+    pub fn evolve_command(&self, request: &Request) -> std::result::Result<Result, &'static str> {
+        if request.command_id.is_nil()
+            || request.expected_companion_id == 0
+            || !(1..=4).contains(&request.expected_stage)
+            || request.expected_selection_revision > i64::MAX as u64
+        {
+            return Err("invalid evolution command");
+        }
+        let body = serde_json::to_value(request).map_err(|_| "invalid evolution command")?;
+        let value: Result = self
+            .request_json("/api/v1/companions/active/evolve", Some(&body))?
+            .ok_or("missing evolution result")?;
+        let c = &value.bootstrap.active_companion;
+        let expected = request.expected_stage + u32::from(value.result == Outcome::Evolved);
+        if !value.bootstrap.valid()
+            || !value.evolution.valid()
+            || c.player_companion_id != request.expected_companion_id
+            || c.evolution_stage != expected
+            || !matches!(c.species.as_str(), "MOA" | "RUU" | "NOX")
+            || value.bootstrap.player.active_selection_revision
+                != Some(request.expected_selection_revision)
+            || c.species != value.evolution.species
+            || c.evolution_stage != value.evolution.current_stage
+            || c.evolution_name != value.evolution.current_name
+        {
+            return Err("invalid evolution result");
+        }
+        Ok(value)
+    }
     pub fn evolution(&self) -> std::result::Result<Eligibility, &'static str> {
         let value: Eligibility = self
             .request("/api/v1/companions/active/evolution", false)?
@@ -106,8 +164,72 @@ pub struct Presentation {
     pub success: Option<String>,
     #[serde(skip)]
     started: f64,
+    #[serde(skip)]
+    pending: Option<Request>,
 }
 impl Presentation {
+    pub fn command(&mut self, bootstrap: Option<&Bootstrap>) -> Option<Request> {
+        if self.busy || self.phase != Phase::Idle {
+            return None;
+        }
+        // An ambiguous transport failure retries the same intent even after a status refresh.
+        let request = match &self.pending {
+            Some(request) => request.clone(),
+            None => {
+                if self
+                    .eligibility
+                    .as_ref()
+                    .is_none_or(|s| s.status != Status::Available)
+                {
+                    return None;
+                }
+                Request::from_bootstrap(bootstrap?)?
+            }
+        };
+        self.pending = Some(request.clone());
+        self.busy = true;
+        self.error = None;
+        self.success = None;
+        Some(request)
+    }
+    pub fn acknowledge_command(
+        &mut self,
+        request: &Request,
+        result: &Result,
+        current: &Bootstrap,
+        previous: Option<Companion>,
+        now: f64,
+    ) -> bool {
+        if self.pending.as_ref() != Some(request) {
+            return false;
+        }
+        self.pending = None;
+        self.busy = false;
+        self.error = None;
+        if current.active_companion.player_companion_id
+            == result.bootstrap.active_companion.player_companion_id
+            && current.active_companion.evolution_stage
+                == result.bootstrap.active_companion.evolution_stage
+            && current.player.active_selection_revision
+                == result.bootstrap.player.active_selection_revision
+        {
+            self.acknowledge(result, previous, now);
+        } else {
+            self.phase = Phase::Idle;
+            self.previous = None;
+            self.success = None;
+        }
+        true
+    }
+    pub fn request_legacy(&mut self, bootstrap: Option<&Bootstrap>) -> bool {
+        // Compatibility is capability-based, never an error fallback from a structured command.
+        bootstrap.is_some_and(|b| {
+            b.player.active_selection_revision.is_none()
+                && b.active_companion.species == "MOA"
+                && (1..=2).contains(&b.active_companion.evolution_stage)
+        }) && self.pending.is_none()
+            && self.request()
+    }
     pub fn request(&mut self) -> bool {
         if self.busy
             || self.phase != Phase::Idle
@@ -136,6 +258,18 @@ impl Presentation {
         }
     }
     pub fn fail(&mut self, error: String) {
+        if matches!(
+            error.as_str(),
+            "COMMAND_ID_REUSED"
+                | "STALE_SELECTION"
+                | "STALE_STAGE"
+                | "COMPANION_MISMATCH"
+                | "EVOLUTION_COMMAND_REQUIRED"
+                | "Evolution not eligible; refresh status"
+                | "Maximum evolution stage"
+        ) {
+            self.pending = None;
+        }
         self.busy = false;
         self.error = Some(error);
     }

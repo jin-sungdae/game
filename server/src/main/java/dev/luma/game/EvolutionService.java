@@ -35,6 +35,9 @@ public class EvolutionService {
     private Result evolve(boolean command) {
         var player=game.lockPlayer(LOCAL_PLAYER);
         var current=repository.lockActive(LOCAL_PLAYER);
+        // Legacy clients have no target/revision: allow them only before any real selection change.
+        if (!command && repository.selectionRevision(LOCAL_PLAYER)!=0)
+            throw new GameFault(409,"EVOLUTION_COMMAND_REQUIRED");
         var before=status(current); // Revalidate the approved next transition under the existing lock.
         if (before.status()!=State.AVAILABLE && repository.completedCurrentEvolution(current))
             return new Result("ALREADY_EVOLVED",status(current),new GameDtos.Bootstrap(player,current));
