@@ -128,8 +128,13 @@
             "runtimeStatus": "BLOCKED",
             "guiStatus": "GUI_NOT_VERIFIED"
           },
-          "status": "BLOCKED",
-          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/look",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         },
         {
           "action": "MOVE",
@@ -176,8 +181,13 @@
             "runtimeStatus": "BLOCKED",
             "guiStatus": "GUI_NOT_VERIFIED"
           },
-          "status": "BLOCKED",
-          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/sleep",
+          "frameCount": 24,
+          "automated": "PENDING",
+          "scope": "Standing stag doze: sustained eye closure with local chest breathing and reopen to BASE; no recumbent sleep or runtime activation",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         },
         {
           "action": "CURSOR_REACT",
@@ -257,8 +267,13 @@
             "runtimeStatus": "BLOCKED",
             "guiStatus": "GUI_NOT_VERIFIED"
           },
-          "status": "BLOCKED",
-          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/victory",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         },
         {
           "action": "DEFEAT",
@@ -323,8 +338,13 @@
             "action": "RECOVERY",
             "animationStatus": "NOT_RECORDED"
           },
-          "status": "BLOCKED",
-          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/recovery",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         }
       ],
       "productionApproval": "HUMAN_REVIEW_REQUIRED",
@@ -453,8 +473,13 @@
             "runtimeStatus": "BLOCKED",
             "guiStatus": "GUI_NOT_VERIFIED"
           },
-          "status": "BLOCKED",
-          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/look",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         },
         {
           "action": "MOVE",
@@ -584,8 +609,13 @@
             "runtimeStatus": "BLOCKED",
             "guiStatus": "GUI_NOT_VERIFIED"
           },
-          "status": "BLOCKED",
-          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/victory",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         },
         {
           "action": "DEFEAT",
@@ -650,8 +680,13 @@
             "action": "RECOVERY",
             "animationStatus": "NOT_RECORDED"
           },
-          "status": "BLOCKED",
-          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/recovery",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         }
       ],
       "productionApproval": "HUMAN_REVIEW_REQUIRED",
@@ -1228,8 +1263,13 @@
             "runtimeStatus": "BLOCKED",
             "guiStatus": "GUI_NOT_VERIFIED"
           },
-          "status": "BLOCKED",
-          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/victory",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         },
         {
           "action": "DEFEAT",
@@ -1294,8 +1334,13 @@
             "action": "RECOVERY",
             "animationStatus": "NOT_RECORDED"
           },
-          "status": "BLOCKED",
-          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/recovery",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         }
       ],
       "productionApproval": "HUMAN_REVIEW_REQUIRED",
@@ -1424,8 +1469,13 @@
             "runtimeStatus": "BLOCKED",
             "guiStatus": "GUI_NOT_VERIFIED"
           },
-          "status": "BLOCKED",
-          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/look",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         },
         {
           "action": "MOVE",
@@ -1553,8 +1603,13 @@
             "runtimeStatus": "BLOCKED",
             "guiStatus": "GUI_NOT_VERIFIED"
           },
-          "status": "BLOCKED",
-          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/victory",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         },
         {
           "action": "DEFEAT",
@@ -1619,8 +1674,13 @@
             "action": "RECOVERY",
             "animationStatus": "NOT_RECORDED"
           },
-          "status": "BLOCKED",
-          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/recovery",
+          "frameCount": 16,
+          "automated": "PENDING",
+          "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
         }
       ],
       "productionApproval": "HUMAN_REVIEW_REQUIRED",
@@ -1650,11 +1710,11 @@
   "runtimeConnected": false,
   "nextAction": "\uac80\uc99d \uacb0\uacfc \ud655\uc778 \ud6c4 \ud1b5\ud569 \ub2f4\ub2f9\uc790\uc758 Catalog \ub4f1\ub85d \ubc0f \uc0ac\ub78c \uac80\uc218. \ucc28\ub2e8\ub41c \uad00\uc808/\uc790\uc138 \uc791\uc5c5\uc740 \uc2b9\uc778\ub41c \ubd84\ub9ac \uc6d0\ud654 \ubc0f \uacc4\uc57d \ud544\uc694.",
   "candidateCounts": {
-    "clips": 20,
-    "framePng": 272,
+    "clips": 32,
+    "framePng": 472,
     "sourceSheets": 1,
-    "totalPng": 273,
-    "structurallyPassingRigClips": 19,
+    "totalPng": 473,
+    "structurallyPassingRigClips": "PENDING_CONTINUATION_VALIDATION",
     "visuallyBlockedClips": 4,
     "productionCompleteActions": 0
   },
@@ -1672,8 +1732,8 @@
       "clips": 19,
       "png": 264
     },
-    "assetTests": "INTERRUPTED_NOT_COMPLETED",
-    "releaseGate": "INTERRUPTED_NOT_COMPLETED",
+    "assetTests": "RUNNING_SINGLE_RELEASE_GATE",
+    "releaseGate": "RUNNING_PYTHON313",
     "nativeGui": "DEFERRED_GUI",
     "existingBatch05": {
       "status": "PASS",
@@ -1681,5 +1741,15 @@
     },
     "requiredBaseRelease": "PASS",
     "interruptionReason": "Full Asset Tests and Release Gate were stopped after more than six minutes in existing Alpha checks during concurrent local tracks. No full-suite PASS claim."
+  },
+  "continuation": {
+    "previousHead": "ec160b167aa70f049fe106ca43b54adbcea69a56",
+    "newClips": 12,
+    "newFrames": 200,
+    "totalClips": 32,
+    "totalFrames": 472,
+    "sourceSheets": 1,
+    "productionCompleteActions": 0,
+    "nextResume": "Await full Release Gate and CI; review new 12 clips. Remaining joint/keypose actions blocked; no existing failure regeneration."
   }
 }

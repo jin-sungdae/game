@@ -1,0 +1,207 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M044",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M044/base-v2.png",
+  "sourcePixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "RECOVERY",
+    "frames": 16,
+    "frameDuration": 220,
+    "loop": false
+  },
+  "parts": [
+    {
+      "x": 137,
+      "y": 154,
+      "rx": 20,
+      "ry": 12,
+      "dx": 0.5599999999999999,
+      "dy": -1.04,
+      "phase": 0,
+      "name": "M044-settling-ribcage-breath",
+      "delay": 0
+    },
+    {
+      "x": 163,
+      "y": 154,
+      "rx": 10,
+      "ry": 14,
+      "dx": -0.32000000000000006,
+      "dy": -0.6400000000000001,
+      "phase": -1.047,
+      "name": "M044-settling-shoulder-root",
+      "delay": 1
+    }
+  ],
+  "eyes": [],
+  "frames": [
+    {
+      "file": "recovery_00.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_01.png",
+      "pixelSha256": "b89cc0c102c09a3952d92f7c197feb2a9d69570e76ed6a44bc35fb045f4b872e",
+      "partAmounts": [
+        0.12,
+        0
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_02.png",
+      "pixelSha256": "5fa2a4c25f4fb8a4296015b0d5033925e62be110cfd0a8c7755d81c03b9cffbb",
+      "partAmounts": [
+        0.35,
+        0.12
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_03.png",
+      "pixelSha256": "63e43d6c70cd724360c2f82fcbe02a77fe32a5db56d78313b565d3d41894b584",
+      "partAmounts": [
+        0.65,
+        0.35
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_04.png",
+      "pixelSha256": "c0bbec2e4a45bffd515a8e70a6040c2d668d9c875683041038c447a71e6b71d8",
+      "partAmounts": [
+        0.85,
+        0.65
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_05.png",
+      "pixelSha256": "81fb9fa515c0bc898c61f4dcc38ac6e8b2826b9445395584f3b0268e6792fd06",
+      "partAmounts": [
+        1,
+        0.85
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_06.png",
+      "pixelSha256": "45ceac7b0ad904b773f4ab3d1e9adfcb665a41f3423feaa26751d5de25e54339",
+      "partAmounts": [
+        0.87,
+        1
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_07.png",
+      "pixelSha256": "09492f50cc9f21546e321f726150d5b89e9815e024b2ab0b79460591e44733c3",
+      "partAmounts": [
+        0.64,
+        0.87
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_08.png",
+      "pixelSha256": "82caac0becb6814578401991c27853a6f302d061a44cb1a7729c924de41f69b4",
+      "partAmounts": [
+        0.4,
+        0.64
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_09.png",
+      "pixelSha256": "ac05ca4625ae406f9422e225d222b517725abccbb1c14611be688d3c5d4af7be",
+      "partAmounts": [
+        0.2,
+        0.4
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_10.png",
+      "pixelSha256": "f9a1ed67fafca93599dc1c2f5254853d2a824db7b35d58fc5c99741e9a8e025a",
+      "partAmounts": [
+        0.05,
+        0.2
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_11.png",
+      "pixelSha256": "658798985c1f4ab994ec22feb0327c5d31c6dad7fd291caa3aa43935d62f9179",
+      "partAmounts": [
+        -0.08,
+        0.05
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_12.png",
+      "pixelSha256": "48d220427b57229d934995b58ad72236236eb74186414d24d4af1b54315ae811",
+      "partAmounts": [
+        -0.12,
+        -0.08
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_13.png",
+      "pixelSha256": "f706d5ffa7d71a1fa89acdade9dc0b15b1d297aa3e4d6207bcce6f5c7cd5bae2",
+      "partAmounts": [
+        -0.06,
+        -0.12
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_14.png",
+      "pixelSha256": "b2538c596415b132db4516542bdcb7060132e35abddecc9870e09601ba2eaba3",
+      "partAmounts": [
+        -0.015,
+        -0.06
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "recovery_15.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0
+      ],
+      "gaze": 0
+    }
+  ],
+  "wholeImageTransform": false,
+  "reuse": "design/production-batches/monsters/batch05/M044/rig-evidence.json",
+  "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
+  "entryContract": "BASE_ONLY",
+  "exitContract": "EXACT_BASE",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "DEFERRED_GUI"
+}

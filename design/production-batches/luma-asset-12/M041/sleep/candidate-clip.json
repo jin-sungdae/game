@@ -1,0 +1,310 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M041",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M041/base-v2.png",
+  "sourcePixelSha256": "06341733f200eb136ab5a62ec083f67e79484f15ba4722ed20556150beee9d96",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "SLEEP",
+    "frames": 24,
+    "frameDuration": 400,
+    "loop": false
+  },
+  "parts": [
+    {
+      "x": 113,
+      "y": 159,
+      "rx": 22,
+      "ry": 13,
+      "dx": 0.6400000000000001,
+      "dy": -1.1199999999999999,
+      "phase": 0,
+      "name": "M041-settling-ribcage-breath",
+      "delay": 0
+    },
+    {
+      "x": 139,
+      "y": 158,
+      "rx": 12,
+      "ry": 12,
+      "dx": -0.32000000000000006,
+      "dy": -0.6400000000000001,
+      "phase": -1.047,
+      "name": "M041-settling-shoulder-root",
+      "delay": 1
+    }
+  ],
+  "eyes": [
+    {
+      "x": 196,
+      "y": 102,
+      "rx": 6,
+      "ry": 6
+    }
+  ],
+  "frames": [
+    {
+      "file": "sleep_00.png",
+      "pixelSha256": "06341733f200eb136ab5a62ec083f67e79484f15ba4722ed20556150beee9d96",
+      "partAmounts": [
+        0,
+        0
+      ],
+      "eyeClosure": 0,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_01.png",
+      "pixelSha256": "a7d3fe0e96429f3cdbcfdba42e2a27819c9e816bea004c3117906b62922778c5",
+      "partAmounts": [
+        0.011555067466549601,
+        0.011555433690594172
+      ],
+      "eyeClosure": 0.25,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_02.png",
+      "pixelSha256": "dd54fbc80063d509ef34a7f87d9ae5f80591a920d7d3038b38428341c107f37c",
+      "partAmounts": [
+        0.040034663749715656,
+        0.04731369323831635
+      ],
+      "eyeClosure": 0.5,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_03.png",
+      "pixelSha256": "a6f29d426ba3f17ce22bb73d8f97e23fa6dd449e9cb6fa6d65ce4c4b6c0f69fe",
+      "partAmounts": [
+        0.07142554277580283,
+        0.098914110871467
+      ],
+      "eyeClosure": 0.75,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_04.png",
+      "pixelSha256": "b266ab51ea48c980525954451db41cbb274255d431b434dbd84f34ec721a18b1",
+      "partAmounts": [
+        0.09448861839704838,
+        0.14847287665473383
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_05.png",
+      "pixelSha256": "07eef293575474f98ef0b9708d18da6957f3536cbc67d32892d82bf1509280b0",
+      "partAmounts": [
+        0.11023966427034144,
+        0.17920666124148332
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_06.png",
+      "pixelSha256": "4ea9e8c36b50700c9383184cb0946774d35164e29b70d52b17ef5053f6715c5f",
+      "partAmounts": [
+        0.13353030167058386,
+        0.18692414742477342
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_07.png",
+      "pixelSha256": "41191c80cd8f44bcb4a948430457656de4a5a8c604f1385454d77baa9488f7eb",
+      "partAmounts": [
+        0.18474394722507254,
+        0.1847307641277311
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_08.png",
+      "pixelSha256": "640603cf10f6e04522ad0eea3dd5f63195df27953653e7287b59bb30a74c64c1",
+      "partAmounts": [
+        0.27591905637010167,
+        0.19708504334097218
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_09.png",
+      "pixelSha256": "06a6e7d675f6ed0fea208cb2920dc9e6afa591527294503dff1b07d8230eeb17",
+      "partAmounts": [
+        0.3995350404084944,
+        0.24577147434997407
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_10.png",
+      "pixelSha256": "e5a7420da8fd3ee2aef0c87055c1dc45f700f96349e472e7bbe06b02f82c521f",
+      "partAmounts": [
+        0.5272331079139997,
+        0.33554478011964467
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_11.png",
+      "pixelSha256": "bdae50b63e4e982f67515295a2c74f410c9878e47b2a26c66d728142eb40b041",
+      "partAmounts": [
+        0.6203027978805864,
+        0.44794366409698755
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_12.png",
+      "pixelSha256": "0cc892b8ba9b7c612f282ba5f16fd24c44762aa6ad0129a2cc93e8d9be99fd12",
+      "partAmounts": [
+        0.6469729324618074,
+        0.5474726907396021
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_13.png",
+      "pixelSha256": "8a751e13d364dbf1d57a081c1017ad1ac3a3e069c5a204a3d3af2da36a7cdcc1",
+      "partAmounts": [
+        0.5974079119913619,
+        0.5974268461206884
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_14.png",
+      "pixelSha256": "aba2aa897b3377b438d0053caad314bd6ba25274fdb5278c3e7bbf0bb05b85a4",
+      "partAmounts": [
+        0.4883206049437156,
+        0.5771061660139488
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_15.png",
+      "pixelSha256": "9a7ef0ff1bec29436b26e6aea4729c5434570dafec7c4bcf14af89ee0f103e14",
+      "partAmounts": [
+        0.35475307247584525,
+        0.4912820173171572
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_16.png",
+      "pixelSha256": "1ab5e39d39bd5882126c0302ed0ca07f66ee342bf17ee431324a5f893c983d50",
+      "partAmounts": [
+        0.23360393212992273,
+        0.36706905434306014
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_17.png",
+      "pixelSha256": "754b58a28858a94aaea0e2750154e61ed40f392db8646c8098d750fa46abf5e1",
+      "partAmounts": [
+        0.14784203626967063,
+        0.24033343975048638
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_18.png",
+      "pixelSha256": "87d5fd88db0d92990c65cef111c52962213586f6a83e6f57bb5790f00f1310fb",
+      "partAmounts": [
+        0.09956799836842084,
+        0.1393815708716277
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_19.png",
+      "pixelSha256": "eea0d309b7f40b4172ebfc030841addcf39f78161f5a648ec6dca279cfcc9aa3",
+      "partAmounts": [
+        0.07472562713886938,
+        0.07472029481144397
+      ],
+      "eyeClosure": 1,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_20.png",
+      "pixelSha256": "993b5ee9c4f99ab718a60118709369264849924aa14a1fba9a1c3cbe9de9670f",
+      "partAmounts": [
+        0.05555319993673553,
+        0.03968085771710982
+      ],
+      "eyeClosure": 0.75,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_21.png",
+      "pixelSha256": "0336140ee43605865f0868b990bf866411591e2607a601e4d05a5c10e36ad307",
+      "partAmounts": [
+        0.03275563397704007,
+        0.02014942280800781
+      ],
+      "eyeClosure": 0.5,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_22.png",
+      "pixelSha256": "31f98896d3b597f3339df0eb061deac36400f514d0d27a2bd1e096fab3fb2fac",
+      "partAmounts": [
+        0.010197745979355266,
+        0.006490109177508068
+      ],
+      "eyeClosure": 0.25,
+      "gaze": 0
+    },
+    {
+      "file": "sleep_23.png",
+      "pixelSha256": "06341733f200eb136ab5a62ec083f67e79484f15ba4722ed20556150beee9d96",
+      "partAmounts": [
+        9.346579164697152e-33,
+        6.749511580653847e-33
+      ],
+      "eyeClosure": 0,
+      "gaze": 0
+    }
+  ],
+  "wholeImageTransform": false,
+  "reuse": "design/production-batches/monsters/batch05/M041/rig-evidence.json",
+  "scope": "Standing stag doze: sustained eye closure with local chest breathing and reopen to BASE; no recumbent sleep or runtime activation",
+  "entryContract": "BASE_ONLY",
+  "exitContract": "EXACT_BASE",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "DEFERRED_GUI"
+}

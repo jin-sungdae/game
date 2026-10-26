@@ -1,0 +1,28 @@
+{
+  "worktree": "/Users/jinseongdae/.codex/worktrees/assets-m041-m045/New project",
+  "branch": "codex/assets-m041-m045",
+  "baseline": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "priorHead": "ec160b167aa70f049fe106ca43b54adbcea69a56",
+  "startupCleanup": {
+    "evidenceCommit": "22d8a921191096a3602ed8b8a4bcb9d425a41662",
+    "observed": "Prior tests lost worktree path during snapshot/recreation. Candidate files restored unchanged. App-internal cause not verified; no app configuration changed."
+  },
+  "previousTermination": "Explicit SIGINT by this session; KeyboardInterrupt in png_errors decode. No demonstrated fixture collision or test failure.",
+  "temporaryDirectory": "/tmp/luma-asset12-continuation/tmp",
+  "releaseOutput": "/tmp/luma-asset12-continuation/release-py313",
+  "testInterpreter": "/opt/homebrew/opt/python@3.13/libexec/bin/python3",
+  "isolation": [
+    "Single full release gate; no duplicate full Asset Tests process",
+    "Unique TMPDIR; existing TemporaryDirectory prefixes retained",
+    "PostgreSQL test data uses unique TemporaryDirectory and dynamically chosen ports",
+    "No other worktree, process, branch or artifact changed",
+    "Original candidate hashes captured and tested"
+  ],
+  "limits": [
+    "External app startup cleanup cannot be guaranteed disabled",
+    "High shared-host CPU load; wall time is not a test failure",
+    "Dynamic port selection retains existing check-then-bind race; no collision observed"
+  ],
+  "hostLoadObserved": "235.79 244.17 237.99",
+  "validatorPolicy": "UNCHANGED"
+}

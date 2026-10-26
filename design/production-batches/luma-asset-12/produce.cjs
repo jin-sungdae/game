@@ -58,7 +58,7 @@ function partFrame(data, parts, amounts) {
   }
   return output;
 }
-(async()=>{
+async function produce(){
  for(const [code,config] of Object.entries(configs)) {
   const source=path.join(repository,config.source);
   const {data,info}=await sharp(source).raw().toBuffer({resolveWithObject:true});
@@ -104,4 +104,6 @@ function partFrame(data, parts, amounts) {
    console.log(code,action,count);
   }
  }
-})().catch(error=>{console.error(error);process.exitCode=1;});
+}
+module.exports = { partFrame, eyeFrame };
+if (require.main === module) produce().catch(error=>{console.error(error);process.exitCode=1;});

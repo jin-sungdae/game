@@ -1,0 +1,151 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M045",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M045/base-v2.png",
+  "sourcePixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 16,
+    "frameDuration": 130,
+    "loop": false
+  },
+  "parts": [],
+  "eyes": [
+    {
+      "x": 160,
+      "y": 112,
+      "rx": 11,
+      "ry": 12,
+      "dx": 1.25
+    },
+    {
+      "x": 184,
+      "y": 114,
+      "rx": 5,
+      "ry": 8,
+      "dx": 0.65
+    }
+  ],
+  "frames": [
+    {
+      "file": "look_00.png",
+      "pixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+      "partAmounts": [],
+      "gaze": 0
+    },
+    {
+      "file": "look_01.png",
+      "pixelSha256": "3b7351157787557bf18a147ae82615c3567fe345fe0f88e9ba646e3aeb4b104d",
+      "partAmounts": [],
+      "gaze": 0.12
+    },
+    {
+      "file": "look_02.png",
+      "pixelSha256": "63dfa36f787594e1587fb9ee8d21c8890988f1e80d482e843a541ec8ad647f75",
+      "partAmounts": [],
+      "gaze": 0.35
+    },
+    {
+      "file": "look_03.png",
+      "pixelSha256": "8b9dbed765578d98cb2ddbc8d37f71790394e482d9c7bd38897e7691b8522cd3",
+      "partAmounts": [],
+      "gaze": 0.65
+    },
+    {
+      "file": "look_04.png",
+      "pixelSha256": "aa484bffb55eeda8227bc1490e48afe6eb26ada938708b056d649557d1f97d45",
+      "partAmounts": [],
+      "gaze": 0.9
+    },
+    {
+      "file": "look_05.png",
+      "pixelSha256": "32072cfa88d515cf52aeb0d6835ebd7680adaf5d0d6074e0c29cb4a7631c5e1b",
+      "partAmounts": [],
+      "gaze": 1
+    },
+    {
+      "file": "look_06.png",
+      "pixelSha256": "e01bd100f7844d48aa61664b32cadfa4ee08f980eec36369ea0bd46fec3f0c88",
+      "partAmounts": [],
+      "gaze": 0.72
+    },
+    {
+      "file": "look_07.png",
+      "pixelSha256": "a65eddde4ae27cae8308549ccb36e37f28b582574d6c7deb9a423006325a8cb3",
+      "partAmounts": [],
+      "gaze": 0.3
+    },
+    {
+      "file": "look_08.png",
+      "pixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+      "partAmounts": [],
+      "gaze": 0
+    },
+    {
+      "file": "look_09.png",
+      "pixelSha256": "3d6f28c73162a365ee04b93891faa9d892740178cd98aeccf152338e77d92bdd",
+      "partAmounts": [],
+      "gaze": -0.25
+    },
+    {
+      "file": "look_10.png",
+      "pixelSha256": "3e037ae085ddab06c4d5338212a5ee2a9c7e224f1bf512cb752dd9b73674b047",
+      "partAmounts": [],
+      "gaze": -0.6
+    },
+    {
+      "file": "look_11.png",
+      "pixelSha256": "992cdbd5f7dbd738c8b2a23930739a9a56ffe44de328e223b40c895868f13f40",
+      "partAmounts": [],
+      "gaze": -0.85
+    },
+    {
+      "file": "look_12.png",
+      "pixelSha256": "5b52e3a664f353ee9303e95126705314461790f255fa2472a05407ae10af5d8e",
+      "partAmounts": [],
+      "gaze": -0.7
+    },
+    {
+      "file": "look_13.png",
+      "pixelSha256": "bb42a78bb75320d836c6f13f4e5870099e8f77149616a3c9f30d0139d18ca725",
+      "partAmounts": [],
+      "gaze": -0.35
+    },
+    {
+      "file": "look_14.png",
+      "pixelSha256": "fe7c192a00e898e6eb71f1c3fc66ce9130ebb06e2375253cbba5c9514ed57409",
+      "partAmounts": [],
+      "gaze": -0.1
+    },
+    {
+      "file": "look_15.png",
+      "pixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+      "partAmounts": [],
+      "gaze": 0
+    }
+  ],
+  "wholeImageTransform": false,
+  "reuse": "design/production-batches/action-followup/M010/rig-look.cjs",
+  "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
+  "entryContract": "BASE_ONLY",
+  "exitContract": "EXACT_BASE",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "DEFERRED_GUI"
+}
