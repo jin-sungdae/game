@@ -111,3 +111,21 @@ class NativeIsolationTests(unittest.TestCase):
             self.assertEqual(0,allowed.returncode,allowed.stderr)
             self.assertNotEqual(0,denied.returncode)
             self.assertEqual('preserve',outside.read_text())
+
+class SubscriptionAnalysisTests(unittest.TestCase):
+    def test_large_evidence_is_read_by_reference_and_receipt_finalized(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            e=engine.Engine(directory,lambda _:None,lambda:False)
+            e.analysis={'pr':1,'head':'a'*40,'ci':{'status':'PASS'},'actualDiff':'x'*2000000}
+            state=engine.follow.empty_state()
+            store=Mock();store.load.return_value=state
+            def command(args,**kwargs):
+                self.assertLess(len(kwargs['stdin']),2000)
+                self.assertIn('evidence.json',kwargs['stdin'])
+                Path(args[args.index('-o')+1]).write_text(json.dumps({'status':'HUMAN_REVIEW_REQUIRED','head':'a'*40,'reason':'검토','files':[],'tests':[]}))
+                return ''
+            with patch.object(e,'auth'),patch.object(e,'command',side_effect=command),patch.object(engine.follow,'Store',return_value=store):
+                self.assertEqual('HUMAN_REVIEW_REQUIRED',e.analyze_codex()['status'])
+            self.assertIsNone(state['lock'])
+            self.assertEqual('ANALYZED',next(iter(state['runs'].values()))['status'])
