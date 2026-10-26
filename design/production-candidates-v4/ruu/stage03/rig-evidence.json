@@ -1,0 +1,98 @@
+{
+  "reference": "base-v3.png",
+  "referenceApproval": "User approved identity and code-based part rigging in this session",
+  "parts": [
+    {
+      "name": "ribcage",
+      "x": 174,
+      "y": 137,
+      "rx": 21,
+      "ry": 30,
+      "dx": 0.8,
+      "dy": -1.5,
+      "phase": 0
+    },
+    {
+      "name": "abdomen",
+      "x": 139,
+      "y": 152,
+      "rx": 32,
+      "ry": 24,
+      "dx": -0.4,
+      "dy": -0.9,
+      "phase": 0
+    },
+    {
+      "name": "folded-wing-root",
+      "x": 145,
+      "y": 118,
+      "rx": 35,
+      "ry": 19,
+      "dx": -0.4,
+      "dy": -0.65,
+      "phase": -0.7853981633974483
+    }
+  ],
+  "protectedRegions": "feet and lower legs y>=181; head/crest y<=94; left tail x<=76; snout x>=196; head x>=183,y<=115",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "pixelSha256": "0ae8955ddafe6cfe70125a7330c3fadfbd48a0ee2dac7bc73e3510d1367cdb07",
+      "changedPixels": 847,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.11176116989941914
+    },
+    {
+      "file": "idle_01.png",
+      "pixelSha256": "64248853938a4255678603f8d12608639a7c164a42c9c90874c266ea8aa4fe28",
+      "changedPixels": 1940,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.24889598245076006
+    },
+    {
+      "file": "idle_02.png",
+      "pixelSha256": "3f1385a52906982296a99c4cd25b6976a7f368734b0c044301c5ceff0af8bade",
+      "changedPixels": 3350,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8488992381490297
+    },
+    {
+      "file": "idle_03.png",
+      "pixelSha256": "bcc3c83da5603c3652dfa3e008c62d6b502fb86b2af385ab702055514574b1bc",
+      "changedPixels": 3910,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.4496674117991672
+    },
+    {
+      "file": "idle_04.png",
+      "pixelSha256": "8fcba9675385332c21201b796bbe781a00e6926c30d4f36c69568d5e99cec5d3",
+      "changedPixels": 4094,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.698126701226558
+    },
+    {
+      "file": "idle_05.png",
+      "pixelSha256": "87e42bfe7687b409c49138189e4d5897f14ea93ad472eda5e430002696c53f34",
+      "changedPixels": 4057,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.4496674117991672
+    },
+    {
+      "file": "idle_06.png",
+      "pixelSha256": "95110a9c7f0948ab5d260042ca34e4096de358e12a6ae295e8be158781e42ce7",
+      "changedPixels": 3769,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8488992381490297
+    },
+    {
+      "file": "idle_07.png",
+      "pixelSha256": "b37c767d385d2ac2492746c3abf51f867be447e874e95fd9be62ed24df86d1ae",
+      "changedPixels": 3041,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.3812369367732797
+    }
+  ],
+  "repairIteration": 3,
+  "productionEligible": false
+}
