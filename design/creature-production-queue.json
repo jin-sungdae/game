@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "Monster M001-M010 identity comparison before any production mapping; remaining Companion action-specific poses need artwork. Native macOS/Windows and human artwork review pending.",
+  "nextTask": "batch02 M011 base candidate; batch01 M007 blocked appearance; M001-M010 mapping review pending; all non-IDLE actions incomplete",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -138,7 +138,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:moa:2",
@@ -263,7 +284,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:moa:3",
@@ -388,7 +430,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:moa:4",
@@ -399,7 +462,7 @@
       "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
-      "lastValidatedCommit": null,
+      "lastValidatedCommit": "45935cb8f374d182424012f88103b974b81b8e97",
       "actions": [
         {
           "action": "IDLE",
@@ -513,7 +576,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:moa:5",
@@ -524,7 +608,7 @@
       "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
-      "lastValidatedCommit": null,
+      "lastValidatedCommit": "45935cb8f374d182424012f88103b974b81b8e97",
       "actions": [
         {
           "action": "IDLE",
@@ -638,7 +722,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:ruu:1",
@@ -763,7 +868,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:ruu:2",
@@ -888,7 +1014,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:ruu:3",
@@ -1013,7 +1160,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:ruu:4",
@@ -1138,7 +1306,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:ruu:5",
@@ -1263,7 +1452,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:nox:1",
@@ -1388,7 +1598,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:nox:2",
@@ -1513,7 +1744,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:nox:3",
@@ -1638,7 +1890,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:nox:4",
@@ -1763,7 +2036,28 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "companion:nox:5",
@@ -1888,26 +2182,49 @@
           "runtimeStatus": "NOT_VERIFIED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M001",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -2007,26 +2324,50 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch01/M001/base-v2.png"
     },
     {
       "creatureId": "M002",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -2126,26 +2467,50 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch01/M002/base-v2.png"
     },
     {
       "creatureId": "M003",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -2245,24 +2610,46 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch01/M003/base-v2.png"
     },
     {
       "creatureId": "M004",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_READY",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "MAPPING_REVIEW_REQUIRED; candidate outside public; no Production Species ID assigned",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_READY",
+          "frameCount": 4,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
@@ -2364,26 +2751,49 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M005",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -2483,26 +2893,50 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch01/M005/base-v2.png"
     },
     {
       "creatureId": "M006",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -2602,18 +3036,40 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch01/M006/base-v2.png"
     },
     {
       "creatureId": "M007",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "BLOCKED",
+      "baseStatus": "VALIDATION_FAILED",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "APPEARANCE_DRIFT; HUMAN_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -2721,26 +3177,50 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch01/M007/base-v2.png"
     },
     {
       "creatureId": "M008",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -2840,26 +3320,50 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch01/M008/base-v2.png"
     },
     {
       "creatureId": "M009",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -2959,24 +3463,46 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch01/M009/base-v2.png"
     },
     {
       "creatureId": "M010",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_READY",
+      "baseStatus": "BASE_READY",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "MAPPING_REVIEW_REQUIRED; candidate outside public; no Production Species ID assigned",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_READY",
+          "frameCount": 4,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
@@ -3078,7 +3604,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M011",
@@ -3197,7 +3744,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M012",
@@ -3316,7 +3884,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M013",
@@ -3435,7 +4024,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M014",
@@ -3554,7 +4164,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M015",
@@ -3673,7 +4304,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M016",
@@ -3792,7 +4444,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M017",
@@ -3911,7 +4584,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M018",
@@ -4030,7 +4724,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M019",
@@ -4149,7 +4864,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M020",
@@ -4268,7 +5004,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M021",
@@ -4387,7 +5144,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M022",
@@ -4506,7 +5284,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M023",
@@ -4625,7 +5424,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M024",
@@ -4744,7 +5564,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M025",
@@ -4863,7 +5704,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M026",
@@ -4982,7 +5844,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M027",
@@ -5101,7 +5984,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M028",
@@ -5220,7 +6124,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M029",
@@ -5339,7 +6264,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M030",
@@ -5458,7 +6404,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M031",
@@ -5577,7 +6544,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M032",
@@ -5696,7 +6684,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M033",
@@ -5815,7 +6824,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M034",
@@ -5934,7 +6964,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M035",
@@ -6053,7 +7104,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M036",
@@ -6172,7 +7244,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M037",
@@ -6291,7 +7384,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M038",
@@ -6410,7 +7524,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M039",
@@ -6529,7 +7664,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M040",
@@ -6648,7 +7804,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M041",
@@ -6767,7 +7944,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M042",
@@ -6886,7 +8084,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M043",
@@ -7005,7 +8224,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M044",
@@ -7124,7 +8364,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M045",
@@ -7243,7 +8504,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M046",
@@ -7362,7 +8644,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M047",
@@ -7481,7 +8784,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M048",
@@ -7600,7 +8924,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M049",
@@ -7719,7 +9064,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M050",
@@ -7838,7 +9204,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M051",
@@ -7957,7 +9344,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M052",
@@ -8076,7 +9484,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M053",
@@ -8195,7 +9624,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M054",
@@ -8314,7 +9764,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M055",
@@ -8433,7 +9904,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M056",
@@ -8552,7 +10044,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M057",
@@ -8671,7 +10184,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M058",
@@ -8790,7 +10324,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M059",
@@ -8909,7 +10464,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M060",
@@ -9028,7 +10604,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M061",
@@ -9147,7 +10744,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M062",
@@ -9266,7 +10884,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M063",
@@ -9385,7 +11024,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M064",
@@ -9504,7 +11164,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M065",
@@ -9623,7 +11304,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M066",
@@ -9742,7 +11444,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M067",
@@ -9861,7 +11584,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M068",
@@ -9980,7 +11724,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M069",
@@ -10099,7 +11864,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M070",
@@ -10218,7 +12004,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M071",
@@ -10337,7 +12144,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M072",
@@ -10456,7 +12284,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M073",
@@ -10575,7 +12424,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M074",
@@ -10694,7 +12564,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M075",
@@ -10813,7 +12704,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M076",
@@ -10932,7 +12844,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M077",
@@ -11051,7 +12984,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M078",
@@ -11170,7 +13124,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M079",
@@ -11289,7 +13264,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M080",
@@ -11408,7 +13404,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M081",
@@ -11527,7 +13544,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M082",
@@ -11646,7 +13684,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M083",
@@ -11765,7 +13824,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M084",
@@ -11884,7 +13964,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M085",
@@ -12003,7 +14104,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M086",
@@ -12122,7 +14244,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M087",
@@ -12241,7 +14384,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M088",
@@ -12360,7 +14524,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M089",
@@ -12479,7 +14664,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M090",
@@ -12598,7 +14804,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M091",
@@ -12717,7 +14944,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M092",
@@ -12836,7 +15084,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M093",
@@ -12955,7 +15224,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M094",
@@ -13074,7 +15364,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M095",
@@ -13193,7 +15504,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M096",
@@ -13312,7 +15644,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M097",
@@ -13431,7 +15784,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M098",
@@ -13550,7 +15924,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M099",
@@ -13669,7 +16064,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     },
     {
       "creatureId": "M100",
@@ -13788,7 +16204,28 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         }
-      ]
+      ],
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillIdentity": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "skillAnimation": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionStatus": "NOT_PRODUCTION_READY"
     }
   ],
   "browserFixture": {
@@ -13803,19 +16240,39 @@
     ],
     "nativeGUI": false
   },
-  "repairScope": "MOA batch: alpha cleanup, test import, stale registration expectation",
+  "repairScope": "Monster batch01: detached low-alpha cleanup for M004 and M010 only",
   "batchEvidence": [
     {
       "pr": 95,
       "commit": "56eb4578ad5832f3bd131f46a5372e7830e9b6f4",
       "releaseGate": "18/18 PASS",
-      "manualGate": "MANUAL_QA_REQUIRED"
+      "ci": "4 SUCCESS"
     },
     {
       "pr": 96,
       "commit": "370c2d9c9938a60f9af9c7024b99885102727f68",
+      "releaseGate": "18/18 PASS",
+      "ci": "4 SUCCESS"
+    },
+    {
+      "pr": 97,
+      "commit": "45935cb8f374d182424012f88103b974b81b8e97",
       "releaseGate": "RUNNING",
-      "scope": "NOX Stage2"
+      "ci": "RUNNING",
+      "previousFailure": {
+        "commit": "6cebbb05d71d4c2c9fa836252210b8263693ebb6",
+        "reason": "stale MOA5 unregistered expectation",
+        "status": "FAIL"
+      }
     }
-  ]
+  ],
+  "currentBatch": {
+    "id": "monster-batch01",
+    "baseCandidates": 10,
+    "idleCandidateClips": 9,
+    "productionComplete": 0,
+    "total": 10,
+    "repairIterations": 3,
+    "humanReviewRequired": true
+  }
 }

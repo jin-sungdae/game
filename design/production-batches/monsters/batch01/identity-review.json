@@ -1,0 +1,185 @@
+{
+  "scope": "M001-M010",
+  "status": "MAPPING_REVIEW_REQUIRED",
+  "productionActivation": false,
+  "existingDexCount": 30,
+  "existingPngCount": 15,
+  "existingIdentitySha256": "9fb66e25e74ca9c74bc4a7ddee7ae5ad2fc9b5307415d8b1fb82ffd9487c73e2",
+  "productionRegistrySha256": "d9bd40da5cb35ddcab67b8bd92c6c26cccacf452756379820fbc60a49ac52c04",
+  "existingPngs": [
+    {
+      "code": "PIP",
+      "path": "public/assets/monsters/pip/base.png",
+      "sha256": "f0e63d1349854c4539f07e402eecd70a7cfcfc789442d9243b5e20e4304487dd"
+    },
+    {
+      "code": "MELLO",
+      "path": "public/assets/monsters/mello/base.png",
+      "sha256": "818efb32f7e5a19efcbb87342eb07b55047cd99e15d02dd30f47bca03c85a831"
+    },
+    {
+      "code": "MOSSY",
+      "path": "public/assets/monsters/mossy/base.png",
+      "sha256": "6555280c8dc76d8b93ddd348cae1fbf7b27e282bd0bb6bfbec235dcc874afdb1"
+    },
+    {
+      "code": "CHIRP",
+      "path": "public/assets/monsters/chirp/base.png",
+      "sha256": "8629ba2cf4f22f3e0946f7d3e030869ce5f38f5a06f2f65ca9af77c14bfba83e"
+    },
+    {
+      "code": "BUBU",
+      "path": "public/assets/monsters/bubu/base.png",
+      "sha256": "979f8a38cc19cc5d3425aebe65142c559466b9ad32d3406f60646dfa1ba6eed4"
+    },
+    {
+      "code": "PEBB",
+      "path": "public/assets/monsters/pebb/base.png",
+      "sha256": "52069d2ed348e74d7387ccf07df7c725c2b82400016b6576dd1f28c6cf023ca4"
+    },
+    {
+      "code": "PUFF",
+      "path": "public/assets/monsters/puff/base.png",
+      "sha256": "8e4414e08d8e1a89a10eff7af0275b72b63eddda3d563d44abd7299c1887984d"
+    },
+    {
+      "code": "TIKKI",
+      "path": "public/assets/monsters/tikki/base.png",
+      "sha256": "d234b8bc08e62802d1fe684176208ecd91a798d57d959f2ec9153699a6db8a81"
+    },
+    {
+      "code": "MIMI",
+      "path": "public/assets/monsters/mimi/base.png",
+      "sha256": "b6476e6e585ef6075c131d1fa227304f39a738e87044e71694f3fdee12c41479"
+    },
+    {
+      "code": "WISP",
+      "path": "public/assets/monsters/wisp/base.png",
+      "sha256": "9423d6524797e82349ab9f0bf40a4f8be5dacb3683276c0645516c52388e1b3d"
+    },
+    {
+      "code": "SHADE",
+      "path": "public/assets/monsters/shade/base.png",
+      "sha256": "3d2c8330486a197e30d8dc54d2f1b11de2458f982cb00f74ef73c06d4fc72974"
+    },
+    {
+      "code": "EMBER",
+      "path": "public/assets/monsters/ember/base.png",
+      "sha256": "a2ea1e16f29e383c6ad29505d8d6ce65750fa11a8216cfb0fde470b5e2cb9f66"
+    },
+    {
+      "code": "LUNET",
+      "path": "public/assets/monsters/lunet/base.png",
+      "sha256": "eeba6eeec884e042b32f151f26b5e881a2dd0d3db65a5ba0ef13bf6153765640"
+    },
+    {
+      "code": "NOVA",
+      "path": "public/assets/monsters/nova/base.png",
+      "sha256": "0fd29358f313abafd9286357d57d43aac1114661c2b7f40e75596dd9b744b2a6"
+    },
+    {
+      "code": "NOCT",
+      "path": "public/assets/monsters/noct/base.png",
+      "sha256": "c808c729d22318b7cb544682ce629d2b35eda07f4d199c288b6210ab4c3ba75a"
+    }
+  ],
+  "unprovidedExistingDesigns": [
+    "MONSTER_005",
+    "MONSTER_009",
+    "MONSTER_011",
+    "MONSTER_012",
+    "MONSTER_017",
+    "MONSTER_018",
+    "MONSTER_020",
+    "MONSTER_022",
+    "MONSTER_023",
+    "MONSTER_024",
+    "MONSTER_025",
+    "MONSTER_026",
+    "MONSTER_027",
+    "MONSTER_029",
+    "MONSTER_030"
+  ],
+  "rows": [
+    {
+      "conceptId": "M001",
+      "observedForm": "leaf seedling",
+      "reviewObservation": "Leaf theme overlaps MOSSY; small seedling also resembles companion concept MOA. No identity equality established.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M002",
+      "observedForm": "antler deer",
+      "reviewObservation": "Antler deer has no exact match among inspected fifteen PNGs; unprovided existing designs prevent clearance.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M003",
+      "observedForm": "leaf-eared forest cub",
+      "reviewObservation": "Leaf-eared cub combines leaf and quadruped motifs seen in MOSSY/PIP; no automatic identity merge.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M004",
+      "observedForm": "walking tree guardian",
+      "reviewObservation": "Wooden tree guardian differs materially from PEBB; compare provisional MONSTER_017 stone arch when artwork is available.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M005",
+      "observedForm": "red mushroom sprite",
+      "reviewObservation": "Red mushroom concept overlaps M006 within supplied sheet; explicit variant/species review needed.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M006",
+      "observedForm": "round mushroom sprite",
+      "reviewObservation": "Red mushroom concept overlaps M005 within supplied sheet; explicit variant/species review needed.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M007",
+      "observedForm": "twig rabbit",
+      "reviewObservation": "Long ears overlap provisional MONSTER_020 theme; artwork unavailable.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M008",
+      "observedForm": "mushroom-hat elder",
+      "reviewObservation": "Forest hat/elder silhouette needs author review; no exact identity established from fifteen PNGs.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M009",
+      "observedForm": "mossy rabbit",
+      "reviewObservation": "Moss/leaf rabbit overlaps M003 and provisional long-ear theme; no automatic merge.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M010",
+      "observedForm": "bark wolf",
+      "reviewObservation": "Bark quadruped differs from PIP coat/material; provisional designs still need review.",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    }
+  ]
+}

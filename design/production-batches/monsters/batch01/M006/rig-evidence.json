@@ -1,0 +1,74 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "lower-body",
+      "x": 141,
+      "y": 185,
+      "rx": 22,
+      "ry": 12,
+      "dx": 0.5,
+      "dy": -0.7,
+      "phase": 0
+    },
+    {
+      "name": "leaf-root",
+      "x": 96,
+      "y": 177,
+      "rx": 12,
+      "ry": 11,
+      "dx": -0.25,
+      "dy": -0.6,
+      "phase": -1.047
+    }
+  ],
+  "protectedRegions": "y<=172||y>=197||x<=82||x>=171",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "pixelSha256": "0abde5c210deb303fd98d22c7a2fab63721b0e7e3c1868e73768fc3f8e0be7a0",
+      "changedPixels": 154,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.16234078660301066
+    },
+    {
+      "file": "idle_01.png",
+      "pixelSha256": "e19a5f546d893033653f50fbc0e4c31f059c6c51dc0040d1905963933669b8dc",
+      "changedPixels": 185,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.21490036229605222
+    },
+    {
+      "file": "idle_02.png",
+      "pixelSha256": "c876581484002553cd303c82c37f4c9f9b7a4d947d14cec6eba171bce8cc91d7",
+      "changedPixels": 530,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.6415547270521771
+    },
+    {
+      "file": "idle_03.png",
+      "pixelSha256": "387eb4914a01b8898cd222bb43b839551a4899177e1655e74e05156a08b186af",
+      "changedPixels": 630,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8572731403638956
+    },
+    {
+      "file": "idle_04.png",
+      "pixelSha256": "56de150a83a74b6de37b3d38d4ddfdd9cdeb36636aaa3bc38e63450279d9f1ba",
+      "changedPixels": 588,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.6465489717657698
+    },
+    {
+      "file": "idle_05.png",
+      "pixelSha256": "9aee939cc1489a1fb2b3b15d272498d0657bb9b5f961ec97292b5bea40a1b173",
+      "changedPixels": 382,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.4846777092678598
+    }
+  ],
+  "repairIteration": 3,
+  "productionEligible": false
+}
