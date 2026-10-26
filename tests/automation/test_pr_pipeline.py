@@ -192,6 +192,31 @@ class PipelineTests(unittest.TestCase):
                 restore.restore(RestoreAPI(), destination)
                 self.assertEqual(run.call_args.args[0][3], '2')
 
+    def test_missing_run_pr_metadata_resolves_exact_commit(self):
+        class RestoreAPI:
+            repo = 'owner/repo'
+            base = 'main'
+            def get(self, endpoint):
+                if endpoint == '': return {'default_branch': 'main'}
+                if endpoint.startswith('actions/workflows/'): return {'id': 9}
+                return {'id': 1, 'workflow_id': 9, 'event': 'pull_request_target',
+                        'head_branch': 'feature', 'head_sha': HEAD, 'pull_requests': []}
+            def pages(self, endpoint, *args):
+                if endpoint.startswith('commits/'):
+                    assert endpoint == 'commits/' + HEAD + '/pulls'
+                    return [{'head': {'ref': 'feature'}, 'base': {'ref': self.base, 'repo': {'full_name': self.repo}}}]
+                return [{'id': 2, 'created_at': '2026-10-26T03:00:00Z', 'expired': False, 'workflow_run': {'id': 1}}]
+        api = RestoreAPI()
+        with tempfile.TemporaryDirectory() as d:
+            destination = Path(d)
+            def download(*args, **kwargs):
+                (destination / 'state.json').write_text(json.dumps({'version': 1, 'repository': api.repo}))
+            with patch.object(restore.subprocess, 'run', side_effect=download) as call:
+                self.assertIsNotNone(restore.restore(api, destination))
+                api.base = 'untrusted'
+                with self.assertRaises(RuntimeError): restore.restore(api, destination)
+                self.assertEqual(call.call_count, 1)
+
     def test_restore_expired_latest_never_falls_back(self):
         class RestoreAPI:
             repo='owner/repo'
