@@ -276,3 +276,27 @@ fn living_ground_speed_still_enters_existing_move_animation() {
         );
     }
 }
+
+#[test]
+fn caplet_expression_is_deterministic_and_does_not_change_sleepy_policy() {
+    let mut caplet = Controller::new(Profile::Sleepy, Seeded::new(42), 0.).for_species("CAPLET");
+    let mut legacy = Controller::new(Profile::Sleepy, Seeded::new(42), 0.);
+    for i in 0..1000 {
+        let now = i as f64 * 0.05;
+        assert_eq!(
+            caplet.poll(now, None, MovementProfile::Ground, false),
+            legacy.poll(now, None, MovementProfile::Ground, false)
+        );
+        assert_eq!(caplet.next_decision_at, legacy.next_decision_at);
+        assert!(!legacy.sleep_pose());
+        assert_eq!(
+            caplet.sleep_pose(),
+            caplet.decisions > 0 && caplet.current.intent == Intent::Pause
+        );
+    }
+    let count = caplet.decisions;
+    assert!(caplet
+        .poll(100., None, MovementProfile::Ground, true)
+        .is_none());
+    assert_eq!(caplet.decisions, count);
+}

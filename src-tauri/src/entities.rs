@@ -16,6 +16,7 @@ pub enum CompanionState {
 pub enum PipState {
     Spawning,
     Roaming,
+    Sleeping,
     Engaged,
     Despawning,
 }
