@@ -1,0 +1,93 @@
+[
+  {
+    "conceptId": "M036",
+    "tool": "built-in image_gen",
+    "reference": "design/production-batches/monsters/batch04/M036/base-v2.png",
+    "output": "M036/source-keyposes.png",
+    "promptSpecification": {
+      "useCase": "identity-preserve",
+      "actions": [
+        "REST",
+        "SLEEP",
+        "CURSOR_REACT",
+        "INTERACT",
+        "SKILL_CAST",
+        "HIT",
+        "VICTORY",
+        "DEFEAT"
+      ],
+      "layout": "4 columns; 2 rows for M036, 4 rows for M038/M039",
+      "invariants": "원본 색상·무늬·사지 수·갑옷 판·체형 유지, 투명 RGBA, 셀 여백, 텍스트/그림자/분리 입자 금지, 신체 관절 움직임",
+      "identity": "wingless red flame drake; stationary ground expressions only; no flight mechanism invented"
+    },
+    "normalizationPerformed": false,
+    "repairPerformed": false,
+    "approval": "HUMAN_REVIEW_REQUIRED"
+  },
+  {
+    "conceptId": "M038",
+    "tool": "built-in image_gen",
+    "reference": "design/production-batches/monsters/batch04/M038/base-v2.png",
+    "output": "M038/source-keyposes.png",
+    "promptSpecification": {
+      "useCase": "identity-preserve",
+      "actions": [
+        "IDLE",
+        "BREATH",
+        "BLINK",
+        "LOOK",
+        "MOVE",
+        "TURN",
+        "REST",
+        "SLEEP",
+        "CURSOR_REACT",
+        "INTERACT",
+        "ATTACK",
+        "SKILL_CAST",
+        "HIT",
+        "VICTORY",
+        "DEFEAT",
+        "CHARGE"
+      ],
+      "layout": "4 columns; 2 rows for M036, 4 rows for M038/M039",
+      "invariants": "원본 색상·무늬·사지 수·갑옷 판·체형 유지, 투명 RGBA, 셀 여백, 텍스트/그림자/분리 입자 금지, 신체 관절 움직임",
+      "identity": "reserved cinder golem; slow rigid plate articulation; no inflation"
+    },
+    "normalizationPerformed": false,
+    "repairPerformed": false,
+    "approval": "HUMAN_REVIEW_REQUIRED"
+  },
+  {
+    "conceptId": "M039",
+    "tool": "built-in image_gen",
+    "reference": "design/production-batches/monsters/batch04/M039/base-v2.png",
+    "output": "M039/source-keyposes.png",
+    "promptSpecification": {
+      "useCase": "identity-preserve",
+      "actions": [
+        "BREATH",
+        "BLINK",
+        "LOOK",
+        "MOVE",
+        "TURN",
+        "REST",
+        "SLEEP",
+        "CURSOR_REACT",
+        "INTERACT",
+        "ATTACK",
+        "SKILL_CAST",
+        "VICTORY",
+        "DEFEAT",
+        "CHARGE",
+        "RECOVERY",
+        "JUMP"
+      ],
+      "layout": "4 columns; 2 rows for M036, 4 rows for M038/M039",
+      "invariants": "원본 색상·무늬·사지 수·갑옷 판·체형 유지, 투명 RGBA, 셀 여백, 텍스트/그림자/분리 입자 금지, 신체 관절 움직임",
+      "identity": "watchful ember beast; scan before movement; HIT omitted to preserve prior failure"
+    },
+    "normalizationPerformed": false,
+    "repairPerformed": false,
+    "approval": "HUMAN_REVIEW_REQUIRED"
+  }
+]

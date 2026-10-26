@@ -1,0 +1,131 @@
+{
+  "action": "SLEEP",
+  "sourceAtlas": "source-keyposes.png",
+  "cell": {
+    "left": 701,
+    "top": 280,
+    "width": 350,
+    "height": 281
+  },
+  "rawPixelSha256": "745600e6212d8ecaf4c67bcb8bae3ab3f2be8b3df716f8cac90c1724ec23a9b2",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 350,
+    "height": 281,
+    "mainPixels": 36041,
+    "mainBounds": [
+      35,
+      88,
+      331,
+      256
+    ],
+    "detachedPixels": 128,
+    "detachedComponents": 59,
+    "detachedAlphaHistogram": {
+      "1": 127,
+      "2": 1
+    },
+    "largestDetached": [
+      {
+        "n": 18,
+        "minA": 1,
+        "maxA": 2,
+        "bounds": [
+          111,
+          119,
+          122,
+          120
+        ]
+      },
+      {
+        "n": 8,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          0,
+          90,
+          1,
+          95
+        ]
+      },
+      {
+        "n": 6,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          96,
+          37,
+          98,
+          40
+        ]
+      },
+      {
+        "n": 6,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          237,
+          44,
+          239,
+          46
+        ]
+      },
+      {
+        "n": 6,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          155,
+          113,
+          160,
+          113
+        ]
+      },
+      {
+        "n": 5,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          235,
+          44,
+          235,
+          48
+        ]
+      },
+      {
+        "n": 4,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          196,
+          45,
+          197,
+          47
+        ]
+      },
+      {
+        "n": 3,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          120,
+          63,
+          122,
+          64
+        ]
+      }
+    ]
+  },
+  "edgePixels": 3,
+  "errors": [
+    "RAW_DETACHED_ALPHA",
+    "CELL_EDGE_CLIPPING"
+  ],
+  "status": "VALIDATION_FAILED",
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3
+}

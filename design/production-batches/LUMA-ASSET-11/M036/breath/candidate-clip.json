@@ -1,0 +1,53 @@
+{
+  "sessionId": "LUMA-ASSET-11",
+  "conceptId": "M036",
+  "sourceBase": "design/production-batches/monsters/batch04/M036/base-v2.png",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 240,
+    "loop": true
+  },
+  "parts": [
+    {
+      "x": 118,
+      "y": 173,
+      "rx": 24,
+      "ry": 17,
+      "dx": 0.6,
+      "dy": -1.1,
+      "phase": 0,
+      "name": "ribcage-breath"
+    },
+    {
+      "x": 144,
+      "y": 166,
+      "rx": 14,
+      "ry": 13,
+      "dx": -0.2,
+      "dy": -0.45,
+      "phase": -1.047,
+      "name": "shoulder-root"
+    }
+  ],
+  "movableRect": [
+    87,
+    149,
+    160,
+    195
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "anatomyScope": "기존 ribcage/shoulder Part Rig 재사용, 얼굴·다리·불꽃 꼬리 고정; 비행 방식 미정 상태 유지",
+  "rigReuse": "design/production-batches/monsters/batch04/M036/rig-idle.cjs"
+}

@@ -1,0 +1,63 @@
+{
+  "action": "INTERACT",
+  "sourceAtlas": "source-keyposes.png",
+  "cell": {
+    "left": 0,
+    "top": 561,
+    "width": 350,
+    "height": 280
+  },
+  "rawPixelSha256": "eb8bd71e8a4de297082d78329d34014e47efe10e20296e21aba8483ba913ce6c",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 350,
+    "height": 280,
+    "mainPixels": 41118,
+    "mainBounds": [
+      23,
+      66,
+      324,
+      258
+    ],
+    "detachedPixels": 2,
+    "detachedComponents": 2,
+    "detachedAlphaHistogram": {
+      "1": 2
+    },
+    "largestDetached": [
+      {
+        "n": 1,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          301,
+          123,
+          301,
+          123
+        ]
+      },
+      {
+        "n": 1,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          189,
+          256,
+          189,
+          256
+        ]
+      }
+    ]
+  },
+  "edgePixels": 0,
+  "errors": [
+    "RAW_DETACHED_ALPHA"
+  ],
+  "status": "VALIDATION_FAILED",
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3
+}
