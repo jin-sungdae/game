@@ -40,3 +40,16 @@ test('relationship feedback stays in existing entity panel and reward zero is hi
  assert.match(fs.readFileSync('src/components/Interaction.tsx','utf8'),/v.reward.bond>0/);
  assert.match(fs.readFileSync('src/presentation/evolution.css','utf8'),/\.bond-feedback[^}]*pointer-events:none/);
 });
+
+test('ambiguous command remains retryable after committed stage refresh',()=>{
+ for(const status of ['LOCKED','MAX_STAGE']) {
+  const pending={...view(status),retryPending:true,error:'server unavailable'};
+  assert.equal(evolutionModel(pending).canEvolve,true);
+  assert.equal(evolutionModel(pending).retry,true);
+  assert.equal(evolutionModel(pending).title,'진화 결과 재확인');
+  assert.equal(evolutionModel({...pending,busy:true}).canEvolve,false);
+  assert.equal(evolutionModel(pending,true).canEvolve,false);
+  assert.equal(evolutionModel({...pending,phase:'GLOW'}).canEvolve,false);
+  assert.equal(evolutionModel({...pending,retryPending:false}).canEvolve,false);
+ }
+});

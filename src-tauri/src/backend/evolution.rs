@@ -164,8 +164,15 @@ pub struct Presentation {
     pub success: Option<String>,
     #[serde(skip)]
     started: f64,
-    #[serde(skip)]
+    #[serde(rename = "retryPending", serialize_with = "serialize_pending")]
     pending: Option<Request>,
+}
+// Expose retry availability without publishing the command identity to the renderer.
+fn serialize_pending<S: serde::Serializer>(
+    pending: &Option<Request>,
+    serializer: S,
+) -> std::result::Result<S::Ok, S::Error> {
+    serializer.serialize_bool(pending.is_some())
 }
 impl Presentation {
     pub fn command(&mut self, bootstrap: Option<&Bootstrap>) -> Option<Request> {

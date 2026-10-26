@@ -556,3 +556,25 @@ fn legacy_compatibility_requires_missing_revision_and_original_moa_scope() {
     view.fail("server unavailable".into());
     assert!(!view.request_legacy(Some(&bootstrap(1))));
 }
+
+#[test]
+fn retry_presentation_exposes_presence_without_command_identity() {
+    let mut view = Presentation {
+        eligibility: Some(eligibility(Status::Available)),
+        ..Default::default()
+    };
+    assert_eq!(serde_json::to_value(&view).unwrap()["retryPending"], false);
+    let request = view.command(Some(&revision_bootstrap(1, 7))).unwrap();
+    view.fail("server unavailable".into());
+    view.eligibility = Some(eligibility(Status::Locked));
+    let snapshot = serde_json::to_value(&view).unwrap();
+    assert_eq!(snapshot["retryPending"], true);
+    assert!(snapshot.get("pending").is_none());
+    assert!(!snapshot
+        .to_string()
+        .contains(&request.command_id.to_string()));
+    assert_eq!(view.command(Some(&revision_bootstrap(2, 7))), Some(request));
+    view.fail("STALE_SELECTION".into());
+    assert_eq!(serde_json::to_value(&view).unwrap()["retryPending"], false);
+    assert!(view.command(Some(&revision_bootstrap(2, 7))).is_none());
+}
