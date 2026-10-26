@@ -217,107 +217,108 @@
         {
           "action": "IDLE",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Dedicated neutral anatomical cycle required; do not relabel one-shot response."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Dedicated neutral anatomical cycle required; do not relabel one-shot response."
         },
         {
           "action": "BREATH",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Dedicated physiological part rig required; do not relabel IDLE."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Dedicated physiological part rig required; do not relabel IDLE."
         },
         {
           "action": "BLINK",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Eyelid closure/open keyposes or separate eyelid layers required; no pupil squash."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Eyelid closure/open keyposes or separate eyelid layers required; no pupil squash."
         },
         {
           "action": "LOOK",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Eye/face directional keyposes required; peripheral motion is not gaze."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Eye/face directional keyposes required; peripheral motion is not gaze."
         },
         {
           "action": "MOVE",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Locomotion contact/flight anatomy and MovementProfile agreement required."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Locomotion contact/flight anatomy and MovementProfile agreement required."
         },
         {
           "action": "TURN",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Directional occlusion keyposes required; no whole-image rotation."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Directional occlusion keyposes required; no whole-image rotation."
         },
         {
           "action": "REST",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Resting support/contact keypose required."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Resting support/contact keypose required."
         },
         {
           "action": "SLEEP",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Closed-eye relaxed pose and transition required."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Closed-eye relaxed pose and transition required."
         },
         {
           "action": "CURSOR_REACT",
-          "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Directional stimulus response keypose required."
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "Existing PNG/part-motion checks PASS; nonzero BASE return seam measured, not seamless completion. Human artwork/behavior/continuity approval required.",
+          "candidatePath": "design/production-batches/LUMA-ASSET-21/M087/cursor_react"
         },
         {
           "action": "INTERACT",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Distinct anatomical greeting keypose required; do not reuse another action."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Distinct anatomical greeting keypose required; do not reuse another action."
         },
         {
           "action": "ATTACK",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Attack preparation/extension/recovery keyposes required."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Attack preparation/extension/recovery keyposes required."
         },
         {
           "action": "SKILL_CAST",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Unapproved skill identity/server contract and cast keyposes required."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Unapproved skill identity/server contract and cast keyposes required."
         },
         {
           "action": "HIT",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Localized recoil/recovery keyposes required."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Localized recoil/recovery keyposes required."
         },
         {
           "action": "VICTORY",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Species-specific celebratory pose required."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Species-specific celebratory pose required."
         },
         {
           "action": "DEFEAT",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Defeat/contact keypose required; no image scaling."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Defeat/contact keypose required; no image scaling."
         },
         {
           "action": "JUMP",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Launch/air/landing contact keyposes and movement applicability require review."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Launch/air/landing contact keyposes and movement applicability require review."
         },
         {
           "action": "FLY",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Wingless M086-M089; do not invent wings. M090 has wings but flight profile/wing layers unapproved."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Wingless M086-M089; do not invent wings. M090 has wings but flight profile/wing layers unapproved."
         },
         {
           "action": "HOVER",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Floating proposal is not an approved hover cycle; anatomical support or wing cycle required."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Floating proposal is not an approved hover cycle; anatomical support or wing cycle required."
         },
         {
           "action": "LAND",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Requires approved airborne state and landing contact poses."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Requires approved airborne state and landing contact poses."
         },
         {
           "action": "CHARGE",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Requires approved attack/movement intent and windup poses."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Requires approved attack/movement intent and windup poses."
         },
         {
           "action": "RECOVERY",
           "status": "BLOCKED",
-          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Requires paired action-specific recovery poses; no generic frame reuse."
+          "reason": "Lossless eye/ring ownership layers now available; no hidden occluded surface; separate eyelid/directional artwork still needed. No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Requires paired action-specific recovery poses; no generic frame reuse."
         }
       ]
     },
@@ -432,8 +433,9 @@
         },
         {
           "action": "HIT",
-          "status": "BLOCKED",
-          "reason": "Localized recoil/recovery keyposes required."
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "Existing PNG/part-motion checks PASS; nonzero BASE return seam measured, not seamless completion. Human artwork/behavior/continuity approval required.",
+          "candidatePath": "design/production-batches/LUMA-ASSET-21/M088/hit"
         },
         {
           "action": "VICTORY",
@@ -543,8 +545,9 @@
         },
         {
           "action": "LOOK",
-          "status": "BLOCKED",
-          "reason": "Eye/face directional keyposes required; peripheral motion is not gaze."
+          "status": "VALIDATION_FAILED",
+          "reason": "First generated keypose has 2996 detached alpha pixels at threshold0. Original retained, no normalization/cleanup/rigging. Appearance also needs review.",
+          "candidatePath": "design/production-batches/LUMA-ASSET-21/M089/look-keypose"
         },
         {
           "action": "MOVE",
@@ -574,7 +577,7 @@
         {
           "action": "INTERACT",
           "status": "CANDIDATE_AUTOMATED_PASS",
-          "reason": "Local articulated response only; appearance, behavior fit and natural motion HUMAN_REVIEW_REQUIRED. Not a completed Production action.",
+          "reason": "Existing PNG/part-motion checks PASS; nonzero BASE return seam measured, not seamless completion. Human artwork/behavior/continuity approval required.",
           "candidatePath": "design/production-batches/LUMA-ASSET-21/M089/interact"
         },
         {
@@ -726,13 +729,14 @@
         {
           "action": "CURSOR_REACT",
           "status": "CANDIDATE_AUTOMATED_PASS",
-          "reason": "Local articulated response only; appearance, behavior fit and natural motion HUMAN_REVIEW_REQUIRED. Not a completed Production action.",
+          "reason": "Existing PNG/part-motion checks PASS; nonzero BASE return seam measured, not seamless completion. Human artwork/behavior/continuity approval required.",
           "candidatePath": "design/production-batches/LUMA-ASSET-21/M090/cursor_react"
         },
         {
           "action": "INTERACT",
-          "status": "BLOCKED",
-          "reason": "Distinct anatomical greeting keypose required; do not reuse another action."
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "Existing PNG/part-motion checks PASS; nonzero BASE return seam measured, not seamless completion. Human artwork/behavior/continuity approval required.",
+          "candidatePath": "design/production-batches/LUMA-ASSET-21/M090/interact"
         },
         {
           "action": "ATTACK",
@@ -792,16 +796,46 @@
       ]
     }
   ],
-  "newPngCount": 18,
-  "newAnimationFrameCount": 16,
-  "newClipCount": 2,
+  "newPngCount": 48,
+  "newAnimationFrameCount": 40,
+  "newClipCount": 5,
   "integrationRequests": [
     "Review existing PR #131 M088 INTERACT and M090 HIT before importing; no stacked dependency on that PR.",
     "After human visual/anatomy approval, add this session M089 INTERACT and M090 CURSOR_REACT to shared Ledger and existing Creature Review Catalog; leave Production and Runtime disabled.",
     "Resolve M086 serpent versus tentacled-shadow identity mapping; review all five concept-to-species mappings, proposed Personality/MovementProfile/SpeciesBehavior.",
     "Create approved eye/eyelid and directional/rest/battle keyposes and separate eye/ring or wing layers where required; preserve failed candidates and repair3/3.",
     "Integration owner runs existing --refresh-inventory and --refresh-coverage in integration checkout; this session does not mutate shared files.",
-    "Only after Production approval update Animation Manifest/Production Registry and connect common Runtime; rerun Release Gate and real macOS/Windows GUI QA."
+    "Only after Production approval update Animation Manifest/Production Registry and connect common Runtime; rerun Release Gate and real macOS/Windows GUI QA.",
+    "Review global versus repository repair-cap discrepancy as a separate coordinator-owned policy change; no cap bypass in PR140.",
+    "Add M087 CURSOR_REACT, M088 HIT, M090 INTERACT to existing shared Review only after coordinator review. Preserve PR131 candidates without cherry-pick.",
+    "Review M087 disjoint Eye/Ring layer study: pixel-exact reconstruction does not supply hidden anatomy.",
+    "M086 conflict source is visual-reference-v1 catalog observedForm=tentacled shadow/EDGE versus batch09 serpent BASE; provenance provides no approved remapping. Human decision required; preserve both.",
+    "M089 generated LOOK failure: 2996 detached pixels, no normalization. Keep excluded from clips."
   ],
-  "nextResumePoint": "Review two new first-attempt candidates without automatic repair; M087 separate eye/ring keypose and M089 directional eye keypose are next artwork prerequisites. M090 directional/wing/contact poses next; do not regenerate existing IDLE or PR #131 HIT."
+  "nextResumePoint": "Complete full gate and exact-head CI. Human review of 5 clips including measured BASE-return seams; M087 hidden eye/ring surfaces, M089 failed gaze raw and M090 directional/wing/contact keyposes need dedicated artwork approval. M086 identity decision remains required.",
+  "continuation": {
+    "previousHead": "b41e10b64686c5fedfb75921317aa77e11df66a4",
+    "addedClips": 3,
+    "addedFrames": 24,
+    "addedPng": 30,
+    "pngBreakdown": {
+      "animationFrames": 40,
+      "comparisonKeyposes": 5,
+      "losslessLayerStudies": 2,
+      "failedRawGeneration": 1
+    },
+    "policy": "Global arbitrary cap removed in ~/.codex/AGENTS.md; repository AGENTS.md, .github/workflows/pr-validation.yml and scripts/ci/repair_gate.py still enforce 3. No policy files changed, no failed candidates repaired.",
+    "priorAssetTests": "229 PASS / 2369.251 sec in release run; independent older run 228 PASS / 2571.717 sec predates focused test discovery",
+    "priorCI": "b41e10b: desktop-static/server-java/macos-native/review-result all SUCCESS",
+    "priorRelease": "No live process or release-result.json; log stops at strict-alpha. INCOMPLETE, cause not established. Retain original logs.",
+    "environment": "Independent real node_modules directory, npm ci lockfile install. No shared symlink. One full gate run at a time in this worktree; bundled Python3.12 PATH. No other session processes stopped.",
+    "cleanup": "Existing unique TemporaryDirectory database and selected local ports; finally stops own server and pg_ctl. Check final pg-stop.log for actual cleanup; no cleanup change or port reuse inferred.",
+    "validatorImprovement": {
+      "file": "scripts/validate_assets.py",
+      "behavior": "Every call rereads bytes. Cache key includes full PNG bytes and requested checks. Immutable cached results copied into caller outputs. LRU256, files over1MiB bypass cache. CRC/format/alpha/bounds/hash rules unchanged.",
+      "validation": "2 focused tests PASS: PNG filters0..4, decoded hashes/bounds, mutable outputs, same-path content changes, invalid dimensions, deletion. Before/after errors/bounds/hashes equal for 10 representative calls.",
+      "performance": "Representative repeated decode 6.784s -> 0.428s; not a full-suite speed claim.",
+      "interruptedRun": "/tmp/luma-asset21-continuation-release stopped only own descendants to restart with new validator; recorded FAIL/INTERRUPTED, not PASS."
+    }
+  }
 }

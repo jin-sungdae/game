@@ -1,0 +1,76 @@
+{
+  "conceptId": "M088",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M088/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 150,
+    "loop": false
+  },
+  "movableRect": [
+    37,
+    71,
+    218,
+    207
+  ],
+  "parts": [
+    {
+      "name": "upper-left-tendril-recoil",
+      "x": 65,
+      "y": 106,
+      "rx": 21,
+      "ry": 24,
+      "dx": 1.8,
+      "dy": 1.5,
+      "samples": [
+        0.02,
+        0.38,
+        0.85,
+        1,
+        0.68,
+        0.31,
+        0.11,
+        0.025
+      ]
+    },
+    {
+      "name": "lower-tendril-recovery",
+      "x": 145,
+      "y": 188,
+      "rx": 22,
+      "ry": 17,
+      "dx": -1.5,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.08,
+        0.32,
+        0.8,
+        1,
+        0.6,
+        0.19,
+        0.03
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Central eye and outermost tendril anchors remain fixed; upper tendril recoils and lower tendril follows with delayed recovery. Distinct from PR131 INTERACT.",
+  "behaviorContract": "Anatomical candidate only; existing concept proposal unapproved; no runtime or skill behavior activated",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-21"
+}
