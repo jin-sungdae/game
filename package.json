@@ -17,7 +17,9 @@
     "validate:alpha:release": "python3 scripts/validate_alpha_release.py",
     "sync:animation": "python3 scripts/sync_animation_manifests.py",
     "prebuild": "python3 scripts/sync_animation_manifests.py --check",
-    "predev": "python3 scripts/sync_animation_manifests.py --check"
+    "predev": "python3 scripts/sync_animation_manifests.py --check",
+    "controller:local": "tsc -p tools/local-controller/tsconfig.json && node node_modules/.cache/luma-controller/launch.mjs",
+    "test:controller": "python3 -m unittest discover -s tests/automation -p test_local_controller.py -v"
   },
   "dependencies": {
     "@tauri-apps/api": "^2.10.0",
@@ -26,8 +28,10 @@
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2.10.0",
+    "@types/node": "22.19.7",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "playwright": "1.58.2",
     "typescript": "~5.8.3",
     "vite": "^6.4.0"
   }

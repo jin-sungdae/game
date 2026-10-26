@@ -1,0 +1,1 @@
+{"type":"object","additionalProperties":false,"required":["status","head","reason","files","tests"],"properties":{"status":{"type":"string","enum":["PASS","CHANGES_REQUIRED","HUMAN_REVIEW_REQUIRED","BLOCKED"]},"head":{"type":"string"},"reason":{"type":"string"},"files":{"type":"array","items":{"type":"string"}},"tests":{"type":"array","items":{"type":"string"}}}}
