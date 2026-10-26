@@ -1,0 +1,61 @@
+{
+  "sessionId": "LUMA-ASSET-11",
+  "candidateCommit": "cb0f5bb4e0c915f1ac7ba0269d9c1d092a03bbc2",
+  "checks": [
+    {
+      "name": "session-candidate-regression",
+      "category": "AUTOMATED",
+      "status": "PASS",
+      "tests": 2,
+      "evidence": "/tmp/luma-asset-11-focused.log"
+    },
+    {
+      "name": "animation-regression",
+      "category": "AUTOMATED",
+      "status": "PASS",
+      "tests": 236,
+      "evidence": "/tmp/luma-asset-11-animation.log"
+    },
+    {
+      "name": "asset-tests",
+      "category": "AUTOMATED",
+      "status": "RUNNING_NOT_VERIFIED",
+      "evidence": "/tmp/luma-asset-11-assets-initial.log"
+    },
+    {
+      "name": "release-gate",
+      "category": "AUTOMATED",
+      "status": "RUNNING_NOT_VERIFIED",
+      "completedSteps": [
+        "frontend-build",
+        "animation-content",
+        "presentation"
+      ],
+      "currentStep": "asset-tests",
+      "evidence": "/tmp/luma-asset-11-release.log",
+      "scope": "Started before commit; candidate assets unchanged since validation. Not a clean-HEAD release approval."
+    },
+    {
+      "name": "appearance-natural-motion",
+      "category": "MANUAL_REQUIRED",
+      "status": "NOT_VERIFIED"
+    },
+    {
+      "name": "native-macos-windows",
+      "category": "PLATFORM_REQUIRED",
+      "status": "DEFERRED_GUI"
+    },
+    {
+      "name": "shared-file-preservation",
+      "category": "AUTOMATED",
+      "status": "PASS",
+      "scope": "129 added files, all within session candidate folder and focused test; no shared or production edits"
+    }
+  ],
+  "productionApproved": false,
+  "runtimeConnected": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "nextAction": "HUMAN_REVIEW_REQUIRED",
+  "releaseReady": false
+}
