@@ -880,6 +880,20 @@
     "repairLimit": 3,
     "remaining": "Persist unresolved command across restart; no durability claimed by this change."
   },
+  "snapshotConnectOrdering": {
+    "taskId": "desktop-snapshot-connect-order",
+    "status": "IMPLEMENTED_TESTED",
+    "dependency": "codex/evolution-retry-presentation for cumulative Ledger only; runtime change is independent",
+    "behavior": "Retain the first live world event when initial snapshot completes late; clean up listener if initialization fails.",
+    "validation": {
+      "presentation": "PASS including 3 skill-store tests",
+      "releaseGate": "NOT_RUN",
+      "gui": "DEFERRED_GUI"
+    },
+    "repairIterations": 0,
+    "repairLimit": 3,
+    "nextTask": "Persist unresolved evolution intent across restart; keep approval-blocked artwork unchanged."
+  },
   "monsterTierEncounterIntegration": {
     "status": "IMPLEMENTED_PENDING_REVIEW",
     "dependency": "Unmerged PR93, including growth/evolution/selection V16-V18",
