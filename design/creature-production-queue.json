@@ -11,9 +11,9 @@
   "artworkApproval": "HUMAN_REVIEW_REQUIRED",
   "nativeMacOS": "NOT_VERIFIED",
   "nativeWindows": "NOT_VERIFIED",
-  "repairIterations": 1,
+  "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "Validate RUU Stage4/5 runtime and release gate, then NOX Stage2 base/rig independent of blocked NOX1",
+  "nextTask": "MOA Stage4/5 independent artwork batch; NOX3/4/5 require human review before further repair; native GUI and full action coverage remain pending",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -1024,7 +1024,7 @@
       "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
-      "lastValidatedCommit": null,
+      "lastValidatedCommit": "56eb4578ad5832f3bd131f46a5372e7830e9b6f4",
       "actions": [
         {
           "action": "IDLE",
@@ -1149,7 +1149,7 @@
       "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
-      "lastValidatedCommit": null,
+      "lastValidatedCommit": "56eb4578ad5832f3bd131f46a5372e7830e9b6f4",
       "actions": [
         {
           "action": "IDLE",
@@ -1394,18 +1394,18 @@
       "creatureId": "companion:nox:2",
       "species": "nox",
       "evolutionStage": 2,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
-      "runtimeStatus": "NOT_VERIFIED",
+      "state": "GUI_NOT_VERIFIED",
+      "baseStatus": "BASE_READY",
+      "runtimeStatus": "RUNTIME_CONNECTED",
       "guiStatus": "GUI_NOT_VERIFIED",
       "blockReason": null,
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
+          "animationStatus": "ANIMATION_READY",
+          "frameCount": 6,
+          "runtimeStatus": "RUNTIME_CONNECTED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
         {
@@ -1519,11 +1519,11 @@
       "creatureId": "companion:nox:3",
       "species": "nox",
       "evolutionStage": 3,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "BLOCKED",
+      "baseStatus": "VALIDATION_FAILED",
       "runtimeStatus": "NOT_VERIFIED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": null,
+      "blockReason": "ALPHA_DEFECT; automatic repair limit3 reached; HUMAN_REVIEW_REQUIRED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -1644,11 +1644,11 @@
       "creatureId": "companion:nox:4",
       "species": "nox",
       "evolutionStage": 4,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "BLOCKED",
+      "baseStatus": "VALIDATION_FAILED",
       "runtimeStatus": "NOT_VERIFIED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": null,
+      "blockReason": "ALPHA_DEFECT; automatic repair limit3 reached; HUMAN_REVIEW_REQUIRED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -1769,11 +1769,11 @@
       "creatureId": "companion:nox:5",
       "species": "nox",
       "evolutionStage": 5,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "BLOCKED",
+      "baseStatus": "VALIDATION_FAILED",
       "runtimeStatus": "NOT_VERIFIED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": null,
+      "blockReason": "ALPHA_DEFECT; automatic repair limit3 reached; HUMAN_REVIEW_REQUIRED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -13802,5 +13802,6 @@
       "Resume IDLE"
     ],
     "nativeGUI": false
-  }
+  },
+  "repairScope": "NOX batch: Stage3 background edit, Stage2 detached residue cleanup, Stage4 background edit"
 }
