@@ -14,15 +14,15 @@ public class BattleService {
     private final RandomSource random;
     private final SkillStateStore skills;
     public BattleService(JdbcTemplate db,GameRepository game,RandomSource random,SkillStateStore skills) {this.db=db;this.game=game;this.random=random;this.skills=skills;}
-    record Encounter(UUID id,long monsterId,int level,String rarity,String status,String code,String name) {}
+    record Encounter(UUID id,long monsterId,int level,String rarity,String status,String code,String name,String rulesVersion) {}
     record Row(UUID id,UUID encounter,long companionId,int hp,int maxHp,int monsterHp,int monsterMax,int attack,int counter,int turn,String status,String rulesVersion) {}
     private void playerLock() {game.lockPlayer(1);game.expire(1,game.now());}
     private Encounter encounter(UUID id) {
         return db.query("""
-            SELECT e.encounter_id,e.monster_id,e.monster_level,e.rarity,e.status,m.code,m.name
+            SELECT e.encounter_id,e.monster_id,e.monster_level,e.rarity,e.status,m.code,m.name,e.rules_version
             FROM game.t_encounter e JOIN game.m_monster m USING(monster_id)
             WHERE e.encounter_id=? AND e.player_id=1 FOR UPDATE OF e
-            """,(r,n)->new Encounter(r.getObject(1,UUID.class),r.getLong(2),r.getInt(3),r.getString(4),r.getString(5),r.getString(6),r.getString(7)),id)
+            """,(r,n)->new Encounter(r.getObject(1,UUID.class),r.getLong(2),r.getInt(3),r.getString(4),r.getString(5),r.getString(6),r.getString(7),r.getString(8)),id)
             .stream().findFirst().orElseThrow(()->new GameFault(404,"ENCOUNTER_NOT_FOUND"));
     }
     private Row row(UUID id) {
@@ -71,12 +71,13 @@ public class BattleService {
         playerLock();var e=encounter(id);
         var ids=db.query("SELECT battle_id FROM game.t_battle WHERE encounter_id=?",(r,n)->r.getObject(1,UUID.class),id);
         if(!ids.isEmpty()) return dto(row(ids.getFirst()),List.of());
+        BattleRulesVersion.requireSupported(e.rulesVersion);
         active(e);var c=game.activeCompanion(1);var battle=UUID.randomUUID();
         db.update("""
             INSERT INTO game.t_battle(battle_id,encounter_id,player_companion_id,monster_id,companion_hp,companion_max_hp,
              monster_hp,monster_max_hp,companion_attack,monster_attack,status,rules_version) VALUES(?,?,?,?,?,?,?,?,?,?,'ACTIVE',?)
             """,battle,id,c.playerCompanionId(),e.monsterId,CombatRules.companionHp(),CombatRules.companionHp(),
-            CombatRules.monsterHp(e.level),CombatRules.monsterHp(e.level),CombatRules.companionAttack(c.level()),CombatRules.monsterAttack(e.level),BattleRulesVersion.ALPHA_V1.name());
+            CombatRules.monsterHp(e.level),CombatRules.monsterHp(e.level),CombatRules.companionAttack(c.level()),CombatRules.monsterAttack(e.level),e.rulesVersion);
         var state=new SkillStateStore.State();
         state.species=c.species();state.stage=c.evolutionStage();state.level=c.level();
         state.companion=new SkillResolution.Fighter(CombatRules.companionHp(),CombatRules.companionHp(),0,0,0,0);
