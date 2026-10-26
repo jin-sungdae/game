@@ -1,0 +1,80 @@
+{
+  "source": "design/production-batches/monsters/batch10/M092/base-v2.png",
+  "eyes": [
+    {
+      "x": 176,
+      "y": 95,
+      "rx": 4,
+      "ry": 3,
+      "dx": 0.7
+    }
+  ],
+  "frames": [
+    {
+      "file": "look_00.png",
+      "gaze": 0,
+      "pixelSha256": "43e632e4c5a2c48d7ba0d945241ed2d0deca93b89d8a26500b416ddee4219ae8"
+    },
+    {
+      "file": "look_01.png",
+      "gaze": 0.3,
+      "pixelSha256": "681e93c72a59857f1498268d06745603ae7f79ffe1bf623622e9befc799678d8"
+    },
+    {
+      "file": "look_02.png",
+      "gaze": 0.7,
+      "pixelSha256": "a3e8deb079c0680d461ce7dd1376b5e1f076043453eac754dde758360b4856d6"
+    },
+    {
+      "file": "look_03.png",
+      "gaze": 1,
+      "pixelSha256": "d115649a54c9985a177ade734d2eab54516ae291b63b556bdeb171f237935e3f"
+    },
+    {
+      "file": "look_04.png",
+      "gaze": 0.6,
+      "pixelSha256": "69a4b123bef4a4b6261944e23b982617123fcf074b1d13dc0c61a9cfbb4cd11b"
+    },
+    {
+      "file": "look_05.png",
+      "gaze": 0.1,
+      "pixelSha256": "93cde787605cbe4e8ce5cfae15448eada3bc1e1975f743ed1164779684eae2e6"
+    },
+    {
+      "file": "look_06.png",
+      "gaze": -0.3,
+      "pixelSha256": "5fa9d8f5a27d23b1f1f50a02385e9c8eb7520ac67721462f0a1b74613639fe61"
+    },
+    {
+      "file": "look_07.png",
+      "gaze": -0.7,
+      "pixelSha256": "4e153f09f96afe42320e3316fbc7a57cb91b6d5c166147c13f30b69af146da11"
+    },
+    {
+      "file": "look_08.png",
+      "gaze": -1,
+      "pixelSha256": "259eb2e8f508e65cf0fa918f452d7cc1416124799a533b11447b0e992509f84b"
+    },
+    {
+      "file": "look_09.png",
+      "gaze": -0.6,
+      "pixelSha256": "17b9bc9c99d2c9be36b6af03d2d76e3097033282052ae36d121586b88fe1542f"
+    },
+    {
+      "file": "look_10.png",
+      "gaze": -0.2,
+      "pixelSha256": "618712ad2dc7159965f5302610a7cf139b893919b527d5d1c63047f04c240c50"
+    },
+    {
+      "file": "look_11.png",
+      "gaze": -0.05,
+      "pixelSha256": "76f528226df462eac56a577c50e39a16881239d754a3d395c4141632a58f5e9a"
+    }
+  ],
+  "alphaPolicy": "unchanged",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-22 independent LOOK; no reset or failure recovery"
+}

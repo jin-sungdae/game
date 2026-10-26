@@ -1,0 +1,439 @@
+{
+  "conceptId": "M092",
+  "automated": "FAIL",
+  "frames": [
+    {
+      "file": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_00.png",
+      "pixelSha256": "417c3e9611e27b6229a72005119e01a5d1e79b322e415a31bd22f01beb98087d",
+      "changedPixels": 91,
+      "protectedChanges": 0,
+      "alphaChanges": 0,
+      "meanAbsoluteChannelDelta": 0.00323486328125,
+      "duplicatesExistingIdle": false,
+      "pass": true
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_01.png",
+      "pixelSha256": "d2150f24dc621cc81d46a08d77995f11af5d3481e44ec94369b8c6a74a839464",
+      "changedPixels": 164,
+      "protectedChanges": 0,
+      "alphaChanges": 0,
+      "meanAbsoluteChannelDelta": 0.01964569091796875,
+      "duplicatesExistingIdle": false,
+      "pass": true
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_02.png",
+      "pixelSha256": "1709db3f8a696c1d586b5db64db23dfe0747d0338bfe03bd1a4cb7d063ba71f5",
+      "changedPixels": 289,
+      "protectedChanges": 0,
+      "alphaChanges": 0,
+      "meanAbsoluteChannelDelta": 0.026576995849609375,
+      "duplicatesExistingIdle": false,
+      "pass": true
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_03.png",
+      "pixelSha256": "b87909f3f894209b5f071748b0773c46a6813f3ddbfbf327793d457459cf501e",
+      "changedPixels": 361,
+      "protectedChanges": 0,
+      "alphaChanges": 0,
+      "meanAbsoluteChannelDelta": 0.03401947021484375,
+      "duplicatesExistingIdle": false,
+      "pass": true
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_04.png",
+      "pixelSha256": "608b3cdaa8273f5c66df067fd90575faf01b04b8a8e6037b65aa2798241690af",
+      "changedPixels": 389,
+      "protectedChanges": 0,
+      "alphaChanges": 0,
+      "meanAbsoluteChannelDelta": 0.037754058837890625,
+      "duplicatesExistingIdle": false,
+      "pass": true
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_05.png",
+      "pixelSha256": "0883dcfa3c4fa451c0bfda0fa1fff79779eedc2b18d7de4d9156527f0f8026db",
+      "changedPixels": 368,
+      "protectedChanges": 0,
+      "alphaChanges": 0,
+      "meanAbsoluteChannelDelta": 0.037067413330078125,
+      "duplicatesExistingIdle": false,
+      "pass": true
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_06.png",
+      "pixelSha256": "ffa12fde0c9db3d115806ea7d6f9af6565b322911cabb3d8e47fa7f7d6299b46",
+      "changedPixels": 311,
+      "protectedChanges": 0,
+      "alphaChanges": 0,
+      "meanAbsoluteChannelDelta": 0.031795501708984375,
+      "duplicatesExistingIdle": false,
+      "pass": true
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_07.png",
+      "pixelSha256": "9508ebabc6382a5aa5a1a6b0bd102cf1dcc1029d60900f96a7adb010e3386734",
+      "changedPixels": 199,
+      "protectedChanges": 0,
+      "alphaChanges": 0,
+      "meanAbsoluteChannelDelta": 0.023590087890625,
+      "duplicatesExistingIdle": false,
+      "pass": true
+    }
+  ],
+  "continuity": [
+    {
+      "from": 0,
+      "to": 1,
+      "meanAbsoluteChannelDelta": 0.01752471923828125,
+      "maxChannelDelta": 255
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "meanAbsoluteChannelDelta": 0.006992340087890625,
+      "maxChannelDelta": 31
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "meanAbsoluteChannelDelta": 0.007579803466796875,
+      "maxChannelDelta": 25
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "meanAbsoluteChannelDelta": 0.003925323486328125,
+      "maxChannelDelta": 18
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "meanAbsoluteChannelDelta": 0.00183868408203125,
+      "maxChannelDelta": 8
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "meanAbsoluteChannelDelta": 0.00560760498046875,
+      "maxChannelDelta": 24
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "meanAbsoluteChannelDelta": 0.008350372314453125,
+      "maxChannelDelta": 31
+    },
+    {
+      "from": 7,
+      "to": 0,
+      "meanAbsoluteChannelDelta": 0.0203704833984375,
+      "maxChannelDelta": 255
+    }
+  ],
+  "uniqueFrames": true,
+  "alphaAndAnchor": "UNCHANGED_FROM_UNAPPROVED_BASE",
+  "appearanceScope": "Protected regions pixel-identical; local ribcage/shoulder changes only. Semantic identity NOT_VERIFIED.",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "productionEligible": false,
+  "existingPngValidator": [
+    {
+      "candidate": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_00.png",
+      "reference": "design/production-batches/monsters/batch10/M092/base-v2.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "3bf1bed743a780b1edffb062c92682c393a700da3488d0d6c6804f08c3903c6f",
+        "sha256": "a4ff05ae7b14abc4b42d5f4684228b12ffde728f6902e1dbdfff03738c75edf4",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "912e2a3968154399812467ce247ae6fcd83a6c9dc4059528aff5a3961f400d9d",
+        "sha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_01.png",
+      "reference": "design/production-batches/monsters/batch10/M092/base-v2.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "6c10d1c379e497a65220342ce30eee54700ce6413b14e25807678e9c973c56c3",
+        "sha256": "90205fb143da55e64dd9d3fa9585894ce1c27416b8d6045231a1b8d090a1299f",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "912e2a3968154399812467ce247ae6fcd83a6c9dc4059528aff5a3961f400d9d",
+        "sha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_02.png",
+      "reference": "design/production-batches/monsters/batch10/M092/base-v2.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "e6e42beacbc01686cded3f46b1b4a88cda32d29a52c06896ab8d99b02109092e",
+        "sha256": "804cda1de6a593ecc3649f4c78050507c84a8544f389141cdc13ae5386468687",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "912e2a3968154399812467ce247ae6fcd83a6c9dc4059528aff5a3961f400d9d",
+        "sha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_03.png",
+      "reference": "design/production-batches/monsters/batch10/M092/base-v2.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "21f4edd709869d3f27c2ef5e4a2e18e4c37be9eac991edb5ed27c0f21266ede1",
+        "sha256": "bc237390bb152e5eba6b433c4c1aea97ebbf4c9fe10a898b91a77aad59069e24",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "912e2a3968154399812467ce247ae6fcd83a6c9dc4059528aff5a3961f400d9d",
+        "sha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_04.png",
+      "reference": "design/production-batches/monsters/batch10/M092/base-v2.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "be8bcde614547b38f538f19337088f1cba51ab9c2c55a7e7ece58f636da8cf46",
+        "sha256": "0e3d464b4b1b50f0320b5d29b6f7ab1a7fd4e01d08d7770b7f4933afc4fb720e",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "912e2a3968154399812467ce247ae6fcd83a6c9dc4059528aff5a3961f400d9d",
+        "sha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_05.png",
+      "reference": "design/production-batches/monsters/batch10/M092/base-v2.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "30748fc86df5c98c8811fdfc17d1d1bdeed483337b18ccc0276d47879ba81693",
+        "sha256": "c5bedc1caa4b8ce21b94975f6a7d7aaff1bbc7c1925e5643abfc651e327d2d92",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "912e2a3968154399812467ce247ae6fcd83a6c9dc4059528aff5a3961f400d9d",
+        "sha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_06.png",
+      "reference": "design/production-batches/monsters/batch10/M092/base-v2.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "05b82a27cb1aad0aa96dbf605e87caf2a82c89a2df5af238353cd4d9322a4d8a",
+        "sha256": "db17a3e43304e91702c017eae8ac3127e83659ffb2788bbd13dfa4cc711248aa",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "912e2a3968154399812467ce247ae6fcd83a6c9dc4059528aff5a3961f400d9d",
+        "sha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/LUMA-ASSET-22/M092/rigged/breath/breath_07.png",
+      "reference": "design/production-batches/monsters/batch10/M092/base-v2.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "274d091d127d35f161b474846def3e66db117cde1149e9a30ed8a4a4a5afeb3b",
+        "sha256": "4b234f0713fe639ad7cdfd920e387d27a4a3f2a3dde4116c7409035747c996b0",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "912e2a3968154399812467ce247ae6fcd83a6c9dc4059528aff5a3961f400d9d",
+        "sha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+        "bounds": [
+          55,
+          16,
+          215,
+          233
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    }
+  ]
+}
