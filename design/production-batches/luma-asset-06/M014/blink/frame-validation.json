@@ -1,0 +1,149 @@
+{
+  "sessionId": "LUMA-ASSET-06",
+  "automated": "VALIDATION_FAILED",
+  "errors": [
+    "DUPLICATE_FRAMES",
+    "FRAME_CONTINUITY_THRESHOLD"
+  ],
+  "frames": [
+    {
+      "file": "blink_00.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "1385a73e9a3eba5d799f63475ad1432054da4bb855c695a4913eb65a22566e42",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.000408172607421875
+    },
+    {
+      "file": "blink_01.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "aa21629dd133b9edc418b983c89db8d6a07aae9ab7c45b494cb0286b508aee2d",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.009349822998046875
+    },
+    {
+      "file": "blink_02.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "17612b91e446514c2c7c95fe947870da2215d315c0e60cba0ea0fa35ee5fe0a0",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.0226287841796875
+    },
+    {
+      "file": "blink_03.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "5cd0149961f5a70743ddfe7144a0272b05d9ee5449305fa1cdb22138f65e8032",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.031055450439453125
+    },
+    {
+      "file": "blink_04.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "5cd0149961f5a70743ddfe7144a0272b05d9ee5449305fa1cdb22138f65e8032",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.031055450439453125
+    },
+    {
+      "file": "blink_05.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "6604d1427cd4db02c6d04801a05302945b5e8d473bce7290c7ce672649b5037b",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.0180206298828125
+    },
+    {
+      "file": "blink_06.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "04cd7a66cb55ea333bc86c1f211980cac0abe315e498f0bacb06ba79c21bc990",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.00397491455078125
+    },
+    {
+      "file": "blink_07.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "6df43b7d23721451d9fc073683fc016ce3c8fb9daf31bd8c8d63ff2e4ba58167",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.0008087158203125
+    }
+  ],
+  "uniquePixelHashes": 7,
+  "adjacentMeanAbsoluteByteDifferences": [
+    0.008941650390625,
+    0.014774322509765625,
+    0.012828826904296875,
+    0.0,
+    0.021854400634765625,
+    0.014068603515625,
+    0.00316619873046875
+  ],
+  "maxEndpointDifferenceFromBase": 0.0008087158203125,
+  "continuityScope": "Quantitative <=2 byte mean adjacent delta, <=0.15 endpoint delta; visual acceptance separate",
+  "appearance": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "productionEligible": false,
+  "nativeGui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "sourceSha256": "ab27a810759fbc73731fb42fd6cd292e009ce25b5b54f197c4234dcff3e41a95"
+}

@@ -1,0 +1,48 @@
+{
+  "sessionId": "LUMA-ASSET-06",
+  "conceptId": "M015",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M015/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 8,
+    "frameDuration": 100,
+    "loop": false
+  },
+  "movableRect": [
+    169,
+    73,
+    182,
+    84
+  ],
+  "parts": [
+    {
+      "x": 175.5,
+      "y": 78.5,
+      "rx": 5,
+      "ry": 4,
+      "dx": 0.55
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "기존 실패 후보 복구 없음. 독립 신규 후보 최초 제작만 수행. 추가 자동 수정 금지.",
+  "anatomyScope": "기존 눈 부위 rig 재사용. 눈 타원 내부 RGB만 변경; 전체 alpha, 얼굴 외부, 발과 몸통 고정. 독립 눈꺼풀 압축 후보.",
+  "identityReview": "HUMAN_REVIEW_REQUIRED",
+  "identityConflict": "Catalog cloud owl vs BASE shaggy sky beast; identity approval required",
+  "reusedRig": "design/production-batches/action-followup/M006/rig-blink.cjs"
+}

@@ -35,6 +35,23 @@ for row in data['creatures']:
   folder=batch/row['id']/action['action'].lower();result=folder/'frame-validation.json'
   status=json.loads(result.read_text())['automated'] if result.exists() else ('EXISTING_CANDIDATE_PRESERVED' if action.get('frameCount',0)>0 else 'FAILED_PRESERVED_NO_REPAIR' if action['animationStatus']=='VALIDATION_FAILED' else 'NOT_PRODUCED_REQUIRES_ANATOMY_OR_CONTRACT')
   row['sessionActionCoverage'].append({'action':action['action'],'status':status,'productionComplete':False})
+ row['blockedActionRequirements']={
+  'MOVE':'Approved gait/contact keyposes required; M012 failed MOVE remains untouched.',
+  'TURN':'Approved opposite-facing anatomy/keyposes required.',
+  'REST':'Approved lowered-body keypose required; M011 failed REST remains untouched.',
+  'SLEEP':'Approved resting posture and sustained eyelid keypose required; BLINK is not SLEEP.',
+  'ATTACK':'Approved attack/contact keyposes and server event contract required.',
+  'SKILL_CAST':'Species skill identity and server contract unapproved.',
+  'VICTORY':'Distinct approved celebratory pose required; do not relabel INTERACT.',
+  'DEFEAT':'Approved grounded terminal pose required.'}
+ row['additionalActionReview']={
+  'JUMP':'Approved crouch, airborne and landing contact poses required; M013 proposed JUMP is not approval.',
+  'FLY':'Approved wing spread/upstroke/downstroke poses required; M012/M014 proposed FLYING is not approval.',
+  'HOVER':'Approved airborne body/wing cycle required; M015 FLOATING proposal conflicts with BASE identity.',
+  'LAND':'Approved airborne-to-ground contact transition required.',
+  'CHARGE':'Approved anticipation/charge and gameplay timing contract required.',
+  'RECOVERY':'Approved terminal-pose-to-BASE transition required; failed HIT/INTERACT cannot be repaired under a new action.'}
+ row['eyeReview']={'status':'HUMAN_REVIEW_REQUIRED','notes':'Inspect eyelid edge/rim and residual dark pixels at closure; numerical PASS does not approve appearance. M014 BLINK duplicate frames preserved without retry.'}
 data.pop('coverageSummary',None);data.pop('legacyProductionAudit',None)
 data['scope']='LUMA-ASSET-06 isolated catalog; existing build_creature_review parser; shared ledger untouched; PNG-only result does not override continuity failure'
 (batch/'catalog.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
