@@ -2,6 +2,7 @@
 Default is strict; --allow-missing permits only wholly empty frame directories.
 """
 import argparse
+from functools import lru_cache
 import hashlib
 import json
 import re
@@ -14,9 +15,35 @@ COUNTS = dict(idle=6, walk=8, sit=4, look=4, sleep=6, react=6)
 
 
 def png_errors(path, require_transparency=False, bounds=None, pixel_digests=None):
-    errors = []
+    # Always read current bytes: timestamps and paths do not identify PNG content.
     try:
         data = path.read_bytes()
+    except OSError as exc:
+        return [str(exc)]
+    options = (require_transparency, bounds is not None, pixel_digests is not None)
+    # Bound retained input memory; unusually large malformed files are still checked.
+    decode = _cached_png_result if len(data) <= 256 * 1024 else _png_result
+    errors, decoded_bounds, digests = decode(data, *options)
+    if bounds is not None:
+        bounds.extend(decoded_bounds)
+    if pixel_digests is not None:
+        pixel_digests.extend(digests)
+    return list(errors)
+
+
+def _png_result(data, require_transparency, include_bounds, include_digests):
+    bounds = [] if include_bounds else None
+    digests = [] if include_digests else None
+    errors = _decode_png(data, require_transparency, bounds, digests)
+    return tuple(errors), tuple(bounds or ()), tuple(digests or ())
+
+
+_cached_png_result = lru_cache(maxsize=512)(_png_result)
+
+
+def _decode_png(data, require_transparency=False, bounds=None, pixel_digests=None):
+    errors = []
+    try:
         if data[:8] != b'\x89PNG\r\n\x1a\n':
             raise ValueError('invalid PNG signature')
         offset, chunks, compressed = 8, [], bytearray()
