@@ -1,0 +1,70 @@
+{
+  "conceptId": "M006",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M006/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 75,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "cap-gill-compression",
+      "x": 202,
+      "y": 141,
+      "rx": 14,
+      "ry": 8,
+      "dx": -2.1,
+      "dy": 1.4,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    },
+    {
+      "name": "left-leaf-collar-recoil",
+      "x": 86,
+      "y": 177,
+      "rx": 10,
+      "ry": 11,
+      "dx": -1.4,
+      "dy": 0.8,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "apiCalls": 0,
+  "scope": "stationary local body response; no whole-body pose, combat event or runtime connection",
+  "sequence": "HIT -> RECOVERY; shared boundary pose is intentional"
+}

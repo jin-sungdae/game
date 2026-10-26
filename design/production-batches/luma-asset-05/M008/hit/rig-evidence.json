@@ -1,0 +1,107 @@
+{
+  "reference": "design/production-batches/monsters/batch01/M008/base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "near-leaf-shoulder-recoil",
+      "x": 111,
+      "y": 161,
+      "rx": 15,
+      "ry": 17,
+      "dx": -1.8,
+      "dy": 1.1,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    },
+    {
+      "name": "cloak-fold-recoil",
+      "x": 146,
+      "y": 187,
+      "rx": 22,
+      "ry": 17,
+      "dx": -1.2,
+      "dy": 0.7,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    }
+  ],
+  "protectedRegions": "all pixels outside configured part ellipses",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "50ab20e3da66eeb4781536c9aba1a739b7d83b419b66cbe8d29b425a4b03ef62",
+      "changedPixels": 351,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.06328189377157792
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "be3539af063ab7ad85222b335fba6c317f24f8a12d45abd8123543ac31896bfb",
+      "changedPixels": 1124,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.6303421309537982
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "1d762f6a57b74d01637685f62777cd4a12ab7e32448fae876235c56ea44019a4",
+      "changedPixels": 1418,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.9376315806329107
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "d8c3926411fed2c167db5999593d437b77f84e95b725263b8c18f0dbabc8439a",
+      "changedPixels": 1426,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 2.10814852348188
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "88b34982414bc7b77a6860111469f6ef1cc40fb829a09dd60db3bb19806a42a8",
+      "changedPixels": 1371,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.5999163356052162
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "2347a0dcfeba3789acc591225706c7df014cadbb414a81fdfbe4cb36e437ef84",
+      "changedPixels": 1309,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.2218100623693657
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "80887dec0446ace70ea3751197237e91975078ded17cd2aa8003414ac01db58f",
+      "changedPixels": 1243,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.9675070765544994
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "0895f8cce2e958972e72ebb68dceccbda2b21a6019ef307a4c6aff6e6d579b5d",
+      "changedPixels": 1163,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7358370126411251
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #132; inherited 3/3 unchanged; independent new candidate, no repair",
+  "productionEligible": false
+}

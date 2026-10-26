@@ -1,0 +1,70 @@
+{
+  "conceptId": "M008",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M008/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 75,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "near-leaf-shoulder-recoil",
+      "x": 111,
+      "y": 161,
+      "rx": 15,
+      "ry": 17,
+      "dx": -1.8,
+      "dy": 1.1,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    },
+    {
+      "name": "cloak-fold-recoil",
+      "x": 146,
+      "y": 187,
+      "rx": 22,
+      "ry": 17,
+      "dx": -1.2,
+      "dy": 0.7,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "apiCalls": 0,
+  "scope": "stationary local body response; no whole-body pose, combat event or runtime connection",
+  "sequence": "HIT -> RECOVERY; shared boundary pose is intentional"
+}
