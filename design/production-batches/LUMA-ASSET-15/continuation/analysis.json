@@ -69,5 +69,18 @@
     }
   ],
   "productionApproved": false,
-  "runtimeConnected": false
+  "runtimeConnected": false,
+  "testToolResolution": {
+    "sourceCommit": "a0f9298",
+    "file": "scripts/validate_assets.py",
+    "change": "Exact source bytes and option flags cache; authoritative decoder and all assertions unchanged",
+    "capacity": 512,
+    "maxCachedInputBytes": 262144,
+    "maxRetainedInputBytes": 134217728,
+    "invalidation": "Read bytes on every call; content changes invalidate without relying on path/mtime",
+    "tests": "4 cache equivalence/invalidation tests PASS",
+    "uncachedRun": "INCOMPLETE: intentionally interrupted to reload changed test code; no timeout threshold",
+    "cachedRun": "Sequential Release Gate running; results to PR body",
+    "scope": "Authorized test-tool improvement; no shared rigging/production/runtime changes"
+  }
 }
