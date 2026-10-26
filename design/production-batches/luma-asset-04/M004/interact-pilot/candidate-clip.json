@@ -1,0 +1,80 @@
+{
+  "conceptId": "M004",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M004/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 150,
+    "loop": false
+  },
+  "movableRect": [
+    80,
+    27,
+    220,
+    85
+  ],
+  "parts": [
+    {
+      "name": "left-crown-leaf-attention",
+      "x": 107,
+      "y": 52,
+      "rx": 19,
+      "ry": 12,
+      "dx": 0.85,
+      "dy": -1.05,
+      "samples": [
+        0.02,
+        0.18,
+        0.52,
+        0.98,
+        0.76,
+        0.43,
+        0.16,
+        0.04
+      ]
+    },
+    {
+      "name": "right-crown-leaf-settle",
+      "x": 194,
+      "y": 61,
+      "rx": 15,
+      "ry": 15,
+      "dx": -0.75,
+      "dy": 0.65,
+      "samples": [
+        0.01,
+        0.06,
+        0.2,
+        0.53,
+        0.97,
+        0.72,
+        0.3,
+        0.025
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "검토 전용 타이밍. Runtime 이벤트·빈도·이동·전투 계약 변경 없음.",
+  "anatomyScope": "기존 왕관 잎 마스크의 접촉 반응과 지연된 잎 복귀 후보. 얼굴·몸통·뿌리·알파 고정. 기존 CURSOR_REACT의 재명명이나 프레임 복사가 아님.",
+  "behaviorContract": "기존 Species Identity/Personality/MovementProfile/SpeciesBehavior 미승인 상태 보존. 신규 계약 추정 없음.",
+  "sessionId": "LUMA-ASSET-04",
+  "rigSource": "design/production-batches/action-followup/M004/cursor-react-pilot/rig-cursor_react.cjs",
+  "rigSourceSha256": "953485346fc9a23b2db488b06b182998d770f8519f44c568b8767a3dc4afa57b",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "기존 실패 복구 없음; 3/3 유지; 이번 미완성 행동의 독립 첫 제작"
+}

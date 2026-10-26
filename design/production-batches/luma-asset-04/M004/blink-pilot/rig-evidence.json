@@ -1,0 +1,119 @@
+{
+  "sessionId": "LUMA-ASSET-04",
+  "status": "VALIDATION_FAILED",
+  "error": "DUPLICATE_PIXELS",
+  "frames": [
+    {
+      "file": "blink_00.png",
+      "errors": [],
+      "bounds": [
+        28,
+        19,
+        232,
+        234
+      ],
+      "pixelHash": "7332e3386c5df79e166f67bad63833035a4dd8a5d78bc1e9aca45d7da14ec33a",
+      "alphaMatchesBase": true,
+      "protectedPixelChanges": 0,
+      "changedPixels": 69,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "blink_01.png",
+      "errors": [],
+      "bounds": [
+        28,
+        19,
+        232,
+        234
+      ],
+      "pixelHash": "73ee1b9a0b4c12fefe74f9f11fb5e1851988a0560b9d1bf27df4728fb2128501",
+      "alphaMatchesBase": true,
+      "protectedPixelChanges": 0,
+      "changedPixels": 84,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "blink_02.png",
+      "errors": [],
+      "bounds": [
+        28,
+        19,
+        232,
+        234
+      ],
+      "pixelHash": "687c9a38335d17ae0b8fb77afcba614d7ac2ca2bac541696c1a557d0dd89971a",
+      "alphaMatchesBase": true,
+      "protectedPixelChanges": 0,
+      "changedPixels": 84,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "blink_03.png",
+      "errors": [],
+      "bounds": [
+        28,
+        19,
+        232,
+        234
+      ],
+      "pixelHash": "687c9a38335d17ae0b8fb77afcba614d7ac2ca2bac541696c1a557d0dd89971a",
+      "alphaMatchesBase": true,
+      "protectedPixelChanges": 0,
+      "changedPixels": 84,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "blink_04.png",
+      "errors": [],
+      "bounds": [
+        28,
+        19,
+        232,
+        234
+      ],
+      "pixelHash": "131ca3576c65994959fe8b0f21388b4fdd6b2694a098045277cd2ed78dd3cc17",
+      "alphaMatchesBase": true,
+      "protectedPixelChanges": 0,
+      "changedPixels": 84,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "blink_05.png",
+      "errors": [],
+      "bounds": [
+        28,
+        19,
+        232,
+        234
+      ],
+      "pixelHash": "abd900a581523e068db72846c0d9f1820753a2bb51f03074e1c2566ed432ddd5",
+      "alphaMatchesBase": true,
+      "protectedPixelChanges": 0,
+      "changedPixels": 75,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    }
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "productionEligible": false,
+  "automaticRepair": false
+}
