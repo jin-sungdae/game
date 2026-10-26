@@ -10,7 +10,7 @@
     "status": "BLOCKED_TIMEOUT",
     "exitCode": 130,
     "passedBeforeInterruption": 17,
-    "unfinishedTest": "test_registry_scale_paths_and_duplicates",
+    "unfinishedTest": "test_wrong_filename_duplicate_and_case",
     "scope": "전체 suite 실행이 장시간 완료되지 않아 이 세션 프로세스만 SIGINT; 전체 PASS 아님"
   },
   "releaseGate": {
@@ -37,7 +37,8 @@
         "status": "FAIL",
         "seconds": 786.78
       }
-    ]
+    ],
+    "interruptedTest": "test_registry_scale_paths_and_duplicates"
   },
   "nativeGui": "NOT_RUN",
   "productionApproval": "NOT_APPROVED",
