@@ -1644,7 +1644,7 @@
     "Integration owner should reconcile this audit with shared ledger/catalog; no ready actions to register.",
     "Only after artwork/motion/identity approval may integration owner change Animation Manifest, Production Registry or Runtime."
   ],
-  "nextResume": "After approved rigid layers are supplied, first attempt M071 IDLE mechanical settling; then M073 IDLE. Keep exhausted HIT/TURN failures untouched. Reassess all remaining actions independently.",
+  "nextResume": "Rerun full Asset Tests and Release Gate in a stable worktree with adequate session time. Then obtain approved rigid layers and resume M071 IDLE followed by M073 IDLE; preserve exhausted HIT/TURN failures and resolve M072/M074 identity before production.",
   "completion": "No animation completed; Draft PR is a blocked handoff, not creature completion",
   "validationEvidence": {
     "sourceAudit": "5/5 BASE PNG checks pass; 105 action records verified after worktree restoration",
@@ -1661,10 +1661,38 @@
       "reason": "Worktree disappeared during startup-cleanup; cannot classify these results as asset regressions"
     },
     "releaseGate": {
-      "status": "RUNNING",
-      "path": "/tmp/luma-asset18-release2",
-      "previousRun": "INVALIDATED_ENVIRONMENT_INTERRUPTION"
+      "status": "INCOMPLETE_SESSION_TIME_LIMIT",
+      "rawGateStatus": "FAIL",
+      "checks": [
+        {
+          "name": "frontend-build",
+          "status": "PASS",
+          "seconds": 13.16
+        },
+        {
+          "name": "animation-content",
+          "status": "PASS",
+          "seconds": 24.47
+        },
+        {
+          "name": "presentation",
+          "status": "PASS",
+          "seconds": 33.7
+        },
+        {
+          "name": "asset-tests",
+          "status": "FAIL",
+          "seconds": 346.55
+        }
+      ],
+      "reason": "Session stopped its own asset-test subprocess after prolonged validation; not an established code or asset regression. Remaining gate steps NOT_RUN.",
+      "path": "/tmp/luma-asset18-release2"
     },
-    "gui": "DEFERRED_GUI"
+    "gui": "DEFERRED_GUI",
+    "assetTests": {
+      "status": "INCOMPLETE_SESSION_TIME_LIMIT",
+      "passedBeforeStop": 13,
+      "fullSuitePass": false
+    }
   }
 }
