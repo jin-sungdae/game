@@ -1,0 +1,569 @@
+{
+  "sessionId": "LUMA-ASSET-04",
+  "baselineCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "sourceLedgerSha256": "b0a804319729400cf80dac3b195f9bb70dcff18f576bbe2cd0ad160389efec68",
+  "sharedLedgerModified": false,
+  "productionManifestModified": false,
+  "runtimeModified": false,
+  "additionalApiCalls": 0,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "existingFailuresRepaired": 1,
+  "checks": [
+    {
+      "conceptId": "M001",
+      "action": "IDLE",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M001",
+      "action": "BREATH",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M001",
+      "action": "BLINK",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "외형·움직임 사람 검토 대기"
+    },
+    {
+      "conceptId": "M001",
+      "action": "LOOK",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M001",
+      "action": "MOVE",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M001",
+      "action": "TURN",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M001",
+      "action": "REST",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "기존 눈 + 몸통 리깅 REST 후보. 외형/행동 의미 HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M001",
+      "action": "SLEEP",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M001",
+      "action": "CURSOR_REACT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "외형·움직임 사람 검토 대기"
+    },
+    {
+      "conceptId": "M001",
+      "action": "INTERACT",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M001",
+      "action": "ATTACK",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M001",
+      "action": "SKILL_CAST",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "Skill Identity/Animation 계약 미승인; 전투 스킬 연출 임의 제작 금지"
+    },
+    {
+      "conceptId": "M001",
+      "action": "HIT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M001",
+      "action": "VICTORY",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M001",
+      "action": "DEFEAT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M002",
+      "action": "IDLE",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M002",
+      "action": "BREATH",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M002",
+      "action": "BLINK",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M002",
+      "action": "LOOK",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "외형·움직임 사람 검토 대기"
+    },
+    {
+      "conceptId": "M002",
+      "action": "MOVE",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M002",
+      "action": "TURN",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M002",
+      "action": "REST",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "기존 눈 + 몸통 리깅 REST 후보. 외형/행동 의미 HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M002",
+      "action": "SLEEP",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M002",
+      "action": "CURSOR_REACT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "외형·움직임 사람 검토 대기"
+    },
+    {
+      "conceptId": "M002",
+      "action": "INTERACT",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M002",
+      "action": "ATTACK",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M002",
+      "action": "SKILL_CAST",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "Skill Identity/Animation 계약 미승인; 전투 스킬 연출 임의 제작 금지"
+    },
+    {
+      "conceptId": "M002",
+      "action": "HIT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M002",
+      "action": "VICTORY",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M002",
+      "action": "DEFEAT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M003",
+      "action": "IDLE",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M003",
+      "action": "BREATH",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M003",
+      "action": "BLINK",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M003",
+      "action": "LOOK",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "외형·움직임 사람 검토 대기"
+    },
+    {
+      "conceptId": "M003",
+      "action": "MOVE",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M003",
+      "action": "TURN",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M003",
+      "action": "REST",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "기존 눈 + 몸통 리깅 REST 후보. 외형/행동 의미 HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M003",
+      "action": "SLEEP",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M003",
+      "action": "CURSOR_REACT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "외형·움직임 사람 검토 대기"
+    },
+    {
+      "conceptId": "M003",
+      "action": "INTERACT",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M003",
+      "action": "ATTACK",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M003",
+      "action": "SKILL_CAST",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "Skill Identity/Animation 계약 미승인; 전투 스킬 연출 임의 제작 금지"
+    },
+    {
+      "conceptId": "M003",
+      "action": "HIT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M003",
+      "action": "VICTORY",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M003",
+      "action": "DEFEAT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M004",
+      "action": "IDLE",
+      "ledgerStatusAtStart": "ANIMATION_READY",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M004",
+      "action": "BREATH",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M004",
+      "action": "BLINK",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "사용자 한정 예외 승인 개선 6/6 고유; 이전 실패 원본 보존"
+    },
+    {
+      "conceptId": "M004",
+      "action": "LOOK",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M004",
+      "action": "MOVE",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M004",
+      "action": "TURN",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M004",
+      "action": "REST",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "기존 눈 + 몸통 리깅 REST 후보. 외형/행동 의미 HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "conceptId": "M004",
+      "action": "SLEEP",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M004",
+      "action": "CURSOR_REACT",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M004",
+      "action": "INTERACT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "PASS",
+      "reason": "외형·움직임 사람 검토 대기"
+    },
+    {
+      "conceptId": "M004",
+      "action": "ATTACK",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M004",
+      "action": "SKILL_CAST",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "Skill Identity/Animation 계약 미승인; 전투 스킬 연출 임의 제작 금지"
+    },
+    {
+      "conceptId": "M004",
+      "action": "HIT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M004",
+      "action": "VICTORY",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M004",
+      "action": "DEFEAT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M005",
+      "action": "IDLE",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M005",
+      "action": "BREATH",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M005",
+      "action": "BLINK",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M005",
+      "action": "LOOK",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M005",
+      "action": "MOVE",
+      "ledgerStatusAtStart": "VALIDATION_FAILED",
+      "result": "EXISTING_FAILURE_PRESERVED",
+      "reason": "ALPHA_DEFECT: 30 detached pixels; original and normalized keypose retained; no rig/clip/registration; repair limit 3/3"
+    },
+    {
+      "conceptId": "M005",
+      "action": "TURN",
+      "ledgerStatusAtStart": "VALIDATION_FAILED",
+      "result": "EXISTING_FAILURE_PRESERVED",
+      "reason": "ALPHA_DEFECT: 38 detached pixels; original and normalized keypose retained; no rig/clip/registration; repair limit 3/3"
+    },
+    {
+      "conceptId": "M005",
+      "action": "REST",
+      "ledgerStatusAtStart": "VALIDATION_FAILED",
+      "result": "EXISTING_FAILURE_PRESERVED",
+      "reason": "BLOCKED; HUMAN_REVIEW_REQUIRED; ALPHA_DEFECT: recovery v3 has 1 detached alpha=1 pixel; AUTO_REVIEW_MAX_ITERATIONS=3"
+    },
+    {
+      "conceptId": "M005",
+      "action": "SLEEP",
+      "ledgerStatusAtStart": "ANIMATION_READY",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M005",
+      "action": "CURSOR_REACT",
+      "ledgerStatusAtStart": "ANIMATION_IN_PROGRESS",
+      "result": "EXISTING_CANDIDATE_OR_APPROVAL_PRESERVED",
+      "reason": "완료/승인 대기 프레임 재제작 금지"
+    },
+    {
+      "conceptId": "M005",
+      "action": "INTERACT",
+      "ledgerStatusAtStart": "VALIDATION_FAILED",
+      "result": "EXISTING_FAILURE_PRESERVED",
+      "reason": "ALPHA_DEFECT: 21 detached pixels; PNG format passes but image quality fails; no rig or cleanup after PR repair limit 3/3"
+    },
+    {
+      "conceptId": "M005",
+      "action": "ATTACK",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    },
+    {
+      "conceptId": "M005",
+      "action": "SKILL_CAST",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "Skill Identity/Animation 계약 미승인; 전투 스킬 연출 임의 제작 금지"
+    },
+    {
+      "conceptId": "M005",
+      "action": "HIT",
+      "ledgerStatusAtStart": "VALIDATION_FAILED",
+      "result": "EXISTING_FAILURE_PRESERVED",
+      "reason": "ALPHA_DEFECT: 60 detached pixels; generated flinch keypose retained without recovery/rigging/registration; PR repair limit 3/3"
+    },
+    {
+      "conceptId": "M005",
+      "action": "VICTORY",
+      "ledgerStatusAtStart": "VALIDATION_FAILED",
+      "result": "EXISTING_FAILURE_PRESERVED",
+      "reason": "ALPHA_DEFECT: 24 detached pixels; generated victory pose preserved; no rig, recovery or registration at PR limit 3/3"
+    },
+    {
+      "conceptId": "M005",
+      "action": "DEFEAT",
+      "ledgerStatusAtStart": "ASSET_REQUIRED",
+      "result": "BLOCKED",
+      "reason": "SpeciesBehavior/MovementProfile 및 동작 keypose 미승인; 기존 눈·잎 마스크만으로 동작 의미를 확정할 수 없음"
+    }
+  ],
+  "newClipsAttempted": 13,
+  "newFrames": 98,
+  "automatedPassingClips": 12,
+  "automatedPassingFrames": 92,
+  "failedClips": 1,
+  "failedFrames": 6,
+  "productionEligible": false,
+  "appearance": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "repairException": {
+    "scope": "M004 BLINK only",
+    "authorization": "이번 M004 BLINK 개선만 승인",
+    "exceptionAttempt": 1,
+    "originalPreserved": true,
+    "globalPolicyRemovesArbitraryLimit": true,
+    "repositoryExecutableLimit": 3
+  },
+  "previousInspection": "inspection.json",
+  "continuationClips": 5,
+  "continuationFrames": 38,
+  "testHarnessFailure": {
+    "reason": "Missing eyeRigSourceSha256 metadata in new BLINK repair candidate",
+    "log": "/tmp/luma-asset04-continuation-unit.log",
+    "resolution": "Added actual source hash without modifying any frame or validator"
+  },
+  "additionalActions": {
+    "approvedAdditionalActions": [],
+    "status": "NO_APPROVED_ADDITIONAL_ACTION_CONTRACT",
+    "source": "Completion Ledger actions + candidate inventory; 신규 행동 의미 임의 정의 없음"
+  }
+}

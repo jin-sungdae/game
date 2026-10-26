@@ -1,0 +1,53 @@
+{
+  "conceptId": "M004",
+  "species": null,
+  "evolutionStage": null,
+  "status": "HUMAN_REVIEW_REQUIRED",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M004/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 6,
+    "frameDuration": 95,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 175,
+      "y": 102,
+      "rx": 5,
+      "ry": 5
+    },
+    {
+      "x": 192.5,
+      "y": 108,
+      "rx": 2.7,
+      "ry": 3.3
+    }
+  ],
+  "anatomyScope": "기존 눈 타원 리깅만 변경. 얼굴 윤곽·잎·뿔·몸통·발·알파는 BASE와 동일.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "eyeRigSource": "design/production-batches/action-followup/M004/rig-look.cjs",
+  "sessionId": "LUMA-ASSET-04",
+  "rigSource": "design/production-batches/action-followup/M002/rig-blink.cjs",
+  "rigSourceSha256": "033d02f4839ea72c729e8e06957bfbd2fcd0e08f385e395b03a3e9108ca82121",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "사용자 승인: 이번 M004 BLINK 개선만 승인",
+  "timingScope": "검토 전용 타이밍. Runtime 이벤트·빈도·이동·전투 계약 변경 없음.",
+  "behaviorContract": "기존 Species Identity/Personality/MovementProfile/SpeciesBehavior 미승인 상태 보존. 신규 계약 추정 없음.",
+  "exceptionAttempt": 1,
+  "preservedFailure": "design/production-batches/luma-asset-04/M004/blink-pilot",
+  "failureAnalysis": "닫힘 0.86과 1.0에서 작은 눈의 역샘플링 좌표가 모두 눈 경계를 벗어나 동일 피부색으로 포화. 닫힘 곡선을 0.02/0.26/0.62/1/0.48/0.04로 조정하여 중간 닫힘을 보존. 95ms 타이밍 유지; 외형/타이밍 승인 별도.",
+  "eyeRigSourceSha256": "803c418e802fc04a7def5e25bbe4404a2c33cc6379b494e85af2c326078bbd78"
+}

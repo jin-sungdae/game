@@ -1,0 +1,114 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "ribcage",
+      "x": 138,
+      "y": 163,
+      "rx": 25,
+      "ry": 14,
+      "dx": 0.35,
+      "dy": -0.8,
+      "phase": 0
+    },
+    {
+      "name": "shoulder",
+      "x": 169,
+      "y": 153,
+      "rx": 14,
+      "ry": 15,
+      "dx": -0.2,
+      "dy": -0.5,
+      "phase": -1.047
+    }
+  ],
+  "eyes": [
+    {
+      "x": 173,
+      "y": 105,
+      "rx": 7,
+      "ry": 7
+    },
+    {
+      "x": 192,
+      "y": 107,
+      "rx": 2.5,
+      "ry": 5
+    }
+  ],
+  "closure": [
+    0.48,
+    0.52,
+    0.58,
+    0.63,
+    0.6,
+    0.55,
+    0.5,
+    0.46
+  ],
+  "protectedRegions": "y<=137||y>=180||x<=104||x>=185",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "rest_00.png",
+      "pixelSha256": "392a5cd661a6820bb2ee2c26a304274d6bdc86920beba71696bfbde7b65d719a",
+      "changedPixels": 334,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.07401516439743144
+    },
+    {
+      "file": "rest_01.png",
+      "pixelSha256": "f8c6f43511dcc5202467aee7965022559b54b440987249dae7bafa5fe8809daa",
+      "changedPixels": 249,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.0703287148303941
+    },
+    {
+      "file": "rest_02.png",
+      "pixelSha256": "501753e6a45b135f725701c2e7a7aca9865185e063462eb09cfb453e6e690a1c",
+      "changedPixels": 463,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.2399451982675968
+    },
+    {
+      "file": "rest_03.png",
+      "pixelSha256": "c01f83d8705295ff95d98863afaa69078dcd0cdab65d7b23766eb160fe351201",
+      "changedPixels": 743,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.4090002493510395
+    },
+    {
+      "file": "rest_04.png",
+      "pixelSha256": "6daa34af3b97a74480208b4b6353c02355cb029982a8981e6b37eaed7d48804f",
+      "changedPixels": 851,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.47876922262182803
+    },
+    {
+      "file": "rest_05.png",
+      "pixelSha256": "2b8327a357e8ca09de239677dd30bef1ac3e83f893f847224f0a76abdb437683",
+      "changedPixels": 844,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.4090002493510395
+    },
+    {
+      "file": "rest_06.png",
+      "pixelSha256": "a9a35b101006ba88e6537904cda84aa00439fa1c967df7d67ff308da0fe16113",
+      "changedPixels": 729,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.27604248511461776
+    },
+    {
+      "file": "rest_07.png",
+      "pixelSha256": "83e59ccd2dd3a06a1496057a3572d81f688e75051dc3ad1db4dd5229f3a2297d",
+      "changedPixels": 521,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.18630480303697944
+    }
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 미완성 REST 최초 후보; 기존 실패 복구 없음",
+  "productionEligible": false
+}
