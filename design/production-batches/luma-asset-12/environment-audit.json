@@ -9,14 +9,15 @@
   },
   "previousTermination": "Explicit SIGINT by this session; KeyboardInterrupt in png_errors decode. No demonstrated fixture collision or test failure.",
   "temporaryDirectory": "/tmp/luma-asset12-continuation/tmp",
-  "releaseOutput": "/tmp/luma-asset12-continuation/release-py313",
-  "testInterpreter": "/opt/homebrew/opt/python@3.13/libexec/bin/python3",
+  "releaseOutput": "/tmp/luma-asset12-continuation/release-pypy",
+  "testInterpreter": "/tmp/luma-asset12-continuation/runtime/pypy3.12-v8.0.1-macos_arm64/bin/python3",
   "isolation": [
     "Single full release gate; no duplicate full Asset Tests process",
     "Unique TMPDIR; existing TemporaryDirectory prefixes retained",
     "PostgreSQL test data uses unique TemporaryDirectory and dynamically chosen ports",
     "No other worktree, process, branch or artifact changed",
-    "Original candidate hashes captured and tested"
+    "Original candidate hashes captured and tested",
+    "Task-local cargo wrapper uses CARGO_BUILD_JOBS=2; no shared Cargo configuration changed"
   ],
   "limits": [
     "External app startup cleanup cannot be guaranteed disabled",
@@ -24,5 +25,27 @@
     "Dynamic port selection retains existing check-then-bind race; no collision observed"
   ],
   "hostLoadObserved": "235.79 244.17 237.99",
-  "validatorPolicy": "UNCHANGED"
+  "validatorPolicy": "UNCHANGED",
+  "runtimeComparison": {
+    "cpython": {
+      "python": "3.13.12 (main, Feb  3 2026, 17:53:27) [Clang 17.0.0 (clang-1700.6.3.2)]",
+      "seconds": 14.226892707985826,
+      "rowsHash": "f966bd0cceccafa6b42057df7c081818424513b3eb0854091c74af8ef3e3cde3",
+      "frames": 48
+    },
+    "pypy": {
+      "python": "3.12.15 (d90944c94ad6, Oct 13 2026, 21:21:03)\n[PyPy 8.0.1 with GCC Apple LLVM 16.0.0 (clang-1600.0.26.6)]",
+      "seconds": 0.9953577909909654,
+      "rowsHash": "f966bd0cceccafa6b42057df7c081818424513b3eb0854091c74af8ef3e3cde3",
+      "frames": 48
+    }
+  },
+  "runtimeDownload": {
+    "source": "https://pypy.org/download.html",
+    "url": "https://downloads.python.org/pypy/pypy3.12-v8.0.1-macos_arm64.tar.gz",
+    "sha256": "c10baeae4a61063a1183c4ee4e8324765ba736a3980323654efb31e79f1514db",
+    "checksumSource": "https://pypy.org/checksums.html",
+    "systemInstallation": false
+  },
+  "runtimeMigration": "Stopped only owned CPython gate after measured 14.23s vs 1.00s identical-validator benchmark; preserved original logs. Complete unmodified gate restarted under PyPy."
 }

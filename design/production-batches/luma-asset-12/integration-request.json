@@ -131,7 +131,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M041/look",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -184,7 +184,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M041/sleep",
           "frameCount": 24,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Standing stag doze: sustained eye closure with local chest breathing and reopen to BASE; no recumbent sleep or runtime activation",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -270,7 +270,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M041/victory",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -341,7 +341,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M041/recovery",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -476,7 +476,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M042/look",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -612,7 +612,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M042/victory",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -683,7 +683,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M042/recovery",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -1266,7 +1266,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M044/victory",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -1337,7 +1337,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M044/recovery",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -1472,7 +1472,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M045/look",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -1606,7 +1606,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M045/victory",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -1677,7 +1677,7 @@
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M045/recovery",
           "frameCount": 16,
-          "automated": "PENDING",
+          "automated": "PASS",
           "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
           "entryContract": "BASE_ONLY",
           "exitContract": "EXACT_BASE"
@@ -1708,13 +1708,13 @@
   "nativeGui": "DEFERRED_GUI",
   "productionReady": false,
   "runtimeConnected": false,
-  "nextAction": "\uac80\uc99d \uacb0\uacfc \ud655\uc778 \ud6c4 \ud1b5\ud569 \ub2f4\ub2f9\uc790\uc758 Catalog \ub4f1\ub85d \ubc0f \uc0ac\ub78c \uac80\uc218. \ucc28\ub2e8\ub41c \uad00\uc808/\uc790\uc138 \uc791\uc5c5\uc740 \uc2b9\uc778\ub41c \ubd84\ub9ac \uc6d0\ud654 \ubc0f \uacc4\uc57d \ud544\uc694.",
+  "nextAction": "Review 12 new clips in existing Creature Review Catalog via integration owner; approve species-specific joint/keypose inputs for remaining blocked actions. Preserve all six failures. Observe evidence-commit CI; do not regenerate passing candidates.",
   "candidateCounts": {
     "clips": 32,
     "framePng": 472,
     "sourceSheets": 1,
     "totalPng": 473,
-    "structurallyPassingRigClips": "PENDING_CONTINUATION_VALIDATION",
+    "structurallyPassingRigClips": 31,
     "visuallyBlockedClips": 4,
     "productionCompleteActions": 0
   },
@@ -1732,15 +1732,47 @@
       "clips": 19,
       "png": 264
     },
-    "assetTests": "RUNNING_SINGLE_RELEASE_GATE",
-    "releaseGate": "RUNNING_PYTHON313",
+    "assetTests": {
+      "status": "PASS",
+      "tests": 232,
+      "seconds": 265.054,
+      "interpreter": "PyPy 8.0.1 Python 3.12.15"
+    },
+    "releaseGate": {
+      "status": "AUTOMATED_READY",
+      "passed": 18,
+      "total": 18,
+      "testedCodeHead": "436317775d73934e929af451046327c67a4866c4",
+      "manualGate": "MANUAL_QA_REQUIRED"
+    },
     "nativeGui": "DEFERRED_GUI",
     "existingBatch05": {
       "status": "PASS",
       "tests": 1
     },
     "requiredBaseRelease": "PASS",
-    "interruptionReason": "Full Asset Tests and Release Gate were stopped after more than six minutes in existing Alpha checks during concurrent local tracks. No full-suite PASS claim."
+    "continuationCandidates": {
+      "status": "PASS",
+      "clips": 12,
+      "frames": 200,
+      "baseReturn": "PASS"
+    },
+    "preservationAndBoundary": {
+      "status": "PASS",
+      "tests": 4
+    },
+    "serverRegression": {
+      "tests": 346,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "githubCI": {
+      "codeHead": "436317775d73934e929af451046327c67a4866c4",
+      "run": "https://github.com/jin-sungdae/game/actions/runs/40316216912",
+      "status": "SUCCESS",
+      "scope": "Code commit; subsequent evidence-only commit requires new CI observation"
+    }
   },
   "continuation": {
     "previousHead": "ec160b167aa70f049fe106ca43b54adbcea69a56",
@@ -1750,6 +1782,6 @@
     "totalFrames": 472,
     "sourceSheets": 1,
     "productionCompleteActions": 0,
-    "nextResume": "Await full Release Gate and CI; review new 12 clips. Remaining joint/keypose actions blocked; no existing failure regeneration."
+    "nextResume": "Review 12 new clips in existing Creature Review Catalog via integration owner; approve species-specific joint/keypose inputs for remaining blocked actions. Preserve all six failures. Observe evidence-commit CI; do not regenerate passing candidates."
   }
 }
