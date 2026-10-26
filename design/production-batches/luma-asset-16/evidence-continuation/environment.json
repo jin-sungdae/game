@@ -1,0 +1,131 @@
+{
+  "logicalCpu": 12,
+  "memoryBytes": 38654705664,
+  "assetTestProcesses": [
+    {
+      "pid": 326,
+      "parent": 298,
+      "cpuPercent": 48.7,
+      "rssKiB": 41792,
+      "elapsed": "25:03"
+    },
+    {
+      "pid": 3453,
+      "parent": 3429,
+      "cpuPercent": 49.2,
+      "rssKiB": 37104,
+      "elapsed": "21:15"
+    },
+    {
+      "pid": 8402,
+      "parent": 8365,
+      "cpuPercent": 52.0,
+      "rssKiB": 46368,
+      "elapsed": "18:39"
+    },
+    {
+      "pid": 8489,
+      "parent": 8464,
+      "cpuPercent": 50.5,
+      "rssKiB": 45648,
+      "elapsed": "18:34"
+    },
+    {
+      "pid": 10950,
+      "parent": 10921,
+      "cpuPercent": 48.0,
+      "rssKiB": 36560,
+      "elapsed": "16:44"
+    },
+    {
+      "pid": 15111,
+      "parent": 15090,
+      "cpuPercent": 50.3,
+      "rssKiB": 23856,
+      "elapsed": "13:48"
+    },
+    {
+      "pid": 18043,
+      "parent": 18014,
+      "cpuPercent": 49.5,
+      "rssKiB": 23760,
+      "elapsed": "11:20"
+    },
+    {
+      "pid": 23404,
+      "parent": 23384,
+      "cpuPercent": 48.6,
+      "rssKiB": 34176,
+      "elapsed": "06:13"
+    },
+    {
+      "pid": 24998,
+      "parent": 24967,
+      "cpuPercent": 51.1,
+      "rssKiB": 32576,
+      "elapsed": "03:16"
+    },
+    {
+      "pid": 28132,
+      "parent": 28102,
+      "cpuPercent": 0.0,
+      "rssKiB": 30368,
+      "elapsed": "01:36"
+    },
+    {
+      "pid": 28458,
+      "parent": 28413,
+      "cpuPercent": 0.0,
+      "rssKiB": 43440,
+      "elapsed": "01:17"
+    },
+    {
+      "pid": 29372,
+      "parent": 29350,
+      "cpuPercent": 48.4,
+      "rssKiB": 108688,
+      "elapsed": "00:53"
+    },
+    {
+      "pid": 30277,
+      "parent": 30257,
+      "cpuPercent": 48.3,
+      "rssKiB": 32304,
+      "elapsed": "00:01"
+    },
+    {
+      "pid": 97918,
+      "parent": 97890,
+      "cpuPercent": 46.2,
+      "rssKiB": 27680,
+      "elapsed": "28:26"
+    },
+    {
+      "pid": 99888,
+      "parent": 1,
+      "cpuPercent": 47.4,
+      "rssKiB": 32816,
+      "elapsed": "25:35"
+    }
+  ],
+  "count": 15,
+  "scope": "Read-only process metadata; no other session process terminated",
+  "ownTmpRoot": "/tmp/luma-144-tmp-v2",
+  "cleanupInspection": "Asset fixtures use TemporaryDirectory/addCleanup; isolated PostgreSQL uses TemporaryDirectory with own pg_ctl stop in finally; no cross-worktree removal found in inspected paths",
+  "previousStop": "Assistant SIGTERM/SIGINT after chosen 20-minute bound; not observed OOM or assertion failure",
+  "cacheBenchmark": {
+    "sameFileSixReads": true,
+    "before": {
+      "wallSeconds": 1.144680875,
+      "cpuSeconds": 0.672651
+    },
+    "after": {
+      "wallSeconds": 0.090669417,
+      "cpuSeconds": 0.090541
+    },
+    "identicalErrorsBoundsHash": true,
+    "caveat": "Microbenchmark only; contention/runtime differences prevent claiming same speedup for entire suite"
+  },
+  "globalPolicy": "Fixed count removed in global AGENTS section21",
+  "repositoryPolicy": "Still enforced: AGENTS + repair_gate.py + workflow env + JSON schema = 3; not changed"
+}

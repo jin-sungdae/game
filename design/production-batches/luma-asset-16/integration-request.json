@@ -54,22 +54,28 @@
           "action": "BREATH",
           "previousStatus": "ASSET_REQUIRED",
           "previousFrameCount": 0,
-          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
-          "reason": "Dedicated bell compression / gill or abdomen cycle is not present in reused rigs; do not substitute tentacle/claw sway for respiration."
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M061/breath-candidate",
+          "errors": [],
+          "productionApproved": false
         },
         {
           "action": "BLINK",
           "previousStatus": "ASSET_REQUIRED",
           "previousFrameCount": 0,
           "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
-          "reason": "No separated eyelid/eye-occlusion part or approved closed-eye keypose; preserve existing face."
+          "reason": "Inspected BASE has no eyes. Do not invent eyelids; coordinator must resolve required BLINK applicability without changing Species Identity."
         },
         {
           "action": "LOOK",
           "previousStatus": "ASSET_REQUIRED",
           "previousFrameCount": 0,
-          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
-          "reason": "No isolated gaze/head rig; thorax or tentacle motion is not evidence of eye direction."
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M061/look-candidate",
+          "errors": [],
+          "productionApproved": false
         },
         {
           "action": "MOVE",
@@ -246,8 +252,11 @@
           "action": "BREATH",
           "previousStatus": "ASSET_REQUIRED",
           "previousFrameCount": 0,
-          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
-          "reason": "Dedicated bell compression / gill or abdomen cycle is not present in reused rigs; do not substitute tentacle/claw sway for respiration."
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M062/breath-candidate",
+          "errors": [],
+          "productionApproved": false
         },
         {
           "action": "BLINK",
@@ -260,8 +269,11 @@
           "action": "LOOK",
           "previousStatus": "ASSET_REQUIRED",
           "previousFrameCount": 0,
-          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
-          "reason": "No isolated gaze/head rig; thorax or tentacle motion is not evidence of eye direction."
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M062/look-candidate",
+          "errors": [],
+          "productionApproved": false
         },
         {
           "action": "MOVE",
@@ -615,8 +627,11 @@
           "action": "BREATH",
           "previousStatus": "ASSET_REQUIRED",
           "previousFrameCount": 0,
-          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
-          "reason": "Dedicated bell compression / gill or abdomen cycle is not present in reused rigs; do not substitute tentacle/claw sway for respiration."
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M064/breath-candidate",
+          "errors": [],
+          "productionApproved": false
         },
         {
           "action": "BLINK",
@@ -629,8 +644,11 @@
           "action": "LOOK",
           "previousStatus": "ASSET_REQUIRED",
           "previousFrameCount": 0,
-          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
-          "reason": "No isolated gaze/head rig; thorax or tentacle motion is not evidence of eye direction."
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M064/look-candidate",
+          "errors": [],
+          "productionApproved": false
         },
         {
           "action": "MOVE",
@@ -933,9 +951,9 @@
       ]
     }
   ],
-  "newPngCount": 104,
-  "newClipCount": 13,
-  "automatedPassingClips": 10,
+  "newPngCount": 152,
+  "newClipCount": 19,
+  "automatedPassingClips": 16,
   "failedClipsPreserved": 3,
   "productionAcceptedClips": 0,
   "runtimeConnected": false,
@@ -963,7 +981,35 @@
       "id": "LUMA-ASSET-16-IR-04",
       "request": "Only after explicit Production approval, integrate approved candidate manifests and registry/runtime bindings in a separate integration change; run full release and macOS/Windows GUI acceptance.",
       "status": "BLOCKED_APPROVAL"
+    },
+    {
+      "id": "LUMA-ASSET-16-IR-05",
+      "request": "Global fixed repair limit removal is present, but repository AGENTS, repair_gate.py, workflow and schema still enforce 3. Coordinator must handle an explicitly approved repository policy change separately; this PR does not reset limits or repair failed candidates.",
+      "status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "id": "LUMA-ASSET-16-IR-06",
+      "request": "Shared rig coordinator: assess eyelid/skin occlusion parts for M062/M064 BLINK and closed-eye SLEEP; existing inverse sampler cannot safely synthesize missing skin. M061 is eyeless; resolve BLINK applicability. Movement/turn and distinct battle terminal keyposes remain required; do not relabel current clips.",
+      "status": "PENDING_INTEGRATOR"
+    },
+    {
+      "id": "LUMA-ASSET-16-IR-07",
+      "request": "Review validator content-keyed cache integration. The file is reread each call; errors/bounds/hashes and output independence are preserved. Process-local cache only, 1024 entries; no Runtime or shared registry change.",
+      "status": "READY_FOR_HUMAN_REVIEW"
+    },
+    {
+      "id": "LUMA-ASSET-16-IR-08",
+      "request": "Shared watcher run 40316863054 failed twice at GitHub repository API read. Local authenticated read works; do not infer runner token permission/recovery. Coordinator should inspect runner API access; no auth/security/workflow policy modified here.",
+      "status": "EXTERNAL_CI_BLOCKED"
     }
   ],
-  "nextResumePoint": "First rerun npm run test:assets and full validate_alpha_release.py to completion; current execution was stopped at session limit. Review M062 detached-alpha failures without repair. For independent production, obtain separated eye/eyelid and bell/gill/abdomen rig or approved keyposes for BLINK/LOOK/BREATH on M061/M062/M064; then movement/turn/sleep/battle terminal poses. M063/M065 require identity resolution. No completed-candidate regeneration."
+  "nextResumePoint": "Finish/review current full Release Gate and exact-head CI. Review 16 passing candidates for natural motion/appearance, retain 3 M062 failures and M064 ATTACK. Coordinator: eyelid/skin rig for M062/M064 BLINK/SLEEP, eyeless M061 BLINK applicability, M063/M065 Identity, and repository repair policy. Then dedicated MOVE/TURN/ATTACK/SKILL_CAST/VICTORY/DEFEAT poses; no relabeling or regeneration of completed candidates.",
+  "continuation": {
+    "newClips": 6,
+    "newFrames": 48,
+    "validatedSourceCommit": "4dbe1656b3b435f790e847882e606b2fbe359658",
+    "exactBaseReturnClips": 6,
+    "legacyArtifacts": "All previous 104 PNG and failed measurements preserved byte-for-byte",
+    "validatorPolicy": "No threshold relaxation. Exact-base last frame is explicitly validated as identical; other frames must retain anatomical silhouette motion and unique hashes."
+  }
 }
