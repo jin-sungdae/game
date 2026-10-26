@@ -166,7 +166,7 @@ class Engine:
         return prompt
 
     def auth(self, required=False):
-        github = self.command(['gh', 'api', 'user', '--jq', '.login']).strip()
+        github = self.command(['gh', 'api', 'repos/'+REPO, '--jq', '.full_name']).strip()
         try:
             p = subprocess.run(['codex', 'login', 'status'], env=clean_env(), capture_output=True, text=True, timeout=15)
             subscribed = p.returncode == 0 and 'Logged in using ChatGPT' in p.stdout + p.stderr

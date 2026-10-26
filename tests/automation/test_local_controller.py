@@ -129,3 +129,10 @@ class SubscriptionAnalysisTests(unittest.TestCase):
                 self.assertEqual('HUMAN_REVIEW_REQUIRED',e.analyze_codex()['status'])
             self.assertIsNone(state['lock'])
             self.assertEqual('ANALYZED',next(iter(state['runs'].values()))['status'])
+
+class GitHubAppCompatibilityTests(unittest.TestCase):
+    def test_connection_probe_uses_repository_permission_not_user_endpoint(self):
+        e=engine.Engine('/tmp',lambda _:None,lambda:False)
+        with patch.object(e,'command',return_value='jin-sungdae/game') as command, patch.object(engine.subprocess,'run',return_value=Mock(returncode=0,stdout='Logged in using ChatGPT',stderr='')):
+            self.assertEqual('CHATGPT_SUBSCRIPTION',e.auth()['codex'])
+            self.assertEqual(['gh','api','repos/jin-sungdae/game','--jq','.full_name'],command.call_args.args[0])
