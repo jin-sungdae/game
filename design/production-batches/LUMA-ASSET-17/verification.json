@@ -1,0 +1,62 @@
+{
+  "assetTests": {
+    "status": "INTERRUPTED_NOT_VERIFIED",
+    "logPath": "/tmp/luma-asset17-assets.log",
+    "tail": [
+      "test_new_gaze_and_interaction_frames_preserve_fixed_anatomy (test_action_production_continuation.ActionProductionContinuationTests) ... ok",
+      "test_nox_blink_duplicate_frames_remain_failed_without_recovery (test_action_production_continuation.ActionProductionContinuationTests) ... ok",
+      "test_actual_cli_strict_gate_missing_then_complete_delivery (test_alpha_assets.AlphaAssetTests) ... ok",
+      "test_invalid_dimensions_format_and_alpha_channel (test_alpha_assets.AlphaAssetTests) ... ok",
+      "test_only_canonical_pip_animation_manifest_is_allowed (test_alpha_assets.AlphaAssetTests) ... ok",
+      "test_optional_and_strict_fifteen_paths (test_alpha_assets.AlphaAssetTests) ... ok",
+      "test_real_transparency_for_all_png_filters (test_alpha_assets.AlphaAssetTests) ... ok",
+      "test_registry_scale_paths_and_duplicates (test_alpha_assets.AlphaAssetTests) ... "
+    ],
+    "reason": "Session checkpoint during existing asset tests; no full-suite PASS claimed; rerun required"
+  },
+  "animationRegression": {
+    "status": "PASS",
+    "logPath": "/tmp/luma-asset17-animation-clean.log",
+    "tail": [
+      "# tests 1",
+      "# suites 0",
+      "# pass 1",
+      "# fail 0",
+      "# cancelled 0",
+      "# skipped 0",
+      "# todo 0",
+      "# duration_ms 315.603583"
+    ],
+    "tests": 236
+  },
+  "releaseGate": {
+    "status": "INTERRUPTED_NOT_VERIFIED",
+    "logPath": "/tmp/luma-asset17-release-clean.log",
+    "tail": [
+      "frontend-build",
+      "animation-content",
+      "presentation",
+      "asset-tests"
+    ],
+    "reason": "Session checkpoint during existing asset tests; no full-suite PASS claimed; rerun required",
+    "completedSteps": [
+      "frontend-build",
+      "animation-content",
+      "presentation"
+    ]
+  },
+  "candidateRegression": {
+    "status": "PASS",
+    "logPath": "/tmp/luma-asset17-focused.log",
+    "tail": [
+      "test_candidate_geometry_continuity_and_isolation (test_asset17_candidates.Asset17Candidates) ... "
+    ],
+    "tests": 1,
+    "scope": "Six clips; five pass and one preserved expected failure"
+  },
+  "initialEnvironmentFailure": "Shared node_modules duplicate 'react 2' type directory; resolved with isolated npm ci; initial release failed frontend-build.",
+  "gui": {
+    "macOS": "DEFERRED_GUI",
+    "windows": "DEFERRED_GUI"
+  }
+}

@@ -1,0 +1,1404 @@
+{
+  "sessionId": "LUMA-ASSET-17",
+  "baselineCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "status": "PARTIAL_CANDIDATES_HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "failureRecoveryPerformed": false,
+  "productionApproved": false,
+  "runtimeConnected": false,
+  "macOS": "DEFERRED_GUI",
+  "windows": "DEFERRED_GUI",
+  "monsters": [
+    {
+      "monster": "M066",
+      "basePath": "design/production-batches/monsters/batch07/M066/base-v2.png",
+      "baseSha256": "d282a5f795ec82df1badb7dedad4ed994e4d1506a60633fd3028d6282aa9b4e0",
+      "productionSpeciesId": null,
+      "baselineProfiles": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "proposal": {
+        "observedForm": "white shell creature",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "playful"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "two playful movements followed by a rest; attention centers on the water habitat of the white shell creature",
+          "preparation": "compress then release the resting pose; preserve the white shell creature silhouette",
+          "transition": "recover from landing before observing; recover the white shell creature resting anatomy",
+          "reaction": "respond with a short bounce then settle; keep the white shell creature characteristic gesture"
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baseline": {
+            "action": "IDLE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "reason": "Visual identity and natural motion review pending",
+          "candidatePath": "design/production-batches/LUMA-ASSET-17/M066/idle"
+        },
+        {
+          "action": "BREATH",
+          "baseline": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Bell/shell/respiration deformation not represented by the appendage rig; dedicated anatomy keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "BLINK",
+          "baseline": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Eyelid masks and closed-eye keypose required; appendage warp cannot close eyes",
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "baseline": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Face/gaze articulation required; current rig protects the face",
+          "candidatePath": null
+        },
+        {
+          "action": "MOVE",
+          "baseline": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Locomotion cycle and approved movement contract required; local appendage cycle is not locomotion",
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "baseline": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Directional head/body keyposes and occlusion required",
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "baseline": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Resting body posture keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "baseline": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Sleeping posture and eye-closure keyposes required",
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baseline": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "reason": "Visual identity and natural motion review pending",
+          "candidatePath": "design/production-batches/LUMA-ASSET-17/M066/cursor_react"
+        },
+        {
+          "action": "INTERACT",
+          "baseline": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Distinct species interaction keypose required; do not relabel the cursor response",
+          "candidatePath": null
+        },
+        {
+          "action": "ATTACK",
+          "baseline": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Attack anticipation/contact/recovery anatomy required",
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "baseline": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Unapproved skill identity and server cue contract; no invented skill motion",
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "baseline": {
+            "action": "HIT",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 8,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+            "automated": "PASS",
+            "candidatePath": "design/production-batches/action-followup/M066/hit-pilot",
+            "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
+          },
+          "sessionStatus": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Artwork, natural motion and Production Identity review required; candidate only",
+          "candidatePath": null
+        },
+        {
+          "action": "VICTORY",
+          "baseline": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Distinct celebratory posture keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "baseline": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Collapsed/defeated posture keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "BLOCKED",
+          "reason": "No wing/flight contract; aquatic form alone does not authorize flight",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        }
+      ]
+    },
+    {
+      "monster": "M067",
+      "basePath": "design/production-batches/monsters/batch07/M067/base-v2.png",
+      "baseSha256": "1b543157dc9001a3e1a87d6f3a44bb96eb86cbbc862932bcb3ae0d1d512af21d",
+      "productionSpeciesId": null,
+      "baselineProfiles": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "proposal": {
+        "observedForm": "curled sea serpent",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "alert"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "FREE_2D"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "frequent attention shifts but sparse displacement; attention centers on the water habitat of the curled sea serpent",
+          "preparation": "orient the face first and body second; preserve the curled sea serpent silhouette",
+          "transition": "finish turning before locomotion resumes; recover the curled sea serpent resting anatomy",
+          "reaction": "face the stimulus and briefly pause; keep the curled sea serpent characteristic gesture"
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baseline": {
+            "action": "IDLE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "BREATH",
+          "baseline": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "BLINK",
+          "baseline": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "baseline": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "MOVE",
+          "baseline": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "baseline": {
+            "action": "TURN",
+            "animationStatus": "VALIDATION_FAILED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "automated": "VALIDATION_FAILED",
+            "candidatePath": "design/production-batches/action-followup/M067/turn-pilot",
+            "recoveryPath": "design/production-batches/action-followup/M067/turn-pilot/keypose-tool-reference.png",
+            "blockReason": "Raw source detached Alpha 1175 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Raw source detached Alpha 1175 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "baseline": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "baseline": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baseline": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "INTERACT",
+          "baseline": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "ATTACK",
+          "baseline": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "baseline": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "baseline": {
+            "action": "HIT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "VICTORY",
+          "baseline": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "baseline": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "No existing independently validated serpent part rig; new anatomy keyposes required (TURN failure not repaired)",
+          "candidatePath": null
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "BLOCKED",
+          "reason": "No wing/flight contract; aquatic form alone does not authorize flight",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        }
+      ]
+    },
+    {
+      "monster": "M068",
+      "basePath": "design/production-batches/monsters/batch07/M068/base-v2.png",
+      "baseSha256": "87f91bf20443aabbf7c9e6baf8d3f8d2fcde49d9aa79a3cb3acc095e481eefdc",
+      "productionSpeciesId": null,
+      "baselineProfiles": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "proposal": {
+        "observedForm": "long jellyfish",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "reserved"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "FLOATING"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "sustained rest with occasional careful exploration; attention centers on the water habitat of the long jellyfish",
+          "preparation": "open the resting posture slowly; preserve the long jellyfish silhouette",
+          "transition": "slow the final motion into a resting pose; recover the long jellyfish resting anatomy",
+          "reaction": "acknowledge interaction with a restrained nod; keep the long jellyfish characteristic gesture"
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baseline": {
+            "action": "IDLE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "BREATH",
+          "baseline": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "BLINK",
+          "baseline": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "baseline": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "MOVE",
+          "baseline": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "baseline": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "baseline": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "baseline": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baseline": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "INTERACT",
+          "baseline": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "ATTACK",
+          "baseline": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "baseline": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "baseline": {
+            "action": "HIT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "blockReason": "Identity review: long jellyfish proposal conflicts with dragon-like curled torso, head and fins BASE; preserve Artwork and FLOATING proposal; HUMAN_REVIEW_REQUIRED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "VICTORY",
+          "baseline": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "baseline": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Species identity conflict: long jellyfish proposal versus dragon-shaped BASE; human resolution required",
+          "candidatePath": null
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "BLOCKED",
+          "reason": "No wing/flight contract; aquatic form alone does not authorize flight",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        }
+      ]
+    },
+    {
+      "monster": "M069",
+      "basePath": "design/production-batches/monsters/batch07/M069/base-v2.png",
+      "baseSha256": "3a78dd023820cc7647270d2f49526268af63d371d48bd0900d803376ae55e0dd",
+      "productionSpeciesId": null,
+      "baselineProfiles": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "proposal": {
+        "observedForm": "purple jellyfish",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "watchful"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "FLOATING"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "repeated scanning before a single move; attention centers on the water habitat of the purple jellyfish",
+          "preparation": "pause and recheck the destination; preserve the purple jellyfish silhouette",
+          "transition": "return to the home orientation before resting; recover the purple jellyfish resting anatomy",
+          "reaction": "look away briefly before looking back; keep the purple jellyfish characteristic gesture"
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baseline": {
+            "action": "IDLE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "reason": "Visual identity and natural motion review pending",
+          "candidatePath": "design/production-batches/LUMA-ASSET-17/M069/idle"
+        },
+        {
+          "action": "BREATH",
+          "baseline": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Bell/shell/respiration deformation not represented by the appendage rig; dedicated anatomy keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "BLINK",
+          "baseline": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Eyelid masks and closed-eye keypose required; appendage warp cannot close eyes",
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "baseline": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Face/gaze articulation required; current rig protects the face",
+          "candidatePath": null
+        },
+        {
+          "action": "MOVE",
+          "baseline": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Locomotion cycle and approved movement contract required; local appendage cycle is not locomotion",
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "baseline": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Directional head/body keyposes and occlusion required",
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "baseline": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Resting body posture keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "baseline": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Sleeping posture and eye-closure keyposes required",
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baseline": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "reason": "Visual identity and natural motion review pending",
+          "candidatePath": "design/production-batches/LUMA-ASSET-17/M069/cursor_react"
+        },
+        {
+          "action": "INTERACT",
+          "baseline": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Distinct species interaction keypose required; do not relabel the cursor response",
+          "candidatePath": null
+        },
+        {
+          "action": "ATTACK",
+          "baseline": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Attack anticipation/contact/recovery anatomy required",
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "baseline": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Unapproved skill identity and server cue contract; no invented skill motion",
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "baseline": {
+            "action": "HIT",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 8,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+            "automated": "PASS",
+            "candidatePath": "design/production-batches/action-followup/M069/hit-pilot",
+            "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
+          },
+          "sessionStatus": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Artwork, natural motion and Production Identity review required; candidate only",
+          "candidatePath": null
+        },
+        {
+          "action": "VICTORY",
+          "baseline": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Distinct celebratory posture keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "baseline": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Collapsed/defeated posture keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "BLOCKED",
+          "reason": "No wing/flight contract; aquatic form alone does not authorize flight",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        }
+      ]
+    },
+    {
+      "monster": "M070",
+      "basePath": "design/production-batches/monsters/batch07/M070/base-v2.png",
+      "baseSha256": "f9f54ef88c38a7cea3d6fe950ecbe8d5f7cdb4e834a38fbf0c2a83cb00398c2e",
+      "productionSpeciesId": null,
+      "baselineProfiles": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "proposal": {
+        "observedForm": "tentacled sea creature",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "exploratory"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "FREE_2D"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "long exploration intervals followed by recovery; attention centers on the water habitat of the tentacled sea creature",
+          "preparation": "lean toward open space before starting; preserve the tentacled sea creature silhouette",
+          "transition": "look back once at the end of an excursion; recover the tentacled sea creature resting anatomy",
+          "reaction": "inspect the direction of interaction then resume exploration; keep the tentacled sea creature characteristic gesture"
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baseline": {
+            "action": "IDLE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "reason": "Visual identity and natural motion review pending",
+          "candidatePath": "design/production-batches/LUMA-ASSET-17/M070/idle"
+        },
+        {
+          "action": "BREATH",
+          "baseline": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Bell/shell/respiration deformation not represented by the appendage rig; dedicated anatomy keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "BLINK",
+          "baseline": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Eyelid masks and closed-eye keypose required; appendage warp cannot close eyes",
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "baseline": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Face/gaze articulation required; current rig protects the face",
+          "candidatePath": null
+        },
+        {
+          "action": "MOVE",
+          "baseline": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Locomotion cycle and approved movement contract required; local appendage cycle is not locomotion",
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "baseline": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Directional head/body keyposes and occlusion required",
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "baseline": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Resting body posture keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "baseline": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Sleeping posture and eye-closure keyposes required",
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baseline": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED_VALIDATION_FAILED",
+          "reason": "DETACHED_ALPHA in two frames; preserved unchanged, no repair under inherited 3/3 limit",
+          "candidatePath": "design/production-batches/LUMA-ASSET-17/M070/cursor_react"
+        },
+        {
+          "action": "INTERACT",
+          "baseline": {
+            "action": "INTERACT",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 8,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+            "automated": "PASS",
+            "candidatePath": "design/production-batches/action-followup/M070/interact-pilot",
+            "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
+          },
+          "sessionStatus": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Artwork, natural motion and Production Identity review required; candidate only",
+          "candidatePath": null
+        },
+        {
+          "action": "ATTACK",
+          "baseline": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Attack anticipation/contact/recovery anatomy required",
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "baseline": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Unapproved skill identity and server cue contract; no invented skill motion",
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "baseline": {
+            "action": "HIT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Dedicated recoil keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "VICTORY",
+          "baseline": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Distinct celebratory posture keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "baseline": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "sessionStatus": "BLOCKED",
+          "reason": "Collapsed/defeated posture keypose required",
+          "candidatePath": null
+        },
+        {
+          "action": "JUMP",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "FLY",
+          "sessionStatus": "BLOCKED",
+          "reason": "No wing/flight contract; aquatic form alone does not authorize flight",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "HOVER",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        },
+        {
+          "action": "LAND",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "CHARGE",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "NOT_ESTABLISHED"
+        },
+        {
+          "action": "RECOVERY",
+          "sessionStatus": "BLOCKED",
+          "reason": "Species-specific movement/pose contract and new keyposes required; no whole-image transform substitute",
+          "applicability": "PROPOSED_NOT_APPROVED"
+        }
+      ]
+    }
+  ],
+  "integrationRequests": [
+    "Review six session candidate clips for visual identity, behavior semantics and natural motion; automated metrics are not approval",
+    "After human review, integration owner updates shared Completion Ledger and review catalog from session candidate paths; no completion promotion without native GUI and runtime evidence",
+    "Resolve M068 species identity conflict and M067 TURN repair3/3 authorization separately",
+    "Approve Production identity mappings and personality/movement/species behavior before registry, animation manifest or runtime changes"
+  ],
+  "nextResumePoint": "Review five passing candidates; preserve failed M070 CURSOR_REACT and M067 TURN. Next independent production: M066 BLINK with identity-preserving eyelid keyposes, then other missing anatomy poses. Resolve M068 identity before production.",
+  "newPngCount": 54,
+  "newAnimationFrameCount": 48,
+  "newClipCount": 6,
+  "automatedPassingClipCount": 5,
+  "failedClipCount": 1,
+  "completeProductionActions": 0
+}
