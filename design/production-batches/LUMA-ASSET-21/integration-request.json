@@ -1,0 +1,807 @@
+{
+  "sessionId": "LUMA-ASSET-21",
+  "baseCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairAttemptsThisSession": 0,
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "gui": "DEFERRED_GUI",
+  "scope": "Session handoff only; not a second Completion Ledger. 75 required actions plus 30 anatomy-dependent action reviews. No new candidate denotes Production completion.",
+  "creatures": [
+    {
+      "creatureId": "M086",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "7820a427cf12a79ee9234952c9ac338a952f70bd0b1e9325c57ebde9636e6ac7",
+        "sha256": "f125cd7c2ab3ea0c9adfa61fc47dbe1ba54c6d3e531eeac8e5ebb535086cd941",
+        "bounds": [
+          27,
+          34,
+          231,
+          220
+        ]
+      },
+      "observedArtwork": "coiled serpent/dragon",
+      "sourceConcept": {
+        "observedForm": "tentacled shadow",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "playful"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "EDGE"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "two playful movements followed by a rest; attention centers on the chaos habitat of the tentacled shadow",
+          "preparation": "compress then release the resting pose; preserve the tentacled shadow silhouette",
+          "transition": "recover from landing before observing; recover the tentacled shadow resting anatomy",
+          "reaction": "respond with a short bounce then settle; keep the tentacled shadow characteristic gesture"
+        },
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED"
+      },
+      "ledgerContracts": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Dedicated neutral anatomical cycle required; do not relabel one-shot response."
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Dedicated physiological part rig required; do not relabel IDLE."
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Eyelid closure/open keyposes or separate eyelid layers required; no pupil squash."
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Eye/face directional keyposes required; peripheral motion is not gaze."
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Locomotion contact/flight anatomy and MovementProfile agreement required."
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Directional occlusion keyposes required; no whole-image rotation."
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Resting support/contact keypose required."
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Closed-eye relaxed pose and transition required."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Directional stimulus response keypose required."
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Distinct anatomical greeting keypose required; do not reuse another action."
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Attack preparation/extension/recovery keyposes required."
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Unapproved skill identity/server contract and cast keyposes required."
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Localized recoil/recovery keyposes required."
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Species-specific celebratory pose required."
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Defeat/contact keypose required; no image scaling."
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Launch/air/landing contact keyposes and movement applicability require review."
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Wingless M086-M089; do not invent wings. M090 has wings but flight profile/wing layers unapproved."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Floating proposal is not an approved hover cycle; anatomical support or wing cycle required."
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Requires approved airborne state and landing contact poses."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Requires approved attack/movement intent and windup poses."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Existing IDENTITY_REVIEW_REQUIRED: serpent BASE versus tentacled-shadow EDGE concept; preserve conflict. Requires paired action-specific recovery poses; no generic frame reuse."
+        }
+      ]
+    },
+    {
+      "creatureId": "M087",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "c17b69ee046639f762731ef6ac06ce4c5cd422f11c2ce8ba717d5598bdff59db",
+        "sha256": "61e06f24df80551a1655d89aeb77d885ee5e9a38d83850dd97a74fff057768ad",
+        "bounds": [
+          37,
+          29,
+          218,
+          224
+        ]
+      },
+      "observedArtwork": "violet eye encircled by spiked ring",
+      "sourceConcept": {
+        "observedForm": "violet eye ring",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "alert"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "FLOATING"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "frequent attention shifts but sparse displacement; attention centers on the chaos habitat of the violet eye ring",
+          "preparation": "orient the face first and body second; preserve the violet eye ring silhouette",
+          "transition": "finish turning before locomotion resumes; recover the violet eye ring resting anatomy",
+          "reaction": "face the stimulus and briefly pause; keep the violet eye ring characteristic gesture"
+        },
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED"
+      },
+      "ledgerContracts": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Dedicated neutral anatomical cycle required; do not relabel one-shot response."
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Dedicated physiological part rig required; do not relabel IDLE."
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Eyelid closure/open keyposes or separate eyelid layers required; no pupil squash."
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Eye/face directional keyposes required; peripheral motion is not gaze."
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Locomotion contact/flight anatomy and MovementProfile agreement required."
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Directional occlusion keyposes required; no whole-image rotation."
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Resting support/contact keypose required."
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Closed-eye relaxed pose and transition required."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Directional stimulus response keypose required."
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Distinct anatomical greeting keypose required; do not reuse another action."
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Attack preparation/extension/recovery keyposes required."
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Unapproved skill identity/server contract and cast keyposes required."
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Localized recoil/recovery keyposes required."
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Species-specific celebratory pose required."
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Defeat/contact keypose required; no image scaling."
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Launch/air/landing contact keyposes and movement applicability require review."
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Wingless M086-M089; do not invent wings. M090 has wings but flight profile/wing layers unapproved."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Floating proposal is not an approved hover cycle; anatomical support or wing cycle required."
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Requires approved airborne state and landing contact poses."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Requires approved attack/movement intent and windup poses."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "No separate eye/ring layers or existing part rig; protected eye/ring topology needs dedicated keyposes. Requires paired action-specific recovery poses; no generic frame reuse."
+        }
+      ]
+    },
+    {
+      "creatureId": "M088",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "4511be2f340d0ed7fc191c7fc0f0ddc9b52d45d6436cf5673d6bc8ac446c497a",
+        "sha256": "bc6682a290e4ce9276eddd0ea41692e9ebbe56df09d6ff28c9adc6b788723ef6",
+        "bounds": [
+          22,
+          47,
+          234,
+          218
+        ]
+      },
+      "observedArtwork": "central eye with knot of branching tendrils",
+      "sourceConcept": {
+        "observedForm": "thorned void knot",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "reserved"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "STATIC"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "sustained rest with occasional careful exploration; attention centers on the chaos habitat of the thorned void knot",
+          "preparation": "open the resting posture slowly; preserve the thorned void knot silhouette",
+          "transition": "slow the final motion into a resting pose; recover the thorned void knot resting anatomy",
+          "reaction": "acknowledge interaction with a restrained nod; keep the thorned void knot characteristic gesture"
+        },
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED"
+      },
+      "ledgerContracts": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "Dedicated neutral anatomical cycle required; do not relabel one-shot response."
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Dedicated physiological part rig required; do not relabel IDLE."
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Eyelid closure/open keyposes or separate eyelid layers required; no pupil squash."
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Eye/face directional keyposes required; peripheral motion is not gaze."
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Locomotion contact/flight anatomy and MovementProfile agreement required."
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Directional occlusion keyposes required; no whole-image rotation."
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Resting support/contact keypose required."
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Closed-eye relaxed pose and transition required."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Directional stimulus response keypose required."
+        },
+        {
+          "action": "INTERACT",
+          "status": "EXISTING_EXTERNAL_CANDIDATE",
+          "reason": "PR #131 head b97d3651de4c2d0eff24b19022654898588b2288; eight frames, not copied or reproduced; remote checks not all completed at inspection."
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Attack preparation/extension/recovery keyposes required."
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Unapproved skill identity/server contract and cast keyposes required."
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "Localized recoil/recovery keyposes required."
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Species-specific celebratory pose required."
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Defeat/contact keypose required; no image scaling."
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Launch/air/landing contact keyposes and movement applicability require review."
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "Wingless M086-M089; do not invent wings. M090 has wings but flight profile/wing layers unapproved."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "Floating proposal is not an approved hover cycle; anatomical support or wing cycle required."
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Requires approved airborne state and landing contact poses."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Requires approved attack/movement intent and windup poses."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Requires paired action-specific recovery poses; no generic frame reuse."
+        }
+      ]
+    },
+    {
+      "creatureId": "M089",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "71a5e172d035d7678989bbb250c75c0bb97aaa3007f43db4706ed58ec6347453",
+        "sha256": "4134f578e610b250fab0fd6d470dc8c543f57d3439a6b12b3b7d8edd4ec04e8b",
+        "bounds": [
+          40,
+          42,
+          223,
+          219
+        ]
+      },
+      "observedArtwork": "large red eye orb with peripheral tentacles",
+      "sourceConcept": {
+        "observedForm": "red eye orb",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "watchful"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "FLOATING"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "repeated scanning before a single move; attention centers on the chaos habitat of the red eye orb",
+          "preparation": "pause and recheck the destination; preserve the red eye orb silhouette",
+          "transition": "return to the home orientation before resting; recover the red eye orb resting anatomy",
+          "reaction": "look away briefly before looking back; keep the red eye orb characteristic gesture"
+        },
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED"
+      },
+      "ledgerContracts": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "Dedicated neutral anatomical cycle required; do not relabel one-shot response."
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Dedicated physiological part rig required; do not relabel IDLE."
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Eyelid closure/open keyposes or separate eyelid layers required; no pupil squash."
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Eye/face directional keyposes required; peripheral motion is not gaze."
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Locomotion contact/flight anatomy and MovementProfile agreement required."
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Directional occlusion keyposes required; no whole-image rotation."
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Resting support/contact keypose required."
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Closed-eye relaxed pose and transition required."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Directional stimulus response keypose required."
+        },
+        {
+          "action": "INTERACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "Local articulated response only; appearance, behavior fit and natural motion HUMAN_REVIEW_REQUIRED. Not a completed Production action.",
+          "candidatePath": "design/production-batches/LUMA-ASSET-21/M089/interact"
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Attack preparation/extension/recovery keyposes required."
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Unapproved skill identity/server contract and cast keyposes required."
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "Localized recoil/recovery keyposes required."
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Species-specific celebratory pose required."
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Defeat/contact keypose required; no image scaling."
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Launch/air/landing contact keyposes and movement applicability require review."
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "Wingless M086-M089; do not invent wings. M090 has wings but flight profile/wing layers unapproved."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "Floating proposal is not an approved hover cycle; anatomical support or wing cycle required."
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Requires approved airborne state and landing contact poses."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Requires approved attack/movement intent and windup poses."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Requires paired action-specific recovery poses; no generic frame reuse."
+        }
+      ]
+    },
+    {
+      "creatureId": "M090",
+      "base": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "99f8f28ee024aa74e56a815555cec4dadc9c3ee94c27964fb48ed7b6c2c263ca",
+        "sha256": "35bb93c3872ee534e43c4c26dd7b2cc2193839a58b1005a1e9d14edabc3935cd",
+        "bounds": [
+          58,
+          21,
+          206,
+          234
+        ]
+      },
+      "observedArtwork": "large-eared biped with bat wings",
+      "sourceConcept": {
+        "observedForm": "horned shadow beast",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "exploratory"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "long exploration intervals followed by recovery; attention centers on the chaos habitat of the horned shadow beast",
+          "preparation": "lean toward open space before starting; preserve the horned shadow beast silhouette",
+          "transition": "look back once at the end of an excursion; recover the horned shadow beast resting anatomy",
+          "reaction": "inspect the direction of interaction then resume exploration; keep the horned shadow beast characteristic gesture"
+        },
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED"
+      },
+      "ledgerContracts": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE",
+          "reason": "6 frames on origin/main; not reproduced."
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Dedicated physiological part rig required; do not relabel IDLE."
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Eyelid closure/open keyposes or separate eyelid layers required; no pupil squash."
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Eye/face directional keyposes required; peripheral motion is not gaze."
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Locomotion contact/flight anatomy and MovementProfile agreement required."
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Directional occlusion keyposes required; no whole-image rotation."
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Resting support/contact keypose required."
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Closed-eye relaxed pose and transition required."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "Local articulated response only; appearance, behavior fit and natural motion HUMAN_REVIEW_REQUIRED. Not a completed Production action.",
+          "candidatePath": "design/production-batches/LUMA-ASSET-21/M090/cursor_react"
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "Distinct anatomical greeting keypose required; do not reuse another action."
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Attack preparation/extension/recovery keyposes required."
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Unapproved skill identity/server contract and cast keyposes required."
+        },
+        {
+          "action": "HIT",
+          "status": "EXISTING_EXTERNAL_CANDIDATE",
+          "reason": "PR #131 head b97d3651de4c2d0eff24b19022654898588b2288; eight frames, not copied or reproduced; remote checks not all completed at inspection."
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Species-specific celebratory pose required."
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Defeat/contact keypose required; no image scaling."
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Launch/air/landing contact keyposes and movement applicability require review."
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "Wingless M086-M089; do not invent wings. M090 has wings but flight profile/wing layers unapproved."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "Floating proposal is not an approved hover cycle; anatomical support or wing cycle required."
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Requires approved airborne state and landing contact poses."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Requires approved attack/movement intent and windup poses."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Requires paired action-specific recovery poses; no generic frame reuse."
+        }
+      ]
+    }
+  ],
+  "newPngCount": 18,
+  "newAnimationFrameCount": 16,
+  "newClipCount": 2,
+  "integrationRequests": [
+    "Review existing PR #131 M088 INTERACT and M090 HIT before importing; no stacked dependency on that PR.",
+    "After human visual/anatomy approval, add this session M089 INTERACT and M090 CURSOR_REACT to shared Ledger and existing Creature Review Catalog; leave Production and Runtime disabled.",
+    "Resolve M086 serpent versus tentacled-shadow identity mapping; review all five concept-to-species mappings, proposed Personality/MovementProfile/SpeciesBehavior.",
+    "Create approved eye/eyelid and directional/rest/battle keyposes and separate eye/ring or wing layers where required; preserve failed candidates and repair3/3.",
+    "Integration owner runs existing --refresh-inventory and --refresh-coverage in integration checkout; this session does not mutate shared files.",
+    "Only after Production approval update Animation Manifest/Production Registry and connect common Runtime; rerun Release Gate and real macOS/Windows GUI QA."
+  ],
+  "nextResumePoint": "Review two new first-attempt candidates without automatic repair; M087 separate eye/ring keypose and M089 directional eye keypose are next artwork prerequisites. M090 directional/wing/contact poses next; do not regenerate existing IDLE or PR #131 HIT."
+}
