@@ -1,0 +1,75 @@
+{
+  "conceptId": "M061",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M061/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    65,
+    122,
+    195,
+    196
+  ],
+  "parts": [
+    {
+      "name": "near-tentacle-greeting-curl",
+      "x": 108,
+      "y": 165,
+      "rx": 22,
+      "ry": 26,
+      "dx": 2.6,
+      "dy": -1.1,
+      "samples": [
+        0.02,
+        0.45,
+        1,
+        0.8,
+        0.55,
+        0.32,
+        0.14,
+        0.035
+      ]
+    },
+    {
+      "name": "far-tentacle-answer",
+      "x": 163,
+      "y": 165,
+      "rx": 20,
+      "ry": 24,
+      "dx": -2.1,
+      "dy": 1.3,
+      "samples": [
+        0.01,
+        0.06,
+        0.25,
+        0.65,
+        1,
+        0.75,
+        0.35,
+        0.04
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Blue jellyfish with translucent bell and multiple curled tentacles. Bell and extreme tentacle endpoints stay fixed; middle tentacles answer gently in staggered curls. No wings, ground feet or global translation.",
+  "behaviorContract": "Proposed gentle FLOATING jellyfish; isolated interaction response, no simulated native float motion",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes"
+}

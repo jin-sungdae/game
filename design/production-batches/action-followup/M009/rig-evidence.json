@@ -1,0 +1,55 @@
+{
+  "source": "design/production-batches/monsters/batch01/M009/base-v2.png",
+  "eyes": [
+    {
+      "x": 152,
+      "y": 82,
+      "rx": 5.8,
+      "ry": 6.8
+    },
+    {
+      "x": 179.5,
+      "y": 85,
+      "rx": 2.7,
+      "ry": 5.3
+    }
+  ],
+  "frames": [
+    {
+      "file": "blink_00.png",
+      "closure": 0.04,
+      "pixelSha256": "b5a452096f8232807fff2af938f886bebb5a154a1c5f635121e8bfc5c1f51037"
+    },
+    {
+      "file": "blink_01.png",
+      "closure": 0.19,
+      "pixelSha256": "a5cd375a7afd192b541272e0fe61a9d5c26dd595d8c936a182e5f1ab4b7768c1"
+    },
+    {
+      "file": "blink_02.png",
+      "closure": 0.65,
+      "pixelSha256": "3d62bb35d1347dad8deb22141a58e89c41e821c7e642df665f688426c208450f"
+    },
+    {
+      "file": "blink_03.png",
+      "closure": 1,
+      "pixelSha256": "88919c0258364029b2e9987e5fe0109e612cda5a53c4bc1fbc14bfe968a1e122"
+    },
+    {
+      "file": "blink_04.png",
+      "closure": 0.8,
+      "pixelSha256": "b22df93db0bfa5e6315381bc7f3619ae37a77e7986c072634fd01005f06148d5"
+    },
+    {
+      "file": "blink_05.png",
+      "closure": 0.17,
+      "pixelSha256": "b7b00b9ff5404ef9bb1498b7c1c5f27519673159f93c61e9e9ce20a68eca8fcf"
+    }
+  ],
+  "alphaPolicy": "unchanged source alpha",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairScope": "PR #114; no reset or failure recovery"
+}

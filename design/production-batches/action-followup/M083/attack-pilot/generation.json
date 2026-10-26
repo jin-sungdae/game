@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: identity-preserve. Create one ATTACK keypose for the EXACT scorpion creature in the reference. Keep its black-magenta segmented chitin, holes and patterns, same number and anatomy of legs, two large claws, articulated curled stinger tail, proportions and art style. Actual attack pose: one claw extends forward through its joint and stinger bends forward, other claw braces. Keep grounded foot contacts, entire body fully visible with padding. No whole-image flip, no scaling as action. Transparent background with genuinely clean alpha: one connected creature silhouette, all exterior pixels fully transparent, no particles, glow haze, debris, detached marks, ground shadow or text. Crisp opaque body with antialiasing only at its connected edge. Square PNG. Candidate keypose only; do not add anatomy.",
+  "sourceBase": "design/production-batches/monsters/batch09/M083/base-v2.png",
+  "rawSha256": "c6c6952a1589fbff43639dc9952d5e3c4fbe5eef794218f655f94a6eae32d840",
+  "promptIntent": "Scorpion ATTACK; articulated claw extension and stinger bend, preserve segmented anatomy and clean transparent edge",
+  "candidateOnly": true,
+  "firstIndependentAttempt": true,
+  "repairIterations": 3
+}

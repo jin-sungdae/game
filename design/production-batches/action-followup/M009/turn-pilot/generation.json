@@ -1,0 +1,8 @@
+{
+  "tool": "builtin_image_gen",
+  "sourceBase": "design/production-batches/monsters/batch01/M009/base-v2.png",
+  "prompt": "Use case: identity-preserve. Asset type: Project LUMA M009 TURN middle keypose candidate. Input image is the M009 BASE exact identity reference, a plump cream forest rabbit in a layered dark-green leaf cape. Make one new dedicated turning keypose: three-quarter front view at the midpoint of a turn from right-facing toward left-facing. Head, shoulders, belly and hips really rotate together; near short foot slightly pivots while both feet stay grounded. Do not merely mirror or shift the existing drawing. Preserve the two tall leaf-edged rabbit ears with pink interiors, warm cream fur, round face, small brown eyes, pink nose, fluffy cheeks, short arms with rounded paws, rounded belly, leaf collar, long layered leaf cape and small brown feet. The movement is cautious and grounded, never a jump. Keep the same body proportions, marking placement, painterly game-sprite style and anatomical identity. Isolated complete character on truly transparent RGBA, 256x256 canvas with bottom-center contact anchor and a generous minimum 16-pixel margin. No shadows, floor, fog, glows, particles, motes, text, borders, trails, or marks detached from the character. Empty pixels fully transparent, clean connected silhouette. One pose only, not a complete TURN clip. No new limbs, clothing or accessories. Original BASE unchanged. Unapproved reference candidate for a later genuine turning sequence, not Production.",
+  "productionEligible": false,
+  "repairIterations": 3,
+  "scope": "Independent TURN keypose first attempt; not recovery"
+}

@@ -1,0 +1,122 @@
+{
+  "status": "VALIDATION_FAILED",
+  "sourceSha256": "4d1fafdca4226b0478be700f56f1d6bb1fa8a09653322ea5408ed5d0fdaa6214",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 1254,
+    "height": 1254,
+    "mainPixels": 331290,
+    "mainBounds": [
+      185,
+      352,
+      1080,
+      960
+    ],
+    "detachedPixels": 267,
+    "detachedComponents": 154,
+    "detachedAlphaHistogram": {
+      "1": 264,
+      "2": 3
+    },
+    "largestDetached": [
+      {
+        "n": 9,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          598,
+          178,
+          600,
+          182
+        ]
+      },
+      {
+        "n": 7,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          314,
+          91,
+          315,
+          94
+        ]
+      },
+      {
+        "n": 7,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          596,
+          178,
+          596,
+          184
+        ]
+      },
+      {
+        "n": 6,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          97,
+          823,
+          100,
+          825
+        ]
+      },
+      {
+        "n": 6,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          507,
+          1171,
+          510,
+          1173
+        ]
+      },
+      {
+        "n": 5,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          51,
+          840,
+          51,
+          844
+        ]
+      },
+      {
+        "n": 5,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          740,
+          1097,
+          743,
+          1098
+        ]
+      },
+      {
+        "n": 4,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          957,
+          95,
+          958,
+          96
+        ]
+      }
+    ]
+  },
+  "pngErrors": [
+    "dimensions must be 256x256"
+  ],
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "appearanceObservation": "Crouched braced quadruped retained, but head/plate/tail proportions require review; raw Alpha failure prevents normalization."
+}

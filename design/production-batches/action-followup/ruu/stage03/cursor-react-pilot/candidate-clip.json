@@ -1,0 +1,113 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 3,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage03/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 100,
+    "loop": false
+  },
+  "movableRect": [
+    48,
+    88,
+    222,
+    198
+  ],
+  "parts": [
+    {
+      "name": "explorer-coverts-attention",
+      "x": 133,
+      "y": 128,
+      "rx": 30,
+      "ry": 22,
+      "dx": 1.7,
+      "dy": -1.5,
+      "samples": [
+        0.02,
+        0.76,
+        1,
+        0.71,
+        0.43,
+        0.23,
+        0.1,
+        0.03
+      ]
+    },
+    {
+      "name": "chest-ready-then-settle",
+      "x": 194,
+      "y": 159,
+      "rx": 22,
+      "ry": 26,
+      "dx": 1.4,
+      "dy": -0.8,
+      "samples": [
+        0.01,
+        0.31,
+        0.86,
+        1,
+        0.77,
+        0.46,
+        0.22,
+        0.04
+      ]
+    },
+    {
+      "name": "long-feather-delayed-tuck",
+      "x": 97,
+      "y": 158,
+      "rx": 26,
+      "ry": 27,
+      "dx": 1.2,
+      "dy": 1.3,
+      "samples": [
+        0.01,
+        0.07,
+        0.29,
+        0.73,
+        1,
+        0.84,
+        0.39,
+        0.06
+      ]
+    },
+    {
+      "name": "tail-counterbalance",
+      "x": 61,
+      "y": 188,
+      "rx": 18,
+      "ry": 9,
+      "dx": -1.2,
+      "dy": -0.9,
+      "samples": [
+        0.01,
+        0.03,
+        0.17,
+        0.52,
+        0.91,
+        1,
+        0.6,
+        0.07
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Existing Stage3 winged quadruped and long layered blue feathers. Quick coverts attention, chest readiness, delayed feather tuck and tail balance, all from existing anatomy. Head/eyes/crown and planted lower paws fixed. This stationary reaction is not flight or locomotion.",
+  "behaviorContract": "Existing RUU Sky/Explorer curious and energetic decision direction with stage3 preparation/recovery. Cursor acknowledgement only; no native movement or game event enabled.",
+  "alphaPolicy": "Existing RGBA part rig; no cleanup or threshold change"
+}

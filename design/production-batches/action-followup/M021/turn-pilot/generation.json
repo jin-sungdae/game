@@ -1,0 +1,8 @@
+{
+  "tool": "builtin_image_gen",
+  "sourceBase": "design/production-batches/monsters/batch03/M021/base-v2.png",
+  "prompt": "Use case: identity-preserve. Asset type: one LUMA M021 dedicated TURN keypose candidate. Input is exact existing M021 BASE design: small dark purple rabbit-like quadruped, two very tall violet ears, large violet eyes, short muzzle, purple cheek and chest markings, four small paws, short fluffy upturned tail. Keep this species identity, exact number of limbs, compact body ratios and same clean illustrated shading. Create one genuine intermediate body-turn toward the viewer from the reference's right-facing position: forequarters rotate toward camera, near front paw planted and pivoted, far paw visible behind, head leads just a little, hind feet support the rotation. Keep all four paws visible, both long ears fully within frame; short tail counterbalances slightly. Do not mirror the base or merely move eyes. Clear real shoulder/paw orientation change. Square transparent RGBA canvas, full-body character occupying at most 80 percent of each dimension, ample transparent margin. Clean connected silhouette with opaque colored interior and narrow directly attached antialiasing. EVERY background pixel alpha exactly zero. No loose fur dots, detached streaks, haze, glow, shadow, particles, dust, background residue, effects, scenery or labels. Solid ears and connected fur contours; no isolated microdetails outside the body. Match BASE purple palette and identity; no redesign, weapons or added anatomy. Single keypose, not sprite sheet.",
+  "productionEligible": false,
+  "repairIterations": 3,
+  "scope": "Independent first attempt; raw inspected before 256 preparation; no alpha cleanup"
+}

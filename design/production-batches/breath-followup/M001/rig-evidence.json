@@ -1,0 +1,88 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "belly-breath",
+      "x": 147,
+      "y": 192,
+      "rx": 23,
+      "ry": 15,
+      "dx": 0.6,
+      "dy": -1,
+      "phase": 0
+    },
+    {
+      "name": "leaf-root",
+      "x": 115,
+      "y": 177,
+      "rx": 20,
+      "ry": 12,
+      "dx": -0.35,
+      "dy": -0.65,
+      "phase": -1.047
+    }
+  ],
+  "protectedRegions": "y<=165||y>=207||x<=87||x>=181",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "breath_00.png",
+      "pixelSha256": "8aecee9dbeedff76eceaf4c954ef140bd19aceccab3355e5ce1542289ef666ea",
+      "changedPixels": 242,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.21200166995801767
+    },
+    {
+      "file": "breath_01.png",
+      "pixelSha256": "f551cd58852bdd74b8d5a6ce9ff84da1e663404cfd294710598af192e1b8aefc",
+      "changedPixels": 259,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.19631676066286602
+    },
+    {
+      "file": "breath_02.png",
+      "pixelSha256": "00518159f06bed7a5d90877a6e51215dd6d24dfed55ea47df7ea655d8407b190",
+      "changedPixels": 532,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.6684832954484308
+    },
+    {
+      "file": "breath_03.png",
+      "pixelSha256": "883769277401df69d0e124dd3ed7fd33345a60d29c3b7e91769b1b3531b1e926",
+      "changedPixels": 790,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.1436113572020064
+    },
+    {
+      "file": "breath_04.png",
+      "pixelSha256": "da768e29bd85716f7c817b244311eef17a1daa76bf53945e74cff1da926d66c1",
+      "changedPixels": 905,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.339988459156642
+    },
+    {
+      "file": "breath_05.png",
+      "pixelSha256": "8e881856fd2cd4c59a8e14769a8b47578cc7a03f6a843bc0eaebcca8b95e073c",
+      "changedPixels": 902,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.1436113572020064
+    },
+    {
+      "file": "breath_06.png",
+      "pixelSha256": "a5f5773b40f27b370aefc77720f9a0158e70609b56f2c4514210bb454caa9d5a",
+      "changedPixels": 806,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7897024231822384
+    },
+    {
+      "file": "breath_07.png",
+      "pixelSha256": "6c48bf914f79ef9a96f9401fcfb2e1ea451d78748cb6de424e1ded9627336a24",
+      "changedPixels": 569,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.5315850550298412
+    }
+  ],
+  "repairIteration": 0,
+  "productionEligible": false
+}

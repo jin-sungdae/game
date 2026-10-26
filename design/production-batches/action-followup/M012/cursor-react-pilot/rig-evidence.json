@@ -1,0 +1,107 @@
+{
+  "reference": "design/production-batches/monsters/batch02/M012/base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "curious-crest-feather-attention",
+      "x": 171,
+      "y": 68,
+      "rx": 15,
+      "ry": 12,
+      "dx": 0.75,
+      "dy": -1,
+      "samples": [
+        0.04,
+        0.31,
+        0.87,
+        1,
+        0.53,
+        0.21,
+        0.1,
+        0.05
+      ]
+    },
+    {
+      "name": "folded-wing-covert-settle",
+      "x": 150,
+      "y": 124,
+      "rx": 20,
+      "ry": 11,
+      "dx": -0.65,
+      "dy": 0.7,
+      "samples": [
+        0.02,
+        0.07,
+        0.24,
+        0.66,
+        0.98,
+        0.78,
+        0.4,
+        0.1
+      ]
+    }
+  ],
+  "protectedRegions": "y>=142||y<=48||x<=124||x>=196",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "pixelSha256": "f6518cc901aa594760b6a999cdcbcf2003df0649f7ebb76933eb7cc7da656fef",
+      "changedPixels": 217,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.04999773357307049
+    },
+    {
+      "file": "cursor_react_01.png",
+      "pixelSha256": "8b1e998a14fcab399963aff4215d11001e6f9cd543f514fdded62b5033ce20e0",
+      "changedPixels": 545,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.386451550708
+    },
+    {
+      "file": "cursor_react_02.png",
+      "pixelSha256": "6142c4fd65f05fc1dab4a889f11f77354f2efb2b5b9305e42da98040a4420992",
+      "changedPixels": 757,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.0853442380303704
+    },
+    {
+      "file": "cursor_react_03.png",
+      "pixelSha256": "ba1a68d8652675916411a6bb9447d45b9e210e32fd58e1563c590a8b9328ecc3",
+      "changedPixels": 849,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.2489533613242259
+    },
+    {
+      "file": "cursor_react_04.png",
+      "pixelSha256": "c4b57931a165af0d41ee1486980e0aaf4eb5038512a68b32c59ae4f420c4b34c",
+      "changedPixels": 827,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.9328875597395636
+    },
+    {
+      "file": "cursor_react_05.png",
+      "pixelSha256": "706f55806a6e7dd9b8c00b75b2d184d9f61149934b656798e18a5618adce3ff2",
+      "changedPixels": 747,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7398559610174447
+    },
+    {
+      "file": "cursor_react_06.png",
+      "pixelSha256": "0817a2c5abfac05dabf15148441dca5e6ea7194747f6f97dec900b403d9e8f3d",
+      "changedPixels": 633,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.38116832925736643
+    },
+    {
+      "file": "cursor_react_07.png",
+      "pixelSha256": "ca62adbb856cc91eed55811fc701978f5d6425a3e7367b3efddd6266957efa48",
+      "changedPixels": 413,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.09551023906871997
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #114; independent first attempt; no failure recovery",
+  "productionEligible": false
+}

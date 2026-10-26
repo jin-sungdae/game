@@ -1,0 +1,116 @@
+{
+  "reference": "design/production-batches/monsters/batch07/M070/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "left-arm-greeting",
+      "x": 71,
+      "y": 142,
+      "rx": 29,
+      "ry": 25,
+      "dx": -2,
+      "dy": -1.4,
+      "samples": [
+        0.02,
+        0.18,
+        0.55,
+        1,
+        0.82,
+        0.44,
+        0.16,
+        0.025
+      ]
+    },
+    {
+      "name": "right-arm-answer",
+      "x": 191,
+      "y": 147,
+      "rx": 24,
+      "ry": 31,
+      "dx": 1.7,
+      "dy": -1.1,
+      "samples": [
+        0.01,
+        0.05,
+        0.2,
+        0.48,
+        0.95,
+        0.65,
+        0.27,
+        0.04
+      ]
+    }
+  ],
+  "protectedRegions": "y>=214||y<=109||x<=29||x>=221",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "059e2e3e8a1af0aff127118c58df748683d92816f0bec293344c8e6ba254635c",
+      "changedPixels": 1123,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 226,
+      "maxInverseDisplacementPixels": 0.0488257600550897
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "f5f5f623424c54314d6004d88d61a160fb8bab93cb813a16d60281e5e8653128",
+      "changedPixels": 2147,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 516,
+      "maxInverseDisplacementPixels": 0.43909950140076426
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "022c09a6cfbb5499c4f2ffd6fb8df547a884807cac7ab4b0e4e90e36353910b3",
+      "changedPixels": 2651,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 798,
+      "maxInverseDisplacementPixels": 1.342331957235792
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "014cdb023a51d1fdb766efed9bc87c3ea838c01a7a1ca403c7eb4c6d11feb1b9",
+      "changedPixels": 2926,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1012,
+      "maxInverseDisplacementPixels": 2.4394466668880366
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "f8acaafd1874d3829dae66f7512e63027060a745f810c267b5942779cfa99099",
+      "changedPixels": 3037,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1107,
+      "maxInverseDisplacementPixels": 2.000736430919412
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "ea491252ac673ea2aa556f8f1a387c9429eb410083f544be95230827f3cd1b65",
+      "changedPixels": 2868,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 950,
+      "maxInverseDisplacementPixels": 1.3157403989383505
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "8b8004f18b8ff1832bf7e75512d5dbc76e4c722041ce180e51b13ce7f3f2e2d1",
+      "changedPixels": 2517,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 652,
+      "maxInverseDisplacementPixels": 0.5459602790302497
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "608e9cea76d2103251d56addf912ff5e0c242a204bab4258b118b7d0f1ccf5c2",
+      "changedPixels": 1563,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 317,
+      "maxInverseDisplacementPixels": 0.0809913869926878
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

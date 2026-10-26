@@ -1,0 +1,122 @@
+{
+  "status": "VALIDATION_FAILED",
+  "sourceSha256": "e2dec192a935813ae61a3e13eadff6fb75cda194f307446588ecf518dadff083",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 1254,
+    "height": 1254,
+    "mainPixels": 367930,
+    "mainBounds": [
+      224,
+      273,
+      1059,
+      1000
+    ],
+    "detachedPixels": 517,
+    "detachedComponents": 153,
+    "detachedAlphaHistogram": {
+      "1": 516,
+      "2": 1
+    },
+    "largestDetached": [
+      {
+        "n": 94,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          580,
+          1126,
+          600,
+          1139
+        ]
+      },
+      {
+        "n": 92,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1110,
+          949,
+          1122,
+          962
+        ]
+      },
+      {
+        "n": 31,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          83,
+          707,
+          88,
+          714
+        ]
+      },
+      {
+        "n": 16,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          0,
+          851,
+          0,
+          866
+        ]
+      },
+      {
+        "n": 10,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1124,
+          953,
+          1126,
+          958
+        ]
+      },
+      {
+        "n": 9,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          306,
+          309,
+          309,
+          313
+        ]
+      },
+      {
+        "n": 7,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          81,
+          708,
+          81,
+          714
+        ]
+      },
+      {
+        "n": 6,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          748,
+          1138,
+          749,
+          1140
+        ]
+      }
+    ]
+  },
+  "pngErrors": [
+    "dimensions must be 256x256"
+  ],
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "appearanceObservation": "Awake crouched pose with four paws retained; enlarged head and marking differences require review. Raw alpha failure prevents normalization."
+}

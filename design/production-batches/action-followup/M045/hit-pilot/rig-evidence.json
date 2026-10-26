@@ -1,0 +1,154 @@
+{
+  "reference": "design/production-batches/monsters/batch05/M045/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "snow-cat-shoulder-flinch",
+      "x": 163,
+      "y": 153,
+      "rx": 27,
+      "ry": 23,
+      "dx": -2.2,
+      "dy": 1.2,
+      "samples": [
+        0.02,
+        1,
+        0.85,
+        0.55,
+        0.32,
+        0.17,
+        0.08,
+        0.025
+      ]
+    },
+    {
+      "name": "near-forepaw-brace",
+      "x": 186,
+      "y": 175,
+      "rx": 16,
+      "ry": 21,
+      "dx": -1.3,
+      "dy": -1.1,
+      "samples": [
+        0.01,
+        0.6,
+        1,
+        0.8,
+        0.5,
+        0.28,
+        0.12,
+        0.035
+      ]
+    },
+    {
+      "name": "upright-flank-recovery",
+      "x": 147,
+      "y": 186,
+      "rx": 28,
+      "ry": 22,
+      "dx": -1.6,
+      "dy": 0.9,
+      "samples": [
+        0.01,
+        0.25,
+        0.85,
+        1,
+        0.7,
+        0.4,
+        0.16,
+        0.045
+      ]
+    },
+    {
+      "name": "crystal-tail-counterbalance",
+      "x": 89,
+      "y": 172,
+      "rx": 26,
+      "ry": 26,
+      "dx": 1.8,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.7,
+        0.3,
+        0.055
+      ]
+    }
+  ],
+  "protectedRegions": "y>=213||y<=129||x<=57||x>=198",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "4d7638086a96aa0970ac094c07709de1cadedb291f8ecbf678082d516c2a1a27",
+      "changedPixels": 760,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 42,
+      "maxInverseDisplacementPixels": 0.050119293331961086
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "0c767334888f18894c0cbd5f26915f161a6d48ce209eccb063e64941be55fa3d",
+      "changedPixels": 3573,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 421,
+      "maxInverseDisplacementPixels": 2.5050181519211114
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "6281c059ed092679ffbbed00b1a9314ff9c994f7aed838036e85acaa600fdb21",
+      "changedPixels": 4232,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 559,
+      "maxInverseDisplacementPixels": 2.12994065231382
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "48051c629bce73efdcdf057c7302fac8d809f805e2c34998ddb123057215ca31",
+      "changedPixels": 4375,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 666,
+      "maxInverseDisplacementPixels": 1.8345110299544327
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "44349c31e35c238b45c63e47b990857998bece7c728c992af3bab48faac55ab5",
+      "changedPixels": 4181,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 620,
+      "maxInverseDisplacementPixels": 2.1625619853610227
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "b68d5a89da3313ac84516e8dada674df66882e927c774eabaf41daf321e6cb7e",
+      "changedPixels": 3731,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 500,
+      "maxInverseDisplacementPixels": 1.5137063493885576
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "bd39bad96d5e41653fea651c78e38a2946a5288eccb0c84a5486800e21bd08af",
+      "changedPixels": 3038,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 308,
+      "maxInverseDisplacementPixels": 0.6480159715866163
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "b23d924a32fca5d6fb526b9e1b59b79b8b7cdd22c0c85f80111046da39763ffe",
+      "changedPixels": 1800,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 161,
+      "maxInverseDisplacementPixels": 0.11897571783809893
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

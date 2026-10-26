@@ -1,0 +1,94 @@
+{
+  "conceptId": "M023",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M023/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "FRONT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 140,
+    "loop": false
+  },
+  "movableRect": [
+    39,
+    142,
+    217,
+    213
+  ],
+  "parts": [
+    {
+      "name": "left-armor-acknowledgement",
+      "x": 64,
+      "y": 165,
+      "rx": 18,
+      "ry": 20,
+      "dx": 1.7,
+      "dy": -1.1,
+      "samples": [
+        0.01,
+        0.18,
+        0.64,
+        1,
+        0.73,
+        0.42,
+        0.17,
+        0.03
+      ]
+    },
+    {
+      "name": "lower-plate-curl",
+      "x": 103,
+      "y": 183,
+      "rx": 26,
+      "ry": 25,
+      "dx": 2,
+      "dy": -1.4,
+      "samples": [
+        0.01,
+        0.04,
+        0.19,
+        0.53,
+        0.91,
+        1,
+        0.56,
+        0.06
+      ]
+    },
+    {
+      "name": "right-guard-release",
+      "x": 195,
+      "y": 180,
+      "rx": 18,
+      "ry": 27,
+      "dx": -1.6,
+      "dy": -1.6,
+      "samples": [
+        0.01,
+        0.03,
+        0.12,
+        0.31,
+        0.69,
+        1,
+        0.63,
+        0.07
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate only; no Native event or gameplay activation",
+  "anatomyScope": "Non-organic floating core stays fixed; lower armor plates curl inward in sequence then release. No invented face, legs or organic breathing; no whole orb displacement.",
+  "behaviorContract": "M023 identity remains unassigned. Cautious armor acknowledgement is a visual proposal only; existing dedicated-core-motion requirement is preserved, no organic breathing or native policy activation.",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold change"
+}

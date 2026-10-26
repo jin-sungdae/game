@@ -1,0 +1,135 @@
+{
+  "reference": "public/assets/creatures/moa/stage05/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "ancient-shoulder-brace",
+      "x": 215,
+      "y": 139,
+      "rx": 23,
+      "ry": 31,
+      "dx": -2.8,
+      "dy": 1.5,
+      "samples": [
+        0.02,
+        0.55,
+        1,
+        0.91,
+        0.72,
+        0.46,
+        0.22,
+        0.05
+      ]
+    },
+    {
+      "name": "long-torso-recovery",
+      "x": 174,
+      "y": 154,
+      "rx": 30,
+      "ry": 29,
+      "dx": -1.3,
+      "dy": -1.3,
+      "samples": [
+        0.01,
+        0.12,
+        0.54,
+        0.91,
+        1,
+        0.67,
+        0.29,
+        0.04
+      ]
+    },
+    {
+      "name": "layered-mantle-settle",
+      "x": 101,
+      "y": 169,
+      "rx": 30,
+      "ry": 26,
+      "dx": 1.6,
+      "dy": 1.4,
+      "samples": [
+        0.01,
+        0.04,
+        0.13,
+        0.45,
+        0.83,
+        1,
+        0.53,
+        0.06
+      ]
+    }
+  ],
+  "protectedRegions": "y>=202||y<=105||x<=58||x>=244",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "17a571247bd68958d89c8bd8acaee7385a51e5315189c06a81a77a7b1e9a8083",
+      "changedPixels": 1659,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 224,
+      "maxInverseDisplacementPixels": 0.06352821242838795
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "7873df6943bed707403b022e0f0f9e36e6d48287b4ec5b373ecbd51fc98b0aa6",
+      "changedPixels": 3972,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 712,
+      "maxInverseDisplacementPixels": 1.7447788355767813
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "f0065035ac5ae473a4529da27b9dbd2e7ca57e196f589030dec910ef7cdcf532",
+      "changedPixels": 4870,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 994,
+      "maxInverseDisplacementPixels": 3.1732719952819326
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "5b6f85fdbe1e1c779c0ef7fc8b86f52d90c18e9563a8efa0adb74bb2783ef524",
+      "changedPixels": 5309,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1127,
+      "maxInverseDisplacementPixels": 2.8859981090571507
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "ab6e787f3b232618678f12df31855a24a430ceb711361b30157cc8ea26620f3f",
+      "changedPixels": 5446,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1183,
+      "maxInverseDisplacementPixels": 2.2870137757527815
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "0032c0bd31386815b1bafeca9e35c891d6a586fd90baf932838e93cbe7d8dd7d",
+      "changedPixels": 5357,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1038,
+      "maxInverseDisplacementPixels": 2.1233885696104338
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "3b16d641647aefd19dcd7b422f2c8d3f1fd556e90b371f070f472613eca4bbe1",
+      "changedPixels": 4954,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 685,
+      "maxInverseDisplacementPixels": 1.1263747950509335
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "9b31b13e552902a0d2c216adec20b59562a25fadbcbdead2e9da6a08b5c013a2",
+      "changedPixels": 3338,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 352,
+      "maxInverseDisplacementPixels": 0.15880336519938304
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

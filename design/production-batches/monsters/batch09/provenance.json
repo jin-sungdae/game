@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "repairIterations": 1,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "baseCandidates": 10,
+  "idleCandidateClips": 3,
+  "idleCandidateFrames": 18,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotionReview": "NOT_VERIFIED",
+  "gui": "NOT_VERIFIED",
+  "deferred": {
+    "M083": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted",
+    "M084": "ALPHA_DEFECT: detached alpha maximum6 exceeds cleanup limit4; source and base-v1 retained without cleanup or animation",
+    "M085": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted",
+    "M086": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted",
+    "M087": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted",
+    "M088": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted",
+    "M089": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted"
+  },
+  "repairHistory": [
+    "Only disconnected components with maximum alpha <=4 removed; connected body preserved"
+  ],
+  "identityReview": [
+    {
+      "conceptId": "M081",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M082",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M083",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M084",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M085",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M086",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M087",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M088",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M089",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M090",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    }
+  ],
+  "generation": [
+    {
+      "conceptId": "M081",
+      "tool": "built-in image_gen",
+      "sourceSha256": "047236e847006ac082930888adb48f7b20471ee06c766e61bbc28ea2e37a6d29",
+      "reference": "Corrupted Land concept panel"
+    },
+    {
+      "conceptId": "M082",
+      "tool": "built-in image_gen",
+      "sourceSha256": "429fd84a829d50f2ca8b1dd07115afe6749be032bd3503096e9781d5a8896edd",
+      "reference": "Corrupted Land concept panel"
+    },
+    {
+      "conceptId": "M083",
+      "tool": "built-in image_gen",
+      "sourceSha256": "9f721b06f1e592a7db5925942fab434460e36ce3c00d734fb337ed8a68b276f8",
+      "reference": "Corrupted Land concept panel"
+    },
+    {
+      "conceptId": "M084",
+      "tool": "built-in image_gen",
+      "sourceSha256": "7b4f06d769bb5ee21c363e8f6a2b5e0e099550e660beb8b869aa5f8a590ec882",
+      "reference": "Corrupted Land concept panel"
+    },
+    {
+      "conceptId": "M085",
+      "tool": "built-in image_gen",
+      "sourceSha256": "2dced8aeaafe2e8e905a6ad42475f9d90dfceaaa3fe31465325439a9473acde8",
+      "reference": "Corrupted Land concept panel"
+    },
+    {
+      "conceptId": "M086",
+      "tool": "built-in image_gen",
+      "sourceSha256": "2d3397cb8db5ca7d5bd25eddbf2891317fb09fc71e0a73dd02f7bbd86b4d1a4c",
+      "reference": "Corrupted Land concept panel"
+    },
+    {
+      "conceptId": "M087",
+      "tool": "built-in image_gen",
+      "sourceSha256": "065e12cf9a8ecf631b06d4839d66bb69ee08f3b6bb919f6b1819eabc19524f4e",
+      "reference": "Corrupted Land concept panel"
+    },
+    {
+      "conceptId": "M088",
+      "tool": "built-in image_gen",
+      "sourceSha256": "b8753dd55e18231116a64116ca27f65d867eefa4b5bb49dbff6043af5c4c0e0a",
+      "reference": "Corrupted Land concept panel"
+    },
+    {
+      "conceptId": "M089",
+      "tool": "built-in image_gen",
+      "sourceSha256": "4b03be2bc94783af0f9176e08435cb80fec34bf5b794124812380e9cb4b5438f",
+      "reference": "Corrupted Land concept panel"
+    },
+    {
+      "conceptId": "M090",
+      "tool": "built-in image_gen",
+      "sourceSha256": "f859e6c824bb38fbf53ece5259b61fee0336d839a33f27becc6a4b5e43db4fce",
+      "reference": "Corrupted Land concept panel"
+    }
+  ]
+}

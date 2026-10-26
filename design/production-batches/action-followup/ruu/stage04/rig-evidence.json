@@ -1,0 +1,49 @@
+{
+  "source": "public/assets/creatures/ruu/stage04/base.png",
+  "eyes": [
+    {
+      "x": 209.5,
+      "y": 86.5,
+      "rx": 4.5,
+      "ry": 3
+    }
+  ],
+  "frames": [
+    {
+      "file": "blink_00.png",
+      "closure": 0.04,
+      "pixelSha256": "bf606f6258ee476d08dadb9271e4d20e5bf6316982732c204b2debd2aa862705"
+    },
+    {
+      "file": "blink_01.png",
+      "closure": 0.22,
+      "pixelSha256": "fc0130ab0415beb964633e7bbec1baef806cf84c55e5c79e303bcc8d950fd3d5"
+    },
+    {
+      "file": "blink_02.png",
+      "closure": 0.63,
+      "pixelSha256": "b113fb19fa3c9118602a2fec4483fcbe33eb0d3d1dd7e9a66297047091c37515"
+    },
+    {
+      "file": "blink_03.png",
+      "closure": 1,
+      "pixelSha256": "d75b8575bea4ac4156d3743534af7ebe3cbe39dcb621f7d6ec2b796ee627e70a"
+    },
+    {
+      "file": "blink_04.png",
+      "closure": 0.79,
+      "pixelSha256": "c262b21f2f3477433c3dfe709cf09996af515cf398b40497e5bbbf46dc763623"
+    },
+    {
+      "file": "blink_05.png",
+      "closure": 0.17,
+      "pixelSha256": "28c25d5927bea0e78a149b2c89d1a701912f2ce2527ae51fdd8a22e588354822"
+    }
+  ],
+  "alphaPolicy": "unchanged source alpha",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairScope": "PR #114; no reset or failure recovery"
+}

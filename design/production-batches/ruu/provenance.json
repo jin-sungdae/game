@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "reference": "design/visual-reference-v1/companions-concept.png",
+  "stage04": {
+    "prompt": "Use case: stylized-concept. Asset type: single game companion base sprite, genuine transparent PNG, no background. Use the attached Project LUMA concept strictly as identity reference. Render ONLY RUU Stage 4 AERIAL (middle blue row, fourth evolution column), not Stage3 or Stage5. Match its mature elegant white quadruped body, cobalt and ice-blue feather structures, golden sweeping head/neck ornament and long blue feathered tail. Match the reference anatomy and proportions; do not invent limbs, accessories or a different species. Full body facing RIGHT, neutral stable standing/rest pose with all four paws visible, wings/feathers tucked sufficiently to fit a square. A clear solid painted sprite silhouette with clean antialiased alpha, readable at256x256. Leave 10 percent fully transparent margin on all sides. No text, label, panel, ground, shadow, glow haze, sparkles, detached particles or background residue. Exactly one character. Do not crop the concept sheet; redraw the individual character faithfully as a standalone high-quality game sprite. This is a base for subsequent part rigging.",
+    "sourceTool": "image_gen",
+    "identityReview": "Concept-derived AERIAL candidate; human approval pending"
+  },
+  "stage05": {
+    "prompt": "Generate a standalone genuine transparent RGBA game sprite of ONLY RUU Stage5 ZENITH, the middle blue row fifth evolution in attached concept. Faithfully preserve reference identity: mature graceful long-legged white quadruped, large cobalt/ice-blue feathered wings, gold antlerlike sweeping crest and gold accents, elegant long blue feather tail. Stage5 regal feathered anatomy distinct from Stage4. Facing RIGHT in neutral stable standing pose, four paws clearly visible, wings folded/relaxed enough to fit square, entire silhouette visible with 10% transparent margins. Clean painted game art readable at256px, solid clean antialiased silhouette. No text, backdrop, shadow, detached particles, glow haze or ornaments floating away from body. Exactly one creature; redraw faithfully, do not crop reference. This is a base for subsequent local part rigging, not an animation sheet.",
+    "sourceTool": "image_gen",
+    "identityReview": "Concept-derived ZENITH candidate; human approval pending"
+  },
+  "authorization": "115 Creature Autonomous Production Protocol v1: image generation, sprite normalization and part rigging",
+  "productionArtworkApproval": "HUMAN_REVIEW_REQUIRED"
+}

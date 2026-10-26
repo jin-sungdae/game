@@ -1,0 +1,75 @@
+{
+  "conceptId": "M082",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M082/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    28,
+    90,
+    216,
+    210
+  ],
+  "parts": [
+    {
+      "name": "rear-hock-brace",
+      "x": 102,
+      "y": 188,
+      "rx": 22,
+      "ry": 19,
+      "dx": -1.2,
+      "dy": -1.6,
+      "samples": [
+        0.015,
+        1,
+        0.72,
+        0.4,
+        0.21,
+        0.11,
+        0.05,
+        0.02
+      ]
+    },
+    {
+      "name": "tail-tip-counterflex",
+      "x": 66,
+      "y": 107,
+      "rx": 28,
+      "ry": 24,
+      "dx": 1.4,
+      "dy": 1.2,
+      "samples": [
+        0.02,
+        0.1,
+        0.45,
+        1,
+        0.78,
+        0.4,
+        0.16,
+        0.035
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Organic horned quadruped: fixed head, facial features, torso core and foot contacts; rear hock bracing followed by tail counterflex. Identity and motion await human review.",
+  "behaviorContract": "Stationary isolated HIT candidate; no movement or battle activation",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes"
+}

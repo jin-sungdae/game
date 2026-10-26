@@ -1,0 +1,107 @@
+{
+  "reference": "design/production-batches/monsters/batch01/M003/base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "near-shoulder-leaf-ruffle",
+      "x": 118,
+      "y": 139,
+      "rx": 17,
+      "ry": 21,
+      "dx": 0.7,
+      "dy": -1.25,
+      "samples": [
+        0.04,
+        0.18,
+        0.54,
+        1,
+        0.78,
+        0.38,
+        0.16,
+        0.07
+      ]
+    },
+    {
+      "name": "back-leaf-follow-through",
+      "x": 89,
+      "y": 117,
+      "rx": 16,
+      "ry": 13,
+      "dx": -0.85,
+      "dy": 0.6,
+      "samples": [
+        0.02,
+        0.09,
+        0.23,
+        0.59,
+        0.95,
+        0.83,
+        0.42,
+        0.1
+      ]
+    }
+  ],
+  "protectedRegions": "y>=166||y<=93||x<=62||x>=140",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "04f4d3c97e4b07cbf6dd55db1e5b13aaeb3769a1616e3ce521cef00eefdf66fd",
+      "changedPixels": 212,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.05730475423574956
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "ef069557cfca4eb553304b2d5b6cfc7be256ac40a1a7adc49cd7cd5ad447813e",
+      "changedPixels": 594,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.257746724872792
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "bb25e5fa96b1389be1750b59c8a00799f822199853bf8b19b6948e52bcaef880",
+      "changedPixels": 880,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7719314785077916
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "073d3064e4ceea4e5b1a062598fa8370fc07b106ded26fd6ff058db21bdff64e",
+      "changedPixels": 1069,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.4307079201845245
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "8508ffa04e580fdae3dbf7be4b80aeea5003c6317d3ead2e6b8b69cefeee2c55",
+      "changedPixels": 1080,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.1150635907774693
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "ca2f2fec2e6225e50075d6deac6724350513dfc8d20a78b3119f73f21d0b2fbf",
+      "changedPixels": 940,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8589060360472159
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "60401d72883e7c65472eae4d03bffb03905c93f1a96a0019d9448564e5a57c16",
+      "changedPixels": 717,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.43584338550872415
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "6928d49d136254b0204c60d60b119c9fefaff3708d155edbb83029153fc33fad",
+      "changedPixels": 430,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.10402780753997674
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #114; independent first attempt; no failure recovery",
+  "productionEligible": false
+}

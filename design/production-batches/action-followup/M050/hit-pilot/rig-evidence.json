@@ -1,0 +1,154 @@
+{
+  "reference": "design/production-batches/monsters/batch05/M050/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "wolf-shoulder-recoil",
+      "x": 180,
+      "y": 153,
+      "rx": 24,
+      "ry": 24,
+      "dx": -2.5,
+      "dy": 1.3,
+      "samples": [
+        0.02,
+        1,
+        0.85,
+        0.6,
+        0.37,
+        0.2,
+        0.09,
+        0.025
+      ]
+    },
+    {
+      "name": "foreleg-brace",
+      "x": 205,
+      "y": 183,
+      "rx": 17,
+      "ry": 22,
+      "dx": -1.2,
+      "dy": -0.9,
+      "samples": [
+        0.01,
+        0.5,
+        1,
+        0.8,
+        0.55,
+        0.32,
+        0.14,
+        0.035
+      ]
+    },
+    {
+      "name": "lean-flank-follow-through",
+      "x": 139,
+      "y": 151,
+      "rx": 33,
+      "ry": 22,
+      "dx": -1.8,
+      "dy": 1,
+      "samples": [
+        0.01,
+        0.22,
+        0.7,
+        1,
+        0.78,
+        0.45,
+        0.18,
+        0.045
+      ]
+    },
+    {
+      "name": "curved-tail-counterbalance",
+      "x": 61,
+      "y": 154,
+      "rx": 32,
+      "ry": 28,
+      "dx": 1.7,
+      "dy": -1.5,
+      "samples": [
+        0.01,
+        0.06,
+        0.25,
+        0.75,
+        1,
+        0.75,
+        0.32,
+        0.055
+      ]
+    }
+  ],
+  "protectedRegions": "y>=205||y<=118||x<=24||x>=231",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "b7c03d4abb2df40e0868318027887999b1ba6b524efbf49153d2680f750590ca",
+      "changedPixels": 988,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 84,
+      "maxInverseDisplacementPixels": 0.056355079028053735
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "aabc5629982943557966a8f91ca009a6a0d9d866fa28fbe12c639de7b9705c80",
+      "changedPixels": 4032,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 563,
+      "maxInverseDisplacementPixels": 2.8128972791662226
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "61aa8cd04a2282bb93c8f346bf6b003dbe2985634569842a57bd1490054e5e9a",
+      "changedPixels": 5079,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 730,
+      "maxInverseDisplacementPixels": 2.394799360873661
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "50f84259b9dda0bc80fc10a60dc518e7b68e89b38053280245432eae13b96a4e",
+      "changedPixels": 5500,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 853,
+      "maxInverseDisplacementPixels": 2.058898684005133
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "348b7e2ef9076479f70700d2f29edb50924dc7a6610ea48cb5a8aa1e11e11cf6",
+      "changedPixels": 5424,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 820,
+      "maxInverseDisplacementPixels": 2.2643988390239103
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "275c594a9d1c4ecd62f6ea427e62bde7f67fed8955df553784bd97bba0204f3a",
+      "changedPixels": 5048,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 665,
+      "maxInverseDisplacementPixels": 1.6998907502235343
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "94411cd25a99f24291b34f785f3cd83d63a7d40770311aea513f7d1149e848a4",
+      "changedPixels": 4152,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 418,
+      "maxInverseDisplacementPixels": 0.724409472750069
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "213fb1d386ac6518646b292e5ed391bfc2581a9d5f2e308a6957dad90bf8ced0",
+      "changedPixels": 2152,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 188,
+      "maxInverseDisplacementPixels": 0.12468718409073593
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

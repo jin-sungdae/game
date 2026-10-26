@@ -1,0 +1,55 @@
+{
+  "creatureId": "M031",
+  "action": "HIT",
+  "sourceBase": "design/production-batches/monsters/batch04/M031/base-v2.png",
+  "sourceSha256": "c44a3689983a14a8ba3efb883fcddf8e3c039f43cc1e61cae34caac417f5f813",
+  "movementProfile": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "personality": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "speciesBehavior": {
+    "status": "NOT_VERIFIED",
+    "runtimeApproved": false
+  },
+  "anatomy": "Wingless four-legged fire cub with pointed ears, mane and curled flame tail. Local shoulder/chest flinch and delayed tail/mane response; visible eye, paws, head tips and outer support stay fixed. No invented wings, full-body squash or translation.",
+  "feasibility": "LOCAL_PART_REACTION_CANDIDATE_ONLY",
+  "speciesIdentity": "CONCEPT_ONLY_MAPPING_UNAPPROVED",
+  "productionSpeciesId": null,
+  "manifest": null,
+  "provenance": "design/production-batches/monsters/batch04/provenance.json",
+  "existingCandidateClips": [
+    "idle"
+  ],
+  "duplicateActionFound": false,
+  "policyChanged": false,
+  "newBodyParts": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "proposedCatalogContract": {
+    "observedForm": "fire horn cub",
+    "personality": {
+      "status": "PROPOSED",
+      "trait": "gentle"
+    },
+    "movementProfile": {
+      "status": "PROPOSED",
+      "value": "GROUND"
+    },
+    "speciesBehavior": {
+      "status": "PROPOSED",
+      "frequency": "brief inspections between long rests; attention centers on the fire habitat of the fire horn cub",
+      "preparation": "tilt toward the stimulus before leaving rest; preserve the fire horn cub silhouette",
+      "transition": "ease into rest after the excursion; recover the fire horn cub resting anatomy",
+      "reaction": "observe a nearby cursor without chasing it; keep the fire horn cub characteristic gesture"
+    },
+    "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+    "runtimeEnabled": false
+  },
+  "catalogSource": "design/visual-reference-v1/catalog.json",
+  "catalogComparisonTiming": "Additional read-only cross-check after initial candidate creation; original Ledger policy remains unapproved",
+  "anatomyContractConflict": false
+}

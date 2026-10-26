@@ -1,0 +1,30 @@
+{
+  "conceptId": "M029",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M029/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 420,
+    "loop": true
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "candidate preview only",
+  "anatomyScope": "small bat torso and folded-wing root; face, ears, wing outline and feet fixed",
+  "proposedMovementProfile": {
+    "status": "PROPOSED",
+    "value": "FLYING"
+  },
+  "movementPolicy": "Existing proposal only; stationary breath is not movement or native activation"
+}

@@ -1,0 +1,107 @@
+{
+  "reference": "public/assets/creatures/ruu/stage03/base.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "near-wing-coverts",
+      "x": 147,
+      "y": 124,
+      "rx": 22,
+      "ry": 15,
+      "dx": -1.1,
+      "dy": -1.45,
+      "samples": [
+        0.04,
+        0.16,
+        0.55,
+        1,
+        0.76,
+        0.4,
+        0.14,
+        0.06
+      ]
+    },
+    {
+      "name": "trailing-feather-fan",
+      "x": 126,
+      "y": 140,
+      "rx": 17,
+      "ry": 13,
+      "dx": -0.75,
+      "dy": 0.7,
+      "samples": [
+        0.06,
+        0.09,
+        0.32,
+        0.72,
+        1,
+        0.6,
+        0.24,
+        0.08
+      ]
+    }
+  ],
+  "protectedRegions": "y>=158||y<=105||x<=107||x>=178",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "47e62f31512cf0e0f114044b982c740850b4cf8e5454e127c1bfa8dd19380723",
+      "changedPixels": 566,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.0727969604566359
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "dac172d292e7e43da8de697b3cf4e2c82d840ba4e742670f86d8b26efcf76565",
+      "changedPixels": 835,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.29094006122906385
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "02f7bb40b7390674da88818474b84835eb84b5a91be55f79cbcb81fcdd1b3a23",
+      "changedPixels": 1081,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.9994893791509845
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "502b1ae4fd0a0b8194e6285fc5a7525244f64f98f76b556e36cc14a5d34229f8",
+      "changedPixels": 1177,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.8150972702777879
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "4706133ec4652af79872bb5e60345d92a1ba599689468f50768019ca22703a55",
+      "changedPixels": 1174,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.3827989886105074
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "454d09d5376f1d717a1717b2f04d468ce51caed64125c52dd11214a040fabdf9",
+      "changedPixels": 1088,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7254175037593121
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "bd2919030662024febf9ca636ef6a31934c78eb27489c4b42655d88439082f4a",
+      "changedPixels": 888,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.25462667491319285
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "d991b59f7fe0d02d3d99816c351d3f4cb7161f2a02eba697fff8a0f73ff18096",
+      "changedPixels": 661,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.10918768343224224
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #114; independent first attempt; no failure recovery",
+  "productionEligible": false
+}

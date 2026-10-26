@@ -12,7 +12,7 @@ export type AnimationState = 'IDLE'|'MOVE'|'REACT';
 export type AnimationSequence = AnimationState|'REST'|'SLEEP'|'LOOK_AROUND'|'BLINK'|'JUMP'|'HOVER'|'FLY'|'GLIDE'|'FLOAT'|'SETTLE'|'PEEK'|'EDGE_MOVE'|'TURN'|'FLICKER'|'FLOW'|'INTENSE';
 // REST/SLEEP/LOOK_AROUND preserve native behavior identity; their clips are not supplied.
 // Readiness describes clip assets, not gameplay triggers (PIP mouse REACT is unavailable).
-export interface Pilot { character:'MOA'|'RUU'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'|'WISP'|'LUNET'|'NOCT'|'MOSSY'|'PEBB'|'TIKKI'|'BUBU'|'NOVA'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; groundProfile?:'GROUND'; groundMoveClip?:'walk'|'move'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
+export interface Pilot { character:'CAPLET'|'MOA'|'RUU'|'NOX'|'PIP'|'MELLO'|'CHIRP'|'PUFF'|'MIMI'|'SHADE'|'EMBER'|'WISP'|'LUNET'|'NOCT'|'MOSSY'|'PEBB'|'TIKKI'|'BUBU'|'NOVA'; species:string; stage:number; manifest:string; base:string; status:'NOT_SUPPLIED'|'SUPPLIED'|'IDLE_PRODUCTION'|'JUMP_PRODUCTION'|'FLYING_PRODUCTION'|'EDGE_PRODUCTION'|'PRODUCTION_PILOT'; sourceFacing:'RIGHT'; groundProfile?:'GROUND'; groundMoveClip?:'walk'|'move'; jumpProfile?:'JUMP'; flyingProfile?:'FLYING'; floatingProfile?:'FLOATING'; staticProfile?:'STATIC'; edgeProfile?:'EDGE'; free2dProfile?:'FREE_2D'; moveStatus?:'PRODUCTION'; reactStatus?:'PRODUCTION'|'SUPPLIED' }
 export const groundConsumers=[{character:'PIP',status:'IDLE_PRODUCTION',moveClip:'walk',moveStatus:'PRODUCTION',reactStatus:'SUPPLIED'},{character:'MOSSY',status:'SUPPLIED',moveClip:'move'},{character:'PEBB',status:'SUPPLIED',moveClip:'move'},{character:'TIKKI',status:'SUPPLIED',moveClip:'move'}] as const;
 // Shared GROUND clip metadata; identity never determines frame count.
 export const groundClips={IDLE:{frames:4,frameDuration:450},MOVE:{frames:8,frameDuration:80}} as const;
@@ -21,8 +21,11 @@ export const jumpConsumers=[{character:'MELLO',status:'JUMP_PRODUCTION'},{charac
 export const edgeConsumers=[{character:'SHADE',status:'EDGE_PRODUCTION'},{character:'NOCT',status:'SUPPLIED'}] as const;
 export const floatingConsumers=['PUFF','WISP','LUNET'] as const;
 export function pilotDefinition(character:string,stage=1):Pilot|null {
+  if(character==='CAPLET' && stage===1) return {character:'CAPLET',species:'caplet',stage:1,manifest:resolveMonster('CAPLET')!.assetRoot+'/manifest.json',base:resolveMonster('CAPLET')!.baseAsset!,status:'SUPPLIED',sourceFacing:'RIGHT'};
   if(character==='moa' && stage===1) return {character:'MOA',species:'moa',stage:1,manifest:resolveCompanion('moa',1)!.assetManifest,base:companionBase('moa',1)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT',moveStatus:'PRODUCTION',reactStatus:'PRODUCTION'};
-  if(character==='ruu' && stage===3) return {character:'RUU',species:'ruu',stage:3,manifest:resolveCompanion('ruu',3)!.assetManifest,base:companionBase('ruu',3)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
+  if(character==='moa' && [4,5].includes(stage)) return {character:'MOA',species:'moa',stage,manifest:resolveCompanion('moa',stage)!.assetManifest,base:companionBase('moa',stage)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
+  if(character==='ruu' && [3,4,5].includes(stage)) return {character:'RUU',species:'ruu',stage,manifest:resolveCompanion('ruu',stage)!.assetManifest,base:companionBase('ruu',stage)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
+  if(character==='nox' && stage===2) return {character:'NOX',species:'nox',stage:2,manifest:resolveCompanion('nox',2)!.assetManifest,base:companionBase('nox',2)!,status:'IDLE_PRODUCTION',sourceFacing:'RIGHT'};
   const ground=groundConsumers.find(consumer=>consumer.character===character);
   if(ground) {
     const asset=resolveMonster(ground.character)!;
@@ -58,11 +61,21 @@ export const pilotContract = {canvas:256,anchor:{x:.5,y:1},maxFrames:32,minFrame
 export class PilotAssets {
   constructor(private loader=new AssetLoader()) {}
   async load(p:Pilot,state:AnimationSequence):Promise<LoadedClip|null> {
+    if(p.character==='CAPLET') {
+      if(p.species!=='caplet' || p.stage!==1 || p.status!=='SUPPLIED' || state!=='SLEEP') return null;
+      const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,'sleep');
+      return asset && asset.manifest.canvas.width===256 && asset.manifest.canvas.height===256 && asset.clip.frames===6 && asset.clip.frameDuration===400 && asset.clip.loop?asset:null;
+    }
     if(state==='REST' || state==='SLEEP' || state==='LOOK_AROUND') return null;
-    if(p.character==='RUU') {
-      if(p.species!=='ruu' || p.stage!==3 || p.status!=='IDLE_PRODUCTION' || state!=='IDLE') return null;
+    if(p.character==='NOX') {
+      if(p.species!=='nox' || p.stage!==2 || p.status!=='IDLE_PRODUCTION' || state!=='IDLE') return null;
       const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,'idle');
-      return asset && asset.manifest.canvas.width===256 && asset.manifest.canvas.height===256 && asset.clip.frames===8 && asset.clip.frameDuration===180 && asset.clip.loop?asset:null;
+      return asset && asset.manifest.canvas.width===256 && asset.manifest.canvas.height===256 && asset.clip.frames===6 && asset.clip.frameDuration===240 && asset.clip.loop?asset:null;
+    }
+    if(p.character==='RUU') {
+      if(p.species!=='ruu' || ![3,4,5].includes(p.stage) || p.status!=='IDLE_PRODUCTION' || state!=='IDLE') return null;
+      const asset=await this.loader.loadRegistered(p.species,p.stage,p.manifest,'idle');
+      return asset && asset.manifest.canvas.width===256 && asset.manifest.canvas.height===256 && asset.clip.frames===(p.stage===3?8:6) && asset.clip.frameDuration===({3:180,4:220,5:260} as Record<number,number>)[p.stage] && asset.clip.loop?asset:null;
     }
     if(p.groundProfile==='GROUND' && (state==='IDLE' || state==='MOVE')) {
       if(p.status==='NOT_SUPPLIED' || (state==='MOVE' && p.status==='IDLE_PRODUCTION' && p.moveStatus!=='PRODUCTION')) return null;

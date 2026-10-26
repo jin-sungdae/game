@@ -1,0 +1,135 @@
+{
+  "reference": "public/assets/creatures/ruu/stage05/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "crest-wing-reflex",
+      "x": 96,
+      "y": 106,
+      "rx": 38,
+      "ry": 24,
+      "dx": -1.3,
+      "dy": -2.3,
+      "samples": [
+        0.03,
+        0.8,
+        1,
+        0.69,
+        0.4,
+        0.21,
+        0.12,
+        0.04
+      ]
+    },
+    {
+      "name": "flight-chest-brace",
+      "x": 184,
+      "y": 151,
+      "rx": 24,
+      "ry": 33,
+      "dx": -1.9,
+      "dy": 1,
+      "samples": [
+        0.01,
+        0.3,
+        0.83,
+        1,
+        0.78,
+        0.49,
+        0.22,
+        0.05
+      ]
+    },
+    {
+      "name": "long-tail-feather-recovery",
+      "x": 72,
+      "y": 176,
+      "rx": 28,
+      "ry": 20,
+      "dx": -1.2,
+      "dy": 1.4,
+      "samples": [
+        0.01,
+        0.04,
+        0.14,
+        0.45,
+        0.83,
+        1,
+        0.61,
+        0.06
+      ]
+    }
+  ],
+  "protectedRegions": "y>=198||y<=72||x<=32||x>=220",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "3aa50ad522386662a344ff12af717fc22e912d0823206c37782c62d524aae3d8",
+      "changedPixels": 1648,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 345,
+      "maxInverseDisplacementPixels": 0.07925685319258663
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "20a652520c32401cf935a3582158892c4a010fd858b020c5aaee1ef6293fac3b",
+      "changedPixels": 3875,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 998,
+      "maxInverseDisplacementPixels": 2.1132855072954535
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "9a7540167c1684b3a1368fca96587a2bfc67e2c091923496cab29d4fab80327e",
+      "changedPixels": 4359,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1266,
+      "maxInverseDisplacementPixels": 2.6402520394239613
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "0b87e8376ef490fae0f1f34d696c18040111bbc6e17dd01fa463ac8896ca6404",
+      "changedPixels": 4513,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1418,
+      "maxInverseDisplacementPixels": 2.14697900727214
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "86c87dc3bd9d496fc16cbf668e81553e3c87f2a10be3e3c0ec87b4ff7457b909",
+      "changedPixels": 4478,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1366,
+      "maxInverseDisplacementPixels": 1.6724967371093884
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "f3a9ec7ae03448a78d6fea9c670ad86fad20adb0b31216132e2615ff781d51c1",
+      "changedPixels": 4308,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1197,
+      "maxInverseDisplacementPixels": 1.8414402950113473
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "429c680976108c895202fb1211430525a81e832d64176b9459e7ee7aa98fdcd8",
+      "changedPixels": 3949,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 956,
+      "maxInverseDisplacementPixels": 1.1242938877697373
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "71df76dd9573b41954cfba93e1e00a6edaea1d6a7107019f12a403b7e4d0c5cb",
+      "changedPixels": 2845,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 513,
+      "maxInverseDisplacementPixels": 0.11062648544632926
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

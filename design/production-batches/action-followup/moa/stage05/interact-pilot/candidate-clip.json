@@ -1,0 +1,74 @@
+{
+  "conceptId": null,
+  "species": "moa",
+  "evolutionStage": 5,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/moa/stage05/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 185,
+    "loop": false
+  },
+  "movableRect": [
+    157,
+    106,
+    218,
+    161
+  ],
+  "parts": [
+    {
+      "name": "near-collar-leaf-greeting",
+      "x": 185,
+      "y": 131,
+      "rx": 17,
+      "ry": 17,
+      "dx": 0.7,
+      "dy": -1.2,
+      "samples": [
+        0.04,
+        0.14,
+        0.36,
+        0.68,
+        1,
+        0.7,
+        0.3,
+        0.08
+      ]
+    },
+    {
+      "name": "lower-collar-settle",
+      "x": 195,
+      "y": 145,
+      "rx": 12,
+      "ry": 10,
+      "dx": -0.4,
+      "dy": 0.65,
+      "samples": [
+        0.02,
+        0.05,
+        0.12,
+        0.28,
+        0.62,
+        0.94,
+        0.52,
+        0.1
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "Mature MOA calm collar-leaf greeting followed by lower-leaf settle. Crown, antlers, face, neck silhouette, body, legs and hooves remain fixed. Interior layered leaves only; no bow or whole-body motion.",
+  "behaviorContract": "Existing MOA gentle balance personality and stage_config; no behavior weights, movement or evolution policy change"
+}

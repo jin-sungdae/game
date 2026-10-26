@@ -3,6 +3,7 @@
 //! No per-tick parsing, allocation, timer, RNG stream or animation state is added.
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Expression {
+    pub sleep_pose: bool,
     pub distance: f64,
     pub speed: f64,
     pub interval: f64,
@@ -10,6 +11,7 @@ pub struct Expression {
 impl Default for Expression {
     fn default() -> Self {
         Self {
+            sleep_pose: false,
             distance: 1.,
             speed: 1.,
             interval: 1.,
@@ -18,6 +20,12 @@ impl Default for Expression {
 }
 impl Expression {
     pub fn for_species(code: &str) -> Self {
+        if code == "CAPLET" {
+            return Self {
+                sleep_pose: true,
+                ..Self::default()
+            };
+        }
         // Only currently enabled Production identities. Provisional content is never activated.
         // Ground: small lively steps / rooted rest / heavy stones / inquisitive range.
         // Aerial bodies change excursion extent, never native trajectory or landing ownership.
@@ -40,6 +48,7 @@ impl Expression {
             _ => return Self::default(),
         };
         Self {
+            sleep_pose: false,
             distance,
             speed,
             interval,

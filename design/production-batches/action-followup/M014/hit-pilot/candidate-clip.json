@@ -1,0 +1,94 @@
+{
+  "conceptId": "M014",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M014/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 95,
+    "loop": false
+  },
+  "movableRect": [
+    64,
+    79,
+    213,
+    204
+  ],
+  "parts": [
+    {
+      "name": "patient-wing-root-brace",
+      "x": 113,
+      "y": 110,
+      "rx": 31,
+      "ry": 28,
+      "dx": -2.3,
+      "dy": 2.4,
+      "samples": [
+        0.02,
+        0.16,
+        0.79,
+        1,
+        0.73,
+        0.46,
+        0.19,
+        0.06
+      ]
+    },
+    {
+      "name": "lower-neck-recoil",
+      "x": 177,
+      "y": 134,
+      "rx": 22,
+      "ry": 36,
+      "dx": -1.8,
+      "dy": -2,
+      "samples": [
+        0.01,
+        0.12,
+        0.61,
+        0.97,
+        1,
+        0.61,
+        0.27,
+        0.04
+      ]
+    },
+    {
+      "name": "flank-release",
+      "x": 139,
+      "y": 170,
+      "rx": 25,
+      "ry": 19,
+      "dx": 1,
+      "dy": 1.2,
+      "samples": [
+        0.01,
+        0.04,
+        0.21,
+        0.56,
+        0.9,
+        1,
+        0.62,
+        0.08
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot impact candidate; only server-authoritative battle events may trigger production HIT after separate approval",
+  "anatomyScope": "Stationary braced recoil: wing root, lower neck and flank move locally; face, crown, tail loop and planted hooves remain fixed. Actual local RGBA contour movement; not flight, turn, native hit trigger or damage computation.",
+  "behaviorContract": "Existing PROPOSED patient/FLYING long-neck wind drake. Measured wing brace with neck then flank recovery; no gameplay activation.",
+  "alphaPolicy": "Anatomical part silhouette changes via existing inverse-sampling rig. Fixed regions and outer canvas bounds remain unchanged; existing PNG validator unchanged."
+}

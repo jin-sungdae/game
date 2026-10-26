@@ -1,0 +1,135 @@
+{
+  "reference": "public/assets/creatures/moa/stage04/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "mature-shoulder-brace",
+      "x": 211,
+      "y": 138,
+      "rx": 30,
+      "ry": 35,
+      "dx": -2.5,
+      "dy": 1.8,
+      "samples": [
+        0.02,
+        0.5,
+        1,
+        0.85,
+        0.62,
+        0.37,
+        0.14,
+        0.04
+      ]
+    },
+    {
+      "name": "chest-recovery",
+      "x": 192,
+      "y": 172,
+      "rx": 25,
+      "ry": 25,
+      "dx": -1.4,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.16,
+        0.67,
+        1,
+        0.82,
+        0.5,
+        0.21,
+        0.03
+      ]
+    },
+    {
+      "name": "leaf-mantle-follow-through",
+      "x": 111,
+      "y": 146,
+      "rx": 32,
+      "ry": 30,
+      "dx": 1.8,
+      "dy": 1.2,
+      "samples": [
+        0.01,
+        0.05,
+        0.25,
+        0.6,
+        1,
+        0.87,
+        0.41,
+        0.06
+      ]
+    }
+  ],
+  "protectedRegions": "y>=205||y<=92||x<=68||x>=244",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "c7496f950ffdef424f83bf1a845f01c24a332bd9f9f52ef565157645c196800e",
+      "changedPixels": 2016,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 270,
+      "maxInverseDisplacementPixels": 0.061610978243368815
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "7654693116e6471a3cfed84f778cc0fdcba8d4130d31a3a0e55b81b60c0dfd4d",
+      "changedPixels": 4431,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 961,
+      "maxInverseDisplacementPixels": 1.5399341796292196
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "32c204ef1ac370b76236d29441fdf49c2964cb6fb0dec6b70666a50aef5d7914",
+      "changedPixels": 5369,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1424,
+      "maxInverseDisplacementPixels": 3.07773497583414
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "2af7cda3900727eb347ae78febb63b16c653efd2d61842e697068d0868b18f11",
+      "changedPixels": 5653,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1574,
+      "maxInverseDisplacementPixels": 2.6169413373563297
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "59e2960a8a7647b865eabc34ed09204881dc997c1bc2eb3fa52366084e761f83",
+      "changedPixels": 5707,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1521,
+      "maxInverseDisplacementPixels": 2.162788573027374
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "6251215dba71c1b20dd355b82082d4ebc911da4c1ed92247aa7dd0d7282ca7f9",
+      "changedPixels": 5544,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1225,
+      "maxInverseDisplacementPixels": 1.8810433459260185
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "baf24cbd0ef425f4109a6b04e3165cca106de01ace49a8dff54beadcea350f63",
+      "changedPixels": 5042,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 737,
+      "maxInverseDisplacementPixels": 0.8860722927498721
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "ff5dba66cb8b41cc26d1ccbec58421eb1220679fdff012a075f16dde755dc82b",
+      "changedPixels": 3550,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 377,
+      "maxInverseDisplacementPixels": 0.1297931682729114
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

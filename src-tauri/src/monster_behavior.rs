@@ -63,6 +63,10 @@ impl Random for Seeded {
     }
 }
 pub fn profile(code: &str) -> Option<Profile> {
+    // Approved identity reuses Sleepy policy; this does not grant spawn eligibility.
+    if code == "CAPLET" {
+        return Some(Profile::Sleepy);
+    }
     #[derive(Deserialize)]
     #[serde(rename_all = "camelCase")]
     struct Row {
@@ -109,6 +113,9 @@ impl<R: Random> Controller<R> {
     pub fn for_species(mut self, code: &str) -> Self {
         self.expression = Expression::for_species(code);
         self
+    }
+    pub fn sleep_pose(&self) -> bool {
+        self.expression.sleep_pose && self.decisions > 0 && self.current.intent == Intent::Pause
     }
     pub fn hold(&mut self, terminal: bool) {
         self.suspended = true;

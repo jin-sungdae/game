@@ -1,0 +1,75 @@
+{
+  "conceptId": "M066",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M066/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    34,
+    137,
+    225,
+    190
+  ],
+  "parts": [
+    {
+      "name": "front-flipper-brace",
+      "x": 147,
+      "y": 160,
+      "rx": 24,
+      "ry": 23,
+      "dx": -2.2,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        1,
+        0.8,
+        0.5,
+        0.3,
+        0.17,
+        0.08,
+        0.025
+      ]
+    },
+    {
+      "name": "rear-flipper-response",
+      "x": 64,
+      "y": 165,
+      "rx": 23,
+      "ry": 19,
+      "dx": 1.9,
+      "dy": 0.9,
+      "samples": [
+        0.01,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0.045
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "White shelled aquatic creature with four flippers. Head and upper shell core fixed; front flipper brace followed by rear flipper reaction; extremes/anchor stable.",
+  "behaviorContract": "Proposed playful GROUND white shell creature; isolated HIT only, no activation or inferred swim contract",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes"
+}

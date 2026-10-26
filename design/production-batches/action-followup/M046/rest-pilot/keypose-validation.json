@@ -1,0 +1,118 @@
+{
+  "status": "VALIDATION_FAILED",
+  "sourceSha256": "9f3ef213d9463db5e5b420d8bde76cfb76062f81692f27b98c194ce1162671a3",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 1254,
+    "height": 1254,
+    "mainPixels": 626566,
+    "mainBounds": [
+      166,
+      156,
+      1111,
+      1158
+    ],
+    "detachedPixels": 3942,
+    "detachedComponents": 693,
+    "detachedAlphaHistogram": {
+      "1": 3940,
+      "2": 2
+    },
+    "largestDetached": [
+      {
+        "n": 510,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          81,
+          935,
+          112,
+          973
+        ]
+      },
+      {
+        "n": 379,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          216,
+          1143,
+          238,
+          1177
+        ]
+      },
+      {
+        "n": 192,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          168,
+          1124,
+          194,
+          1143
+        ]
+      },
+      {
+        "n": 175,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          236,
+          1173,
+          260,
+          1187
+        ]
+      },
+      {
+        "n": 167,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          316,
+          1221,
+          340,
+          1235
+        ]
+      },
+      {
+        "n": 140,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          310,
+          320,
+          337,
+          333
+        ]
+      },
+      {
+        "n": 129,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1181,
+          1094,
+          1197,
+          1108
+        ]
+      },
+      {
+        "n": 121,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          83,
+          1034,
+          94,
+          1054
+        ]
+      }
+    ]
+  },
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED"
+}

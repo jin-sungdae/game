@@ -1,0 +1,74 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "ribcage",
+      "x": 139,
+      "y": 169,
+      "rx": 27,
+      "ry": 18,
+      "dx": 0.5,
+      "dy": -1.1,
+      "phase": 0
+    },
+    {
+      "name": "leaf-root",
+      "x": 114,
+      "y": 150,
+      "rx": 24,
+      "ry": 15,
+      "dx": -0.3,
+      "dy": -0.65,
+      "phase": -1.047
+    }
+  ],
+  "protectedRegions": "y<=129||y>=192||x<=83||x>=183",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "pixelSha256": "d01e0de5fb6fb87ec5cdf476cfe0afe206a1f6aaec3fd529e3968ba70edefd14",
+      "changedPixels": 347,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.17884340183964234
+    },
+    {
+      "file": "idle_01.png",
+      "pixelSha256": "9b25cd49608d76192aa15a0092ecfb1836a03a092385fda9fbdc28bf07ffc011",
+      "changedPixels": 478,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.30184561352919065
+    },
+    {
+      "file": "idle_02.png",
+      "pixelSha256": "5438a008b2d0e752835c3c6ffb1b1f6555586ebdfd0498fade7f1587bfdc0934",
+      "changedPixels": 1164,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.9054460700975598
+    },
+    {
+      "file": "idle_03.png",
+      "pixelSha256": "1c8225f02e69b8b87855b65b8555c3e31c0cda224715d82e6ddedbe1d6c401a6",
+      "changedPixels": 1427,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.2069556137425999
+    },
+    {
+      "file": "idle_04.png",
+      "pixelSha256": "0a1c32e26e4fd64e1538c05602b960a62b12a2a60a67128ef1e8c538d437af32",
+      "changedPixels": 1401,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.9054460700975598
+    },
+    {
+      "file": "idle_05.png",
+      "pixelSha256": "5716c212d7649cc108ac8e2e80aecb7dd756fdf924d2fac001739edcb0c044f9",
+      "changedPixels": 1022,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.5350293480757875
+    }
+  ],
+  "repairIteration": 3,
+  "productionEligible": false
+}

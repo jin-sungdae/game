@@ -1,0 +1,74 @@
+{
+  "conceptId": "M009",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M009/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 185,
+    "loop": false
+  },
+  "movableRect": [
+    91,
+    96,
+    204,
+    145
+  ],
+  "parts": [
+    {
+      "name": "watchful-left-neck-leaf-release",
+      "x": 112,
+      "y": 113,
+      "rx": 16,
+      "ry": 11,
+      "dx": -0.55,
+      "dy": 0.65,
+      "samples": [
+        0.02,
+        0.04,
+        0.13,
+        0.45,
+        0.83,
+        1,
+        0.53,
+        0.09
+      ]
+    },
+    {
+      "name": "right-collar-reassurance",
+      "x": 185,
+      "y": 121,
+      "rx": 13,
+      "ry": 12,
+      "dx": 0.75,
+      "dy": 0.35,
+      "samples": [
+        0.01,
+        0.03,
+        0.08,
+        0.25,
+        0.61,
+        0.96,
+        0.71,
+        0.13
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "Local layered neck-leaf response only. Long ears, eyes, muzzle, rounded belly, hands, planted feet and original alpha silhouette remain fixed; not a head turn, arm lift or whole-body transform.",
+  "behaviorContract": "Existing PROPOSED watchful/GROUND catalog: delayed release followed by collar settle after a cautious observation beat. No Production personality or Native interaction activation."
+}

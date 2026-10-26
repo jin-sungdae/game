@@ -1,0 +1,88 @@
+{
+  "reference": "design/production-batches/monsters/batch02/M018/base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "ribcage-breath",
+      "x": 169,
+      "y": 163,
+      "rx": 22,
+      "ry": 15,
+      "dx": 0.3,
+      "dy": -0.7,
+      "phase": 0
+    },
+    {
+      "name": "shoulder-root",
+      "x": 147,
+      "y": 152,
+      "rx": 20,
+      "ry": 12,
+      "dx": -0.25,
+      "dy": -0.55,
+      "phase": -0.6
+    }
+  ],
+  "protectedRegions": "y<=134||y>=183||x<=121||x>=196",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "breath_00.png",
+      "pixelSha256": "9f8bba3da3fcd94377d11ff691f8f653e8a6df05af03b0cf12ad62b8e1401a05",
+      "changedPixels": 76,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.05275922054735645
+    },
+    {
+      "file": "breath_01.png",
+      "pixelSha256": "fcf07c884caa0277c10b18bad0c01b770f534c35c61f1783fb61d6b65e53f6b8",
+      "changedPixels": 223,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.11151345919911972
+    },
+    {
+      "file": "breath_02.png",
+      "pixelSha256": "1cbf902845ca7a48bbbf3becad9c97658c1079fde2edc60589e024fc6a3814a8",
+      "changedPixels": 571,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.38011637216910893
+    },
+    {
+      "file": "breath_03.png",
+      "pixelSha256": "b046de1d2e9a2057b0de47c9bb031e85d4329df68843534dcedce2452eaa6682",
+      "changedPixels": 762,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.6483704882238025
+    },
+    {
+      "file": "breath_04.png",
+      "pixelSha256": "8e95a6aa07c9fa84924b9911469cbe4631b3da622f4de3c69cd0042041e57cd2",
+      "changedPixels": 842,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7602333178512026
+    },
+    {
+      "file": "breath_05.png",
+      "pixelSha256": "080c6dcb16959f4720e06d7f3b41de738566ad7c3d0912177d7bb7d29be86c9a",
+      "changedPixels": 830,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.6483704882238025
+    },
+    {
+      "file": "breath_06.png",
+      "pixelSha256": "ceb86ac052b2a8d186c91d7853e56cc551df70974b58a179112e57db1afab4ec",
+      "changedPixels": 728,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.4707012852306746
+    },
+    {
+      "file": "breath_07.png",
+      "pixelSha256": "4bb17ea95e792738cf9c95a30a5efa6b6a002d10cf224ec434ce4bf170f1f63d",
+      "changedPixels": 478,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.24611531800618092
+    }
+  ],
+  "repairIteration": 0,
+  "productionEligible": false
+}

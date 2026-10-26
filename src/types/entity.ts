@@ -1,5 +1,5 @@
 export type CompanionState = 'IDLE' | 'WALKING' | 'SITTING' | 'LOOKING' | 'SLEEPING' | 'DRAGGING' | 'REACTING';
-export type PipState = 'SPAWNING' | 'ROAMING' | 'ENGAGED' | 'DESPAWNING';
+export type PipState = 'SPAWNING' | 'ROAMING' | 'SLEEPING' | 'ENGAGED' | 'DESPAWNING';
 export interface Entity { x: number; y: number; state: CompanionState | PipState; facing: number }
 export interface MonsterIdentity {monsterCode:string;assetIdentity:string;rarity:string;level:number;encounterId:string|null;movementProfile:string}
 export interface Snapshot { animation?:{moa:number;pip:number;jump?:import('../animation/jump').JumpSample|null;floating?:import('../animation/flying').FlightMotion|null;flight?:import('../animation/flying').FlightMotion|null}; bond?:{busy:boolean;feedback:string|null;nextAvailableAt:string|null}; monster?:MonsterIdentity|null; moa: Entity; pip: Entity | null; menu: boolean; game?: GamePresentation; visual?: Visual; identity?: CompanionIdentity|null; evolution?: EvolutionPresentation; items?: ItemPresentation; dex?:CollectionDexPresentation; interaction?:'DEX'|'ENCOUNTER'|'EVOLUTION'|'SHOP'|'INVENTORY'|'BATTLE_ITEMS' }

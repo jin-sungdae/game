@@ -10,7 +10,9 @@ const {BaseAssetLoader,rendererSource}=require(path.join(root,'assets/base.js'))
 const {directionScale}=require(path.join(root,'animation/model.js'));
 const slugs='pip mello mossy chirp bubu pebb puff tikki mimi wisp shade ember lunet nova noct'.split(' ');
 test('exact fifteen delivery paths, PIP unchanged, provisional content remains separate',()=>{
- assert.equal(Object.keys(monsterRegistry).length,15);
+ assert.equal(Object.keys(monsterRegistry).length,16);
+ assert.equal(monsterRegistry.CAPLET.alphaDelivery,false);
+ assert.equal(monsterRegistry.CAPLET.assetRoot,'/assets/monsters/caplet');
  for(const slug of slugs) {
   const definition=resolveMonster(slug.toUpperCase());
   assert.equal(definition.assetRoot,`/assets/monsters/${slug}`);
@@ -74,7 +76,8 @@ test('bottom center and RIGHT source survive facing and source switch without ne
 test('confirmed content and delivery identities match; successful image loads never activate gameplay',async()=>{
  const {monsterDex}=require(path.join(root,'entities/monsterDex.js'));
  const alpha=monsterDex.filter(m=>m.alphaCandidate);
- assert.deepEqual(alpha.map(m=>m.monsterCode).sort(),Object.keys(monsterRegistry).sort());
+ assert.deepEqual(alpha.map(m=>m.monsterCode).sort(),Object.keys(monsterRegistry).filter(code=>monsterRegistry[code].alphaDelivery).sort());
+ assert.equal(monsterDex.some(m=>m.monsterCode==='CAPLET'),false);
  assert.deepEqual(alpha.map(m=>m.assetIdentity).sort(),[...slugs].sort());
  const before=JSON.stringify(monsterDex);
  const loader=new BaseAssetLoader(async()=>({width:256,height:256}));

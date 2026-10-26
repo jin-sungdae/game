@@ -1,0 +1,8 @@
+{
+  "tool": "builtin_image_gen",
+  "sourceBase": "design/production-batches/monsters/batch02/M011/base-v2.png",
+  "prompt": "Use case: identity-preserve. Asset type: Project LUMA M011 sky fox REST keypose candidate. The input is the existing M011 BASE and exact identity reference. Create one full-body awake resting pose: the same blue-white fox lies comfortably on its belly with front paws resting together, hind legs tucked naturally, tail curved gently beside the body, head upright and both eyes open. This is awake REST, not sleep. Preserve exact head and muzzle proportions, very large pointed ears with white inner tufts and cobalt outer edges, large blue eyes, cheek tufts, white chest ruff, blue-white coat marking locations, slender fox limbs, thick curled plume tail and painterly game sprite outline. Right-facing three-quarter view. No wings, horns, accessories or added anatomy. Isolated single character on a genuinely transparent RGBA background, 256x256 canvas, bottom-center contact anchor. Center the complete silhouette with at least 16 pixels of transparent margin. All empty background pixels must be fully transparent: no semitransparent haze, shadows, floating highlights, dust, glow, particles, detached marks, floor, text or border. Keep all painted detail connected to the character. One dedicated keypose only, not an animation or sheet. Original BASE remains unchanged; this is an unapproved design candidate.",
+  "productionEligible": false,
+  "repairIterations": 3,
+  "scope": "Independent REST first attempt; not recovery of existing failed action"
+}

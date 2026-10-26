@@ -1,0 +1,90 @@
+{
+  "source": "source-base-v1.png",
+  "normalization": "uniform fit 224px into 256px canvas, bottom margin16px; not animation",
+  "beforeBounds": [
+    21,
+    21,
+    232,
+    230
+  ],
+  "afterBounds": [
+    21,
+    21,
+    232,
+    230
+  ],
+  "removedDisconnectedLowAlphaPixels": [
+    [
+      224,
+      225,
+      2
+    ],
+    [
+      225,
+      225,
+      2
+    ],
+    [
+      226,
+      225,
+      1
+    ],
+    [
+      227,
+      225,
+      2
+    ],
+    [
+      228,
+      225,
+      4
+    ],
+    [
+      229,
+      225,
+      3
+    ],
+    [
+      60,
+      116,
+      1
+    ],
+    [
+      60,
+      117,
+      1
+    ],
+    [
+      202,
+      25,
+      1
+    ],
+    [
+      166,
+      27,
+      1
+    ],
+    [
+      78,
+      85,
+      1
+    ],
+    [
+      57,
+      120,
+      1
+    ],
+    [
+      73,
+      164,
+      1
+    ]
+  ],
+  "retainedDisconnectedComponents": [],
+  "connectedBodyPixelChanges": 0,
+  "bodyPixels": 24956,
+  "repairIteration": 1,
+  "productionEligible": false,
+  "gui": "NOT_VERIFIED",
+  "sha256": "4e611f9a49a25643a0b7015350ad20447665cec46bff3196ab78d4a192d4b637"
+}

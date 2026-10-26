@@ -1,0 +1,119 @@
+{
+  "status": "VALIDATION_FAILED",
+  "sourceSha256": "31edbc60f548d955e46d72d4ba13722bf3c84a065c1e78519c2e73644d142ffc",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 1254,
+    "height": 1254,
+    "mainPixels": 637050,
+    "mainBounds": [
+      69,
+      157,
+      1221,
+      1131
+    ],
+    "detachedPixels": 2032,
+    "detachedComponents": 499,
+    "detachedAlphaHistogram": {
+      "1": 2030,
+      "2": 2
+    },
+    "largestDetached": [
+      {
+        "n": 292,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          176,
+          1034,
+          206,
+          1056
+        ]
+      },
+      {
+        "n": 138,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          264,
+          1148,
+          274,
+          1175
+        ]
+      },
+      {
+        "n": 89,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          730,
+          1175,
+          743,
+          1189
+        ]
+      },
+      {
+        "n": 74,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          924,
+          23,
+          937,
+          31
+        ]
+      },
+      {
+        "n": 69,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          451,
+          1180,
+          463,
+          1187
+        ]
+      },
+      {
+        "n": 63,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          65,
+          964,
+          76,
+          973
+        ]
+      },
+      {
+        "n": 63,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          732,
+          1208,
+          739,
+          1243
+        ]
+      },
+      {
+        "n": 44,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1238,
+          1221,
+          1245,
+          1229
+        ]
+      }
+    ]
+  },
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "scope": "New dedicated turn raw source; no cleanup or normalization"
+}

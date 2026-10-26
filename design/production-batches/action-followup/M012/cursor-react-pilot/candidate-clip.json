@@ -1,0 +1,74 @@
+{
+  "conceptId": "M012",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M012/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    124,
+    48,
+    196,
+    142
+  ],
+  "parts": [
+    {
+      "name": "curious-crest-feather-attention",
+      "x": 171,
+      "y": 68,
+      "rx": 15,
+      "ry": 12,
+      "dx": 0.75,
+      "dy": -1,
+      "samples": [
+        0.04,
+        0.31,
+        0.87,
+        1,
+        0.53,
+        0.21,
+        0.1,
+        0.05
+      ]
+    },
+    {
+      "name": "folded-wing-covert-settle",
+      "x": 150,
+      "y": 124,
+      "rx": 20,
+      "ry": 11,
+      "dx": -0.65,
+      "dy": 0.7,
+      "samples": [
+        0.02,
+        0.07,
+        0.24,
+        0.66,
+        0.98,
+        0.78,
+        0.4,
+        0.1
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "Local crest and folded-wing covert response only. Beak, eyes, wing silhouette, ribbons, legs and perched feet stay fixed. No wingbeat, flight, landing or locomotion frames are claimed.",
+  "behaviorContract": "Existing PROPOSED curious/FLYING ribbon-wing bird catalog: quick crest attention followed by a short folded-wing settle while stationary; Native cursor and flight remain unconnected."
+}

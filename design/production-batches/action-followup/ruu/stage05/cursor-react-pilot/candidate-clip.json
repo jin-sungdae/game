@@ -1,0 +1,94 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 5,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage05/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 90,
+    "loop": false
+  },
+  "movableRect": [
+    33,
+    67,
+    201,
+    196
+  ],
+  "parts": [
+    {
+      "name": "primary-feather-alert",
+      "x": 84,
+      "y": 88,
+      "rx": 31,
+      "ry": 20,
+      "dx": -1.8,
+      "dy": -2.5,
+      "samples": [
+        0.03,
+        0.85,
+        1,
+        0.64,
+        0.33,
+        0.16,
+        0.08,
+        0.02
+      ]
+    },
+    {
+      "name": "secondary-fan-response",
+      "x": 118,
+      "y": 123,
+      "rx": 25,
+      "ry": 22,
+      "dx": -1,
+      "dy": -2,
+      "samples": [
+        0.01,
+        0.28,
+        0.83,
+        1,
+        0.72,
+        0.39,
+        0.18,
+        0.04
+      ]
+    },
+    {
+      "name": "tail-feather-counterbalance",
+      "x": 70,
+      "y": 179,
+      "rx": 28,
+      "ry": 17,
+      "dx": -0.7,
+      "dy": 1.1,
+      "samples": [
+        0.01,
+        0.03,
+        0.13,
+        0.42,
+        0.82,
+        1,
+        0.57,
+        0.05
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate only; no Native event or gameplay activation",
+  "anatomyScope": "Final-stage layered wing contour alerts quickly, secondary fan follows, tail feathers settle. Head, eyes, crest and feet fixed. Stationary cursor reaction, not flight, turning or locomotion.",
+  "behaviorContract": "RUU Sky/Explorer: fast feather response with staged recovery. Existing Native cursor and flight logic unchanged; final natural motion requires review.",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold change"
+}

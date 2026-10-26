@@ -1,0 +1,94 @@
+{
+  "conceptId": "M022",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M022/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 145,
+    "loop": false
+  },
+  "movableRect": [
+    27,
+    92,
+    219,
+    198
+  ],
+  "parts": [
+    {
+      "name": "guarded-shoulder-soften",
+      "x": 174,
+      "y": 145,
+      "rx": 25,
+      "ry": 30,
+      "dx": -1.2,
+      "dy": 1.1,
+      "samples": [
+        0.01,
+        0.09,
+        0.35,
+        0.73,
+        1,
+        0.76,
+        0.39,
+        0.05
+      ]
+    },
+    {
+      "name": "curled-tail-acknowledgement",
+      "x": 63,
+      "y": 120,
+      "rx": 29,
+      "ry": 25,
+      "dx": 1.5,
+      "dy": -1.3,
+      "samples": [
+        0.01,
+        0.03,
+        0.11,
+        0.31,
+        0.65,
+        1,
+        0.67,
+        0.08
+      ]
+    },
+    {
+      "name": "armored-haunch-settle",
+      "x": 118,
+      "y": 161,
+      "rx": 24,
+      "ry": 25,
+      "dx": 0.9,
+      "dy": 0.7,
+      "samples": [
+        0.01,
+        0.02,
+        0.09,
+        0.25,
+        0.58,
+        0.96,
+        0.73,
+        0.06
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot interaction candidate; no gameplay event or trust/bond change",
+  "anatomyScope": "Grounded guarded acknowledgement: shoulder relaxes, lower curled tail contour responds later, armored haunch settles. Face, head spikes, upper tail and planted paws remain fixed. Local RGBA silhouette motion, not a head turn or locomotion.",
+  "behaviorContract": "Preserve existing M022 concept identity; restrained stationary acknowledgement proposed for review, no personality or movement policy activated.",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold change"
+}

@@ -1,0 +1,94 @@
+{
+  "conceptId": null,
+  "species": "nox",
+  "evolutionStage": 2,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/nox/stage02/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 110,
+    "loop": false
+  },
+  "movableRect": [
+    85,
+    114,
+    214,
+    191
+  ],
+  "parts": [
+    {
+      "name": "cautious-flank-brace",
+      "x": 137,
+      "y": 160,
+      "rx": 31,
+      "ry": 24,
+      "dx": -2.2,
+      "dy": 1.2,
+      "samples": [
+        0.02,
+        0.5,
+        1,
+        0.91,
+        0.75,
+        0.39,
+        0.17,
+        0.05
+      ]
+    },
+    {
+      "name": "neck-ruff-recoil",
+      "x": 185,
+      "y": 137,
+      "rx": 23,
+      "ry": 22,
+      "dx": -1.2,
+      "dy": -2.5,
+      "samples": [
+        0.01,
+        0.27,
+        0.87,
+        1,
+        0.88,
+        0.52,
+        0.22,
+        0.06
+      ]
+    },
+    {
+      "name": "tail-root-settle",
+      "x": 101,
+      "y": 160,
+      "rx": 16,
+      "ry": 23,
+      "dx": -1,
+      "dy": 0.8,
+      "samples": [
+        0.01,
+        0.04,
+        0.24,
+        0.61,
+        0.93,
+        1,
+        0.63,
+        0.09
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot impact candidate; only server-authoritative battle events may trigger production HIT after separate approval",
+  "anatomyScope": "Stage 2 cautious braced impact through flank, neck ruff and tail root. Face, eyes, ears, tail crest/outer curl and paws remain fixed; actual local fur outline moves. Not a full tail swing, escape movement or battle execution.",
+  "behaviorContract": "Existing NOX Night/Mystic cautious direction: held brace and delayed tail-root settle; no gameplay or behavior policy changes.",
+  "alphaPolicy": "Anatomical part silhouette changes via existing inverse-sampling rig. Fixed regions and outer canvas bounds remain unchanged; existing PNG validator unchanged."
+}

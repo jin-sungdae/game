@@ -35,3 +35,16 @@ Project LUMA Parallel Development Protocol v1을 모든 병렬 Track에 적용�
 12. 각 Track의 PR은 Draft로 생성한다.
 13. 자동 merge를 하지 않는다.
 14. 최종 통합 시 전체 Release Gate를 재실행한다.
+
+## Continuous Creature Development
+
+- 기존 `design/creature-production-queue.json`을 유일한 Completion Ledger로 사용한다. 완료된 구현과 후보를 재제작하지 않는다.
+- 작업 전 최신 main, PR HEAD/CI, stacked 의존성, 기존 Artwork/Manifest/Runtime 계약을 확인한다. 기존 worktree와 실패 원본을 보존한다.
+- 기존 Artwork와 Part Rigging을 재사용할 수 있고 독립적으로 검증 가능한 미완료 작업을 우선한다. 승인 대기·실패 복구와 독립적인 신규 작업을 구분한다.
+- 제작 → 기존 Validator → Animation regression → 기존 Creature Review Catalog → 승인된 자산의 Runtime 연결 → Ledger 갱신 순서로 진행하고, 이후 다음 미완료 작업을 선택한다.
+- 자동 검증 가능한 항목은 자체 처리한다. PNG PASS를 외형 승인·Production 등록·Native GUI PASS로 간주하지 않는다.
+- HUMAN_REVIEW_REQUIRED 후보는 기존 일괄 검토 화면에 모은다. 승인되지 않은 Artwork 및 Spawn/Rarity/Capture/Skill 계약은 활성화하지 않는다.
+- 기존 PR 단위 자동 수정 최대 3회를 유지한다. 신규 작업·세션·커밋으로 한도를 초기화하거나 실패 복구를 우회하지 않는다. 한도 후 실패는 BLOCKED + HUMAN_REVIEW_REQUIRED로 보존한다.
+- 기존 집계 도구의 `--refresh-inventory`, `--refresh-coverage`를 사용해 실제 파일과 Ledger를 대조한다. 실패 원인과 실제 실행한 검증 결과를 기록한다.
+- PR 생성·업데이트만으로 전체 개발을 완료 처리하지 않는다. 안전한 실행 시간과 컨텍스트 범위에서 독립 작업을 계속한다.
+- 종료 시 기존 Ledger에 마지막 완료 작업, 마지막 검증 commit, 진행 중 작업, blocker, 다음 실행 작업, Release Gate 및 GUI 상태를 기록한다. 다음 실행은 그 지점부터 재개한다.

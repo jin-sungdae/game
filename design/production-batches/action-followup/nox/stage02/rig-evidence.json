@@ -1,0 +1,60 @@
+{
+  "source": "public/assets/creatures/nox/stage02/base.png",
+  "eyes": [
+    {
+      "x": 213.5,
+      "y": 96,
+      "rx": 4,
+      "ry": 3.3,
+      "dx": 0.65
+    }
+  ],
+  "frames": [
+    {
+      "file": "look_00.png",
+      "gaze": 0.08,
+      "pixelSha256": "f0a6498a2e68bee04d3296911f412679b8259130cfb5990204f0df5a44f57afa"
+    },
+    {
+      "file": "look_01.png",
+      "gaze": 0.35,
+      "pixelSha256": "2509c52a800511498bd40a31486ad3b20633ca06e864b626f1df657c2890b941"
+    },
+    {
+      "file": "look_02.png",
+      "gaze": 0.82,
+      "pixelSha256": "542ff906748d33b78208a861ba79926f11984bd9c93bebc79b7d25ce4209e96c"
+    },
+    {
+      "file": "look_03.png",
+      "gaze": 0.6,
+      "pixelSha256": "9f5346787ddf5cb67bc8290ba7d716d0f31fa3efdce66656d0341b0b10a5dc7f"
+    },
+    {
+      "file": "look_04.png",
+      "gaze": -0.1,
+      "pixelSha256": "96beaa4d1ba942e62272402257b690364f44224c71968b4d4a1417422aca0ee9"
+    },
+    {
+      "file": "look_05.png",
+      "gaze": -0.42,
+      "pixelSha256": "5b59eaf266ba7c3b60a7a58fd7ed8d2bb19ac425f8fcf1daa926c1a76105db04"
+    },
+    {
+      "file": "look_06.png",
+      "gaze": -0.76,
+      "pixelSha256": "fa822a13b56d8cab9f56ea70629ce09d573cb59612b9eecf881ce447f0521058"
+    },
+    {
+      "file": "look_07.png",
+      "gaze": -0.3,
+      "pixelSha256": "c1890cec2de1bc9acc25fffc896723ade1290aee3c9ab3a4d13b3ee1fc2eb450"
+    }
+  ],
+  "alphaPolicy": "unchanged",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairScope": "PR #114; no reset or failure recovery"
+}

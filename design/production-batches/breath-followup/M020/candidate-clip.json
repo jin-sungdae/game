@@ -1,0 +1,30 @@
+{
+  "conceptId": "M020",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M020/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 760,
+    "loop": true
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "candidate preview only",
+  "anatomyScope": "broad cloud torso and heavy shoulder breathing; face, hands and grounded feet fixed",
+  "movementPolicy": "Existing concept proposal only; no native activation",
+  "proposedMovementProfile": {
+    "status": "PROPOSED",
+    "value": "FLOATING"
+  }
+}

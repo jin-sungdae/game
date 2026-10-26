@@ -1,0 +1,107 @@
+{
+  "reference": "public/assets/creatures/moa/stage05/base.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "near-collar-leaf-greeting",
+      "x": 185,
+      "y": 131,
+      "rx": 17,
+      "ry": 17,
+      "dx": 0.7,
+      "dy": -1.2,
+      "samples": [
+        0.04,
+        0.14,
+        0.36,
+        0.68,
+        1,
+        0.7,
+        0.3,
+        0.08
+      ]
+    },
+    {
+      "name": "lower-collar-settle",
+      "x": 195,
+      "y": 145,
+      "rx": 12,
+      "ry": 10,
+      "dx": -0.4,
+      "dy": 0.65,
+      "samples": [
+        0.02,
+        0.05,
+        0.12,
+        0.28,
+        0.62,
+        0.94,
+        0.52,
+        0.1
+      ]
+    }
+  ],
+  "protectedRegions": "y>=161||y<=106||x<=157||x>=218",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "13f3c19b21e322618bea2813912cd1a1add855e789407328a3f6e4535e747f0a",
+      "changedPixels": 346,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.05556799478166806
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "19e4bf14d0b3adefab568a0e3202d945fcbd6c0f67669c47b33721436ff64b4a",
+      "changedPixels": 554,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.1944179121080514
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "19dae084817685d2472d06ffb6724db51efb4f243f633e51a620baeeb998f192",
+      "changedPixels": 716,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.49883721522140306
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "5d1797083372dc7fbd86625a010b54b4801ea2d8b4438004e5c8f17886e4d904",
+      "changedPixels": 792,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.94213855545394
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "e405c5cfc5205e530db58cbe1473aca40e20a2a417c23a6fb9e1d45326086d7e",
+      "changedPixels": 845,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.3873715981260129
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "b9b3b3338c2bd07f23c7ff0a62a6c2d41ea85ea38f37c9febb5e78f1ed39fb29",
+      "changedPixels": 832,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.9697971265001949
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "038c59afdd9aec9235b4668354ac127979e55fa9b3e0804ab23c515a48b9f221",
+      "changedPixels": 757,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.4160249743934628
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "9f7a578929e13386306f739d50d01942b9f1aff0ccb9ba5763cd86de969d45c2",
+      "changedPixels": 531,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.11112530570257956
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #114; independent first attempt; no failure recovery",
+  "productionEligible": false
+}

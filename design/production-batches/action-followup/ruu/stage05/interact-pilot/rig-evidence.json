@@ -1,0 +1,107 @@
+{
+  "reference": "public/assets/creatures/ruu/stage05/base.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "near-wing-secondary-feather-ruffle",
+      "x": 111,
+      "y": 96,
+      "rx": 21,
+      "ry": 11,
+      "dx": -1.1,
+      "dy": -0.55,
+      "samples": [
+        0.03,
+        0.24,
+        0.72,
+        1,
+        0.66,
+        0.33,
+        0.13,
+        0.05
+      ]
+    },
+    {
+      "name": "lower-wing-covert-follow-through",
+      "x": 139,
+      "y": 118,
+      "rx": 15,
+      "ry": 11,
+      "dx": 0.75,
+      "dy": 0.8,
+      "samples": [
+        0.02,
+        0.07,
+        0.19,
+        0.52,
+        0.94,
+        1,
+        0.51,
+        0.1
+      ]
+    }
+  ],
+  "protectedRegions": "y>=134||y<=77||x<=85||x>=164",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "974b87c163a2c08275e5117efeb8f05d6280cea4828702b8ee1aedcda8f2ad60",
+      "changedPixels": 274,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.0368945992788432
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "82f543590a807bfda0b3b229548f86ff3914f18a87610c474a70fbc473917197",
+      "changedPixels": 685,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.2948940849740574
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "88ba3de6396942be61bab02d0e6a337f87fbd84675c881b1efab371a05672059",
+      "changedPixels": 844,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8818048892529438
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "0dd94c3cb726a356b983046467b1180d34058203a8357006c8958f18fcc81cc7",
+      "changedPixels": 918,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.2235213561943694
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "f323b424bb2e9675da7c8ce68d85c741adf07d974effd5e1ede8d52d6d957495",
+      "changedPixels": 923,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.027983311206928
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "2e633aabbba0ea398e5b50e563e711d9b8c3d333c02c2fe566cd82191828ca2b",
+      "changedPixels": 869,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.0945591266398753
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "4240f5459db5bb748e0cbc03f68f14606baec61807719c8d3355aebc54df45be",
+      "changedPixels": 737,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.5559068460805179
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "5f00f0178219240717c1fcac781f16b48996f2b9cb0e87bfa70448fc561d9a9c",
+      "changedPixels": 505,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.10963295020053714
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #114; independent first attempt; no failure recovery",
+  "productionEligible": false
+}

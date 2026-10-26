@@ -1,0 +1,8 @@
+{
+  "tool": "builtin_image_gen",
+  "sourceBase": "design/production-batches/monsters/batch02/M020/base-v2.png",
+  "prompt": "Use case: identity-preserve\nAsset type: LUMA M020 dedicated REST keypose, single transparent game sprite.\nInput image is the exact current BASE identity. Preserve the same friendly stocky blue-and-white cloud gorilla, round small ears, black eyes, small muzzle, white beard/chest cloud curls, blue forearms and fingers, broad shoulders, huge hands, short sturdy feet. Keep color palette, face proportions and connected fluffy cloud anatomy.\nNew posture: awake seated rest. The heavy body settles onto its haunches, both knees visibly bent forward, each broad hand relaxed on the ground beside its own foot. Shoulders drop gently, elbows bent, face alert and eyes open, small calm smile. Distinct from the standing/knuckle-braced BASE and from sleep; do not close eyes or flatten the creature. Keep two arms and two legs, natural joint positions.\nOne full-body character centered in a square transparent RGBA canvas for 256x256 delivery. Generous transparent safety margin, entire silhouette inside. Keep ground contact near y220 at 256 scale. No detached cloud wisps or particles: all fur/cloud curls must connect to the actual body. Opaque interior and only a narrow antialiased edge. Outside the connected character, exact alpha zero, no haze, glow, shadow, dust, outlines floating off the body, text, scenery, grid or border. Preserve polished painted fantasy sprite style. Not a sprite sheet.",
+  "productionEligible": false,
+  "repairIterations": 3,
+  "scope": "Independent awake seated REST first attempt; raw preserved; no alpha cleanup"
+}

@@ -1,0 +1,127 @@
+{
+  "status": "VALIDATION_FAILED",
+  "failureTypes": [
+    "ALPHA_DEFECT",
+    "APPEARANCE_REVIEW_REQUIRED"
+  ],
+  "inspectionStage": "ORIGINAL_BEFORE_NORMALIZATION",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 1254,
+    "height": 1254,
+    "mainPixels": 550681,
+    "mainBounds": [
+      153,
+      13,
+      1210,
+      1142
+    ],
+    "detachedPixels": 842,
+    "detachedComponents": 340,
+    "detachedAlphaHistogram": {
+      "1": 839,
+      "2": 3
+    },
+    "largestDetached": [
+      {
+        "n": 62,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          111,
+          595,
+          122,
+          604
+        ]
+      },
+      {
+        "n": 59,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          210,
+          803,
+          218,
+          815
+        ]
+      },
+      {
+        "n": 53,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          903,
+          96,
+          915,
+          106
+        ]
+      },
+      {
+        "n": 36,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          113,
+          339,
+          122,
+          345
+        ]
+      },
+      {
+        "n": 33,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          117,
+          955,
+          125,
+          964
+        ]
+      },
+      {
+        "n": 16,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1148,
+          956,
+          1155,
+          962
+        ]
+      },
+      {
+        "n": 13,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1004,
+          1062,
+          1006,
+          1069
+        ]
+      },
+      {
+        "n": 12,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1008,
+          1062,
+          1010,
+          1068
+        ]
+      }
+    ]
+  },
+  "sourceSha256": "e3619d270dbe187b8157d8a496210b883acd5b3aead9ac95cdb9271a0b47dcd4",
+  "pngErrors": [
+    "dimensions must be 256x256"
+  ],
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "animationClipComplete": false,
+  "frames": 0,
+  "productionEligible": false,
+  "appearanceObservations": "Both wings open and legs retract: genuine airborne silhouette. Longer primary feathers and larger wing proportions than folded BASE require review; same beak, crest and violet palette are visually recognizable, not identity approval.",
+  "blockReason": "BLOCKED + HUMAN_REVIEW_REQUIRED; raw detached alpha842; no normalization, threshold cleanup or retry at PR repair limit3/3."
+}

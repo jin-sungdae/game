@@ -1,0 +1,94 @@
+{
+  "conceptId": "M060",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M060/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    37,
+    133,
+    213,
+    216
+  ],
+  "parts": [
+    {
+      "name": "fox-alert-shoulder",
+      "x": 170,
+      "y": 169,
+      "rx": 24,
+      "ry": 23,
+      "dx": 1.7,
+      "dy": -1.5,
+      "samples": [
+        0.02,
+        1,
+        0.8,
+        0.5,
+        0.3,
+        0.17,
+        0.08,
+        0.025
+      ]
+    },
+    {
+      "name": "seated-foreleg-brace",
+      "x": 179,
+      "y": 193,
+      "rx": 18,
+      "ry": 20,
+      "dx": -1.1,
+      "dy": -0.8,
+      "samples": [
+        0.01,
+        0.4,
+        1,
+        0.75,
+        0.5,
+        0.28,
+        0.12,
+        0.035
+      ]
+    },
+    {
+      "name": "fluffy-tail-answer",
+      "x": 73,
+      "y": 178,
+      "rx": 27,
+      "ry": 31,
+      "dx": -1.9,
+      "dy": 1.1,
+      "samples": [
+        0.01,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0.045
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Seated desert fox with large ears, four paws and fluffy curled tail. Ears/face/feet fixed; attentive shoulder lift, foreleg brace and delayed tail answer.",
+  "behaviorContract": "Proposed exploratory GROUND fox; local cursor response candidate, no native selection activation",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes"
+}

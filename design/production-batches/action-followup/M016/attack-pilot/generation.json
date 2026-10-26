@@ -1,0 +1,8 @@
+{
+  "tool": "builtin_image_gen",
+  "sourceBase": "design/production-batches/monsters/batch02/M016/base-v2.png",
+  "prompt": "Use case: identity-preserve.\nAsset type: LUMA M016 ATTACK dedicated keypose candidate, single transparent 256x256 game sprite.\nThe input is the exact existing M016 BASE. Keep the round blue bird's large blue eye, pale cream short rounded beak, swept blue-and-white crest, compact body, blue/white feather pattern, curled blue tail, small dark blue feet and youthful proportions.\nCreate a right-facing grounded PECK ATTACK impact pose: body leaning forward, neck extending toward the right, beak pointed forward and slightly down, both feet planted and bracing, wings slightly spread for balance with believable folded-feather structure. Clear real posture change from the standing reference. Alert playful expression, no angry monster redesign. One right-facing three-quarter side-view character only.\nKeep the full creature inside the canvas with at least 20px clear margin, including all crest, wing, tail and toe tips. Bottom-center grounded contact. No other targets or impact effects.\nReal transparent RGBA background, clean antialiased connected character edges, exact alpha zero outside silhouette. No dust, loose specks, sparkles, glow, haze, detached marks, shadow, floor, text, border or sheet grid. Same painterly game-sprite rendering as reference.\nPreserve BASE identity; this first pose is not approval of gameplay damage, skill or Production registration.",
+  "productionEligible": false,
+  "repairIterations": 3,
+  "scope": "Independent ATTACK first attempt; no recovery of previous failed action"
+}

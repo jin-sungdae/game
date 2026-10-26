@@ -1,0 +1,30 @@
+{
+  "conceptId": "M019",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M019/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 420,
+    "loop": true
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "candidate preview only",
+  "anatomyScope": "small upright torso and arm-root breathing; eyes, ears, tail tip and planted feet fixed",
+  "movementPolicy": "Existing concept proposal only; no native activation",
+  "proposedMovementProfile": {
+    "status": "PROPOSED",
+    "value": "JUMP"
+  }
+}

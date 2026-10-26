@@ -9,12 +9,20 @@ class BaseAssetTests(unittest.TestCase):
     def test_optional_missing_bases(self):
         errors,pending=validator.validate_bases(self.root)
         self.assertEqual(errors,[])
-        self.assertEqual(len(pending),7)
+        self.assertEqual(len(pending),13)
+        for path in ('public/assets/creatures/moa/stage01/base.png',
+                     'public/assets/monsters/pip/base.png',
+                     'public/assets/monsters/caplet/base.png'):
+            self.assertIn(f'{path}: base NOT_SUPPLIED',pending)
 
-    def test_strict_requires_only_moa_pip(self):
+    def test_strict_requires_moa_pip_and_approved_caplet(self):
         errors,pending=validator.validate_bases(self.root,True)
-        self.assertEqual(len(errors),2)
-        self.assertEqual(len(pending),5)
+        self.assertCountEqual(errors,[
+            'public/assets/creatures/moa/stage01/base.png: base NOT_SUPPLIED',
+            'public/assets/monsters/pip/base.png: base NOT_SUPPLIED',
+            'public/assets/monsters/caplet/base.png: base NOT_SUPPLIED',
+        ])
+        self.assertEqual(len(pending),10)
 
     def test_wrong_filename(self):
         (self.stage/'base.PNG').touch()

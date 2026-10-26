@@ -1,0 +1,116 @@
+{
+  "reference": "design/production-batches/monsters/batch02/M013/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "cautious-flipper-flinch",
+      "x": 88,
+      "y": 159,
+      "rx": 29,
+      "ry": 26,
+      "dx": -2.4,
+      "dy": -2.2,
+      "samples": [
+        0.03,
+        0.87,
+        1,
+        0.62,
+        0.36,
+        0.2,
+        0.1,
+        0.04
+      ]
+    },
+    {
+      "name": "round-breast-compression",
+      "x": 170,
+      "y": 177,
+      "rx": 26,
+      "ry": 22,
+      "dx": -1,
+      "dy": 2.2,
+      "samples": [
+        0.02,
+        0.36,
+        0.94,
+        1,
+        0.64,
+        0.34,
+        0.16,
+        0.05
+      ]
+    }
+  ],
+  "protectedRegions": "y>=202||y<=126||x<=56||x>=207",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "1605ee108ae16e8c0bc6cc739dafb02b974b24795cb99a9209a8b1b03156224b",
+      "changedPixels": 577,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 47,
+      "maxInverseDisplacementPixels": 0.09766922955789478
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "c6e4b96b8bc3e3b5da23fbad0ee2e939f3e58e4054569cee2c04576ebd1cd29b",
+      "changedPixels": 2472,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 474,
+      "maxInverseDisplacementPixels": 2.8323435448494485
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "5524e31b54feb31bffc8d646f4b7127049664de4ad75d730777d0c970a0b529c",
+      "changedPixels": 2779,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 638,
+      "maxInverseDisplacementPixels": 3.2533544914498305
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "d44a506f93c29db95522bce73c35f96e916d3571d87f2b07af97d96de36ddf94",
+      "changedPixels": 2678,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 552,
+      "maxInverseDisplacementPixels": 2.4160133386368834
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "ccd1551d4a402e2272769fde46c8deb4eae66cae9a5f591a484d3a6f690c5da2",
+      "changedPixels": 2432,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 386,
+      "maxInverseDisplacementPixels": 1.544158338854998
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "191c8af670a1f345d8c5ea675333632c015b9bd9202a49edd83eb0435a0d9cf2",
+      "changedPixels": 2048,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 207,
+      "maxInverseDisplacementPixels": 0.8209014356615753
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "8fde21fa46ed44e3b09525527feefdfcd0081cfa36020350b82bdbe64607999f",
+      "changedPixels": 1522,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 111,
+      "maxInverseDisplacementPixels": 0.3863172896293482
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "ba8ca1ef908a93d038a035b671fb056426e224b57799e1e966a6dde8216de2a9",
+      "changedPixels": 808,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 63,
+      "maxInverseDisplacementPixels": 0.13022180917720003
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

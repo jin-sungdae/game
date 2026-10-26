@@ -1,0 +1,154 @@
+{
+  "reference": "design/production-batches/monsters/batch03/M027/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "armored-neck-recoil",
+      "x": 204,
+      "y": 147,
+      "rx": 29,
+      "ry": 32,
+      "dx": -3.4,
+      "dy": 1.4,
+      "samples": [
+        0.02,
+        0.74,
+        1,
+        0.81,
+        0.52,
+        0.28,
+        0.12,
+        0.03
+      ]
+    },
+    {
+      "name": "shoulder-brace",
+      "x": 161,
+      "y": 165,
+      "rx": 32,
+      "ry": 24,
+      "dx": -2.4,
+      "dy": 1.8,
+      "samples": [
+        0.01,
+        0.42,
+        0.91,
+        1,
+        0.74,
+        0.47,
+        0.2,
+        0.04
+      ]
+    },
+    {
+      "name": "tail-counter-curl",
+      "x": 55,
+      "y": 140,
+      "rx": 27,
+      "ry": 27,
+      "dx": 1.7,
+      "dy": -1.5,
+      "samples": [
+        0.01,
+        0.04,
+        0.26,
+        0.69,
+        1,
+        0.83,
+        0.39,
+        0.06
+      ]
+    },
+    {
+      "name": "crest-follow-through",
+      "x": 160,
+      "y": 103,
+      "rx": 27,
+      "ry": 24,
+      "dx": -1.4,
+      "dy": 1.1,
+      "samples": [
+        0.01,
+        0.13,
+        0.58,
+        0.96,
+        1,
+        0.63,
+        0.29,
+        0.05
+      ]
+    }
+  ],
+  "protectedRegions": "y>=190||y<=70||x<=25||x>=230",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "e5ab4bfa667e45600c19c063cf50d4840dbd8f738bd4cb52e676c4a060f3a6d8",
+      "changedPixels": 1720,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 425,
+      "maxInverseDisplacementPixels": 0.07353772339211427
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "28a058f210a10e00b518669a3433ba2b8828c3948ff671af17a0232a4400184a",
+      "changedPixels": 4726,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1149,
+      "maxInverseDisplacementPixels": 2.7186438808718623
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "88dc6ed869f47c0c33cee249e8368fc589e2aa0696f68c6bbe9474969ac25fa9",
+      "changedPixels": 5709,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1688,
+      "maxInverseDisplacementPixels": 3.6731833882018154
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "a2b109e08455a28a898a4aa72773750a73fadfbf68500d2839d94a5abc71f6ed",
+      "changedPixels": 5971,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1843,
+      "maxInverseDisplacementPixels": 2.9979729614292294
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "656cea0eb23b4921c53c2558f6cd59c1eb7c530991298ce567dd0e2810144c7d",
+      "changedPixels": 5918,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1814,
+      "maxInverseDisplacementPixels": 2.2639922874082807
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "18a52d8e79e892e9d1e2b381b44c80e624d2da3d846cd7fc85c6e81a0789a2e0",
+      "changedPixels": 5615,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1629,
+      "maxInverseDisplacementPixels": 1.8799805888417778
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "1e7ac76ad55e5173a995f0b9d90ea8dc52e97fa72e49a85915f4729fdb0f2dba",
+      "changedPixels": 4887,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1301,
+      "maxInverseDisplacementPixels": 0.8831476548542991
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "09512fa844e4302c783c5a067986373f4ee7eaff61cf0c90afb072ea9b69bf3c",
+      "changedPixels": 3003,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 679,
+      "maxInverseDisplacementPixels": 0.1360190520375455
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

@@ -1,0 +1,154 @@
+{
+  "reference": "design/production-batches/monsters/batch05/M041/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "stag-shoulder-recoil",
+      "x": 174,
+      "y": 145,
+      "rx": 22,
+      "ry": 27,
+      "dx": -2.4,
+      "dy": 1.5,
+      "samples": [
+        0.02,
+        0.9,
+        1,
+        0.67,
+        0.39,
+        0.2,
+        0.08,
+        0.025
+      ]
+    },
+    {
+      "name": "foreleg-brace",
+      "x": 179,
+      "y": 190,
+      "rx": 18,
+      "ry": 18,
+      "dx": -1.5,
+      "dy": -0.7,
+      "samples": [
+        0.01,
+        0.38,
+        0.9,
+        1,
+        0.75,
+        0.4,
+        0.17,
+        0.035
+      ]
+    },
+    {
+      "name": "flank-follow-through",
+      "x": 127,
+      "y": 151,
+      "rx": 26,
+      "ry": 21,
+      "dx": -1.5,
+      "dy": 1,
+      "samples": [
+        0.01,
+        0.18,
+        0.68,
+        1,
+        0.9,
+        0.54,
+        0.25,
+        0.045
+      ]
+    },
+    {
+      "name": "ice-tail-counterbalance",
+      "x": 72,
+      "y": 166,
+      "rx": 24,
+      "ry": 21,
+      "dx": 1.5,
+      "dy": -1.3,
+      "samples": [
+        0.01,
+        0.06,
+        0.3,
+        0.72,
+        1,
+        0.83,
+        0.38,
+        0.055
+      ]
+    }
+  ],
+  "protectedRegions": "y>=211||y<=106||x<=43||x>=213",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "b6b50582e69cf21acff47d24af2f6a6d2b21c32aba9144082143e7bd4bec3337",
+      "changedPixels": 881,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 66,
+      "maxInverseDisplacementPixels": 0.05660286883138953
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "3b8e9bbaa254dbb14633ae0057415336701354838ebb38596d7f1acf6f5ad0f3",
+      "changedPixels": 3072,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 438,
+      "maxInverseDisplacementPixels": 2.5455007003428536
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "0da372c112564f73eaa8a7dbccd1ee63f3da99f1c5f05e37a5843868a39097bc",
+      "changedPixels": 3921,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 671,
+      "maxInverseDisplacementPixels": 2.824580892961098
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "08c993cb8e0d29ebf78402bf3bd3dd63595748f4c1332347ce42e0a13f5322e8",
+      "changedPixels": 4078,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 765,
+      "maxInverseDisplacementPixels": 1.894410298764409
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "dab5a20147b4cd2ed3b21349769b921ea0ad374c1e0bea8571077e0bc9f09e9b",
+      "changedPixels": 3960,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 736,
+      "maxInverseDisplacementPixels": 1.9811949067602503
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "bf26b359a6ac69c8484eee64a1480c27f889399c6b429cd8d348c545aa8bfeab",
+      "changedPixels": 3606,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 620,
+      "maxInverseDisplacementPixels": 1.6469205466165489
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "0b30ae14ad209a77a7df0cfd36dcc690657fe5d79299eb83e8de47a2488b4012",
+      "changedPixels": 2987,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 457,
+      "maxInverseDisplacementPixels": 0.7523031177729743
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "5fbc49ff3e9340ce85d3bb33477e86a131604b66e0ddfd2575ca99506d582e9c",
+      "changedPixels": 1710,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 204,
+      "maxInverseDisplacementPixels": 0.10916421733150412
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "PR #114 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

@@ -1,0 +1,41 @@
+{
+  "conceptId": "M002",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M002/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 6,
+    "frameDuration": 85,
+    "loop": true
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review loop only; no live event or gameplay registration",
+  "anatomyScope": "eye interiors only; alpha, outline, head, torso, limbs and feet unchanged",
+  "eyes": [
+    {
+      "x": 173,
+      "y": 105,
+      "rx": 7,
+      "ry": 7
+    },
+    {
+      "x": 192,
+      "y": 107,
+      "rx": 2.5,
+      "ry": 5
+    }
+  ]
+}

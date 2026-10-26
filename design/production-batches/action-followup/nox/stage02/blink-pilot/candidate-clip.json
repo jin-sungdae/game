@@ -1,0 +1,35 @@
+{
+  "conceptId": null,
+  "species": "nox",
+  "evolutionStage": 2,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/nox/stage02/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 6,
+    "frameDuration": 130,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 213.5,
+      "y": 96,
+      "rx": 4,
+      "ry": 3.3
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review only; no gameplay frequency change",
+  "anatomyScope": "NOX Stage 2 quiet blink of the visible narrow eye; ears, muzzle, mane, body, tail and planted paws fixed"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "reference": "design/visual-reference-v1/companions-concept.png",
+  "prompts": {
+    "stage2": "Create ONE standalone transparent RGBA companion BASE sprite matching NOX Stage2 VEIL in attached Project LUMA concept, bottom purple row second evolution. Faithful identity: slender young dark violet/black quadruped fox-deer-like mystic creature, pointed long ears, small golden forehead accent, bright violet eyes, layered violet shoulder tufts and long violet plume tail. Stage2 young but taller than Stage1, not the large armored late stage. Facing RIGHT in neutral planted four-paw standing pose. All limbs readable, head and paws unobscured. Entire body within square with ten percent transparent margin. Clean painted game sprite readable at256px with crisp antialiased transparency. No ground, shadow, magical glow haze, detached particles, text, borders or background. Match reference anatomy and proportions, do not invent horns or extra limbs. Redraw individual character, do not crop the concept. Intended for localized breathing rig, not whole-image transform.",
+    "stage3": "One genuine transparent RGBA standalone game companion base sprite: NOX Stage3 PHANTOM, bottom row THIRD evolution of attached Project LUMA concept. Preserve that precise identity and silhouette: dark black-violet mature agile quadruped, long tall swept ears, small restrained gold head marks, violet eyes, flowing purple shoulder/back tufts, long shadow-feather tail and pale small chest accent. More purposeful sleek anatomy than Stage2, NOT a generic armored wolf or later stage. Right-facing neutral stable stance, all four paws visible. Full character with 10 percent empty margins, clean antialiased opaque body and true alpha outside. Readable painted sprite at256px. No text, panels, shadows, floor, background, detached particles, magical glow haze, or invented anatomy. Redraw from reference, never crop concept. Intended as base for localized body/shoulder rigging.",
+    "stage4": "Isolated transparent PNG game sprite of NOX Stage4 OBSCURA from bottom row FOURTH evolution in attached concept. Exactly one full-body shadow-mystic quadruped facing RIGHT. Match mature black-violet body, elongated elegant limbs, swept tall ear crest, restrained gold markings, purple layered feather-like mane and shoulder structures, flowing long tail of the reference. Preserve the specific Stage4 silhouette, no added armor or generic wolf substitution. Calm stable stance with four visible paws, entire figure with clear transparent margins, readable at256px. Paint ONLY the character: clean solid opaque body, antialiased edges, alpha=0 everywhere outside silhouette. Absolutely no purple aura, haze, glow, ground, shadow, scene, particles, border or typography. No separate floating ornaments. Standalone base for localized body rigging. Do not crop the source sheet.",
+    "stage5": "Standalone cutout of NOX Stage5 ECLIPS from attached design sheet, bottom row fifth creature. Single elegant adult black-and-purple feathered quadruped with gold accents, swept ears, violet eyes and layered long feather tail. Keep the reference Stage5 anatomy and proportions. Neutral standing pose facing RIGHT, four paws planted and visible. Draw only the animal, with a hard clean body silhouette and softly antialiased edges. Entire figure framed in a square with generous empty margins. Transparent PNG sticker asset: every area outside the animal must be empty alpha=0. No effects whatsoever. No aura, fog, haze, light rays, background, floor, shadow, particles, text or frame. The body is solid opaque painted sprite art, readable at256pixels. Reference only the animal design, not any surrounding effects. This is an individual base sprite, not a crop or sheet."
+  },
+  "repairIterations": 3,
+  "repairs": [
+    "NOX3 background removal failed; original and edited source preserved",
+    "NOX2 only disconnected alpha<128 residue removed, body pixels preserved",
+    "NOX4 background removal failed; original and edited source preserved"
+  ],
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "nativeGUI": "DEFERRED_GUI",
+  "browser": {
+    "fixture": "tests/live/nox-young/index.html",
+    "observed": [
+      "IDLE loaded and frame5 displayed",
+      "facing -1",
+      "pause uses base",
+      "MOVE uses base (ASSET_REQUIRED)",
+      "BATTLE suppresses clip",
+      "resume IDLE"
+    ],
+    "nativeInput": false
+  }
+}
