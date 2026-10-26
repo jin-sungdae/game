@@ -865,6 +865,21 @@
     "Persist unresolved evolution command across app restart",
     "Continue independent RUU Stage3 base/clip validation and platform work"
   ],
+  "desktopEvolutionRetry": {
+    "status": "IMPLEMENTED_TESTED",
+    "taskId": "desktop-evolution-retry-presentation",
+    "baseCommit": "3408f99e7d1785ab20464dae44f2adec75a1d980",
+    "behavior": "Expose pending intent presence to the renderer; allow explicit same-command retry after LOCKED/MAX_STAGE refresh without bypassing busy/phase guards.",
+    "validation": {
+      "rustEvolution": "14 PASS; 2 ignored live tests",
+      "presentation": "PASS",
+      "releaseGate": "RUNNING; exact result reported in PR",
+      "gui": "DEFERRED_GUI"
+    },
+    "repairIterations": 0,
+    "repairLimit": 3,
+    "remaining": "Persist unresolved command across restart; no durability claimed by this change."
+  },
   "monsterTierEncounterIntegration": {
     "status": "IMPLEMENTED_PENDING_REVIEW",
     "dependency": "Unmerged PR93, including growth/evolution/selection V16-V18",
