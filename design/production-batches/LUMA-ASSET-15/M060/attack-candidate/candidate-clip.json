@@ -1,0 +1,76 @@
+{
+  "conceptId": "M060",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M060/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "ATTACK",
+    "frames": 8,
+    "frameDuration": 110,
+    "loop": false
+  },
+  "movableRect": [
+    139,
+    175,
+    183,
+    225
+  ],
+  "parts": [
+    {
+      "x": 165,
+      "y": 210,
+      "rx": 15,
+      "ry": 13,
+      "dx": -4,
+      "dy": -3,
+      "name": "near-paw-swipe",
+      "samples": [
+        0.04,
+        -0.3,
+        -0.6,
+        0.3,
+        1,
+        0.5,
+        0.16,
+        0.025
+      ]
+    },
+    {
+      "x": 164,
+      "y": 190,
+      "rx": 13,
+      "ry": 17,
+      "dx": -1.5,
+      "dy": -1,
+      "name": "foreleg-followthrough",
+      "samples": [
+        0.03,
+        -0.1,
+        -0.3,
+        0.2,
+        0.75,
+        1,
+        0.4,
+        0.02
+      ]
+    }
+  ],
+  "anatomyScope": "앉은 여우가 가까운 앞발을 들어 짧게 휘두른 뒤 접지 자세로 복귀; 다른 앞발과 얼굴 고정.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 신규 행동 첫 시도; 기존 실패 복구 아님",
+  "rigReuse": "design/production-batches/LUMA-ASSET-15/produce.cjs"
+}

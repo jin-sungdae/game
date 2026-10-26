@@ -1,0 +1,76 @@
+{
+  "conceptId": "M058",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M058/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "ATTACK",
+    "frames": 8,
+    "frameDuration": 110,
+    "loop": false
+  },
+  "movableRect": [
+    39,
+    63,
+    150,
+    150
+  ],
+  "parts": [
+    {
+      "x": 101,
+      "y": 101,
+      "rx": 36,
+      "ry": 26,
+      "dx": 5,
+      "dy": -3,
+      "name": "tail-tip-strike",
+      "samples": [
+        0.04,
+        -0.3,
+        -0.6,
+        0.3,
+        1,
+        0.5,
+        0.16,
+        0.025
+      ]
+    },
+    {
+      "x": 66,
+      "y": 118,
+      "rx": 22,
+      "ry": 26,
+      "dx": -2,
+      "dy": 1.5,
+      "name": "tail-root-counterbend",
+      "samples": [
+        0.03,
+        -0.1,
+        -0.3,
+        0.2,
+        0.75,
+        1,
+        0.4,
+        0.02
+      ]
+    }
+  ],
+  "anatomyScope": "분리된 꼬리 끝의 뒤로 준비-앞으로 휘두르기-회수. 머리와 접지 코일 고정; 기존 HIT 재사용 아님.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 신규 행동 첫 시도; 기존 실패 복구 아님",
+  "rigReuse": "design/production-batches/LUMA-ASSET-15/produce.cjs"
+}
