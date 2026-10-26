@@ -23326,7 +23326,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "IDENTITY_REVIEW_REQUIRED: rabbit-shaped mechanical quadruped BASE conflicts with crowned upright automaton proposal and existing APPEARANCE_DRIFT. Preserve failed BASE and do not rig HIT.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "VICTORY",
@@ -23454,7 +23456,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "RIG_LAYER_REQUIRED: quadruped rigid armor overlaps shoulder/hip pivots; flattened BASE has no independent plates or occluded backing. Weighted organic displacement cannot demonstrate rigid joint motion.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "VICTORY",
@@ -23533,7 +23537,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "RIG_LAYER_REQUIRED: oval gate side bosses overlap main frame. Actual TURN requires side surfaces, not a whole-image mirror/rotation.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "REST",
@@ -23661,7 +23667,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "RIG_LAYER_REQUIRED: orbital core is attached to horizontal spindle and ring; rotation would expose unavailable occluded surfaces. Preserve existing ring anatomy review.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "REST",
@@ -24115,10 +24123,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M082/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -24136,6 +24149,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M082/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M082/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M082/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M082/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M082/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M082/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M082/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M082/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M082/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              22,
+              22,
+              236,
+              235
+            ],
+            [
+              22,
+              22,
+              236,
+              235
+            ],
+            [
+              22,
+              22,
+              236,
+              235
+            ],
+            [
+              22,
+              22,
+              236,
+              235
+            ],
+            [
+              22,
+              22,
+              236,
+              235
+            ],
+            [
+              22,
+              22,
+              236,
+              235
+            ],
+            [
+              22,
+              22,
+              236,
+              235
+            ],
+            [
+              22,
+              22,
+              236,
+              235
+            ]
+          ],
+          "pixelHashes": [
+            "dd9bb7a5d5c9435711cba377e82aa20c32d80aae7cfe5a7853c2dcc0f88c43a4",
+            "1db200f109a647cebe52e54f30c36f956ff6a0cf25a91b64afb7b14d402b1e84",
+            "9ae9e0b2aaf5a3fb7af4a2234ea2b9d0e6832ae53a0333152ff8117f1fadd0f2",
+            "2d431ce4752cc55d1b7fa502ed541a98aecd50516f7adad946b9ced1781cd7d4",
+            "962851b52373a7943a44c1c430ef0d8e7ce22d8433785fd4ad2af92f7624e362",
+            "9a91d0ca267243cf0b79b25384beaa2d58c96a76a0bf895dc97371381f3736a8",
+            "8556ad320ad952327194acfdb6cc0da3f8f943e29858497f02a5295232b676c6",
+            "97b3dc68b80b683925b0e8cfdf077171c5d45d8e9c02ab20f0311cbf9c9e2ecf"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch09/M082/rigged/idle",
@@ -24207,11 +24301,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -26924,11 +27018,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 148,
-    "automatedCandidateActions": 146,
-    "artworkReviewPendingActions": 147,
+    "candidateActions": 149,
+    "automatedCandidateActions": 147,
+    "artworkReviewPendingActions": 148,
     "validationFailedActions": 38,
-    "missingFrameSetActions": 1587,
+    "missingFrameSetActions": 1586,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
