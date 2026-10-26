@@ -1,0 +1,185 @@
+{
+  "automated": "PASS",
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "errors": [],
+      "bounds": [
+        36,
+        27,
+        222,
+        225
+      ],
+      "pixelHash": "86cc63b7574944a032429a04dd38610b2808e9fb7724e6b0c608bab9d46a1516",
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 204,
+      "silhouetteSupportChangedPixels": 37,
+      "detachedAlphaPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "hit_01.png",
+      "errors": [],
+      "bounds": [
+        36,
+        27,
+        222,
+        225
+      ],
+      "pixelHash": "9e01926b0bc1156c2f98f6159173ec3da8d6c6a66d599578914ca1ca7efced5f",
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 515,
+      "silhouetteSupportChangedPixels": 100,
+      "detachedAlphaPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "hit_02.png",
+      "errors": [],
+      "bounds": [
+        36,
+        27,
+        222,
+        225
+      ],
+      "pixelHash": "43d2a03e131274d84f6bf0947c69b2d539d8220752b8d089cec3e59d0da69696",
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 775,
+      "silhouetteSupportChangedPixels": 136,
+      "detachedAlphaPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "hit_03.png",
+      "errors": [],
+      "bounds": [
+        36,
+        27,
+        222,
+        225
+      ],
+      "pixelHash": "1555612dc02edc5b5752cac06201931dbea3abbb74e4e2beb3c87c2ded04c713",
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 856,
+      "silhouetteSupportChangedPixels": 133,
+      "detachedAlphaPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "hit_04.png",
+      "errors": [],
+      "bounds": [
+        36,
+        27,
+        222,
+        225
+      ],
+      "pixelHash": "4665f32850026931542519ad8a460ca3a71b878780a5359c566ae870fc7aa1c7",
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 769,
+      "silhouetteSupportChangedPixels": 125,
+      "detachedAlphaPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "hit_05.png",
+      "errors": [],
+      "bounds": [
+        36,
+        27,
+        222,
+        225
+      ],
+      "pixelHash": "7e54dc810a3fd8ea15490f190e6862e3d2b2486c1bcec9d4ab24d2cf68b6d854",
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 630,
+      "silhouetteSupportChangedPixels": 104,
+      "detachedAlphaPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "hit_06.png",
+      "errors": [],
+      "bounds": [
+        36,
+        27,
+        222,
+        225
+      ],
+      "pixelHash": "0f14beebe8f3e0fcc4833370c8fb839f32ccd12a8955d8644d760295323cbc99",
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 400,
+      "silhouetteSupportChangedPixels": 69,
+      "detachedAlphaPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    },
+    {
+      "file": "hit_07.png",
+      "errors": [],
+      "bounds": [
+        36,
+        27,
+        222,
+        225
+      ],
+      "pixelHash": "68dea7aac1ff71a37e3e8ec8ac1035501c93e45d1099095a4c7f634b3fd05142",
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 236,
+      "silhouetteSupportChangedPixels": 43,
+      "detachedAlphaPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "boundsCenterX": 0.0
+      }
+    }
+  ],
+  "sourceSha256": "c15c9d309e02ce3279e420940c72b81b6cd30423763ac2bfd6f3fdb5c796bf7c",
+  "baseErrors": [],
+  "baseDetachedAlphaPixels": 0,
+  "uniquePixelHashes": 8,
+  "adjacentPixelDifferenceSumsIncludingLoop": [
+    41656,
+    58675,
+    46570,
+    35307,
+    35979,
+    36376,
+    23050,
+    3399
+  ],
+  "loopContract": "ONE_SHOT; boundary measured but seamless cyclic motion is not claimed",
+  "automatedScope": "Existing PNG validator plus local RGBA/support motion, protected anatomy, bounds, anchor, zero detached alpha, no canvas clipping and unique frames",
+  "appearance": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "productionEligible": false
+}

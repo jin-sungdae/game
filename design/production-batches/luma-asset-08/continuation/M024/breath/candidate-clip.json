@@ -1,0 +1,60 @@
+{
+  "conceptId": "M024",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M024/base-v4.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 580,
+    "loop": true
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "candidate preview only",
+  "anatomyScope": "작은 가슴/복부 호흡. BASE Alpha·귀·눈·손·발은 고정. BODY 이동·크기 변경 없음.",
+  "proposedMovementProfile": {
+    "status": "PROPOSED",
+    "value": "GROUND"
+  },
+  "movementPolicy": "Existing proposal only; stationary breath is not movement or native activation",
+  "movableRect": [
+    136,
+    158,
+    183,
+    209
+  ],
+  "repairIterations": 3,
+  "sessionId": "LUMA-ASSET-08",
+  "parts": [
+    {
+      "name": "가슴-호흡",
+      "x": 159,
+      "y": 181,
+      "rx": 18,
+      "ry": 23,
+      "dx": 0.18,
+      "dy": -0.55,
+      "phase": 0
+    },
+    {
+      "name": "복부-지연",
+      "x": 154,
+      "y": 198,
+      "rx": 13,
+      "ry": 10,
+      "dx": -0.12,
+      "dy": -0.28,
+      "phase": -1.3
+    }
+  ]
+}

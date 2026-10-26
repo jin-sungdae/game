@@ -1,0 +1,116 @@
+{
+  "reference": "design/production-batches/monsters/batch03/M025/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "말린-꼬리-하부",
+      "x": 81,
+      "y": 178,
+      "rx": 24,
+      "ry": 23,
+      "dx": -1.265,
+      "dy": 0.7200000000000001,
+      "samples": [
+        1,
+        0.83,
+        0.59,
+        0.36,
+        0.18,
+        0.08,
+        0.03,
+        0.01
+      ]
+    },
+    {
+      "name": "가슴",
+      "x": 158,
+      "y": 176,
+      "rx": 20,
+      "ry": 25,
+      "dx": -0.69,
+      "dy": 0.5599999999999999,
+      "samples": [
+        0.87,
+        1,
+        0.77,
+        0.48,
+        0.25,
+        0.11,
+        0.04,
+        0.015
+      ]
+    }
+  ],
+  "protectedRegions": "y>=210||y<=128||x<=47||x>=194",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "recovery_00.png",
+      "pixelSha256": "9a67482deccd8e93c8d37922d3d48c9d2a9b008f42152b39445ad80d845f56b3",
+      "changedPixels": 1877,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 312,
+      "maxInverseDisplacementPixels": 1.4543719206404209
+    },
+    {
+      "file": "recovery_01.png",
+      "pixelSha256": "aea1d8459f9da7588473cf0d23944406a271ae479b779ff39f7f5e60427273ec",
+      "changedPixels": 1865,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 298,
+      "maxInverseDisplacementPixels": 1.206979059704553
+    },
+    {
+      "file": "recovery_02.png",
+      "pixelSha256": "493cebb1ad918b81286b4c7b9fe649d3524c1204dbc656104bccb508dfd05d74",
+      "changedPixels": 1735,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 247,
+      "maxInverseDisplacementPixels": 0.8576083272942209
+    },
+    {
+      "file": "recovery_03.png",
+      "pixelSha256": "19952ccd8898d93dcb8ffe7437f2140032d5e3efa4d2c4c4773cf3d0320dcaeb",
+      "changedPixels": 1534,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 197,
+      "maxInverseDisplacementPixels": 0.5232348542787599
+    },
+    {
+      "file": "recovery_04.png",
+      "pixelSha256": "22b3bec1424e714669b6a1c8f1b12c187d76f90ab85cf048affb7c685c2253fe",
+      "changedPixels": 1203,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 155,
+      "maxInverseDisplacementPixels": 0.2619033261903615
+    },
+    {
+      "file": "recovery_05.png",
+      "pixelSha256": "c043afea1eed1bc8a3c71ea6a19fdb0e41ba5da68e7e74dd01dee3e700112793",
+      "changedPixels": 847,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 112,
+      "maxInverseDisplacementPixels": 0.11643557721660193
+    },
+    {
+      "file": "recovery_06.png",
+      "pixelSha256": "43c2de297e593a86c0a8a3ad64f5ffd5959f7b6b43a55800cccdb363883f0eba",
+      "changedPixels": 442,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 81,
+      "maxInverseDisplacementPixels": 0.04366604865859807
+    },
+    {
+      "file": "recovery_07.png",
+      "pixelSha256": "ca92672406d8ad98daf579b7a1630a59ec73b78101440b49c068ff8acc649ed3",
+      "changedPixels": 216,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 49,
+      "maxInverseDisplacementPixels": 0.01455548083291949
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-08 independent first attempt; existing repair ceiling remains 3/3; no failure recovery",
+  "productionEligible": false
+}
