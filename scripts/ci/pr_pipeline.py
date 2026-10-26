@@ -27,7 +27,9 @@ class GitHub:
         self.repo = repo
 
     def get(self, endpoint):
-        result = subprocess.run(['gh', 'api', f'repos/{self.repo}/{endpoint}'],
+        endpoint = endpoint.strip('/')
+        url = f'repos/{self.repo}' + (f'/{endpoint}' if endpoint else '')
+        result = subprocess.run(['gh', 'api', url],
                                 capture_output=True, text=True, timeout=60)
         if result.returncode:
             # Never turn unavailable API evidence into empty-success evidence.

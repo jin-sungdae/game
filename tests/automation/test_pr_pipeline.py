@@ -45,6 +45,34 @@ class API:
         return {'status': 'READ', 'text': json.dumps(self.ledger) if path == p.LEDGER else 'implemented()', 'sha': sha}
 
 
+class GitHubEndpointTests(unittest.TestCase):
+    def test_root_and_resource_endpoints_normalize_only_boundary_slashes(self):
+        for endpoint, expected in [('', 'repos/owner/repo'), ('/', 'repos/owner/repo'),
+                ('pulls', 'repos/owner/repo/pulls'), ('/pulls/', 'repos/owner/repo/pulls'),
+                ('pulls?state=open&page=2', 'repos/owner/repo/pulls?state=open&page=2')]:
+            with self.subTest(endpoint=endpoint), patch.object(p.subprocess, 'run') as run:
+                run.return_value.returncode = 0
+                run.return_value.stdout = '{"ok": true}'
+                self.assertEqual(p.GitHub('owner/repo').get(endpoint), {'ok': True})
+                self.assertEqual(run.call_args.args[0], ['gh', 'api', expected])
+
+    def test_404_remains_an_error(self):
+        with patch.object(p.subprocess, 'run') as run:
+            run.return_value.returncode = 1
+            run.return_value.stdout = '{"message":"Not Found","status":404}'
+            with self.assertRaises(RuntimeError): p.GitHub('owner/repo').get('')
+
+    def test_pr_pagination_keeps_query_and_all_rows(self):
+        with patch.object(p.subprocess, 'run') as run:
+            from subprocess import CompletedProcess
+            run.side_effect = [CompletedProcess([], 0, json.dumps([{'number': n} for n in range(100)])),
+                               CompletedProcess([], 0, '[{"number":100}]')]
+            self.assertEqual(len(p.GitHub('owner/repo').pages('pulls?state=all')), 101)
+            self.assertEqual([c.args[0][-1] for c in run.call_args_list],
+                ['repos/owner/repo/pulls?state=all&per_page=100&page=1',
+                 'repos/owner/repo/pulls?state=all&per_page=100&page=2'])
+
+
 class PipelineTests(unittest.TestCase):
     def run_pipeline(self, api, state=None):
         with tempfile.TemporaryDirectory() as d:
@@ -123,6 +151,25 @@ class PipelineTests(unittest.TestCase):
         api.failure=True
         result, _, prompts=self.run_pipeline(api,state)
         self.assertEqual(prompts,[]); self.assertEqual(result['changes'],1)
+
+    def test_restore_existing_checkpoint_preserves_processed_heads(self):
+        class RestoreAPI:
+            repo = 'owner/repo'
+            def get(self, endpoint):
+                if endpoint == '': return {'default_branch': 'main'}
+                if endpoint.startswith('actions/workflows/'): return {'id': 9}
+                return {'id': 1, 'workflow_id': 9, 'event': 'schedule', 'head_branch': 'main'}
+            def pages(self, *args):
+                return [{'id': 2, 'expired': False, 'workflow_run': {'id': 1}}]
+        state = {'version': 1, 'repository': 'owner/repo', 'processed': {'1:' + HEAD: {}}}
+        with tempfile.TemporaryDirectory() as d:
+            destination = Path(d)
+            def download(*args, **kwargs):
+                (destination / 'state.json').write_text(json.dumps(state))
+            with patch.object(restore.subprocess, 'run', side_effect=download) as run:
+                result = restore.restore(RestoreAPI(), destination)
+                self.assertEqual(json.loads(result.read_text()), state)
+                run.assert_called_once()
 
     def test_restore_expired_latest_never_falls_back(self):
         class RestoreAPI:
