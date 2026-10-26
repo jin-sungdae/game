@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 1,
   "repairLimit": 3,
-  "nextTask": "Verify batch05 candidate frames; M051 batch06 next independent artwork.  Production identities remain unmapped. M024 approved alpha cleanup complete; artwork/animation review remains.",
+  "nextTask": "Validate batch06; M061 batch07 next independent artwork.  No approved Production ID mappings. M024 approved alpha cleanup complete; artwork/animation review remains.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -9340,11 +9340,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -9473,18 +9473,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M051/base-v2.png"
     },
     {
       "creatureId": "M052",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -9613,26 +9614,29 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M052/base-v2.png"
     },
     {
       "creatureId": "M053",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -9753,18 +9757,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M053/base-v2.png"
     },
     {
       "creatureId": "M054",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -9893,18 +9898,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M054/base-v2.png"
     },
     {
       "creatureId": "M055",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -10033,18 +10039,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M055/base-v2.png"
     },
     {
       "creatureId": "M056",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -10173,18 +10180,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M056/base-v2.png"
     },
     {
       "creatureId": "M057",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -10313,18 +10321,19 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M057/base-v2.png"
     },
     {
       "creatureId": "M058",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ARTWORK_REVIEW_REQUIRED",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated rigid or segmented joint motion required; no generic soft-body breathing",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -10453,26 +10462,29 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M058/base-v2.png"
     },
     {
       "creatureId": "M059",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -10593,26 +10605,29 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M059/base-v2.png"
     },
     {
       "creatureId": "M060",
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "ANIMATION_IN_PROGRESS",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "NOT_VERIFIED"
         },
         {
           "action": "BREATH",
@@ -10733,7 +10748,8 @@
         "status": "NOT_VERIFIED",
         "runtimeApproved": false
       },
-      "productionStatus": "NOT_PRODUCTION_READY"
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "design/production-batches/monsters/batch06/M060/base-v2.png"
     },
     {
       "creatureId": "M061",
@@ -16348,7 +16364,7 @@
     ],
     "nativeGUI": false
   },
-  "repairScope": "monster-batch05",
+  "repairScope": "monster-batch06",
   "batchEvidence": [
     {
       "pr": 95,
@@ -16375,9 +16391,9 @@
     }
   ],
   "currentBatch": {
-    "id": "monster-batch05",
+    "id": "monster-batch06",
     "baseCandidates": 10,
-    "idleCandidateClips": 8,
+    "idleCandidateClips": 3,
     "productionComplete": 0,
     "total": 10,
     "repairIterations": 1,
