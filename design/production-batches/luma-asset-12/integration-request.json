@@ -1672,8 +1672,14 @@
       "clips": 19,
       "png": 264
     },
-    "assetTests": "RUNNING",
-    "releaseGate": "RUNNING",
-    "nativeGui": "DEFERRED_GUI"
+    "assetTests": "INTERRUPTED_NOT_COMPLETED",
+    "releaseGate": "INTERRUPTED_NOT_COMPLETED",
+    "nativeGui": "DEFERRED_GUI",
+    "existingBatch05": {
+      "status": "PASS",
+      "tests": 1
+    },
+    "requiredBaseRelease": "PASS",
+    "interruptionReason": "Full Asset Tests and Release Gate were stopped after more than six minutes in existing Alpha checks during concurrent local tracks. No full-suite PASS claim."
   }
 }
