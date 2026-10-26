@@ -41,6 +41,7 @@ class FollowupTests(unittest.TestCase):
         f.finish(dry,ticket['key'],'run1','PUBLISHED',2)
         self.assertEqual(dry['prs']['2'],{'root':'1','depth':1})
         self.assertEqual(dry['roots']['1']['attempts'],1)
+        self.assertEqual(dry['days']['1970-01-01']['modelInvocations'],3)
         self.assertIsNone(dry['lock']);self.assertEqual(original['roots']['1']['attempts'],0)
         with self.assertRaisesRegex(ValueError,'DUPLICATE_TASK'):
             second=f.reserve(dry,analysis(2,'c'*40,'FAIL'),'run2',10)
