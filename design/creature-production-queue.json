@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "M090 Anatomy/Identity and HIT feasibility, then M091 Anatomy review. M088 INTERACT already produced; M087 layers and M089 gaze keypose required. Preserve inherited repair3/3 and all failures.",
+  "nextTask": "M093 Anatomy/Identity and movement feasibility, then M094 Anatomy review. M090 and M092 HIT already produced. Preserve M091 anatomy/identity blocker and all inherited failures; repair3/3.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -17066,10 +17066,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M090/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -17113,11 +17118,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -17223,7 +17228,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "ANATOMY_IDENTITY_REVIEW_REQUIRED: existing ambiguous extra-leg blocker preserved; winged light stag proposal differs from avian winged BASE. No new rig or Species change.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "VICTORY",
@@ -17374,10 +17381,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M092/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -17421,11 +17433,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -18966,11 +18978,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 151,
-    "automatedCandidateActions": 149,
-    "artworkReviewPendingActions": 150,
+    "candidateActions": 153,
+    "automatedCandidateActions": 151,
+    "artworkReviewPendingActions": 152,
     "validationFailedActions": 39,
-    "missingFrameSetActions": 1584,
+    "missingFrameSetActions": 1582,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
@@ -22102,16 +22114,16 @@
     "approvalAudit": {
       "scope": "All existing candidate clip versions; categories overlap. Automated PNG catalog checks are not full appearance/motion approval. Registered legacy action records are separately listed without re-approving missing approval fields.",
       "summary": {
-        "candidateClips": 152,
-        "candidateFrames": 1082,
-        "automatedPngPassClips": 150,
+        "candidateClips": 154,
+        "candidateFrames": 1098,
+        "automatedPngPassClips": 152,
         "automatedPngFailedClips": 2,
-        "artworkReviewPendingClips": 151,
-        "naturalMotionReviewPendingClips": 151,
-        "identityReviewRequiredClips": 115,
+        "artworkReviewPendingClips": 153,
+        "naturalMotionReviewPendingClips": 153,
+        "identityReviewRequiredClips": 117,
         "productionApprovedClips": 1,
         "approvedRuntimePendingClips": 0,
-        "guiPendingClips": 152,
+        "guiPendingClips": 154,
         "guiPassedClips": 0,
         "validationFailedActionsIncludingKeyposes": 40
       },
@@ -24393,6 +24405,36 @@
           "guiStatus": "GUI_NOT_VERIFIED",
           "detailedEvidence": "design/production-batches/action-followup/M088/interact-pilot/frame-validation.json",
           "detailedAutomated": "PASS"
+        },
+        {
+          "creatureId": "M090",
+          "action": "HIT",
+          "directory": "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit",
+          "frames": 8,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/action-followup/M090/hit-pilot/frame-validation.json",
+          "detailedAutomated": "PASS"
+        },
+        {
+          "creatureId": "M092",
+          "action": "HIT",
+          "directory": "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit",
+          "frames": 8,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/action-followup/M092/hit-pilot/frame-validation.json",
+          "detailedAutomated": "PASS"
         }
       ],
       "failedActions": [
@@ -25273,65 +25315,77 @@
     ]
   },
   "flightContractContinuation": {
-    "baselineCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+    "baselineCommit": "840da069c3950792b51f88f6f935c36e3e57dd79",
     "originMain": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
     "mainIntegration": "Post merged PR114 and PR113; new branch starts at latest main without replaying old commits",
     "repairIterations": 3,
     "repairLimit": 3,
     "newCases": {
-      "M088 INTERACT": "M088/interact-pilot"
+      "M090 HIT": "M090/hit-pilot",
+      "M092 HIT": "M092/hit-pilot"
     },
-    "candidateClips": 1,
-    "candidateFrames": 8,
-    "candidatePng": 9,
-    "automatedPassedFrames": 8,
+    "candidateClips": 2,
+    "candidateFrames": 16,
+    "candidatePng": 18,
+    "automatedPassedFrames": 16,
     "failedKeyposes": {},
-    "identityBlocked": [],
+    "identityBlocked": [
+      "M091 HIT"
+    ],
     "productionRegistrations": 0,
     "runtimeConnections": 0,
     "approvedUnconnectedAssets": [],
     "nativeMacOS": "DEFERRED_GUI",
     "nativeWindows": "DEFERRED_GUI",
     "browserPreview": {
-      "status": "NOT_RUN"
+      "status": "BROWSER_PREVIEW_VERIFIED",
+      "checks": [
+        "M090 Frame1 to Frame3 and Pause",
+        "M092 HIT rendered and Reduced Motion Frame1"
+      ],
+      "limitations": [
+        "Natural motion HUMAN_REVIEW_REQUIRED",
+        "Native macOS/Windows DEFERRED_GUI"
+      ]
     },
-    "lastCompletedWork": "M087 eye/ring layers reviewed, M088 INTERACT8 validated, M089 gaze keypose requirement recorded",
-    "lastValidatedCommit": "80b707d82c72dbafa3351a9c00d2812bbe8a9623",
-    "lastValidatedCommitScope": "Exact baseline Gate18/18 and CI40287847400 verified; final modified HEAD requires separate evidence",
+    "lastCompletedWork": "M090 and M092 independent HIT8 candidates validated; M091 ambiguous legs and avian-versus-stag identity preserved",
+    "lastValidatedCommit": "840da069c3950792b51f88f6f935c36e3e57dd79",
+    "lastValidatedCommitScope": "Baseline Gate18/18 and CI40296073014 verified; current modified HEAD needs separate evidence",
     "validation": {
       "releaseGate": "FINAL_HEAD_EVIDENCE_REQUIRED",
-      "releaseGateOutput": "/tmp/luma-post114-void-release/release-result.json",
+      "releaseGateOutput": "/tmp/luma-pr131-shadow-stag-release/release-result.json",
       "ci": "NOT_RUN",
-      "focusedTests": "1/1 PASS",
-      "animationRegression": "237/tests PASS"
+      "focusedTests": "2/2 PASS",
+      "approvalAuditTests": "4/4 PASS",
+      "animationRegression": "239/tests PASS"
     },
-    "nextTask": "M090 Anatomy/Identity and HIT feasibility, then M091 Anatomy review. M088 INTERACT already produced; M087 layers and M089 gaze keypose required. Preserve inherited repair3/3 and all failures.",
+    "nextTask": "M093 Anatomy/Identity and movement feasibility, then M094 Anatomy review. M090 and M092 HIT already produced. Preserve M091 anatomy/identity blocker and all inherited failures; repair3/3.",
     "coverageAtCheckpoint": {
       "requiredActions": 1740,
       "recordedReadyActions": 14,
       "recordedRuntimeActions": 12,
       "manifestFileSetsPresent": 12,
-      "candidateActions": 151,
-      "automatedCandidateActions": 149,
-      "artworkReviewPendingActions": 150,
+      "candidateActions": 153,
+      "automatedCandidateActions": 151,
+      "artworkReviewPendingActions": 152,
       "validationFailedActions": 39,
-      "missingFrameSetActions": 1584,
+      "missingFrameSetActions": 1582,
       "guiPendingActions": 1740,
       "completeActions": 0,
       "creatures": 115,
       "completeCreatures": 0
     },
     "approvalSummaryAtCheckpoint": {
-      "candidateClips": 152,
-      "candidateFrames": 1082,
-      "automatedPngPassClips": 150,
+      "candidateClips": 154,
+      "candidateFrames": 1098,
+      "automatedPngPassClips": 152,
       "automatedPngFailedClips": 2,
-      "artworkReviewPendingClips": 151,
-      "naturalMotionReviewPendingClips": 151,
-      "identityReviewRequiredClips": 115,
+      "artworkReviewPendingClips": 153,
+      "naturalMotionReviewPendingClips": 153,
+      "identityReviewRequiredClips": 117,
       "productionApprovedClips": 1,
       "approvedRuntimePendingClips": 0,
-      "guiPendingClips": 152,
+      "guiPendingClips": 154,
       "guiPassedClips": 0,
       "validationFailedActionsIncludingKeyposes": 40
     },
@@ -25356,10 +25410,7 @@
       },
       "approvedUnconnectedAssets": 0
     },
-    "riggingBlocked": [
-      "M087 INTERACT",
-      "M089 CURSOR_REACT"
-    ],
+    "riggingBlocked": [],
     "riggingBottleneck": {
       "existingMethod": "Weighted local inverse RGBA displacement; no isolated rigid masks, pivots or hidden-surface reconstruction",
       "rawFailures": {

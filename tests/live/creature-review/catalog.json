@@ -25484,10 +25484,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M090/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -25505,6 +25510,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ]
+          ],
+          "pixelHashes": [
+            "12944a1d922841dfd3f6a91d227f2d81e5ded0ceb54c3bf02a33fdff1ad744a7",
+            "f1aa8ec889910689dafcfbca84156da00a7139b252dba16487d245ae43bd8605",
+            "2cc86014db76c5acd999a1ef6b5d00b527b631f12eaa889f9f289dc41000ad9b",
+            "ba4310b418bbc6921d3db6c98f56f626e0ec2efd8babc379bf3a6a539fce6a05",
+            "73cb337e751f717c7c34a75731e4d5391f1a4563eaa65b52290783608180de00",
+            "4149173808c262784c2fa785ad6e9924701e7a04f51675e4ebf700b3c4959bad",
+            "25256c82493d2aa3421dbf31a5fcd618381a069ab7b46701145a780c9cb2bf09",
+            "1de7c46f2af0bafc85eba31de13e1c16fbef83c3b177370f3279667729a64e02"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch09/M090/rigged/idle",
@@ -25576,11 +25662,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -25681,7 +25767,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "ANATOMY_IDENTITY_REVIEW_REQUIRED: existing ambiguous extra-leg blocker preserved; winged light stag proposal differs from avian winged BASE. No new rig or Species change.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "VICTORY",
@@ -25806,10 +25894,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M092/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -25827,6 +25920,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ]
+          ],
+          "pixelHashes": [
+            "fc0a2d9c96a35e3348edd3f78e2719ffc3f1afce99571dca610ac7e2600e824b",
+            "d902589e760fc9b97440fb10081a00a5ba61fabf07eeb12c71263177f90e2570",
+            "90a21a16907665d67f5cf59013a357b84b3ef2475518661fd40f35c2921fd99e",
+            "cdf85318c4c320133eae776c7a836a73a4fa77fdff695cca637288a728d0e4d5",
+            "9bfdb91f95fa8d1dc4a1c8408d09e2b70666301350188d4b469f6c92a62abb3b",
+            "0038e08400c085d2b84ce22898be69c8e6730ad7a862955081ba209eb197af3b",
+            "397ef602a4ab086fab37e96459ed977a453620a9c8e53cece36808573b4c4736",
+            "578f7df3f19cc81aad78cf69854befae68a74eaf27ddb3c3a9852f23462cdc46"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch10/M092/rigged/idle",
@@ -25898,11 +26072,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -27203,11 +27377,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 151,
-    "automatedCandidateActions": 149,
-    "artworkReviewPendingActions": 150,
+    "candidateActions": 153,
+    "automatedCandidateActions": 151,
+    "artworkReviewPendingActions": 152,
     "validationFailedActions": 39,
-    "missingFrameSetActions": 1584,
+    "missingFrameSetActions": 1582,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
