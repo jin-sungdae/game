@@ -1,0 +1,75 @@
+{
+  "conceptId": "M081",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M081/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    32,
+    122,
+    216,
+    210
+  ],
+  "parts": [
+    {
+      "name": "foreleg-brace",
+      "x": 183,
+      "y": 177,
+      "rx": 24,
+      "ry": 28,
+      "dx": -1.7,
+      "dy": -1.1,
+      "samples": [
+        0.02,
+        1,
+        0.8,
+        0.5,
+        0.3,
+        0.17,
+        0.08,
+        0.025
+      ]
+    },
+    {
+      "name": "tail-counter-recoil",
+      "x": 66,
+      "y": 148,
+      "rx": 28,
+      "ry": 23,
+      "dx": 1.8,
+      "dy": -1.0,
+      "samples": [
+        0.01,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0.045
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Corrupt quadruped drake: head crest, torso core and foot contacts fixed; foreleg bracing and tail counter-recoil preserve organic anatomy.",
+  "behaviorContract": "Existing corrupt drake GROUND proposal; stationary isolated HIT only",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes"
+}

@@ -23042,7 +23042,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "RIG_LAYER_REQUIRED: external rigid ornaments share upper/lower connections with flattened body; safe part extraction and occluded surface are unavailable. Existing weighted displacement is not rigid rotation. Preserve BASE; HUMAN_REVIEW_REQUIRED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "ATTACK",
@@ -23139,10 +23141,15 @@
         },
         {
           "action": "TURN",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/action-followup/M076/turn-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M076/turn-pilot/keypose-tool-reference.png",
+          "blockReason": "Raw Alpha392 failed before normalization; vertical-axis ring TURN needs actual side surfaces; repair3/3; HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "REST",
@@ -23217,7 +23224,7 @@
         "candidateActions": 0,
         "automatedCandidateActions": 0,
         "artworkReviewPendingActions": 0,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 15,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -23828,10 +23835,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M081/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -23849,6 +23861,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M081/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M081/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M081/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M081/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M081/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M081/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M081/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M081/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M081/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              17,
+              42,
+              239,
+              213
+            ],
+            [
+              17,
+              42,
+              239,
+              213
+            ],
+            [
+              17,
+              42,
+              239,
+              213
+            ],
+            [
+              17,
+              42,
+              239,
+              213
+            ],
+            [
+              17,
+              42,
+              239,
+              213
+            ],
+            [
+              17,
+              42,
+              239,
+              213
+            ],
+            [
+              17,
+              42,
+              239,
+              213
+            ],
+            [
+              17,
+              42,
+              239,
+              213
+            ]
+          ],
+          "pixelHashes": [
+            "d4e67d1dee48bc558a1d1d6b09ae3330fcc762ea49d6c74c9e085abfd6ee23f5",
+            "95de09ca8290f9cb0dd678458bf213c5fabd165e70730c46594d5d008afe21c4",
+            "6520ab64425fec6d37320d44d34d9d07fe918ee1eda3275184912a09af936c09",
+            "1a4338b854cf12aef8d3ef80e6afff6f3778a7c2c02745a9044185a16d010e81",
+            "93f631bdc99475ac617487c60e8d208f582593b7f00801f6b3ab9d31e1acf9dd",
+            "b0e527f0ce623183a83e6a596cd885fdb13a138bf1613b619a3b7bd29bf39249",
+            "a34f1850c8b77a7739b0ec595e40cdc84a4855df84e8e27371e5fc2c469d5fac",
+            "d8850b3daac2029b35d44b5e070207f1117a26c2685336b4c0f48093bc623651"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch09/M081/rigged/idle",
@@ -23920,11 +24013,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -26831,11 +26924,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 147,
-    "automatedCandidateActions": 145,
-    "artworkReviewPendingActions": 146,
-    "validationFailedActions": 37,
-    "missingFrameSetActions": 1588,
+    "candidateActions": 148,
+    "automatedCandidateActions": 146,
+    "artworkReviewPendingActions": 147,
+    "validationFailedActions": 38,
+    "missingFrameSetActions": 1587,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
