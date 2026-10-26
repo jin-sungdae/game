@@ -160,7 +160,7 @@ class PipelineTests(unittest.TestCase):
                 if endpoint.startswith('actions/workflows/'): return {'id': 9}
                 return {'id': 1, 'workflow_id': 9, 'event': 'schedule', 'head_branch': 'main'}
             def pages(self, *args):
-                return [{'id': 2, 'expired': False, 'workflow_run': {'id': 1}}]
+                return [{'id': 2, 'created_at': '2026-10-26T03:00:00Z', 'expired': False, 'workflow_run': {'id': 1}}]
         state = {'version': 1, 'repository': 'owner/repo', 'processed': {'1:' + HEAD: {}}}
         with tempfile.TemporaryDirectory() as d:
             destination = Path(d)
@@ -171,6 +171,27 @@ class PipelineTests(unittest.TestCase):
                 self.assertEqual(json.loads(result.read_text()), state)
                 run.assert_called_once()
 
+    def test_restore_uses_creation_time_not_artifact_id(self):
+        class RestoreAPI:
+            repo = 'owner/repo'
+            def get(self, endpoint):
+                if endpoint == '': return {'default_branch': 'main'}
+                if endpoint.startswith('actions/workflows/'): return {'id': 9}
+                self_run = int(endpoint.rsplit('/', 1)[1])
+                return {'id': self_run, 'workflow_id': 9, 'event': 'schedule', 'head_branch': 'main'}
+            def pages(self, *args):
+                return [
+                    {'id': 99, 'created_at': '2026-10-26T02:00:00Z', 'expired': False, 'workflow_run': {'id': 1}},
+                    {'id': 10, 'created_at': '2026-10-26T03:00:00Z', 'expired': False, 'workflow_run': {'id': 2}},
+                ]
+        with tempfile.TemporaryDirectory() as d:
+            destination = Path(d)
+            def download(*args, **kwargs):
+                (destination / 'state.json').write_text(json.dumps({'version': 1, 'repository': 'owner/repo'}))
+            with patch.object(restore.subprocess, 'run', side_effect=download) as run:
+                restore.restore(RestoreAPI(), destination)
+                self.assertEqual(run.call_args.args[0][3], '2')
+
     def test_restore_expired_latest_never_falls_back(self):
         class RestoreAPI:
             repo='owner/repo'
@@ -178,7 +199,7 @@ class PipelineTests(unittest.TestCase):
                 if endpoint=='': return {'default_branch':'main'}
                 if endpoint.startswith('actions/workflows/'):return {'id':9}
                 return {'id':1,'workflow_id':9,'event':'schedule','head_branch':'main'}
-            def pages(self,*args):return [{'id':2,'expired':True,'workflow_run':{'id':1}}]
+            def pages(self,*args):return [{'id':2,'created_at':'2026-10-26T03:00:00Z','expired':True,'workflow_run':{'id':1}}]
         with tempfile.TemporaryDirectory() as d, patch.object(restore.subprocess,'run') as download:
             with self.assertRaises(RuntimeError):restore.restore(RestoreAPI(),Path(d))
             download.assert_not_called()
