@@ -1,0 +1,171 @@
+{
+  "species": "ruu",
+  "stage": 1,
+  "clips": {
+    "idle": {
+      "status": "VALIDATION_FAILED",
+      "errors": [
+        "design/production-candidates-v1/ruu/stage01/idle/idle_01.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/idle/idle_02.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/idle/idle_03.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/idle/idle_04.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/idle/idle_05.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/idle/idle_06.png: registration differs from approved master",
+        "design/production-candidates-v1/ruu/stage01/idle/idle_07.png: registration differs from approved master"
+      ],
+      "reference": "design/production-candidates-v1/ruu/stage01/idle/idle_00.png",
+      "referenceApproval": "NOT_ESTABLISHED_BY_THIS_TOOL",
+      "frames": [
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/idle/idle_00.png",
+          "sha256": "3f78e38f57e420f5878b432d83adac47e29453c8fa9fcadf17b4d56b8f481949",
+          "pixelSha256": "d92f8675322f9da58b12e29b322c5ba432f7fdc29dd6806751274d987d4429d2",
+          "bounds": [
+            17,
+            6,
+            232,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/idle/idle_01.png",
+          "sha256": "972eb79438e0d5c0d2dc3671603ede43d89f3f27c14b2c83a75dc1b2cbfd8d6c",
+          "pixelSha256": "dd80b6bb1888a6715cd163c85dbbf67262df195848c7a09df7d0a1faf98ae790",
+          "bounds": [
+            14,
+            8,
+            239,
+            252
+          ],
+          "driftPixels": {
+            "centerX": 2.0,
+            "bottom": 1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/idle/idle_02.png",
+          "sha256": "197481db42ab2a292e981928b8ae77f4effd2a994aa70efaf40db1af88ca5d0a",
+          "pixelSha256": "c375c34fe582a97577858196433ac39838df752d57449d7b1d840f7344ad4f56",
+          "bounds": [
+            14,
+            3,
+            239,
+            252
+          ],
+          "driftPixels": {
+            "centerX": 2.0,
+            "bottom": 1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/idle/idle_03.png",
+          "sha256": "d2a86714b698618b6e0607eee7837e67662aa727ff91797616b02cc8fb8b9983",
+          "pixelSha256": "cab17aed83890d4f6a5f3703c0fbc16ae5090e6997843b636753ec0f6bcbdb2f",
+          "bounds": [
+            21,
+            8,
+            237,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 4.5,
+            "bottom": 0
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/idle/idle_04.png",
+          "sha256": "201adc45fe637b87fecd873b6045e9b119ba3d1b195cc6d88e681df316373585",
+          "pixelSha256": "82b11b2cfb4653093da2517b2b304f5641f7f727afbd5e119a33f51a34862fd0",
+          "bounds": [
+            12,
+            1,
+            232,
+            249
+          ],
+          "driftPixels": {
+            "centerX": -2.5,
+            "bottom": -2
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/idle/idle_05.png",
+          "sha256": "33f298524e67e74d2ec2a08c35793d31ac9339cf6a23aaafa56f63db8179cd12",
+          "pixelSha256": "941b73c7422003b474fca7fb1c3bac19ce20c584f4c01f202923ed9024165b46",
+          "bounds": [
+            12,
+            4,
+            236,
+            250
+          ],
+          "driftPixels": {
+            "centerX": -0.5,
+            "bottom": -1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/idle/idle_06.png",
+          "sha256": "5f3af5e4a74c4e81f47ee426331550d5dafa7bb64b1e24572f7e7567f25b9638",
+          "pixelSha256": "6ee3610b550337212b484f40d370352c996c672b0e27ef7dd5d5b67b78126b61",
+          "bounds": [
+            10,
+            0,
+            235,
+            249
+          ],
+          "driftPixels": {
+            "centerX": -2.0,
+            "bottom": -2
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        },
+        {
+          "file": "design/production-candidates-v1/ruu/stage01/idle/idle_07.png",
+          "sha256": "bfacfba2e202179eb61545aaf4856ac9ea4b9b0d0acf65045d978986d9cbfae6",
+          "pixelSha256": "e7b942dc85de5ab9b3a2571f7fc0fd702d0afde21f9787f385144dfdbb1f764c",
+          "bounds": [
+            13,
+            3,
+            230,
+            250
+          ],
+          "driftPixels": {
+            "centerX": -3.0,
+            "bottom": -1
+          },
+          "errors": [
+            "registration differs from approved master"
+          ]
+        }
+      ],
+      "repeatedPixelGroups": []
+    }
+  },
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "visualIdentity": "MANUAL_REVIEW_REQUIRED",
+  "backgroundResidue": "MANUAL_REVIEW_REQUIRED",
+  "anatomicalContinuity": "MANUAL_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI"
+}
