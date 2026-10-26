@@ -11,7 +11,7 @@ export interface Visual {phase:'IDLE'|'REQUESTING'|'PLAYER_ATTACK'|'MONSTER_HIT'
 
 export interface CompanionIdentity {playerCompanionId:number;species:string;evolutionStage:number;evolutionName:string;level:number;exp:number;bond:number}
 export interface EvolutionEligibility {status:'LOCKED'|'AVAILABLE'|'MAX_STAGE';species:string;currentStage:number;currentName:string;nextStage:number|null;nextName:string|null;requirements:{level:{required:number;current:number;met:boolean};bond:{required:number;current:number;met:boolean}}|null}
-export interface EvolutionPresentation {eligibility:EvolutionEligibility|null;busy:boolean;error:string|null;phase:'IDLE'|'GLOW'|'REVEAL';previous:CompanionIdentity|null;success:string|null}
+export interface EvolutionPresentation {retryPending?:boolean;eligibility:EvolutionEligibility|null;busy:boolean;error:string|null;phase:'IDLE'|'GLOW'|'REVEAL';previous:CompanionIdentity|null;success:string|null}
 
 export interface ShopItem {itemCode:string;itemName:string;itemType:string;price:number;ownedQuantity:number;maxStack:number}
 export interface OwnedItem {itemCode:string;itemName:string;itemType:string;quantity:number}
