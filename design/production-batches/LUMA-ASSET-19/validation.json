@@ -1,0 +1,51 @@
+{
+  "sessionId": "LUMA-ASSET-19",
+  "releaseGate": {
+    "status": "FAIL",
+    "manualGate": "MANUAL_QA_REQUIRED",
+    "head": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+    "workingTreeDirty": true,
+    "checks": [
+      {
+        "name": "frontend-build",
+        "status": "PASS",
+        "seconds": 19.43
+      },
+      {
+        "name": "animation-content",
+        "status": "PASS",
+        "seconds": 63.85
+      },
+      {
+        "name": "presentation",
+        "status": "PASS",
+        "seconds": 89.27
+      },
+      {
+        "name": "asset-tests",
+        "status": "FAIL",
+        "seconds": 717.05
+      }
+    ]
+  },
+  "releaseInterpretation": "INCOMPLETE: session-owned Asset Tests terminated after prolonged concurrent execution; runner reports FAIL, not an assertion failure. Remaining release steps NOT_RUN.",
+  "animationRegression": {
+    "status": "PASS",
+    "tests": 236,
+    "failures": 0
+  },
+  "assetTests": {
+    "status": "INCOMPLETE_TERMINATED",
+    "completedOkLines": 16,
+    "assertionFailuresReported": false,
+    "fullSuitePassed": false,
+    "lastLine": "test_registry_scale_paths_and_duplicates (test_alpha_assets.AlphaAssetTests) ... "
+  },
+  "basePngValidation": "PASS: five existing 256x256 RGBA bases, alpha, bounds, pixel hashes; not appearance or animation approval",
+  "anchor": "NOT_VERIFIED_NO_CLIP_MANIFEST",
+  "frameContinuity": "NOT_RUN_NO_FRAME_SET",
+  "protectedFiles": "PASS: shared source hashes unchanged",
+  "macOS": "DEFERRED_GUI",
+  "windows": "DEFERRED_GUI",
+  "nextValidation": "Rerun Asset Tests and full Release Gate after concurrent validation load subsides; use a new output directory."
+}
