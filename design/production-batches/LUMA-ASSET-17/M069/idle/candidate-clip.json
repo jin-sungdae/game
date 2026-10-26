@@ -1,0 +1,77 @@
+{
+  "conceptId": "M069",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M069/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 8,
+    "frameDuration": 180,
+    "loop": true
+  },
+  "movableRect": [
+    34,
+    115,
+    218,
+    212
+  ],
+  "parts": [
+    {
+      "name": "left-tentacle-paddle",
+      "x": 70,
+      "y": 145,
+      "rx": 27,
+      "ry": 27,
+      "dx": -1.47,
+      "dy": -0.9099999999999999,
+      "samples": [
+        0.08,
+        0.34,
+        0.72,
+        1,
+        0.85,
+        0.5,
+        0.21,
+        0.04
+      ]
+    },
+    {
+      "name": "right-tentacle-paddle",
+      "x": 187,
+      "y": 164,
+      "rx": 25,
+      "ry": 32,
+      "dx": 1.0499999999999998,
+      "dy": 0.52,
+      "samples": [
+        0.65,
+        0.94,
+        0.83,
+        0.47,
+        0.17,
+        0.03,
+        0.13,
+        0.39
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Independent local appendage cycle; natural motion and event interpretation require human review",
+  "anatomyScope": "Purple jellyfish bell and distal tentacle tips fixed; asymmetric local tentacle flinch and delayed counter reaction. No invented limbs.",
+  "behaviorContract": "Candidate only; existing unapproved personality/movement/species behavior unchanged",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-17",
+  "reusedRig": "design/production-batches/action-followup/M069/hit-pilot/rig-hit.cjs"
+}
