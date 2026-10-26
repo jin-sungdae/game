@@ -1,0 +1,46 @@
+{
+  "validatedAssetCommit": "d6f295478e1b5936fa708e4da5e38fe90aa511dd",
+  "animationRegression": {
+    "status": "PASS",
+    "exitCode": 0,
+    "tests": 236,
+    "failed": 0
+  },
+  "assetTests": {
+    "status": "BLOCKED_TIMEOUT",
+    "exitCode": 130,
+    "passedBeforeInterruption": 17,
+    "unfinishedTest": "test_registry_scale_paths_and_duplicates",
+    "scope": "전체 suite 실행이 장시간 완료되지 않아 이 세션 프로세스만 SIGINT; 전체 PASS 아님"
+  },
+  "releaseGate": {
+    "status": "FAIL",
+    "reason": "asset-tests 장시간 미완료로 중단; 이후 단계 NOT_RUN",
+    "completedChecks": [
+      {
+        "name": "frontend-build",
+        "status": "PASS",
+        "seconds": 30.91
+      },
+      {
+        "name": "animation-content",
+        "status": "PASS",
+        "seconds": 63.17
+      },
+      {
+        "name": "presentation",
+        "status": "PASS",
+        "seconds": 32.03
+      },
+      {
+        "name": "asset-tests",
+        "status": "FAIL",
+        "seconds": 786.78
+      }
+    ]
+  },
+  "nativeGui": "NOT_RUN",
+  "productionApproval": "NOT_APPROVED",
+  "runtimeConnected": false,
+  "ci": "QUEUED_NOT_VERIFIED"
+}
