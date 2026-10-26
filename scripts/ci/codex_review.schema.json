@@ -14,7 +14,8 @@
       "enum": [
         "PASS",
         "CHANGES_REQUIRED",
-        "HUMAN_REVIEW_REQUIRED"
+        "HUMAN_REVIEW_REQUIRED",
+        "BLOCKED"
       ]
     },
     "head": {
@@ -35,6 +36,49 @@
       "type": "array",
       "items": {
         "type": "string"
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "line",
+          "quote",
+          "reason",
+          "tests",
+          "confidence"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "quote": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "tests": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "CONFIRMED",
+              "UNVERIFIED"
+            ]
+          }
+        }
       }
     }
   }

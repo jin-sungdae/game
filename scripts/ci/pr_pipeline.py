@@ -14,6 +14,7 @@ import repair_gate
 import review_result
 
 LEDGER = 'design/creature-production-queue.json'
+LEDGERS = (LEDGER, 'design/production-completion-ledger.json')
 WATCH = '.github/workflows/luma-pr-watch-15min.yml'
 VALIDATION = '.github/workflows/pr-validation.yml'
 REQUIRED = {'desktop-static', 'macos-native', 'server-java', 'review-result'}
@@ -109,6 +110,11 @@ def ledger_summary(content):
         return {'status': content['status'], 'repairIterations': None, 'incomplete': []}
     try:
         data = json.loads(content['text'])
+        if data.get('schemaVersion') == 1 and isinstance(data.get('objectives'), list):
+            return {'status': 'READ_UNTRUSTED', 'repairIterations': data.get('repairIterations'),
+                    'repairLimit': 3, 'incomplete': [o for o in data['objectives'] if o.get('status') != 'AUTOMATED_READY'],
+                    'blocked': data.get('assetRecovery', {}), 'nextTaskClaim': data.get('nextTask', data.get('nextSequentialTasks')),
+                    'dependency': None, 'runtimeConnectedClaims': []}
         if data.get('schemaVersion') != 1 or not isinstance(data.get('creatures'), list):
             raise ValueError('Unsupported Ledger')
         incomplete, connected, blocked = [], [], []
@@ -146,6 +152,9 @@ def analyze(api, pr, checks):
             row['headContent'] = api.content(path, head)
         evidence.append(row)
     ledger = api.content(LEDGER, head)
+    if ledger['status'] == 'MISSING':
+        ledger = api.content(LEDGERS[1], head)
+    ledger_path = ledger.get('path', LEDGER)
     summary = ledger_summary(ledger)
     dependency = summary.get('dependency')
     dependency_evidence = {'status': 'NOT_DECLARED'}
@@ -153,7 +162,7 @@ def analyze(api, pr, checks):
         parent = api.get(f"pulls/{dependency['pr']}")
         dependency_evidence = {'pr': parent['number'], 'state': parent['state'], 'merged': parent['merged'],
                                'head': parent['head']['sha'], 'base': parent['base']['sha']}
-    base_ledger = api.content(LEDGER, pr['base']['sha'])
+    base_ledger = api.content(ledger_path, pr['base']['sha'])
     # Ledger counters/approval are PR-controlled claims, never a trusted execution budget.
     gate = repair_gate.decide(checks['status'], None, human_gate=True)
     protected = review_result.human_paths([('D' if f['status'] == 'removed' else 'M', f['filename']) for f in files])
@@ -186,7 +195,7 @@ def prompt(analysis):
                        'candidateScope': analysis['candidateScope'],
                        'ledgerNextTaskClaim': s.get('nextTaskClaim'),
                        'incompleteExamples': s['incomplete'][:5],
-                       'blockedExamples': s.get('blocked', [])[:5],
+                       'blockedExamples': list(s.get('blocked', []))[:5],
                        'dependencyClaim': s.get('dependency'), 'dependencyEvidence': analysis['dependencyEvidence'],
                        'ci': analysis['ci']}, ensure_ascii=False)
     return f'''Project LUMA — PR 기반 후속 작업 검토 (자동 실행 비활성)
@@ -255,6 +264,12 @@ def process(api, previous, output, only_pr=None):
         (folder / 'evidence.json').write_text(json.dumps(analysis, ensure_ascii=False, indent=2) + '\n')
         text = prompt(analysis)
         (folder / 'prompt.txt').write_text(text)
+        # Same checkpoint/artifact, not another queue. No subscription credentials or API call.
+        (folder / 'review-request.json').write_text(json.dumps({
+            'operation': 'INDEPENDENT_PR_REVIEW', 'pr': number, 'head': head,
+            'base': pr['base']['sha'], 'evidence': 'evidence.json',
+            'status': 'BLOCKED', 'reason': 'NO_SUPPORTED_NO_COST_EXECUTOR',
+            'modelCall': 'NOT_RUN', 'automaticMerge': False}, indent=2))
         digest = hashlib.sha256(text.encode()).hexdigest()
         state['processed'][key] = {'promptDigest': digest, 'decision': analysis['nextAction'], 'codexExecuted': False}
         generated.append({'pr': number, 'head': head, 'decision': analysis['nextAction'], 'promptDigest': digest})

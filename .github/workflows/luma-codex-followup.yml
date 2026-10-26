@@ -9,7 +9,7 @@ on:
       mode:
         description: 'Dry-run by default; implement requires enrollment, secrets and protected environments'
         type: choice
-        options: [dry-run, analyze, implement]
+        options: [dry-run, analyze, implement, repair-dry-run]
         default: dry-run
       analysis_attempt:
         description: 'Read-only pilot attempt 1-3; retries require the previous attempt to have failed'
@@ -90,6 +90,12 @@ jobs:
         run: |
           if [[ "$MODE" == "analyze" ]]; then
             python3 controller/scripts/ci/codex_followup.py prepare-analysis --repo "$GH_REPO" --pr "$TEST_PR" --analysis-attempt "$ANALYSIS_ATTEMPT" --output followup
+            exit 0
+          fi
+          if [[ "$MODE" == "repair-dry-run" ]]; then
+            [[ "$TEST_PR" =~ ^[1-9][0-9]*$ ]] || exit 1
+            python3 controller/scripts/ci/codex_followup.py prepare-repair --repo "$GH_REPO" --pr "$TEST_PR" --dry-run --output followup
+            echo 'selected=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
           args=()
