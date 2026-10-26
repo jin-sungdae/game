@@ -16,7 +16,7 @@ class BattleRulesMigrationRestartTest {
     Map<String,String> snapshot(JdbcTemplate db) {
         var state=new LinkedHashMap<String,String>();
         for(String t:List.of("t_battle","t_encounter","t_reward","t_player","t_player_companion")) {
-            String value=t.equals("t_battle")?"to_jsonb(t)-'rules_version'":t.equals("t_player_companion")?"to_jsonb(t)-'growth_policy_version'":"to_jsonb(t)";
+            String value=t.equals("t_battle")?"to_jsonb(t)-'rules_version'":t.equals("t_player_companion")?"to_jsonb(t)-'growth_policy_version'":t.equals("t_player")?"to_jsonb(t)-'active_selection_revision'":"to_jsonb(t)";
             state.put(t,db.queryForObject("SELECT COALESCE(jsonb_agg("+value+" ORDER BY ("+value+")::text),'[]'::jsonb)::text FROM game."+t+" t",String.class));
         }
         return state;
@@ -48,6 +48,7 @@ class BattleRulesMigrationRestartTest {
                 var before=snapshot(db);
                 Flyway.configure().dataSource(url,user,password).schemas("game").defaultSchema("game").load().migrate();
                 assertEquals(before,snapshot(db));
+                assertEquals(0,db.queryForObject("SELECT active_selection_revision FROM game.t_player WHERE player_id=1",Long.class));
                 assertEquals("ALPHA_V1",db.queryForObject("SELECT rules_version FROM game.t_battle WHERE battle_id=?",String.class,battle));
                 for(int restart=0;restart<2;restart++) {
                     try(var app=start(url,user,password)) {
@@ -56,6 +57,7 @@ class BattleRulesMigrationRestartTest {
                         assertEquals(73,result.companion().hp());assertEquals(3,result.turn());
                         assertEquals(status.equals("ACTIVE")?16:0,result.monster().hp());
                         assertEquals(before,snapshot(db));
+                assertEquals(0,db.queryForObject("SELECT active_selection_revision FROM game.t_player WHERE player_id=1",Long.class));
                         assertEquals("ALPHA_V1",db.queryForObject("SELECT rules_version FROM game.t_battle WHERE battle_id=?",String.class,battle));
                         if(restart==1) {
                             if(status.equals("ACTIVE")) {

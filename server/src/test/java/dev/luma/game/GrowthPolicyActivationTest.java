@@ -34,7 +34,7 @@ class GrowthPolicyActivationTest {
             "--spring.datasource.username="+user,"--spring.datasource.password="+password);
     }
     String unchanged(JdbcTemplate db,String table) {
-        String projection=table.equals("t_player_companion")?"to_jsonb(t)-'level'-'growth_policy_version'":"to_jsonb(t)";
+        String projection=table.equals("t_player_companion")?"to_jsonb(t)-'level'-'growth_policy_version'":table.equals("t_player")?"to_jsonb(t)-'active_selection_revision'":"to_jsonb(t)";
         return db.queryForObject("SELECT COALESCE(jsonb_agg("+projection+" ORDER BY ("+projection+")::text),'[]'::jsonb)::text FROM game."+table+" t",String.class);
     }
     @Test void migrationRehearsalPreservesExpHistoryBattleAndRestartState() throws Exception {
@@ -50,6 +50,7 @@ class GrowthPolicyActivationTest {
             var before=new LinkedHashMap<String,String>();for(String table:tables)before.put(table,unchanged(db,table));
             migrate(url,user,password,null);
             for(String table:tables)assertEquals(before.get(table),unchanged(db,table),table);
+                assertEquals(0,db.queryForObject("SELECT active_selection_revision FROM game.t_player WHERE player_id=1",Long.class));
             assertEquals(100,db.queryForObject("SELECT level FROM game.t_player_companion WHERE active",Integer.class));
             assertEquals("GROWTH_B_V2",db.queryForObject("SELECT growth_policy_version FROM game.t_player_companion WHERE active",String.class));
             for(int level=1;level<=100;level++) {
@@ -67,6 +68,7 @@ class GrowthPolicyActivationTest {
                 assertEquals(73,current.companion().hp());assertEquals(0,current.turn());assertTrue(current.skills().isEmpty());
                 assertThrows(GameFault.class,()->app.getBean(SkillCommandService.class).execute(battle,new SkillCommandService.Request(UUID.randomUUID(),"MOA_S1",0)));
                 for(String table:tables)assertEquals(before.get(table),unchanged(db,table),table);
+                assertEquals(0,db.queryForObject("SELECT active_selection_revision FROM game.t_player WHERE player_id=1",Long.class));
             }
         });
     }
