@@ -43,7 +43,15 @@ class BattleRulesVersionIntegrationTest {
     void replaceVersion(UUID battle,String version) {
         // A future writer fixture INSERTs an unsupported version; UPDATE is forbidden.
         String json=db.queryForObject("SELECT jsonb_set(to_jsonb(b),'{rules_version}',to_jsonb(?::text))::text FROM game.t_battle b WHERE battle_id=?",String.class,version,battle);
+        UUID encounter=db.queryForObject("SELECT encounter_id FROM game.t_battle WHERE battle_id=?",UUID.class,battle);
+        String encounterJson=db.queryForObject("SELECT jsonb_set(to_jsonb(e),'{rules_version}',to_jsonb(?::text))::text FROM game.t_encounter e WHERE encounter_id=?",String.class,version,encounter);
+        var rewards=db.queryForList("SELECT to_jsonb(r)::text FROM game.t_reward r WHERE encounter_id=?",String.class,encounter);
+        // Future-writer fixture recreates both immutable snapshots; never disables DB guards.
+        db.update("DELETE FROM game.t_reward WHERE encounter_id=?",encounter);
         db.update("DELETE FROM game.t_battle WHERE battle_id=?",battle);
+        db.update("DELETE FROM game.t_encounter WHERE encounter_id=?",encounter);
+        db.update("INSERT INTO game.t_encounter SELECT * FROM jsonb_populate_record(NULL::game.t_encounter,?::jsonb)",encounterJson);
+        for(var reward:rewards) db.update("INSERT INTO game.t_reward SELECT * FROM jsonb_populate_record(NULL::game.t_reward,?::jsonb)",reward);
         db.update("INSERT INTO game.t_battle SELECT * FROM jsonb_populate_record(NULL::game.t_battle,?::jsonb)",json);
     }
 

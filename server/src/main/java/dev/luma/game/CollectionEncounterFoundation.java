@@ -79,12 +79,12 @@ public class CollectionEncounterFoundation {
      * Terminal/ignore/restart cannot reset the persisted issuance deadline.
      */
     public Issuance issueNatural() {
-        lock(); game.activeCompanion(PLAYER);
+        lock(); var companion=game.activeCompanion(PLAYER);
         var now=game.now(); game.expire(PLAYER,now);
         var active=game.active(PLAYER); var next=next();
         if (active.isPresent()) return new Issuance(active.get(),next,false);
         if (next!=null && now.isBefore(next)) return new Issuance(null,next,false);
-        var encounter=game.create(PLAYER,selector.select(game.monsters()),now);
+        var encounter=game.create(PLAYER,selector.select(game.monsters(),companion.level()),now,companion.level());
         debitBudget(now);
         return new Issuance(encounter,next(),true);
     }
