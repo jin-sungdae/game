@@ -24991,7 +24991,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "RIG_LAYER_REQUIRED: violet eye ring needs separated eye/ring surfaces or dedicated response keypose. Whole ring rotation and internal pixel distortion do not establish facing stimulus. Preserve BASE and FLOATING proposal.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "ATTACK",
@@ -25116,10 +25118,15 @@
         },
         {
           "action": "INTERACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M088/interact-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "ATTACK",
@@ -25157,17 +25164,99 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": [],
+      "clips": [
+        {
+          "action": "interact",
+          "directory": "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact",
+          "urls": [
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_00.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_01.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_02.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_03.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_04.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_05.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_06.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 150,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ]
+          ],
+          "pixelHashes": [
+            "8c2e9687949d61c6aad6d7ec242a842da95443231a9833a8dfccd354c53bcd3b",
+            "8e01edd3fd258c20a5a3a1f43959e22df211208ae7410d3911e9fe70ca1475c1",
+            "bb3c92e35df1bf36cd8838d56ce9966a99465c1eeaa2dd54a77d382ec5fb76c2",
+            "37612d789ea51739a2d549185530f327fedaf62a87f5fd42dea18e5f5a3fe8aa",
+            "056c684b8c7f5645bed9a3a919769bdcf34c83a1f3bef43c18ff645314991feb",
+            "b958c2838ed72a2c3cb15ebecd81f2d1bde6a223a268e8cffada68777672008d",
+            "2ff2dbbfa20059f5b44f71eacb1e2efa14284f229b6ee1ddcb54897053561591",
+            "6611f22338cedb0ba81562425aaf2cd69d5180cf5ee8cd5316f4b09c01c76fee"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
       "coverage": {
         "requiredActions": 15,
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 0,
-        "automatedCandidateActions": 0,
-        "artworkReviewPendingActions": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -25240,7 +25329,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "KEYPOSE_REQUIRED: red eye orb gaze-away/return requires eye anatomy-preserving keypose or separate pupil layer; peripheral tentacle motion alone does not implement gaze contract.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "INTERACT",
@@ -27112,11 +27203,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 150,
-    "automatedCandidateActions": 148,
-    "artworkReviewPendingActions": 149,
+    "candidateActions": 151,
+    "automatedCandidateActions": 149,
+    "artworkReviewPendingActions": 150,
     "validationFailedActions": 39,
-    "missingFrameSetActions": 1585,
+    "missingFrameSetActions": 1584,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
