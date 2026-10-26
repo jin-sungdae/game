@@ -1,0 +1,447 @@
+{
+  "species": "moa",
+  "stage": 2,
+  "clips": {
+    "hit": {
+      "status": "AUTOMATED_CHECKS_PASS_VISUAL_REVIEW_REQUIRED",
+      "errors": [],
+      "reference": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_00.png",
+      "referenceApproval": "NOT_ESTABLISHED_BY_THIS_TOOL",
+      "frames": [
+        {
+          "file": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_00.png",
+          "sha256": "169e900967f2df659c820c8aec90231f8dcdeb8e0916d16d870c6c2309b228d8",
+          "pixelSha256": "0240463640e8ba2e2a7c4ce3f4dcbfdcf3d15fe3928d3586f8a67a6a1640d495",
+          "bounds": [
+            15,
+            37,
+            240,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_01.png",
+          "sha256": "fd9edfea885a5ea15d20d8194d499b8d6b246ce0c68e84c3fdcda6c42c13b80e",
+          "pixelSha256": "aefc6673b86bcd884559bba37172a02938804d6982d1f4778263e546a437e50e",
+          "bounds": [
+            15,
+            37,
+            240,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_02.png",
+          "sha256": "df46c70213ce9140dd834b9e0af771bb79b94f83434e723cf15c27ec6f1d0497",
+          "pixelSha256": "817929960f8c929ec308298b06fec57f94415ad319311b79561a803027f219db",
+          "bounds": [
+            15,
+            37,
+            240,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_03.png",
+          "sha256": "116dc3a0f196496a8432b1d21e933779705a776f88b76d3476dae3db59e1f52a",
+          "pixelSha256": "e91066529e72807722beab5f2c8d3e6a50d288953436fa23705b5ec5aa37a3b1",
+          "bounds": [
+            15,
+            37,
+            240,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_04.png",
+          "sha256": "5367aa9da65f5aa83d593f3a54a3fca9ef322478b27175a24ce95f3fe73d1928",
+          "pixelSha256": "efa6bc97a12e8e97aaae6e4575fab28f1a1b756d089138d0c85e7dee4e0872f2",
+          "bounds": [
+            15,
+            37,
+            240,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_05.png",
+          "sha256": "59a45c13e25297dab149908ec654561a9e9a2ebf38ed0b2fd6136028183e26c1",
+          "pixelSha256": "5022958d30d71520a8b7f03114dd2c431341881c35f7e3507132c50048b49f1c",
+          "bounds": [
+            15,
+            37,
+            240,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_06.png",
+          "sha256": "5c60e29b0ad7022760480efb63032d9a1044ed3e41fd54bdd793fcdfa802e365",
+          "pixelSha256": "9ed97df4cba127e26ff2c3b756dcfce430247b5fe9f25bef23c7618e292c362f",
+          "bounds": [
+            15,
+            37,
+            240,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        },
+        {
+          "file": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_07.png",
+          "sha256": "3bdc3a5dde580ac51a9bdaed296d40d2145d1d8e0752e56aae847d2987d92cb0",
+          "pixelSha256": "cd740007aa84fdc91016fdf50370b6174255b25e72aeec2005d7199a56dac296",
+          "bounds": [
+            15,
+            37,
+            240,
+            251
+          ],
+          "driftPixels": {
+            "centerX": 0.0,
+            "bottom": 0
+          },
+          "errors": []
+        }
+      ],
+      "repeatedPixelGroups": []
+    }
+  },
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "visualIdentity": "MANUAL_REVIEW_REQUIRED",
+  "backgroundResidue": "MANUAL_REVIEW_REQUIRED",
+  "anatomicalContinuity": "MANUAL_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "baseRegistration": [
+    {
+      "candidate": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_00.png",
+      "reference": "public/assets/creatures/moa/stage02/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "0240463640e8ba2e2a7c4ce3f4dcbfdcf3d15fe3928d3586f8a67a6a1640d495",
+        "sha256": "169e900967f2df659c820c8aec90231f8dcdeb8e0916d16d870c6c2309b228d8",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "be486ce3d0c6bc299cea29a2b0a5649b08010667c6797080fabc04422dd381ff",
+        "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_01.png",
+      "reference": "public/assets/creatures/moa/stage02/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "aefc6673b86bcd884559bba37172a02938804d6982d1f4778263e546a437e50e",
+        "sha256": "fd9edfea885a5ea15d20d8194d499b8d6b246ce0c68e84c3fdcda6c42c13b80e",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "be486ce3d0c6bc299cea29a2b0a5649b08010667c6797080fabc04422dd381ff",
+        "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_02.png",
+      "reference": "public/assets/creatures/moa/stage02/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "817929960f8c929ec308298b06fec57f94415ad319311b79561a803027f219db",
+        "sha256": "df46c70213ce9140dd834b9e0af771bb79b94f83434e723cf15c27ec6f1d0497",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "be486ce3d0c6bc299cea29a2b0a5649b08010667c6797080fabc04422dd381ff",
+        "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_03.png",
+      "reference": "public/assets/creatures/moa/stage02/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "e91066529e72807722beab5f2c8d3e6a50d288953436fa23705b5ec5aa37a3b1",
+        "sha256": "116dc3a0f196496a8432b1d21e933779705a776f88b76d3476dae3db59e1f52a",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "be486ce3d0c6bc299cea29a2b0a5649b08010667c6797080fabc04422dd381ff",
+        "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_04.png",
+      "reference": "public/assets/creatures/moa/stage02/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "efa6bc97a12e8e97aaae6e4575fab28f1a1b756d089138d0c85e7dee4e0872f2",
+        "sha256": "5367aa9da65f5aa83d593f3a54a3fca9ef322478b27175a24ce95f3fe73d1928",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "be486ce3d0c6bc299cea29a2b0a5649b08010667c6797080fabc04422dd381ff",
+        "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_05.png",
+      "reference": "public/assets/creatures/moa/stage02/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "5022958d30d71520a8b7f03114dd2c431341881c35f7e3507132c50048b49f1c",
+        "sha256": "59a45c13e25297dab149908ec654561a9e9a2ebf38ed0b2fd6136028183e26c1",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "be486ce3d0c6bc299cea29a2b0a5649b08010667c6797080fabc04422dd381ff",
+        "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_06.png",
+      "reference": "public/assets/creatures/moa/stage02/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "9ed97df4cba127e26ff2c3b756dcfce430247b5fe9f25bef23c7618e292c362f",
+        "sha256": "5c60e29b0ad7022760480efb63032d9a1044ed3e41fd54bdd793fcdfa802e365",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "be486ce3d0c6bc299cea29a2b0a5649b08010667c6797080fabc04422dd381ff",
+        "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/production-batches/moa-stages-luma-asset-01/moa/stage02/hit/rigged/hit/hit_07.png",
+      "reference": "public/assets/creatures/moa/stage02/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "cd740007aa84fdc91016fdf50370b6174255b25e72aeec2005d7199a56dac296",
+        "sha256": "3bdc3a5dde580ac51a9bdaed296d40d2145d1d8e0752e56aae847d2987d92cb0",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "be486ce3d0c6bc299cea29a2b0a5649b08010667c6797080fabc04422dd381ff",
+        "sha256": "ba03365bea48efc2e05170e470b2facfa15ac8c78440dfb16c97c1b162b4fdc4",
+        "bounds": [
+          15,
+          37,
+          240,
+          251
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    }
+  ]
+}

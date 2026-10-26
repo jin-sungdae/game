@@ -1,0 +1,206 @@
+[
+  {
+    "stage": "stage01",
+    "action": "hit",
+    "baseDetachedAlphaPixels": 7,
+    "alphaReadiness": "BLOCKED_SOURCE_ALPHA_RESIDUE",
+    "frames": [
+      {
+        "frame": 0,
+        "changedPixels": 960,
+        "alphaChangedPixels": 203,
+        "detachedAlphaPixels": 7,
+        "adjacentMeanAbsoluteChannelDelta": 0.0594635009765625
+      },
+      {
+        "frame": 1,
+        "changedPixels": 1720,
+        "alphaChangedPixels": 248,
+        "detachedAlphaPixels": 7,
+        "adjacentMeanAbsoluteChannelDelta": 0.061122894287109375
+      },
+      {
+        "frame": 2,
+        "changedPixels": 2213,
+        "alphaChangedPixels": 381,
+        "detachedAlphaPixels": 7,
+        "adjacentMeanAbsoluteChannelDelta": 0.10454940795898438
+      },
+      {
+        "frame": 3,
+        "changedPixels": 2214,
+        "alphaChangedPixels": 421,
+        "detachedAlphaPixels": 7,
+        "adjacentMeanAbsoluteChannelDelta": 0.052761077880859375
+      },
+      {
+        "frame": 4,
+        "changedPixels": 2075,
+        "alphaChangedPixels": 387,
+        "detachedAlphaPixels": 7,
+        "adjacentMeanAbsoluteChannelDelta": 0.047397613525390625
+      },
+      {
+        "frame": 5,
+        "changedPixels": 1780,
+        "alphaChangedPixels": 318,
+        "detachedAlphaPixels": 7,
+        "adjacentMeanAbsoluteChannelDelta": 0.06517791748046875
+      },
+      {
+        "frame": 6,
+        "changedPixels": 1444,
+        "alphaChangedPixels": 261,
+        "detachedAlphaPixels": 7,
+        "adjacentMeanAbsoluteChannelDelta": 0.0386962890625
+      },
+      {
+        "frame": 7,
+        "changedPixels": 1052,
+        "alphaChangedPixels": 212,
+        "detachedAlphaPixels": 7,
+        "adjacentMeanAbsoluteChannelDelta": 0.02734375
+      }
+    ],
+    "automatedContinuity": "PASS",
+    "appearanceDrift": "MANUAL_REVIEW_REQUIRED",
+    "anatomicalContinuity": "MANUAL_REVIEW_REQUIRED",
+    "productionEligible": false
+  },
+  {
+    "stage": "stage02",
+    "action": "hit",
+    "baseDetachedAlphaPixels": 25,
+    "alphaReadiness": "BLOCKED_SOURCE_ALPHA_RESIDUE",
+    "frames": [
+      {
+        "frame": 0,
+        "changedPixels": 1382,
+        "alphaChangedPixels": 191,
+        "detachedAlphaPixels": 25,
+        "adjacentMeanAbsoluteChannelDelta": 0.07216644287109375
+      },
+      {
+        "frame": 1,
+        "changedPixels": 1999,
+        "alphaChangedPixels": 288,
+        "detachedAlphaPixels": 25,
+        "adjacentMeanAbsoluteChannelDelta": 0.07568359375
+      },
+      {
+        "frame": 2,
+        "changedPixels": 2441,
+        "alphaChangedPixels": 458,
+        "detachedAlphaPixels": 25,
+        "adjacentMeanAbsoluteChannelDelta": 0.12792587280273438
+      },
+      {
+        "frame": 3,
+        "changedPixels": 2469,
+        "alphaChangedPixels": 512,
+        "detachedAlphaPixels": 25,
+        "adjacentMeanAbsoluteChannelDelta": 0.07690048217773438
+      },
+      {
+        "frame": 4,
+        "changedPixels": 2335,
+        "alphaChangedPixels": 470,
+        "detachedAlphaPixels": 25,
+        "adjacentMeanAbsoluteChannelDelta": 0.063018798828125
+      },
+      {
+        "frame": 5,
+        "changedPixels": 2035,
+        "alphaChangedPixels": 359,
+        "detachedAlphaPixels": 25,
+        "adjacentMeanAbsoluteChannelDelta": 0.08569717407226562
+      },
+      {
+        "frame": 6,
+        "changedPixels": 1784,
+        "alphaChangedPixels": 285,
+        "detachedAlphaPixels": 25,
+        "adjacentMeanAbsoluteChannelDelta": 0.049137115478515625
+      },
+      {
+        "frame": 7,
+        "changedPixels": 1478,
+        "alphaChangedPixels": 202,
+        "detachedAlphaPixels": 25,
+        "adjacentMeanAbsoluteChannelDelta": 0.03884124755859375
+      }
+    ],
+    "automatedContinuity": "PASS",
+    "appearanceDrift": "MANUAL_REVIEW_REQUIRED",
+    "anatomicalContinuity": "MANUAL_REVIEW_REQUIRED",
+    "productionEligible": false
+  },
+  {
+    "stage": "stage04",
+    "action": "interact",
+    "baseDetachedAlphaPixels": 0,
+    "alphaReadiness": "PASS",
+    "frames": [
+      {
+        "frame": 0,
+        "changedPixels": 269,
+        "alphaChangedPixels": 0,
+        "detachedAlphaPixels": 0,
+        "adjacentMeanAbsoluteChannelDelta": 0.0027313232421875
+      },
+      {
+        "frame": 1,
+        "changedPixels": 564,
+        "alphaChangedPixels": 0,
+        "detachedAlphaPixels": 0,
+        "adjacentMeanAbsoluteChannelDelta": 0.008464813232421875
+      },
+      {
+        "frame": 2,
+        "changedPixels": 783,
+        "alphaChangedPixels": 0,
+        "detachedAlphaPixels": 0,
+        "adjacentMeanAbsoluteChannelDelta": 0.017822265625
+      },
+      {
+        "frame": 3,
+        "changedPixels": 937,
+        "alphaChangedPixels": 0,
+        "detachedAlphaPixels": 0,
+        "adjacentMeanAbsoluteChannelDelta": 0.026287078857421875
+      },
+      {
+        "frame": 4,
+        "changedPixels": 1026,
+        "alphaChangedPixels": 0,
+        "detachedAlphaPixels": 0,
+        "adjacentMeanAbsoluteChannelDelta": 0.03112030029296875
+      },
+      {
+        "frame": 5,
+        "changedPixels": 1019,
+        "alphaChangedPixels": 0,
+        "detachedAlphaPixels": 0,
+        "adjacentMeanAbsoluteChannelDelta": 0.028652191162109375
+      },
+      {
+        "frame": 6,
+        "changedPixels": 893,
+        "alphaChangedPixels": 0,
+        "detachedAlphaPixels": 0,
+        "adjacentMeanAbsoluteChannelDelta": 0.038921356201171875
+      },
+      {
+        "frame": 7,
+        "changedPixels": 532,
+        "alphaChangedPixels": 0,
+        "detachedAlphaPixels": 0,
+        "adjacentMeanAbsoluteChannelDelta": 0.029590606689453125
+      }
+    ],
+    "automatedContinuity": "PASS",
+    "appearanceDrift": "MANUAL_REVIEW_REQUIRED",
+    "anatomicalContinuity": "MANUAL_REVIEW_REQUIRED",
+    "productionEligible": false
+  }
+]

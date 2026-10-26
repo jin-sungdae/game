@@ -1,0 +1,116 @@
+{
+  "reference": "public/assets/creatures/moa/stage02/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "growing-shoulder-brace",
+      "x": 161,
+      "y": 207,
+      "rx": 29,
+      "ry": 24,
+      "dx": -1.6,
+      "dy": 1.1,
+      "samples": [
+        0.15,
+        0.5,
+        1,
+        0.85,
+        0.62,
+        0.37,
+        0.24,
+        0.18
+      ]
+    },
+    {
+      "name": "back-leaf-recovery",
+      "x": 32,
+      "y": 155,
+      "rx": 29,
+      "ry": 26,
+      "dx": 2,
+      "dy": -0.8,
+      "samples": [
+        0.12,
+        0.26,
+        0.67,
+        1,
+        0.82,
+        0.5,
+        0.31,
+        0.14
+      ]
+    }
+  ],
+  "protectedRegions": "y>=231||y<=115||x<=10||x>=195",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "18019af6cd7edcfe2b6805c061759cd90b58ae99516a1f0dff9ac3782d284be9",
+      "changedPixels": 1382,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 191,
+      "maxInverseDisplacementPixels": 0.29114625899907953
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "e2b595eb887a461565f04eb2fa3dee27068f5df9280493d01832962ff6d088d7",
+      "changedPixels": 1999,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 288,
+      "maxInverseDisplacementPixels": 0.9696580746299117
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "8475089b39238b5fbd8cb57439831ae47a15531d5c627280be57cab46b67d50b",
+      "changedPixels": 2441,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 458,
+      "maxInverseDisplacementPixels": 1.9404355520802619
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "edf14c37d1dd483911d2d2946c2b6c1220a3dcf38a8932de6e753fe2bc649ecb",
+      "changedPixels": 2469,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 512,
+      "maxInverseDisplacementPixels": 2.1536830219082277
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "fb3ed273e1a2d133b03f9c7be87f5bb69c82bcff06db054b6b3284f4929ae663",
+      "changedPixels": 2335,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 470,
+      "maxInverseDisplacementPixels": 1.764579509824144
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "271652658cdaebfff2cf25f8f06bc2a982e829c8cb12475867c98c116c48a2ce",
+      "changedPixels": 2035,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 359,
+      "maxInverseDisplacementPixels": 1.0762694667225863
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "70aefadab2f5aac01f7c64bf0f703a177b59634f0f108163a73d8ecb6eee2d71",
+      "changedPixels": 1784,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 285,
+      "maxInverseDisplacementPixels": 0.6672337490088596
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "1315b14ebb0147013efd4bfc87e82b275ddb83747e65cad8bf78d01a8aed5ef8",
+      "changedPixels": 1478,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 202,
+      "maxInverseDisplacementPixels": 0.34932221401744395
+    }
+  ],
+  "repairIterations": 2,
+  "repairScope": "LUMA-ASSET-01 independent missing action; existing failures untouched",
+  "productionEligible": false
+}
