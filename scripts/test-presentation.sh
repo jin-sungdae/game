@@ -21,3 +21,5 @@ NODE_PATH="$PWD/node_modules" node --test tests/presentation/nebla-ui.cjs
 
 ./node_modules/.bin/tsc src/presentation/skill.ts --outDir "$LUMA_PRESENTATION_TEST_DIR" --module commonjs --target ES2022 --strict --skipLibCheck
 node --test tests/presentation/skill.cjs
+./node_modules/.bin/tsc src/stores/entities.ts --outDir "$LUMA_PRESENTATION_TEST_DIR" --module commonjs --target ES2022 --strict --skipLibCheck
+NODE_PATH="$PWD/node_modules" node --test tests/presentation/skill-store.cjs
