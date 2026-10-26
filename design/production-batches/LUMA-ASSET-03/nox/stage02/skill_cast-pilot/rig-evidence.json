@@ -1,0 +1,136 @@
+{
+  "reference": "public/assets/creatures/nox/stage02/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "neck-ruff-focus",
+      "x": 185,
+      "y": 137,
+      "rx": 23,
+      "ry": 22,
+      "dx": -1.4,
+      "dy": -1.8,
+      "samples": [
+        0.02,
+        0.17,
+        0.48,
+        0.82,
+        1,
+        0.76,
+        0.33,
+        0.04
+      ]
+    },
+    {
+      "name": "flank-gather",
+      "x": 137,
+      "y": 160,
+      "rx": 31,
+      "ry": 24,
+      "dx": 0.9,
+      "dy": -0.8,
+      "samples": [
+        0.01,
+        0.06,
+        0.23,
+        0.58,
+        0.94,
+        1,
+        0.55,
+        0.07
+      ]
+    },
+    {
+      "name": "tail-root-contain",
+      "x": 101,
+      "y": 160,
+      "rx": 16,
+      "ry": 23,
+      "dx": 1.2,
+      "dy": -1,
+      "samples": [
+        0.01,
+        0.03,
+        0.12,
+        0.36,
+        0.72,
+        1,
+        0.65,
+        0.09
+      ]
+    }
+  ],
+  "protectedRegions": "y>=191||y<=114||x<=85||x>=214",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "skill_cast_00.png",
+      "pixelSha256": "d31b105b58224f788dfa92ca76ced5cc1715e28ac4d1327feb57e6f72809cf4e",
+      "changedPixels": 553,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 23,
+      "maxInverseDisplacementPixels": 0.045606447882255305
+    },
+    {
+      "file": "skill_cast_01.png",
+      "pixelSha256": "3948bfcec2c1f3beab96fb5a136dd7a9e901b07b79942cf913f3cd3202143da6",
+      "changedPixels": 1550,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 149,
+      "maxInverseDisplacementPixels": 0.3873108558020085
+    },
+    {
+      "file": "skill_cast_02.png",
+      "pixelSha256": "6604822bb2c4a9f74258b11f785ce4293661a81738e694dffe85e31f524ea31b",
+      "changedPixels": 2352,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 255,
+      "maxInverseDisplacementPixels": 1.0937721443827715
+    },
+    {
+      "file": "skill_cast_03.png",
+      "pixelSha256": "16fe8943342080e4a080dcb29e2c1f19cf49052a3cd66ceb3f3b97f72839dcb9",
+      "changedPixels": 2941,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 375,
+      "maxInverseDisplacementPixels": 1.8670607846164986
+    },
+    {
+      "file": "skill_cast_04.png",
+      "pixelSha256": "da130ee397330fb965f81849ce889ada63a38891ec9218f59b8c04b84df2d773",
+      "changedPixels": 3190,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 473,
+      "maxInverseDisplacementPixels": 2.2777222278050093
+    },
+    {
+      "file": "skill_cast_05.png",
+      "pixelSha256": "6d278dfedf8573e9a0eb5e19384b6353cb5aa7377152b4d2e771539380729c7e",
+      "changedPixels": 3179,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 483,
+      "maxInverseDisplacementPixels": 1.7315824605888166
+    },
+    {
+      "file": "skill_cast_06.png",
+      "pixelSha256": "3cc4a2d849903c55655f9083a797a151ec489d70cfeacb30832b23ae5c2e087e",
+      "changedPixels": 2864,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 370,
+      "maxInverseDisplacementPixels": 1.0140432293249768
+    },
+    {
+      "file": "skill_cast_07.png",
+      "pixelSha256": "9ada18ed2014db7016a83fde22fd9a9b28ffebdf1d3fd1024f3e7463d9ef0d20",
+      "changedPixels": 1382,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 179,
+      "maxInverseDisplacementPixels": 0.14055883110641598
+    }
+  ],
+  "repairIterations": 0,
+  "priorRepairIterations": 3,
+  "repairScope": "LUMA-ASSET-03 independent first attempt; prior failures remain blocked at 3/3",
+  "productionEligible": false
+}
