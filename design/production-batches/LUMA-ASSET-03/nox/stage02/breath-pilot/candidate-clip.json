@@ -1,0 +1,78 @@
+{
+  "sessionId": "LUMA-ASSET-03",
+  "species": "nox",
+  "evolutionStage": 2,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/nox/stage02/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 260,
+    "loop": true
+  },
+  "movableRect": [
+    99,
+    118,
+    191,
+    177
+  ],
+  "parts": [
+    {
+      "name": "ribcage-breath",
+      "x": 169,
+      "y": 150,
+      "rx": 21,
+      "ry": 23,
+      "dx": 0.45,
+      "dy": -1.1,
+      "samples": [
+        0.07,
+        0.24,
+        0.6,
+        0.94,
+        1,
+        0.71,
+        0.34,
+        0.12
+      ]
+    },
+    {
+      "name": "shoulder-tuft-root",
+      "x": 151,
+      "y": 137,
+      "rx": 25,
+      "ry": 17,
+      "dx": -0.3,
+      "dy": -0.8,
+      "samples": [
+        0.18,
+        0.07,
+        0.22,
+        0.58,
+        0.94,
+        1,
+        0.68,
+        0.35
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "anatomyScope": "느린 호흡과 어깨 깃의 지연. 눈·얼굴·발은 움직이지 않는 신중한 관찰 자세.",
+  "rigReuse": "design/production-batches/action-followup/nox/stage02/hit-pilot/rig-hit.cjs",
+  "productionTiming": "UNAPPROVED",
+  "repairIterations": 0,
+  "priorRepairLimit": "3/3 PRESERVED"
+}
