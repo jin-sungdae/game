@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "status": "CANDIDATE_ONLY",
+  "reference": "design/visual-reference-v1/monsters-concept.png",
+  "repairIterations": 1,
+  "repairLimit": 3,
+  "productionRegistered": 0,
+  "runtimeConnected": 0,
+  "baseCandidates": 10,
+  "idleCandidateClips": 5,
+  "idleCandidateFrames": 30,
+  "artworkApproval": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotionReview": "NOT_VERIFIED",
+  "gui": "NOT_VERIFIED",
+  "deferred": {
+    "M091": "ANATOMY_REVIEW_REQUIRED: ambiguous extra leg, no rig",
+    "M093": "APPEARANCE_DRIFT: upright yeti concept became quadrupedal antlered creature",
+    "M094": "APPEARANCE_DRIFT: orbital mechanism became quadruped",
+    "M097": "APPEARANCE_DRIFT: upright reference became quadruped",
+    "M099": "ANATOMY_REVIEW_REQUIRED: ambiguous extra leg, no rig"
+  },
+  "repairHistory": [
+    "Only disconnected components with maximum alpha <=4 removed; connected body preserved"
+  ],
+  "identityReview": [
+    {
+      "conceptId": "M091",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M092",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M093",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M094",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M095",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M096",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M097",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M098",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M099",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "conceptId": "M100",
+      "productionSpeciesId": null,
+      "mappingApproved": false,
+      "runtimeEnabled": false
+    }
+  ],
+  "generation": [
+    {
+      "conceptId": "M091",
+      "tool": "built-in image_gen",
+      "sourceSha256": "d9e3cee73b42cd1212d8def8a6c129f4302369b58359242c28a053799bd2dfd0",
+      "reference": "Celestial Peak concept panel"
+    },
+    {
+      "conceptId": "M092",
+      "tool": "built-in image_gen",
+      "sourceSha256": "82160caad51812bff78c0b03baf90d2247f104363d7069e67a8c62d44bf3c9ea",
+      "reference": "Celestial Peak concept panel"
+    },
+    {
+      "conceptId": "M093",
+      "tool": "built-in image_gen",
+      "sourceSha256": "02f367e619218f70ff9ea0cf2a3887489c05a574d3adc2972976698eac543a6b",
+      "reference": "Celestial Peak concept panel"
+    },
+    {
+      "conceptId": "M094",
+      "tool": "built-in image_gen",
+      "sourceSha256": "67a2a9501bcc116e1f9f5d290a8417b205c55e020e05f544be818449844bed98",
+      "reference": "Celestial Peak concept panel"
+    },
+    {
+      "conceptId": "M095",
+      "tool": "built-in image_gen",
+      "sourceSha256": "6eac6ccd4646af4b9d6250fcc21630cc57635c1e1151cc817b69b0b2881a3f50",
+      "reference": "Celestial Peak concept panel"
+    },
+    {
+      "conceptId": "M096",
+      "tool": "built-in image_gen",
+      "sourceSha256": "55b7c4d33131b9fd559f7b4ad1e5e9c914baf8ce7d8f863cd5c127df8f5fd917",
+      "reference": "Celestial Peak concept panel"
+    },
+    {
+      "conceptId": "M097",
+      "tool": "built-in image_gen",
+      "sourceSha256": "a4271d786e89d9b1d4186b45b74d2ae5a2ec691ce238ea6cc89e67167683025a",
+      "reference": "Celestial Peak concept panel"
+    },
+    {
+      "conceptId": "M098",
+      "tool": "built-in image_gen",
+      "sourceSha256": "84d6ca7d7c53509a57ec33c901d51198b73028f0fd81ed5a24e28fcd9eaf033c",
+      "reference": "Celestial Peak concept panel"
+    },
+    {
+      "conceptId": "M099",
+      "tool": "built-in image_gen",
+      "sourceSha256": "e6df2c71a9d037752290e98fa8ed183d2ad71c7c2bbb906e8014b4ab53adad51",
+      "reference": "Celestial Peak concept panel"
+    },
+    {
+      "conceptId": "M100",
+      "tool": "built-in image_gen",
+      "sourceSha256": "c84cb5563758cd4cbfd73ace666f833a2848d64479ed8b3bafc3737b3ca04fbf",
+      "reference": "Celestial Peak concept panel"
+    }
+  ]
+}
