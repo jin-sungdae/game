@@ -13,8 +13,16 @@ function update(value: Snapshot) {
  snapshot = value; listeners.forEach(fn => fn());
 }
 export async function connect() {
-  const unlisten = await listen<Snapshot>('world', event => update(event.payload));
-  update(await invoke<Snapshot>('snapshot'));
-  return unlisten;
+  let receivedWorld=false;
+  const unlisten = await listen<Snapshot>('world', event => {receivedWorld=true;update(event.payload);});
+  try {
+    const initial=await invoke<Snapshot>('snapshot');
+    // The initial response may arrive after a newer native event. Never rewind its state/cue.
+    if(!receivedWorld)update(initial);
+    return unlisten;
+  } catch(error) {
+    unlisten();
+    throw error;
+  }
 }
 export const useEntities = () => useSyncExternalStore(callback => { listeners.add(callback); return () => { listeners.delete(callback); }; }, () => snapshot);
