@@ -663,5 +663,15 @@
     "Production Registry 및 Animation Manifest 연결은 Identity/Artwork/Motion 승인 이후 별도 작업",
     "M097/M099 실패 및 3/3 한도 보존; M100 컨셉 대비 BASE 검토"
   ],
-  "nextResume": "동일 worktree/PR에서 사람의 M100 외형 검토 및 M096/M098 신규 후보 검수 결과 확인. 승인된 관절/키포즈 제공 후 미완성 행동 재개. 기존 24 PNG 재제작 금지."
+  "nextResume": "동일 worktree/PR에서 사람의 M100 외형 검토 및 M096/M098 신규 후보 검수 결과 확인. 승인된 관절/키포즈 제공 후 미완성 행동 재개. 기존 24 PNG 재제작 금지.",
+  "validation": {
+    "candidateChecks": "PASS: 24 PNG / 3 clips",
+    "assetTests": "INCOMPLETE: full suite stopped after over 13 minutes; exit 143; not PASS",
+    "assetCoverageTests": "PASS: 4 tests",
+    "animationRegression": "PASS: 236 tests / 0 failures after isolated npm ci; initial shared react 2 type error was environment-only",
+    "releaseGate": "INCOMPLETE: configured 90-second run reached asset-tests; frontend build, animation and presentation passed; full gate NOT PASS",
+    "production": "HUMAN_REVIEW_REQUIRED",
+    "nativeGui": "DEFERRED_GUI",
+    "testedAssetCommit": "400f1af458e3efe636aa72df1c6a6d37a3e7f991"
+  }
 }
