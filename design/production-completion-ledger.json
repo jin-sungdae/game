@@ -893,5 +893,58 @@
     "repairIterations": 0,
     "repairLimit": 3,
     "nextTask": "Persist unresolved evolution intent across restart; keep approval-blocked artwork unchanged."
+  },
+  "monsterTierEncounterIntegration": {
+    "status": "IMPLEMENTED_PENDING_REVIEW",
+    "dependency": "Unmerged PR93, including growth/evolution/selection V16-V18",
+    "tierBands": [
+      [
+        1,
+        19
+      ],
+      [
+        20,
+        39
+      ],
+      [
+        40,
+        59
+      ],
+      [
+        60,
+        79
+      ],
+      [
+        80,
+        100
+      ]
+    ],
+    "legacyAlphaDistribution": "PRESERVED",
+    "encounterSnapshot": [
+      "monster_level",
+      "rules_version",
+      "spawn_tier"
+    ],
+    "legacyTier": "NULL_NOT_INVENTED",
+    "migration": "V19__encounter_generation_snapshot.sql",
+    "javaPostgresqlTests": {
+      "passed": 346,
+      "failed": 0,
+      "skipped": 0
+    },
+    "automaticRepairIterations": 2,
+    "generatedPng": 0,
+    "validatedPng": 0,
+    "registeredPng": 0,
+    "animationClips": 0,
+    "newMonsterRuntimeConnections": 0,
+    "newMonsterSkillConnections": 0,
+    "blocked": [
+      "CONCEPT_IDENTITY_MAPPING",
+      "ARTWORK_AND_ANIMATION_APPROVAL",
+      "SKILL_BALANCE_APPROVAL"
+    ],
+    "gui": "DEFERRED_GUI",
+    "releaseGate": "NOT_RUN"
   }
 }
