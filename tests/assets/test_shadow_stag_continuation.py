@@ -27,3 +27,13 @@ class ShadowStagContinuationTests(unittest.TestCase):
         self.assertTrue(any(f['silhouetteSupportChangedPixels'] for f in r['frames']))
         self.assertFalse(r['productionEligible'])
 
+
+    def test_deer_cursor_response_has_fixed_contacts_and_distinct_frames(self):
+        folder = BATCH / 'M096/cursor_react-pilot'
+        r = measure_parts(folder)
+        self.assertEqual(r, json.loads((folder / 'frame-validation.json').read_text()))
+        self.assertEqual(r['automated'], 'PASS')
+        self.assertEqual(r['uniquePixelHashes'], 8)
+        self.assertTrue(all(f['protectedPixelChanges'] == 0 for f in r['frames']))
+        self.assertTrue(any(f['silhouetteSupportChangedPixels'] for f in r['frames']))
+        self.assertFalse(r['productionEligible'])

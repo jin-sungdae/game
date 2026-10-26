@@ -1,0 +1,75 @@
+{
+  "conceptId": "M096",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch10/M096/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    46,
+    125,
+    178,
+    204
+  ],
+  "parts": [
+    {
+      "name": "tail-attention-perk",
+      "x": 78,
+      "y": 155,
+      "rx": 26,
+      "ry": 25,
+      "dx": -1.6,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        0.22,
+        0.75,
+        1,
+        0.8,
+        0.42,
+        0.13,
+        0.03
+      ]
+    },
+    {
+      "name": "shoulder-response",
+      "x": 142,
+      "y": 166,
+      "rx": 20,
+      "ry": 20,
+      "dx": 0.8,
+      "dy": -1.1,
+      "samples": [
+        0.015,
+        0.08,
+        0.32,
+        0.8,
+        1,
+        0.56,
+        0.2,
+        0.025
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Branch-antler deer: antlers, face, feet and torso core fixed; tail perks first followed by a small shoulder response and return.",
+  "behaviorContract": "GROUND deer proposal; stationary cursor attention candidate, no native cursor or movement activation",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes"
+}

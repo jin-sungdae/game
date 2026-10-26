@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "M093 Anatomy/Identity and movement feasibility, then M094 Anatomy review. M090 and M092 HIT already produced. Preserve M091 anatomy/identity blocker and all inherited failures; repair3/3.",
+  "nextTask": "M001 ATTACK anatomy/keypose feasibility after recovering Release Gate results. M093/M094/M097 inherited appearance failures, M098 horse/deer and M100 owl/penguin Identity reviews preserved. M096 CURSOR_REACT8 already produced; no approved Runtime-pending assets.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -17974,10 +17974,15 @@
         },
         {
           "action": "CURSOR_REACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M096/cursor_react-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "INTERACT",
@@ -18049,11 +18054,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -18978,11 +18983,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 153,
-    "automatedCandidateActions": 151,
-    "artworkReviewPendingActions": 152,
+    "candidateActions": 154,
+    "automatedCandidateActions": 152,
+    "artworkReviewPendingActions": 153,
     "validationFailedActions": 39,
-    "missingFrameSetActions": 1582,
+    "missingFrameSetActions": 1581,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
@@ -22114,16 +22119,16 @@
     "approvalAudit": {
       "scope": "All existing candidate clip versions; categories overlap. Automated PNG catalog checks are not full appearance/motion approval. Registered legacy action records are separately listed without re-approving missing approval fields.",
       "summary": {
-        "candidateClips": 154,
-        "candidateFrames": 1098,
-        "automatedPngPassClips": 152,
+        "candidateClips": 155,
+        "candidateFrames": 1106,
+        "automatedPngPassClips": 153,
         "automatedPngFailedClips": 2,
-        "artworkReviewPendingClips": 153,
-        "naturalMotionReviewPendingClips": 153,
-        "identityReviewRequiredClips": 117,
+        "artworkReviewPendingClips": 154,
+        "naturalMotionReviewPendingClips": 154,
+        "identityReviewRequiredClips": 118,
         "productionApprovedClips": 1,
         "approvedRuntimePendingClips": 0,
-        "guiPendingClips": 154,
+        "guiPendingClips": 155,
         "guiPassedClips": 0,
         "validationFailedActionsIncludingKeyposes": 40
       },
@@ -24435,6 +24440,21 @@
           "guiStatus": "GUI_NOT_VERIFIED",
           "detailedEvidence": "design/production-batches/action-followup/M092/hit-pilot/frame-validation.json",
           "detailedAutomated": "PASS"
+        },
+        {
+          "creatureId": "M096",
+          "action": "CURSOR_REACT",
+          "directory": "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react",
+          "frames": 8,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/action-followup/M096/cursor_react-pilot/frame-validation.json",
+          "detailedAutomated": "PASS"
         }
       ],
       "failedActions": [
@@ -25429,6 +25449,89 @@
       "M078": "RIG_LAYER_REQUIRED: quadruped rigid armor overlaps shoulder/hip pivots; flattened BASE has no independent plates or occluded backing. Weighted organic displacement cannot demonstrate rigid joint motion.",
       "M079": "RIG_LAYER_REQUIRED: oval gate side bosses overlap main frame. Actual TURN requires side surfaces, not a whole-image mirror/rotation.",
       "M080": "RIG_LAYER_REQUIRED: orbital core is attached to horizontal spindle and ring; rotation would expose unavailable occluded surfaces. Preserve existing ring anatomy review."
+    }
+  },
+  "worktreeRecoveryContinuation": {
+    "baselineCommit": "b97d3651de4c2d0eff24b19022654898588b2288",
+    "originMain": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+    "repairIterations": 3,
+    "repairLimit": 3,
+    "worktreeIncident": {
+      "cause": "Codex desktop startup-cleanup deleted managed worktree",
+      "worktreeId": "200824f98e258991e89c6856aa6779d9ba00673b",
+      "snapshotCommit": "b97d3651de4c2d0eff24b19022654898588b2288",
+      "snapshotRef": "refs/codex/snapshots/200824f98e258991e89c6856aa6779d9ba00673b",
+      "deleteStartedAt": "2026-10-26T11:00:36.454Z",
+      "deleteSucceededAt": "2026-10-26T11:00:39.491Z",
+      "cleanupObservedOwnerInProgress": false,
+      "evidence": "Codex desktop logs 2026/10/26: t0 023356-1 lines7432; t1 023359-0 lines12343-12348",
+      "classificationLimitation": "Cleanup owner state is logged; reason for stale/inactive classification is not established. No evidence of Release Gate deletion or parallel path collision.",
+      "preservation": "Snapshot verified; recovered baseline and development worktrees git-locked; no unrelated checkout modified or cleaned"
+    },
+    "anatomyReviews": {
+      "M093": "Preserve APPEARANCE_DRIFT: antlered quadruped BASE versus upright cloud/yeti reference. No animation manufactured.",
+      "M094": "Preserve APPEARANCE_DRIFT: quadruped BASE versus floating golden orb cage. No rig manufactured.",
+      "M095": "Star crown creature proposal is too broad to establish winged antlered dragon anatomy approval. Candidate identity remains HUMAN_REVIEW_REQUIRED.",
+      "M096": "Branch-antler deer BASE, grounded feet, tail and shoulder local reaction; antlers and face fixed. Production identity remains unapproved.",
+      "M097": "Existing upright-reference versus quadruped failure preserved; no recovery.",
+      "M099": "Existing ambiguous extra leg review preserved; no rig.",
+      "M098": "Winged horned horse proposal versus branched-antler, deer-like BASE; retain candidate without deciding horse/deer identity or rigging a new action.",
+      "M100": "Halo penguin proposal versus feathered owl-like BASE; species identity review required before new animation."
+    },
+    "newCases": {
+      "M096 CURSOR_REACT": "M096/cursor_react-pilot"
+    },
+    "candidateClips": 1,
+    "candidateFrames": 8,
+    "candidatePng": 9,
+    "productionRegistrations": 0,
+    "runtimeConnections": 0,
+    "approvedUnconnectedAssets": [],
+    "lastCompletedWork": "M093/M094 anatomy failures preserved; M096 independent CURSOR_REACT8 validated by existing measure_parts; worktree deletion traced to desktop startup-cleanup",
+    "lastValidatedCommit": "b97d3651de4c2d0eff24b19022654898588b2288",
+    "validation": {
+      "baselineCi": "SUCCESS:40310184133",
+      "baselineRecoveredGate": "INCOMPLETE: running on unchanged b97d365 checkout",
+      "baselineRecoveredGateOutput": "/tmp/luma-pr131-recovered-release/release-result.json",
+      "currentReleaseGate": "FINAL_HEAD_EVIDENCE_REQUIRED",
+      "focusedTests": "3/3 PASS",
+      "animationRegression": "240/240 PASS",
+      "browserPreview": "NOT_RUN: local browser use disabled in Work settings",
+      "frontendBuild": "PASS",
+      "currentCi": "FINAL_HEAD_EVIDENCE_REQUIRED",
+      "approvalAuditTests": "4/4 PASS"
+    },
+    "nativeMacOS": "DEFERRED_GUI",
+    "nativeWindows": "DEFERRED_GUI",
+    "nextTask": "M001 ATTACK anatomy/keypose feasibility after recovering Release Gate results. M093/M094/M097 inherited appearance failures, M098 horse/deer and M100 owl/penguin Identity reviews preserved. M096 CURSOR_REACT8 already produced; no approved Runtime-pending assets.",
+    "coverageAtCheckpoint": {
+      "requiredActions": 1740,
+      "recordedReadyActions": 14,
+      "recordedRuntimeActions": 12,
+      "manifestFileSetsPresent": 12,
+      "candidateActions": 154,
+      "automatedCandidateActions": 152,
+      "artworkReviewPendingActions": 153,
+      "validationFailedActions": 39,
+      "missingFrameSetActions": 1581,
+      "guiPendingActions": 1740,
+      "completeActions": 0,
+      "creatures": 115,
+      "completeCreatures": 0
+    },
+    "approvalSummaryAtCheckpoint": {
+      "candidateClips": 155,
+      "candidateFrames": 1106,
+      "automatedPngPassClips": 153,
+      "automatedPngFailedClips": 2,
+      "artworkReviewPendingClips": 154,
+      "naturalMotionReviewPendingClips": 154,
+      "identityReviewRequiredClips": 118,
+      "productionApprovedClips": 1,
+      "approvedRuntimePendingClips": 0,
+      "guiPendingClips": 155,
+      "guiPassedClips": 0,
+      "validationFailedActionsIncludingKeyposes": 40
     }
   }
 }
