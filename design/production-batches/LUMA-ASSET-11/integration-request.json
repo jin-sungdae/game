@@ -1,0 +1,1148 @@
+{
+  "sessionId": "LUMA-ASSET-11",
+  "baseCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "status": "BLOCKED_PARTIAL_CANDIDATES_HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairPerformed": false,
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "sharedLedgerChanged": false,
+  "monsters": [
+    {
+      "conceptId": "M036",
+      "basePath": "design/production-batches/monsters/batch04/M036/base-v2.png",
+      "baseSha256": "888222c17db31d82c44dfaa49328bd37774f7faaa9e6dd3315f5fb86764d6699",
+      "baseStatus": "BASE_CANDIDATE",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "proposedCatalogContract": {
+        "conceptId": "M036",
+        "region": "VOLCANIC_CRATER",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 4,
+          "row": 2,
+          "column": 1
+        },
+        "observedForm": "red flame drake",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "playful"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "FLYING"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "two playful movements followed by a rest; attention centers on the fire habitat of the red flame drake",
+          "preparation": "compress then release the resting pose; preserve the red flame drake silhouette",
+          "transition": "recover from landing before observing; recover the red flame drake resting anatomy",
+          "reaction": "respond with a short bounce then settle; keep the red flame drake characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M036:signature",
+          "serverCode": null,
+          "visualMotif": "Fire effect following the red flame drake silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 6프레임 후보 유지, 재제작 및 승인 없음",
+          "frames": 6
+        },
+        {
+          "action": "BREATH",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "기존 Part Rig 재사용; 외형/자연스러운 움직임 사람 검수 필요",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/breath/frame-validation.json",
+          "frames": 8
+        },
+        {
+          "action": "BLINK",
+          "status": "VALIDATION_FAILED",
+          "reason": "DUPLICATE_DECODED_FRAMES; ZERO_ADJACENT_DIFFERENCE",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/blink/frame-validation.json",
+          "frames": 6
+        },
+        {
+          "action": "LOOK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "기존 Part Rig 재사용; 외형/자연스러운 움직임 사람 검수 필요",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/look/frame-validation.json",
+          "frames": 8
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "PROPOSED FLYING과 날개 없는 BASE 충돌; 이동/회전/도약/착지/돌진/회복의 신체 계약 결정 보류"
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "PROPOSED FLYING과 날개 없는 BASE 충돌; 이동/회전/도약/착지/돌진/회복의 신체 계약 결정 보류"
+        },
+        {
+          "action": "REST",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/rest/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "SLEEP",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/sleep/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/cursor_react/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "INTERACT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/interact/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "PROPOSED FLYING과 날개 없는 BASE 충돌; 이동/회전/도약/착지/돌진/회복의 신체 계약 결정 보류"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/skill_cast/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "HIT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/hit/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "VICTORY",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/victory/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "DEFEAT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M036/defeat/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "PROPOSED FLYING과 날개 없는 BASE 충돌; 이동/회전/도약/착지/돌진/회복의 신체 계약 결정 보류"
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "PROPOSED FLYING과 날개 없는 BASE 충돌; 이동/회전/도약/착지/돌진/회복의 신체 계약 결정 보류"
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "PROPOSED FLYING과 날개 없는 BASE 충돌; 이동/회전/도약/착지/돌진/회복의 신체 계약 결정 보류"
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "PROPOSED FLYING과 날개 없는 BASE 충돌; 이동/회전/도약/착지/돌진/회복의 신체 계약 결정 보류"
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "PROPOSED FLYING과 날개 없는 BASE 충돌; 이동/회전/도약/착지/돌진/회복의 신체 계약 결정 보류"
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "PROPOSED FLYING과 날개 없는 BASE 충돌; 이동/회전/도약/착지/돌진/회복의 신체 계약 결정 보류"
+        }
+      ],
+      "newPngCount": 33,
+      "newClipAttempts": 3,
+      "productionApproved": false,
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M037",
+      "basePath": "design/production-batches/monsters/batch04/M037/base-v2.png",
+      "baseSha256": "9e531e940cceec43483f72181cf9444262e163d4fb200aaaeb721dab39e6763c",
+      "baseStatus": "VALIDATION_FAILED",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "proposedCatalogContract": {
+        "conceptId": "M037",
+        "region": "VOLCANIC_CRATER",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 4,
+          "row": 2,
+          "column": 2
+        },
+        "observedForm": "lava gorilla",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "alert"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "frequent attention shifts but sparse displacement; attention centers on the fire habitat of the lava gorilla",
+          "preparation": "orient the face first and body second; preserve the lava gorilla silhouette",
+          "transition": "finish turning before locomotion resumes; recover the lava gorilla resting anatomy",
+          "reaction": "face the stimulus and briefly pause; keep the lava gorilla characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M037:signature",
+          "serverCode": null,
+          "visualMotif": "Fire effect following the lava gorilla silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "BASE VALIDATION_FAILED: lava gorilla 직립 설정과 사족 BASE 불일치, 실패 복구 금지"
+        }
+      ],
+      "newPngCount": 0,
+      "newClipAttempts": 0,
+      "productionApproved": false,
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M038",
+      "basePath": "design/production-batches/monsters/batch04/M038/base-v2.png",
+      "baseSha256": "8cd47ab7193bcacf13b46454ea5834508a15731989088a9b359f7c55414d9ea7",
+      "baseStatus": "BASE_CANDIDATE",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "proposedCatalogContract": {
+        "conceptId": "M038",
+        "region": "VOLCANIC_CRATER",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 4,
+          "row": 2,
+          "column": 3
+        },
+        "observedForm": "cinder golem",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "reserved"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "sustained rest with occasional careful exploration; attention centers on the fire habitat of the cinder golem",
+          "preparation": "open the resting posture slowly; preserve the cinder golem silhouette",
+          "transition": "slow the final motion into a resting pose; recover the cinder golem resting anatomy",
+          "reaction": "acknowledge interaction with a restrained nod; keep the cinder golem characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M038:signature",
+          "serverCode": null,
+          "visualMotif": "Fire effect following the cinder golem silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/idle/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "BREATH",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/breath/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "BLINK",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/blink/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "LOOK",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/look/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "MOVE",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/move/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "TURN",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/turn/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "REST",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/rest/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "SLEEP",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/sleep/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/cursor_react/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "INTERACT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/interact/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "ATTACK",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/attack/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/skill_cast/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "HIT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/hit/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "VICTORY",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/victory/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "DEFEAT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/defeat/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "관절형 선행 포즈 Alpha 실패; 동작 연결/회복에 필요한 유효 포즈 없음, 실패 복구 없이 보류"
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_PROPOSED",
+          "reason": "GROUND 제안 및 날개 없는 사족 구조; 비행/공중 착지 신규 계약을 만들지 않음, 최종 Identity 승인 필요"
+        },
+        {
+          "action": "HOVER",
+          "status": "NOT_APPLICABLE_PROPOSED",
+          "reason": "GROUND 제안 및 날개 없는 사족 구조; 비행/공중 착지 신규 계약을 만들지 않음, 최종 Identity 승인 필요"
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_PROPOSED",
+          "reason": "GROUND 제안 및 날개 없는 사족 구조; 비행/공중 착지 신규 계약을 만들지 않음, 최종 Identity 승인 필요"
+        },
+        {
+          "action": "CHARGE",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M038/charge/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "관절형 선행 포즈 Alpha 실패; 동작 연결/회복에 필요한 유효 포즈 없음, 실패 복구 없이 보류"
+        }
+      ],
+      "newPngCount": 17,
+      "newClipAttempts": 0,
+      "productionApproved": false,
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M039",
+      "basePath": "design/production-batches/monsters/batch04/M039/base-v2.png",
+      "baseSha256": "77e8563b8b736e08fb8e11a760df04e14667eb7b1cb431f02f3f6c5d4acebe20",
+      "baseStatus": "BASE_CANDIDATE",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "proposedCatalogContract": {
+        "conceptId": "M039",
+        "region": "VOLCANIC_CRATER",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 4,
+          "row": 2,
+          "column": 4
+        },
+        "observedForm": "ember beast",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "watchful"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "repeated scanning before a single move; attention centers on the fire habitat of the ember beast",
+          "preparation": "pause and recheck the destination; preserve the ember beast silhouette",
+          "transition": "return to the home orientation before resting; recover the ember beast resting anatomy",
+          "reaction": "look away briefly before looking back; keep the ember beast characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M039:signature",
+          "serverCode": null,
+          "visualMotif": "Fire effect following the ember beast silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 6프레임 후보 유지, 재제작 및 승인 없음",
+          "frames": 6
+        },
+        {
+          "action": "BREATH",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/breath/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "BLINK",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/blink/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "LOOK",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/look/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "MOVE",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/move/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "TURN",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/turn/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "REST",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/rest/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "SLEEP",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/sleep/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/cursor_react/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "INTERACT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/interact/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "ATTACK",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/attack/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/skill_cast/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "기존 HIT 원본 detached Alpha 267px 실패; 3/3 상태 보존, 재시도 없음"
+        },
+        {
+          "action": "VICTORY",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/victory/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "DEFEAT",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/defeat/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "JUMP",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/jump/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_PROPOSED",
+          "reason": "GROUND 제안 및 날개 없는 사족 구조; 비행/공중 착지 신규 계약을 만들지 않음, 최종 Identity 승인 필요"
+        },
+        {
+          "action": "HOVER",
+          "status": "NOT_APPLICABLE_PROPOSED",
+          "reason": "GROUND 제안 및 날개 없는 사족 구조; 비행/공중 착지 신규 계약을 만들지 않음, 최종 Identity 승인 필요"
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_PROPOSED",
+          "reason": "GROUND 제안 및 날개 없는 사족 구조; 비행/공중 착지 신규 계약을 만들지 않음, 최종 Identity 승인 필요"
+        },
+        {
+          "action": "CHARGE",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/charge/keypose-validation.json",
+          "frames": 0
+        },
+        {
+          "action": "RECOVERY",
+          "status": "VALIDATION_FAILED",
+          "reason": "원본 Alpha 분리 픽셀 또는 셀 경계 잘림; 3/3 유지, 정규화 및 Rigging 중단",
+          "evidence": "design/production-batches/LUMA-ASSET-11/M039/recovery/keypose-validation.json",
+          "frames": 0
+        }
+      ],
+      "newPngCount": 17,
+      "newClipAttempts": 0,
+      "productionApproved": false,
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M040",
+      "basePath": "design/production-batches/monsters/batch04/M040/base-v2.png",
+      "baseSha256": "e5e8f1bde30073f8608c8d4daa73d4df2677cdf3dc0a5870df5d7315b439e8c1",
+      "baseStatus": "BASE_CANDIDATE",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "proposedCatalogContract": {
+        "conceptId": "M040",
+        "region": "VOLCANIC_CRATER",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 4,
+          "row": 2,
+          "column": 5
+        },
+        "observedForm": "flame-tail fox",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "exploratory"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "long exploration intervals followed by recovery; attention centers on the fire habitat of the flame-tail fox",
+          "preparation": "lean toward open space before starting; preserve the flame-tail fox silhouette",
+          "transition": "look back once at the end of an excursion; recover the flame-tail fox resting anatomy",
+          "reaction": "inspect the direction of interaction then resume exploration; keep the flame-tail fox characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M040:signature",
+          "serverCode": null,
+          "visualMotif": "Fire effect following the flame-tail fox silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 6프레임 후보 유지, 재제작 및 승인 없음",
+          "frames": 6
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "flame-tail fox 설정과 긴 목/발굽형 BASE 체형 불일치; Identity 승인 필요"
+        }
+      ],
+      "newPngCount": 0,
+      "newClipAttempts": 0,
+      "productionApproved": false,
+      "runtimeConnected": false
+    }
+  ],
+  "integrationRequests": [
+    {
+      "id": "ASSET11-01",
+      "request": "세션 후보와 실패 evidence를 유일한 Completion Ledger에 반영하고 기존 Creature Review Catalog에서 일괄 검수할 것. 이 세션에서 공유 파일 수정 없음.",
+      "tooling": "scripts/build_creature_review.py --refresh-inventory --refresh-coverage; 통합 담당자가 실행",
+      "status": "PENDING_INTEGRATION"
+    },
+    {
+      "id": "ASSET11-02",
+      "request": "M036 비행 방식, M037 직립 BASE, M040 fox/cervid 체형 Identity 검토. 기존 Artwork와 실패 원본 보존.",
+      "status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "id": "ASSET11-03",
+      "request": "M036 BREATH/LOOK 16프레임의 외형·움직임·종 매핑 승인 후에만 Animation Manifest 및 Production Registry 연결 검토. 실패 41개 행동은 3/3 상태로 보존.",
+      "status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "id": "ASSET11-04",
+      "status": "HUMAN_REVIEW_REQUIRED",
+      "request": "기존 PASS 후보의 BASE 복귀 연속성을 Review에서 별도 검수. BREATH 마지막→BASE 858픽셀, LOOK 79픽셀 차이. 기존 PNG PASS를 자연스러운 복귀 PASS로 해석하지 말 것. repair3/3 유지, 프레임 변경 없음.",
+      "evidence": "design/production-batches/LUMA-ASSET-11/continuation-continuity.json"
+    }
+  ],
+  "nativeGui": "DEFERRED_GUI",
+  "remainingIndependentWork": "모든 21개 행동/종을 검토. 현 시점 남은 항목은 원본 실패, 신체 계약 또는 승인에 의존. 실패 재생성 및 승인 우회 없음.",
+  "continuationReview": {
+    "verifiedSourceHead": "300693afd4f2fcb07dd71644c108ad2ce68f6077",
+    "newClips": 0,
+    "newFrames": 0,
+    "newPng": 0,
+    "all67PngPreserved": true,
+    "actionStatusCounts": {
+      "M036": {
+        "EXISTING_CANDIDATE_PRESERVED": 1,
+        "CANDIDATE_AUTOMATED_PASS": 2,
+        "VALIDATION_FAILED": 9,
+        "BLOCKED": 9
+      },
+      "M037": {
+        "BLOCKED": 21
+      },
+      "M038": {
+        "VALIDATION_FAILED": 16,
+        "BLOCKED": 2,
+        "NOT_APPLICABLE_PROPOSED": 3
+      },
+      "M039": {
+        "EXISTING_CANDIDATE_PRESERVED": 1,
+        "VALIDATION_FAILED": 16,
+        "BLOCKED": 1,
+        "NOT_APPLICABLE_PROPOSED": 3
+      },
+      "M040": {
+        "EXISTING_CANDIDATE_PRESERVED": 1,
+        "BLOCKED": 20
+      }
+    },
+    "independentWorkConclusion": "현재 제작 가능한 독립 행동 없음. 기존 실패를 다른 Rig/새 세션으로 재시도하면 3/3 우회. M036 이동 계열 및 M037/M040은 신체 계약/Identity 승인 전 보류. M038 JUMP/RECOVERY는 유효 관절 전이 포즈와 착지/복귀 계약 필요.",
+    "identityCauses": {
+      "M036": "원본 Catalog는 FLYING 제안이나 기존 BASE에는 날개 또는 승인된 비행 기제가 없다. 비행/이동 계약을 임의로 지상으로 바꾸지 않음.",
+      "M037": "원본 Catalog lava gorilla 직립 형상과 기존 BASE의 사족 갑옷형 형상이 다름. 기존 VALIDATION_FAILED 복구 금지.",
+      "M040": "원본 Catalog flame-tail fox와 기존 BASE의 긴 목·가느다란 다리·발굽 유사 발 형태가 다름. Species mapping 승인 전 제작/등록 보류."
+    },
+    "nextResumePoint": "로컬 Release Gate 및 새 evidence commit CI 완료 확인. 이후 ASSET11-02 Identity 결정과 실패 복구의 명시 승인 전까지 신규 제작 보류. M036 BREATH/LOOK BASE 복귀는 ASSET11-04로 사람 검토."
+  }
+}

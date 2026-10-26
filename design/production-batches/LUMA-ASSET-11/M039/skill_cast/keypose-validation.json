@@ -1,0 +1,130 @@
+{
+  "action": "SKILL_CAST",
+  "sourceAtlas": "source-keyposes.png",
+  "cell": {
+    "left": 701,
+    "top": 561,
+    "width": 350,
+    "height": 280
+  },
+  "rawPixelSha256": "6bed11c0f68a444605909e58ea3531b84796502603f21c94a0732ab0886f2c7f",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 350,
+    "height": 280,
+    "mainPixels": 42459,
+    "mainBounds": [
+      19,
+      56,
+      340,
+      255
+    ],
+    "detachedPixels": 161,
+    "detachedComponents": 61,
+    "detachedAlphaHistogram": {
+      "1": 161
+    },
+    "largestDetached": [
+      {
+        "n": 39,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          63,
+          15,
+          71,
+          28
+        ]
+      },
+      {
+        "n": 23,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          339,
+          265,
+          344,
+          272
+        ]
+      },
+      {
+        "n": 12,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          79,
+          52,
+          82,
+          57
+        ]
+      },
+      {
+        "n": 7,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          331,
+          65,
+          331,
+          71
+        ]
+      },
+      {
+        "n": 4,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          84,
+          51,
+          85,
+          53
+        ]
+      },
+      {
+        "n": 2,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          65,
+          13,
+          66,
+          13
+        ]
+      },
+      {
+        "n": 2,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          71,
+          25,
+          72,
+          25
+        ]
+      },
+      {
+        "n": 2,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          65,
+          31,
+          66,
+          31
+        ]
+      }
+    ]
+  },
+  "edgePixels": 1,
+  "errors": [
+    "RAW_DETACHED_ALPHA",
+    "CELL_EDGE_CLIPPING"
+  ],
+  "status": "VALIDATION_FAILED",
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3
+}

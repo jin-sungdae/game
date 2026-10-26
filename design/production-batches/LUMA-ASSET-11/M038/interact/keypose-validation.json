@@ -1,0 +1,143 @@
+{
+  "action": "INTERACT",
+  "sourceAtlas": "source-keyposes.png",
+  "cell": {
+    "left": 325,
+    "top": 603,
+    "width": 326,
+    "height": 302
+  },
+  "rawPixelSha256": "b0d7cf3b0fa61861db19768540752b950651b1d3c55eb4da815243b69f00e4e7",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 326,
+    "height": 302,
+    "mainPixels": 36907,
+    "mainBounds": [
+      12,
+      60,
+      304,
+      252
+    ],
+    "detachedPixels": 176,
+    "detachedComponents": 52,
+    "detachedAlphaHistogram": {
+      "1": 145,
+      "2": 7,
+      "3": 5,
+      "4": 5,
+      "5": 4,
+      "6": 1,
+      "16": 1,
+      "23": 1,
+      "45": 1,
+      "79": 2,
+      "113": 1,
+      "116": 1,
+      "124": 1,
+      "129": 1
+    },
+    "largestDetached": [
+      {
+        "n": 94,
+        "minA": 1,
+        "maxA": 129,
+        "bounds": [
+          319,
+          219,
+          325,
+          246
+        ]
+      },
+      {
+        "n": 16,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          148,
+          2,
+          153,
+          8
+        ]
+      },
+      {
+        "n": 4,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          142,
+          7,
+          143,
+          8
+        ]
+      },
+      {
+        "n": 4,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          12,
+          15,
+          12,
+          18
+        ]
+      },
+      {
+        "n": 3,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          36,
+          46,
+          36,
+          48
+        ]
+      },
+      {
+        "n": 2,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          148,
+          0,
+          149,
+          0
+        ]
+      },
+      {
+        "n": 2,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          156,
+          0,
+          157,
+          0
+        ]
+      },
+      {
+        "n": 2,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          8,
+          13,
+          8,
+          14
+        ]
+      }
+    ]
+  },
+  "edgePixels": 28,
+  "errors": [
+    "RAW_DETACHED_ALPHA",
+    "CELL_EDGE_CLIPPING"
+  ],
+  "status": "VALIDATION_FAILED",
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3
+}
