@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "M043 TURN: compare original concept, BASE, anatomy and existing candidates before dedicated pose. Then MOA Stage3 HIT feasibility; do not revisit blocked M039/M042 raw keyposes or NOX3 BASE without approval.",
+  "nextTask": "M047 anatomy/flight contract review, then M048 HIT feasibility. Preserve blocked M043 TURN, M046 REST and MOA3 BASE evidence; no repair without approval.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -432,8 +432,12 @@
           "action": "HIT",
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/moa/stage03/hit-preflight",
+          "blockReason": "Existing Production BASE has44 detached Alpha pixels; source preserved, no cleanup or rigging; HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "VICTORY",
@@ -8972,7 +8976,8 @@
           "artworkReview": "HUMAN_REVIEW_REQUIRED",
           "automated": "VALIDATION_FAILED",
           "candidatePath": "design/production-batches/action-followup/M039/hit-pilot",
-          "blockReason": "Raw source detached Alpha 267 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+          "blockReason": "Raw source detached Alpha 267 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "recoveryPath": "design/production-batches/action-followup/M039/hit-pilot/keypose-tool-reference.png"
         },
         {
           "action": "VICTORY",
@@ -9410,7 +9415,8 @@
           "artworkReview": "HUMAN_REVIEW_REQUIRED",
           "automated": "VALIDATION_FAILED",
           "candidatePath": "design/production-batches/action-followup/M042/rest-pilot",
-          "blockReason": "Raw source detached Alpha 517 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+          "blockReason": "Raw source detached Alpha 517 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "recoveryPath": "design/production-batches/action-followup/M042/rest-pilot/keypose-tool-reference.png"
         },
         {
           "action": "SLEEP",
@@ -9555,10 +9561,15 @@
         },
         {
           "action": "TURN",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/action-followup/M043/turn-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M043/turn-pilot/keypose-tool-reference.png",
+          "blockReason": "Raw source detached Alpha 2032 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "REST",
@@ -9655,7 +9666,7 @@
         "candidateActions": 0,
         "automatedCandidateActions": 0,
         "artworkReviewPendingActions": 0,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 15,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -9918,10 +9929,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M045/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -9966,11 +9982,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -10033,10 +10049,15 @@
         },
         {
           "action": "REST",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/action-followup/M046/rest-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M046/rest-pilot/keypose-tool-reference.png",
+          "blockReason": "Raw source detached Alpha 3942 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "SLEEP",
@@ -10126,7 +10147,7 @@
         "candidateActions": 1,
         "automatedCandidateActions": 1,
         "artworkReviewPendingActions": 1,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 14,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -18788,11 +18809,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 137,
-    "automatedCandidateActions": 135,
-    "artworkReviewPendingActions": 136,
-    "validationFailedActions": 25,
-    "missingFrameSetActions": 1598,
+    "candidateActions": 138,
+    "automatedCandidateActions": 136,
+    "artworkReviewPendingActions": 137,
+    "validationFailedActions": 27,
+    "missingFrameSetActions": 1597,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
@@ -21924,18 +21945,18 @@
     "approvalAudit": {
       "scope": "All existing candidate clip versions; categories overlap. Automated PNG catalog checks are not full appearance/motion approval. Registered legacy action records are separately listed without re-approving missing approval fields.",
       "summary": {
-        "candidateClips": 138,
-        "candidateFrames": 970,
-        "automatedPngPassClips": 136,
+        "candidateClips": 139,
+        "candidateFrames": 978,
+        "automatedPngPassClips": 137,
         "automatedPngFailedClips": 2,
-        "artworkReviewPendingClips": 137,
-        "naturalMotionReviewPendingClips": 137,
-        "identityReviewRequiredClips": 101,
+        "artworkReviewPendingClips": 138,
+        "naturalMotionReviewPendingClips": 138,
+        "identityReviewRequiredClips": 102,
         "productionApprovedClips": 1,
         "approvedRuntimePendingClips": 0,
-        "guiPendingClips": 138,
+        "guiPendingClips": 139,
         "guiPassedClips": 0,
-        "validationFailedActionsIncludingKeyposes": 25
+        "validationFailedActionsIncludingKeyposes": 28
       },
       "clips": [
         {
@@ -23768,6 +23789,21 @@
         },
         {
           "creatureId": "M045",
+          "action": "HIT",
+          "directory": "/design/production-batches/action-followup/M045/hit-pilot/rigged/hit",
+          "frames": 8,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/action-followup/M045/hit-pilot/frame-validation.json",
+          "detailedAutomated": "PASS"
+        },
+        {
+          "creatureId": "M045",
           "action": "IDLE",
           "directory": "/design/production-batches/monsters/batch05/M045/rigged/idle",
           "frames": 6,
@@ -24009,6 +24045,12 @@
       ],
       "failedActions": [
         {
+          "creatureId": "companion:moa:3",
+          "action": "HIT",
+          "reason": "Existing Production BASE has44 detached Alpha pixels; source preserved, no cleanup or rigging; HUMAN_REVIEW_REQUIRED",
+          "evidence": "design/production-batches/action-followup/moa/stage03/hit-preflight"
+        },
+        {
           "creatureId": "companion:moa:4",
           "action": "BLINK",
           "reason": "DUPLICATE_PIXEL_HASH: 5 unique of 6; source eye too small for current closure sampling; original preserved; PR repair limit 3/3",
@@ -24018,7 +24060,7 @@
           "creatureId": "companion:moa:5",
           "action": "REST",
           "reason": "ALPHA_DEFECT: 91 detached pixels; raw/256 dedicated keypose retained; no cleanup, rig or completed clip at PR limit 3/3",
-          "evidence": "design/production-batches/action-followup/moa/stage05/rest-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/moa/stage05/rest-pilot"
         },
         {
           "creatureId": "companion:nox:2",
@@ -24030,121 +24072,121 @@
           "creatureId": "companion:nox:2",
           "action": "SLEEP",
           "reason": "ALPHA_DEFECT: 40 detached pixels; curled sleep keypose and original preserved; no recovery or rig at PR limit 3/3",
-          "evidence": "design/production-batches/action-followup/nox/stage02/sleep-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/nox/stage02/sleep-pilot"
         },
         {
           "creatureId": "M005",
           "action": "MOVE",
           "reason": "ALPHA_DEFECT: 30 detached pixels; original and normalized keypose retained; no rig/clip/registration; repair limit 3/3",
-          "evidence": "design/production-batches/monsters/move-pilot/M005/keypose.png"
+          "evidence": "design/production-batches/monsters/move-pilot/M005"
         },
         {
           "creatureId": "M005",
           "action": "TURN",
           "reason": "ALPHA_DEFECT: 38 detached pixels; original and normalized keypose retained; no rig/clip/registration; repair limit 3/3",
-          "evidence": "design/production-batches/monsters/turn-pilot/M005/keypose.png"
+          "evidence": "design/production-batches/monsters/turn-pilot/M005"
         },
         {
           "creatureId": "M005",
           "action": "REST",
           "reason": "BLOCKED; HUMAN_REVIEW_REQUIRED; ALPHA_DEFECT: recovery v3 has 1 detached alpha=1 pixel; AUTO_REVIEW_MAX_ITERATIONS=3",
-          "evidence": "design/production-batches/monsters/rest-pilot/M005/keypose-recovery-v3.png"
+          "evidence": "design/production-batches/monsters/rest-pilot/M005"
         },
         {
           "creatureId": "M005",
           "action": "INTERACT",
           "reason": "ALPHA_DEFECT: 21 detached pixels; PNG format passes but image quality fails; no rig or cleanup after PR repair limit 3/3",
-          "evidence": "design/production-batches/monsters/interact-pilot/M005/keypose.png"
+          "evidence": "design/production-batches/monsters/interact-pilot/M005"
         },
         {
           "creatureId": "M005",
           "action": "HIT",
           "reason": "ALPHA_DEFECT: 60 detached pixels; generated flinch keypose retained without recovery/rigging/registration; PR repair limit 3/3",
-          "evidence": "design/production-batches/monsters/hit-pilot/M005/keypose.png"
+          "evidence": "design/production-batches/monsters/hit-pilot/M005"
         },
         {
           "creatureId": "M005",
           "action": "VICTORY",
           "reason": "ALPHA_DEFECT: 24 detached pixels; generated victory pose preserved; no rig, recovery or registration at PR limit 3/3",
-          "evidence": "design/production-batches/monsters/victory-pilot/M005/keypose.png"
+          "evidence": "design/production-batches/monsters/victory-pilot/M005"
         },
         {
           "creatureId": "M008",
           "action": "REST",
           "reason": "ALPHA_DEFECT: 93 detached pixels; seated REST keypose and raw output preserved; no cleanup or rig at PR limit 3/3",
-          "evidence": "design/production-batches/action-followup/M008/rest-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/M008/rest-pilot"
         },
         {
           "creatureId": "M009",
           "action": "TURN",
           "reason": "ALPHA_DEFECT: 536 detached pixels; dedicated pose raw/256 output retained; no cleanup, rig or completed clip at PR limit 3/3",
-          "evidence": "design/production-batches/action-followup/M009/turn-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/M009/turn-pilot"
         },
         {
           "creatureId": "M011",
           "action": "REST",
           "reason": "ALPHA_DEFECT: 85 detached pixels; dedicated pose raw/256 output retained; no cleanup, rig or completed clip at PR limit 3/3",
-          "evidence": "design/production-batches/action-followup/M011/rest-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/M011/rest-pilot"
         },
         {
           "creatureId": "M012",
           "action": "MOVE",
           "reason": "ALPHA_DEFECT: 206 detached pixels; raw/256 dedicated keypose retained; no cleanup, rig or completed clip at PR limit 3/3",
-          "evidence": "design/production-batches/action-followup/M012/move-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/M012/move-pilot"
         },
         {
           "creatureId": "M016",
           "action": "ATTACK",
           "reason": "ALPHA_DEFECT: 132 detached pixels; raw/256 dedicated keypose retained; no cleanup, rig or completed clip at PR limit 3/3",
-          "evidence": "design/production-batches/action-followup/M016/attack-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/M016/attack-pilot"
         },
         {
           "creatureId": "M017",
           "action": "TURN",
           "reason": "DETACHED_ALPHA 147; raw and prepared pose preserved; no rigging or repair at PR limit 3/3",
-          "evidence": "design/production-batches/action-followup/M017/turn-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/M017/turn-pilot"
         },
         {
           "creatureId": "M019",
           "action": "ATTACK",
           "reason": "ALPHA_DEFECT: 9 detached pixels; source alpha measured before preparation; original retained without cleanup or rig at PR repair limit 3/3",
-          "evidence": "design/production-batches/action-followup/M019/attack-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/M019/attack-pilot"
         },
         {
           "creatureId": "M020",
           "action": "REST",
           "reason": "DETACHED_ALPHA 187; raw and prepared pose preserved; no rigging or repair at PR limit 3/3",
-          "evidence": "design/production-batches/action-followup/M020/rest-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/M020/rest-pilot"
         },
         {
           "creatureId": "M021",
           "action": "TURN",
           "reason": "ALPHA_DEFECT: 582 detached pixels; source alpha measured before preparation; original retained without cleanup or rig at PR repair limit 3/3",
-          "evidence": "design/production-batches/action-followup/M021/turn-pilot/keypose.png"
+          "evidence": "design/production-batches/action-followup/M021/turn-pilot"
         },
         {
           "creatureId": "M025",
           "action": "TURN",
           "reason": "RAW_ALPHA_DEFECT: 7557 detached pixels before normalization; no resized image, rig or clip; PR repair limit 3/3",
-          "evidence": "design/production-batches/action-followup/M025/turn-pilot/keypose-tool-reference.png"
+          "evidence": null
         },
         {
           "creatureId": "M028",
           "action": "MOVE",
           "reason": "RAW_ALPHA_DEFECT: 842 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
-          "evidence": "design/production-batches/action-followup/M028/move-pilot/keypose-tool-reference.png"
+          "evidence": null
         },
         {
           "creatureId": "M030",
           "action": "ATTACK",
           "reason": "PROPOSED_FLOATING_ORB_BEARER_VS_RIGID_GOLEM_BASE: original concept catalog and current batch03 BASE/provenance conflict; user-requested rigid-body candidate remains unregistered; HUMAN_REVIEW_REQUIRED; RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
-          "evidence": "design/production-batches/action-followup/M030/attack-pilot/keypose-tool-reference.png"
+          "evidence": null
         },
         {
           "creatureId": "M032",
           "action": "TURN",
           "reason": "RAW_ALPHA_DEFECT: 1515 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
-          "evidence": "design/production-batches/action-followup/M032/turn-pilot/keypose-tool-reference.png"
+          "evidence": null
         },
         {
           "creatureId": "M039",
@@ -24157,6 +24199,18 @@
           "action": "REST",
           "reason": "Raw source detached Alpha 517 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
           "evidence": "design/production-batches/action-followup/M042/rest-pilot"
+        },
+        {
+          "creatureId": "M043",
+          "action": "TURN",
+          "reason": "Raw source detached Alpha 2032 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "evidence": "design/production-batches/action-followup/M043/turn-pilot"
+        },
+        {
+          "creatureId": "M046",
+          "action": "REST",
+          "reason": "Raw source detached Alpha 3942 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "evidence": "design/production-batches/action-followup/M046/rest-pilot"
         }
       ],
       "recordedReadyActions": [
@@ -24693,5 +24747,105 @@
       "validationFailedActionsIncludingKeyposes": 25
     },
     "productionPngCountAtCheckpoint": 271
+  },
+  "recoveryAnatomyContinuation": {
+    "baselineCommit": "ce4373503ba0c0896c9e745203dc791b41a44185",
+    "repairIterations": 3,
+    "repairLimit": 3,
+    "authorizedRecordFixes": [
+      "M039 HIT recoveryPath",
+      "M042 REST recoveryPath"
+    ],
+    "recordFixBrowser": "PASS: both existing failed originals displayed with original failure reasons",
+    "newCases": {
+      "M045 HIT": "M045/hit-pilot"
+    },
+    "candidateClips": 1,
+    "candidateFrames": 8,
+    "candidatePng": 11,
+    "automatedPassedFrames": 8,
+    "failedKeyposes": {
+      "M043 TURN": 2032,
+      "M046 REST": 3942
+    },
+    "baseBlocked": {
+      "creatureId": "companion:moa:3",
+      "action": "HIT",
+      "detachedAlphaPixels": 44,
+      "sourceBase": "public/assets/creatures/moa/stage03/base.png",
+      "sourceChanged": false
+    },
+    "anatomyReview": {
+      "M044": "Catalog FLYING frost dragon versus wingless quadruped BASE; no wings added, no contract changed; HUMAN_REVIEW_REQUIRED"
+    },
+    "productionRegistrations": 0,
+    "runtimeConnections": 0,
+    "approvedUnconnectedAssets": [],
+    "nativeMacOS": "DEFERRED_GUI",
+    "nativeWindows": "DEFERRED_GUI",
+    "browserPreview": {
+      "status": "PASS_ISOLATED_PREVIEW",
+      "url": "http://127.0.0.1:5192/tests/live/creature-review/",
+      "checked": [
+        "M039 HIT and M042 REST failed originals visibly displayed",
+        "M045 HIT real frame6/8 rendered beside BASE",
+        "Pause held frame7 across observations",
+        "Reduced Motion reset to frame1"
+      ],
+      "limitations": [
+        "Human appearance and motion review pending",
+        "Existing review loops one-shot candidates; automated existing clock test verifies terminal hold",
+        "Native macOS/Windows DEFERRED_GUI"
+      ]
+    },
+    "lastCompletedWork": "Approved recoveryPath record fixes; M045 HIT8 first-attempt candidate; failed M043/M046 raw originals preserved; MOA3 BASE read-only preflight",
+    "lastValidatedCommit": "ce4373503ba0c0896c9e745203dc791b41a44185",
+    "lastValidatedCommitScope": "Baseline CI only; final HEAD Gate and CI must be recorded separately",
+    "validation": {
+      "focusedAssets": "PASS4/4",
+      "approvalAudit": "PASS4/4",
+      "animationRegression": "PASS225/225",
+      "releaseGate": "FINAL_HEAD_EVIDENCE_REQUIRED",
+      "releaseGateOutput": "/tmp/luma-pr114-recovery-anatomy-release/release-result.json",
+      "ci": "FINAL_HEAD_EVIDENCE_REQUIRED"
+    },
+    "nextTask": "M047 anatomy/flight contract review, then M048 HIT feasibility. Preserve blocked M043 TURN, M046 REST and MOA3 BASE evidence; no repair without approval.",
+    "coverageAtCheckpoint": {
+      "requiredActions": 1740,
+      "recordedReadyActions": 14,
+      "recordedRuntimeActions": 12,
+      "manifestFileSetsPresent": 12,
+      "candidateActions": 138,
+      "automatedCandidateActions": 136,
+      "artworkReviewPendingActions": 137,
+      "validationFailedActions": 27,
+      "missingFrameSetActions": 1597,
+      "guiPendingActions": 1740,
+      "completeActions": 0,
+      "creatures": 115,
+      "completeCreatures": 0
+    },
+    "approvalSummaryAtCheckpoint": {
+      "candidateClips": 139,
+      "candidateFrames": 978,
+      "automatedPngPassClips": 137,
+      "automatedPngFailedClips": 2,
+      "artworkReviewPendingClips": 138,
+      "naturalMotionReviewPendingClips": 138,
+      "identityReviewRequiredClips": 102,
+      "productionApprovedClips": 1,
+      "approvedRuntimePendingClips": 0,
+      "guiPendingClips": 139,
+      "guiPassedClips": 0,
+      "validationFailedActionsIncludingKeyposes": 28
+    },
+    "blockers": [
+      "PR repair3/3 unchanged; no failed-image recovery performed",
+      "M043 raw2032 / M046 raw3942 detached alpha pixels",
+      "MOA3 Production BASE44 detached alpha pixels; unchanged",
+      "M044 FLYING proposal conflicts with wingless BASE anatomy; contract unchanged",
+      "No approved unconnected assets; human appearance/motion/identity review pending",
+      "Native GUI deferred"
+    ]
   }
 }
