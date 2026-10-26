@@ -1,0 +1,41 @@
+{
+  "automated": {
+    "animationRegression": {
+      "status": "PASS",
+      "tests": 236,
+      "failures": 0
+    },
+    "assetTests": {
+      "status": "RUNNING"
+    },
+    "releaseGate": {
+      "status": "RUNNING",
+      "completed": [
+        "frontend-build",
+        "animation-content",
+        "presentation"
+      ],
+      "current": "asset-tests"
+    },
+    "basePngs": {
+      "status": "PASS",
+      "count": 5
+    },
+    "existingM053Idle": {
+      "status": "PASS",
+      "frames": 6
+    },
+    "newCandidates": {
+      "status": "VALIDATION_FAILED",
+      "rawPngs": 2,
+      "completedClips": 0
+    }
+  },
+  "platformRequired": "NOT_VERIFIED",
+  "manualRequired": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "productionApproved": false,
+  "runtimeConnected": false,
+  "repairIterations": 3,
+  "repairLimit": 3
+}
