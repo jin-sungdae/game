@@ -8,8 +8,12 @@
     "newClips": 13
   },
   "assetTests": {
-    "status": "RUNNING",
-    "log": "/tmp/luma-asset-16-assets.log"
+    "status": "INCOMPLETE_SESSION_LIMIT",
+    "elapsedSecondsAtStop": 1206,
+    "completedOkLines": 17,
+    "finalSuiteResult": "NOT_VERIFIED",
+    "reason": "Stopped owned test process after 20 minutes without suite completion; no PASS claim",
+    "log": "evidence/asset-tests.log"
   },
   "animationRegression": {
     "status": "PASS",
@@ -18,10 +22,27 @@
     "logSha256": "89a611b4f3788d3b4842b31d81d3942052d2b27e13bff740c8c68d0f002e88b3"
   },
   "releaseGate": {
-    "status": "RUNNING",
-    "log": "/tmp/luma-asset-16-release.log"
+    "status": "INCOMPLETE_SESSION_LIMIT",
+    "completedChecks": [
+      "frontend-build",
+      "animation-content",
+      "presentation"
+    ],
+    "stoppedAt": "asset-tests",
+    "remainingChecks": "NOT_RUN",
+    "gui": "DEFERRED_GUI",
+    "log": "evidence/release.log"
   },
   "production": "NOT_APPROVED",
   "runtime": "NOT_CONNECTED",
-  "gui": "DEFERRED_GUI"
+  "gui": "DEFERRED_GUI",
+  "remoteCi": {
+    "status": "NOT_FULLY_VERIFIED",
+    "observedPassed": [
+      "snapshot",
+      "server-java"
+    ],
+    "desktopStatic": "PENDING_AT_OBSERVATION"
+  },
+  "validatedAssetCommit": "3f0de3b5174a6ba871b0978a681c01ad50accc9e"
 }
