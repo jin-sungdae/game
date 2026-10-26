@@ -29,6 +29,9 @@ class LumaAsset04ContinuationTests(unittest.TestCase):
             with self.subTest(identity=identity, name=name):
                 folder = BATCH / identity / name
                 spec = json.loads((folder / 'candidate-clip.json').read_text())
+                if spec['clip']['name'] == 'REST':
+                    rig = json.loads((folder / 'rig-evidence.json').read_text())
+                    self.assertEqual(rig['protectedRegions'], spec['fixedBodyExpression'])
                 result = measure(folder, movable_for(spec))
                 self.assertEqual(result, json.loads((folder / 'frame-validation.json').read_text()))
                 self.assertEqual(result['automated'], 'PASS')

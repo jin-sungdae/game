@@ -41,5 +41,5 @@ function displacement(x,y,theta){if(fixed(x,y))return [0,0];let dx=0,dy=0;for(co
   evidence.push({file,pixelSha256:crypto.createHash('sha256').update(output).digest('hex'),changedPixels:changed,fixedRegionChanges:fixedChanges,maxInverseDisplacementPixels:maxShift});
  }
  if(new Set(evidence.map(x=>x.pixelSha256)).size!==8)throw Error('duplicate rig frames');
- fs.writeFileSync(root+'/rig-evidence.json',JSON.stringify({reference:'base-v2.png',referenceApproval:'User authorized concept-based sequential artwork and part rigging; final artwork review pending',parts,eyes,closure,protectedRegions:"y<=129||y>=192||x<=83||x>=183",wholeImageTransform:false,frames:evidence,repairIteration:3,productionEligible:false},null,2));
+ fs.writeFileSync(root+'/rig-evidence.json',JSON.stringify({reference:'base-v2.png',referenceApproval:'User authorized concept-based sequential artwork and part rigging; final artwork review pending',parts,eyes,closure,protectedRegions:"y>=182||y<=100||x<=80||x>=188||(x>=151&&y<=123)",wholeImageTransform:false,frames:evidence,repairIteration:3,productionEligible:false},null,2));
 })();
