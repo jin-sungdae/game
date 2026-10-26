@@ -1,0 +1,27 @@
+{
+  "species": "ruu",
+  "stage": 1,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "display": {
+    "width": 130
+  },
+  "animations": {
+    "idle": {
+      "frames": 8,
+      "frameDuration": 150,
+      "loop": true
+    }
+  },
+  "productionEligible": false,
+  "validationStatus": "VALIDATION_FAILED",
+  "sourceImage": "source-idle.png",
+  "sourceHash": "3e1e7d7493f86bec50ef22c8b03849c2b2d3f19eead09900a82e63d592ae5acf",
+  "timingStatus": "PROPOSED_NOT_RUNTIME_ENABLED"
+}

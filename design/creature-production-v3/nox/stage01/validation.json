@@ -1,0 +1,461 @@
+{
+  "base": {
+    "status": "ARTWORK_READY",
+    "errors": [],
+    "pixelSha256": "58b34d311fe261f866b61309e4485e473927db2801b8b3d894086de8d5162605",
+    "sha256": "782bd66c5a2f42e2823a9998983487a7d35210e24dcb1a6cf57fee247e52bfdb",
+    "bounds": [
+      0,
+      14,
+      210,
+      255
+    ]
+  },
+  "clip": {
+    "idle": {
+      "status": "VALIDATION_FAILED",
+      "errors": [],
+      "frameEvidence": [
+        {
+          "file": "design/creature-production-v3/nox/stage01/idle/idle_00.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "7e1354da71c25f175d61f0e6083fb1955578136e9b290ba22e1642efee06130f",
+          "sha256": "a5d9f80b76a12f2a734f1e9c76b2ffeb6530961111df5dc51b84e6e0790b3e83",
+          "bounds": [
+            14,
+            9,
+            255,
+            255
+          ]
+        },
+        {
+          "file": "design/creature-production-v3/nox/stage01/idle/idle_01.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "b826927f32018fffebc6d41d863eac5e4f67836ecdb93d931d5034b164d686e3",
+          "sha256": "d70a0d507935ef0ad6c799e146d1486e941448c45eb2ed5d69c4a89953f1b9ca",
+          "bounds": [
+            0,
+            5,
+            254,
+            255
+          ]
+        },
+        {
+          "file": "design/creature-production-v3/nox/stage01/idle/idle_02.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "2b98a4c1df6752a308fb6be1e7c994efa51b501eadac82cd2889d6cd8eb5a109",
+          "sha256": "42fd7192ec00b92926e5081da2f8d5c0d4b027d1c368c6f4920ea1aade8a9530",
+          "bounds": [
+            4,
+            12,
+            255,
+            255
+          ]
+        },
+        {
+          "file": "design/creature-production-v3/nox/stage01/idle/idle_03.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "3e44611e8a12dca8414ea40e5eda15067b5a1ebaa89b87f2968f945372172e78",
+          "sha256": "6944e54255668f92322a2dfdcf42e2995995ef8c00bdf66565de8d935db28a58",
+          "bounds": [
+            0,
+            14,
+            237,
+            255
+          ]
+        },
+        {
+          "file": "design/creature-production-v3/nox/stage01/idle/idle_04.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "c49abf90c82d792522dc1e4c96d0d6afa0c1ad05262664a3bbd3e30bf8255bd3",
+          "sha256": "6115c5b7aa37327bf82205faf007199f12cf8f569f8433568be078c08762347a",
+          "bounds": [
+            0,
+            0,
+            255,
+            255
+          ]
+        },
+        {
+          "file": "design/creature-production-v3/nox/stage01/idle/idle_05.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "4a8dbab0ee2388c06e0d45bd663441891018dce75a3a82807f70394e565e2549",
+          "sha256": "69bf6f85d13c6b16f580978c78d9e8dcdd5df6998d8d7b1c3a007f14e98b186c",
+          "bounds": [
+            0,
+            0,
+            254,
+            255
+          ]
+        },
+        {
+          "file": "design/creature-production-v3/nox/stage01/idle/idle_06.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "6b36d4ea806b5322f82fe592969ac7014592b3071b3f80925465ff6a9d222df4",
+          "sha256": "1ce74a9383b9784165f449562df3fe7593ed80ea6e562809a08d3048012d781a",
+          "bounds": [
+            2,
+            0,
+            246,
+            255
+          ]
+        },
+        {
+          "file": "design/creature-production-v3/nox/stage01/idle/idle_07.png",
+          "status": "ARTWORK_READY",
+          "errors": [],
+          "pixelSha256": "1e3441fbfd0eaf6a37d4c65b56d23db5a0843bc032c4b1454a5b2e9dfda6b25b",
+          "sha256": "b11fc6f46a9ceba8b0e97bce31859c9d07662c6c0fb29f2e27c8e19d5be160cf",
+          "bounds": [
+            4,
+            0,
+            245,
+            255
+          ]
+        }
+      ],
+      "expectedFrames": 8,
+      "validFrames": 8,
+      "missingOrInvalid": [],
+      "guiAcceptance": "NOT_VERIFIED"
+    }
+  },
+  "registration": [
+    {
+      "candidate": "design/creature-production-v3/nox/stage01/idle/idle_00.png",
+      "reference": "design/creature-production-v3/nox/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "7e1354da71c25f175d61f0e6083fb1955578136e9b290ba22e1642efee06130f",
+        "sha256": "a5d9f80b76a12f2a734f1e9c76b2ffeb6530961111df5dc51b84e6e0790b3e83",
+        "bounds": [
+          14,
+          9,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "58b34d311fe261f866b61309e4485e473927db2801b8b3d894086de8d5162605",
+        "sha256": "782bd66c5a2f42e2823a9998983487a7d35210e24dcb1a6cf57fee247e52bfdb",
+        "bounds": [
+          0,
+          14,
+          210,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 29.5,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/creature-production-v3/nox/stage01/idle/idle_01.png",
+      "reference": "design/creature-production-v3/nox/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "b826927f32018fffebc6d41d863eac5e4f67836ecdb93d931d5034b164d686e3",
+        "sha256": "d70a0d507935ef0ad6c799e146d1486e941448c45eb2ed5d69c4a89953f1b9ca",
+        "bounds": [
+          0,
+          5,
+          254,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "58b34d311fe261f866b61309e4485e473927db2801b8b3d894086de8d5162605",
+        "sha256": "782bd66c5a2f42e2823a9998983487a7d35210e24dcb1a6cf57fee247e52bfdb",
+        "bounds": [
+          0,
+          14,
+          210,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 22.0,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/creature-production-v3/nox/stage01/idle/idle_02.png",
+      "reference": "design/creature-production-v3/nox/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "2b98a4c1df6752a308fb6be1e7c994efa51b501eadac82cd2889d6cd8eb5a109",
+        "sha256": "42fd7192ec00b92926e5081da2f8d5c0d4b027d1c368c6f4920ea1aade8a9530",
+        "bounds": [
+          4,
+          12,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "58b34d311fe261f866b61309e4485e473927db2801b8b3d894086de8d5162605",
+        "sha256": "782bd66c5a2f42e2823a9998983487a7d35210e24dcb1a6cf57fee247e52bfdb",
+        "bounds": [
+          0,
+          14,
+          210,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 24.5,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/creature-production-v3/nox/stage01/idle/idle_03.png",
+      "reference": "design/creature-production-v3/nox/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "3e44611e8a12dca8414ea40e5eda15067b5a1ebaa89b87f2968f945372172e78",
+        "sha256": "6944e54255668f92322a2dfdcf42e2995995ef8c00bdf66565de8d935db28a58",
+        "bounds": [
+          0,
+          14,
+          237,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "58b34d311fe261f866b61309e4485e473927db2801b8b3d894086de8d5162605",
+        "sha256": "782bd66c5a2f42e2823a9998983487a7d35210e24dcb1a6cf57fee247e52bfdb",
+        "bounds": [
+          0,
+          14,
+          210,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 13.5,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/creature-production-v3/nox/stage01/idle/idle_04.png",
+      "reference": "design/creature-production-v3/nox/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "c49abf90c82d792522dc1e4c96d0d6afa0c1ad05262664a3bbd3e30bf8255bd3",
+        "sha256": "6115c5b7aa37327bf82205faf007199f12cf8f569f8433568be078c08762347a",
+        "bounds": [
+          0,
+          0,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "58b34d311fe261f866b61309e4485e473927db2801b8b3d894086de8d5162605",
+        "sha256": "782bd66c5a2f42e2823a9998983487a7d35210e24dcb1a6cf57fee247e52bfdb",
+        "bounds": [
+          0,
+          14,
+          210,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 22.5,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/creature-production-v3/nox/stage01/idle/idle_05.png",
+      "reference": "design/creature-production-v3/nox/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "4a8dbab0ee2388c06e0d45bd663441891018dce75a3a82807f70394e565e2549",
+        "sha256": "69bf6f85d13c6b16f580978c78d9e8dcdd5df6998d8d7b1c3a007f14e98b186c",
+        "bounds": [
+          0,
+          0,
+          254,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "58b34d311fe261f866b61309e4485e473927db2801b8b3d894086de8d5162605",
+        "sha256": "782bd66c5a2f42e2823a9998983487a7d35210e24dcb1a6cf57fee247e52bfdb",
+        "bounds": [
+          0,
+          14,
+          210,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 22.0,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/creature-production-v3/nox/stage01/idle/idle_06.png",
+      "reference": "design/creature-production-v3/nox/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "6b36d4ea806b5322f82fe592969ac7014592b3071b3f80925465ff6a9d222df4",
+        "sha256": "1ce74a9383b9784165f449562df3fe7593ed80ea6e562809a08d3048012d781a",
+        "bounds": [
+          2,
+          0,
+          246,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "58b34d311fe261f866b61309e4485e473927db2801b8b3d894086de8d5162605",
+        "sha256": "782bd66c5a2f42e2823a9998983487a7d35210e24dcb1a6cf57fee247e52bfdb",
+        "bounds": [
+          0,
+          14,
+          210,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 19.0,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    },
+    {
+      "candidate": "design/creature-production-v3/nox/stage01/idle/idle_07.png",
+      "reference": "design/creature-production-v3/nox/stage01/base.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1e3441fbfd0eaf6a37d4c65b56d23db5a0843bc032c4b1454a5b2e9dfda6b25b",
+        "sha256": "b11fc6f46a9ceba8b0e97bce31859c9d07662c6c0fb29f2e27c8e19d5be160cf",
+        "bounds": [
+          4,
+          0,
+          245,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "58b34d311fe261f866b61309e4485e473927db2801b8b3d894086de8d5162605",
+        "sha256": "782bd66c5a2f42e2823a9998983487a7d35210e24dcb1a6cf57fee247e52bfdb",
+        "bounds": [
+          0,
+          14,
+          210,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 19.5,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false
+    }
+  ],
+  "status": "VALIDATION_FAILED",
+  "productionAcceptedFrames": 0,
+  "productionAcceptedClips": 0,
+  "identity": "MANUAL_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "runtimeConnected": false,
+  "appearanceReview": {
+    "status": "NOT_APPROVED",
+    "baseV1": "Quadrupedal body differs from upright reference; rejected and retained.",
+    "baseV2": "Upright silhouette restored; exact identity still requires review.",
+    "idle": "Head tilt, ruff, limb shapes and eye proportions vary; not accepted as continuous production animation."
+  },
+  "processing": "Only full-sheet uniform resize and fixed-grid extraction. No anchor adjustment, alpha cleanup or validator changes.",
+  "next": "Resolve base alpha residue and identity/anchor approval before making more clips. Other independent implementation may continue.",
+  "generatedSourcePngs": 3,
+  "normalizedCandidatePngs": 9,
+  "referenceCrops": 1
+}

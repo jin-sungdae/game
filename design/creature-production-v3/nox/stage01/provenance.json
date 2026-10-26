@@ -1,0 +1,19 @@
+{
+  "tool": "image_gen built-in",
+  "prompts": [
+    "Use case: identity-preserve. Create a single NOX Stage 1 BASE sprite for Project LUMA from the supplied Companion Evolution Concept board. Only the small UMBRA baby at the start of the bottom NOX row: charcoal-black small upright baby creature, very large pointed ears with violet inner ear, large bright violet-white eyes, compact rounded head and short torso, small paws and feet, pale lilac fluffy neck collar, curled dark tail with purple tip. Preserve exactly its visible anatomy and proportions, no wings, no horns, no extra limbs, no adult armor. Full body 3/4 facing right, neutral quiet observant idle stance. Faithful painterly clean game illustration matching the board, no redesign. One character only, real transparent RGBA background, no floor shadow, no particles, no text, no grid. Square canvas, full body within central 80 percent, 10 percent clear margin on every side, grounded feet at a consistent bottom-center position. Intended to be normalized to 256x256 for validation; do not place artwork against canvas edge. This is a candidate artwork and not an animation.",
+    "Use case: identity-preserve. Reconstruct ONLY the exact baby NOX Stage 1 creature shown in this close-up reference, as one transparent-background game sprite. Preserve its chibi oversized ROUND head, short compact UPRIGHT body, two short hind feet on ground, two tiny forepaws hanging forward, very large pointed violet-inner ears, round wide violet-white eyes, tiny snout, pale lilac ruff, charcoal body and small curled purple-tipped tail. This is a little upright baby imp/cat, NOT a four-legged fox or adult dog. No added wings, horns, crescent logos, decorative armor, or elongated torso. Keep right-facing three-quarter posture from reference. Clean detailed painted game artwork matching reference. All anatomy inside canvas with 12 percent empty margins; no shadows, scenery, glow residue, arrows or text. Actual transparent RGBA square image. One neutral BASE stance, not a sheet.",
+    "Use case: identity-preserve. Create an eight-frame IDLE sprite sheet for EXACTLY this NOX Stage 1 baby character. Four columns by two rows, eight equal square cells. A real continuous 1.2 second loop: very subtle breathing, a small cautious eye movement and ear settling. Order row-major, last pose smoothly returns to first. Same round head, upright biped short body, two hanging forepaws, two hind feet, lilac ruff, ears, tail, face, colors and outline as reference. Do NOT redesign, do not change anatomy, no quadrupedal stance. All eight drawings must contain actual distinct pose changes, not identical copies. Keep planted feet, head size, overall scale and canvas registration constant. Three-quarter facing right throughout. Every cell uses same baseline and at least 12 percent transparent margins. No translation or camera motion, no grid lines or text or labels or sparkles or cast shadow. True transparent RGBA. This is candidate artwork for strict frame/anchor/identity validation, not an approved production clip."
+  ],
+  "sourceReference": "design/visual-reference-v1/companions-concept.png",
+  "referenceCrop": [
+    140,
+    660,
+    115,
+    115
+  ],
+  "normalization": "BASE: sips 256x256. IDLE: uniform full-sheet resize to 1024x512 then fixed 4x2 crops; no per-frame shift, alpha removal, copied poses or production registration.",
+  "baseRevision1": "REJECTED_APPEARANCE_DRIFT_QUADRUPED",
+  "baseRevision2": "CANDIDATE_MANUAL_REVIEW_REQUIRED",
+  "productionEligible": false
+}

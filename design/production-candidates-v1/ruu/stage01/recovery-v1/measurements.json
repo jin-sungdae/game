@@ -1,0 +1,3114 @@
+{
+  "status": "VALIDATION_FAILED",
+  "productionEligible": false,
+  "gui": "DEFERRED_GUI",
+  "method": "Gold toe contact proxy, manually inspect against anatomical feet. Integer translation only; no resampling or alpha cleanup.",
+  "landmarkApproval": "MANUAL_REQUIRED",
+  "base": {
+    "alphaBounds": {
+      "1": [
+        25,
+        9,
+        235,
+        255
+      ],
+      "16": [
+        26,
+        10,
+        233,
+        248
+      ],
+      "128": [
+        27,
+        10,
+        233,
+        247
+      ],
+      "240": [
+        28,
+        11,
+        232,
+        247
+      ]
+    },
+    "edgePixels": [
+      {
+        "x": 101,
+        "y": 255,
+        "alpha": 1
+      },
+      {
+        "x": 102,
+        "y": 255,
+        "alpha": 1
+      },
+      {
+        "x": 103,
+        "y": 255,
+        "alpha": 1
+      }
+    ],
+    "contacts": [
+      {
+        "bounds": [
+          117,
+          237,
+          138,
+          247
+        ],
+        "pixels": 91,
+        "point": [
+          130.15384615384616,
+          247
+        ]
+      },
+      {
+        "bounds": [
+          174,
+          235,
+          193,
+          244
+        ],
+        "pixels": 105,
+        "point": [
+          183.52631578947367,
+          244
+        ]
+      }
+    ],
+    "contactAnchor": [
+      156.84008097165992,
+      247
+    ],
+    "alphaDefect": {
+      "type": "ALPHA_DEFECT",
+      "status": "OBSERVED",
+      "evidence": "Three alpha=1 pixels at y=255, x=101..103, separate from toe contact y=247; all-alpha bounding bottom is not anatomical ground."
+    }
+  },
+  "frames": [
+    {
+      "revision": "v1",
+      "index": 0,
+      "source": "ruu/stage01/idle/idle_00.png",
+      "translation": [
+        5,
+        0
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            17,
+            6,
+            232,
+            251
+          ],
+          "16": [
+            19,
+            8,
+            229,
+            248
+          ],
+          "128": [
+            20,
+            9,
+            228,
+            248
+          ],
+          "240": [
+            20,
+            9,
+            228,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              110,
+              237,
+              132,
+              247
+            ],
+            "pixels": 118,
+            "point": [
+              123.375,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              169,
+              235,
+              190,
+              244
+            ],
+            "pixels": 131,
+            "point": [
+              179.46153846153845,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          151.41826923076923,
+          247
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            22,
+            6,
+            237,
+            251
+          ],
+          "16": [
+            24,
+            8,
+            234,
+            248
+          ],
+          "128": [
+            25,
+            9,
+            233,
+            248
+          ],
+          "240": [
+            25,
+            9,
+            233,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              115,
+              237,
+              137,
+              247
+            ],
+            "pixels": 118,
+            "point": [
+              128.375,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              235,
+              195,
+              244
+            ],
+            "pixels": 131,
+            "point": [
+              184.46153846153845,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.41826923076923,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.4218117408906892,
+        0
+      ],
+      "sourceSha256": "3f78e38f57e420f5878b432d83adac47e29453c8fa9fcadf17b4d56b8f481949",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -0.5,
+            "bottom": -4
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -5.5,
+        "bottom": -4
+      },
+      "alphaPixelCountBefore": 31082,
+      "alphaPixelCountAfter": 31082
+    },
+    {
+      "revision": "v1",
+      "index": 1,
+      "source": "ruu/stage01/idle/idle_01.png",
+      "translation": [
+        0,
+        0
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            14,
+            8,
+            239,
+            252
+          ],
+          "16": [
+            20,
+            10,
+            232,
+            248
+          ],
+          "128": [
+            21,
+            11,
+            232,
+            248
+          ],
+          "240": [
+            22,
+            12,
+            231,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              115,
+              236,
+              138,
+              247
+            ],
+            "pixels": 122,
+            "point": [
+              128.6086956521739,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              175,
+              234,
+              197,
+              244
+            ],
+            "pixels": 133,
+            "point": [
+              184.61904761904762,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.61387163561076,
+          247
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            14,
+            8,
+            239,
+            252
+          ],
+          "16": [
+            20,
+            10,
+            232,
+            248
+          ],
+          "128": [
+            21,
+            11,
+            232,
+            248
+          ],
+          "240": [
+            22,
+            12,
+            231,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              115,
+              236,
+              138,
+              247
+            ],
+            "pixels": 122,
+            "point": [
+              128.6086956521739,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              175,
+              234,
+              197,
+              244
+            ],
+            "pixels": 133,
+            "point": [
+              184.61904761904762,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.61387163561076,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.22620933604915194,
+        0
+      ],
+      "sourceSha256": "972eb79438e0d5c0d2dc3671603ede43d89f3f27c14b2c83a75dc1b2cbfd8d6c",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "NO_INTEGER_X_CORRECTION",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -3.5,
+            "bottom": -3
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -3.5,
+        "bottom": -3
+      },
+      "alphaPixelCountBefore": 31685,
+      "alphaPixelCountAfter": 31685
+    },
+    {
+      "revision": "v1",
+      "index": 2,
+      "source": "ruu/stage01/idle/idle_02.png",
+      "translation": [
+        -1,
+        0
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            14,
+            3,
+            239,
+            252
+          ],
+          "16": [
+            19,
+            5,
+            237,
+            248
+          ],
+          "128": [
+            19,
+            6,
+            236,
+            247
+          ],
+          "240": [
+            20,
+            7,
+            236,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              116,
+              235,
+              139,
+              247
+            ],
+            "pixels": 130,
+            "point": [
+              129.46666666666667,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              176,
+              233,
+              199,
+              244
+            ],
+            "pixels": 134,
+            "point": [
+              186.78571428571428,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          158.12619047619046,
+          247
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            13,
+            3,
+            238,
+            252
+          ],
+          "16": [
+            18,
+            5,
+            236,
+            248
+          ],
+          "128": [
+            18,
+            6,
+            235,
+            247
+          ],
+          "240": [
+            19,
+            7,
+            235,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              115,
+              235,
+              138,
+              247
+            ],
+            "pixels": 130,
+            "point": [
+              128.46666666666667,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              175,
+              233,
+              198,
+              244
+            ],
+            "pixels": 134,
+            "point": [
+              185.78571428571428,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          157.12619047619046,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        0.2861095045305433,
+        0
+      ],
+      "sourceSha256": "197481db42ab2a292e981928b8ae77f4effd2a994aa70efaf40db1af88ca5d0a",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -4.5,
+            "bottom": -3
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -3.5,
+        "bottom": -3
+      },
+      "alphaPixelCountBefore": 33211,
+      "alphaPixelCountAfter": 33211
+    },
+    {
+      "revision": "v1",
+      "index": 3,
+      "source": "ruu/stage01/idle/idle_03.png",
+      "translation": [
+        -9,
+        0
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            21,
+            8,
+            237,
+            251
+          ],
+          "16": [
+            26,
+            10,
+            232,
+            248
+          ],
+          "128": [
+            27,
+            11,
+            231,
+            247
+          ],
+          "240": [
+            27,
+            12,
+            230,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              124,
+              236,
+              147,
+              247
+            ],
+            "pixels": 127,
+            "point": [
+              137.26666666666668,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              183,
+              234,
+              207,
+              243
+            ],
+            "pixels": 137,
+            "point": [
+              194.76315789473685,
+              243
+            ]
+          }
+        ],
+        "contactAnchor": [
+          166.01491228070176,
+          247
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            12,
+            8,
+            228,
+            251
+          ],
+          "16": [
+            17,
+            10,
+            223,
+            248
+          ],
+          "128": [
+            18,
+            11,
+            222,
+            247
+          ],
+          "240": [
+            18,
+            12,
+            221,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              115,
+              236,
+              138,
+              247
+            ],
+            "pixels": 127,
+            "point": [
+              128.26666666666668,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              234,
+              198,
+              243
+            ],
+            "pixels": 137,
+            "point": [
+              185.76315789473685,
+              243
+            ]
+          }
+        ],
+        "contactAnchor": [
+          157.01491228070176,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        0.17483130904184918,
+        0
+      ],
+      "sourceSha256": "d2a86714b698618b6e0607eee7837e67662aa727ff91797616b02cc8fb8b9983",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -10,
+            "bottom": -4
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -1.0,
+        "bottom": -4
+      },
+      "alphaPixelCountBefore": 30873,
+      "alphaPixelCountAfter": 30873
+    },
+    {
+      "revision": "v1",
+      "index": 4,
+      "source": "ruu/stage01/idle/idle_04.png",
+      "translation": [
+        7,
+        1
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            12,
+            1,
+            232,
+            249
+          ],
+          "16": [
+            17,
+            4,
+            229,
+            247
+          ],
+          "128": [
+            18,
+            5,
+            228,
+            246
+          ],
+          "240": [
+            18,
+            6,
+            228,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              108,
+              235,
+              132,
+              246
+            ],
+            "pixels": 117,
+            "point": [
+              120.70588235294117,
+              246
+            ]
+          },
+          {
+            "bounds": [
+              166,
+              233,
+              190,
+              243
+            ],
+            "pixels": 134,
+            "point": [
+              178.93333333333334,
+              243
+            ]
+          }
+        ],
+        "contactAnchor": [
+          149.81960784313725,
+          246
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            19,
+            2,
+            239,
+            250
+          ],
+          "16": [
+            24,
+            5,
+            236,
+            248
+          ],
+          "128": [
+            25,
+            6,
+            235,
+            247
+          ],
+          "240": [
+            25,
+            7,
+            235,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              115,
+              236,
+              139,
+              247
+            ],
+            "pixels": 117,
+            "point": [
+              127.70588235294117,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              173,
+              234,
+              197,
+              244
+            ],
+            "pixels": 134,
+            "point": [
+              185.93333333333334,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.81960784313725,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.02047312852266714,
+        0
+      ],
+      "sourceSha256": "201adc45fe637b87fecd873b6045e9b119ba3d1b195cc6d88e681df316373585",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -1,
+            "bottom": -5
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -8.0,
+        "bottom": -6
+      },
+      "alphaPixelCountBefore": 31191,
+      "alphaPixelCountAfter": 31191
+    },
+    {
+      "revision": "v1",
+      "index": 5,
+      "source": "ruu/stage01/idle/idle_05.png",
+      "translation": [
+        7,
+        1
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            12,
+            4,
+            236,
+            250
+          ],
+          "16": [
+            15,
+            11,
+            232,
+            247
+          ],
+          "128": [
+            16,
+            12,
+            231,
+            247
+          ],
+          "240": [
+            16,
+            12,
+            231,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              108,
+              236,
+              131,
+              246
+            ],
+            "pixels": 119,
+            "point": [
+              120.96551724137932,
+              246
+            ]
+          },
+          {
+            "bounds": [
+              166,
+              233,
+              190,
+              243
+            ],
+            "pixels": 133,
+            "point": [
+              177.73529411764707,
+              243
+            ]
+          }
+        ],
+        "contactAnchor": [
+          149.3504056795132,
+          246
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            19,
+            5,
+            243,
+            251
+          ],
+          "16": [
+            22,
+            12,
+            239,
+            248
+          ],
+          "128": [
+            23,
+            13,
+            238,
+            248
+          ],
+          "240": [
+            23,
+            13,
+            238,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              115,
+              237,
+              138,
+              247
+            ],
+            "pixels": 119,
+            "point": [
+              127.96551724137932,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              173,
+              234,
+              197,
+              244
+            ],
+            "pixels": 133,
+            "point": [
+              184.73529411764707,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.3504056795132,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.4896752921467282,
+        0
+      ],
+      "sourceSha256": "33f298524e67e74d2ec2a08c35793d31ac9339cf6a23aaafa56f63db8179cd12",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": 1,
+            "bottom": -4
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -6.0,
+        "bottom": -5
+      },
+      "alphaPixelCountBefore": 31582,
+      "alphaPixelCountAfter": 31582
+    },
+    {
+      "revision": "v1",
+      "index": 6,
+      "source": "ruu/stage01/idle/idle_06.png",
+      "translation": [
+        5,
+        1
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            10,
+            0,
+            235,
+            249
+          ],
+          "16": [
+            17,
+            5,
+            232,
+            247
+          ],
+          "128": [
+            18,
+            5,
+            232,
+            246
+          ],
+          "240": [
+            19,
+            6,
+            231,
+            246
+          ]
+        },
+        "edgePixels": [
+          {
+            "x": 145,
+            "y": 0,
+            "alpha": 1
+          }
+        ],
+        "contacts": [
+          {
+            "bounds": [
+              112,
+              235,
+              134,
+              246
+            ],
+            "pixels": 113,
+            "point": [
+              124.73333333333333,
+              246
+            ]
+          },
+          {
+            "bounds": [
+              169,
+              233,
+              192,
+              242
+            ],
+            "pixels": 128,
+            "point": [
+              179.91176470588235,
+              242
+            ]
+          }
+        ],
+        "contactAnchor": [
+          152.32254901960783,
+          246
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            15,
+            1,
+            240,
+            250
+          ],
+          "16": [
+            22,
+            6,
+            237,
+            248
+          ],
+          "128": [
+            23,
+            6,
+            237,
+            247
+          ],
+          "240": [
+            24,
+            7,
+            236,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              117,
+              236,
+              139,
+              247
+            ],
+            "pixels": 113,
+            "point": [
+              129.73333333333332,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              234,
+              197,
+              243
+            ],
+            "pixels": 128,
+            "point": [
+              184.91176470588235,
+              243
+            ]
+          }
+        ],
+        "contactAnchor": [
+          157.32254901960783,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        0.4824680479479184,
+        0
+      ],
+      "sourceSha256": "5f3af5e4a74c4e81f47ee426331550d5dafa7bb64b1e24572f7e7567f25b9638",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -2.5,
+            "bottom": -5
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "EDGE_ALPHA_OBSERVED",
+          "evidence": [
+            {
+              "x": 145,
+              "y": 0,
+              "alpha": 1
+            }
+          ]
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -7.5,
+        "bottom": -6
+      },
+      "alphaPixelCountBefore": 31524,
+      "alphaPixelCountAfter": 31524
+    },
+    {
+      "revision": "v1",
+      "index": 7,
+      "source": "ruu/stage01/idle/idle_07.png",
+      "translation": [
+        6,
+        0
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            13,
+            3,
+            230,
+            250
+          ],
+          "16": [
+            17,
+            8,
+            228,
+            248
+          ],
+          "128": [
+            18,
+            8,
+            227,
+            247
+          ],
+          "240": [
+            19,
+            9,
+            226,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              110,
+              236,
+              132,
+              247
+            ],
+            "pixels": 112,
+            "point": [
+              123.16666666666667,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              166,
+              234,
+              190,
+              244
+            ],
+            "pixels": 128,
+            "point": [
+              177.78571428571428,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          150.47619047619048,
+          247
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            19,
+            3,
+            236,
+            250
+          ],
+          "16": [
+            23,
+            8,
+            234,
+            248
+          ],
+          "128": [
+            24,
+            8,
+            233,
+            247
+          ],
+          "240": [
+            25,
+            9,
+            232,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              116,
+              236,
+              138,
+              247
+            ],
+            "pixels": 112,
+            "point": [
+              129.16666666666666,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              172,
+              234,
+              196,
+              244
+            ],
+            "pixels": 128,
+            "point": [
+              183.78571428571428,
+              244
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.47619047619048,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.36389049546943397,
+        0
+      ],
+      "sourceSha256": "bfacfba2e202179eb61545aaf4856ac9ea4b9b0d0acf65045d978986d9cbfae6",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -2.5,
+            "bottom": -5
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -8.5,
+        "bottom": -5
+      },
+      "alphaPixelCountBefore": 31410,
+      "alphaPixelCountAfter": 31410
+    },
+    {
+      "revision": "v2",
+      "index": 0,
+      "source": "ruu/stage01/revision2/idle/idle_00.png",
+      "translation": [
+        1,
+        -1
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            19,
+            12,
+            232,
+            252
+          ],
+          "16": [
+            27,
+            14,
+            230,
+            249
+          ],
+          "128": [
+            27,
+            15,
+            229,
+            248
+          ],
+          "240": [
+            28,
+            15,
+            228,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              237,
+              138,
+              248
+            ],
+            "pixels": 155,
+            "point": [
+              127.73684210526316,
+              248
+            ]
+          },
+          {
+            "bounds": [
+              173,
+              234,
+              199,
+              247
+            ],
+            "pixels": 186,
+            "point": [
+              183.71428571428572,
+              247
+            ]
+          }
+        ],
+        "contactAnchor": [
+          155.72556390977445,
+          248
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            20,
+            11,
+            233,
+            251
+          ],
+          "16": [
+            28,
+            13,
+            231,
+            248
+          ],
+          "128": [
+            28,
+            14,
+            230,
+            247
+          ],
+          "240": [
+            29,
+            14,
+            229,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              114,
+              236,
+              139,
+              247
+            ],
+            "pixels": 155,
+            "point": [
+              128.73684210526315,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              233,
+              200,
+              246
+            ],
+            "pixels": 186,
+            "point": [
+              184.71428571428572,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.72556390977445,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.11451706188546495,
+        0
+      ],
+      "sourceSha256": "5b442839c16d068665509f9cece25a9acc3862102485886202df1f458aba59fb",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -3.5,
+            "bottom": -4
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -4.5,
+        "bottom": -3
+      },
+      "alphaPixelCountBefore": 31143,
+      "alphaPixelCountAfter": 31143
+    },
+    {
+      "revision": "v2",
+      "index": 1,
+      "source": "ruu/stage01/revision2/idle/idle_01.png",
+      "translation": [
+        0,
+        -1
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            22,
+            13,
+            236,
+            252
+          ],
+          "16": [
+            24,
+            16,
+            231,
+            249
+          ],
+          "128": [
+            25,
+            16,
+            230,
+            248
+          ],
+          "240": [
+            25,
+            17,
+            230,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              237,
+              138,
+              248
+            ],
+            "pixels": 157,
+            "point": [
+              127.16666666666667,
+              248
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              234,
+              200,
+              246
+            ],
+            "pixels": 185,
+            "point": [
+              185.92307692307693,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.5448717948718,
+          248
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            22,
+            12,
+            236,
+            251
+          ],
+          "16": [
+            24,
+            15,
+            231,
+            248
+          ],
+          "128": [
+            25,
+            15,
+            230,
+            247
+          ],
+          "240": [
+            25,
+            16,
+            230,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              236,
+              138,
+              247
+            ],
+            "pixels": 157,
+            "point": [
+              127.16666666666667,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              233,
+              200,
+              245
+            ],
+            "pixels": 185,
+            "point": [
+              185.92307692307693,
+              245
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.5448717948718,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.29520917678812,
+        0
+      ],
+      "sourceSha256": "b01ec98c8be2d069835e3685011d408e40c51a3f83288a4b7756615a3864239a",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "NO_INTEGER_X_CORRECTION",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -1,
+            "bottom": -4
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -1.0,
+        "bottom": -3
+      },
+      "alphaPixelCountBefore": 31500,
+      "alphaPixelCountAfter": 31500
+    },
+    {
+      "revision": "v2",
+      "index": 2,
+      "source": "ruu/stage01/revision2/idle/idle_02.png",
+      "translation": [
+        -1,
+        -1
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            19,
+            11,
+            235,
+            253
+          ],
+          "16": [
+            25,
+            13,
+            233,
+            248
+          ],
+          "128": [
+            25,
+            14,
+            232,
+            248
+          ],
+          "240": [
+            26,
+            15,
+            232,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              114,
+              237,
+              140,
+              248
+            ],
+            "pixels": 149,
+            "point": [
+              127.84615384615384,
+              248
+            ]
+          },
+          {
+            "bounds": [
+              175,
+              233,
+              201,
+              246
+            ],
+            "pixels": 179,
+            "point": [
+              187.44736842105263,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          157.64676113360323,
+          248
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            18,
+            10,
+            234,
+            252
+          ],
+          "16": [
+            24,
+            12,
+            232,
+            247
+          ],
+          "128": [
+            24,
+            13,
+            231,
+            247
+          ],
+          "240": [
+            25,
+            14,
+            231,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              236,
+              139,
+              247
+            ],
+            "pixels": 149,
+            "point": [
+              126.84615384615384,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              232,
+              200,
+              245
+            ],
+            "pixels": 179,
+            "point": [
+              186.44736842105263,
+              245
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.64676113360323,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.19331983805668074,
+        0
+      ],
+      "sourceSha256": "a0332aa96ed67366b5a066d65ac46a990caca0a7ca1d951bf645f5a215aa2041",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -4,
+            "bottom": -3
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -3.0,
+        "bottom": -2
+      },
+      "alphaPixelCountBefore": 32070,
+      "alphaPixelCountAfter": 32070
+    },
+    {
+      "revision": "v2",
+      "index": 3,
+      "source": "ruu/stage01/revision2/idle/idle_03.png",
+      "translation": [
+        0,
+        -1
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            22,
+            14,
+            230,
+            251
+          ],
+          "16": [
+            25,
+            16,
+            228,
+            249
+          ],
+          "128": [
+            25,
+            17,
+            227,
+            248
+          ],
+          "240": [
+            26,
+            17,
+            226,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              237,
+              138,
+              248
+            ],
+            "pixels": 155,
+            "point": [
+              127.75,
+              248
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              233,
+              199,
+              246
+            ],
+            "pixels": 179,
+            "point": [
+              186.325,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          157.0375,
+          248
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            22,
+            13,
+            230,
+            250
+          ],
+          "16": [
+            25,
+            15,
+            228,
+            248
+          ],
+          "128": [
+            25,
+            16,
+            227,
+            247
+          ],
+          "240": [
+            26,
+            16,
+            226,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              236,
+              138,
+              247
+            ],
+            "pixels": 155,
+            "point": [
+              127.75,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              232,
+              199,
+              245
+            ],
+            "pixels": 179,
+            "point": [
+              186.325,
+              245
+            ]
+          }
+        ],
+        "contactAnchor": [
+          157.0375,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        0.19741902834007874,
+        0
+      ],
+      "sourceSha256": "6597b1ec0af4187a56cdaeac028aff1239fafab00152b6437bb37d6773d0b97b",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "NO_INTEGER_X_CORRECTION",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -4,
+            "bottom": -5
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -4.0,
+        "bottom": -4
+      },
+      "alphaPixelCountBefore": 30981,
+      "alphaPixelCountAfter": 30981
+    },
+    {
+      "revision": "v2",
+      "index": 4,
+      "source": "ruu/stage01/revision2/idle/idle_04.png",
+      "translation": [
+        1,
+        1
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            19,
+            12,
+            234,
+            249
+          ],
+          "16": [
+            26,
+            14,
+            231,
+            247
+          ],
+          "128": [
+            27,
+            14,
+            231,
+            246
+          ],
+          "240": [
+            27,
+            15,
+            230,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              235,
+              138,
+              246
+            ],
+            "pixels": 156,
+            "point": [
+              126.13793103448276,
+              246
+            ]
+          },
+          {
+            "bounds": [
+              174,
+              231,
+              199,
+              245
+            ],
+            "pixels": 189,
+            "point": [
+              186.38709677419354,
+              245
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.26251390433816,
+          246
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            20,
+            13,
+            235,
+            250
+          ],
+          "16": [
+            27,
+            15,
+            232,
+            248
+          ],
+          "128": [
+            28,
+            15,
+            232,
+            247
+          ],
+          "240": [
+            28,
+            16,
+            231,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              114,
+              236,
+              139,
+              247
+            ],
+            "pixels": 156,
+            "point": [
+              127.13793103448276,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              175,
+              232,
+              200,
+              246
+            ],
+            "pixels": 189,
+            "point": [
+              187.38709677419354,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          157.26251390433816,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        0.4224329326782481,
+        0
+      ],
+      "sourceSha256": "177e9bf5537dd79a58b60c6d061422ed9eff961718627e04a7f9e3c15d966068",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -2.5,
+            "bottom": -5
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -3.5,
+        "bottom": -6
+      },
+      "alphaPixelCountBefore": 31654,
+      "alphaPixelCountAfter": 31654
+    },
+    {
+      "revision": "v2",
+      "index": 5,
+      "source": "ruu/stage01/revision2/idle/idle_05.png",
+      "translation": [
+        0,
+        0
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            21,
+            12,
+            237,
+            250
+          ],
+          "16": [
+            24,
+            14,
+            234,
+            248
+          ],
+          "128": [
+            25,
+            15,
+            234,
+            247
+          ],
+          "240": [
+            25,
+            16,
+            233,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              112,
+              236,
+              139,
+              247
+            ],
+            "pixels": 169,
+            "point": [
+              126.58333333333333,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              173,
+              233,
+              200,
+              246
+            ],
+            "pixels": 186,
+            "point": [
+              187.65217391304347,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          157.1177536231884,
+          247
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            21,
+            12,
+            237,
+            250
+          ],
+          "16": [
+            24,
+            14,
+            234,
+            248
+          ],
+          "128": [
+            25,
+            15,
+            234,
+            247
+          ],
+          "240": [
+            25,
+            16,
+            233,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              112,
+              236,
+              139,
+              247
+            ],
+            "pixels": 169,
+            "point": [
+              126.58333333333333,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              173,
+              233,
+              200,
+              246
+            ],
+            "pixels": 186,
+            "point": [
+              187.65217391304347,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          157.1177536231884,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        0.27767265152849063,
+        0
+      ],
+      "sourceSha256": "55994c191d2dc9033820c4f7c087a9755e8d4bd5c922b31a90c5404f082b646c",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "NO_INTEGER_X_CORRECTION",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -1,
+            "bottom": -5
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -1.0,
+        "bottom": -5
+      },
+      "alphaPixelCountBefore": 31863,
+      "alphaPixelCountAfter": 31863
+    },
+    {
+      "revision": "v2",
+      "index": 6,
+      "source": "ruu/stage01/revision2/idle/idle_06.png",
+      "translation": [
+        0,
+        1
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            18,
+            14,
+            235,
+            249
+          ],
+          "16": [
+            24,
+            16,
+            232,
+            247
+          ],
+          "128": [
+            25,
+            17,
+            232,
+            246
+          ],
+          "240": [
+            26,
+            17,
+            231,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              235,
+              139,
+              246
+            ],
+            "pixels": 162,
+            "point": [
+              126.51724137931035,
+              246
+            ]
+          },
+          {
+            "bounds": [
+              175,
+              233,
+              200,
+              245
+            ],
+            "pixels": 186,
+            "point": [
+              187.03225806451613,
+              245
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.77474972191322,
+          246
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            18,
+            15,
+            235,
+            250
+          ],
+          "16": [
+            24,
+            17,
+            232,
+            248
+          ],
+          "128": [
+            25,
+            18,
+            232,
+            247
+          ],
+          "240": [
+            26,
+            18,
+            231,
+            247
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              236,
+              139,
+              247
+            ],
+            "pixels": 162,
+            "point": [
+              126.51724137931035,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              175,
+              234,
+              200,
+              246
+            ],
+            "pixels": 186,
+            "point": [
+              187.03225806451613,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.77474972191322,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.06533124974669136,
+        0
+      ],
+      "sourceSha256": "63eafd8e93f853fae283df48bcf2cdaddb47fb053f035ba4f8bf7d08ca2c7286",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "NO_INTEGER_X_CORRECTION",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": -3.5,
+            "bottom": -5
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -3.5,
+        "bottom": -6
+      },
+      "alphaPixelCountBefore": 31686,
+      "alphaPixelCountAfter": 31686
+    },
+    {
+      "revision": "v2",
+      "index": 7,
+      "source": "ruu/stage01/revision2/idle/idle_07.png",
+      "translation": [
+        1,
+        0
+      ],
+      "before": {
+        "alphaBounds": {
+          "1": [
+            21,
+            10,
+            237,
+            250
+          ],
+          "16": [
+            24,
+            12,
+            230,
+            248
+          ],
+          "128": [
+            25,
+            13,
+            229,
+            247
+          ],
+          "240": [
+            25,
+            13,
+            229,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              112,
+              236,
+              138,
+              247
+            ],
+            "pixels": 158,
+            "point": [
+              125.77272727272727,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              170,
+              232,
+              199,
+              246
+            ],
+            "pixels": 192,
+            "point": [
+              185.33333333333334,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          155.5530303030303,
+          247
+        ]
+      },
+      "after": {
+        "alphaBounds": {
+          "1": [
+            22,
+            10,
+            238,
+            250
+          ],
+          "16": [
+            25,
+            12,
+            231,
+            248
+          ],
+          "128": [
+            26,
+            13,
+            230,
+            247
+          ],
+          "240": [
+            26,
+            13,
+            230,
+            246
+          ]
+        },
+        "edgePixels": [],
+        "contacts": [
+          {
+            "bounds": [
+              113,
+              236,
+              139,
+              247
+            ],
+            "pixels": 158,
+            "point": [
+              126.77272727272727,
+              247
+            ]
+          },
+          {
+            "bounds": [
+              171,
+              232,
+              200,
+              246
+            ],
+            "pixels": 192,
+            "point": [
+              186.33333333333334,
+              246
+            ]
+          }
+        ],
+        "contactAnchor": [
+          156.5530303030303,
+          247
+        ]
+      },
+      "remainingContactOffset": [
+        -0.28705066862960393,
+        0
+      ],
+      "sourceSha256": "349788e94c703d774b898ecbfd21ed82b760dbb745b45588143d265d421eaf1d",
+      "visibleRgbaPreserved": true,
+      "visualIdentity": "MANUAL_REQUIRED",
+      "continuity": "MANUAL_REQUIRED",
+      "failureClassification": [
+        {
+          "type": "POSITION_ALIGNMENT",
+          "status": "MEASURED_OFFSET",
+          "evidence": "Gold toe proxy offset only; does not establish unchanged anatomy."
+        },
+        {
+          "type": "ANCHOR_MISMATCH",
+          "status": "VALIDATION_FAILED",
+          "evidence": {
+            "centerX": 0,
+            "bottom": -5
+          }
+        },
+        {
+          "type": "APPEARANCE_DRIFT",
+          "status": "SUSPECTED_MANUAL_REQUIRED",
+          "evidence": "Contact-relative toe shapes and head/wing contours vary. Translation cannot fix or approve anatomy."
+        },
+        {
+          "type": "ALPHA_DEFECT",
+          "status": "NOT_ESTABLISHED",
+          "evidence": []
+        },
+        {
+          "type": "MOTION_DISCONTINUITY",
+          "status": "MANUAL_REQUIRED",
+          "evidence": "See complete-loop transition measurements; pixel difference is not a naturalness test."
+        }
+      ],
+      "legacyValidationUnchanged": true,
+      "baseRegistrationBefore": {
+        "centerX": -1.0,
+        "bottom": -5
+      },
+      "alphaPixelCountBefore": 31658,
+      "alphaPixelCountAfter": 31658
+    }
+  ],
+  "productionRegisteredClips": 0,
+  "productionAcceptedFrames": 0,
+  "originalCandidatesPreserved": 17,
+  "normalizedDiagnosticCopies": 16,
+  "baseReferenceStatus": "NOT_APPROVED_ALPHA_RESIDUE",
+  "repairBudget": {
+    "maximum": 3,
+    "conservativeArtRepairCount": 3,
+    "attempts": [
+      "base identity correction",
+      "idle sheet regeneration",
+      "contact translation experiment"
+    ],
+    "next": "BLOCKED_HUMAN_REVIEW_REQUIRED",
+    "note": "Count includes earlier art corrections conservatively; do not regenerate again automatically."
+  },
+  "playback": {
+    "browser": "150ms sequential playback observed at frames 7, 0 and 3; Pause control verified",
+    "nativeGui": "DEFERRED_GUI",
+    "motionQuality": "NOT_ACCEPTED",
+    "note": "Browser preview is not native runtime or a full temporal visual QA pass."
+  },
+  "appearanceReview": {
+    "status": "MANUAL_REQUIRED",
+    "headShape": "Tilt and ear contour variation; v1 frame03 and v2 frame06 need pose-versus-drift review.",
+    "bodyProportion": "No fixed anatomical landmarks approved; silhouette dimensions are not anatomical proof.",
+    "eyePosition": "Open blue eyes observed; no approved per-pose eye landmarks.",
+    "wingStructure": "Wing contour changes observed; no newly approved wing structure.",
+    "tailStructure": "Tail silhouette changes retained; no translation-based identity approval.",
+    "legStructure": "Gold toe region differs in size between BASE and both sheets; reference contact needs artist approval.",
+    "colorPalette": "Cream/blue/gold identity visually retained; exact palette equality not required or established.",
+    "outlineConsistency": "No cleanup applied; low-alpha extensions remain."
+  },
+  "continuity": [
+    {
+      "revision": "v1",
+      "from": 0,
+      "to": 1,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.9008565310492506,
+      "alphaMeanAbsoluteDifference": 10.980209350585938,
+      "premultipliedRgbMeanAbsoluteDifference": 15.203873538349695,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v1",
+      "from": 1,
+      "to": 2,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.810474385781495,
+      "alphaMeanAbsoluteDifference": 22.3543701171875,
+      "premultipliedRgbMeanAbsoluteDifference": 23.568362386858322,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v1",
+      "from": 2,
+      "to": 3,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.7013467699293957,
+      "alphaMeanAbsoluteDifference": 37.16667175292969,
+      "premultipliedRgbMeanAbsoluteDifference": 34.6942984188007,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v1",
+      "from": 3,
+      "to": 4,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.7284229109454688,
+      "alphaMeanAbsoluteDifference": 32.14704895019531,
+      "premultipliedRgbMeanAbsoluteDifference": 29.99470200878551,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v1",
+      "from": 4,
+      "to": 5,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.9410609751663455,
+      "alphaMeanAbsoluteDifference": 6.469085693359375,
+      "premultipliedRgbMeanAbsoluteDifference": 10.82377048068853,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v1",
+      "from": 5,
+      "to": 6,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.9490082916316616,
+      "alphaMeanAbsoluteDifference": 5.6357421875,
+      "premultipliedRgbMeanAbsoluteDifference": 9.29952893226235,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v1",
+      "from": 6,
+      "to": 7,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.9369448404430311,
+      "alphaMeanAbsoluteDifference": 6.9027557373046875,
+      "premultipliedRgbMeanAbsoluteDifference": 11.076871226194662,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v1",
+      "from": 7,
+      "to": 0,
+      "loopBoundary": true,
+      "opaqueMaskIoU": 0.9644348344765882,
+      "alphaMeanAbsoluteDifference": 3.923919677734375,
+      "premultipliedRgbMeanAbsoluteDifference": 5.816412193948124,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v2",
+      "from": 0,
+      "to": 1,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.9328556359800676,
+      "alphaMeanAbsoluteDifference": 7.3388824462890625,
+      "premultipliedRgbMeanAbsoluteDifference": 12.175459917855703,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v2",
+      "from": 1,
+      "to": 2,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.9298307850580013,
+      "alphaMeanAbsoluteDifference": 7.8630828857421875,
+      "premultipliedRgbMeanAbsoluteDifference": 10.4160988801473,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v2",
+      "from": 2,
+      "to": 3,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.8173684032818989,
+      "alphaMeanAbsoluteDifference": 21.00067138671875,
+      "premultipliedRgbMeanAbsoluteDifference": 22.839793625363196,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v2",
+      "from": 3,
+      "to": 4,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.8365321209176414,
+      "alphaMeanAbsoluteDifference": 18.255859375,
+      "premultipliedRgbMeanAbsoluteDifference": 20.677597604390538,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v2",
+      "from": 4,
+      "to": 5,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.9407866301685636,
+      "alphaMeanAbsoluteDifference": 6.5613555908203125,
+      "premultipliedRgbMeanAbsoluteDifference": 11.439361552321925,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v2",
+      "from": 5,
+      "to": 6,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.9146818343405617,
+      "alphaMeanAbsoluteDifference": 9.466537475585938,
+      "premultipliedRgbMeanAbsoluteDifference": 15.411823766373423,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v2",
+      "from": 6,
+      "to": 7,
+      "loopBoundary": false,
+      "opaqueMaskIoU": 0.9197716993323283,
+      "alphaMeanAbsoluteDifference": 8.829544067382812,
+      "premultipliedRgbMeanAbsoluteDifference": 15.326529050342955,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    },
+    {
+      "revision": "v2",
+      "from": 7,
+      "to": 0,
+      "loopBoundary": true,
+      "opaqueMaskIoU": 0.9616917626217892,
+      "alphaMeanAbsoluteDifference": 4.3227996826171875,
+      "premultipliedRgbMeanAbsoluteDifference": 7.031722304402312,
+      "acceptance": "NOT_INFERRED_FROM_PIXEL_DIFFERENCE"
+    }
+  ]
+}

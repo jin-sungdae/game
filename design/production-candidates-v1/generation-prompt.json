@@ -1,0 +1,7 @@
+{
+  "tool": "image_gen",
+  "transparent_background": true,
+  "reference": "ruu/stage01/source-idle.png",
+  "output": "ruu/stage01/revision2/source-idle.png",
+  "prompt": "Repair this RUU idle sprite sheet for animation registration. Keep exactly the same RUU identity, eight distinct sequential breathing/wing-settle poses and 4 columns x 2 rows layout. Critical repair: each character must occupy only the central 70% of its equal square cell, with 15% TRANSPARENT margin on all sides. Do not touch or cross cell boundaries. Every frame's two planted hind feet must have exactly the SAME relative pixel positions within its cell and same baseline at 85% cell height. Head body and tail scale consistent all eight. Reduce the large head turn in fourth pose to tiny head tilt; this is stationary idle, never stepping or translating. Remove ALL detached blue/white pixels and fuzzy background speckle around outlines; clean antialiased actual-alpha edges, no shadow, no checkerboard, no text or grid. Do NOT merge/remove feet or wing feathers; preserve complete anatomy. Output 4x2 equal-square-cell sprite sheet, exact 2:1 aspect ratio, 2048x1024 desired. This is a repair, not a redesign. Frame 8 transitions smoothly to frame 1."
+}

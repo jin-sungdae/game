@@ -14,12 +14,19 @@ def restore(api, destination):
     workflow = api.get('actions/workflows/luma-pr-watch-15min.yml')
     default = api.get('')['default_branch']
     artifacts = api.pages(f'actions/artifacts?name={NAME}', 'artifacts')
-    for artifact in sorted(artifacts, key=lambda a: a['id'], reverse=True):
+    for artifact in sorted(artifacts, key=lambda a: (a['created_at'], a['id']), reverse=True):
         run = api.get(f'actions/runs/{artifact["workflow_run"]["id"]}')
         if run['workflow_id'] != workflow['id'] or run['event'] not in ('schedule', 'workflow_dispatch', 'pull_request_target', 'workflow_run'):
             continue
         if run['event'] == 'pull_request_target':
-            if not run.get('pull_requests') or any(p['base']['ref'] != default for p in run['pull_requests']):
+            pulls = run.get('pull_requests', [])
+            if not pulls:
+                # GitHub can omit merged PRs from workflow-run metadata. Resolve the
+                # exact recorded commit, never infer provenance from a branch name alone.
+                pulls = [p for p in api.pages(f"commits/{run['head_sha']}/pulls")
+                         if p['head']['ref'] == run['head_branch']
+                         and p['base']['repo']['full_name'] == api.repo]
+            if not pulls or any(p['base']['ref'] != default for p in pulls):
                 raise RuntimeError('Unverified checkpoint base; manual recovery required')
         elif run['head_branch'] != default:
             raise RuntimeError('Non-default checkpoint source; manual recovery required')

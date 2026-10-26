@@ -1,0 +1,1919 @@
+{
+  "species": "RUU",
+  "stage": 2,
+  "frames": [
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+      "reference": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+        "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+        "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 36665,
+        "partialAlphaPixels": 28635,
+        "borderNontransparentPixels": 17,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 73,
+        "detachedNontransparentPixelCount": 230,
+        "largestDetachedNontransparentComponent": 33
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/raw/idle/idle_01.png",
+      "reference": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "cf57729f51f67d8d9f20e27bf170a8a91fd2b0a7734d58b08adfe809e3f8f725",
+        "sha256": "e1768716355ff48592e65f5300b44dee56a8e824c7d5e70932fac40241f49259",
+        "bounds": [
+          0,
+          13,
+          255,
+          254
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+        "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": -1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_01.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 36223,
+        "partialAlphaPixels": 29080,
+        "borderNontransparentPixels": 18,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 77,
+        "detachedNontransparentPixelCount": 237,
+        "largestDetachedNontransparentComponent": 55
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/raw/idle/idle_02.png",
+      "reference": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "60ce1063710b302ca4924aebaf05d8301eaf4566e06d7fab5ee37434205a4245",
+        "sha256": "2ed3b67b5a62c94ccb47ef0ff610fe02a1f671d636783050cc07708f63270e7d",
+        "bounds": [
+          0,
+          11,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+        "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_02.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 35153,
+        "partialAlphaPixels": 30145,
+        "borderNontransparentPixels": 12,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 112,
+        "detachedNontransparentPixelCount": 365,
+        "largestDetachedNontransparentComponent": 40
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/raw/idle/idle_03.png",
+      "reference": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "a2994c5314ca56507919cbe6979a34e9b8198d03e63cdfa130980a615c797d3d",
+        "sha256": "f9db3cc82b68176be4b68957bd47c235b22f3661974c097051f6d865bda426d0",
+        "bounds": [
+          0,
+          14,
+          243,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+        "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": -6.0,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_03.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 35811,
+        "partialAlphaPixels": 29473,
+        "borderNontransparentPixels": 31,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 91,
+        "detachedNontransparentPixelCount": 413,
+        "largestDetachedNontransparentComponent": 78
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/raw/idle/idle_04.png",
+      "reference": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "bc882ad86e891ca0cfb9070b9bd8949eb6a0e4fc2bbde94fe488ae0830cba315",
+        "sha256": "6cb95419f15a1c0d8d85ef9f0ecb8231cc1e5be7ce82e04f03f5d769be4cc1db",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+        "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_04.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 36751,
+        "partialAlphaPixels": 28547,
+        "borderNontransparentPixels": 51,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 62,
+        "detachedNontransparentPixelCount": 228,
+        "largestDetachedNontransparentComponent": 27
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/raw/idle/idle_05.png",
+      "reference": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "0108d72ee64fec5ff97b358f8f6f10e0dbdf475c16e92955ab0098d7045dbc49",
+        "sha256": "e0d8a0c37ce985363fd22c42f32e8c7a63077f92f688439bde250b3b5a78e748",
+        "bounds": [
+          0,
+          0,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+        "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_05.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 35806,
+        "partialAlphaPixels": 29421,
+        "borderNontransparentPixels": 107,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 157,
+        "detachedNontransparentPixelCount": 672,
+        "largestDetachedNontransparentComponent": 69
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/raw/idle/idle_06.png",
+      "reference": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "0bf8c8b5cd0c0adc1bdcfc26d0c9b302dde597cf230ff4133f7d56d27c035ac7",
+        "sha256": "5cb7d04b948054931932d1f28a2ec060d8cb29d71300e19790ce21da39e9c3be",
+        "bounds": [
+          0,
+          0,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+        "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_06.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 35919,
+        "partialAlphaPixels": 29323,
+        "borderNontransparentPixels": 50,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 186,
+        "detachedNontransparentPixelCount": 868,
+        "largestDetachedNontransparentComponent": 121
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/raw/idle/idle_07.png",
+      "reference": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "7830ab663478f777dd6671a3827fc9548d632a6fb6787971eb4c5f0e6e4f9b97",
+        "sha256": "0adff23126631cf5a89f96578aac2a6f5618e4dd9a8bc94d00fe0b6c43541656",
+        "bounds": [
+          0,
+          0,
+          252,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+        "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+        "bounds": [
+          0,
+          10,
+          255,
+          255
+        ]
+      },
+      "driftPixels": {
+        "centerX": -1.5,
+        "bottom": 0
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_07.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 36008,
+        "partialAlphaPixels": 29251,
+        "borderNontransparentPixels": 65,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 107,
+        "detachedNontransparentPixelCount": 506,
+        "largestDetachedNontransparentComponent": 115
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+      "reference": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+        "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+        "bounds": [
+          15,
+          13,
+          255,
+          254
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+        "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+        "bounds": [
+          15,
+          13,
+          255,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 35829,
+        "partialAlphaPixels": 29388,
+        "borderNontransparentPixels": 4,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 12,
+        "detachedNontransparentPixelCount": 14,
+        "largestDetachedNontransparentComponent": 4
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_01.png",
+      "reference": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "8d605381425a4ce1e6b6081062f32a9f1d23e5c1a19ccf247a8d1171fb417555",
+        "sha256": "69bf1143d8e747141e345e94ea47201ae7dbf294649184286b33caf29fbfb640",
+        "bounds": [
+          0,
+          29,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+        "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+        "bounds": [
+          15,
+          13,
+          255,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -7.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_01.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 34758,
+        "partialAlphaPixels": 30474,
+        "borderNontransparentPixels": 13,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 58,
+        "detachedNontransparentPixelCount": 194,
+        "largestDetachedNontransparentComponent": 34
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_02.png",
+      "reference": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "8154c74a0fce30fa2d9349abd5125cf8a4f955703edc6924dbe6b9fb3da39120",
+        "sha256": "6cf55fb9940003d0a276024276c64d03cecb32aff2da6349800fef7111f285d7",
+        "bounds": [
+          0,
+          17,
+          255,
+          253
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+        "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+        "bounds": [
+          15,
+          13,
+          255,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -7.5,
+        "bottom": -1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_02.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 33526,
+        "partialAlphaPixels": 31696,
+        "borderNontransparentPixels": 6,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 81,
+        "detachedNontransparentPixelCount": 239,
+        "largestDetachedNontransparentComponent": 56
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_03.png",
+      "reference": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "b62703f49a82370a0127621dd08896053ea593886c86c46b7e62670b2ec4f337",
+        "sha256": "fc41201bb1b63973af8a1862a61bd8637d7d76e1ccde9a96775e902bd5c1f627",
+        "bounds": [
+          0,
+          13,
+          239,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+        "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+        "bounds": [
+          15,
+          13,
+          255,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -15.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_03.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 34658,
+        "partialAlphaPixels": 30648,
+        "borderNontransparentPixels": 12,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 57,
+        "detachedNontransparentPixelCount": 162,
+        "largestDetachedNontransparentComponent": 31
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_04.png",
+      "reference": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "c85b46dbda7e22e128de100f0c8e309ebe9d88389733e0225dcec6d5afe494a3",
+        "sha256": "9b0b5ce38d55bd8350b6fa5d1264d71002b3e8aa8154fb7762c35616234b6083",
+        "bounds": [
+          11,
+          0,
+          254,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+        "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+        "bounds": [
+          15,
+          13,
+          255,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -2.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_04.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 35544,
+        "partialAlphaPixels": 29722,
+        "borderNontransparentPixels": 111,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 20,
+        "detachedNontransparentPixelCount": 126,
+        "largestDetachedNontransparentComponent": 70
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_05.png",
+      "reference": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "7ace31203474365f648a04749e5c2c4f70e87d4e5c7af702544382d0eabd9001",
+        "sha256": "9e35ba78c482246e2cf546566c53cbe4c69ebef261ea74d245a62e2ad3800e22",
+        "bounds": [
+          5,
+          0,
+          248,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+        "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+        "bounds": [
+          15,
+          13,
+          255,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -8.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_05.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 34804,
+        "partialAlphaPixels": 30439,
+        "borderNontransparentPixels": 106,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 54,
+        "detachedNontransparentPixelCount": 154,
+        "largestDetachedNontransparentComponent": 26
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_06.png",
+      "reference": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43dc6bf4a27df2acdab4276d8ec93e7125ee2dd87b825dda9c7e7bba60d3f476",
+        "sha256": "443fef9e86965160697bd37148da83a357fc209c6fdb504f05122b20a4d2d09b",
+        "bounds": [
+          3,
+          0,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+        "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+        "bounds": [
+          15,
+          13,
+          255,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -6.0,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_06.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 35210,
+        "partialAlphaPixels": 30011,
+        "borderNontransparentPixels": 73,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 46,
+        "detachedNontransparentPixelCount": 108,
+        "largestDetachedNontransparentComponent": 10
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_07.png",
+      "reference": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "cd5620a0d17d0a687ac17eb3cc516b289cc14a3d3280457fc0c07a5b5376b9e5",
+        "sha256": "c7edb8eb5db23711a8be51031810f0b865cb9014fd843748fea067d0d8250bf4",
+        "bounds": [
+          0,
+          0,
+          246,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+        "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+        "bounds": [
+          15,
+          13,
+          255,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -12.0,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_07.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 34868,
+        "partialAlphaPixels": 30404,
+        "borderNontransparentPixels": 89,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 48,
+        "detachedNontransparentPixelCount": 232,
+        "largestDetachedNontransparentComponent": 67
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED_PENDING_PLAYBACK"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+      "reference": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+        "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+        "bounds": [
+          19,
+          18,
+          251,
+          254
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+        "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+        "bounds": [
+          19,
+          18,
+          251,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "errors": [],
+      "automated": "PASS",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 44879,
+        "partialAlphaPixels": 20410,
+        "borderNontransparentPixels": 0,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 105,
+        "detachedNontransparentPixelCount": 845,
+        "largestDetachedNontransparentComponent": 162
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "MOTION_DISCONTINUITY"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED: frame stepping exposed visible planted-foot shift at 7\u21920; alpha-bounds bottom is not a reliable foot-contact proxy"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_01.png",
+      "reference": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "50bf1d45bdd0b9c5dd73ba7b4f7487c4108d22335cdf6ac070c611fc66c2964a",
+        "sha256": "82b912ef70c73406e8b7575e0a12f259b6e3b275d2c571a7164ba36c1d5ed9d1",
+        "bounds": [
+          1,
+          12,
+          255,
+          252
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+        "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+        "bounds": [
+          19,
+          18,
+          251,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -7.0,
+        "bottom": -2
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_01.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 44574,
+        "partialAlphaPixels": 20764,
+        "borderNontransparentPixels": 4,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 172,
+        "detachedNontransparentPixelCount": 1445,
+        "largestDetachedNontransparentComponent": 305
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED: frame stepping exposed visible planted-foot shift at 7\u21920; alpha-bounds bottom is not a reliable foot-contact proxy"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_02.png",
+      "reference": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "d0c0ec2a76ce19bc3e095331c58e9df3a404e23716240562c8c7fbb41dfe016d",
+        "sha256": "9e13135f34beaff1f3ae7ce313b741867172607031bb87e473bce3d643a10a3b",
+        "bounds": [
+          0,
+          16,
+          253,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+        "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+        "bounds": [
+          19,
+          18,
+          251,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -8.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_02.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 44839,
+        "partialAlphaPixels": 20440,
+        "borderNontransparentPixels": 2,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 135,
+        "detachedNontransparentPixelCount": 1157,
+        "largestDetachedNontransparentComponent": 641
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED: frame stepping exposed visible planted-foot shift at 7\u21920; alpha-bounds bottom is not a reliable foot-contact proxy"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_03.png",
+      "reference": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "cc8a5079b2e5b78c54d577a424d87a126bc13471661843cf72e421cb857d9f6f",
+        "sha256": "0a3ac51408fb6c68296e0fe28d1c053c06788e9f8f78530c1a859efdded8acd1",
+        "bounds": [
+          0,
+          12,
+          249,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+        "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+        "bounds": [
+          19,
+          18,
+          251,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -10.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_03.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 44624,
+        "partialAlphaPixels": 20685,
+        "borderNontransparentPixels": 7,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 161,
+        "detachedNontransparentPixelCount": 1216,
+        "largestDetachedNontransparentComponent": 446
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED: frame stepping exposed visible planted-foot shift at 7\u21920; alpha-bounds bottom is not a reliable foot-contact proxy"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_04.png",
+      "reference": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "e2aac262c5e6367e4a93616eff98a8c49cf4bcc4c4734041ac05a38087bf5e1a",
+        "sha256": "25edd122299f9a11aa2f1ee8bdb2a239ec8145057a6d33aeb14a1d84b39279cd",
+        "bounds": [
+          6,
+          0,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+        "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+        "bounds": [
+          19,
+          18,
+          251,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -4.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_04.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 45611,
+        "partialAlphaPixels": 19665,
+        "borderNontransparentPixels": 32,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 112,
+        "detachedNontransparentPixelCount": 515,
+        "largestDetachedNontransparentComponent": 110
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED: frame stepping exposed visible planted-foot shift at 7\u21920; alpha-bounds bottom is not a reliable foot-contact proxy"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_05.png",
+      "reference": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "6f295c72137a73002acef1d98a79c1bf23b65da61abcae89b3942d27ed4a8f72",
+        "sha256": "06016d119d1a1d6bfb60c00330a8e3963d969b1e7f04bbff09be5b96000627bd",
+        "bounds": [
+          0,
+          3,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+        "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+        "bounds": [
+          19,
+          18,
+          251,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -7.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_05.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 44948,
+        "partialAlphaPixels": 20339,
+        "borderNontransparentPixels": 37,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 143,
+        "detachedNontransparentPixelCount": 1115,
+        "largestDetachedNontransparentComponent": 171
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED: frame stepping exposed visible planted-foot shift at 7\u21920; alpha-bounds bottom is not a reliable foot-contact proxy"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_06.png",
+      "reference": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "2d5bf98b440188692849b0f8ab7d49ce687497fdd415a73066884c8714d4b8fa",
+        "sha256": "841a38bcca920452a9bde5f9cea1c4bb5948c02d6367c19c8bac370ca0a40c0f",
+        "bounds": [
+          0,
+          0,
+          255,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+        "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+        "bounds": [
+          19,
+          18,
+          251,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -7.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_06.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 45917,
+        "partialAlphaPixels": 19393,
+        "borderNontransparentPixels": 8,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 143,
+        "detachedNontransparentPixelCount": 527,
+        "largestDetachedNontransparentComponent": 61
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED: frame stepping exposed visible planted-foot shift at 7\u21920; alpha-bounds bottom is not a reliable foot-contact proxy"
+    },
+    {
+      "candidate": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_07.png",
+      "reference": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+      "image": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "cce304f4ebc2065df97d1852b9726cea32f25eb71c638e9e4ca4eae762a593d4",
+        "sha256": "de280220bdb799803f67323d5a046accf9fc51e716fdb8d12e2ecb429a6619b0",
+        "bounds": [
+          0,
+          0,
+          247,
+          255
+        ]
+      },
+      "referenceImage": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+        "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+        "bounds": [
+          19,
+          18,
+          251,
+          254
+        ]
+      },
+      "driftPixels": {
+        "centerX": -11.5,
+        "bottom": 1
+      },
+      "errors": [
+        "registration differs from approved master"
+      ],
+      "automated": "FAIL",
+      "guiAcceptance": "NOT_VERIFIED",
+      "identityReview": "MANUAL_VISUAL_REVIEW",
+      "productionEligible": false,
+      "referenceStatus": "UNAPPROVED_FIRST_FRAME_COMPARISON_ONLY",
+      "alphaMetrics": {
+        "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_07.png",
+        "width": 256,
+        "height": 256,
+        "channels": 4,
+        "transparentPixels": 44748,
+        "partialAlphaPixels": 20527,
+        "borderNontransparentPixels": 21,
+        "opaqueComponentCount": 1,
+        "detachedOpaquePixelCount": 0,
+        "largestDetachedOpaqueComponent": 0,
+        "nontransparentComponentCount": 167,
+        "detachedNontransparentPixelCount": 717,
+        "largestDetachedNontransparentComponent": 107
+      },
+      "artworkStatus": "VALIDATION_FAILED",
+      "failureTypes": [
+        "ALPHA_DEFECT",
+        "POSITION_ALIGNMENT",
+        "MOTION_DISCONTINUITY"
+      ],
+      "contactAnchor": "NOT_VERIFIED; alpha bottom and center are not anatomical contact points",
+      "coordinateNormalizationApplied": false,
+      "appearanceReview": "NOT_APPROVED: ear/head silhouette and shoulder feather volume vary",
+      "loopContinuity": "NOT_ACCEPTED: frame stepping exposed visible planted-foot shift at 7\u21920; alpha-bounds bottom is not a reliable foot-contact proxy"
+    }
+  ],
+  "clips": {
+    "raw": {
+      "idle": {
+        "status": "FRAMES_READY",
+        "errors": [],
+        "frameEvidence": [
+          {
+            "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_00.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "43698b809d1e69f5410fc61e657dbf6d4791dcf0b0983eb766c7e3fb55a6da2f",
+            "sha256": "dce8c9e7436be07917cbc61e61b946fcb8447525bac31c39e9d91a56e6400e5f",
+            "bounds": [
+              0,
+              10,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_01.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "cf57729f51f67d8d9f20e27bf170a8a91fd2b0a7734d58b08adfe809e3f8f725",
+            "sha256": "e1768716355ff48592e65f5300b44dee56a8e824c7d5e70932fac40241f49259",
+            "bounds": [
+              0,
+              13,
+              255,
+              254
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_02.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "60ce1063710b302ca4924aebaf05d8301eaf4566e06d7fab5ee37434205a4245",
+            "sha256": "2ed3b67b5a62c94ccb47ef0ff610fe02a1f671d636783050cc07708f63270e7d",
+            "bounds": [
+              0,
+              11,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_03.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "a2994c5314ca56507919cbe6979a34e9b8198d03e63cdfa130980a615c797d3d",
+            "sha256": "f9db3cc82b68176be4b68957bd47c235b22f3661974c097051f6d865bda426d0",
+            "bounds": [
+              0,
+              14,
+              243,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_04.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "bc882ad86e891ca0cfb9070b9bd8949eb6a0e4fc2bbde94fe488ae0830cba315",
+            "sha256": "6cb95419f15a1c0d8d85ef9f0ecb8231cc1e5be7ce82e04f03f5d769be4cc1db",
+            "bounds": [
+              0,
+              10,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_05.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "0108d72ee64fec5ff97b358f8f6f10e0dbdf475c16e92955ab0098d7045dbc49",
+            "sha256": "e0d8a0c37ce985363fd22c42f32e8c7a63077f92f688439bde250b3b5a78e748",
+            "bounds": [
+              0,
+              0,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_06.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "0bf8c8b5cd0c0adc1bdcfc26d0c9b302dde597cf230ff4133f7d56d27c035ac7",
+            "sha256": "5cb7d04b948054931932d1f28a2ec060d8cb29d71300e19790ce21da39e9c3be",
+            "bounds": [
+              0,
+              0,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/raw/idle/idle_07.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "7830ab663478f777dd6671a3827fc9548d632a6fb6787971eb4c5f0e6e4f9b97",
+            "sha256": "0adff23126631cf5a89f96578aac2a6f5618e4dd9a8bc94d00fe0b6c43541656",
+            "bounds": [
+              0,
+              0,
+              252,
+              255
+            ]
+          }
+        ],
+        "expectedFrames": 8,
+        "validFrames": 8,
+        "missingOrInvalid": [],
+        "guiAcceptance": "NOT_VERIFIED"
+      }
+    },
+    "repair-v2": {
+      "idle": {
+        "status": "FRAMES_READY",
+        "errors": [],
+        "frameEvidence": [
+          {
+            "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_00.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "81ac1fd8904d7cd6ed9547fb12312eb788b9870dae02a1b0eda8d6f788f81e4f",
+            "sha256": "cd6b04dfc47b967c9f4e049c59887724b90cde2ad33c7ced430ad034b4aa04d2",
+            "bounds": [
+              15,
+              13,
+              255,
+              254
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_01.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "8d605381425a4ce1e6b6081062f32a9f1d23e5c1a19ccf247a8d1171fb417555",
+            "sha256": "69bf1143d8e747141e345e94ea47201ae7dbf294649184286b33caf29fbfb640",
+            "bounds": [
+              0,
+              29,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_02.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "8154c74a0fce30fa2d9349abd5125cf8a4f955703edc6924dbe6b9fb3da39120",
+            "sha256": "6cf55fb9940003d0a276024276c64d03cecb32aff2da6349800fef7111f285d7",
+            "bounds": [
+              0,
+              17,
+              255,
+              253
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_03.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "b62703f49a82370a0127621dd08896053ea593886c86c46b7e62670b2ec4f337",
+            "sha256": "fc41201bb1b63973af8a1862a61bd8637d7d76e1ccde9a96775e902bd5c1f627",
+            "bounds": [
+              0,
+              13,
+              239,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_04.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "c85b46dbda7e22e128de100f0c8e309ebe9d88389733e0225dcec6d5afe494a3",
+            "sha256": "9b0b5ce38d55bd8350b6fa5d1264d71002b3e8aa8154fb7762c35616234b6083",
+            "bounds": [
+              11,
+              0,
+              254,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_05.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "7ace31203474365f648a04749e5c2c4f70e87d4e5c7af702544382d0eabd9001",
+            "sha256": "9e35ba78c482246e2cf546566c53cbe4c69ebef261ea74d245a62e2ad3800e22",
+            "bounds": [
+              5,
+              0,
+              248,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_06.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "43dc6bf4a27df2acdab4276d8ec93e7125ee2dd87b825dda9c7e7bba60d3f476",
+            "sha256": "443fef9e86965160697bd37148da83a357fc209c6fdb504f05122b20a4d2d09b",
+            "bounds": [
+              3,
+              0,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/repair-v2/idle/idle_07.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "cd5620a0d17d0a687ac17eb3cc516b289cc14a3d3280457fc0c07a5b5376b9e5",
+            "sha256": "c7edb8eb5db23711a8be51031810f0b865cb9014fd843748fea067d0d8250bf4",
+            "bounds": [
+              0,
+              0,
+              246,
+              255
+            ]
+          }
+        ],
+        "expectedFrames": 8,
+        "validFrames": 8,
+        "missingOrInvalid": [],
+        "guiAcceptance": "NOT_VERIFIED"
+      }
+    },
+    "rebuild-v3": {
+      "idle": {
+        "status": "FRAMES_READY",
+        "errors": [],
+        "frameEvidence": [
+          {
+            "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_00.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "1ffa36414e33ab2b4ab2a25e365ad07dfa48b72c1e5957a5573b1623c568e22b",
+            "sha256": "eae04ca378be32d6aacc2f5a1e0bb7c2fdd1682eee4651baaf43cebeb5154c07",
+            "bounds": [
+              19,
+              18,
+              251,
+              254
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_01.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "50bf1d45bdd0b9c5dd73ba7b4f7487c4108d22335cdf6ac070c611fc66c2964a",
+            "sha256": "82b912ef70c73406e8b7575e0a12f259b6e3b275d2c571a7164ba36c1d5ed9d1",
+            "bounds": [
+              1,
+              12,
+              255,
+              252
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_02.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "d0c0ec2a76ce19bc3e095331c58e9df3a404e23716240562c8c7fbb41dfe016d",
+            "sha256": "9e13135f34beaff1f3ae7ce313b741867172607031bb87e473bce3d643a10a3b",
+            "bounds": [
+              0,
+              16,
+              253,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_03.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "cc8a5079b2e5b78c54d577a424d87a126bc13471661843cf72e421cb857d9f6f",
+            "sha256": "0a3ac51408fb6c68296e0fe28d1c053c06788e9f8f78530c1a859efdded8acd1",
+            "bounds": [
+              0,
+              12,
+              249,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_04.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "e2aac262c5e6367e4a93616eff98a8c49cf4bcc4c4734041ac05a38087bf5e1a",
+            "sha256": "25edd122299f9a11aa2f1ee8bdb2a239ec8145057a6d33aeb14a1d84b39279cd",
+            "bounds": [
+              6,
+              0,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_05.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "6f295c72137a73002acef1d98a79c1bf23b65da61abcae89b3942d27ed4a8f72",
+            "sha256": "06016d119d1a1d6bfb60c00330a8e3963d969b1e7f04bbff09be5b96000627bd",
+            "bounds": [
+              0,
+              3,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_06.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "2d5bf98b440188692849b0f8ab7d49ce687497fdd415a73066884c8714d4b8fa",
+            "sha256": "841a38bcca920452a9bde5f9cea1c4bb5948c02d6367c19c8bac370ca0a40c0f",
+            "bounds": [
+              0,
+              0,
+              255,
+              255
+            ]
+          },
+          {
+            "file": "design/creature-production-v3/ruu/stage02/rebuild-v3/idle/idle_07.png",
+            "status": "ARTWORK_READY",
+            "errors": [],
+            "pixelSha256": "cce304f4ebc2065df97d1852b9726cea32f25eb71c638e9e4ca4eae762a593d4",
+            "sha256": "de280220bdb799803f67323d5a046accf9fc51e716fdb8d12e2ecb429a6619b0",
+            "bounds": [
+              0,
+              0,
+              247,
+              255
+            ]
+          }
+        ],
+        "expectedFrames": 8,
+        "validFrames": 8,
+        "missingOrInvalid": [],
+        "guiAcceptance": "NOT_VERIFIED"
+      }
+    }
+  },
+  "productionAcceptedFrames": 0,
+  "productionRegisteredClips": 0,
+  "runtimeConnections": 0,
+  "gui": "DEFERRED_GUI",
+  "repairCountIncludingPreviousNOX": 3,
+  "status": "BLOCKED_HUMAN_REVIEW_REQUIRED",
+  "normalizationDecision": "Not translation-only: alpha residue and silhouette drift remain; no alpha deletion or shape normalization performed.",
+  "playback": {
+    "browser": "OBSERVED_IN_APP_BROWSER",
+    "engine": "existing AnimationController and animationClock",
+    "observedFrames": [
+      1,
+      2,
+      3,
+      7,
+      0
+    ],
+    "controls": [
+      "Pause",
+      "Next frame",
+      "Change background"
+    ],
+    "loopBoundary": "7\u21920 visible body/foot shift; approximately 12 display pixels by screenshot visual estimate, not instrumented anatomical measurement",
+    "nativeMacOS": "DEFERRED_GUI",
+    "windows": "NOT_RUN",
+    "productionAcceptance": false
+  },
+  "generatedSourceSheets": 3,
+  "individualCandidateFrames": 24,
+  "productionApprovedPNGs": 0,
+  "nativeRuntimeConnections": 0,
+  "remainingFullContentAcceptance": "15 Companion forms and 100 Monster concepts have not achieved the requested complete action coverage; existing production clips are preserved and not counted as new completions",
+  "tests": {
+    "animationRegression": "PASS",
+    "candidateHarnessTypecheck": "PASS",
+    "visualInventoryValidatorRegression": "PASS",
+    "PNGFormat": {
+      "passed": 24,
+      "total": 24
+    },
+    "distinctPixelHashes": 24,
+    "artworkAcceptance": "FAIL",
+    "registrationAcceptance": "FAIL",
+    "nativeGUI": "DEFERRED_GUI",
+    "Windows": "NOT_RUN"
+  }
+}
