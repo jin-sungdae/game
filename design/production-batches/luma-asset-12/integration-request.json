@@ -1,0 +1,1633 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "baseline": "509269b",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "failedCandidatesPreserved": true,
+  "creatures": [
+    {
+      "conceptId": "M041",
+      "basePath": "design/production-batches/monsters/batch05/M041/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M041",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 1
+        },
+        "observedForm": "ice stag",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "gentle"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "brief inspections between long rests; attention centers on the ice habitat of the ice stag",
+          "preparation": "tilt toward the stimulus before leaving rest; preserve the ice stag silhouette",
+          "transition": "ease into rest after the excursion; recover the ice stag resting anatomy",
+          "reaction": "observe a nearby cursor without chasing it; keep the ice stag characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M041:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the ice stag silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 6,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "automated": "PASS",
+            "naturalMotion": "NOT_VERIFIED"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 6
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/breath",
+          "frameCount": 16
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/blink",
+          "frameCount": 8
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "반대 시점 신체·판·꼬리 가림 keypose 필요. 단순 좌우 반전으로 대체하지 않음."
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "몸통을 낮추는 관절 keypose와 접지 검증 필요."
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/cursor_react",
+          "frameCount": 16
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/interact",
+          "frameCount": 16
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 8,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+            "automated": "PASS",
+            "candidatePath": "design/production-batches/action-followup/M041/hit-pilot",
+            "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 8
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M042",
+      "basePath": "design/production-batches/monsters/batch05/M042/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M042",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 2
+        },
+        "observedForm": "ice fox",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "curious"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "frequent short excursions with observation pauses; attention centers on the ice habitat of the ice fox",
+          "preparation": "scan both sides before committing direction; preserve the ice fox silhouette",
+          "transition": "insert a look-around beat between movement and rest; recover the ice fox resting anatomy",
+          "reaction": "approach once then respect personal space; keep the ice fox characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M042:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the ice fox silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 6,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "automated": "PASS",
+            "naturalMotion": "NOT_VERIFIED"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 6
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/breath",
+          "frameCount": 16
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/blink",
+          "frameCount": 8
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "반대 시점 신체·판·꼬리 가림 keypose 필요. 단순 좌우 반전으로 대체하지 않음."
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "VALIDATION_FAILED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "automated": "VALIDATION_FAILED",
+            "candidatePath": "design/production-batches/action-followup/M042/rest-pilot",
+            "blockReason": "Raw source detached Alpha 517 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+            "recoveryPath": "design/production-batches/action-followup/M042/rest-pilot/keypose-tool-reference.png"
+          },
+          "status": "BLOCKED",
+          "reason": "Raw source detached Alpha 517 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/cursor_react",
+          "frameCount": 16
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/interact",
+          "frameCount": 16
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/hit",
+          "frameCount": 16
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M043",
+      "basePath": "design/production-batches/monsters/batch05/M043/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M043",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 3
+        },
+        "observedForm": "crystal quadruped",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "cautious"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "rare advances after repeated scans; attention centers on the ice habitat of the crystal quadruped",
+          "preparation": "lower the body before starting; preserve the crystal quadruped silhouette",
+          "transition": "settle the body before returning to idle; recover the crystal quadruped resting anatomy",
+          "reaction": "retreat slightly then resume watching; keep the crystal quadruped characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M043:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the crystal quadruped silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "생성 IDLE: 분리 Alpha·경계 접촉·크기·접지 및 외형 연속성 실패",
+          "candidatePath": "design/production-batches/luma-asset-12/M043/idle",
+          "frameCount": 8
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "단단한 얼음 판 전용 관절/분리 레이어 필요. 연성 호흡 변형 금지."
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "candidatePath": "design/production-batches/luma-asset-12/M043/blink",
+          "frameCount": 8,
+          "reason": "시각 확인: 눈 리그 좌표가 눈 폐쇄를 충분히 표현하지 못함. 3/3 이후 수정하지 않음."
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "VALIDATION_FAILED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "automated": "VALIDATION_FAILED",
+            "candidatePath": "design/production-batches/action-followup/M043/turn-pilot",
+            "recoveryPath": "design/production-batches/action-followup/M043/turn-pilot/keypose-tool-reference.png",
+            "blockReason": "Raw source detached Alpha 2032 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+          },
+          "status": "BLOCKED",
+          "reason": "Raw source detached Alpha 2032 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "몸통을 낮추는 관절 keypose와 접지 검증 필요."
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "단단한 얼음 판 전용 관절/분리 레이어 필요. 연성 호흡 변형 금지."
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "단단한 얼음 판 전용 관절/분리 레이어 필요. 연성 호흡 변형 금지."
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "독립 충격 자세 및 지지 다리 관절 keypose 필요."
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M044",
+      "basePath": "design/production-batches/monsters/batch05/M044/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M044",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 4
+        },
+        "observedForm": "frost dragon",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "patient"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "FLYING"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "long pauses interrupted by deliberate steps; attention centers on the ice habitat of the frost dragon",
+          "preparation": "shift weight before advancing; preserve the frost dragon silhouette",
+          "transition": "complete weight transfer before changing action; recover the frost dragon resting anatomy",
+          "reaction": "turn slowly toward interaction without displacement; keep the frost dragon characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M044:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the frost dragon silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 6,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "automated": "PASS",
+            "naturalMotion": "NOT_VERIFIED"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 6
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/breath",
+          "frameCount": 16
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/blink",
+          "frameCount": 8,
+          "reason": "시각 확인: 눈 리그 좌표가 눈 폐쇄를 충분히 표현하지 못함. 3/3 이후 수정하지 않음."
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "반대 시점 신체·판·꼬리 가림 keypose 필요. 단순 좌우 반전으로 대체하지 않음."
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "몸통을 낮추는 관절 keypose와 접지 검증 필요."
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/cursor_react",
+          "frameCount": 16
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/interact",
+          "frameCount": 16,
+          "reason": "시각 확인: 눈 리그 좌표가 눈 폐쇄를 충분히 표현하지 못함. 3/3 이후 수정하지 않음."
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/hit",
+          "frameCount": 16
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M045",
+      "basePath": "design/production-batches/monsters/batch05/M045/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M045",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 5
+        },
+        "observedForm": "snow cat",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "proud"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "short activity after a stable idle period; attention centers on the ice habitat of the snow cat",
+          "preparation": "hold the silhouette still before a small start; preserve the snow cat silhouette",
+          "transition": "hold the terminal pose before relaxing; recover the snow cat resting anatomy",
+          "reaction": "hold position and answer with a small gesture; keep the snow cat characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M045:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the snow cat silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 6,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "automated": "PASS",
+            "naturalMotion": "NOT_VERIFIED"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 6
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/breath",
+          "frameCount": 16
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/blink",
+          "frameCount": 8
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "반대 시점 신체·판·꼬리 가림 keypose 필요. 단순 좌우 반전으로 대체하지 않음."
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "몸통을 낮추는 관절 keypose와 접지 검증 필요."
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/cursor_react",
+          "frameCount": 16
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/interact",
+          "frameCount": 16
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 8,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+            "automated": "PASS",
+            "candidatePath": "design/production-batches/action-followup/M045/hit-pilot",
+            "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 8
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    }
+  ],
+  "integrationRequests": [
+    {
+      "target": "design/creature-production-queue.json",
+      "request": "후보의 실제 검증·차단 상태와 마지막 검증 commit을 통합 담당자가 반영. 기존 실패와 승인 상태 유지. 신규 후보는 완료 행동으로 세지 않음."
+    },
+    {
+      "target": "tests/live/creature-review/catalog.json",
+      "request": "세션 전용 경로의 candidate-clip 및 M043 실패 IDLE을 기존 Review Catalog에 추가. build_creature_review --refresh-inventory --refresh-coverage는 공유 파일 쓰기이므로 이 Track에서는 미실행."
+    },
+    {
+      "target": "Animation Manifest / Production Registry / Runtime",
+      "request": "사람의 외형·자연스러움·Species Identity·이벤트 계약 승인 이후 별도 통합. 현재 활성화 금지."
+    },
+    {
+      "target": "M044 movement contract",
+      "request": "카탈로그 FLYING 제안과 날개 없는 BASE를 조정. 날개 임의 추가 금지."
+    }
+  ],
+  "nativeGui": "DEFERRED_GUI",
+  "productionReady": false,
+  "runtimeConnected": false,
+  "nextAction": "검증 결과 확인 후 통합 담당자의 Catalog 등록 및 사람 검수. 차단된 관절/자세 작업은 승인된 분리 원화 및 계약 필요."
+}

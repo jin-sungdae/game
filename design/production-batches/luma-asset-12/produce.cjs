@@ -8,6 +8,7 @@ const root = __dirname;
 const repository = path.resolve(root, '../../..');
 const configs = JSON.parse(fs.readFileSync(path.join(root, 'rig-config.json')));
 const hash = data => crypto.createHash('sha256').update(data).digest('hex');
+const impact=[0,.65,1,.81,.59,.38,.21,.09,.025,0];
 const envelope = [0, .10, .35, .72, 1, .91, .70, .43, .20, .07, .015, 0];
 const blink = [0, .16, .6, 1, .88, .37, .08, 0];
 function eyeFrame(data, eyes, amount) {
@@ -62,9 +63,11 @@ function partFrame(data, parts, amounts) {
   const source=path.join(repository,config.source);
   const {data,info}=await sharp(source).raw().toBuffer({resolveWithObject:true});
   if(info.width!==256||info.height!==256||info.channels!==4)throw Error('Invalid BASE '+code);
-  const actions=['BLINK'];
-  if(config.breathRig)actions.unshift('BREATH');
-  if(config.gesture.length)actions.push('CURSOR_REACT','INTERACT');
+  const hitOnly=process.argv.includes('--hit');
+  if(hitOnly && !['M042','M044'].includes(code))continue;
+  const actions=hitOnly?['HIT']:['BLINK'];
+  if(!hitOnly && config.breathRig)actions.unshift('BREATH');
+  if(!hitOnly && config.gesture.length)actions.push('CURSOR_REACT','INTERACT');
   for(const action of actions) {
    const dir=path.join(root,code,action.toLowerCase());
    // A rerun must never silently repair or replace a candidate.
@@ -72,12 +75,12 @@ function partFrame(data, parts, amounts) {
    fs.mkdirSync(dir,{recursive:true});
    const breath=action==='BREATH',eyes=action==='BLINK'||action==='INTERACT';
    const parts=breath?JSON.parse(fs.readFileSync(path.join(repository,config.breathRig))).parts:
-     action==='CURSOR_REACT'?config.gesture:action==='INTERACT'?config.acknowledge:[];
+     action==='HIT'?config.hit:action==='CURSOR_REACT'?config.gesture:action==='INTERACT'?config.acknowledge:[];
    const count=action==='BLINK'?8:16;
    const frames=[];
    for(let i=0;i<count;i++) {
     const amounts=parts.map(p=>breath?(1-Math.cos(i*2*Math.PI/count+(p.phase||0)))/2*1.45:
-      envelope[i-(p.delay||0)]||0);
+      (action==='HIT'?impact:envelope)[i-(p.delay||0)]||0);
     let output=partFrame(data,parts,amounts);
     const closure=action==='BLINK'?blink[i]:action==='INTERACT'?(blink[i-3]||0)*.85:0;
     if(eyes)output=eyeFrame(output,config.eyes,closure);
@@ -94,7 +97,7 @@ function partFrame(data, parts, amounts) {
     repairIterations:3,repairLimit:3,attempt:'INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR',
     productionEligible:false,runtimeEnabled:false,artworkReview:'HUMAN_REVIEW_REQUIRED',
     naturalMotion:'MANUAL_REQUIRED',gui:'NOT_VERIFIED',
-    scope:action==='CURSOR_REACT'?'Stationary attention gesture only; cursor tracking/approach not implemented':
+    scope:action==='HIT'?'Local shoulder recoil and delayed flank/tail response; planted feet and face fixed. No combat/runtime connection':action==='CURSOR_REACT'?'Stationary attention gesture only; cursor tracking/approach not implemented':
       action==='INTERACT'?'Stationary acknowledgement with delayed blink and local body gesture; no gameplay effect':
       breath?'Local ribcage/shoulder cycle; original face, limbs and silhouette landmarks protected':'Local eyelid closure; rigid plates and all non-eye pixels fixed'};
    fs.writeFileSync(path.join(dir,'candidate-clip.json'),JSON.stringify(clip,null,2)+'\n');

@@ -127,7 +127,39 @@
     ],
     "timing": 110,
     "source": "design/production-batches/monsters/batch05/M042/base-v2.png",
-    "breathRig": "design/production-batches/monsters/batch05/M042/rig-evidence.json"
+    "breathRig": "design/production-batches/monsters/batch05/M042/rig-evidence.json",
+    "hit": [
+      {
+        "name": "fox-shoulder-recoil",
+        "x": 151,
+        "y": 164,
+        "rx": 15,
+        "ry": 15,
+        "dx": -1.8,
+        "dy": 1,
+        "delay": 0
+      },
+      {
+        "name": "fox-flank-response",
+        "x": 119,
+        "y": 171,
+        "rx": 17,
+        "ry": 13,
+        "dx": -1.1,
+        "dy": 0.6,
+        "delay": 1
+      },
+      {
+        "name": "fox-tail-counterbalance",
+        "x": 77,
+        "y": 145,
+        "rx": 16,
+        "ry": 20,
+        "dx": 1.2,
+        "dy": -0.7,
+        "delay": 2
+      }
+    ]
   },
   "M043": {
     "eyes": [
@@ -199,7 +231,39 @@
     ],
     "timing": 220,
     "source": "design/production-batches/monsters/batch05/M044/base-v2.png",
-    "breathRig": "design/production-batches/monsters/batch05/M044/rig-evidence.json"
+    "breathRig": "design/production-batches/monsters/batch05/M044/rig-evidence.json",
+    "hit": [
+      {
+        "name": "dragon-shoulder-recoil",
+        "x": 175,
+        "y": 151,
+        "rx": 14,
+        "ry": 20,
+        "dx": -1.8,
+        "dy": 1.2,
+        "delay": 0
+      },
+      {
+        "name": "dragon-flank-follow",
+        "x": 135,
+        "y": 158,
+        "rx": 19,
+        "ry": 17,
+        "dx": -1,
+        "dy": 0.6,
+        "delay": 2
+      },
+      {
+        "name": "dragon-tail-counterbalance",
+        "x": 56,
+        "y": 171,
+        "rx": 18,
+        "ry": 17,
+        "dx": 1.1,
+        "dy": -0.8,
+        "delay": 3
+      }
+    ]
   },
   "M045": {
     "eyes": [
