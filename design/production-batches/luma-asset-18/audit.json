@@ -1645,5 +1645,26 @@
     "Only after artwork/motion/identity approval may integration owner change Animation Manifest, Production Registry or Runtime."
   ],
   "nextResume": "After approved rigid layers are supplied, first attempt M071 IDLE mechanical settling; then M073 IDLE. Keep exhausted HIT/TURN failures untouched. Reassess all remaining actions independently.",
-  "completion": "No animation completed; Draft PR is a blocked handoff, not creature completion"
+  "completion": "No animation completed; Draft PR is a blocked handoff, not creature completion",
+  "validationEvidence": {
+    "sourceAudit": "5/5 BASE PNG checks pass; 105 action records verified after worktree restoration",
+    "animationRegression": {
+      "status": "PASS",
+      "tests": 236,
+      "source": "/tmp/luma-asset18-animation.log"
+    },
+    "initialAssetTests": {
+      "status": "INVALIDATED_ENVIRONMENT_INTERRUPTION",
+      "tests": 214,
+      "failures": 29,
+      "errors": 298,
+      "reason": "Worktree disappeared during startup-cleanup; cannot classify these results as asset regressions"
+    },
+    "releaseGate": {
+      "status": "RUNNING",
+      "path": "/tmp/luma-asset18-release2",
+      "previousRun": "INVALIDATED_ENVIRONMENT_INTERRUPTION"
+    },
+    "gui": "DEFERRED_GUI"
+  }
 }
