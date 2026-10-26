@@ -1,0 +1,146 @@
+{
+  "sessionId": "LUMA-ASSET-06",
+  "automated": "PASS",
+  "errors": [],
+  "frames": [
+    {
+      "file": "blink_00.png",
+      "errors": [],
+      "bounds": [
+        30,
+        17,
+        232,
+        237
+      ],
+      "pixelHash": "9762a487d9a0aa32e7e1a775a2d9f7fbd40cb63d2a6e874ff4912c9c29ad120c",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.0006103515625
+    },
+    {
+      "file": "blink_01.png",
+      "errors": [],
+      "bounds": [
+        30,
+        17,
+        232,
+        237
+      ],
+      "pixelHash": "bea65e4d5ff4fdbae569bc724faf12a7a9e140587638f29396e27e9a9812426f",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.013980865478515625
+    },
+    {
+      "file": "blink_02.png",
+      "errors": [],
+      "bounds": [
+        30,
+        17,
+        232,
+        237
+      ],
+      "pixelHash": "0a51f2e2c93330c1450775704d5302f942ef14eee868c31889e6ead731216794",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.03664398193359375
+    },
+    {
+      "file": "blink_03.png",
+      "errors": [],
+      "bounds": [
+        30,
+        17,
+        232,
+        237
+      ],
+      "pixelHash": "792f421dcb49d32753d232b60ad07097e5911f4f39f38c2714354a3b04020fd9",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.06689071655273438
+    },
+    {
+      "file": "blink_04.png",
+      "errors": [],
+      "bounds": [
+        30,
+        17,
+        232,
+        237
+      ],
+      "pixelHash": "621f5a510c1bb288c6c6124afea29fedd8e8f43467ae75f9a8cda607f2817190",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.04924774169921875
+    },
+    {
+      "file": "blink_05.png",
+      "errors": [],
+      "bounds": [
+        30,
+        17,
+        232,
+        237
+      ],
+      "pixelHash": "146d8bb518815f828e8e3c1bd76a9c26d00d103e2581ee22206646adde4fec20",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.026763916015625
+    },
+    {
+      "file": "blink_06.png",
+      "errors": [],
+      "bounds": [
+        30,
+        17,
+        232,
+        237
+      ],
+      "pixelHash": "27ceb176a0d1b468e3d73e6d2ae4dc19be4564727215db0d8767cb832fd17c1f",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.006305694580078125
+    },
+    {
+      "file": "blink_07.png",
+      "errors": [],
+      "bounds": [
+        30,
+        17,
+        232,
+        237
+      ],
+      "pixelHash": "83be6d26574bf303a58d5326d785c824a0d02045f0a45a42659fd33605f3f476",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.001285552978515625
+    }
+  ],
+  "uniquePixelHashes": 8,
+  "adjacentMeanAbsoluteByteDifferences": [
+    0.013370513916015625,
+    0.024394989013671875,
+    0.039974212646484375,
+    0.021038055419921875,
+    0.03240203857421875,
+    0.020526885986328125,
+    0.0050201416015625
+  ],
+  "maxEndpointDifferenceFromBase": 0.001285552978515625,
+  "continuityScope": "Quantitative <=2 byte mean adjacent delta, <=0.15 endpoint delta; visual acceptance separate",
+  "appearance": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "productionEligible": false,
+  "nativeGui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "sourceSha256": "ea54d8e3a228986dedb7b46a46ae0efd095fad4e35c2fbdb0e4cc5e07869a755"
+}

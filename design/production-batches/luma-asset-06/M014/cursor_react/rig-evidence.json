@@ -1,0 +1,135 @@
+{
+  "reference": "design/production-batches/monsters/batch02/M014/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "patient-wing-root-brace",
+      "x": 113,
+      "y": 110,
+      "rx": 31,
+      "ry": 28,
+      "dx": 0.69,
+      "dy": -0.72,
+      "samples": [
+        0.03,
+        0.48,
+        1,
+        0.78,
+        0.62,
+        0.46,
+        0.22,
+        0.05
+      ]
+    },
+    {
+      "name": "lower-neck-recoil",
+      "x": 177,
+      "y": 134,
+      "rx": 22,
+      "ry": 36,
+      "dx": 0.54,
+      "dy": -0.6,
+      "samples": [
+        0.01,
+        0.1,
+        0.35,
+        0.72,
+        1,
+        0.75,
+        0.34,
+        0.07
+      ]
+    },
+    {
+      "name": "flank-release",
+      "x": 139,
+      "y": 170,
+      "rx": 25,
+      "ry": 19,
+      "dx": 0.3,
+      "dy": -0.36,
+      "samples": [
+        0.01,
+        0.1,
+        0.35,
+        0.72,
+        1,
+        0.75,
+        0.34,
+        0.07
+      ]
+    }
+  ],
+  "protectedRegions": "y>=202||y<=126||x<=56||x>=207",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "pixelSha256": "1c908e67abbcd9709e85ece1e539b305db4750309c2bff2d9fd003eb79fec90f",
+      "changedPixels": 957,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 191,
+      "maxInverseDisplacementPixels": 0.029917292819825032
+    },
+    {
+      "file": "cursor_react_01.png",
+      "pixelSha256": "57c771e27aa7a3ca51c2dce9dd2b2a813fe5e3f18ce12143587b1fd369523c27",
+      "changedPixels": 2884,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 787,
+      "maxInverseDisplacementPixels": 0.47829620156080316
+    },
+    {
+      "file": "cursor_react_02.png",
+      "pixelSha256": "356682ccfa897bc150c1ca283dc2544487987bbce877541631588b210acc3539",
+      "changedPixels": 3753,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1104,
+      "maxInverseDisplacementPixels": 0.9966462526632986
+    },
+    {
+      "file": "cursor_react_03.png",
+      "pixelSha256": "a318a29b68a999dc6868ee1ae2dac796ed318c741ca20e83d4462da640305fec",
+      "changedPixels": 4055,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1203,
+      "maxInverseDisplacementPixels": 0.7767588847481693
+    },
+    {
+      "file": "cursor_react_04.png",
+      "pixelSha256": "3a214b03b0d75fdd752b264f775e43617658d55b859078b58388d392dfbcc70d",
+      "changedPixels": 4148,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1230,
+      "maxInverseDisplacementPixels": 0.8058548019260392
+    },
+    {
+      "file": "cursor_react_05.png",
+      "pixelSha256": "1c6143b6326923c860b1cba08be1b2c1502a336cd505bbfca01fa37d4198ad51",
+      "changedPixels": 3953,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1119,
+      "maxInverseDisplacementPixels": 0.6045168840844269
+    },
+    {
+      "file": "cursor_react_06.png",
+      "pixelSha256": "db97e29e1231de4ab7855667b3cfbd77d491693084db345f25b56935dd4b4405",
+      "changedPixels": 3378,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 830,
+      "maxInverseDisplacementPixels": 0.2743702067638029
+    },
+    {
+      "file": "cursor_react_07.png",
+      "pixelSha256": "4296819ad8d4c35495c4131131beae83d0941b09201b7951e1490a2243b5b495",
+      "changedPixels": 1962,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 461,
+      "maxInverseDisplacementPixels": 0.05650448985466489
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-06 independent first attempt; inherited failed candidates at 3/3 untouched; no automatic repair permitted",
+  "productionEligible": false
+}

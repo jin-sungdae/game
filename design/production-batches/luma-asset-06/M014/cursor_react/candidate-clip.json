@@ -1,0 +1,97 @@
+{
+  "sessionId": "LUMA-ASSET-06",
+  "conceptId": "M014",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M014/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 120,
+    "loop": false
+  },
+  "movableRect": [
+    64,
+    79,
+    213,
+    204
+  ],
+  "parts": [
+    {
+      "name": "patient-wing-root-brace",
+      "x": 113,
+      "y": 110,
+      "rx": 31,
+      "ry": 28,
+      "dx": 0.69,
+      "dy": -0.72,
+      "samples": [
+        0.03,
+        0.48,
+        1,
+        0.78,
+        0.62,
+        0.46,
+        0.22,
+        0.05
+      ]
+    },
+    {
+      "name": "lower-neck-recoil",
+      "x": 177,
+      "y": 134,
+      "rx": 22,
+      "ry": 36,
+      "dx": 0.54,
+      "dy": -0.6,
+      "samples": [
+        0.01,
+        0.1,
+        0.35,
+        0.72,
+        1,
+        0.75,
+        0.34,
+        0.07
+      ]
+    },
+    {
+      "name": "flank-release",
+      "x": 139,
+      "y": 170,
+      "rx": 25,
+      "ry": 19,
+      "dx": 0.3,
+      "dy": -0.36,
+      "samples": [
+        0.01,
+        0.1,
+        0.35,
+        0.72,
+        1,
+        0.75,
+        0.34,
+        0.07
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "기존 실패 후보 복구 없음. 독립 신규 후보 최초 제작만 수행. 추가 자동 수정 금지.",
+  "anatomyScope": "기존 BASE의 국소 부위 반응. 얼굴, 발, 외곽 bounds 고정. 이동/회전/새 자세/서버 이벤트 구현 아님.",
+  "identityReview": "HUMAN_REVIEW_REQUIRED",
+  "identityConflict": null
+}
