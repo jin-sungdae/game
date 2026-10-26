@@ -1,0 +1,117 @@
+{
+  "status": "VALIDATION_FAILED",
+  "sourceSha256": "78e4d29bb103475a5d641c4e422b914b0abba99cf1f6ee848d1ef21fa8125d00",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 1254,
+    "height": 1254,
+    "mainPixels": 537999,
+    "mainBounds": [
+      95,
+      130,
+      1212,
+      1126
+    ],
+    "detachedPixels": 1554,
+    "detachedComponents": 296,
+    "detachedAlphaHistogram": {
+      "1": 1554
+    },
+    "largestDetached": [
+      {
+        "n": 208,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          497,
+          1201,
+          518,
+          1219
+        ]
+      },
+      {
+        "n": 181,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1162,
+          771,
+          1189,
+          787
+        ]
+      },
+      {
+        "n": 110,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          980,
+          994,
+          994,
+          1009
+        ]
+      },
+      {
+        "n": 101,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          871,
+          240,
+          883,
+          256
+        ]
+      },
+      {
+        "n": 93,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          738,
+          130,
+          751,
+          144
+        ]
+      },
+      {
+        "n": 61,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          1222,
+          787,
+          1231,
+          796
+        ]
+      },
+      {
+        "n": 48,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          520,
+          1195,
+          532,
+          1205
+        ]
+      },
+      {
+        "n": 36,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          55,
+          864,
+          57,
+          883
+        ]
+      }
+    ]
+  },
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED"
+}
