@@ -1,0 +1,81 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M064",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M064/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "PROPOSED_UNAPPROVED; measured bounds registration only",
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 8,
+    "frameDuration": 220,
+    "loop": true
+  },
+  "movableRect": [
+    82,
+    139,
+    216,
+    196
+  ],
+  "parts": [
+    {
+      "name": "near-claw-flex",
+      "x": 149,
+      "y": 175,
+      "rx": 22,
+      "ry": 20,
+      "dx": 1,
+      "dy": -0.8,
+      "samples": [
+        0.08,
+        0.32,
+        0.68,
+        1,
+        0.78,
+        0.46,
+        0.19,
+        0.04
+      ]
+    },
+    {
+      "name": "far-claw-flex",
+      "x": 199,
+      "y": 165,
+      "rx": 15,
+      "ry": 24,
+      "dx": -0.8,
+      "dy": -0.6,
+      "samples": [
+        0.55,
+        0.84,
+        1,
+        0.72,
+        0.38,
+        0.1,
+        0.03,
+        0.24
+      ]
+    }
+  ],
+  "anatomyScope": "Purple shelled crab: rigid shell, eyes, antennae and ground contact protected. Adapt existing inverse sampler to separate near/far claw weights; patient GROUND proposal only. Never uses failed ATTACK source.",
+  "motion": "Small independent claw articulation with delayed far claw, shell and stance fixed.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "wholeImageTransform": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Inherited limit preserved; independent candidate first attempt, no failed asset repair"
+}

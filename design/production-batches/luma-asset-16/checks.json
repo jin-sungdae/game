@@ -1,0 +1,27 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "candidateValidation": {
+    "status": "FAIL",
+    "passingClips": 10,
+    "failedClips": 3,
+    "newPng": 104,
+    "newClips": 13
+  },
+  "assetTests": {
+    "status": "RUNNING",
+    "log": "/tmp/luma-asset-16-assets.log"
+  },
+  "animationRegression": {
+    "status": "PASS",
+    "tests": 236,
+    "failed": 0,
+    "logSha256": "89a611b4f3788d3b4842b31d81d3942052d2b27e13bff740c8c68d0f002e88b3"
+  },
+  "releaseGate": {
+    "status": "RUNNING",
+    "log": "/tmp/luma-asset-16-release.log"
+  },
+  "production": "NOT_APPROVED",
+  "runtime": "NOT_CONNECTED",
+  "gui": "DEFERRED_GUI"
+}

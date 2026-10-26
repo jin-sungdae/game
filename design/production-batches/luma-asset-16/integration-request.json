@@ -1,0 +1,969 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "baseCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "scope": "Session inspection and Integration Request; NOT a replacement Completion Ledger",
+  "creatures": [
+    {
+      "conceptId": "M061",
+      "basePath": "design/production-batches/monsters/batch07/M061/base-v2.png",
+      "baseSha256": "3238b7778c418ec293124c179bde059befaf62940a4ac45bc178e6428e130911",
+      "baseStatus": "BASE_CANDIDATE",
+      "speciesIdentity": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "gentle"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "FLOATING"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "brief inspections between long rests; attention centers on the water habitat of the blue jellyfish",
+        "preparation": "tilt toward the stimulus before leaving rest; preserve the blue jellyfish silhouette",
+        "transition": "ease into rest after the excursion; recover the blue jellyfish resting anatomy",
+        "reaction": "observe a nearby cursor without chasing it; keep the blue jellyfish characteristic gesture"
+      },
+      "ledgerContractStatus": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M061/idle-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Dedicated bell compression / gill or abdomen cycle is not present in reused rigs; do not substitute tentacle/claw sway for respiration."
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "No separated eyelid/eye-occlusion part or approved closed-eye keypose; preserve existing face."
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "No isolated gaze/head rig; thorax or tentacle motion is not evidence of eye direction."
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Dedicated propulsion/gait and body trajectory rig required; no global image translation substitute."
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Alternate-facing anatomy and occlusion keyposes required; no mirror/global rotation substitute."
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M061/rest-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Closed-eye and resting anatomy keypose required; REST easing is not sleep."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M061/cursor_react-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ANIMATION_IN_PROGRESS",
+          "previousFrameCount": 8,
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "path": "design/production-batches/action-followup/M061/interact-pilot",
+          "reason": "Existing candidate awaiting artwork/natural-motion approval; not regenerated."
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Dedicated attack anticipation/contact/recovery keyposes required; no relabeled greeting or HIT."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Species signature/server contract unresolved; no invented skill effects."
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M061/hit-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Distinct expressive success pose required; do not relabel interaction."
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Distinct defeated terminal pose and anatomy required; do not relabel REST/HIT."
+        }
+      ],
+      "conditionalActions": [
+        {
+          "action": "JUMP",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "HOVER requires dedicated propulsion and movement approval; IDLE is not HOVER."
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "CHARGE requires approved battle/skill anticipation contract."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "RECOVERY must join an approved preceding action and resting pose; standalone HIT tail easing is not a complete recovery clip."
+        }
+      ]
+    },
+    {
+      "conceptId": "M062",
+      "basePath": "design/production-batches/monsters/batch07/M062/base-v2.png",
+      "baseSha256": "8f821168fd0fa322952d5269bbb6d9ad7cfd5e246611907018a23f3c111da0e2",
+      "baseStatus": "BASE_CANDIDATE",
+      "speciesIdentity": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "curious"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "FLOATING"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "frequent short excursions with observation pauses; attention centers on the water habitat of the coral seahorse",
+        "preparation": "scan both sides before committing direction; preserve the coral seahorse silhouette",
+        "transition": "insert a look-around beat between movement and rest; recover the coral seahorse resting anatomy",
+        "reaction": "approach once then respect personal space; keep the coral seahorse characteristic gesture"
+      },
+      "ledgerContractStatus": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_VALIDATION_FAILED",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M062/idle-candidate",
+          "errors": [
+            "idle_01.png: DETACHED_ALPHA:1",
+            "idle_03.png: DETACHED_ALPHA:1"
+          ],
+          "productionApproved": false
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Dedicated bell compression / gill or abdomen cycle is not present in reused rigs; do not substitute tentacle/claw sway for respiration."
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "No separated eyelid/eye-occlusion part or approved closed-eye keypose; preserve existing face."
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "No isolated gaze/head rig; thorax or tentacle motion is not evidence of eye direction."
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Dedicated propulsion/gait and body trajectory rig required; no global image translation substitute."
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Alternate-facing anatomy and occlusion keyposes required; no mirror/global rotation substitute."
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M062/rest-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Closed-eye and resting anatomy keypose required; REST easing is not sleep."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_VALIDATION_FAILED",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M062/cursor_react-candidate",
+          "errors": [
+            "cursor_react_04.png: DETACHED_ALPHA:1"
+          ],
+          "productionApproved": false
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_VALIDATION_FAILED",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M062/interact-candidate",
+          "errors": [
+            "interact_05.png: DETACHED_ALPHA:1"
+          ],
+          "productionApproved": false
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Dedicated attack anticipation/contact/recovery keyposes required; no relabeled greeting or HIT."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Species signature/server contract unresolved; no invented skill effects."
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ANIMATION_IN_PROGRESS",
+          "previousFrameCount": 8,
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "path": "design/production-batches/action-followup/M062/hit-pilot",
+          "reason": "Existing candidate awaiting artwork/natural-motion approval; not regenerated."
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Distinct expressive success pose required; do not relabel interaction."
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Distinct defeated terminal pose and anatomy required; do not relabel REST/HIT."
+        }
+      ],
+      "conditionalActions": [
+        {
+          "action": "JUMP",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "HOVER requires dedicated propulsion and movement approval; IDLE is not HOVER."
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "CHARGE requires approved battle/skill anticipation contract."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "RECOVERY must join an approved preceding action and resting pose; standalone HIT tail easing is not a complete recovery clip."
+        }
+      ]
+    },
+    {
+      "conceptId": "M063",
+      "basePath": "design/production-batches/monsters/batch07/M063/base-v2.png",
+      "baseSha256": "a36b765263317f525eb066e7a7c2c4515252a879d3d7427b08e441043c81166b",
+      "baseStatus": "BASE_CANDIDATE",
+      "speciesIdentity": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "cautious"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "FREE_2D"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "rare advances after repeated scans; attention centers on the water habitat of the round blue ray",
+        "preparation": "lower the body before starting; preserve the round blue ray silhouette",
+        "transition": "settle the body before returning to idle; recover the round blue ray resting anatomy",
+        "reaction": "retreat slightly then resume watching; keep the round blue ray characteristic gesture"
+      },
+      "ledgerContractStatus": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED"
+        }
+      ],
+      "conditionalActions": [
+        {
+          "action": "JUMP",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "HOVER requires dedicated propulsion and movement approval; IDLE is not HOVER."
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "CHARGE requires approved battle/skill anticipation contract."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "RECOVERY must join an approved preceding action and resting pose; standalone HIT tail easing is not a complete recovery clip."
+        }
+      ]
+    },
+    {
+      "conceptId": "M064",
+      "basePath": "design/production-batches/monsters/batch07/M064/base-v2.png",
+      "baseSha256": "c63604e1ec3a9bcbb79055b6e2ddde2fc7e20b0f2237f79b529425cf358a7d46",
+      "baseStatus": "BASE_CANDIDATE",
+      "speciesIdentity": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "patient"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "GROUND"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "long pauses interrupted by deliberate steps; attention centers on the water habitat of the purple shell creature",
+        "preparation": "shift weight before advancing; preserve the purple shell creature silhouette",
+        "transition": "complete weight transfer before changing action; recover the purple shell creature resting anatomy",
+        "reaction": "turn slowly toward interaction without displacement; keep the purple shell creature characteristic gesture"
+      },
+      "ledgerContractStatus": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M064/idle-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Dedicated bell compression / gill or abdomen cycle is not present in reused rigs; do not substitute tentacle/claw sway for respiration."
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "No separated eyelid/eye-occlusion part or approved closed-eye keypose; preserve existing face."
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "No isolated gaze/head rig; thorax or tentacle motion is not evidence of eye direction."
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Dedicated propulsion/gait and body trajectory rig required; no global image translation substitute."
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Alternate-facing anatomy and occlusion keyposes required; no mirror/global rotation substitute."
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M064/rest-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Closed-eye and resting anatomy keypose required; REST easing is not sleep."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M064/cursor_react-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M064/interact-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "VALIDATION_FAILED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_REPAIR_LIMIT",
+          "reason": "Raw source detached Alpha 967 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "path": "design/production-batches/action-followup/M064/attack-pilot"
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Species signature/server contract unresolved; no invented skill effects."
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "frames": 8,
+          "path": "design/production-batches/luma-asset-16/M064/hit-candidate",
+          "errors": [],
+          "productionApproved": false
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Distinct expressive success pose required; do not relabel interaction."
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_ADDITIONAL_KEYPOSE_OR_RIG_REQUIRED",
+          "reason": "Distinct defeated terminal pose and anatomy required; do not relabel REST/HIT."
+        }
+      ],
+      "conditionalActions": [
+        {
+          "action": "JUMP",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "HOVER requires dedicated propulsion and movement approval; IDLE is not HOVER."
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "CHARGE requires approved battle/skill anticipation contract."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "RECOVERY must join an approved preceding action and resting pose; standalone HIT tail easing is not a complete recovery clip."
+        }
+      ]
+    },
+    {
+      "conceptId": "M065",
+      "basePath": "design/production-batches/monsters/batch07/M065/base-v2.png",
+      "baseSha256": "4c462ea398cfbfce94185c1f81876d0dea3a3cf9a1cf7ba4e454523f14401a1f",
+      "baseStatus": "BASE_CANDIDATE",
+      "speciesIdentity": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "proud"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "FREE_2D"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "short activity after a stable idle period; attention centers on the water habitat of the long-finned dolphin",
+        "preparation": "hold the silhouette still before a small start; preserve the long-finned dolphin silhouette",
+        "transition": "hold the terminal pose before relaxing; recover the long-finned dolphin resting anatomy",
+        "reaction": "hold position and answer with a small gesture; keep the long-finned dolphin characteristic gesture"
+      },
+      "ledgerContractStatus": {
+        "personality": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "movementProfile": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        },
+        "speciesBehavior": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "previousFrameCount": 0,
+          "status": "BLOCKED_IDENTITY_REVIEW",
+          "reason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED"
+        }
+      ],
+      "conditionalActions": [
+        {
+          "action": "JUMP",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "HOVER requires dedicated propulsion and movement approval; IDLE is not HOVER."
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_TO_CURRENT_PROPOSAL",
+          "reason": "No jump/wing/landing behavior in current aquatic/shell proposal; no new species behavior invented."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "CHARGE requires approved battle/skill anticipation contract."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED_REVIEW_REQUIRED",
+          "reason": "RECOVERY must join an approved preceding action and resting pose; standalone HIT tail easing is not a complete recovery clip."
+        }
+      ]
+    }
+  ],
+  "newPngCount": 104,
+  "newClipCount": 13,
+  "automatedPassingClips": 10,
+  "failedClipsPreserved": 3,
+  "productionAcceptedClips": 0,
+  "runtimeConnected": false,
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "failedCandidateRepairs": 0,
+  "integrationRequests": [
+    {
+      "id": "LUMA-ASSET-16-IR-01",
+      "request": "Use existing build_creature_review.py --refresh-inventory --refresh-coverage after integration to reconcile shared catalog/Completion Ledger; preserve all failure records. Session read-only catalog-review.json is provided.",
+      "status": "PENDING_INTEGRATOR"
+    },
+    {
+      "id": "LUMA-ASSET-16-IR-02",
+      "request": "Resolve M063 ray versus whale BASE and M065 dolphin versus dragon-like BASE identity; approve exact species mapping, Personality, MovementProfile and SpeciesBehavior before further identity-dependent animation.",
+      "status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "id": "LUMA-ASSET-16-IR-03",
+      "request": "Review 10 passing candidate clips for appearance, natural motion and anchor; do not register failed M062 clips or overwrite M064 ATTACK. Preserve repair 3/3.",
+      "status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "id": "LUMA-ASSET-16-IR-04",
+      "request": "Only after explicit Production approval, integrate approved candidate manifests and registry/runtime bindings in a separate integration change; run full release and macOS/Windows GUI acceptance.",
+      "status": "BLOCKED_APPROVAL"
+    }
+  ],
+  "nextResumePoint": "Review M062 detached-alpha failures without repair. For independent production, obtain separated eye/eyelid and bell/gill/abdomen rig or approved keyposes for BLINK/LOOK/BREATH on M061/M062/M064; then movement/turn/sleep/battle terminal poses. M063/M065 require identity resolution. No completed-candidate regeneration."
+}
