@@ -17,6 +17,7 @@ node --test tests/animation/monster-content.cjs
 
 ./node_modules/.bin/tsc src/animation/pilot.ts src/animation/clock.ts src/animation/idle.ts --outDir "$LUMA_ANIMATION_TEST_DIR" --resolveJsonModule --esModuleInterop --module commonjs --target ES2022 --strict --skipLibCheck
 node --test tests/animation/pilot.cjs
+node --test tests/animation/caplet-sleep.cjs
 ./node_modules/.bin/tsc tests/live/animation-clock.tsx --noEmit --resolveJsonModule --esModuleInterop --module ESNext --moduleResolution bundler --target ES2022 --jsx react-jsx --strict --skipLibCheck
 node --test tests/animation/static-registry.cjs
 

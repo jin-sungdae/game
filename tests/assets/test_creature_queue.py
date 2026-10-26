@@ -12,8 +12,9 @@ class CreatureQueueTests(unittest.TestCase):
             self.assertIn('lastValidatedCommit',row)
             self.assertEqual(len({a['action'] for a in row['actions']}),len(row['actions']))
             if row['creatureId'].startswith('M'):
-                self.assertIsNone(row['productionSpeciesId'])
-                self.assertEqual(row['runtimeStatus'],'BLOCKED')
+                self.assertEqual(row['productionSpeciesId'], 'CAPLET' if row['creatureId']=='M005' else None)
+                self.assertEqual(bool(row.get('identityMappingApproved')), row['creatureId']=='M005')
+                self.assertEqual(row['runtimeStatus'],'PARTIAL_PRESENTATION_CONNECTED' if row['creatureId']=='M005' else 'BLOCKED')
             if row['state']=='PRODUCTION_READY':
                 self.assertEqual(row['guiStatus'],'PASS')
                 self.assertTrue(all(a['animationStatus']=='ANIMATION_READY' and a['guiStatus']=='PASS' for a in row['actions']))
