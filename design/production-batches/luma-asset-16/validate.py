@@ -65,7 +65,13 @@ def main():
             support_changes = sum((a[3]>0)!=(b[3]>0) for a,b in zip(base,pixels))
             detached = detached_pixels(pixels)
             if protected: errors.append(f'{path.name}: PROTECTED_REGION_CHANGED')
-            if not alpha_changes or not support_changes: errors.append(f'{path.name}: NO_SILHOUETTE_MOTION')
+            terminal = spec.get('terminalFrame')
+            is_base_return = terminal is not None and i == terminal.get('index')
+            if is_base_return:
+                if i != len(files)-1 or terminal.get('role') != 'EXACT_BASE_RETURN' or pixels != base:
+                    errors.append(f'{path.name}: INVALID_BASE_RETURN')
+            elif not alpha_changes or not support_changes:
+                errors.append(f'{path.name}: NO_SILHOUETTE_MOTION')
             if detached: errors.append(f'{path.name}: DETACHED_ALPHA:{detached}')
             if result['image']['bounds'] != result['referenceImage']['bounds']: errors.append(f'{path.name}: BOUNDS_CHANGED')
             if path.name != f'{name}_{i:02}.png': errors.append('SEQUENCE_ERROR')
@@ -74,7 +80,7 @@ def main():
                            'bounds':result['image']['bounds'],'anchorDrift':result['driftPixels'],
                            'protectedPixelChanges':protected,'alphaChangedPixels':alpha_changes,
                            'silhouetteSupportChangedPixels':support_changes,'detachedAlphaPixels':detached,
-                           'appearanceDelta':delta(base,pixels)})
+                           'appearanceDelta':delta(base,pixels), 'exactBaseReturn':is_base_return and pixels==base})
         if len({f['pixelSha256'] for f in frames}) != len(files): errors.append('DUPLICATE_FRAME')
         edges = [delta(a,b) for a,b in zip(decoded,decoded[1:])]
         if spec['clip']['loop']: edges.append(delta(decoded[-1],decoded[0]))
@@ -83,6 +89,7 @@ def main():
         clips.append({'conceptId':spec['conceptId'],'action':spec['clip']['name'],
                       'automated':'FAIL' if errors else 'PASS','errors':errors,'frames':frames,
                       'continuityEdges':edges,'continuityThreshold':2,
+                      'baseReturn':delta(decoded[-1],base), 'baseEntry':delta(base,decoded[0]),
                       'appearanceDrift':'Protected pixels unchanged; local motion measured; HUMAN_REVIEW_REQUIRED',
                       'naturalMotion':'HUMAN_REVIEW_REQUIRED','anchorApproval':'NOT_APPROVED'})
     result={'sessionId':'LUMA-ASSET-16','clips':clips,'newPngCount':sum(len(c['frames']) for c in clips),
