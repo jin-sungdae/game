@@ -1,0 +1,110 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "conceptId": "M081",
+  "sourceBase": "design/production-batches/monsters/batch09/M081/base-v2.png",
+  "sourceRig": "design/production-batches/luma-asset-20/M085/idle/rig.cjs",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "parts": [
+    {
+      "x": 206,
+      "y": 103,
+      "rx": 31,
+      "ry": 27,
+      "dx": -1.4,
+      "dy": 2.125,
+      "name": "neck-bow",
+      "samples": [
+        0.01,
+        0.2,
+        0.62,
+        1,
+        0.83,
+        0.46,
+        0.14,
+        0
+      ]
+    },
+    {
+      "x": 173,
+      "y": 153,
+      "rx": 21,
+      "ry": 30,
+      "dx": -0.7,
+      "dy": 1.2,
+      "name": "chest-counterbalance",
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0
+      ]
+    },
+    {
+      "x": 65,
+      "y": 148,
+      "rx": 28,
+      "ry": 23,
+      "dx": 1.2,
+      "dy": 0.8,
+      "name": "tail-counterbalance",
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0
+      ]
+    }
+  ],
+  "eyes": [
+    {
+      "x": 216,
+      "y": 99,
+      "rx": 3.8,
+      "ry": 2.6,
+      "angle": 0.75,
+      "skin": [
+        203,
+        99
+      ]
+    }
+  ],
+  "eyeClosureSamples": [
+    0.01,
+    0.2,
+    0.62,
+    1,
+    0.83,
+    0.46,
+    0.14,
+    0
+  ],
+  "clip": {
+    "name": "SLEEP",
+    "frames": 8,
+    "frameDuration": 350,
+    "loop": false
+  },
+  "framesDirectory": "design/production-batches/luma-asset-20/continuation/M081/sleep/rigged/sleep",
+  "intent": "Brief doze-and-wake study: eyelids close with local head bow and appendage relaxation. Not a sustained sleep loop.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "failureRecovery": false
+}
