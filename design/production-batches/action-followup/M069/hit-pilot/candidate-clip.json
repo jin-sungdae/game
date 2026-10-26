@@ -1,0 +1,75 @@
+{
+  "conceptId": "M069",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M069/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    34,
+    115,
+    218,
+    212
+  ],
+  "parts": [
+    {
+      "name": "left-tentacle-recoil",
+      "x": 70,
+      "y": 145,
+      "rx": 27,
+      "ry": 27,
+      "dx": 2.1,
+      "dy": -1.4,
+      "samples": [
+        0.02,
+        1,
+        0.8,
+        0.5,
+        0.3,
+        0.17,
+        0.08,
+        0.025
+      ]
+    },
+    {
+      "name": "right-tentacle-brace",
+      "x": 187,
+      "y": 164,
+      "rx": 25,
+      "ry": 32,
+      "dx": -1.5,
+      "dy": 0.8,
+      "samples": [
+        0.01,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0.045
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Purple jellyfish bell and distal tentacle tips fixed; asymmetric local tentacle flinch and delayed counter reaction. No invented limbs.",
+  "behaviorContract": "Watchful FLOATING proposal; isolated HIT only",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes"
+}
