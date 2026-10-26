@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "stateBranch": "automation/luma-codex-state",
+  "statePath": "execution-state.json",
+  "maxRootAttempts": 3,
+  "maxChainDepth": 3,
+  "maxDailySessions": 4,
+  "maxDailyModelInvocations": 8,
+  "maxGitHubRequests": 800,
+  "maxPatchBytes": 200000,
+  "maxFiles": 12,
+  "maxAnalysisMinutes": 15,
+  "maxImplementationMinutes": 30,
+  "maxTestMinutes": 30,
+  "maxLeaseMinutes": 180,
+  "automaticMerge": false
+}
