@@ -336,6 +336,8 @@ def main():
         selected = None
         reasons = []
         for item in sorted(snapshot['prs'].values(), key=lambda p: p['number']):
+            if args.pr is not None and item['number'] != args.pr:
+                continue
             if item['state'] != 'open' or item.get('ci', {}).get('status') == 'PENDING':
                 continue
             try:

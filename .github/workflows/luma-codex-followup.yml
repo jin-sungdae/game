@@ -11,6 +11,10 @@ on:
         type: choice
         options: [dry-run, implement]
         default: dry-run
+      test_pr:
+        description: 'Optional single pilot PR; implement requires matching LUMA_CODEX_TEST_PR and environment approval'
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -51,9 +55,13 @@ jobs:
         env:
           REQUESTED_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || vars.LUMA_CODEX_MODE || 'dry-run' }}
           ENABLED: ${{ vars.LUMA_CODEX_ENABLED }}
+          EVENT_NAME: ${{ github.event_name }}
+          TEST_PR: ${{ inputs.test_pr }}
+          APPROVED_TEST_PR: ${{ vars.LUMA_CODEX_TEST_PR }}
         run: |
           live=false
           if [[ "$REQUESTED_MODE" == "implement" && "$ENABLED" == "true" ]]; then live=true; fi
+          if [[ "$EVENT_NAME" == "workflow_dispatch" && "$REQUESTED_MODE" == "implement" && "$TEST_PR" =~ ^[1-9][0-9]*$ && "$TEST_PR" == "$APPROVED_TEST_PR" ]]; then live=true; fi
           echo "live=$live" >> "$GITHUB_OUTPUT"
       - name: Existing watcher checkpoint (never trust a PR artifact as authorization)
         env:
@@ -66,8 +74,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           LIVE: ${{ steps.mode.outputs.live }}
+          TEST_PR: ${{ inputs.test_pr }}
         run: |
           args=()
+          if [[ -n "$TEST_PR" ]]; then
+            [[ "$TEST_PR" =~ ^[1-9][0-9]*$ ]] || exit 1
+            args+=(--pr "$TEST_PR")
+          fi
           if [[ "$LIVE" != "true" ]]; then args+=(--dry-run); fi
           python3 controller/scripts/ci/codex_followup.py prepare --repo "$GH_REPO" --snapshot snapshot/state.json --output followup "${args[@]}"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

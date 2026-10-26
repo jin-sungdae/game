@@ -132,6 +132,20 @@ class FollowupTests(unittest.TestCase):
         api=f.API('owner/repo');api.requests=f.POLICY['maxGitHubRequests']
         with self.assertRaisesRegex(ValueError,'API_BUDGET'):api.charge()
 
+    def test_single_pilot_requires_manual_matching_approved_pr(self):
+        workflow=(ROOT/'.github/workflows/luma-codex-followup.yml').read_text()
+        block=workflow.split('      - id: mode\n')[1].split('      - name:',1)[0].split('        run: |\n')[1]
+        script='\n'.join(line[10:] for line in block.splitlines())
+        for event,target,approved,expected in [('workflow_dispatch','123','123','true'),
+                ('workflow_dispatch','124','123','false'),('workflow_run','123','123','false'),
+                ('workflow_dispatch','','','false'),('workflow_dispatch','1;false','1;false','false')]:
+            with self.subTest(event=event,target=target), tempfile.TemporaryDirectory() as directory:
+                output=Path(directory)/'output'
+                env={'PATH':'/usr/bin:/bin','GITHUB_OUTPUT':str(output),'EVENT_NAME':event,
+                     'REQUESTED_MODE':'implement','ENABLED':'false','TEST_PR':target,'APPROVED_TEST_PR':approved}
+                subprocess.run(['bash','-e','-c',script],env=env,check=True)
+                self.assertEqual(output.read_text().strip(),'live='+expected)
+
     def test_workflow_uses_existing_action_and_separates_write_token(self):
         workflow=(ROOT/'.github/workflows/luma-codex-followup.yml').read_text()
         self.assertIn('LUMA PR watch (15 min)',workflow)
@@ -143,6 +157,9 @@ class FollowupTests(unittest.TestCase):
             body=re.split(r'\n  [a-z]+:\n', workflow.split('  '+section+':\n')[1], maxsplit=1)[0]
             self.assertNotIn('contents: write',body)
         self.assertIn('default: dry-run',workflow)
+        self.assertIn('APPROVED_TEST_PR: ${{ vars.LUMA_CODEX_TEST_PR }}',workflow)
+        self.assertIn('args+=(--pr "$TEST_PR")',workflow)
+        self.assertIn('"$TEST_PR" == "$APPROVED_TEST_PR"',workflow)
         self.assertIn('environment: luma-codex-publish',workflow)
 
 
