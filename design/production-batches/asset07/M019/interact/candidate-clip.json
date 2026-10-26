@@ -1,0 +1,67 @@
+{
+  "sessionId": "LUMA-ASSET-07",
+  "conceptId": "M019",
+  "species": null,
+  "evolutionStage": null,
+  "status": "BLOCKED",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M019/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 130,
+    "loop": false
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "NOT_VERIFIED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 미제작 행동의 첫 후보; 기존 실패 후보 복구 및 한도 초기화 없음",
+  "personality": "NOT_VERIFIED",
+  "movementProfile": "NOT_VERIFIED",
+  "speciesBehavior": "NOT_VERIFIED",
+  "identityMapping": "HUMAN_REVIEW_REQUIRED",
+  "movableRect": [
+    108,
+    156,
+    184,
+    204
+  ],
+  "parts": [
+    {
+      "name": "chest-acknowledgement",
+      "x": 163,
+      "y": 184,
+      "rx": 17,
+      "ry": 19,
+      "dx": -0.992,
+      "dy": -1.35,
+      "phase": 0
+    },
+    {
+      "name": "shoulder-follow-through",
+      "x": 135,
+      "y": 176,
+      "rx": 18,
+      "ry": 14,
+      "dx": 0.682,
+      "dy": 0.9,
+      "phase": -1.48
+    }
+  ],
+  "anatomyScope": "기존 흉부/어깨 rig의 짧은 인사 반응; 얼굴, 발, 실루엣 Alpha 고정",
+  "rigReuseSource": "design/production-batches/action-followup/M003/interact-pilot/rig-interact.cjs",
+  "timingScope": "오프라인 one-shot 검토 후보; 서버 이벤트·게임 수치·Runtime 설정 변경 없음",
+  "blockReason": "GENERATOR_INPUT_CONTRACT_MISMATCH"
+}

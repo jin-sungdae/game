@@ -1,0 +1,47 @@
+{
+  "sessionId": "LUMA-ASSET-07",
+  "conceptId": "M016",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M016/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 150,
+    "loop": false
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "NOT_VERIFIED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 미제작 행동의 첫 후보; 기존 실패 후보 복구 및 한도 초기화 없음",
+  "personality": "NOT_VERIFIED",
+  "movementProfile": "NOT_VERIFIED",
+  "speciesBehavior": "NOT_VERIFIED",
+  "identityMapping": "HUMAN_REVIEW_REQUIRED",
+  "eyes": [
+    {
+      "x": 179,
+      "y": 110,
+      "rx": 10,
+      "ry": 11,
+      "dx": 1.2
+    }
+  ],
+  "anatomyScope": "눈 타원 내부만 변경; 얼굴 윤곽, 귀, 몸통, 발과 Alpha 고정",
+  "rigReuseSource": "design/production-batches/action-followup/M004/rig-look.cjs",
+  "timingScope": "오프라인 one-shot 검토 후보; 서버 이벤트·게임 수치·Runtime 설정 변경 없음"
+}

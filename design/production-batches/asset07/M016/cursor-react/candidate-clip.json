@@ -1,0 +1,57 @@
+{
+  "sessionId": "LUMA-ASSET-07",
+  "conceptId": "M016",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M016/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 95,
+    "loop": false
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "NOT_VERIFIED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 미제작 행동의 첫 후보; 기존 실패 후보 복구 및 한도 초기화 없음",
+  "personality": "NOT_VERIFIED",
+  "movementProfile": "NOT_VERIFIED",
+  "speciesBehavior": "NOT_VERIFIED",
+  "identityMapping": "HUMAN_REVIEW_REQUIRED",
+  "eyes": [
+    {
+      "x": 179,
+      "y": 110,
+      "rx": 10,
+      "ry": 11,
+      "dx": 1.2
+    }
+  ],
+  "anatomyScope": "눈 내부 주시 반응만 이동; 머리/몸통/발/Alpha 고정",
+  "rigReuseSource": "design/production-batches/asset07/M016/look/rig-look.cjs",
+  "timingScope": "우측 포인터를 인지하는 one-shot 주시·복귀 후보. 방향/입력 Runtime 연결 없음.",
+  "gazeSamples": [
+    0.08,
+    0.35,
+    0.8,
+    1,
+    0.85,
+    0.5,
+    0.22,
+    0.04
+  ]
+}
