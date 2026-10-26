@@ -206,6 +206,28 @@ export const animationManifests: Readonly<Record<string, unknown>> = {
     "species": "ruu",
     "stage": 1
   },
+  "/assets/creatures/ruu/stage03/manifest.json": {
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "animations": {
+      "idle": {
+        "frameDuration": 180,
+        "frames": 8,
+        "loop": true
+      }
+    },
+    "canvas": {
+      "height": 256,
+      "width": 256
+    },
+    "display": {
+      "width": 130
+    },
+    "species": "ruu",
+    "stage": 3
+  },
   "/assets/monsters/bubu/manifest.json": {
     "anchor": {
       "x": 0.5,
