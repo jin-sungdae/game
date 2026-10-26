@@ -14,7 +14,7 @@ def restore(api, destination):
     workflow = api.get('actions/workflows/luma-pr-watch-15min.yml')
     default = api.get('')['default_branch']
     artifacts = api.pages(f'actions/artifacts?name={NAME}', 'artifacts')
-    for artifact in sorted(artifacts, key=lambda a: a['id'], reverse=True):
+    for artifact in sorted(artifacts, key=lambda a: (a['created_at'], a['id']), reverse=True):
         run = api.get(f'actions/runs/{artifact["workflow_run"]["id"]}')
         if run['workflow_id'] != workflow['id'] or run['event'] not in ('schedule', 'workflow_dispatch', 'pull_request_target', 'workflow_run'):
             continue
