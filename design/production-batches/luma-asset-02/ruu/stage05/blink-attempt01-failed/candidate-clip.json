@@ -1,0 +1,46 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 5,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage05/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 6,
+    "frameDuration": 115,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 211.5,
+      "y": 91,
+      "rx": 4.5,
+      "ry": 2.8
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review only; no gameplay frequency change",
+  "anatomyScope": "Narrow side-eye only; crest, muzzle, wing silhouette, legs and tail fixed.",
+  "sessionId": "LUMA-ASSET-02",
+  "reusedRig": "design/production-batches/action-followup/ruu/stage04/rig-blink.cjs",
+  "behaviorContract": "Measured mature sky guardian blink",
+  "closure": [
+    0.02,
+    0.18,
+    0.57,
+    1,
+    0.76,
+    0.12
+  ]
+}
