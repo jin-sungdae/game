@@ -1,0 +1,80 @@
+{
+  "baselineCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "testedCandidateCommit": "d299cd6e9df473a8a9f31a094922efcb7540d5da",
+  "checks": {
+    "animationRegression": {
+      "status": "PASS",
+      "tests": 236
+    },
+    "sessionBoundaryTests": {
+      "status": "PASS",
+      "tests": 2
+    },
+    "candidateStructure": {
+      "status": "PASS",
+      "clips": 19,
+      "png": 264
+    },
+    "assetTests": "INTERRUPTED_NOT_COMPLETED",
+    "releaseGate": "INTERRUPTED_NOT_COMPLETED",
+    "nativeGui": "DEFERRED_GUI",
+    "existingBatch05": {
+      "status": "PASS",
+      "tests": 1
+    },
+    "requiredBaseRelease": "PASS",
+    "interruptionReason": "Full Asset Tests and Release Gate were stopped after more than six minutes in existing Alpha checks during concurrent local tracks. No full-suite PASS claim."
+  },
+  "logs": [
+    {
+      "name": "assets2",
+      "sha256": "0374b28bd7442ade15ee4e64dbdfcf45de5139b93d8dbf7e887548ac9b42e179",
+      "tail": "**kwds)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/suite.py\", line 122, in run\n    test(result)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/suite.py\", line 84, in __call__\n    return self.run(*args, **kwds)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/suite.py\", line 122, in run\n    test(result)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/case.py\", line 653, in __call__\n    return self.run(*args, **kwds)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/case.py\", line 593, in run\n    self._callTestMethod(testMethod)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/case.py\", line 550, in _callTestMethod\n    method()\n  File \"/Users/jinseongdae/.codex/worktrees/assets-m041-m045/New project/tests/assets/test_alpha_assets.py\", line 41, in test_optional_and_strict_fifteen_paths\n    errors,pending=validator.validate_alpha(self.root)\n  File \"/Users/jinseongdae/.codex/worktrees/assets-m041-m045/New project/scripts/validate_assets.py\", line 565, in validate_alpha\n    errors.extend(validate_bubu_jump(root))\n  File \"/Users/jinseongdae/.codex/worktrees/assets-m041-m045/New project/scripts/validate_assets.py\", line 411, in validate_bubu_jump\n    p=d/f['file'];b=[];errors.extend(png_errors(p,True,b))\n  File \"/Users/jinseongdae/.codex/worktrees/assets-m041-m045/New project/scripts/validate_assets.py\", line 72, in png_errors\n    elif filtering == 2:\nKeyboardInterrupt\n"
+    },
+    {
+      "name": "animation2",
+      "sha256": "161b05282fd7fc2f9f5332c9338adb379b09ad5325aec71b81b67707bc3458f2",
+      "tail": " stale grounded DESCEND immediately\n  ---\n  duration_ms: 0.048417\n  ...\n# Subtest: BUBU missing/invalid pack falls to own base only\nok 7 - BUBU missing/invalid pack falls to own base only\n  ---\n  duration_ms: 1.094791\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 168.175\nTAP version 13\n# Subtest: EMBER/NOVA share FREE_2D consumer contract; NOVA has no INTENSE delivery\nok 1 - EMBER/NOVA share FREE_2D consumer contract; NOVA has no INTENSE delivery\n  ---\n  duration_ms: 1.470208\n  ...\n# Subtest: EMBER vectors, hysteresis and completion use same read-only resolver\nok 2 - EMBER vectors, hysteresis and completion use same read-only resolver\n  ---\n  duration_ms: 0.716041\n  ...\n# Subtest: EMBER real static registry, fixed cadence, reduced motion and own-base fallback\nok 3 - EMBER real static registry, fixed cadence, reduced motion and own-base fallback\n  ---\n  duration_ms: 2.421167\n  ...\n# Subtest: NOVA vectors, hysteresis and completion use same read-only resolver\nok 4 - NOVA vectors, hysteresis and completion use same read-only resolver\n  ---\n  duration_ms: 0.24775\n  ...\n# Subtest: NOVA real static registry, fixed cadence, reduced motion and own-base fallback\nok 5 - NOVA real static registry, fixed cadence, reduced motion and own-base fallback\n  ---\n  duration_ms: 4.5115\n  ...\n1..5\n# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 172.747958\nTAP version 13\n# Subtest: Active Alpha content + asset + animation coverage is exactly 15/15; provisional excluded\nok 1 - Active Alpha content + asset + animation coverage is exactly 15/15; provisional excluded\n  ---\n  duration_ms: 21.711042\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 177.51575\n"
+    },
+    {
+      "name": "release2",
+      "sha256": "3658002043ea5cbac615a5e54cc5dfe6c6fc3bcec45ce662ba9cf78de677c6a2",
+      "tail": "frontend-build\nanimation-content\npresentation\nasset-tests\nFAIL MANUAL_QA_REQUIRED /private/tmp/luma-asset12-release2\nTraceback (most recent call last):\n  File \"/Users/jinseongdae/.codex/worktrees/assets-m041-m045/New project/scripts/validate_alpha_release.py\", line 61, in <module>\n    if __name__=='__main__': main()\n  File \"/Users/jinseongdae/.codex/worktrees/assets-m041-m045/New project/scripts/validate_alpha_release.py\", line 38, in main\n    step('asset-tests',['npm','run','test:assets'])\n  File \"/Users/jinseongdae/.codex/worktrees/assets-m041-m045/New project/scripts/validate_alpha_release.py\", line 27, in step\n    result=subprocess.run(cmd,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 507, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 1126, in communicate\n    self.wait()\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 1189, in wait\n    return self._wait(timeout=timeout)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 1917, in _wait\n    (pid, sts) = self._try_wait(0)\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py\", line 1875, in _try_wait\n    (pid, sts) = os.waitpid(self.pid, wait_flags)\nKeyboardInterrupt\n"
+    },
+    {
+      "name": "batch05",
+      "sha256": "29f5766cd045131940835e7e748400750fad8c1530d96b630454134137b9886b",
+      "tail": "test_remaining_candidates_do_not_imply_production_approval (test_monster_batch05.MonsterBatch05Tests) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 12.272s\n\nOK\n"
+    },
+    {
+      "name": "required",
+      "sha256": "0aca49917198fc4ab485e6fcb91f46e993dd26dc7a78f7ac7837272d4ba22380",
+      "tail": "      \"bounds\": [\n        19,\n        47,\n        241,\n        251\n      ],\n      \"status\": \"PASS\"\n    },\n    {\n      \"identity\": \"PUFF\",\n      \"url\": \"/assets/monsters/puff/base.png\",\n      \"bounds\": [\n        20,\n        44,\n        241,\n        250\n      ],\n      \"status\": \"PASS\"\n    },\n    {\n      \"identity\": \"TIKKI\",\n      \"url\": \"/assets/monsters/tikki/base.png\",\n      \"bounds\": [\n        27,\n        30,\n        241,\n        246\n      ],\n      \"status\": \"PASS\"\n    },\n    {\n      \"identity\": \"MIMI\",\n      \"url\": \"/assets/monsters/mimi/base.png\",\n      \"bounds\": [\n        21,\n        40,\n        233,\n        248\n      ],\n      \"status\": \"PASS\"\n    },\n    {\n      \"identity\": \"WISP\",\n      \"url\": \"/assets/monsters/wisp/base.png\",\n      \"bounds\": [\n        18,\n        24,\n        239,\n        250\n      ],\n      \"status\": \"PASS\"\n    },\n    {\n      \"identity\": \"SHADE\",\n      \"url\": \"/assets/monsters/shade/base.png\",\n      \"bounds\": [\n        22,\n        29,\n        241,\n        242\n      ],\n      \"status\": \"PASS\"\n    },\n    {\n      \"identity\": \"EMBER\",\n      \"url\": \"/assets/monsters/ember/base.png\",\n      \"bounds\": [\n        21,\n        24,\n        237,\n        251\n      ],\n      \"status\": \"PASS\"\n    },\n    {\n      \"identity\": \"LUNET\",\n      \"url\": \"/assets/monsters/lunet/base.png\",\n      \"bounds\": [\n        17,\n        24,\n        233,\n        247\n      ],\n      \"status\": \"PASS\"\n    },\n    {\n      \"identity\": \"NOVA\",\n      \"url\": \"/assets/monsters/nova/base.png\",\n      \"bounds\": [\n        17,\n        49,\n        241,\n        245\n      ],\n      \"status\": \"PASS\"\n    },\n    {\n      \"identity\": \"NOCT\",\n      \"url\": \"/assets/monsters/noct/base.png\",\n      \"bounds\": [\n        14,\n        35,\n        241,\n        243\n      ],\n      \"status\": \"PASS\"\n    }\n  ],\n  \"errors\": []\n}\n"
+    }
+  ],
+  "productionApproved": false,
+  "runtimeConnected": false,
+  "releaseResult": {
+    "status": "FAIL",
+    "manualGate": "MANUAL_QA_REQUIRED",
+    "head": "d299cd6e9df473a8a9f31a094922efcb7540d5da",
+    "workingTreeDirty": false,
+    "checks": [
+      {
+        "name": "frontend-build",
+        "status": "PASS",
+        "seconds": 7.92
+      },
+      {
+        "name": "animation-content",
+        "status": "PASS",
+        "seconds": 16.55
+      },
+      {
+        "name": "presentation",
+        "status": "PASS",
+        "seconds": 19.33
+      }
+    ]
+  }
+}

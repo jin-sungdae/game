@@ -1,0 +1,1787 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "baseline": "509269b",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "failedCandidatesPreserved": true,
+  "creatures": [
+    {
+      "conceptId": "M041",
+      "basePath": "design/production-batches/monsters/batch05/M041/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M041",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 1
+        },
+        "observedForm": "ice stag",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "gentle"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "brief inspections between long rests; attention centers on the ice habitat of the ice stag",
+          "preparation": "tilt toward the stimulus before leaving rest; preserve the ice stag silhouette",
+          "transition": "ease into rest after the excursion; recover the ice stag resting anatomy",
+          "reaction": "observe a nearby cursor without chasing it; keep the ice stag characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M041:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the ice stag silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 6,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "automated": "PASS",
+            "naturalMotion": "NOT_VERIFIED"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 6
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/breath",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/blink",
+          "frameCount": 8,
+          "automated": "PASS"
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/look",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ubc18\ub300 \uc2dc\uc810 \uc2e0\uccb4\u00b7\ud310\u00b7\uaf2c\ub9ac \uac00\ub9bc keypose \ud544\uc694. \ub2e8\uc21c \uc88c\uc6b0 \ubc18\uc804\uc73c\ub85c \ub300\uccb4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ubab8\ud1b5\uc744 \ub0ae\ucd94\ub294 \uad00\uc808 keypose\uc640 \uc811\uc9c0 \uac80\uc99d \ud544\uc694."
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/sleep",
+          "frameCount": 24,
+          "automated": "PASS",
+          "scope": "Standing stag doze: sustained eye closure with local chest breathing and reopen to BASE; no recumbent sleep or runtime activation",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/cursor_react",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/interact",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 8,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+            "automated": "PASS",
+            "candidatePath": "design/production-batches/action-followup/M041/hit-pilot",
+            "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 8
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/victory",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M041/recovery",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M042",
+      "basePath": "design/production-batches/monsters/batch05/M042/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M042",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 2
+        },
+        "observedForm": "ice fox",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "curious"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "frequent short excursions with observation pauses; attention centers on the ice habitat of the ice fox",
+          "preparation": "scan both sides before committing direction; preserve the ice fox silhouette",
+          "transition": "insert a look-around beat between movement and rest; recover the ice fox resting anatomy",
+          "reaction": "approach once then respect personal space; keep the ice fox characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M042:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the ice fox silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 6,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "automated": "PASS",
+            "naturalMotion": "NOT_VERIFIED"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 6
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/breath",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/blink",
+          "frameCount": 8,
+          "automated": "PASS"
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/look",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ubc18\ub300 \uc2dc\uc810 \uc2e0\uccb4\u00b7\ud310\u00b7\uaf2c\ub9ac \uac00\ub9bc keypose \ud544\uc694. \ub2e8\uc21c \uc88c\uc6b0 \ubc18\uc804\uc73c\ub85c \ub300\uccb4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "VALIDATION_FAILED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "automated": "VALIDATION_FAILED",
+            "candidatePath": "design/production-batches/action-followup/M042/rest-pilot",
+            "blockReason": "Raw source detached Alpha 517 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+            "recoveryPath": "design/production-batches/action-followup/M042/rest-pilot/keypose-tool-reference.png"
+          },
+          "status": "BLOCKED",
+          "reason": "Raw source detached Alpha 517 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/cursor_react",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/interact",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/hit",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/victory",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M042/recovery",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M043",
+      "basePath": "design/production-batches/monsters/batch05/M043/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M043",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 3
+        },
+        "observedForm": "crystal quadruped",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "cautious"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "rare advances after repeated scans; attention centers on the ice habitat of the crystal quadruped",
+          "preparation": "lower the body before starting; preserve the crystal quadruped silhouette",
+          "transition": "settle the body before returning to idle; recover the crystal quadruped resting anatomy",
+          "reaction": "retreat slightly then resume watching; keep the crystal quadruped characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M043:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the crystal quadruped silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uc0dd\uc131 IDLE: \ubd84\ub9ac Alpha\u00b7\uacbd\uacc4 \uc811\ucd09\u00b7\ud06c\uae30\u00b7\uc811\uc9c0 \ubc0f \uc678\ud615 \uc5f0\uc18d\uc131 \uc2e4\ud328",
+          "candidatePath": "design/production-batches/luma-asset-12/M043/idle",
+          "frameCount": 8
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub2e8\ub2e8\ud55c \uc5bc\uc74c \ud310 \uc804\uc6a9 \uad00\uc808/\ubd84\ub9ac \ub808\uc774\uc5b4 \ud544\uc694. \uc5f0\uc131 \ud638\ud761 \ubcc0\ud615 \uae08\uc9c0."
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "candidatePath": "design/production-batches/luma-asset-12/M043/blink",
+          "frameCount": 8,
+          "reason": "\uc2dc\uac01 \ud655\uc778: \ub208 \ub9ac\uadf8 \uc88c\ud45c\uac00 \ub208 \ud3d0\uc1c4\ub97c \ucda9\ubd84\ud788 \ud45c\ud604\ud558\uc9c0 \ubabb\ud568. 3/3 \uc774\ud6c4 \uc218\uc815\ud558\uc9c0 \uc54a\uc74c.",
+          "automated": "PASS"
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "VALIDATION_FAILED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "automated": "VALIDATION_FAILED",
+            "candidatePath": "design/production-batches/action-followup/M043/turn-pilot",
+            "recoveryPath": "design/production-batches/action-followup/M043/turn-pilot/keypose-tool-reference.png",
+            "blockReason": "Raw source detached Alpha 2032 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+          },
+          "status": "BLOCKED",
+          "reason": "Raw source detached Alpha 2032 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ubab8\ud1b5\uc744 \ub0ae\ucd94\ub294 \uad00\uc808 keypose\uc640 \uc811\uc9c0 \uac80\uc99d \ud544\uc694."
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub2e8\ub2e8\ud55c \uc5bc\uc74c \ud310 \uc804\uc6a9 \uad00\uc808/\ubd84\ub9ac \ub808\uc774\uc5b4 \ud544\uc694. \uc5f0\uc131 \ud638\ud761 \ubcc0\ud615 \uae08\uc9c0."
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub2e8\ub2e8\ud55c \uc5bc\uc74c \ud310 \uc804\uc6a9 \uad00\uc808/\ubd84\ub9ac \ub808\uc774\uc5b4 \ud544\uc694. \uc5f0\uc131 \ud638\ud761 \ubcc0\ud615 \uae08\uc9c0."
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub3c5\ub9bd \ucda9\uaca9 \uc790\uc138 \ubc0f \uc9c0\uc9c0 \ub2e4\ub9ac \uad00\uc808 keypose \ud544\uc694."
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M044",
+      "basePath": "design/production-batches/monsters/batch05/M044/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M044",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 4
+        },
+        "observedForm": "frost dragon",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "patient"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "FLYING"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "long pauses interrupted by deliberate steps; attention centers on the ice habitat of the frost dragon",
+          "preparation": "shift weight before advancing; preserve the frost dragon silhouette",
+          "transition": "complete weight transfer before changing action; recover the frost dragon resting anatomy",
+          "reaction": "turn slowly toward interaction without displacement; keep the frost dragon characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M044:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the frost dragon silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 6,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "automated": "PASS",
+            "naturalMotion": "NOT_VERIFIED"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 6
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/breath",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/blink",
+          "frameCount": 8,
+          "reason": "\uc2dc\uac01 \ud655\uc778: \ub208 \ub9ac\uadf8 \uc88c\ud45c\uac00 \ub208 \ud3d0\uc1c4\ub97c \ucda9\ubd84\ud788 \ud45c\ud604\ud558\uc9c0 \ubabb\ud568. 3/3 \uc774\ud6c4 \uc218\uc815\ud558\uc9c0 \uc54a\uc74c.",
+          "automated": "PASS"
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ubc18\ub300 \uc2dc\uc810 \uc2e0\uccb4\u00b7\ud310\u00b7\uaf2c\ub9ac \uac00\ub9bc keypose \ud544\uc694. \ub2e8\uc21c \uc88c\uc6b0 \ubc18\uc804\uc73c\ub85c \ub300\uccb4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ubab8\ud1b5\uc744 \ub0ae\ucd94\ub294 \uad00\uc808 keypose\uc640 \uc811\uc9c0 \uac80\uc99d \ud544\uc694."
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/cursor_react",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/interact",
+          "frameCount": 16,
+          "reason": "\uc2dc\uac01 \ud655\uc778: \ub208 \ub9ac\uadf8 \uc88c\ud45c\uac00 \ub208 \ud3d0\uc1c4\ub97c \ucda9\ubd84\ud788 \ud45c\ud604\ud558\uc9c0 \ubabb\ud568. 3/3 \uc774\ud6c4 \uc218\uc815\ud558\uc9c0 \uc54a\uc74c.",
+          "automated": "PASS"
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/hit",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/victory",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M044/recovery",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    },
+    {
+      "conceptId": "M045",
+      "basePath": "design/production-batches/monsters/batch05/M045/base-v2.png",
+      "productionSpeciesId": null,
+      "concept": {
+        "conceptId": "M045",
+        "region": "FROZEN_TUNDRA",
+        "reference": "design/visual-reference-v1/monsters-concept.png",
+        "referenceCell": {
+          "region": 5,
+          "row": 1,
+          "column": 5
+        },
+        "observedForm": "snow cat",
+        "speciesIdentity": null,
+        "existingMonsterCode": null,
+        "assetIdentity": null,
+        "identityStatus": "IDENTITY_REVIEW_REQUIRED",
+        "personality": {
+          "status": "PROPOSED",
+          "trait": "proud"
+        },
+        "movementProfile": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "speciesBehavior": {
+          "status": "PROPOSED",
+          "frequency": "short activity after a stable idle period; attention centers on the ice habitat of the snow cat",
+          "preparation": "hold the silhouette still before a small start; preserve the snow cat silhouette",
+          "transition": "hold the terminal pose before relaxing; recover the snow cat resting anatomy",
+          "reaction": "hold position and answer with a small gesture; keep the snow cat characteristic gesture"
+        },
+        "animationProfile": {
+          "status": "ASSET_REQUIRED",
+          "engine": "EXISTING",
+          "requiredActions": [
+            "IDLE",
+            "BREATH",
+            "BLINK",
+            "LOOK_AROUND",
+            "MOVE",
+            "TURN",
+            "REST",
+            "SLEEP",
+            "CURSOR_REACT",
+            "INTERACT",
+            "ATTACK",
+            "SKILL_CAST",
+            "HIT",
+            "VICTORY",
+            "DEFEAT",
+            "EVOLUTION"
+          ]
+        },
+        "skillIdentity": {
+          "conceptKey": "concept:M045:signature",
+          "serverCode": null,
+          "visualMotif": "Ice effect following the snow cat silhouette",
+          "definition": "SERVER_CONTRACT_REQUIRED",
+          "unlock": null,
+          "execution": "SERVER_AUTHORITATIVE",
+          "cooldownTurns": null,
+          "effect": null,
+          "animation": "ASSET_REQUIRED"
+        },
+        "spawnTier": null,
+        "rarity": null,
+        "balanceStatus": "APPROVAL_REQUIRED",
+        "runtimeEnabled": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previous": {
+            "action": "IDLE",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 6,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "automated": "PASS",
+            "naturalMotion": "NOT_VERIFIED"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 6
+        },
+        {
+          "action": "BREATH",
+          "previous": {
+            "action": "BREATH",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/breath",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "BLINK",
+          "previous": {
+            "action": "BLINK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/blink",
+          "frameCount": 8,
+          "automated": "PASS"
+        },
+        {
+          "action": "LOOK",
+          "previous": {
+            "action": "LOOK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/look",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        },
+        {
+          "action": "MOVE",
+          "previous": {
+            "action": "MOVE",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
+        },
+        {
+          "action": "TURN",
+          "previous": {
+            "action": "TURN",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ubc18\ub300 \uc2dc\uc810 \uc2e0\uccb4\u00b7\ud310\u00b7\uaf2c\ub9ac \uac00\ub9bc keypose \ud544\uc694. \ub2e8\uc21c \uc88c\uc6b0 \ubc18\uc804\uc73c\ub85c \ub300\uccb4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "REST",
+          "previous": {
+            "action": "REST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ubab8\ud1b5\uc744 \ub0ae\ucd94\ub294 \uad00\uc808 keypose\uc640 \uc811\uc9c0 \uac80\uc99d \ud544\uc694."
+        },
+        {
+          "action": "SLEEP",
+          "previous": {
+            "action": "SLEEP",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previous": {
+            "action": "CURSOR_REACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/cursor_react",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "INTERACT",
+          "previous": {
+            "action": "INTERACT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/interact",
+          "frameCount": 16,
+          "automated": "PASS"
+        },
+        {
+          "action": "ATTACK",
+          "previous": {
+            "action": "ATTACK",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
+        },
+        {
+          "action": "SKILL_CAST",
+          "previous": {
+            "action": "SKILL_CAST",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
+        },
+        {
+          "action": "HIT",
+          "previous": {
+            "action": "HIT",
+            "animationStatus": "ANIMATION_IN_PROGRESS",
+            "frameCount": 8,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED",
+            "artworkReview": "HUMAN_REVIEW_REQUIRED",
+            "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+            "automated": "PASS",
+            "candidatePath": "design/production-batches/action-followup/M045/hit-pilot",
+            "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
+          },
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "frameCount": 8
+        },
+        {
+          "action": "VICTORY",
+          "previous": {
+            "action": "VICTORY",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/victory",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        },
+        {
+          "action": "DEFEAT",
+          "previous": {
+            "action": "DEFEAT",
+            "animationStatus": "ASSET_REQUIRED",
+            "frameCount": 0,
+            "runtimeStatus": "BLOCKED",
+            "guiStatus": "GUI_NOT_VERIFIED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "JUMP",
+          "previous": {
+            "action": "JUMP",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "FLY",
+          "previous": {
+            "action": "FLY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
+        },
+        {
+          "action": "HOVER",
+          "previous": {
+            "action": "HOVER",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
+        },
+        {
+          "action": "LAND",
+          "previous": {
+            "action": "LAND",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
+        },
+        {
+          "action": "CHARGE",
+          "previous": {
+            "action": "CHARGE",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "BLOCKED",
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
+        },
+        {
+          "action": "RECOVERY",
+          "previous": {
+            "action": "RECOVERY",
+            "animationStatus": "NOT_RECORDED"
+          },
+          "status": "CANDIDATE_REVIEW_PENDING",
+          "candidatePath": "design/production-batches/luma-asset-12/M045/recovery",
+          "frameCount": 16,
+          "automated": "PASS",
+          "scope": "Stationary composure cycle: chest expansion, damped recoil, BASE return. Not stand-up, landing or reversed HIT. Entry requires BASE; combat transition unapproved.",
+          "entryContract": "BASE_ONLY",
+          "exitContract": "EXACT_BASE"
+        }
+      ],
+      "productionApproval": "HUMAN_REVIEW_REQUIRED",
+      "runtimeConnected": false
+    }
+  ],
+  "integrationRequests": [
+    {
+      "target": "design/creature-production-queue.json",
+      "request": "\ud6c4\ubcf4\uc758 \uc2e4\uc81c \uac80\uc99d\u00b7\ucc28\ub2e8 \uc0c1\ud0dc\uc640 \ub9c8\uc9c0\ub9c9 \uac80\uc99d commit\uc744 \ud1b5\ud569 \ub2f4\ub2f9\uc790\uac00 \ubc18\uc601. \uae30\uc874 \uc2e4\ud328\uc640 \uc2b9\uc778 \uc0c1\ud0dc \uc720\uc9c0. \uc2e0\uaddc \ud6c4\ubcf4\ub294 \uc644\ub8cc \ud589\ub3d9\uc73c\ub85c \uc138\uc9c0 \uc54a\uc74c."
+    },
+    {
+      "target": "tests/live/creature-review/catalog.json",
+      "request": "\uc138\uc158 \uc804\uc6a9 \uacbd\ub85c\uc758 candidate-clip \ubc0f M043 \uc2e4\ud328 IDLE\uc744 \uae30\uc874 Review Catalog\uc5d0 \ucd94\uac00. build_creature_review --refresh-inventory --refresh-coverage\ub294 \uacf5\uc720 \ud30c\uc77c \uc4f0\uae30\uc774\ubbc0\ub85c \uc774 Track\uc5d0\uc11c\ub294 \ubbf8\uc2e4\ud589."
+    },
+    {
+      "target": "Animation Manifest / Production Registry / Runtime",
+      "request": "\uc0ac\ub78c\uc758 \uc678\ud615\u00b7\uc790\uc5f0\uc2a4\ub7ec\uc6c0\u00b7Species Identity\u00b7\uc774\ubca4\ud2b8 \uacc4\uc57d \uc2b9\uc778 \uc774\ud6c4 \ubcc4\ub3c4 \ud1b5\ud569. \ud604\uc7ac \ud65c\uc131\ud654 \uae08\uc9c0."
+    },
+    {
+      "target": "M044 movement contract",
+      "request": "\uce74\ud0c8\ub85c\uadf8 FLYING \uc81c\uc548\uacfc \ub0a0\uac1c \uc5c6\ub294 BASE\ub97c \uc870\uc815. \ub0a0\uac1c \uc784\uc758 \ucd94\uac00 \uae08\uc9c0."
+    }
+  ],
+  "nativeGui": "DEFERRED_GUI",
+  "productionReady": false,
+  "runtimeConnected": false,
+  "nextAction": "Review 12 new clips in existing Creature Review Catalog via integration owner; approve species-specific joint/keypose inputs for remaining blocked actions. Preserve all six failures. Observe evidence-commit CI; do not regenerate passing candidates.",
+  "candidateCounts": {
+    "clips": 32,
+    "framePng": 472,
+    "sourceSheets": 1,
+    "totalPng": 473,
+    "structurallyPassingRigClips": 31,
+    "visuallyBlockedClips": 4,
+    "productionCompleteActions": 0
+  },
+  "validation": {
+    "animationRegression": {
+      "status": "PASS",
+      "tests": 236
+    },
+    "sessionBoundaryTests": {
+      "status": "PASS",
+      "tests": 2
+    },
+    "candidateStructure": {
+      "status": "PASS",
+      "clips": 19,
+      "png": 264
+    },
+    "assetTests": {
+      "status": "PASS",
+      "tests": 232,
+      "seconds": 265.054,
+      "interpreter": "PyPy 8.0.1 Python 3.12.15"
+    },
+    "releaseGate": {
+      "status": "AUTOMATED_READY",
+      "passed": 18,
+      "total": 18,
+      "testedCodeHead": "436317775d73934e929af451046327c67a4866c4",
+      "manualGate": "MANUAL_QA_REQUIRED"
+    },
+    "nativeGui": "DEFERRED_GUI",
+    "existingBatch05": {
+      "status": "PASS",
+      "tests": 1
+    },
+    "requiredBaseRelease": "PASS",
+    "continuationCandidates": {
+      "status": "PASS",
+      "clips": 12,
+      "frames": 200,
+      "baseReturn": "PASS"
+    },
+    "preservationAndBoundary": {
+      "status": "PASS",
+      "tests": 4
+    },
+    "serverRegression": {
+      "tests": 346,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "githubCI": {
+      "codeHead": "436317775d73934e929af451046327c67a4866c4",
+      "run": "https://github.com/jin-sungdae/game/actions/runs/40316216912",
+      "status": "SUCCESS",
+      "scope": "Code commit; subsequent evidence-only commit requires new CI observation"
+    }
+  },
+  "continuation": {
+    "previousHead": "ec160b167aa70f049fe106ca43b54adbcea69a56",
+    "newClips": 12,
+    "newFrames": 200,
+    "totalClips": 32,
+    "totalFrames": 472,
+    "sourceSheets": 1,
+    "productionCompleteActions": 0,
+    "nextResume": "Review 12 new clips in existing Creature Review Catalog via integration owner; approve species-specific joint/keypose inputs for remaining blocked actions. Preserve all six failures. Observe evidence-commit CI; do not regenerate passing candidates."
+  }
+}
