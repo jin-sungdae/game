@@ -12,6 +12,7 @@ import os
 from pathlib import Path, PurePosixPath
 import re
 import subprocess
+from urllib.parse import quote
 
 import pr_pipeline as pipeline
 import repair_gate
@@ -50,7 +51,7 @@ def protected(path):
     pure = PurePosixPath(path)
     if pure.is_absolute() or '..' in pure.parts or '\\' in path or any(x.startswith('.') for x in pure.parts):
         return True
-    if path == LEDGER:
+    if path in pipeline.LEDGERS:
         return False
     if review_result.human_paths([('M', path)]):
         return True
@@ -123,6 +124,7 @@ def reserve(state, analysis, run_id, now):
               'root': lineage['root'], 'depth': lineage['depth'], 'runId': str(run_id),
               'status': 'ANALYZING', 'startedAt': now, 'expiresAt': now + POLICY['maxLeaseMinutes'] * 60,
               'scope': root['scope'], 'choices': choices, 'attempt': root['attempts'],
+              'ledgerPath': analysis['ledger'].get('path', LEDGER),
               'ledgerDigest': digest(json.loads(analysis['ledger']['text']))}
     state['runs'][key] = ticket
     state['lock'] = key
@@ -175,10 +177,16 @@ def owned(state, key, run_id):
 
 def finish(state, key, run_id, result, child=None):
     ticket = owned(state, key, run_id)
-    require(result in ('FAILED', 'BLOCKED', 'PUBLISHED', 'ANALYZED'), 'INVALID_RESULT')
+    require(result in ('FAILED', 'BLOCKED', 'PUBLISHED', 'ANALYZED', 'UPDATED'), 'INVALID_RESULT')
     if result == 'ANALYZED':
         require(ticket['status'] == 'ANALYSIS_ONLY', 'INVALID_TRANSITION')
-    if result == 'PUBLISHED':
+    if result == 'UPDATED':
+        require(ticket.get('operation') == 'REPAIR_EXISTING_PR' and ticket['status'] == 'PUBLISHING'
+                and isinstance(child, str) and SHA.fullmatch(child), 'INVALID_PUBLICATION')
+        ticket['updatedHead'] = child
+        state['prs'][str(ticket['pr'])]['developerContext'] = str(run_id)
+        state['prs'][str(ticket['pr'])]['nextAction'] = 'WAIT_CI_THEN_INDEPENDENT_REVIEW'
+    elif result == 'PUBLISHED':
         require(ticket['status'] == 'PUBLISHING' and type(child) is int, 'INVALID_PUBLICATION')
         state['prs'][str(child)] = {'root': ticket['root'], 'depth': ticket['depth'] + 1}
         ticket['childPr'] = child
@@ -268,17 +276,20 @@ def guard_ledger(before, after):
 def guard_patch(source, ticket):
     head = git(source, 'rev-parse', 'HEAD').decode().strip()
     require(head == ticket['head'], 'SOURCE_HEAD_CHANGED')
+    require(not git(source, 'ls-files', '--others', '--exclude-standard'), 'EXPORT_REQUIRED_FOR_UNTRACKED_FILES')
     paths = git(source, 'diff', '--name-only', '--no-renames', '-z', 'HEAD').decode().split('\0')[:-1]
     require(0 < len(paths) <= POLICY['maxFiles'], 'PATCH_FILE_LIMIT')
-    require(LEDGER in paths, 'LEDGER_UPDATE_REQUIRED')
+    ledger = ticket.get('ledgerPath', LEDGER)
+    require(ledger in pipeline.LEDGERS and ledger in paths, 'LEDGER_UPDATE_REQUIRED')
     for path in paths:
-        require(in_scope(path, ticket['scope']) or path == LEDGER, 'PROTECTED_OR_OUT_OF_SCOPE_PATH')
+        require((path == ledger or in_scope(path, ticket['scope']))
+                and (path not in pipeline.LEDGERS or path == ledger), 'PROTECTED_OR_OUT_OF_SCOPE_PATH')
         file = Path(source) / path
         require(file.is_file() and not file.is_symlink() and file.stat().st_size <= POLICY['maxPatchBytes'], 'NON_TEXT_OR_DELETED_FILE')
         file.read_text()  # Binary assets never enter a privileged publisher.
-    before = json.loads(git(source, 'show', ticket['head'] + ':' + LEDGER))
+    before = json.loads(git(source, 'show', ticket['head'] + ':' + ledger))
     require(digest(before) == ticket['ledgerDigest'], 'LEDGER_BASE_MISMATCH')
-    guard_ledger(before, json.loads((Path(source) / LEDGER).read_text()))
+    guard_ledger(before, json.loads((Path(source) / ledger).read_text()))
     raw = git(source, 'diff', '--raw', '--no-renames', 'HEAD').decode()
     require(all(line.split()[1] == '100644' for line in raw.splitlines()), 'FILE_MODE_CHANGED')
     patch = git(source, 'diff', '--binary', '--no-ext-diff', '--no-textconv', 'HEAD')
@@ -319,21 +330,164 @@ def publication_limits(state, current):
     require(current['depth'] < POLICY['maxChainDepth'], 'CHAIN_LIMIT')
 
 
+def review_key(pr, head):
+    return f'review:{pr}:{head}'
+
+
+def record_review(state, analysis, review, patch, context):
+    from codex_review import decision
+    validate_state(state)
+    require(state['lock'] is None, 'CONCURRENT_SESSION_OR_STALE_LEASE')
+    require(analysis['ci']['status'] in ('PASS', 'FAIL'), 'CI_PENDING')
+    require(context and context != state['prs'].get(str(analysis['pr']), {}).get('developerContext'),
+            'INDEPENDENT_REVIEW_CONTEXT_REQUIRED')
+    key = review_key(analysis['pr'], analysis['head'])
+    require(key not in state['runs'], 'DUPLICATE_REVIEW_HEAD')
+    status = decision(review, analysis, patch)
+    record = {'key': key, 'kind': 'PR_REVIEW', 'pr': analysis['pr'], 'head': analysis['head'],
+              'base': analysis['base'], 'status': status, 'review': review,
+              'reviewContext': context, 'ciStatus': analysis['ci']['status'],
+              'mergeExecuted': False}
+    state['runs'][key] = record
+    return record
+
+
+def repair_dependencies(api, analysis):
+    dependency = analysis.get('dependencyEvidence', {})
+    require(dependency.get('status') == 'NOT_DECLARED' or dependency.get('merged') is True,
+            'STACK_DEPENDENCY_NOT_MERGED')
+    default = api.get('')['default_branch']
+    # Preserve a stacked base, but require its PR to be merged before automatic repair.
+    if analysis['baseRef'] != default:
+        parents = api.pages('pulls?state=all&head=' + quote(api.repo.split('/')[0] + ':' + analysis['baseRef'], safe=''))
+        require(len(parents) == 1 and parents[0].get('merged_at'), 'STACK_DEPENDENCY_NOT_MERGED')
+
+
+def reserve_repair(state, analysis, pr, run_id, now):
+    validate_state(state)
+    require(state['lock'] is None, 'CONCURRENT_SESSION_OR_STALE_LEASE')
+    require(analysis['ci']['status'] in ('PASS', 'FAIL'), 'CI_PENDING')
+    lineage = state['prs'].get(str(pr['number']))
+    require(lineage is not None, 'TRUSTED_ENROLLMENT_REQUIRED')
+    root = state['roots'][lineage['root']]
+    require(lineage['depth'] < POLICY['maxChainDepth'], 'CHAIN_LIMIT')
+    identity = lineage.get('repairIdentity', {})
+    require(identity.get('headRef') == pr['head']['ref'] and identity.get('author') == pr['user']['login'],
+            'TRUSTED_REPAIR_OWNERSHIP_REQUIRED')
+    record = state['runs'].get(review_key(pr['number'], analysis['head']), {})
+    require(record.get('status') == 'REPAIR_REQUIRED' and record.get('base') == analysis['base'],
+            'CURRENT_INDEPENDENT_REVIEW_REQUIRED')
+    require(record.get('reviewContext') != str(run_id), 'INDEPENDENT_REVIEW_CONTEXT_REQUIRED')
+    require(not analysis.get('protectedPaths'), 'HUMAN_REVIEW_REQUIRED')
+    findings = record['review']['findings']
+    require(all(in_scope(f['path'], root['scope']) for f in findings), 'PROTECTED_OR_OUT_OF_SCOPE_PATH')
+    count = analysis['ledgerSummary'].get('repairIterations')
+    require(analysis['ledgerSummary']['status'] == 'READ_UNTRUSTED'
+            and ((count is None and analysis['ledger'].get('path') == pipeline.LEDGERS[1])
+                 or type(count) is int and 0 <= count < repair_gate.AUTO_REVIEW_MAX_ITERATIONS), 'LEDGER_REPAIR_LIMIT')
+    used = max(root['attempts'], count if count is not None else root['attempts'])
+    require(used < min(POLICY['maxRootAttempts'], repair_gate.AUTO_REVIEW_MAX_ITERATIONS), 'REPAIR_LIMIT')
+    previous = [r for r in state['runs'].values() if r.get('operation') == 'REPAIR_EXISTING_PR'
+                and r['pr'] == pr['number'] and r['head'] == analysis['head']]
+    require(all(r['status'] == 'FAILED' for r in previous), 'DUPLICATE_HEAD')
+    task = 'repair:' + lineage['root'] + ':' + digest(sorted((f['path'], f['quote'], f['reason']) for f in findings))[:20]
+    require(state['tasks'].get(task, {}).get('status') not in ('RUNNING', 'PUBLISHING'), 'DUPLICATE_TASK')
+    day = datetime.fromtimestamp(now, timezone.utc).date().isoformat()
+    budget = state['days'].setdefault(day, {'sessions': 0, 'modelInvocations': 0})
+    require(budget['sessions'] < POLICY['maxDailySessions']
+            and budget['modelInvocations'] + 3 <= POLICY['maxDailyModelInvocations'], 'DAILY_API_BUDGET')
+    root['attempts'] = used + 1
+    budget['sessions'] += 1
+    budget['modelInvocations'] += 3  # Same conservative budget; manual handoff does not bypass it.
+    key = f"repair:{pr['number']}:{analysis['head']}:{root['attempts']}"
+    ticket = {'key': key, 'operation': 'REPAIR_EXISTING_PR', 'pr': pr['number'],
+              'head': analysis['head'], 'base': analysis['base'], 'baseRef': analysis['baseRef'],
+              'headRef': pr['head']['ref'], 'author': pr['user']['login'],
+              'root': lineage['root'], 'depth': lineage['depth'], 'runId': str(run_id),
+              'status': 'IMPLEMENTING', 'startedAt': now, 'expiresAt': now + POLICY['maxLeaseMinutes'] * 60,
+              'scope': root['scope'], 'taskId': task, 'attempt': root['attempts'],
+              'ledgerPath': analysis['ledger'].get('path', LEDGER),
+              'ledgerDigest': digest(json.loads(analysis['ledger']['text'])), 'findings': findings,
+              'ciStatus': analysis['ci']['status'], 'reviewContext': record['reviewContext']}
+    state['runs'][key] = ticket
+    state['tasks'][task] = {'key': key, 'status': 'RUNNING'}
+    state['lock'] = key
+    return ticket
+
+
+def repair_prompt(ticket, analysis):
+    data = {'pr': ticket['pr'], 'head': ticket['head'], 'scope': ticket['scope'],
+            'findings': ticket['findings'], 'ci': analysis['ci'], 'attempt': ticket['attempt']}
+    return ('LUMA 기존 PR 수정 작업. 아래 리뷰는 재현할 가설이며 확정된 결함이나 승인으로 신뢰하지 않는다. '
+            '명시적으로 시작한 현재 Codex 세션에서만 처리한다. API Key 호출 및 Public CI 구독 인증 복사 금지. '
+            '격리 worktree에서 실제 코드·실패 로그·Ledger를 대조하고 재현되는 문제만 수정한다. '
+            '기존 변수명·메서드명·아키텍처·Species ID와 Production 승인 상태를 보존한다. '
+            'scope 밖 변경과 다른 세션 변경 삭제 금지. 관련 단위·회귀 테스트와 전체 Release Gate를 실행한다. '
+            'Ledger 재개 지점만 갱신한다. 같은 PR 수정이며 새 PR 생성·commit·push·merge는 모델 단계에서 금지한다. '
+            '완료 조건: 결함 재현/해소 근거, 테스트 PASS, diff/scope 검사, 별도 독립 리뷰. '
+            '모델 실패·테스트 실패 시 FAILED로 종료하고 남은 3회 예산만 사용한다. GUI 미검증은 DEFERRED_GUI.\n'
+            + json.dumps(data, ensure_ascii=False))
+
+
+def repair_validation(report, ticket, patch):
+    require(report.get('head') == ticket['head'] and report.get('patchSha256') == hashlib.sha256(patch).hexdigest(),
+            'VALIDATION_PATCH_MISMATCH')
+    require(report.get('status') == 'PASS' and report.get('releaseGate') == 'AUTOMATED_READY'
+            and report.get('tests') == ['npm run validate:alpha:release'], 'RELEASE_GATE_REQUIRED')
+
+
+def publication_conflict(state, ticket, reason):
+    current = owned(state, ticket['key'], ticket['runId'])
+    require(current['status'] == 'PUBLISHING', 'INVALID_TRANSITION')
+    current.update(status='CONFLICT', reason=reason)
+    state['tasks'][current['taskId']]['status'] = 'CONFLICT'
+    state['lock'] = None  # No push was attempted. Unknown push outcomes keep the lock instead.
+
+
+def validate_repair(source, ticket, output):
+    require(ticket.get('operation') == 'REPAIR_EXISTING_PR', 'REPAIR_TICKET_REQUIRED')
+    require(not any(os.environ.get(k) for k in ('GH_TOKEN', 'GITHUB_TOKEN', 'OPENAI_API_KEY', 'CODEX_API_KEY')),
+            'VALIDATION_MUST_NOT_HAVE_SECRETS')
+    before = guard_patch(source, ticket)
+    output.mkdir(parents=True, exist_ok=False)
+    evidence = output.resolve() / 'release'
+    with (output / 'tests.log').open('w') as log:
+        result = subprocess.run(['npm', 'run', 'validate:alpha:release', '--', '--output', str(evidence)],
+                                cwd=source, stdout=log, stderr=subprocess.STDOUT, timeout=POLICY['maxTestMinutes'] * 60)
+    after = guard_patch(source, ticket)
+    require(before == after, 'TESTS_CHANGED_PATCH')
+    release = json.loads((evidence / 'release-result.json').read_text())
+    require(release.get('head') == ticket['head'], 'RELEASE_HEAD_MISMATCH')
+    report = {'head': ticket['head'], 'patchSha256': hashlib.sha256(before).hexdigest(),
+              'status': 'PASS' if result.returncode == 0 else 'FAIL', 'releaseGate': release['status'],
+              'tests': ['npm run validate:alpha:release']}
+    (output / 'validation.json').write_text(json.dumps(report, indent=2))
+    repair_validation(report, ticket, before)
+    return report
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('command', choices=['prepare', 'authorize', 'export', 'verify', 'publish', 'finish', 'enroll', 'publication-preflight', 'prepare-analysis'])
+    parser.add_argument('command', choices=['prepare', 'authorize', 'export', 'verify', 'publish', 'finish', 'enroll', 'publication-preflight', 'prepare-analysis',
+                                           'record-review', 'prepare-repair', 'repair-worktree', 'validate-repair'])
     parser.add_argument('--repo', required=True)
     parser.add_argument('--snapshot', type=Path)
     parser.add_argument('--output', type=Path, default=Path('followup'))
     parser.add_argument('--ticket', type=Path)
     parser.add_argument('--proposal', type=Path)
     parser.add_argument('--review', type=Path)
+    parser.add_argument('--review-context', help='Trusted independent reviewer execution context, never model-supplied')
+    parser.add_argument('--review-failed', action='store_true', help='Record failed independent review execution; never a CI failure')
+    parser.add_argument('--validation', type=Path)
+    parser.add_argument('--manual-handoff', action='store_true', help='Explicit current local session only; never invokes a model')
+    parser.add_argument('--bind-repair-owner', action='store_true', help='Explicit enrollment upgrade; preserve scope and never lower counters')
     parser.add_argument('--source', type=Path)
     parser.add_argument('--patch', type=Path)
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--state', type=Path, help='Dry-run fixture only')
     parser.add_argument('--run-id', default=os.environ.get('GITHUB_RUN_ID', 'local'))
     parser.add_argument('--result', default='FAILED')
+    parser.add_argument('--failure-kind', choices=['MODEL', 'VALIDATION', 'CI'], help='Trusted failure classification; no secret-bearing log text')
     parser.add_argument('--pr', type=int)
     parser.add_argument('--attempts-used', type=int)
     parser.add_argument('--analysis-attempt', type=int, default=1)
@@ -342,6 +496,16 @@ def main():
     args = parser.parse_args()
     api = API(args.repo)
     store = Store(api)
+    if args.command in ('repair-worktree', 'validate-repair'):
+        ticket = json.loads(args.ticket.read_text())
+        require(ticket.get('operation') == 'REPAIR_EXISTING_PR', 'REPAIR_TICKET_REQUIRED')
+        if args.command == 'repair-worktree':
+            require(not args.output.exists(), 'WORKTREE_ALREADY_EXISTS')
+            require(SHA.fullmatch(ticket['head']), 'INVALID_HEAD')
+            git(args.source, 'worktree', 'add', '--detach', str(args.output.resolve()), ticket['head'])
+        else:
+            validate_repair(args.source, ticket, args.output)
+        return
     if args.command in ('export', 'verify'):
         ticket = json.loads(args.ticket.read_text())
         if args.command == 'export':
@@ -358,10 +522,26 @@ def main():
         require(args.pr and args.attempts_used is not None, 'PR_AND_TRUSTED_PRIOR_ATTEMPTS_REQUIRED')
         pr = api.get(f'pulls/{args.pr}')
         check_identity(api, {'pr': args.pr, 'head': pr['head']['sha'], 'base': pr['base']['sha']})
-        ledger = pipeline.ledger_summary(api.content(LEDGER, pr['head']['sha']))
-        require(type(ledger.get('repairIterations')) is int and args.attempts_used >= ledger['repairIterations'], 'CANNOT_RESET_EXISTING_REPAIR_COUNT')
+        content = api.content(LEDGER, pr['head']['sha'])
+        if content['status'] == 'MISSING':
+            content = api.content(pipeline.LEDGERS[1], pr['head']['sha'])
+        ledger = pipeline.ledger_summary(content)
+        require(ledger['status'] == 'READ_UNTRUSTED', 'LEDGER_REQUIRED')
+        count = ledger.get('repairIterations')
+        require((count is None and content.get('path') == pipeline.LEDGERS[1])
+                or type(count) is int and args.attempts_used >= count, 'CANNOT_RESET_EXISTING_REPAIR_COUNT')
         state = empty_state() if args.bootstrap else store.load()
-        enroll(state, args.pr, args.attempts_used, args.scope)
+        require(state['lock'] is None, 'CONCURRENT_SESSION_OR_STALE_LEASE')
+        if args.bind_repair_owner:
+            lineage = state['prs'].get(str(args.pr))
+            require(lineage is not None and not args.bootstrap, 'EXISTING_ENROLLMENT_REQUIRED')
+            root = state['roots'][lineage['root']]
+            require(args.scope == root['scope'] and root['attempts'] <= args.attempts_used <= 3,
+                    'CANNOT_RESET_BUDGET_OR_CHANGE_SCOPE')
+            root['attempts'] = args.attempts_used
+        else:
+            enroll(state, args.pr, args.attempts_used, args.scope)
+        state['prs'][str(args.pr)]['repairIdentity'] = {'headRef': pr['head']['ref'], 'author': pr['user']['login']}
         if args.bootstrap:
             default = api.get('')['default_branch']
             head = api.get('git/ref/heads/' + default)['object']['sha']
@@ -373,6 +553,61 @@ def main():
             store.save(state)
         return
     state = validate_state(json.loads(args.state.read_text())) if args.dry_run and args.state else store.load()
+    if args.command in ('record-review', 'prepare-repair'):
+        require(args.pr is not None, 'SINGLE_PR_REQUIRED')
+        pr = api.get(f'pulls/{args.pr}')
+        checks = pipeline.ci(api, pr['head']['sha'])
+        require(pr['state'] == 'open' and pr['head']['repo']['full_name'] == args.repo, 'OPEN_SAME_REPO_PR_REQUIRED')
+        require(checks['status'] in ('PASS', 'FAIL'), 'CI_PENDING')
+        analysis = pipeline.analyze(api, pr, checks)
+        args.output.mkdir(parents=True, exist_ok=False)
+        if args.command == 'record-review':
+            if args.review_failed:
+                require(state['lock'] is None, 'CONCURRENT_SESSION_OR_STALE_LEASE')
+                require(args.review_context, 'INDEPENDENT_REVIEW_CONTEXT_REQUIRED')
+                key = review_key(pr['number'], analysis['head'])
+                require(key not in state['runs'], 'DUPLICATE_REVIEW_HEAD')
+                result = {'key': key, 'kind': 'PR_REVIEW', 'pr': pr['number'], 'head': analysis['head'],
+                          'base': analysis['base'], 'status': 'BLOCKED', 'reason': 'REVIEW_EXECUTION_FAILED',
+                          'ciStatus': checks['status'], 'reviewContext': args.review_context}
+                state['runs'][key] = result
+                if not args.dry_run:
+                    store.save(state)
+                (args.output / 'codex-request.json').write_text(json.dumps(result, indent=2))
+                return
+            require(args.source and args.review and args.review_context, 'REVIEW_SOURCE_AND_CONTEXT_REQUIRED')
+            require(git(args.source, 'rev-parse', 'HEAD').decode().strip() == analysis['head'], 'SOURCE_HEAD_CHANGED')
+            patch = git(args.source, 'diff', '--no-ext-diff', '--no-textconv', analysis['base'] + '...' + analysis['head'])
+            current = api.get(f'pulls/{args.pr}')
+            require(current['head']['sha'] == analysis['head'] and current['base']['sha'] == analysis['base'], 'STALE_PR')
+            require(pipeline.ci(api, analysis['head']) == checks, 'CI_CHANGED_DURING_REVIEW')
+            result = record_review(state, analysis, json.loads(args.review.read_text()), patch, args.review_context)
+            if not args.dry_run:
+                store.save(state)
+        else:
+            # No implicit API fallback, daemon login copying or model invocation.
+            result = {'status': 'BLOCKED', 'reason': 'NO_SUPPORTED_NO_COST_EXECUTOR', 'modelCall': 'NOT_RUN'}
+            if args.manual_handoff:
+                require(not os.environ.get('GITHUB_ACTIONS'), 'LOCAL_EXPLICIT_SESSION_REQUIRED')
+                check_identity(api, {'pr': pr['number'], 'head': analysis['head'], 'base': analysis['base']})
+                repair_dependencies(api, analysis)
+                ticket = reserve_repair(state, analysis, pr, args.run_id, int(datetime.now(timezone.utc).timestamp()))
+                if not args.dry_run:
+                    store.save(state)
+                (args.output / 'ticket.json').write_text(json.dumps(ticket, indent=2))
+                (args.output / 'implement-prompt.txt').write_text(repair_prompt(ticket, analysis))
+                result = {'status': 'MANUAL_SESSION_HANDOFF', 'operation': 'REPAIR_EXISTING_PR',
+                          'ticket': 'ticket.json', 'prompt': 'implement-prompt.txt', 'modelCall': 'NOT_RUN'}
+            else:
+                record = state['runs'].get(review_key(pr['number'], analysis['head']))
+                if record:
+                    record['execution'] = result
+                    if not args.dry_run:
+                        store.save(state)
+        (args.output / 'codex-request.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
+        (args.output / 'evidence.json').write_text(json.dumps(analysis, ensure_ascii=False))
+        print(json.dumps(result, ensure_ascii=False))
+        return
     if args.command == 'prepare-analysis':
         require(args.pr is not None, 'SINGLE_PR_REQUIRED')
         pr = api.get(f'pulls/{args.pr}')
@@ -413,6 +648,17 @@ def main():
                 require(str(pr['number']) in state['prs'], 'TRUSTED_ENROLLMENT_REQUIRED')
                 require(f"{pr['number']}:{pr['head']['sha']}" not in state['runs'], 'DUPLICATE_HEAD')
                 analysis = pipeline.analyze(api, pr, pipeline.ci(api, pr['head']['sha']))
+                review = state['runs'].get(review_key(pr['number'], pr['head']['sha']))
+                if review:
+                    reason = 'NO_SUPPORTED_NO_COST_EXECUTOR' if review['status'] == 'REPAIR_REQUIRED' else review['status']
+                    reasons.append({'pr': pr['number'], 'head': pr['head']['sha'],
+                                    'decision' if reason == 'MERGE_READY' else 'blocked': reason,
+                                    'reviewStatus': review['status'], 'modelCall': 'NOT_RUN'})
+                    continue  # Never turn a repair verdict into a new follow-up PR.
+                if state['prs'][str(pr['number'])].get('nextAction') == 'WAIT_CI_THEN_INDEPENDENT_REVIEW':
+                    reasons.append({'pr': pr['number'], 'head': pr['head']['sha'],
+                                    'blocked': 'INDEPENDENT_REVIEW_REQUIRED', 'modelCall': 'NOT_RUN'})
+                    continue
                 trial = copy.deepcopy(state)
                 ticket = reserve(trial, analysis, args.run_id, int(datetime.now(timezone.utc).timestamp()))
                 selected = (trial, ticket, analysis)
@@ -445,6 +691,14 @@ def main():
         require(args.review is not None, 'INDEPENDENT_REVIEW_REQUIRED')
         verify(json.loads(args.review.read_text()), current, args.patch.read_bytes())
         pr = check_identity(api, current)
+        repairing = current.get('operation') == 'REPAIR_EXISTING_PR'
+        if repairing:
+            require(args.validation is not None, 'RELEASE_GATE_REQUIRED')
+            repair_validation(json.loads(args.validation.read_text()), current, args.patch.read_bytes())
+            require(pr['head']['ref'] == current['headRef'] and pr['user']['login'] == current['author'], 'PR_OWNERSHIP_CHANGED')
+            repair_dependencies(api, pipeline.analyze(api, pr, pipeline.ci(api, current['head'])))
+            require(git(args.source, 'rev-parse', '--git-dir') != git(args.source, 'rev-parse', '--git-common-dir'),
+                    'ISOLATED_WORKTREE_REQUIRED')
         require(current['status'] == 'IMPLEMENTING', 'INVALID_TRANSITION')
         publication_limits(state, current)
         require(int(datetime.now(timezone.utc).timestamp()) < current['expiresAt'], 'LEASE_EXPIRED')
@@ -462,12 +716,32 @@ def main():
         current['status'] = 'PUBLISHING'
         store.save(state)
         # After this point any failure is ambiguous and retains the durable lock.
-        branch = 'codex/auto-' + digest(current['key'])[:20]
-        git(args.source, 'checkout', '-b', branch)
+        branch = current['headRef'] if repairing else 'codex/auto-' + digest(current['key'])[:20]
+        git(args.source, 'check-ref-format', 'refs/heads/' + branch)
+        if not repairing:
+            git(args.source, 'checkout', '-b', branch)
         git(args.source, 'add', '--all')
         git(args.source, '-c', 'user.name=LUMA Codex', '-c', 'user.email=luma-codex@users.noreply.github.com', 'commit', '-m', 'feat: bounded follow-up ' + current['taskId'])
-        check_identity(api, current)
+        try:
+            check_identity(api, current)
+            if repairing:
+                # Normal fast-forward push: if another writer wins after this read, Git rejects ours.
+                remote = git(args.source, 'ls-remote', 'origin', 'refs/heads/' + branch).decode().split()
+                require(remote and remote[0] == current['head'], 'REMOTE_HEAD_CHANGED')
+        except ValueError as error:
+            if repairing and str(error) in ('STALE_PR', 'REMOTE_HEAD_CHANGED'):
+                state = store.load()
+                publication_conflict(state, current, str(error))
+                store.save(state)
+            raise
         git(args.source, 'push', 'origin', 'HEAD:refs/heads/' + branch)
+        if repairing:
+            updated = git(args.source, 'rev-parse', 'HEAD').decode().strip()
+            state = store.load()
+            finish(state, current['key'], args.run_id, 'UPDATED', updated)
+            store.save(state)
+            print(pr['html_url'])
+            return
         child = api.put('pulls', {'title': 'codex: follow-up for PR #' + str(current['pr']), 'head': branch,
             'base': pr['head']['ref'], 'draft': True,
             'body': 'Bounded Codex proposal. Source HEAD ' + current['head'] + '. Task ' + current['taskId'] +
@@ -475,10 +749,13 @@ def main():
         api.put(f"issues/{child['number']}/labels", {'labels': ['luma-codex-owned']}, method='POST')
         state = store.load()
         finish(state, current['key'], args.run_id, 'PUBLISHED', child['number'])
+        state['prs'][str(child['number'])]['repairIdentity'] = {'headRef': branch, 'author': child['user']['login']}
         store.save(state)
         print(child['html_url'])
         return
     elif args.command == 'finish':
+        if args.failure_kind:
+            current['failureKind'] = args.failure_kind
         finish(state, ticket['key'], args.run_id, args.result)
     if not args.dry_run:
         store.save(state)

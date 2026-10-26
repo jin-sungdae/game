@@ -94,6 +94,35 @@ class PipelineTests(unittest.TestCase):
         api.pr['head']['sha'] = 'c'*40
         self.assertEqual(len(self.run_pipeline(api, state)[2]), 1)
 
+    def test_new_head_emits_new_independent_review_request_without_model_call(self):
+        api = API()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            p.process(api, None, root)
+            state = json.loads((root/'state.json').read_text())
+            request = json.loads(next(root.rglob('review-request.json')).read_text())
+            self.assertEqual(request['head'], HEAD)
+            self.assertEqual(request['modelCall'], 'NOT_RUN')
+            self.assertEqual(request['reason'], 'NO_SUPPORTED_NO_COST_EXECUTOR')
+            api.pr['head']['sha'] = 'c'*40
+            p.process(api, state, root)
+            self.assertEqual(len(list(root.rglob('review-request.json'))), 2)
+
+    def test_existing_production_ledger_fallback_does_not_invent_repair_budget(self):
+        class Production(API):
+            def content(self, path, sha):
+                if path == p.LEDGER:
+                    return {'status': 'MISSING', 'path': path}
+                if path == p.LEDGERS[1]:
+                    return {'status': 'READ', 'path': path, 'text': json.dumps({'schemaVersion':1,
+                            'objectives':[{'id':17,'status':'IN_PROGRESS'}], 'assetRecovery':{'pr87':{'status':'BLOCKED'}}})}
+                return super().content(path, sha)
+        api = Production(); a = p.analyze(api, api.pr, p.ci(api, HEAD))
+        self.assertEqual(a['ledger']['path'], p.LEDGERS[1])
+        self.assertIsNone(a['ledgerSummary']['repairIterations'])
+        self.assertIn('pr87', a['ledgerSummary']['blocked'])
+        self.assertIn('미완료 항목 1개', p.prompt(a))
+
     def test_all_prs_and_same_sha_different_pr_are_independent(self):
         class Multi(API):
             def pages(self, endpoint, key=None):
