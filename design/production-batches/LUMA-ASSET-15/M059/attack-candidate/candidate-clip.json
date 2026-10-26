@@ -1,0 +1,77 @@
+{
+  "conceptId": "M059",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M059/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "ATTACK",
+    "frames": 8,
+    "frameDuration": 100,
+    "loop": false
+  },
+  "movableRect": [
+    73,
+    31,
+    192,
+    211
+  ],
+  "parts": [
+    {
+      "x": 128,
+      "y": 177,
+      "rx": 17,
+      "ry": 24,
+      "dx": 3.6,
+      "dy": -2.3,
+      "name": "ribcage-or-forearm",
+      "samples": [
+        0.02,
+        -0.3,
+        -0.5,
+        0.2,
+        1,
+        0.6,
+        0.18,
+        0.03
+      ]
+    },
+    {
+      "x": 178,
+      "y": 175,
+      "rx": 13,
+      "ry": 20,
+      "dx": -1.5,
+      "dy": -1,
+      "name": "tail-or-counterarm",
+      "samples": [
+        0.01,
+        -0.1,
+        0.15,
+        0.6,
+        1,
+        0.7,
+        0.25,
+        0.04
+      ]
+    }
+  ],
+  "anatomyScope": "앞팔을 뒤로 준비한 뒤 짧게 내미는 제자리 공격 후보; Battle 미연결",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 첫 시도; 실패 시 수정 없이 보존",
+  "rigReuse": "design/production-batches/action-followup/M057/hit-pilot/rig-hit.cjs"
+}

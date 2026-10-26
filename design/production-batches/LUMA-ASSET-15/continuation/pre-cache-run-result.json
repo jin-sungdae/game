@@ -1,0 +1,16 @@
+{
+  "head": "0401fded0334a5d359401d7ccec2908971f3f71c",
+  "command": [
+    "python3",
+    "scripts/validate_alpha_release.py",
+    "--output",
+    "/Users/jinseongdae/.codex/worktrees/assets-m056-m060/New project/artifacts/asset15-continuation/checks/release"
+  ],
+  "status": "INCOMPLETE",
+  "exitCode": -2,
+  "timeoutSeconds": null,
+  "parallelGatesInThisSession": 1,
+  "scope": "Existing release runner; no validator replacement, no skipped assertions",
+  "reason": "SIGINT",
+  "seconds": 910.89
+}

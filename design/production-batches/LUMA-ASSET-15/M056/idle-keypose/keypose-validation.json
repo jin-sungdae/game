@@ -1,0 +1,23 @@
+{
+  "status": "VALIDATION_FAILED",
+  "sourceSha256": "2b9d22f7a475c53dbaaa803d391972d7111fdd79a9f55ac9c5c6bb3424d10ab9",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 1254,
+    "height": 1254,
+    "mainPixels": 507261,
+    "detachedPixels": 3302,
+    "detachedComponents": 807,
+    "detachedAlphaHistogram": {
+      "1": 3291,
+      "2": 11
+    }
+  },
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "productionEligible": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "appearanceReview": "MANUAL_REQUIRED: image generation is a keypose proposal, not approved joint separation"
+}
