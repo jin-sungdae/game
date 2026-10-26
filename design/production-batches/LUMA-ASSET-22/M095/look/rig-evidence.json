@@ -1,0 +1,87 @@
+{
+  "source": "design/production-batches/monsters/batch10/M095/base-v2.png",
+  "eyes": [
+    {
+      "x": 194,
+      "y": 98,
+      "rx": 4,
+      "ry": 2.5,
+      "dx": 0.6
+    },
+    {
+      "x": 213,
+      "y": 98,
+      "rx": 1.6,
+      "ry": 2,
+      "dx": 0.25
+    }
+  ],
+  "frames": [
+    {
+      "file": "look_00.png",
+      "gaze": 0,
+      "pixelSha256": "0b4b816c01d4cd709dcf3259093b6570ff9a314b8644053e8f627451183cd002"
+    },
+    {
+      "file": "look_01.png",
+      "gaze": 0.3,
+      "pixelSha256": "7c413c766d187b1451ea91e5864cab51a1cdd6fed90409e5b796a597e044823a"
+    },
+    {
+      "file": "look_02.png",
+      "gaze": 0.7,
+      "pixelSha256": "cc9e9832cfe72d507c4ba7eb7c4dbd243f47f6e185ff4c9c95284f36a3c9ed71"
+    },
+    {
+      "file": "look_03.png",
+      "gaze": 1,
+      "pixelSha256": "30e87fff40077a600572d4ffaaddf784b8f037ae1888660041e3bd3bdb0ddf3c"
+    },
+    {
+      "file": "look_04.png",
+      "gaze": 0.6,
+      "pixelSha256": "cf646808869773af8c25287d41041023f9856276a25de536b322856c39cb1fda"
+    },
+    {
+      "file": "look_05.png",
+      "gaze": 0.1,
+      "pixelSha256": "1a96cc6283e6712db36f76c1b0eb8d6b140fc57d6332ecb47465501d86d53762"
+    },
+    {
+      "file": "look_06.png",
+      "gaze": -0.3,
+      "pixelSha256": "defe02114d8b12ddf5090a3c8ac4ddcd4958f023df0adeb12999c022a9afa204"
+    },
+    {
+      "file": "look_07.png",
+      "gaze": -0.7,
+      "pixelSha256": "cc4e606b16f6e34cafd5242f88423e7a6c61a953234d8099059aee473fa1939e"
+    },
+    {
+      "file": "look_08.png",
+      "gaze": -1,
+      "pixelSha256": "9f98f3a9c3b1a1c1dd525bab267a15545db824bb122fcf21038a2a7a3682e356"
+    },
+    {
+      "file": "look_09.png",
+      "gaze": -0.6,
+      "pixelSha256": "b1046e8f70513eb108bc59501ea016ebcc19bb506fc956b1531ff36fe9177ffe"
+    },
+    {
+      "file": "look_10.png",
+      "gaze": -0.2,
+      "pixelSha256": "bd65ed0a70249776e72bfb6400d5376dc22eb618e0c31ca9a1c5e79b0d3d37cf"
+    },
+    {
+      "file": "look_11.png",
+      "gaze": -0.05,
+      "pixelSha256": "7e6ebcfa10d8d4775b38cbf3fd42a6639a8387ccab071ca2b9e3e90da6161ad8"
+    }
+  ],
+  "alphaPolicy": "unchanged",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-22 independent LOOK; no reset or failure recovery"
+}
