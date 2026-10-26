@@ -1,0 +1,46 @@
+{
+  "conceptId": "M046",
+  "species": null,
+  "evolutionStage": null,
+  "sessionId": "LUMA-ASSET-13",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch05/M046/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 6,
+    "frameDuration": 90,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 152,
+      "y": 77,
+      "rx": 6,
+      "ry": 7,
+      "dx": 0.8
+    },
+    {
+      "x": 171,
+      "y": 79,
+      "rx": 3,
+      "ry": 5,
+      "dx": 0.35
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "reusedRig": "design/production-batches/action-followup/M003/rig-blink.cjs"
+}

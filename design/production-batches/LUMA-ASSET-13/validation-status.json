@@ -1,0 +1,35 @@
+{
+  "sessionId": "LUMA-ASSET-13",
+  "candidateValidation": {
+    "passedClips": 12,
+    "framePng": 90,
+    "totalPngIncludingSourcesAndKeyposes": 105,
+    "failedRigAttempts": 2,
+    "failedGeneratedSources": 3
+  },
+  "animationRegression": {
+    "command": "npm run test:animation",
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "assetTests": {
+    "command": "npm run test:assets",
+    "status": "RUNNING",
+    "log": "/tmp/luma-asset13-assets.log"
+  },
+  "releaseGate": {
+    "command": "JAVA_HOME=<Java21> PG_BIN=<PostgreSQL16> python3 scripts/validate_alpha_release.py --output /tmp/luma-asset13-release",
+    "status": "RUNNING",
+    "lastObservedStep": "asset-tests",
+    "completedSteps": [
+      "frontend-build",
+      "animation-content",
+      "presentation"
+    ],
+    "log": "/tmp/luma-asset13-release.log"
+  },
+  "manual": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "runtimeConnected": false,
+  "productionApproved": false
+}

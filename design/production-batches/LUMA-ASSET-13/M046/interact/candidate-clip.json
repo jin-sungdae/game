@@ -1,0 +1,77 @@
+{
+  "conceptId": "M046",
+  "sessionId": "LUMA-ASSET-13",
+  "species": null,
+  "evolutionStage": null,
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M046/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "near-hand-greeting",
+      "x": 90,
+      "y": 183,
+      "rx": 22,
+      "ry": 25,
+      "dx": -1.6,
+      "dy": -3,
+      "samples": [
+        0.01,
+        0.5,
+        1,
+        0.4,
+        0.85,
+        0.3,
+        0.1,
+        0.025
+      ]
+    },
+    {
+      "name": "far-shoulder-counterbalance",
+      "x": 185,
+      "y": 151,
+      "rx": 23,
+      "ry": 19,
+      "dx": 0.8,
+      "dy": -0.6,
+      "samples": [
+        0.02,
+        0.1,
+        0.45,
+        1,
+        0.5,
+        0.8,
+        0.3,
+        0.03
+      ]
+    }
+  ],
+  "movableRect": [
+    45,
+    130,
+    219,
+    211
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "reusedRig": "design/production-batches/action-followup/M050/hit-pilot/rig-hit.cjs",
+  "behaviorContract": "Isolated proposed body response; no Personality, SpeciesBehavior or MovementProfile activation"
+}

@@ -1,0 +1,12 @@
+{
+  "tool": "built-in image_gen",
+  "sourceBase": "design/production-batches/monsters/batch05/M046/base-v2.png",
+  "promptIntent": "앞팔 어깨·팔꿈치 펀치 관절 keypose",
+  "constraints": "Species Identity 유지, 실제 투명 배경, 단일 연결 실루엣, 그림자·입자 금지, 관절 자세만 변경",
+  "appearanceObservation": "얼굴·눈 크기와 팔 비율 변화",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "firstIndependentAttempt": true
+}
