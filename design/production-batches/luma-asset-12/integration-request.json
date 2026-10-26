@@ -102,7 +102,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M041/breath",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "BLINK",
@@ -115,7 +116,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M041/blink",
-          "frameCount": 8
+          "frameCount": 8,
+          "automated": "PASS"
         },
         {
           "action": "LOOK",
@@ -127,7 +129,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "MOVE",
@@ -139,7 +141,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
         },
         {
           "action": "TURN",
@@ -151,7 +153,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "반대 시점 신체·판·꼬리 가림 keypose 필요. 단순 좌우 반전으로 대체하지 않음."
+          "reason": "\ubc18\ub300 \uc2dc\uc810 \uc2e0\uccb4\u00b7\ud310\u00b7\uaf2c\ub9ac \uac00\ub9bc keypose \ud544\uc694. \ub2e8\uc21c \uc88c\uc6b0 \ubc18\uc804\uc73c\ub85c \ub300\uccb4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "REST",
@@ -163,7 +165,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "몸통을 낮추는 관절 keypose와 접지 검증 필요."
+          "reason": "\ubab8\ud1b5\uc744 \ub0ae\ucd94\ub294 \uad00\uc808 keypose\uc640 \uc811\uc9c0 \uac80\uc99d \ud544\uc694."
         },
         {
           "action": "SLEEP",
@@ -175,7 +177,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "CURSOR_REACT",
@@ -188,7 +190,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M041/cursor_react",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "INTERACT",
@@ -201,7 +204,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M041/interact",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "ATTACK",
@@ -213,7 +217,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
         },
         {
           "action": "SKILL_CAST",
@@ -225,7 +229,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
         },
         {
           "action": "HIT",
@@ -254,7 +258,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
         },
         {
           "action": "DEFEAT",
@@ -266,7 +270,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "JUMP",
@@ -275,7 +279,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "FLY",
@@ -284,7 +288,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
         },
         {
           "action": "HOVER",
@@ -293,7 +297,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "LAND",
@@ -302,7 +306,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
         },
         {
           "action": "CHARGE",
@@ -311,7 +315,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "RECOVERY",
@@ -320,7 +324,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
         }
       ],
       "productionApproval": "HUMAN_REVIEW_REQUIRED",
@@ -423,7 +427,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M042/breath",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "BLINK",
@@ -436,7 +441,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M042/blink",
-          "frameCount": 8
+          "frameCount": 8,
+          "automated": "PASS"
         },
         {
           "action": "LOOK",
@@ -448,7 +454,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "MOVE",
@@ -460,7 +466,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
         },
         {
           "action": "TURN",
@@ -472,7 +478,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "반대 시점 신체·판·꼬리 가림 keypose 필요. 단순 좌우 반전으로 대체하지 않음."
+          "reason": "\ubc18\ub300 \uc2dc\uc810 \uc2e0\uccb4\u00b7\ud310\u00b7\uaf2c\ub9ac \uac00\ub9bc keypose \ud544\uc694. \ub2e8\uc21c \uc88c\uc6b0 \ubc18\uc804\uc73c\ub85c \ub300\uccb4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "REST",
@@ -501,7 +507,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "CURSOR_REACT",
@@ -514,7 +520,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M042/cursor_react",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "INTERACT",
@@ -527,7 +534,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M042/interact",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "ATTACK",
@@ -539,7 +547,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
         },
         {
           "action": "SKILL_CAST",
@@ -551,7 +559,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
         },
         {
           "action": "HIT",
@@ -564,7 +572,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M042/hit",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "VICTORY",
@@ -576,7 +585,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
         },
         {
           "action": "DEFEAT",
@@ -588,7 +597,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "JUMP",
@@ -597,7 +606,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "FLY",
@@ -606,7 +615,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
         },
         {
           "action": "HOVER",
@@ -615,7 +624,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "LAND",
@@ -624,7 +633,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
         },
         {
           "action": "CHARGE",
@@ -633,7 +642,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "RECOVERY",
@@ -642,7 +651,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
         }
       ],
       "productionApproval": "HUMAN_REVIEW_REQUIRED",
@@ -730,7 +739,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "생성 IDLE: 분리 Alpha·경계 접촉·크기·접지 및 외형 연속성 실패",
+          "reason": "\uc0dd\uc131 IDLE: \ubd84\ub9ac Alpha\u00b7\uacbd\uacc4 \uc811\ucd09\u00b7\ud06c\uae30\u00b7\uc811\uc9c0 \ubc0f \uc678\ud615 \uc5f0\uc18d\uc131 \uc2e4\ud328",
           "candidatePath": "design/production-batches/luma-asset-12/M043/idle",
           "frameCount": 8
         },
@@ -744,7 +753,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "단단한 얼음 판 전용 관절/분리 레이어 필요. 연성 호흡 변형 금지."
+          "reason": "\ub2e8\ub2e8\ud55c \uc5bc\uc74c \ud310 \uc804\uc6a9 \uad00\uc808/\ubd84\ub9ac \ub808\uc774\uc5b4 \ud544\uc694. \uc5f0\uc131 \ud638\ud761 \ubcc0\ud615 \uae08\uc9c0."
         },
         {
           "action": "BLINK",
@@ -758,7 +767,8 @@
           "status": "BLOCKED",
           "candidatePath": "design/production-batches/luma-asset-12/M043/blink",
           "frameCount": 8,
-          "reason": "시각 확인: 눈 리그 좌표가 눈 폐쇄를 충분히 표현하지 못함. 3/3 이후 수정하지 않음."
+          "reason": "\uc2dc\uac01 \ud655\uc778: \ub208 \ub9ac\uadf8 \uc88c\ud45c\uac00 \ub208 \ud3d0\uc1c4\ub97c \ucda9\ubd84\ud788 \ud45c\ud604\ud558\uc9c0 \ubabb\ud568. 3/3 \uc774\ud6c4 \uc218\uc815\ud558\uc9c0 \uc54a\uc74c.",
+          "automated": "PASS"
         },
         {
           "action": "LOOK",
@@ -770,7 +780,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "MOVE",
@@ -782,7 +792,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
         },
         {
           "action": "TURN",
@@ -811,7 +821,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "몸통을 낮추는 관절 keypose와 접지 검증 필요."
+          "reason": "\ubab8\ud1b5\uc744 \ub0ae\ucd94\ub294 \uad00\uc808 keypose\uc640 \uc811\uc9c0 \uac80\uc99d \ud544\uc694."
         },
         {
           "action": "SLEEP",
@@ -823,7 +833,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "CURSOR_REACT",
@@ -835,7 +845,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "단단한 얼음 판 전용 관절/분리 레이어 필요. 연성 호흡 변형 금지."
+          "reason": "\ub2e8\ub2e8\ud55c \uc5bc\uc74c \ud310 \uc804\uc6a9 \uad00\uc808/\ubd84\ub9ac \ub808\uc774\uc5b4 \ud544\uc694. \uc5f0\uc131 \ud638\ud761 \ubcc0\ud615 \uae08\uc9c0."
         },
         {
           "action": "INTERACT",
@@ -847,7 +857,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "단단한 얼음 판 전용 관절/분리 레이어 필요. 연성 호흡 변형 금지."
+          "reason": "\ub2e8\ub2e8\ud55c \uc5bc\uc74c \ud310 \uc804\uc6a9 \uad00\uc808/\ubd84\ub9ac \ub808\uc774\uc5b4 \ud544\uc694. \uc5f0\uc131 \ud638\ud761 \ubcc0\ud615 \uae08\uc9c0."
         },
         {
           "action": "ATTACK",
@@ -859,7 +869,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
         },
         {
           "action": "SKILL_CAST",
@@ -871,7 +881,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
         },
         {
           "action": "HIT",
@@ -883,7 +893,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "독립 충격 자세 및 지지 다리 관절 keypose 필요."
+          "reason": "\ub3c5\ub9bd \ucda9\uaca9 \uc790\uc138 \ubc0f \uc9c0\uc9c0 \ub2e4\ub9ac \uad00\uc808 keypose \ud544\uc694."
         },
         {
           "action": "VICTORY",
@@ -895,7 +905,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
         },
         {
           "action": "DEFEAT",
@@ -907,7 +917,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "JUMP",
@@ -916,7 +926,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "FLY",
@@ -925,7 +935,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
         },
         {
           "action": "HOVER",
@@ -934,7 +944,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "LAND",
@@ -943,7 +953,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
         },
         {
           "action": "CHARGE",
@@ -952,7 +962,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "RECOVERY",
@@ -961,7 +971,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
         }
       ],
       "productionApproval": "HUMAN_REVIEW_REQUIRED",
@@ -1064,7 +1074,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M044/breath",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "BLINK",
@@ -1078,7 +1089,8 @@
           "status": "BLOCKED",
           "candidatePath": "design/production-batches/luma-asset-12/M044/blink",
           "frameCount": 8,
-          "reason": "시각 확인: 눈 리그 좌표가 눈 폐쇄를 충분히 표현하지 못함. 3/3 이후 수정하지 않음."
+          "reason": "\uc2dc\uac01 \ud655\uc778: \ub208 \ub9ac\uadf8 \uc88c\ud45c\uac00 \ub208 \ud3d0\uc1c4\ub97c \ucda9\ubd84\ud788 \ud45c\ud604\ud558\uc9c0 \ubabb\ud568. 3/3 \uc774\ud6c4 \uc218\uc815\ud558\uc9c0 \uc54a\uc74c.",
+          "automated": "PASS"
         },
         {
           "action": "LOOK",
@@ -1090,7 +1102,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "MOVE",
@@ -1102,7 +1114,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
         },
         {
           "action": "TURN",
@@ -1114,7 +1126,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "반대 시점 신체·판·꼬리 가림 keypose 필요. 단순 좌우 반전으로 대체하지 않음."
+          "reason": "\ubc18\ub300 \uc2dc\uc810 \uc2e0\uccb4\u00b7\ud310\u00b7\uaf2c\ub9ac \uac00\ub9bc keypose \ud544\uc694. \ub2e8\uc21c \uc88c\uc6b0 \ubc18\uc804\uc73c\ub85c \ub300\uccb4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "REST",
@@ -1126,7 +1138,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "몸통을 낮추는 관절 keypose와 접지 검증 필요."
+          "reason": "\ubab8\ud1b5\uc744 \ub0ae\ucd94\ub294 \uad00\uc808 keypose\uc640 \uc811\uc9c0 \uac80\uc99d \ud544\uc694."
         },
         {
           "action": "SLEEP",
@@ -1138,7 +1150,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "CURSOR_REACT",
@@ -1151,7 +1163,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M044/cursor_react",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "INTERACT",
@@ -1165,7 +1178,8 @@
           "status": "BLOCKED",
           "candidatePath": "design/production-batches/luma-asset-12/M044/interact",
           "frameCount": 16,
-          "reason": "시각 확인: 눈 리그 좌표가 눈 폐쇄를 충분히 표현하지 못함. 3/3 이후 수정하지 않음."
+          "reason": "\uc2dc\uac01 \ud655\uc778: \ub208 \ub9ac\uadf8 \uc88c\ud45c\uac00 \ub208 \ud3d0\uc1c4\ub97c \ucda9\ubd84\ud788 \ud45c\ud604\ud558\uc9c0 \ubabb\ud568. 3/3 \uc774\ud6c4 \uc218\uc815\ud558\uc9c0 \uc54a\uc74c.",
+          "automated": "PASS"
         },
         {
           "action": "ATTACK",
@@ -1177,7 +1191,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
         },
         {
           "action": "SKILL_CAST",
@@ -1189,7 +1203,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
         },
         {
           "action": "HIT",
@@ -1202,7 +1216,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M044/hit",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "VICTORY",
@@ -1214,7 +1229,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
         },
         {
           "action": "DEFEAT",
@@ -1226,7 +1241,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "JUMP",
@@ -1235,7 +1250,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "FLY",
@@ -1244,7 +1259,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
         },
         {
           "action": "HOVER",
@@ -1253,7 +1268,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "LAND",
@@ -1262,7 +1277,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
         },
         {
           "action": "CHARGE",
@@ -1271,7 +1286,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "RECOVERY",
@@ -1280,7 +1295,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
         }
       ],
       "productionApproval": "HUMAN_REVIEW_REQUIRED",
@@ -1383,7 +1398,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M045/breath",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "BLINK",
@@ -1396,7 +1412,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M045/blink",
-          "frameCount": 8
+          "frameCount": 8,
+          "automated": "PASS"
         },
         {
           "action": "LOOK",
@@ -1408,7 +1425,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "눈동자 시선 이동과 머리 관절의 독립 마스크 필요. 귀 반응을 LOOK으로 중복 집계하지 않음."
+          "reason": "\ub208\ub3d9\uc790 \uc2dc\uc120 \uc774\ub3d9\uacfc \uba38\ub9ac \uad00\uc808\uc758 \ub3c5\ub9bd \ub9c8\uc2a4\ud06c \ud544\uc694. \uadc0 \ubc18\uc751\uc744 LOOK\uc73c\ub85c \uc911\ubcf5 \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "MOVE",
@@ -1420,7 +1437,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "체중 전달·발 접지·가림 해제를 지원하는 다리 관절 및 보행 keypose 필요."
+          "reason": "\uccb4\uc911 \uc804\ub2ec\u00b7\ubc1c \uc811\uc9c0\u00b7\uac00\ub9bc \ud574\uc81c\ub97c \uc9c0\uc6d0\ud558\ub294 \ub2e4\ub9ac \uad00\uc808 \ubc0f \ubcf4\ud589 keypose \ud544\uc694."
         },
         {
           "action": "TURN",
@@ -1432,7 +1449,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "반대 시점 신체·판·꼬리 가림 keypose 필요. 단순 좌우 반전으로 대체하지 않음."
+          "reason": "\ubc18\ub300 \uc2dc\uc810 \uc2e0\uccb4\u00b7\ud310\u00b7\uaf2c\ub9ac \uac00\ub9bc keypose \ud544\uc694. \ub2e8\uc21c \uc88c\uc6b0 \ubc18\uc804\uc73c\ub85c \ub300\uccb4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "REST",
@@ -1444,7 +1461,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "몸통을 낮추는 관절 keypose와 접지 검증 필요."
+          "reason": "\ubab8\ud1b5\uc744 \ub0ae\ucd94\ub294 \uad00\uc808 keypose\uc640 \uc811\uc9c0 \uac80\uc99d \ud544\uc694."
         },
         {
           "action": "SLEEP",
@@ -1456,7 +1473,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "누운 자세 및 호흡 전환 keypose 필요. BLINK 반복을 수면으로 집계하지 않음."
+          "reason": "\ub204\uc6b4 \uc790\uc138 \ubc0f \ud638\ud761 \uc804\ud658 keypose \ud544\uc694. BLINK \ubc18\ubcf5\uc744 \uc218\uba74\uc73c\ub85c \uc9d1\uacc4\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "CURSOR_REACT",
@@ -1469,7 +1486,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M045/cursor_react",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "INTERACT",
@@ -1482,7 +1500,8 @@
           },
           "status": "CANDIDATE_REVIEW_PENDING",
           "candidatePath": "design/production-batches/luma-asset-12/M045/interact",
-          "frameCount": 16
+          "frameCount": 16,
+          "automated": "PASS"
         },
         {
           "action": "ATTACK",
@@ -1494,7 +1513,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 공격 관절 keypose와 이벤트 타이밍 계약 필요."
+          "reason": "\uace0\uc720 \uacf5\uaca9 \uad00\uc808 keypose\uc640 \uc774\ubca4\ud2b8 \ud0c0\uc774\ubc0d \uacc4\uc57d \ud544\uc694."
         },
         {
           "action": "SKILL_CAST",
@@ -1506,7 +1525,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "기존 signature 서버 계약 미정; 고유 효과·시전 계약 승인 필요."
+          "reason": "\uae30\uc874 signature \uc11c\ubc84 \uacc4\uc57d \ubbf8\uc815; \uace0\uc720 \ud6a8\uacfc\u00b7\uc2dc\uc804 \uacc4\uc57d \uc2b9\uc778 \ud544\uc694."
         },
         {
           "action": "HIT",
@@ -1535,7 +1554,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "고유 승리 자세 및 단발 종료 포즈 필요."
+          "reason": "\uace0\uc720 \uc2b9\ub9ac \uc790\uc138 \ubc0f \ub2e8\ubc1c \uc885\ub8cc \ud3ec\uc988 \ud544\uc694."
         },
         {
           "action": "DEFEAT",
@@ -1547,7 +1566,7 @@
             "guiStatus": "GUI_NOT_VERIFIED"
           },
           "status": "BLOCKED",
-          "reason": "넘어짐·누운 자세·접지 keypose 필요."
+          "reason": "\ub118\uc5b4\uc9d0\u00b7\ub204\uc6b4 \uc790\uc138\u00b7\uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "JUMP",
@@ -1556,7 +1575,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "도약 준비·공중 관절·착지 keypose 필요."
+          "reason": "\ub3c4\uc57d \uc900\ube44\u00b7\uacf5\uc911 \uad00\uc808\u00b7\ucc29\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "FLY",
@@ -1565,7 +1584,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "날개 또는 승인된 비행 해부학/동작 계약 없음."
+          "reason": "\ub0a0\uac1c \ub610\ub294 \uc2b9\uc778\ub41c \ube44\ud589 \ud574\ubd80\ud559/\ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c."
         },
         {
           "action": "HOVER",
@@ -1574,7 +1593,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "승인된 부양 동작 계약 없음; 전체 이미지 상하 이동은 완료로 인정하지 않음."
+          "reason": "\uc2b9\uc778\ub41c \ubd80\uc591 \ub3d9\uc791 \uacc4\uc57d \uc5c6\uc74c; \uc804\uccb4 \uc774\ubbf8\uc9c0 \uc0c1\ud558 \uc774\ub3d9\uc740 \uc644\ub8cc\ub85c \uc778\uc815\ud558\uc9c0 \uc54a\uc74c."
         },
         {
           "action": "LAND",
@@ -1583,7 +1602,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공중→접지 관절·충격 흡수 keypose 필요."
+          "reason": "\uacf5\uc911\u2192\uc811\uc9c0 \uad00\uc808\u00b7\ucda9\uaca9 \ud761\uc218 keypose \ud544\uc694."
         },
         {
           "action": "CHARGE",
@@ -1592,7 +1611,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "공격 준비·다리 추진 및 접지 keypose 필요."
+          "reason": "\uacf5\uaca9 \uc900\ube44\u00b7\ub2e4\ub9ac \ucd94\uc9c4 \ubc0f \uc811\uc9c0 keypose \ud544\uc694."
         },
         {
           "action": "RECOVERY",
@@ -1601,7 +1620,7 @@
             "animationStatus": "NOT_RECORDED"
           },
           "status": "BLOCKED",
-          "reason": "회복 시작 포즈·지지 관절 keypose 필요. HIT 역재생은 미채택."
+          "reason": "\ud68c\ubcf5 \uc2dc\uc791 \ud3ec\uc988\u00b7\uc9c0\uc9c0 \uad00\uc808 keypose \ud544\uc694. HIT \uc5ed\uc7ac\uc0dd\uc740 \ubbf8\ucc44\ud0dd."
         }
       ],
       "productionApproval": "HUMAN_REVIEW_REQUIRED",
@@ -1611,23 +1630,50 @@
   "integrationRequests": [
     {
       "target": "design/creature-production-queue.json",
-      "request": "후보의 실제 검증·차단 상태와 마지막 검증 commit을 통합 담당자가 반영. 기존 실패와 승인 상태 유지. 신규 후보는 완료 행동으로 세지 않음."
+      "request": "\ud6c4\ubcf4\uc758 \uc2e4\uc81c \uac80\uc99d\u00b7\ucc28\ub2e8 \uc0c1\ud0dc\uc640 \ub9c8\uc9c0\ub9c9 \uac80\uc99d commit\uc744 \ud1b5\ud569 \ub2f4\ub2f9\uc790\uac00 \ubc18\uc601. \uae30\uc874 \uc2e4\ud328\uc640 \uc2b9\uc778 \uc0c1\ud0dc \uc720\uc9c0. \uc2e0\uaddc \ud6c4\ubcf4\ub294 \uc644\ub8cc \ud589\ub3d9\uc73c\ub85c \uc138\uc9c0 \uc54a\uc74c."
     },
     {
       "target": "tests/live/creature-review/catalog.json",
-      "request": "세션 전용 경로의 candidate-clip 및 M043 실패 IDLE을 기존 Review Catalog에 추가. build_creature_review --refresh-inventory --refresh-coverage는 공유 파일 쓰기이므로 이 Track에서는 미실행."
+      "request": "\uc138\uc158 \uc804\uc6a9 \uacbd\ub85c\uc758 candidate-clip \ubc0f M043 \uc2e4\ud328 IDLE\uc744 \uae30\uc874 Review Catalog\uc5d0 \ucd94\uac00. build_creature_review --refresh-inventory --refresh-coverage\ub294 \uacf5\uc720 \ud30c\uc77c \uc4f0\uae30\uc774\ubbc0\ub85c \uc774 Track\uc5d0\uc11c\ub294 \ubbf8\uc2e4\ud589."
     },
     {
       "target": "Animation Manifest / Production Registry / Runtime",
-      "request": "사람의 외형·자연스러움·Species Identity·이벤트 계약 승인 이후 별도 통합. 현재 활성화 금지."
+      "request": "\uc0ac\ub78c\uc758 \uc678\ud615\u00b7\uc790\uc5f0\uc2a4\ub7ec\uc6c0\u00b7Species Identity\u00b7\uc774\ubca4\ud2b8 \uacc4\uc57d \uc2b9\uc778 \uc774\ud6c4 \ubcc4\ub3c4 \ud1b5\ud569. \ud604\uc7ac \ud65c\uc131\ud654 \uae08\uc9c0."
     },
     {
       "target": "M044 movement contract",
-      "request": "카탈로그 FLYING 제안과 날개 없는 BASE를 조정. 날개 임의 추가 금지."
+      "request": "\uce74\ud0c8\ub85c\uadf8 FLYING \uc81c\uc548\uacfc \ub0a0\uac1c \uc5c6\ub294 BASE\ub97c \uc870\uc815. \ub0a0\uac1c \uc784\uc758 \ucd94\uac00 \uae08\uc9c0."
     }
   ],
   "nativeGui": "DEFERRED_GUI",
   "productionReady": false,
   "runtimeConnected": false,
-  "nextAction": "검증 결과 확인 후 통합 담당자의 Catalog 등록 및 사람 검수. 차단된 관절/자세 작업은 승인된 분리 원화 및 계약 필요."
+  "nextAction": "\uac80\uc99d \uacb0\uacfc \ud655\uc778 \ud6c4 \ud1b5\ud569 \ub2f4\ub2f9\uc790\uc758 Catalog \ub4f1\ub85d \ubc0f \uc0ac\ub78c \uac80\uc218. \ucc28\ub2e8\ub41c \uad00\uc808/\uc790\uc138 \uc791\uc5c5\uc740 \uc2b9\uc778\ub41c \ubd84\ub9ac \uc6d0\ud654 \ubc0f \uacc4\uc57d \ud544\uc694.",
+  "candidateCounts": {
+    "clips": 20,
+    "framePng": 272,
+    "sourceSheets": 1,
+    "totalPng": 273,
+    "structurallyPassingRigClips": 19,
+    "visuallyBlockedClips": 4,
+    "productionCompleteActions": 0
+  },
+  "validation": {
+    "animationRegression": {
+      "status": "PASS",
+      "tests": 236
+    },
+    "sessionBoundaryTests": {
+      "status": "PASS",
+      "tests": 2
+    },
+    "candidateStructure": {
+      "status": "PASS",
+      "clips": 19,
+      "png": 264
+    },
+    "assetTests": "RUNNING",
+    "releaseGate": "RUNNING",
+    "nativeGui": "DEFERRED_GUI"
+  }
 }
