@@ -1,0 +1,94 @@
+{
+  "conceptId": "M057",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M057/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    75,
+    143,
+    200,
+    214
+  ],
+  "parts": [
+    {
+      "name": "near-forearm-brace",
+      "x": 128,
+      "y": 185,
+      "rx": 18,
+      "ry": 25,
+      "dx": 2.1,
+      "dy": -1.6,
+      "samples": [
+        0.02,
+        1,
+        0.8,
+        0.5,
+        0.3,
+        0.17,
+        0.08,
+        0.025
+      ]
+    },
+    {
+      "name": "far-arm-recoil",
+      "x": 176,
+      "y": 177,
+      "rx": 14,
+      "ry": 25,
+      "dx": -1.8,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.4,
+        1,
+        0.75,
+        0.5,
+        0.28,
+        0.12,
+        0.035
+      ]
+    },
+    {
+      "name": "short-tail-counterbalance",
+      "x": 91,
+      "y": 185,
+      "rx": 14,
+      "ry": 20,
+      "dx": -1.4,
+      "dy": 1.1,
+      "samples": [
+        0.01,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0.045
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Long-eared armored desert beast: fixed head, long ears and planted feet; forearm brace and upper-arm recoil, short tail counterbalance. No whole body transform.",
+  "behaviorContract": "Proposed alert GROUND desert beast; stationary flinch candidate only, no battle activation",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes"
+}
