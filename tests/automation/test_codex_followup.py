@@ -41,12 +41,41 @@ class FollowupTests(unittest.TestCase):
         f.finish(dry,ticket['key'],'run1','PUBLISHED',2)
         self.assertEqual(dry['prs']['2'],{'root':'1','depth':1})
         self.assertEqual(dry['roots']['1']['attempts'],1)
+        self.assertEqual(dry['days']['1970-01-01']['modelInvocations'],3)
         self.assertIsNone(dry['lock']);self.assertEqual(original['roots']['1']['attempts'],0)
         with self.assertRaisesRegex(ValueError,'DUPLICATE_TASK'):
             second=f.reserve(dry,analysis(2,'c'*40,'FAIL'),'run2',10)
             proposal=ready(second);proposal['taskId']=ticket['taskId']
             # A non-candidate task is rejected before task dedup; direct reservation already filters it.
             f.require(ticket['taskId'] not in dry['tasks'],'DUPLICATE_TASK')
+
+    def test_analysis_only_charges_one_call_without_repair_or_implementation(self):
+        s = state()
+        t = f.reserve_analysis(s, analysis(), 'read1', 0)
+        self.assertEqual(s['days']['1970-01-01']['modelInvocations'], 1)
+        self.assertEqual(s['roots']['1']['attempts'], 0)
+        self.assertEqual(s['tasks'], {})
+        with self.assertRaisesRegex(ValueError, 'INVALID_TRANSITION'):
+            f.authorize(s, t['key'], 'read1', {'status': 'READY'})
+        f.finish(s, t['key'], 'read1', 'ANALYZED')
+        self.assertIsNone(s['lock'])
+        with self.assertRaisesRegex(ValueError, 'DUPLICATE_HEAD'):
+            f.reserve_analysis(s, analysis(), 'read2', 1)
+
+    def test_analysis_only_pending_budget_failure_and_job_barriers(self):
+        with self.assertRaisesRegex(ValueError, 'CI_PENDING'):
+            f.reserve_analysis(state(), analysis(ci='PENDING'), 'read1', 0)
+        s = state(); s['days']['1970-01-01'] = {'sessions': 0, 'modelInvocations': 8}
+        with self.assertRaisesRegex(ValueError, 'DAILY_API_BUDGET'):
+            f.reserve_analysis(s, analysis(), 'read1', 0)
+        s = state(); t = f.reserve_analysis(s, analysis(ci='FAIL'), 'read1', 0)
+        f.finish(s, t['key'], 'read1', 'FAILED')
+        self.assertIsNone(s['lock'])
+        self.assertEqual(s['days']['1970-01-01']['modelInvocations'], 1)
+        workflow = (ROOT/'.github/workflows/luma-codex-followup.yml').read_text()
+        self.assertIn("  authorize:\n    if: inputs.mode != 'analyze'", workflow)
+        self.assertIn("if: always() && inputs.mode != 'analyze'", workflow)
+        self.assertIn("if: always() && inputs.mode == 'analyze'", workflow)
 
     def test_duplicate_head_and_new_head_failure_counter(self):
         s=state();t=f.reserve(s,analysis(),'1',0);f.finish(s,t['key'],'1','FAILED')
@@ -160,7 +189,8 @@ class FollowupTests(unittest.TestCase):
         self.assertIn('APPROVED_TEST_PR: ${{ vars.LUMA_CODEX_TEST_PR }}',workflow)
         self.assertIn('args+=(--pr "$TEST_PR")',workflow)
         self.assertIn('"$TEST_PR" == "$APPROVED_TEST_PR"',workflow)
-        self.assertIn('environment: luma-codex-publish',workflow)
+        self.assertIn('environment: luma-codex-draft',workflow)
+        self.assertIn('publication-preflight',workflow)
 
 
 if __name__=='__main__':unittest.main()

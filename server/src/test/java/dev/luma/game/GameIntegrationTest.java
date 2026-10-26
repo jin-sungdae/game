@@ -52,7 +52,7 @@ class GameIntegrationTest {
         assertEquals(0,b.activeCompanion().exp());assertEquals(0,b.activeCompanion().bond());
         assertEquals(3,jdbc.queryForObject("SELECT count(*) FROM game.m_species",Integer.class));
         assertEquals(java.util.List.of("MOA","MOKORI","NEBLA","SYLVAON","AETHERIA"),jdbc.queryForList("SELECT e.name FROM game.m_species_evolution e JOIN game.m_species s USING(species_id) WHERE s.code='MOA' ORDER BY evolution_stage",String.class));
-        assertEquals(2,jdbc.queryForObject("SELECT count(*) FROM game.m_species_evolution e JOIN game.m_species s USING(species_id) WHERE s.code IN ('RUU','NOX')",Integer.class));
+        assertEquals(10,jdbc.queryForObject("SELECT count(*) FROM game.m_species_evolution e JOIN game.m_species s USING(species_id) WHERE s.code IN ('RUU','NOX')",Integer.class));
     }
     @Test void createReuseAndTtl() {
         var first=create();var second=create();assertEquals(first,second);

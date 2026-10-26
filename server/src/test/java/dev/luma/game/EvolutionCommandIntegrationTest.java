@@ -131,25 +131,32 @@ class EvolutionCommandIntegrationTest {
         assertThrows(GameUnavailable.class,()->adapter.execute(request(UUID.randomUUID(),1)));
         untouched();
     }
-    @Test void approvedThresholdsAndUnapprovedSpeciesStayUnchanged() {
+    @Test void approvedThresholdsAndAllSpeciesUseCommandReceipts() {
         for(int[] pair:List.of(new int[]{2,5},new int[]{3,4})) {
-            db.update("UPDATE game.t_player_companion SET level=?,bond=? WHERE player_companion_id=?",pair[0],pair[1],companion);
+            db.update("UPDATE game.t_player_companion SET level=?,exp=?,bond=? WHERE player_companion_id=?",pair[0],GrowthCurveB.threshold(pair[0]),pair[1],companion);
             error(post(request(UUID.randomUUID(),1)),409,"NOT_ELIGIBLE"); untouched();
         }
-        db.update("UPDATE game.t_player_companion SET level=3,bond=5 WHERE player_companion_id=?",companion);
+        db.update("UPDATE game.t_player_companion SET level=3,exp=300,bond=5 WHERE player_companion_id=?",companion);
         assertEquals(200,post(request(UUID.randomUUID(),1)).getStatusCode().value());
         for(int[] pair:List.of(new int[]{5,12},new int[]{6,11})) {
-            db.update("UPDATE game.t_player_companion SET level=?,bond=? WHERE player_companion_id=?",pair[0],pair[1],companion);
+            db.update("UPDATE game.t_player_companion SET level=?,exp=?,bond=? WHERE player_companion_id=?",pair[0],GrowthCurveB.threshold(pair[0]),pair[1],companion);
             // Existing service preserves ALREADY_EVOLVED, so this is a saved no-op result, not an extra evolution.
             var response=post(request(UUID.randomUUID(),2)); assertEquals(200,response.getStatusCode().value()); assertTrue(response.getBody().contains("ALREADY_EVOLVED"));
             assertEquals(2,stage()); assertEquals(1,count("t_companion_evolution_history"));
         }
-        db.update("UPDATE game.t_player_companion SET level=6,bond=12 WHERE player_companion_id=?",companion);
+        db.update("UPDATE game.t_player_companion SET level=6,exp=1500,bond=12 WHERE player_companion_id=?",companion);
         assertEquals(200,post(request(UUID.randomUUID(),2)).getStatusCode().value()); assertEquals(3,stage());
         clean();
-        for(String species:List.of("RUU","NOX")) {
-            db.update("UPDATE game.t_player_companion SET species_id=(SELECT species_id FROM game.m_species WHERE code=?),level=100,bond=100 WHERE player_companion_id=?",species,companion);
-            error(post(request(UUID.randomUUID(),1)),409,"NOT_ELIGIBLE"); untouched();
+        for(String species:List.of("MOA","RUU","NOX")) {
+            db.update("UPDATE game.t_player_companion SET species_id=(SELECT species_id FROM game.m_species WHERE code=?),level=100,exp=88900,bond=100 WHERE player_companion_id=?",species,companion);
+            var first=request(UUID.randomUUID(),1);
+            var response=post(first);assertEquals(200,response.getStatusCode().value());
+            assertEquals(response.getBody(),post(first).getBody());assertEquals(2,stage());
+            error(post(request(UUID.randomUUID(),1)),409,"STALE_STAGE");
+            for(int from=2;from<=4;from++)assertEquals(200,post(request(UUID.randomUUID(),from)).getStatusCode().value());
+            assertEquals(5,stage());assertEquals(4,count("t_companion_evolution_history"));assertEquals(4,count("t_command_receipt"));
+            assertEquals(88900,db.queryForObject("SELECT exp FROM game.t_player_companion WHERE player_companion_id=?",Long.class,companion));
+            clean();
         }
     }
 }

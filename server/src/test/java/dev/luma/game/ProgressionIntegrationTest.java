@@ -63,14 +63,15 @@ class ProgressionIntegrationTest {
   assertEquals(1500,bootstrap().activeCompanion().exp());assertEquals(6,bootstrap().activeCompanion().level());assertEquals(10,bootstrap().activeCompanion().bond());
   assertEquals(1,db.queryForObject("SELECT count(*) FROM game.t_reward",Integer.class));
  }
- @Test void legacyCappedExpReconcilesOnNextRewardWithLevelUpEvent(){
-  db.update("UPDATE game.t_player_companion SET level=5,exp=3000,bond=10");
-  var b=win();assertEquals(3020,bootstrap().activeCompanion().exp());assertEquals(8,bootstrap().activeCompanion().level());
-  assertTrue(b.events().contains("LEVEL_UP"));assertEquals(20,b.reward().exp());
+ @Test void inconsistentExpAndLevelCannotBeSilentlyReconciled(){
+  var before=bootstrap();
+  assertThrows(org.springframework.dao.DataIntegrityViolationException.class,
+      ()->db.update("UPDATE game.t_player_companion SET level=5,exp=3000,bond=10"));
+  assertEquals(before,bootstrap());
  }
  @Test void maxLevelKeepsExpAndOverflowRollsBackWholeReward(){
-  db.update("UPDATE game.t_player_companion SET level=20,exp=?",Long.MAX_VALUE-20);
-  var b=win();resolve(b);assertEquals(Long.MAX_VALUE,bootstrap().activeCompanion().exp());assertEquals(20,bootstrap().activeCompanion().level());
+  db.update("UPDATE game.t_player_companion SET level=100,exp=?",Long.MAX_VALUE-20);
+  var b=win();resolve(b);assertEquals(Long.MAX_VALUE,bootstrap().activeCompanion().exp());assertEquals(100,bootstrap().activeCompanion().level());
   var before=bootstrap();b=start();var response=http.postForEntity(url("/battles/"+b.battleId()+"/attack"),null,String.class);
   assertTrue(response.getStatusCode().is5xxServerError());assertEquals(before,bootstrap());
   assertEquals(1,db.queryForObject("SELECT count(*) FROM game.t_reward",Integer.class));
