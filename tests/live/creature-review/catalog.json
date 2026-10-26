@@ -21015,10 +21015,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M062/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -21035,17 +21040,99 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": [],
+      "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M062/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M062/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M062/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M062/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M062/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M062/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M062/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M062/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M062/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              66,
+              22,
+              200,
+              233
+            ],
+            [
+              66,
+              22,
+              200,
+              233
+            ],
+            [
+              66,
+              22,
+              200,
+              233
+            ],
+            [
+              66,
+              22,
+              200,
+              233
+            ],
+            [
+              66,
+              22,
+              200,
+              233
+            ],
+            [
+              66,
+              22,
+              200,
+              233
+            ],
+            [
+              66,
+              22,
+              200,
+              233
+            ],
+            [
+              66,
+              22,
+              200,
+              233
+            ]
+          ],
+          "pixelHashes": [
+            "99081e0b3c75e5e297a0b49799b7bce57f9881912c74ebcad4996ea22cc746cd",
+            "e1d5dfdfff8608054563332cfc44985411dc11afe7f922c3afa2997bd82be22e",
+            "64a17ba7484e5fc494c569da4649adb606bd4a0e346aa9bd0e41c7894500693e",
+            "8e65590f04a2dd66e965865ac7c6002bad6e6a2d1ff99333efe92d455a72b8d9",
+            "fc1084b95c0354799f294c3d0cf0150f3c3ddaa2a54eeaa238a7943834455aba",
+            "92f78e1875ce7661d02b97db5fb3c44a3e7a5a6d02c23d9f5f540da5792f85ff",
+            "607cc0df767e4ed688719f7d869795ac6a0cee4c9452d2433cc1dd253f318eac",
+            "f7234fdaa82c4392c35afa5b136c9236187557464452e69384a8413908927b91"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
       "coverage": {
         "requiredActions": 15,
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 0,
-        "automatedCandidateActions": 0,
-        "artworkReviewPendingActions": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -21090,7 +21177,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "Identity review: Round blue ray proposal versus whale-like body and flippers BASE; FREE_2D itself is not declared impossible, but Identity remains unresolved; HUMAN_REVIEW_REQUIRED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "TURN",
@@ -21257,10 +21346,15 @@
         },
         {
           "action": "ATTACK",
-          "animationStatus": "ASSET_REQUIRED",
+          "animationStatus": "VALIDATION_FAILED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "automated": "VALIDATION_FAILED",
+          "candidatePath": "design/production-batches/action-followup/M064/attack-pilot",
+          "recoveryPath": "design/production-batches/action-followup/M064/attack-pilot/keypose-tool-reference.png",
+          "blockReason": "Raw source detached Alpha 967 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "SKILL_CAST",
@@ -21300,7 +21394,7 @@
         "candidateActions": 0,
         "automatedCandidateActions": 0,
         "artworkReviewPendingActions": 0,
-        "validationFailedActions": 0,
+        "validationFailedActions": 1,
         "missingFrameSetActions": 15,
         "guiPendingActions": 15,
         "completeActions": 0
@@ -21346,7 +21440,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "Identity review: Long-finned dolphin proposal versus elongated dragon-like torso, head crest and long fin structures BASE; no species or movement redefinition; HUMAN_REVIEW_REQUIRED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "TURN",
@@ -21527,10 +21623,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M066/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -21547,17 +21648,99 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": [],
+      "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M066/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M066/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M066/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M066/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M066/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M066/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M066/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M066/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M066/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              29,
+              57,
+              229,
+              197
+            ],
+            [
+              29,
+              57,
+              229,
+              197
+            ],
+            [
+              29,
+              57,
+              229,
+              197
+            ],
+            [
+              29,
+              57,
+              229,
+              197
+            ],
+            [
+              29,
+              57,
+              229,
+              197
+            ],
+            [
+              29,
+              57,
+              229,
+              197
+            ],
+            [
+              29,
+              57,
+              229,
+              197
+            ],
+            [
+              29,
+              57,
+              229,
+              197
+            ]
+          ],
+          "pixelHashes": [
+            "0e0f130c0390e25e604bc55d4098b0e75d6cffa2ef245a8b1f723a02444c84cd",
+            "202f5d9066a005b73368f2473070e8515300df22270f344908b6feeb28b6f14d",
+            "f61177064e981f6ac98ef42e851024dd6ddb1f7024e48d3e07c03bb172ba3ecd",
+            "f7e961144eaff9a6804713cf1eb335cffdbf3846a8c29f05a59bfbe95790e86a",
+            "59444cd5fd044e46377480ca527bea5217eee39a83320cb75db05201e0ad19a3",
+            "f3ac93e7527ecefb6faff073260f67e9aa8563f3b2b2279e9f8d9e21aa274c75",
+            "766002999d8be18ec0975fef43ddd596a4bba73fe961425fe62b4ef2d250cf76",
+            "3066e1292fd2b45152126e384af21450444206cbff94b6ebb1db014e902e8423"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
       "coverage": {
         "requiredActions": 15,
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 0,
-        "automatedCandidateActions": 0,
-        "artworkReviewPendingActions": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -26450,11 +26633,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 143,
-    "automatedCandidateActions": 141,
-    "artworkReviewPendingActions": 142,
-    "validationFailedActions": 32,
-    "missingFrameSetActions": 1592,
+    "candidateActions": 145,
+    "automatedCandidateActions": 143,
+    "artworkReviewPendingActions": 144,
+    "validationFailedActions": 33,
+    "missingFrameSetActions": 1590,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
