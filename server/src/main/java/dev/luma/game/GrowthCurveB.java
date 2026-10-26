@@ -1,6 +1,6 @@
 package dev.luma.game;
 
-/** Dormant, pure candidate curve. Production continues to use CombatRules. */
+/** Approved growth policy GROWTH_B_V2. CombatRules retains frozen Alpha battle formulas. */
 public final class GrowthCurveB {
     public static final int MAX_LEVEL = 100;
     private GrowthCurveB() {}

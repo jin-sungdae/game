@@ -27,7 +27,7 @@ class EvolutionIntegrationTest {
         db.update("UPDATE game.t_player SET gold=0");
         db.update("INSERT INTO game.m_species_evolution(species_id,evolution_stage,name) SELECT species_id,2,'MOKORI' FROM game.m_species WHERE code='MOA' ON CONFLICT DO NOTHING");
     }
-    void progress(int level,int bond) { db.update("UPDATE game.t_player_companion SET level=?,bond=?,exp=321",level,bond); db.update("UPDATE game.t_player SET gold=73"); }
+    void progress(int level,int bond) { db.update("UPDATE game.t_player_companion SET level=?,bond=?,exp=?",level,bond,GrowthCurveB.threshold(level)); db.update("UPDATE game.t_player SET gold=73"); }
     Status status() { return http.getForObject(url("/companions/active/evolution"),Status.class); }
     Result evolve() { return http.postForObject(url("/companions/active/evolve"),null,Result.class); }
     GameDtos.Bootstrap bootstrap() { return http.getForObject(url("/game/bootstrap"),GameDtos.Bootstrap.class); }
