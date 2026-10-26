@@ -1,0 +1,464 @@
+{
+  "sessionId": "LUMA-ASSET-02",
+  "baselineCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "candidateDirectories": [
+    "stage03/blink",
+    "stage04/look",
+    "stage04/interact",
+    "stage05/blink"
+  ],
+  "failedDirectories": [
+    "stage03/blink-attempt01-failed",
+    "stage05/blink-attempt01-failed"
+  ],
+  "repairIterations": 1,
+  "repairLimit": 3,
+  "repairScope": "This PR only: one correction of new blink samples; no previous PR failure recovery or budget reset",
+  "priorLedgerRepairIterations": 3,
+  "sharedLedgerChanged": false,
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "generation": "Existing offline part rigs; no model/API calls",
+  "stages": [
+    {
+      "stage": 1,
+      "baseStatus": "BASE_REQUIRED",
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "EVOLUTION",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "baseStatus": "BASE_REQUIRED",
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        },
+        {
+          "action": "EVOLUTION",
+          "status": "BLOCKED",
+          "reason": "Prior PR automatic repair limit; failed candidates preserved"
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "baseStatus": "BASE_READY",
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_PRESERVED",
+          "reason": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Existing IDLE already uses breathing part rig; no duplicate relabeling"
+        },
+        {
+          "action": "BLINK",
+          "status": "CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "reason": "New isolated offline candidate; shared Ledger integration deferred"
+        },
+        {
+          "action": "LOOK",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "TURN",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "REST",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "SLEEP",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "INTERACT",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; NON_LOOPING_RESPONSE_SETTLE_REVIEW_REQUIRED; review page repeats for inspection only"
+        },
+        {
+          "action": "ATTACK",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "HIT",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; local physical HIT candidate, no server Battle event or Native trigger connected"
+        },
+        {
+          "action": "VICTORY",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "EVOLUTION",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        }
+      ]
+    },
+    {
+      "stage": 4,
+      "baseStatus": "BASE_READY",
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_PRESERVED",
+          "reason": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Existing IDLE already uses breathing part rig; no duplicate relabeling"
+        },
+        {
+          "action": "BLINK",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED"
+        },
+        {
+          "action": "LOOK",
+          "status": "CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "reason": "New isolated offline candidate; shared Ledger integration deferred"
+        },
+        {
+          "action": "MOVE",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "TURN",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "REST",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "SLEEP",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; one-shot clip, repeated preview is inspection only"
+        },
+        {
+          "action": "INTERACT",
+          "status": "CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "reason": "New isolated offline candidate; shared Ledger integration deferred"
+        },
+        {
+          "action": "ATTACK",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "HIT",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "VICTORY",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "EVOLUTION",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        }
+      ]
+    },
+    {
+      "stage": 5,
+      "baseStatus": "BASE_READY",
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_PRESERVED",
+          "reason": "GUI_NOT_VERIFIED"
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Existing IDLE already uses breathing part rig; no duplicate relabeling"
+        },
+        {
+          "action": "BLINK",
+          "status": "CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "reason": "New isolated offline candidate; shared Ledger integration deferred"
+        },
+        {
+          "action": "LOOK",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "TURN",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "REST",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "SLEEP",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; one-shot local silhouette response; no Native event or Production activation"
+        },
+        {
+          "action": "INTERACT",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; isolated non-looping response; no Native trigger"
+        },
+        {
+          "action": "ATTACK",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "HIT",
+          "status": "EXISTING_PRESERVED",
+          "reason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; isolated one-shot local silhouette response; no Native event or Production activation"
+        },
+        {
+          "action": "VICTORY",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        },
+        {
+          "action": "EVOLUTION",
+          "status": "ASSET_REQUIRED",
+          "reason": "Needs anatomy-specific keypose, articulated parts or approved transition contract; fixed standing BASE is insufficient"
+        }
+      ]
+    }
+  ],
+  "protectedSourceHashes": {
+    "design/creature-production-queue.json": "b0a804319729400cf80dac3b195f9bb70dcff18f576bbe2cd0ad160389efec68",
+    "public/assets/creatures/ruu/stage01/manifest.json": "a4710437258246eb19383dbde38ddf8a34511859ab733a4e4da60e2f0ed5f4c3",
+    "public/assets/creatures/ruu/stage02/manifest.json": null,
+    "public/assets/creatures/ruu/stage03/manifest.json": "533a0d1f39ffe4169692785f7c5c353dbd741e26dc25438465c0542a72c0aa66",
+    "public/assets/creatures/ruu/stage04/manifest.json": "f36e8f078537170ddf227576916aab2938fb4d582926f4f3bdc9967e66b40670",
+    "public/assets/creatures/ruu/stage05/manifest.json": "3b4e46c8e9dca207156689a8349e685abb95dccb0fe7880530584edfc4e011ad"
+  }
+}
