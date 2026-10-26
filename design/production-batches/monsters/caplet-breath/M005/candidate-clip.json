@@ -1,0 +1,25 @@
+{
+  "conceptId": "M005",
+  "productionSpeciesId": "CAPLET",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "designSource": "approved CAPLET BASE",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 400,
+    "loop": true,
+    "path": "rigged/breath/breath_NN.png"
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED"
+}

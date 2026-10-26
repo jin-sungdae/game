@@ -11,9 +11,9 @@
   "artworkApproval": "HUMAN_REVIEW_REQUIRED",
   "nativeMacOS": "NOT_VERIFIED",
   "nativeWindows": "NOT_VERIFIED",
-  "repairIterations": 1,
+  "repairIterations": 3,
   "repairLimit": 3,
-  "nextTask": "Review existing M005/CAPLET IDLE six-frame candidate; other keyposes ASSET_REQUIRED; do not enable Spawn or Skill",
+  "nextTask": "CAPLET BLINK artwork candidate; batch review pending for IDLE/BREATH. No Production registration before artwork approval.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -473,10 +473,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/moa/stage04",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -2228,10 +2232,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M001",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -2372,10 +2380,14 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M002",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -2797,14 +2809,21 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED",
           "automated": "PASS",
-          "naturalMotion": "NOT_VERIFIED"
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "designDirection": "APPROVED",
+          "candidatePath": "design/production-batches/monsters/idle-revision/M005",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "automated": "PASS",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/monsters/caplet-breath/M005",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -16499,7 +16518,7 @@
     ],
     "nativeGUI": false
   },
-  "repairScope": "monster-batch10",
+  "repairScope": "PR111: limit reached; further failed corrections require human review",
   "batchEvidence": [
     {
       "pr": 95,
@@ -16559,12 +16578,25 @@
   "candidateInventory": {
     "monsterConceptsWithSource": 100,
     "sourcePngIncludingRecovery": 102,
-    "allCandidatePng": 607,
+    "allCandidatePng": 635,
     "candidateIdleClips": 50,
     "candidateIdleFrames": 296,
     "productionApprovedPng": 0,
     "productionCompletedClips": 0,
     "runtimeConnections": 0,
     "fullCreaturesComplete": 0
+  },
+  "batchReview": {
+    "url": "http://127.0.0.1:5187/tests/live/creature-review/",
+    "catalog": "tests/live/creature-review/catalog.json",
+    "basicValidatedClips": 62,
+    "newBreathClips": 4,
+    "newBreathFrames": 32,
+    "productionRegistrations": 0,
+    "browserFrameProgression": "PASS",
+    "pauseReducedMotion": "PASS",
+    "nativeGui": "DEFERRED_GUI",
+    "artwork": "HUMAN_REVIEW_REQUIRED",
+    "ciBlocker": "PR111 prior HEAD inventory count stale (607 versus 619); automatic repair limit reached. HUMAN_REVIEW_REQUIRED; test and stale count preserved."
   }
 }
