@@ -900,9 +900,11 @@
       "request": "Validate preceding HIT pose and event timing before enabling standalone release studies. No continuity between different clips has been certified."
     }
   ],
-  "nextResumePoint": "Review the six new candidates first. Next independent production: M081/M082 closed-eye BLINK masks/keyposes, then dedicated LOOK/REST/SLEEP and gait/turn keyposes; M085 facial/blink and resting-pose design. M083 requires independent scorpion segmentation; preserve failed ATTACK. M084 remains human-blocked at repair3/3.",
+  "nextResumePoint": "First rerun full Asset Tests and Release Gate under available CPU capacity. Review the six new candidates first. Next independent production: M081/M082 closed-eye BLINK masks/keyposes, then dedicated LOOK/REST/SLEEP and gait/turn keyposes; M085 facial/blink and resting-pose design. M083 requires independent scorpion segmentation; preserve failed ATTACK. M084 remains human-blocked at repair3/3.",
   "sessionBoundary": "Existing safe appendage rig scope delivered; remaining actions are explicitly deferred for new anatomy/keypose/contract work, not declared impossible or complete.",
   "productionApproval": "HUMAN_REVIEW_REQUIRED",
   "runtimeConnected": false,
-  "gui": "DEFERRED_GUI"
+  "gui": "DEFERRED_GUI",
+  "lastCandidateValidatedCommit": "24ac676",
+  "releaseGate": "FAIL_TIME_LIMIT"
 }
