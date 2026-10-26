@@ -1,0 +1,698 @@
+{
+  "sessionId": "LUMA-ASSET-09",
+  "baseline": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "scope": [
+    "M026",
+    "M027",
+    "M028",
+    "M029",
+    "M030"
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairPolicy": "Inherited failure recovery exhausted; no original or repair record modified; independent first attempts only",
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "gui": "DEFERRED_GUI",
+  "completionLedgerModified": false,
+  "creatures": [
+    {
+      "creatureId": "M026",
+      "basePath": "design/production-batches/monsters/batch03/M026/base-v2.png",
+      "baseStatus": "BASE_READY",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 6,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "BREATH",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 8,
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; LOOP_BOUNDARY_DELTA_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M026"
+        },
+        {
+          "action": "BLINK",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": "BLOCKED + HUMAN_REVIEW_REQUIRED: M026 WINGLESS_BASE_VS_FLIGHT_REQUEST",
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": "design/production-batches/luma-asset-09/M026/cursor_react"
+        },
+        {
+          "action": "INTERACT",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "ATTACK",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "status": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": "design/production-batches/luma-asset-09/M026/hit"
+        },
+        {
+          "action": "VICTORY",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        }
+      ],
+      "additionalActions": {
+        "JUMP": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "FLY": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "HOVER": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "LAND": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "CHARGE": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED",
+        "RECOVERY": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED"
+      }
+    },
+    {
+      "creatureId": "M027",
+      "basePath": "design/production-batches/monsters/batch03/M027/base-v2.png",
+      "baseStatus": "BASE_READY",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 6,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "BREATH",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 8,
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M027"
+        },
+        {
+          "action": "BLINK",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "MOVE",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": "design/production-batches/luma-asset-09/M027/cursor_react"
+        },
+        {
+          "action": "INTERACT",
+          "status": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": "design/production-batches/luma-asset-09/M027/interact"
+        },
+        {
+          "action": "ATTACK",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 8,
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M027/hit-pilot"
+        },
+        {
+          "action": "VICTORY",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        }
+      ],
+      "additionalActions": {
+        "JUMP": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "FLY": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "HOVER": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "LAND": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "CHARGE": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED",
+        "RECOVERY": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED"
+      }
+    },
+    {
+      "creatureId": "M028",
+      "basePath": "design/production-batches/monsters/batch03/M028/base-v2.png",
+      "baseStatus": "BASE_READY",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 6,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "BREATH",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 8,
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_DESCRIPTION_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M028"
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": "RAW_ALPHA_DEFECT: 842 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        }
+      ],
+      "additionalActions": {
+        "JUMP": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "FLY": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "HOVER": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "LAND": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "CHARGE": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED",
+        "RECOVERY": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED"
+      }
+    },
+    {
+      "creatureId": "M029",
+      "basePath": "design/production-batches/monsters/batch03/M029/base-v2.png",
+      "baseStatus": "BASE_READY",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 6,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "BREATH",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 8,
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/breath-followup/M029"
+        },
+        {
+          "action": "BLINK",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "status": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": "design/production-batches/luma-asset-09/M029/look"
+        },
+        {
+          "action": "MOVE",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "existingFrames": 8,
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED",
+          "candidatePath": "design/production-batches/action-followup/M029/cursor-react-pilot"
+        },
+        {
+          "action": "INTERACT",
+          "status": "AUTOMATED_PASS_HUMAN_REVIEW_REQUIRED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": "design/production-batches/luma-asset-09/M029/interact"
+        },
+        {
+          "action": "ATTACK",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "VICTORY",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "status": "NOT_PRODUCED_REQUIRES_DISTINCT_POSE_AND_REVIEW",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        }
+      ],
+      "additionalActions": {
+        "JUMP": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "FLY": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "HOVER": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "LAND": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "CHARGE": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED",
+        "RECOVERY": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED"
+      }
+    },
+    {
+      "creatureId": "M030",
+      "basePath": "design/production-batches/monsters/batch03/M030/base-v2.png",
+      "baseStatus": "BASE_READY",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": "PROPOSED_FLOATING_ORB_BEARER_VS_RIGID_GOLEM_BASE: original concept catalog and current batch03 BASE/provenance conflict; user-requested rigid-body candidate remains unregistered; HUMAN_REVIEW_REQUIRED; RAW_ALPHA_DEFECT: 2582 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
+          "candidatePath": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "existingFrames": 0,
+          "blockReason": null,
+          "candidatePath": null
+        }
+      ],
+      "additionalActions": {
+        "JUMP": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "FLY": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "HOVER": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "LAND": "BLOCKED_IDENTITY_OR_MOVEMENT_CONTRACT",
+        "CHARGE": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED",
+        "RECOVERY": "NOT_PRODUCED_SKILL_OR_COMBAT_POSE_REQUIRED"
+      }
+    }
+  ],
+  "integrationRequests": [
+    "Review candidate appearance and anatomical motion before acceptance. No motion approval inferred from unique pixels.",
+    "Merge approved session evidence into existing Completion Ledger and Creature Review Catalog; this session does not modify shared files.",
+    "Resolve M028 bird BASE versus hooded-shade description and M030 golem BASE versus floating-orb contract. Preserve failed alpha sources.",
+    "Confirm Species Identity, Personality, MovementProfile and SpeciesBehavior before Runtime connection."
+  ],
+  "nextResume": "Review six independent candidate results; resolve identity/anatomy and exhausted recovery approval before missing keyposes. Do not remake existing clips.",
+  "releaseGate": "PENDING",
+  "ci": "PENDING",
+  "newCandidatePngs": 48,
+  "newCandidateClips": 6,
+  "productionAcceptedClips": 0,
+  "validation": "6 clips / 48 unique frames: existing PNG and registration validators PASS; zero detached alpha and protected-region changes. Appearance and natural motion HUMAN_REVIEW_REQUIRED."
+}
