@@ -161,7 +161,8 @@ class FollowupTests(unittest.TestCase):
         self.assertIn('APPROVED_TEST_PR: ${{ vars.LUMA_CODEX_TEST_PR }}',workflow)
         self.assertIn('args+=(--pr "$TEST_PR")',workflow)
         self.assertIn('"$TEST_PR" == "$APPROVED_TEST_PR"',workflow)
-        self.assertIn('environment: luma-codex-publish',workflow)
+        self.assertIn('environment: luma-codex-draft',workflow)
+        self.assertIn('publication-preflight',workflow)
 
 
 if __name__=='__main__':unittest.main()
