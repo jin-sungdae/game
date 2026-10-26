@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public final class GameDtos {
     private GameDtos() {}
-    public record Player(long playerId, String name, long gold) {}
+    public record Player(long playerId, String name, long gold, long activeSelectionRevision) {}
     public record Companion(long playerCompanionId, String species, int evolutionStage,
                             String evolutionName, int level, long exp, int bond) {}
     public record Bootstrap(Player player, Companion activeCompanion) {}

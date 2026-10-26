@@ -46,7 +46,7 @@ class GameIntegrationTest {
     @Test void bootstrapAndSeeds() {
         var response=http.getForEntity(url("/game/bootstrap"),GameDtos.Bootstrap.class);
         assertEquals(HttpStatus.OK,response.getStatusCode());var b=response.getBody();
-        assertEquals(new GameDtos.Player(1,"LOCAL_PLAYER",0),b.player());
+        assertEquals(new GameDtos.Player(1,"LOCAL_PLAYER",0,0),b.player());
         assertEquals("MOA",b.activeCompanion().species());assertEquals(1,b.activeCompanion().evolutionStage());
         assertEquals("MOA",b.activeCompanion().evolutionName());assertEquals(1,b.activeCompanion().level());
         assertEquals(0,b.activeCompanion().exp());assertEquals(0,b.activeCompanion().bond());
