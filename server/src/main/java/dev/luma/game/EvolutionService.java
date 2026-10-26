@@ -29,7 +29,10 @@ public class EvolutionService {
         return status(repository.lockActive(LOCAL_PLAYER));
     }
     @Transactional
-    public Result evolve() {
+    public Result evolve() { return evolve(false); }
+    @Transactional(propagation=org.springframework.transaction.annotation.Propagation.MANDATORY)
+    public Result evolveCommand() { return evolve(true); }
+    private Result evolve(boolean command) {
         var player=game.lockPlayer(LOCAL_PLAYER);
         var current=repository.lockActive(LOCAL_PLAYER);
         var before=status(current); // Revalidate the approved next transition under the existing lock.
@@ -37,6 +40,8 @@ public class EvolutionService {
             return new Result("ALREADY_EVOLVED",status(current),new GameDtos.Bootstrap(player,current));
         if (before.status()==State.MAX_STAGE) throw new GameFault(409,"MAX_STAGE");
         if (before.status()!=State.AVAILABLE) throw new GameFault(409,"NOT_ELIGIBLE");
+        if (!command && (!"MOA".equals(current.species()) || current.evolutionStage()>2))
+            throw new GameFault(409,"EVOLUTION_COMMAND_REQUIRED");
         var rule=EvolutionRules.next(current).orElseThrow();
         repository.evolve(current,rule);
         var updated=game.activeCompanion(LOCAL_PLAYER);

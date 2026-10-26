@@ -83,7 +83,7 @@ public class EvolutionCommandService {
                 throw new GameFault(409, "STALE_STAGE");
             // The injected service is a Spring proxy; REQUIRED joins the executor transaction.
             // Serialization is inside that transaction, so failure also rolls back stage/history.
-            return new CommandResponse(200, encode(evolution.evolve()), 1);
+            return new CommandResponse(200, encode(evolution.evolveCommand()), 1);
         });
     }
 }
