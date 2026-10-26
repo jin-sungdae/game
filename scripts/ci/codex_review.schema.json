@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "status",
+    "head",
+    "patchSha256",
+    "risk",
+    "evidence"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "CHANGES_REQUIRED",
+        "HUMAN_REVIEW_REQUIRED"
+      ]
+    },
+    "head": {
+      "type": "string"
+    },
+    "patchSha256": {
+      "type": "string"
+    },
+    "risk": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
