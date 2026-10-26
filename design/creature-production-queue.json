@@ -13,7 +13,7 @@
   "nativeWindows": "NOT_VERIFIED",
   "repairIterations": 1,
   "repairLimit": 3,
-  "nextTask": "Batch09 M081-M090 originals generated; import and validate. Batch08 joint animations ASSET_REQUIRED. M024 approved alpha cleanup complete; artwork/animation review remains.",
+  "nextTask": "Import and validate generated M091-M100; M084 alpha defect and specialized joint motions deferred; M024 approved alpha cleanup complete; artwork/animation review remains.",
   "creatures": [
     {
       "creatureId": "companion:moa:1",
@@ -13566,17 +13566,17 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "CANDIDATE_ONLY",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
@@ -13706,17 +13706,17 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "CANDIDATE_ONLY",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
@@ -13846,11 +13846,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -13986,11 +13986,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "VALIDATION_FAILED",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ALPHA_DEFECT: detached alpha maximum6 exceeds cleanup limit4; source and base-v1 retained without cleanup or animation; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -14126,11 +14126,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -14266,11 +14266,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -14406,11 +14406,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -14546,11 +14546,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -14686,11 +14686,11 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "Dedicated scorpion, vine, eye or tentacle motion required; no generic breathing substituted; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
@@ -14826,17 +14826,17 @@
       "species": null,
       "evolutionStage": null,
       "productionSpeciesId": null,
-      "state": "BASE_REQUIRED",
-      "baseStatus": "BASE_REQUIRED",
+      "state": "CANDIDATE_ONLY",
+      "baseStatus": "BASE_CANDIDATE",
       "runtimeStatus": "BLOCKED",
       "guiStatus": "GUI_NOT_VERIFIED",
-      "blockReason": "PRODUCTION_IDENTITY_MAPPING_REVIEW_REQUIRED; artwork may proceed independently",
+      "blockReason": "ARTWORK_REVIEW_REQUIRED; IDENTITY_MAPPING_REQUIRED; GUI_NOT_VERIFIED",
       "lastValidatedCommit": null,
       "actions": [
         {
           "action": "IDLE",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "CANDIDATE_ONLY",
+          "frameCount": 6,
           "runtimeStatus": "BLOCKED",
           "guiStatus": "GUI_NOT_VERIFIED"
         },
@@ -16374,7 +16374,7 @@
     ],
     "nativeGUI": false
   },
-  "repairScope": "monster-batch08",
+  "repairScope": "monster-batch09",
   "batchEvidence": [
     {
       "pr": 95,
@@ -16408,9 +16408,9 @@
     }
   ],
   "currentBatch": {
-    "id": "monster-batch08",
+    "id": "monster-batch09",
     "baseCandidates": 10,
-    "idleCandidateClips": 0,
+    "idleCandidateClips": 3,
     "productionComplete": 0,
     "total": 10,
     "repairIterations": 1,
