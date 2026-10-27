@@ -1,0 +1,83 @@
+{
+  "sourceBase": "design/production-batches/monsters/batch09/M082/base-v2.png",
+  "sourceBasePixelSha256": "4d61c9626c3aa80c3e95701fedb26487ab6158eff0f9170de3387a0bb0164d55",
+  "sourceRig": "design/production-batches/luma-asset-20/continuation/rig.cjs",
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "4d61c9626c3aa80c3e95701fedb26487ab6158eff0f9170de3387a0bb0164d55"
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "3dd284d1bcfcfb31a69bdb8694a2c7ee3bb9de95b022f5a1b92c34995584d426"
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "f0d4dfdb26b578f02eea83463a2ac7c709bf8d4f3976bbd8d411480b65bde384"
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "588a22cf2a45849c61772711569dbea1b93359bc1c0d05a5ce39a6ae333c3e07"
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "cfb0bce3677e2ade4771afd3f93cedf04aeea3b3046dc405dc4f16608b7c0d07"
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "3587b198ad695a4314773d47758cce038bc36987fff329e6f4a351d3475cc667"
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "3be08551a51636d7b28e6def505c43ea99a62f841bf636f01fe5339bdfdb7d84"
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "4d61c9626c3aa80c3e95701fedb26487ab6158eff0f9170de3387a0bb0164d55"
+    }
+  ],
+  "wholeImageTransform": false,
+  "exactBaseReturnFrame": 7,
+  "eyelidMask": [],
+  "parts": [
+    {
+      "x": 207,
+      "y": 78,
+      "rx": 25,
+      "ry": 23,
+      "dx": -0.5,
+      "dy": 1.8,
+      "name": "greeting-neck-dip",
+      "samples": [
+        0,
+        0.22,
+        0.85,
+        1,
+        0.55,
+        0.78,
+        0.3,
+        0
+      ]
+    },
+    {
+      "x": 66,
+      "y": 107,
+      "rx": 28,
+      "ry": 24,
+      "dx": -1.1,
+      "dy": -0.8,
+      "name": "tail-greeting-answer",
+      "samples": [
+        0,
+        0.05,
+        0.25,
+        0.65,
+        1,
+        0.75,
+        0.28,
+        0
+      ]
+    }
+  ],
+  "productionEligible": false
+}

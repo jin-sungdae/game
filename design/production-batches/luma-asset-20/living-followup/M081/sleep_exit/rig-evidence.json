@@ -1,0 +1,114 @@
+{
+  "sourceBase": "design/production-batches/monsters/batch09/M081/base-v2.png",
+  "sourceBasePixelSha256": "0c93df9bc81776f8245124a111efd0ba3f6f94ff24ad7bf0f62eda45590be06e",
+  "sourceRig": "design/production-batches/luma-asset-20/continuation/rig.cjs",
+  "frames": [
+    {
+      "file": "sleep_exit_00.png",
+      "pixelSha256": "eb68de72450962d6b22e0f0126e13e504e26e0c83564ee5207aadb78cf9bc78f"
+    },
+    {
+      "file": "sleep_exit_01.png",
+      "pixelSha256": "c9b157a56c193d8abf0788d8e70536317a6f7a3c1579cc8c19718acf6edcd683"
+    },
+    {
+      "file": "sleep_exit_02.png",
+      "pixelSha256": "a6c3473e568b8e248b8e5c2fe08d0f53bc64da993192ba5b030dc5b78e57817e"
+    },
+    {
+      "file": "sleep_exit_03.png",
+      "pixelSha256": "3d67f5cff674e64a039138eadbb3bd92e64b349cdeacd6e758ea6aaeebd62337"
+    },
+    {
+      "file": "sleep_exit_04.png",
+      "pixelSha256": "3bc73b6a9291ee792d4817ed6612441006c20b4c71dcb61781fcda6198089f34"
+    },
+    {
+      "file": "sleep_exit_05.png",
+      "pixelSha256": "1519a60feabfbae2fcc5852d0d54234eed2dc63bd4f2a1b4a8c2fda8649ac062"
+    },
+    {
+      "file": "sleep_exit_06.png",
+      "pixelSha256": "628ea20633387d7d1f583f6c5f8b7555b6de96f9b62852d9cd046c7043c1219b"
+    },
+    {
+      "file": "sleep_exit_07.png",
+      "pixelSha256": "0c93df9bc81776f8245124a111efd0ba3f6f94ff24ad7bf0f62eda45590be06e"
+    }
+  ],
+  "wholeImageTransform": false,
+  "exactBaseReturnFrame": 7,
+  "eyelidMask": [
+    {
+      "x": 216,
+      "y": 99,
+      "rx": 3.8,
+      "ry": 2.6,
+      "angle": 0.75,
+      "skin": [
+        203,
+        99
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "x": 206,
+      "y": 103,
+      "rx": 31,
+      "ry": 27,
+      "dx": -1.4,
+      "dy": 2.125,
+      "name": "neck-bow",
+      "samples": [
+        1,
+        0.93,
+        0.78,
+        0.58,
+        0.36,
+        0.18,
+        0.06,
+        0
+      ]
+    },
+    {
+      "x": 173,
+      "y": 153,
+      "rx": 21,
+      "ry": 30,
+      "dx": -0.7,
+      "dy": 1.2,
+      "name": "chest-counterbalance",
+      "samples": [
+        1,
+        0.93,
+        0.78,
+        0.58,
+        0.36,
+        0.18,
+        0.06,
+        0
+      ]
+    },
+    {
+      "x": 65,
+      "y": 148,
+      "rx": 28,
+      "ry": 23,
+      "dx": 1.2,
+      "dy": 0.8,
+      "name": "tail-counterbalance",
+      "samples": [
+        1,
+        0.93,
+        0.78,
+        0.58,
+        0.36,
+        0.18,
+        0.06,
+        0
+      ]
+    }
+  ],
+  "productionEligible": false
+}

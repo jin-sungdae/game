@@ -1,0 +1,1016 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "baseCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "branch": "codex/assets-m081-m085",
+  "status": "PARTIAL_CANDIDATE_DELIVERY",
+  "monsters": [
+    {
+      "creatureId": "M081",
+      "baseStatus": "BASE_CANDIDATE",
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "CANDIDATE_ONLY",
+          "baselineFrameCount": 6,
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Do not recreate existing candidate; human artwork/motion review and Production mapping remain pending."
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "M081/M082 existing IDLE already uses ribcage breathing; do not duplicate or relabel it without the integration owner defining separate behavior. M085 requires a distinct body/respiration design, not generic scaling."
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Upper and lower eyelids close over the original eyes, reopening to exact BASE.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M081/blink",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Local head/neck attention with appendage counterbalance; stationary, no direction flip.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M081/look",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Contact gait or tentacle locomotion cycle and approved MovementProfile required; current rig is stationary."
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Opposite-facing anatomical keyposes and occlusion ordering required; no mirrored whole-sprite shortcut."
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Standing rest gesture for quadrupeds; face/central tentacle relaxation for M085. No sitting or gait claimed.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M081/rest",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Brief doze-and-wake study: eyelids close with local head bow and appendage relaxation. Not a sustained sleep loop.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M081/sleep",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "sustainedSleep": {
+            "status": "AUTOMATED_CANDIDATE_PASS",
+            "segments": [
+              "sleep_enter",
+              "sleep_hold",
+              "sleep_exit"
+            ],
+            "path": "design/production-batches/luma-asset-20/living-followup/M081"
+          }
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "candidatePath": "design/production-batches/luma-asset-20/M081/cursor_react",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "VALIDATION_FAILED",
+          "reason": "Identical BASE first/last frames violate unique-frame criterion; preserved without repair under repository limit.",
+          "candidatePath": "design/production-batches/luma-asset-20/living-followup/M081/interact"
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Dedicated attack keyposes/contact trajectory required; no HIT reversal or generic translation."
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "SkillIdentity, species mapping and cast phases unapproved; no invented gameplay contract."
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "baselineFrameCount": 8,
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Do not recreate existing candidate; human artwork/motion review and Production mapping remain pending."
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Species-specific celebration pose required; tail motion alone is not completion."
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Collapse/resting anatomy and ground contact keyposes required; no global shrink/rotation."
+        },
+        {
+          "action": "JUMP",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Grounded crouch, takeoff and landing contact poses plus MovementProfile needed."
+        },
+        {
+          "action": "FLY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "No approved functional wing rig or flight contract; do not infer flight from crests or tendrils."
+        },
+        {
+          "action": "HOVER",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "M085 floating is only a proposal; current stationary tentacle IDLE is not body hover. Quadrupeds lack approved hover anatomy/profile."
+        },
+        {
+          "action": "LAND",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Landing is dependent on an approved airborne cycle and contact pose."
+        },
+        {
+          "action": "CHARGE",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Combat charge trajectory, anticipation pose and approved behavior contract needed."
+        },
+        {
+          "action": "RECOVERY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "candidatePath": "design/production-batches/luma-asset-20/M081/recovery",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        }
+      ],
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeConnected": false,
+      "gui": "DEFERRED_GUI"
+    },
+    {
+      "creatureId": "M082",
+      "baseStatus": "BASE_CANDIDATE",
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "CANDIDATE_ONLY",
+          "baselineFrameCount": 6,
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Do not recreate existing candidate; human artwork/motion review and Production mapping remain pending."
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "M081/M082 existing IDLE already uses ribcage breathing; do not duplicate or relabel it without the integration owner defining separate behavior. M085 requires a distinct body/respiration design, not generic scaling."
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Upper and lower eyelids close over the original eyes, reopening to exact BASE.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M082/blink",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Local head/neck attention with appendage counterbalance; stationary, no direction flip.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M082/look",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Contact gait or tentacle locomotion cycle and approved MovementProfile required; current rig is stationary."
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Opposite-facing anatomical keyposes and occlusion ordering required; no mirrored whole-sprite shortcut."
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Standing rest gesture for quadrupeds; face/central tentacle relaxation for M085. No sitting or gait claimed.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M082/rest",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Brief doze-and-wake study: eyelids close with local head bow and appendage relaxation. Not a sustained sleep loop.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M082/sleep",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "sustainedSleep": {
+            "status": "AUTOMATED_CANDIDATE_PASS",
+            "segments": [
+              "sleep_enter",
+              "sleep_hold",
+              "sleep_exit"
+            ],
+            "path": "design/production-batches/luma-asset-20/living-followup/M082"
+          }
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "candidatePath": "design/production-batches/luma-asset-20/M082/cursor_react",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "VALIDATION_FAILED",
+          "reason": "Identical BASE first/last frames violate unique-frame criterion; preserved without repair under repository limit.",
+          "candidatePath": "design/production-batches/luma-asset-20/living-followup/M082/interact"
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Dedicated attack keyposes/contact trajectory required; no HIT reversal or generic translation."
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "SkillIdentity, species mapping and cast phases unapproved; no invented gameplay contract."
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "baselineFrameCount": 8,
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Do not recreate existing candidate; human artwork/motion review and Production mapping remain pending."
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Species-specific celebration pose required; tail motion alone is not completion."
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Collapse/resting anatomy and ground contact keyposes required; no global shrink/rotation."
+        },
+        {
+          "action": "JUMP",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Grounded crouch, takeoff and landing contact poses plus MovementProfile needed."
+        },
+        {
+          "action": "FLY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "No approved functional wing rig or flight contract; do not infer flight from crests or tendrils."
+        },
+        {
+          "action": "HOVER",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "M085 floating is only a proposal; current stationary tentacle IDLE is not body hover. Quadrupeds lack approved hover anatomy/profile."
+        },
+        {
+          "action": "LAND",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Landing is dependent on an approved airborne cycle and contact pose."
+        },
+        {
+          "action": "CHARGE",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Combat charge trajectory, anticipation pose and approved behavior contract needed."
+        },
+        {
+          "action": "RECOVERY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "candidatePath": "design/production-batches/luma-asset-20/M082/recovery",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        }
+      ],
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeConnected": false,
+      "gui": "DEFERRED_GUI"
+    },
+    {
+      "creatureId": "M083",
+      "baseStatus": "BASE_CANDIDATE",
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Independent scorpion pincer and distal-tail articulation from valid BASE. Thorax and leg contact roots remain fixed; failed ATTACK source is not used. Small staggered pincer flex and tail-tip response.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M083/idle",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Independent scorpion pincer and distal-tail articulation from valid BASE. Thorax and leg contact roots remain fixed; failed ATTACK source is not used. Quick left/right pincer attention response with delayed tail curl; stationary, no ATTACK contract.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M083/cursor_react",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "VALIDATION_FAILED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "ATTACK raw Alpha4579 failure preserved at repair3/3."
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "JUMP",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "FLY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "HOVER",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "LAND",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "CHARGE",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        },
+        {
+          "action": "RECOVERY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_ANATOMY_RIG",
+          "reason": "Independent pincer/tail soft masks now exist for IDLE/CURSOR_REACT. This action still needs distinct keypose/contact articulation; failed ATTACK source remains protected."
+        }
+      ],
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeConnected": false,
+      "gui": "DEFERRED_GUI"
+    },
+    {
+      "creatureId": "M084",
+      "baseStatus": "VALIDATION_FAILED",
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "JUMP",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "FLY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "HOVER",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "LAND",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "CHARGE",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        },
+        {
+          "action": "RECOVERY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "BLOCKED",
+          "reason": "Existing BASE detached-alpha failure, inherited repair3/3. No cleanup or animation on failed source."
+        }
+      ],
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeConnected": false,
+      "gui": "DEFERRED_GUI"
+    },
+    {
+      "creatureId": "M085",
+      "baseStatus": "BASE_CANDIDATE",
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "candidatePath": "design/production-batches/luma-asset-20/M085/idle",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "BREATH",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "M081/M082 existing IDLE already uses ribcage breathing; do not duplicate or relabel it without the integration owner defining separate behavior. M085 requires a distinct body/respiration design, not generic scaling."
+        },
+        {
+          "action": "BLINK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Upper and lower eyelids close over the original eyes, reopening to exact BASE.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M085/blink",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "LOOK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Local head/neck attention with appendage counterbalance; stationary, no direction flip.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M085/look",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Contact gait or tentacle locomotion cycle and approved MovementProfile required; current rig is stationary."
+        },
+        {
+          "action": "TURN",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Opposite-facing anatomical keyposes and occlusion ordering required; no mirrored whole-sprite shortcut."
+        },
+        {
+          "action": "REST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Standing rest gesture for quadrupeds; face/central tentacle relaxation for M085. No sitting or gait claimed.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M085/rest",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SLEEP",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "reason": "Brief doze-and-wake study: eyelids close with local head bow and appendage relaxation. Not a sustained sleep loop.",
+          "candidatePath": "design/production-batches/luma-asset-20/continuation/M085/sleep",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "sustainedSleep": {
+            "status": "AUTOMATED_CANDIDATE_PASS",
+            "segments": [
+              "sleep_enter",
+              "sleep_hold",
+              "sleep_exit"
+            ],
+            "path": "design/production-batches/luma-asset-20/living-followup/M085"
+          }
+        },
+        {
+          "action": "CURSOR_REACT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Distinct attention gesture and cursor event mapping remain to design; existing INTERACT is preserved separately."
+        },
+        {
+          "action": "INTERACT",
+          "baselineStatus": "ANIMATION_IN_PROGRESS",
+          "baselineFrameCount": 8,
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Do not recreate existing candidate; human artwork/motion review and Production mapping remain pending."
+        },
+        {
+          "action": "ATTACK",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Dedicated attack keyposes/contact trajectory required; no HIT reversal or generic translation."
+        },
+        {
+          "action": "SKILL_CAST",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "SkillIdentity, species mapping and cast phases unapproved; no invented gameplay contract."
+        },
+        {
+          "action": "HIT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "AUTOMATED_CANDIDATE_PASS",
+          "candidatePath": "design/production-batches/luma-asset-20/M085/hit",
+          "productionComplete": false,
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "VICTORY",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Species-specific celebration pose required; tail motion alone is not completion."
+        },
+        {
+          "action": "DEFEAT",
+          "baselineStatus": "ASSET_REQUIRED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Collapse/resting anatomy and ground contact keyposes required; no global shrink/rotation."
+        },
+        {
+          "action": "JUMP",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Grounded crouch, takeoff and landing contact poses plus MovementProfile needed."
+        },
+        {
+          "action": "FLY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "No approved functional wing rig or flight contract; do not infer flight from crests or tendrils."
+        },
+        {
+          "action": "HOVER",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "M085 floating is only a proposal; current stationary tentacle IDLE is not body hover. Quadrupeds lack approved hover anatomy/profile."
+        },
+        {
+          "action": "LAND",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Landing is dependent on an approved airborne cycle and contact pose."
+        },
+        {
+          "action": "CHARGE",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Combat charge trajectory, anticipation pose and approved behavior contract needed."
+        },
+        {
+          "action": "RECOVERY",
+          "baselineStatus": "NOT_RECORDED",
+          "baselineFrameCount": 0,
+          "status": "DEFERRED_NEW_POSE_OR_CONTRACT",
+          "reason": "Needs a preceding damage/attack pose and transition validation; generic idle is not recovery."
+        }
+      ],
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeConnected": false,
+      "gui": "DEFERRED_GUI"
+    }
+  ],
+  "counts": {
+    "newPngThisContinuation": 126,
+    "newFramesThisContinuation": 112,
+    "newClipsThisContinuation": 14,
+    "totalPrPng": 180,
+    "totalPrFrames": 160,
+    "totalPrClips": 20,
+    "productionAcceptedClips": 0
+  },
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "failureRecoveryAttempts": 0,
+  "sharedStateSha256": {
+    "design/creature-production-queue.json": "b0a804319729400cf80dac3b195f9bb70dcff18f576bbe2cd0ad160389efec68",
+    "design/production-completion-ledger.json": "ae4d4062b0bdc36095af1f6141abea8675505b61592e7a8bd3b5d3cfa5e31aac",
+    "design/monster-identity-review.json": "d701dd23d862838018c292e756fdc6196262f046e4cb22af37dc11451d9482a1",
+    "src/entities/monsters.json": "387b36e6a80ab4a4d63deae99bde3ac1541d13f578a0e3c3eec37eb743c92383"
+  },
+  "existingInventoryReadOnly": {
+    "allCandidatePng": 676,
+    "sourcePngIncludingRecovery": 102
+  },
+  "integrationRequests": [
+    {
+      "target": "Creature Review Catalog",
+      "request": "Run existing catalog builder after integration; it discovers this session rigged paths without Runtime changes. Review appearance and natural motion for six clips."
+    },
+    {
+      "target": "Completion Ledger",
+      "request": "After human review, reconcile six candidate actions and counts using existing --refresh-inventory/--refresh-coverage. Shared files deliberately not written in this session; this handoff is not a replacement ledger."
+    },
+    {
+      "target": "Animation Manifest / Production Registry",
+      "request": "Only after explicit identity/artwork/motion approval, assign actual species mapping and appropriate action timing; then connect approved frames. No activation requested by this candidate-only PR."
+    },
+    {
+      "target": "RECOVERY transition",
+      "request": "Validate preceding HIT pose and event timing before enabling standalone release studies. No continuity between different clips has been certified."
+    },
+    {
+      "target": "Repository repair policy",
+      "request": "Global policy is updated but repository AGENTS/repair_gate/workflow still enforce 3. Any policy change requires a separate authorized integration; not changed here."
+    },
+    {
+      "target": "Validator tooling",
+      "request": "Review content-keyed process-local PNG cache, exact decoder parity tests, and benchmark. This authorized test-tool change does not change validation criteria or Production contracts."
+    },
+    {
+      "target": "Validator integration",
+      "request": "Compare PR 140/141/144/148 using validator-integration-request.json. Integration Track owns final shared implementation; no shared validator changes this turn."
+    },
+    {
+      "target": "Catalog and Ledger",
+      "request": "Import sleep_enter/hold/exit as three segments of one logical SLEEP action, not three completed actions. Preserve doze-and-wake evidence and distinguish failed INTERACT. Shared files not edited."
+    }
+  ],
+  "nextResumePoint": "Human review sustained sleep eye closure and loop motion. Resolve authorized repair policy for failed INTERACT endpoints; do not lower uniqueness validator. Next independent keyposes: gait contact cycle, opposite-facing TURN and jump crouch/takeoff/landing. Battle and Skill identities remain unapproved.",
+  "sessionBoundary": "14 additional isolated gesture candidates; 20 total. REST is standing relaxation and SLEEP is doze-and-wake, not sustained sleep or seated resting. No runtime completion claimed.",
+  "productionApproval": "HUMAN_REVIEW_REQUIRED",
+  "runtimeConnected": false,
+  "gui": "DEFERRED_GUI",
+  "lastCandidateValidatedCommit": "f6dc8b06e018faba2a6725f6f58fe2b7775d6d78",
+  "releaseGate": "NOT_RUN_FOR_NEW_HEAD",
+  "newClips": {
+    "pass": 9,
+    "failed": 2,
+    "total": 11
+  },
+  "newFrames": {
+    "pass": 72,
+    "failed": 16,
+    "total": 88
+  },
+  "newPng": 99,
+  "totalPrClips": {
+    "pass": 29,
+    "failed": 2
+  },
+  "totalPrFrames": 248,
+  "productionAcceptedClips": 0
+}
