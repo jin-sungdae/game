@@ -1,0 +1,101 @@
+{
+  "conceptId": "M004",
+  "species": null,
+  "evolutionStage": null,
+  "status": "HUMAN_REVIEW_REQUIRED",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M004/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 85,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 175,
+      "y": 102,
+      "rx": 5,
+      "ry": 5
+    },
+    {
+      "x": 192.5,
+      "y": 108,
+      "rx": 2.7,
+      "ry": 3.3
+    }
+  ],
+  "parts": [
+    {
+      "name": "trunk-flex",
+      "x": 145,
+      "y": 148,
+      "rx": 23,
+      "ry": 29,
+      "dx": -1.7,
+      "dy": 0.6,
+      "samples": [
+        0.015,
+        1,
+        0.76,
+        0.43,
+        0.21,
+        0.09,
+        0.035,
+        0.008
+      ]
+    },
+    {
+      "name": "leaf-shoulder-root",
+      "x": 111,
+      "y": 117,
+      "rx": 18,
+      "ry": 16,
+      "dx": 1.2,
+      "dy": -0.7,
+      "samples": [
+        0.01,
+        0.18,
+        0.8,
+        1,
+        0.62,
+        0.28,
+        0.09,
+        0.015
+      ]
+    }
+  ],
+  "fixedBodyExpression": "y>=182||y<=100||x<=80||x>=188||(x>=151&&y<=123)",
+  "anatomyScope": "기존 몸통 마스크의 반동, 잎 뿌리/어깨의 지연 반동, 눈의 빠른 움츠림 후 복귀. 발·윤곽·알파·머리 구조 유지.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "sessionId": "LUMA-ASSET-04",
+  "rigSource": "design/production-batches/luma-asset-04/M004/rest-pilot/rig-rest.cjs",
+  "rigSourceSha256": "0add1aa4259533813066c856881f671992553227f5bcfc6e2351e099b453285f",
+  "eyeRigSource": "design/production-batches/action-followup/M004/rig-look.cjs",
+  "eyeRigSourceSha256": "803c418e802fc04a7def5e25bbe4404a2c33cc6379b494e85af2c326078bbd78",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 미제작 HIT 첫 후보. 기존 실패 복구 아님; 3/3 이력 유지. M004 BLINK 예외 미사용.",
+  "behaviorContract": "정지 상태 HIT 시각 후보. 충격 방향/전투 이벤트/피해/스킬 계약 활성화 없음. 최종 동작 의미와 외형은 사람 검토 필요.",
+  "motionPhases": [
+    "near-base",
+    "impact",
+    "recoil",
+    "secondary-followthrough",
+    "recovery",
+    "recovery",
+    "settle",
+    "near-base"
+  ],
+  "returnScope": "마지막 프레임은 BASE 근접. 정확한 BASE 전환은 측정값으로 검토하며 Runtime 완료를 주장하지 않음."
+}
