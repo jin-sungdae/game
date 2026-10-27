@@ -21,7 +21,7 @@ with tempfile.TemporaryDirectory(prefix='luma-asset04-catalog-') as d:
  review.ROOT=tmp
  # Existing refresh operations run only against a disposable audit copy, never shared Ledger.
  review.refresh_inventory();catalog=review.build();review.refresh_coverage(catalog)
- 
+
  for row in catalog['creatures']:
   for clip in row['clips']:
    if '/luma-asset-04/M002/hit-pilot/' in clip['directory']:
