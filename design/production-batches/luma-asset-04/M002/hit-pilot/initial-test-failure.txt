@@ -1,0 +1,18 @@
+test_no_previous_hit_or_caplet_repair (test_luma_asset_04_hit.LumaAsset04HitTests.test_no_previous_hit_or_caplet_repair) ... ok
+test_png_anatomy_contact_hash_and_recovery (test_luma_asset_04_hit.LumaAsset04HitTests.test_png_anatomy_contact_hash_and_recovery) ... 
+  test_png_anatomy_contact_hash_and_recovery (test_luma_asset_04_hit.LumaAsset04HitTests.test_png_anatomy_contact_hash_and_recovery) (identity='M002') ... FAIL
+test_rig_geometry_is_reused_and_response_is_not_breathing (test_luma_asset_04_hit.LumaAsset04HitTests.test_rig_geometry_is_reused_and_response_is_not_breathing) ... ok
+
+======================================================================
+FAIL: test_png_anatomy_contact_hash_and_recovery (test_luma_asset_04_hit.LumaAsset04HitTests.test_png_anatomy_contact_hash_and_recovery) (identity='M002')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jinseongdae/.codex/worktrees/assets-m001-m005/New project/tests/assets/test_luma_asset_04_hit.py", line 42, in test_png_anatomy_contact_hash_and_recovery
+    self.assertLess(r['entryToPeakRatio'], .05)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.07597685943886114 not less than 0.05
+
+----------------------------------------------------------------------
+Ran 3 tests in 12.133s
+
+FAILED (failures=1)
