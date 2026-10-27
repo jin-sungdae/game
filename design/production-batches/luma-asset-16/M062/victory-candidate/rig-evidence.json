@@ -1,0 +1,179 @@
+{
+  "reference": "design/production-batches/monsters/batch07/M062/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "upper-trunk-proud-lift",
+      "x": 168,
+      "y": 139,
+      "rx": 20,
+      "ry": 23,
+      "dx": 0.8,
+      "dy": -1.1,
+      "samples": [
+        0.03,
+        0.25,
+        0.65,
+        1,
+        0.72,
+        0.32,
+        0.6,
+        0.95,
+        0.7,
+        0.33,
+        0.08,
+        0
+      ]
+    },
+    {
+      "name": "side-fin-salute",
+      "x": 188,
+      "y": 150,
+      "rx": 8,
+      "ry": 21,
+      "dx": 1.1,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.65,
+        0.96,
+        0.72,
+        0.4,
+        0.66,
+        1,
+        0.56,
+        0.13,
+        0
+      ]
+    },
+    {
+      "name": "curled-tail-flourish",
+      "x": 140,
+      "y": 197,
+      "rx": 25,
+      "ry": 21,
+      "dx": 1.1,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.65,
+        0.96,
+        0.72,
+        0.4,
+        0.66,
+        1,
+        0.56,
+        0.13,
+        0
+      ]
+    }
+  ],
+  "protectedRegions": "y>=221||y<=111||x<=127||x>=197",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "victory_00.png",
+      "pixelSha256": "1e213a3b5aa2bc31b7dfcc216b42d324723e31bc7c0688771befe3286933fb77",
+      "changedPixels": 1031,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 194,
+      "maxInverseDisplacementPixels": 0.04080398326162372
+    },
+    {
+      "file": "victory_01.png",
+      "pixelSha256": "fef5c6d10658b19f9e165cfeeff0fce97473f35813e2b19a1c95a0739c3d29f9",
+      "changedPixels": 1798,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 341,
+      "maxInverseDisplacementPixels": 0.3397893389287052
+    },
+    {
+      "file": "victory_02.png",
+      "pixelSha256": "cdd9377843c9ab66f404e3b49c5333e36cd92e2299353614971ad95c086e273a",
+      "changedPixels": 2205,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 569,
+      "maxInverseDisplacementPixels": 0.8821502478830384
+    },
+    {
+      "file": "victory_03.png",
+      "pixelSha256": "b4da344e3bd8bd94bbf30e6cf55774d808f48a0759d93ecbc6477de0b7e1821f",
+      "changedPixels": 2340,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 727,
+      "maxInverseDisplacementPixels": 1.3596613678495504
+    },
+    {
+      "file": "victory_04.png",
+      "pixelSha256": "988b80e4442a42cc24b3c351fcd2721b80273847dfd551280eae17d919f7859f",
+      "changedPixels": 2322,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 754,
+      "maxInverseDisplacementPixels": 1.5624984397919761
+    },
+    {
+      "file": "victory_05.png",
+      "pixelSha256": "b448784aa81493116151588712df631db4f53bfc6e3cc54312c99fec492dbbb0",
+      "changedPixels": 2177,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 682,
+      "maxInverseDisplacementPixels": 1.1716830025665197
+    },
+    {
+      "file": "victory_06.png",
+      "pixelSha256": "a31b6c6aab8a31cd25cb21f208409c3169b144b63377f8096d02a6d60235a9b9",
+      "changedPixels": 2232,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 616,
+      "maxInverseDisplacementPixels": 0.8141463134182736
+    },
+    {
+      "file": "victory_07.png",
+      "pixelSha256": "53ca99b87d315d1867b625c2fb15c44c2e06faeed0d448f15b4866da8edde705",
+      "changedPixels": 2335,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 730,
+      "maxInverseDisplacementPixels": 1.2915654725355632
+    },
+    {
+      "file": "victory_08.png",
+      "pixelSha256": "cc2de3123a8000f0a8bed874327426003e93725633c737f3fa570673ae8968a4",
+      "changedPixels": 2326,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 764,
+      "maxInverseDisplacementPixels": 1.6273632560315936
+    },
+    {
+      "file": "victory_09.png",
+      "pixelSha256": "d15e594e56bcadec6dcb718b7c8a9a2c4de7e750be155eddcc212b21ad375ed5",
+      "changedPixels": 2160,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 645,
+      "maxInverseDisplacementPixels": 0.9102952222617103
+    },
+    {
+      "file": "victory_10.png",
+      "pixelSha256": "36423d24c8496a49a97ff5d1680c1fa2661f40cba5530bc72bc5f3a6b1e1ac3a",
+      "changedPixels": 1658,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 391,
+      "maxInverseDisplacementPixels": 0.2115688953194206
+    },
+    {
+      "file": "victory_11.png",
+      "pixelSha256": "3807512482a7a4884a14de2c83c513d086f938515529be982a17c1346facb336",
+      "changedPixels": 0,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "maxInverseDisplacementPixels": 0
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-16 independent first attempt; inherited 3/3 remains locked; no recovery authorized",
+  "productionEligible": false
+}
