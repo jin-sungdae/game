@@ -72,7 +72,7 @@ for meta_path in sorted(SESSION.glob('M*/*/candidate-clip.json')):
     report={'conceptId':meta['conceptId'],'action':meta['clip']['name'],'automated':'FAIL' if errors else 'PASS',
         'errors':errors,'frames':evidence,'baseEntryAndReturnContinuity':transitions,'exactBaseReturn':bool(np.array_equal(decoded[-1],base)),
         'uniquePixelHashes':len(set(hashes)),'appearanceReview':'HUMAN_REVIEW_REQUIRED','naturalMotion':'HUMAN_REVIEW_REQUIRED',
-        'scope':'Eye-only BLINK legitimately preserves Alpha; body pose candidates require local RGBA changes. Exact BASE endpoint allowed, no duplicate frames. Natural motion/Species acceptance not inferred.',
+        'scope':'Local part and eyelid motion; SLEEP_HOLD loop seam and SLEEP_ENTER/EXIT chain validated separately. Natural motion and visible eye closure require human review.',
         'productionEligible':False,'runtimeConnected':False,'gui':'DEFERRED_GUI'}
     (folder/'frame-validation.json').write_text(json.dumps(report,indent=2)+'\n')
     results.append({k:report[k] for k in ['conceptId','action','automated','errors']})

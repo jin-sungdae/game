@@ -201,7 +201,7 @@
   "uniquePixelHashes": 7,
   "appearanceReview": "HUMAN_REVIEW_REQUIRED",
   "naturalMotion": "HUMAN_REVIEW_REQUIRED",
-  "scope": "Eye-only BLINK legitimately preserves Alpha; body pose candidates require local RGBA changes. Exact BASE endpoint allowed, no duplicate frames. Natural motion/Species acceptance not inferred.",
+  "scope": "Local part and eyelid motion; no whole-image transform. SLEEP_HOLD measures loop seam, SLEEP_ENTER/EXIT connect to BASE and are checked together in sleep-chain-validation.json. Human visual closure and natural motion are not inferred from numeric settings.",
   "productionEligible": false,
   "runtimeConnected": false,
   "gui": "DEFERRED_GUI"
