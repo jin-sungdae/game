@@ -1,0 +1,126 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "validatedHead": "f6dc8b06e018faba2a6725f6f58fe2b7775d6d78",
+  "releaseGate": {
+    "status": "AUTOMATED_READY",
+    "manualGate": "MANUAL_QA_REQUIRED",
+    "head": "f6dc8b06e018faba2a6725f6f58fe2b7775d6d78",
+    "workingTreeDirty": true,
+    "checks": [
+      {
+        "name": "frontend-build",
+        "status": "PASS",
+        "seconds": 11.87
+      },
+      {
+        "name": "animation-content",
+        "status": "PASS",
+        "seconds": 19.08
+      },
+      {
+        "name": "presentation",
+        "status": "PASS",
+        "seconds": 16.14
+      },
+      {
+        "name": "asset-tests",
+        "status": "PASS",
+        "seconds": 1032.51
+      },
+      {
+        "name": "optional-assets",
+        "status": "PASS",
+        "seconds": 25.15
+      },
+      {
+        "name": "strict-alpha",
+        "status": "PASS",
+        "seconds": 19.84
+      },
+      {
+        "name": "required-bases",
+        "status": "PASS",
+        "seconds": 20.49
+      },
+      {
+        "name": "automation-policy",
+        "status": "PASS",
+        "seconds": 5.27
+      },
+      {
+        "name": "release-static",
+        "status": "PASS",
+        "seconds": 0.07
+      },
+      {
+        "name": "tao-integrity",
+        "status": "PASS",
+        "seconds": 0.07
+      },
+      {
+        "name": "rust-fmt",
+        "status": "PASS",
+        "seconds": 0.21
+      },
+      {
+        "name": "rust-tests-native-link",
+        "status": "PASS",
+        "seconds": 55.51
+      },
+      {
+        "name": "rust-clippy",
+        "status": "PASS",
+        "seconds": 26.07
+      },
+      {
+        "name": "launch_audit",
+        "status": "PASS",
+        "seconds": 0.5
+      },
+      {
+        "name": "single_instance_audit",
+        "status": "PASS",
+        "seconds": 0.59
+      },
+      {
+        "name": "bootJar",
+        "status": "PASS",
+        "seconds": 12.21
+      },
+      {
+        "name": "server-fresh-persistence-failures",
+        "status": "PASS"
+      },
+      {
+        "name": "whitespace",
+        "status": "PASS",
+        "seconds": 0.03
+      }
+    ]
+  },
+  "assetTests": {
+    "local": 228,
+    "localSeconds": 1031.704,
+    "additionalCacheTests": 3,
+    "ciTotal": 231,
+    "ciSeconds": 230.685
+  },
+  "animationRegression": 236,
+  "presentation": 69,
+  "rustTests": {
+    "passed": 189,
+    "ignored": 16
+  },
+  "candidateValidation": {
+    "existing": 6,
+    "new": 14,
+    "status": "PASS"
+  },
+  "ciVerifiedRun": "https://github.com/jin-sungdae/game/actions/runs/40318157185",
+  "ciVerifiedHead": "f6dc8b06e018faba2a6725f6f58fe2b7775d6d78",
+  "ciStatus": "SUCCESS",
+  "gui": "DEFERRED_GUI",
+  "productionApproval": "HUMAN_REVIEW_REQUIRED",
+  "runtimeConnected": false,
+  "scope": "Gate began before new cache test file was discovered; separate cache suite and CI verified all 231 tests. Gate dirty state was evidence-only preserved-failures.json. Subsequent commit records evidence only."
+}
