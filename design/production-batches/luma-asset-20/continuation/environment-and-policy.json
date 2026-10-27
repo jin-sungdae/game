@@ -1,0 +1,52 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "baselineHead": "4aaea43a0b3153ea3d51ea218a75af49991d8222",
+  "mainHead": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "previousRun": {
+    "resultFile": "/tmp/luma-asset-20-release/release-result.json",
+    "assetTestSeconds": 753.01,
+    "termination": "Agent sent SIGINT to this session asset-test child; traceback ends KeyboardInterrupt in PNG Paeth filter decoder. Not a failed test assertion."
+  },
+  "environment": {
+    "observedLoadAverage": [
+      253.33,
+      242.76,
+      240.11
+    ],
+    "pageSize": 16384,
+    "freePages": 8524,
+    "concurrentOtherAssetSuitesObserved": true,
+    "interpretation": "Concurrent CPU contention is supported by process samples; memory snapshot alone does not establish OOM. No OOM evidence in interrupted log."
+  },
+  "isolation": {
+    "output": "/tmp/luma-asset-20-resume-release",
+    "worktree": "assets-m081-m085/New project",
+    "cleanup": "Existing runner uses unique TemporaryDirectory for PostgreSQL, free ports, finally stop for owned server and PG. No other session files/processes modified.",
+    "pathCollision": "No evidence of path collision; output directory created with exist_ok=False. Shared dependency caches may contend; no shared target override added."
+  },
+  "policy": {
+    "global": "Global AGENTS section21 removes arbitrary global attempt cap but explicitly defers repository limits.",
+    "repository": "AGENTS.md and scripts/ci/repair_gate.py plus .github/workflows/pr-validation.yml still enforce 3.",
+    "runtimeLimitRemoved": false,
+    "policyFilesModified": false,
+    "failedSourcesRepaired": false
+  },
+  "baselineCI": {
+    "head": "4aaea43a0b3153ea3d51ea218a75af49991d8222",
+    "run": "https://github.com/jin-sungdae/game/actions/runs/40313249030",
+    "desktop-static": "SUCCESS",
+    "server-java": "SUCCESS",
+    "macos-native": "SUCCESS",
+    "review-result": "SUCCESS",
+    "scope": "Previous HEAD only; not latest changes or human GUI approval."
+  },
+  "protectedHashes": {
+    "design/creature-production-queue.json": "b0a804319729400cf80dac3b195f9bb70dcff18f576bbe2cd0ad160389efec68",
+    "design/production-completion-ledger.json": "ae4d4062b0bdc36095af1f6141abea8675505b61592e7a8bd3b5d3cfa5e31aac",
+    "design/monster-identity-review.json": "d701dd23d862838018c292e756fdc6196262f046e4cb22af37dc11451d9482a1",
+    "src/entities/monsters.json": "387b36e6a80ab4a4d63deae99bde3ac1541d13f578a0e3c3eec37eb743c92383"
+  },
+  "validatorChange": "Bounded 128-entry process-local LRU keyed by complete PNG bytes and option flags. Reads bytes each call. Decoder and thresholds unchanged. Return lists copied to prevent caller mutation. No disk cache or new dependency.",
+  "newToolSyntaxIncident": "Initial JS unary-exponent syntax error occurred before PNG output; fixed grouping, no failed artwork overwritten.",
+  "gui": "DEFERRED_GUI"
+}

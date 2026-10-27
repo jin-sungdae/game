@@ -2,6 +2,7 @@
 Default is strict; --allow-missing permits only wholly empty frame directories.
 """
 import argparse
+from functools import lru_cache
 import hashlib
 import json
 import re
@@ -14,9 +15,31 @@ COUNTS = dict(idle=6, walk=8, sit=4, look=4, sleep=6, react=6)
 
 
 def png_errors(path, require_transparency=False, bounds=None, pixel_digests=None):
-    errors = []
+    # Read on every call: a rewritten file must never reuse stale validation.
     try:
         data = path.read_bytes()
+    except OSError as exc:
+        return [str(exc)]
+    errors, measured_bounds, digests = _cached_png_errors(
+        data, require_transparency, bounds is not None, pixel_digests is not None)
+    if bounds is not None:
+        bounds.extend(measured_bounds)
+    if pixel_digests is not None:
+        pixel_digests.extend(digests)
+    return list(errors)
+
+
+@lru_cache(maxsize=128)
+def _cached_png_errors(data, require_transparency, measure_bounds, measure_digests):
+    bounds = [] if measure_bounds else None
+    pixel_digests = [] if measure_digests else None
+    errors = _decode_png_errors(data, require_transparency, bounds, pixel_digests)
+    return tuple(errors), tuple(bounds or ()), tuple(pixel_digests or ())
+
+
+def _decode_png_errors(data, require_transparency=False, bounds=None, pixel_digests=None):
+    errors = []
+    try:
         if data[:8] != b'\x89PNG\r\n\x1a\n':
             raise ValueError('invalid PNG signature')
         offset, chunks, compressed = 8, [], bytearray()

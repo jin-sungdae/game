@@ -1,0 +1,124 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "conceptId": "M085",
+  "sourceBase": "design/production-batches/monsters/batch09/M085/base-v2.png",
+  "sourceRig": "design/production-batches/luma-asset-20/continuation/rig.cjs",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "parts": [
+    {
+      "x": 155,
+      "y": 133,
+      "rx": 22,
+      "ry": 15,
+      "dx": -1.5,
+      "dy": 1.5,
+      "name": "neck-bow",
+      "samples": [
+        1,
+        0.93,
+        0.78,
+        0.58,
+        0.36,
+        0.18,
+        0.06,
+        0
+      ]
+    },
+    {
+      "x": 149,
+      "y": 158,
+      "rx": 18,
+      "ry": 28,
+      "dx": 0,
+      "dy": 1.6,
+      "name": "chest-counterbalance",
+      "samples": [
+        1,
+        0.93,
+        0.78,
+        0.58,
+        0.36,
+        0.18,
+        0.06,
+        0
+      ]
+    },
+    {
+      "x": 183,
+      "y": 190,
+      "rx": 23,
+      "ry": 21,
+      "dx": -1.4,
+      "dy": 1.2,
+      "name": "tail-counterbalance",
+      "samples": [
+        1,
+        0.93,
+        0.78,
+        0.58,
+        0.36,
+        0.18,
+        0.06,
+        0
+      ]
+    }
+  ],
+  "eyes": [
+    {
+      "x": 152.5,
+      "y": 127.5,
+      "rx": 5.5,
+      "ry": 7.8,
+      "angle": 0,
+      "skin": [
+        144,
+        127
+      ]
+    },
+    {
+      "x": 168,
+      "y": 132,
+      "rx": 2.5,
+      "ry": 5,
+      "angle": 0.2,
+      "skin": [
+        165,
+        134
+      ]
+    }
+  ],
+  "eyeClosureSamples": [
+    1,
+    1,
+    0.94,
+    0.8,
+    0.55,
+    0.3,
+    0.1,
+    0
+  ],
+  "clip": {
+    "name": "SLEEP_EXIT",
+    "frames": 8,
+    "frameDuration": 200,
+    "loop": false
+  },
+  "framesDirectory": "design/production-batches/luma-asset-20/living-followup/M085/sleep_exit/rigged/sleep_exit",
+  "intent": "Sustained sleeping state: enter from BASE, keep eyes closed throughout hold, exit back to exact BASE. Head/neck and appendage relaxation, stationary; human anatomy and sleep acceptance pending.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "failureRecovery": false,
+  "exactBaseReturn": true,
+  "logicalAction": "SLEEP",
+  "stateSegment": "sleep_exit"
+}

@@ -1,0 +1,83 @@
+{
+  "sourceBase": "design/production-batches/monsters/batch09/M081/base-v2.png",
+  "sourceBasePixelSha256": "0c93df9bc81776f8245124a111efd0ba3f6f94ff24ad7bf0f62eda45590be06e",
+  "sourceRig": "design/production-batches/luma-asset-20/M085/idle/rig.cjs",
+  "frames": [
+    {
+      "file": "look_00.png",
+      "pixelSha256": "1d62f18776ad4cb476e13a8ac9fcda56ccb058a743e853c1bf30d6152ba669ce"
+    },
+    {
+      "file": "look_01.png",
+      "pixelSha256": "de8f8650e41879355f99989174608a363af73b2e97daa626be4e8d041cb42daa"
+    },
+    {
+      "file": "look_02.png",
+      "pixelSha256": "c269f816802a5973ae8298436fbb409c90d2909ce8a4224f0f484e1f1ecfe72e"
+    },
+    {
+      "file": "look_03.png",
+      "pixelSha256": "5474bb6820e9273e79a5dd35a69eba8df298d516bfded5b2cb0be7223f4456f9"
+    },
+    {
+      "file": "look_04.png",
+      "pixelSha256": "6b6f88d7fe58d6894eeab6c18fd6487be7d682d2feba101fb2c6b5866cf68942"
+    },
+    {
+      "file": "look_05.png",
+      "pixelSha256": "f89afb1d430d117ce08f7fdaf1eaed4fe5184f172ff787409b748626241de3d3"
+    },
+    {
+      "file": "look_06.png",
+      "pixelSha256": "936aee11182a8d291e60d4316ed4115a93b621c53ef76b65afc859051989e9ac"
+    },
+    {
+      "file": "look_07.png",
+      "pixelSha256": "0c93df9bc81776f8245124a111efd0ba3f6f94ff24ad7bf0f62eda45590be06e"
+    }
+  ],
+  "wholeImageTransform": false,
+  "exactBaseReturnFrame": 7,
+  "eyelidMask": [],
+  "parts": [
+    {
+      "x": 206,
+      "y": 103,
+      "rx": 31,
+      "ry": 27,
+      "dx": 1.4,
+      "dy": -0.765,
+      "name": "head-attention",
+      "samples": [
+        0.01,
+        0.2,
+        0.62,
+        1,
+        0.83,
+        0.46,
+        0.14,
+        0
+      ]
+    },
+    {
+      "x": 65,
+      "y": 148,
+      "rx": 28,
+      "ry": 23,
+      "dx": 1.2,
+      "dy": 0.8,
+      "name": "tail-counterbalance",
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0
+      ]
+    }
+  ],
+  "productionEligible": false
+}
