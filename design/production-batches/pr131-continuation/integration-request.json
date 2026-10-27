@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "sourcePr": 131,
+  "baselineHead": "c3ff2748dd2d34ff975295f23d086e7e1d677f12",
+  "owner": "PR131 continuation",
+  "integrationStatus": "REQUESTED_NOT_APPLIED",
+  "sharedFilesUnchanged": [
+    "design/creature-production-queue.json",
+    "tests/live/creature-review/catalog.json"
+  ],
+  "candidateChanges": {
+    "newClips": 0,
+    "newFrames": 0,
+    "productionRegistrations": 0,
+    "runtimeConnections": 0
+  },
+  "preservedCandidates": [
+    "M088 INTERACT 8",
+    "M090 HIT 8",
+    "M092 HIT 8",
+    "M096 CURSOR_REACT 8"
+  ],
+  "supplementalEvidence": "design/production-batches/pr131-continuation/boundary-validation.json",
+  "validationMeaning": "Existing validator results and BASE-entry/exit pixel measurements only; appearance and natural motion remain HUMAN_REVIEW_REQUIRED. No new pass threshold.",
+  "baselineCoverage": {
+    "creatures": 115,
+    "requiredActions": 1740,
+    "candidateClips": 155,
+    "candidateFrames": 1106,
+    "candidateActions": 154,
+    "runtimeActions": 12,
+    "productionComplete": 0,
+    "nativeGuiComplete": 0
+  },
+  "crossPrReview": [
+    {
+      "pr": 139,
+      "head": "11dfc560527734ec729ca3721194ddcc56e3f9e2",
+      "result": "M092 BREATH/BLINK/LOOK are distinct from PR131 HIT. Preserve failed BREATH/BLINK and all pending approvals. No imported assets."
+    },
+    {
+      "pr": 140,
+      "head": "54365835045e356c033fd3bc1eb6930a2d11f8b1",
+      "result": "M088 HIT and M090 CURSOR_REACT/INTERACT are distinct actions. No imported assets."
+    },
+    {
+      "pr": 154,
+      "head": "609f9ad77d1d2ea26c97237b7d1a2b1c9d053b2c",
+      "result": "M001 action ownership belongs to LUMA-ASSET-04. ATTACK absent; existing BLINK/CURSOR_REACT/REST must not be recreated."
+    }
+  ],
+  "blocked": [
+    {
+      "creatureId": "M001",
+      "action": "ATTACK",
+      "status": "BLOCKED",
+      "reason": "No approved attack keypose or articulated attack rig. Existing INTERACT rig flexes leaf ear while face, body and feet stay fixed; does not establish anticipation, strike and recovery. Production Identity/Battle mapping remains unapproved.",
+      "required": "Asset owner supplies identity-preserving attack keyposes and body-part rig; Integration Track resolves ownership before candidate creation."
+    }
+  ],
+  "preservedFailures": [
+    "M083 Alpha",
+    "M084 BASE",
+    "M086 Identity",
+    "M093/M094/M097 Appearance",
+    "M098/M100 Identity"
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "worktreeIncidents": {
+    "originalDeletion": "Confirmed Codex startup-cleanup git-remove success on 2026-10-26; reason ownerThreadInProgress=false remains UNKNOWN.",
+    "laterGate": "Documents checkout retained .git but compressed,dataless source reads timed out; release runner failed in git diff/status. Underlying provider cause UNKNOWN.",
+    "currentCheckout": "Independent clone under /Users/jinseongdae/.codex/luma-pr131-stable; followup worktree git-locked; no unrelated checkout deleted."
+  },
+  "productionApproval": "CAPLET SLEEP remains approved and already connected; no approved unconnected candidate found.",
+  "nativeGui": "DEFERRED_GUI",
+  "browserPreview": "NOT_RUN",
+  "nextTask": "Integration Track reconcile per-action candidates from PR139/140/154 without duplicate import; M001 ATTACK remains blocked pending approved keypose/rig and ownership. Continue available assigned actions only.",
+  "validation": "Exact followup commit Release Gate and CI will be reported on PR131; earlier HEAD evidence is not reused."
+}

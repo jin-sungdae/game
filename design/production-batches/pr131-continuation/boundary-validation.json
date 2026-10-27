@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "scope": "PR131 only; external PR clips are not imported or counted",
+  "clips": [
+    {
+      "creatureId": "M088",
+      "action": "INTERACT",
+      "candidatePath": "design/production-batches/action-followup/M088/interact-pilot",
+      "sourceBaseSha256": "bc6682a290e4ce9276eddd0ea41692e9ebbe56df09d6ff28c9adc6b788723ef6",
+      "frameSha256": [
+        "888cf09a208c575bbbaf4e4a99ddcb67c100ee684170c7c79d3c24c5a8ffda3f",
+        "04820ea8ae35268bfca6750cf524cc5df97ef2849b3856f017e0003b7b55668c",
+        "84d7aba743a352f2e9b3076f704eec420918ea953a1a92856795e7e1ed5ef1c2",
+        "11cf0718aa0dbc1d6f787d3fd7adddd7ae0abd0f6dc4beba86bcea11c4d44f35",
+        "892b91e17ec0cc7d1968e97878cf94ba546b4ad203af21640d6405f2cab35263",
+        "90207e92855979cf30bf15bfdbe5958bc3ad5d923027ebe1b5ca3e755b543da3",
+        "115c68c72624ee407b27ed9b7cb0129ab293f7f211c0af282be14f6cbf90220d",
+        "a2ff2803c2b5fb7ea2fa80fb0583c8cbb5573b65a93867eb5e359497b5e2ea3d"
+      ],
+      "uniqueVisibleHashes": 8,
+      "existingValidatorStatus": "PASS",
+      "entry": {
+        "rawChangedPixels": 690,
+        "rawRgbaAbsoluteDifference": 32515,
+        "visibleChangedPixels": 419,
+        "maxAlphaDifference": 5,
+        "maxCompositeDifference": 5.290196,
+        "meanCompositeDifference": 0.00628
+      },
+      "adjacent": [
+        {
+          "rawChangedPixels": 1200,
+          "rawRgbaAbsoluteDifference": 18314,
+          "visibleChangedPixels": 1140,
+          "maxAlphaDifference": 59,
+          "maxCompositeDifference": 58.823529,
+          "meanCompositeDifference": 0.072656
+        },
+        {
+          "rawChangedPixels": 1627,
+          "rawRgbaAbsoluteDifference": 29673,
+          "visibleChangedPixels": 1575,
+          "maxAlphaDifference": 110,
+          "maxCompositeDifference": 96.156863,
+          "meanCompositeDifference": 0.140537
+        },
+        {
+          "rawChangedPixels": 1665,
+          "rawRgbaAbsoluteDifference": 26407,
+          "visibleChangedPixels": 1614,
+          "maxAlphaDifference": 100,
+          "maxCompositeDifference": 90.27451,
+          "meanCompositeDifference": 0.132124
+        },
+        {
+          "rawChangedPixels": 1726,
+          "rawRgbaAbsoluteDifference": 34233,
+          "visibleChangedPixels": 1686,
+          "maxAlphaDifference": 114,
+          "maxCompositeDifference": 104.776471,
+          "meanCompositeDifference": 0.173633
+        },
+        {
+          "rawChangedPixels": 1663,
+          "rawRgbaAbsoluteDifference": 23982,
+          "visibleChangedPixels": 1629,
+          "maxAlphaDifference": 77,
+          "maxCompositeDifference": 71.698039,
+          "meanCompositeDifference": 0.124693
+        },
+        {
+          "rawChangedPixels": 1661,
+          "rawRgbaAbsoluteDifference": 30539,
+          "visibleChangedPixels": 1621,
+          "maxAlphaDifference": 129,
+          "maxCompositeDifference": 116.937255,
+          "meanCompositeDifference": 0.16428
+        },
+        {
+          "rawChangedPixels": 1466,
+          "rawRgbaAbsoluteDifference": 24262,
+          "visibleChangedPixels": 1404,
+          "maxAlphaDifference": 113,
+          "maxCompositeDifference": 104.011765,
+          "meanCompositeDifference": 0.113151
+        }
+      ],
+      "exit": {
+        "rawChangedPixels": 878,
+        "rawRgbaAbsoluteDifference": 34313,
+        "visibleChangedPixels": 630,
+        "maxAlphaDifference": 11,
+        "maxCompositeDifference": 10.137255,
+        "meanCompositeDifference": 0.012798
+      },
+      "lastToFirst": {
+        "rawChangedPixels": 592,
+        "rawRgbaAbsoluteDifference": 1886,
+        "visibleChangedPixels": 548,
+        "maxAlphaDifference": 6,
+        "maxCompositeDifference": 5.670588,
+        "meanCompositeDifference": 0.006753
+      },
+      "returnsExactBasePixels": false,
+      "loop": false,
+      "assessment": "MEASURED_ONLY_NO_NEW_PASS_THRESHOLD",
+      "appearance": "HUMAN_REVIEW_REQUIRED",
+      "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+      "productionApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "creatureId": "M090",
+      "action": "HIT",
+      "candidatePath": "design/production-batches/action-followup/M090/hit-pilot",
+      "sourceBaseSha256": "35bb93c3872ee534e43c4c26dd7b2cc2193839a58b1005a1e9d14edabc3935cd",
+      "frameSha256": [
+        "fe8de8acfd2d95c46022c848d3fd08d375d9124f21955f0865b93f299ff522b2",
+        "36459e25046ac714a3957e58b19315f0083e7bac6dc62e594e2eb98f1d747f05",
+        "559b07336846e78e6b8a1b7f70dd581033848fea30f5f3bada2f458c86752206",
+        "118dce9c2820752923c2e2a172e0489a6c090c85dfefaa712423cc2a736432eb",
+        "338e88108886b80d782711ddd878dc3d480db8b72fb265bd93e45f01f61354c3",
+        "0fe1e4c60ea04544398542f312a60b8ce61a0ae286baf19adda3bd7949d28d32",
+        "8e2320cf28046c6598bb155546a8afc912ef8240ef16e1c187894226b2af1c34",
+        "46b1cb3afe44eb8bd772ad0c297cf442f6ab02e61592f08522cf77e7a65573a8"
+      ],
+      "uniqueVisibleHashes": 8,
+      "existingValidatorStatus": "PASS",
+      "entry": {
+        "rawChangedPixels": 433,
+        "rawRgbaAbsoluteDifference": 3723,
+        "visibleChangedPixels": 361,
+        "maxAlphaDifference": 10,
+        "maxCompositeDifference": 9.843137,
+        "meanCompositeDifference": 0.007041
+      },
+      "adjacent": [
+        {
+          "rawChangedPixels": 1289,
+          "rawRgbaAbsoluteDifference": 40773,
+          "visibleChangedPixels": 1284,
+          "maxAlphaDifference": 142,
+          "maxCompositeDifference": 156.760784,
+          "meanCompositeDifference": 0.234217
+        },
+        {
+          "rawChangedPixels": 1420,
+          "rawRgbaAbsoluteDifference": 17412,
+          "visibleChangedPixels": 1417,
+          "maxAlphaDifference": 114,
+          "maxCompositeDifference": 111.945098,
+          "meanCompositeDifference": 0.124232
+        },
+        {
+          "rawChangedPixels": 1526,
+          "rawRgbaAbsoluteDifference": 24795,
+          "visibleChangedPixels": 1522,
+          "maxAlphaDifference": 150,
+          "maxCompositeDifference": 144.792157,
+          "meanCompositeDifference": 0.175865
+        },
+        {
+          "rawChangedPixels": 1342,
+          "rawRgbaAbsoluteDifference": 13615,
+          "visibleChangedPixels": 1337,
+          "maxAlphaDifference": 71,
+          "maxCompositeDifference": 69.015686,
+          "meanCompositeDifference": 0.089773
+        },
+        {
+          "rawChangedPixels": 1346,
+          "rawRgbaAbsoluteDifference": 14099,
+          "visibleChangedPixels": 1343,
+          "maxAlphaDifference": 114,
+          "maxCompositeDifference": 109.482353,
+          "meanCompositeDifference": 0.105033
+        },
+        {
+          "rawChangedPixels": 1147,
+          "rawRgbaAbsoluteDifference": 7885,
+          "visibleChangedPixels": 1144,
+          "maxAlphaDifference": 74,
+          "maxCompositeDifference": 72.541176,
+          "meanCompositeDifference": 0.062257
+        },
+        {
+          "rawChangedPixels": 1002,
+          "rawRgbaAbsoluteDifference": 6513,
+          "visibleChangedPixels": 998,
+          "maxAlphaDifference": 73,
+          "maxCompositeDifference": 71.854902,
+          "meanCompositeDifference": 0.049354
+        }
+      ],
+      "exit": {
+        "rawChangedPixels": 516,
+        "rawRgbaAbsoluteDifference": 4273,
+        "visibleChangedPixels": 446,
+        "maxAlphaDifference": 14,
+        "maxCompositeDifference": 13.780392,
+        "meanCompositeDifference": 0.010645
+      },
+      "lastToFirst": {
+        "rawChangedPixels": 328,
+        "rawRgbaAbsoluteDifference": 550,
+        "visibleChangedPixels": 323,
+        "maxAlphaDifference": 4,
+        "maxCompositeDifference": 3.937255,
+        "meanCompositeDifference": 0.003707
+      },
+      "returnsExactBasePixels": false,
+      "loop": false,
+      "assessment": "MEASURED_ONLY_NO_NEW_PASS_THRESHOLD",
+      "appearance": "HUMAN_REVIEW_REQUIRED",
+      "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+      "productionApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "creatureId": "M092",
+      "action": "HIT",
+      "candidatePath": "design/production-batches/action-followup/M092/hit-pilot",
+      "sourceBaseSha256": "9543daf3951b815a7a43f282ba3aa174b24f1e922507a33a8aea3f9206d4da8a",
+      "frameSha256": [
+        "1f3cf0369bc34c0a3ec0de4ab0dd5e027232f7686076c9c24bf4a3f9eeb08cac",
+        "6959f9428fb7e7dab2088f6e635e47065080c3bbb5f0d1f34524f665fa3caf68",
+        "f269f66cb02d6c161779c1ee8e8bb59562aa7c4f4a8c5d8bdd61b4f4a0be0b18",
+        "46e6032895af7e3d719c20afa505c8d26008d4cfd2bddbbc35b40dac233601df",
+        "859451b8c379c4e74a30694ad48485deff13f9e0600bbb10bd6895989397f875",
+        "d1bb0b0cec796e0e039d241ed927d8dd7798ed4b0919827cb808003e2ba35bcf",
+        "f8c417cb62058ae68f48a324086626328f12c8fb82d7a6d00a6f0be6bf082bcc",
+        "035cb4fe474f7a4d6037b8170094b66ac39a43d4eea15ea0ab0b3f346f84776c"
+      ],
+      "uniqueVisibleHashes": 8,
+      "existingValidatorStatus": "PASS",
+      "entry": {
+        "rawChangedPixels": 751,
+        "rawRgbaAbsoluteDifference": 96877,
+        "visibleChangedPixels": 516,
+        "maxAlphaDifference": 5,
+        "maxCompositeDifference": 4.423529,
+        "meanCompositeDifference": 0.006089
+      },
+      "adjacent": [
+        {
+          "rawChangedPixels": 1705,
+          "rawRgbaAbsoluteDifference": 50895,
+          "visibleChangedPixels": 1646,
+          "maxAlphaDifference": 208,
+          "maxCompositeDifference": 186.341176,
+          "meanCompositeDifference": 0.194619
+        },
+        {
+          "rawChangedPixels": 1812,
+          "rawRgbaAbsoluteDifference": 23775,
+          "visibleChangedPixels": 1752,
+          "maxAlphaDifference": 44,
+          "maxCompositeDifference": 38.596078,
+          "meanCompositeDifference": 0.085107
+        },
+        {
+          "rawChangedPixels": 1994,
+          "rawRgbaAbsoluteDifference": 37734,
+          "visibleChangedPixels": 1941,
+          "maxAlphaDifference": 61,
+          "maxCompositeDifference": 72.427451,
+          "meanCompositeDifference": 0.154391
+        },
+        {
+          "rawChangedPixels": 1890,
+          "rawRgbaAbsoluteDifference": 22064,
+          "visibleChangedPixels": 1846,
+          "maxAlphaDifference": 48,
+          "maxCompositeDifference": 44.647059,
+          "meanCompositeDifference": 0.093553
+        },
+        {
+          "rawChangedPixels": 1865,
+          "rawRgbaAbsoluteDifference": 26598,
+          "visibleChangedPixels": 1816,
+          "maxAlphaDifference": 49,
+          "maxCompositeDifference": 69.45098,
+          "meanCompositeDifference": 0.111387
+        },
+        {
+          "rawChangedPixels": 1723,
+          "rawRgbaAbsoluteDifference": 24904,
+          "visibleChangedPixels": 1666,
+          "maxAlphaDifference": 48,
+          "maxCompositeDifference": 57.545098,
+          "meanCompositeDifference": 0.097893
+        },
+        {
+          "rawChangedPixels": 1459,
+          "rawRgbaAbsoluteDifference": 17585,
+          "visibleChangedPixels": 1376,
+          "maxAlphaDifference": 28,
+          "maxCompositeDifference": 33.733333,
+          "meanCompositeDifference": 0.057138
+        }
+      ],
+      "exit": {
+        "rawChangedPixels": 1003,
+        "rawRgbaAbsoluteDifference": 99330,
+        "visibleChangedPixels": 781,
+        "maxAlphaDifference": 6,
+        "maxCompositeDifference": 6.196078,
+        "meanCompositeDifference": 0.012395
+      },
+      "lastToFirst": {
+        "rawChangedPixels": 705,
+        "rawRgbaAbsoluteDifference": 2519,
+        "visibleChangedPixels": 660,
+        "maxAlphaDifference": 3,
+        "maxCompositeDifference": 3.968627,
+        "meanCompositeDifference": 0.00644
+      },
+      "returnsExactBasePixels": false,
+      "loop": false,
+      "assessment": "MEASURED_ONLY_NO_NEW_PASS_THRESHOLD",
+      "appearance": "HUMAN_REVIEW_REQUIRED",
+      "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+      "productionApproved": false,
+      "runtimeEnabled": false
+    },
+    {
+      "creatureId": "M096",
+      "action": "CURSOR_REACT",
+      "candidatePath": "design/production-batches/action-followup/M096/cursor_react-pilot",
+      "sourceBaseSha256": "ff07558fd18331b6294a60921308a2edf45cb008450a78327157e32c1372188d",
+      "frameSha256": [
+        "4efde9fa31513f5cd78a6ecbe27c48a249ae15eab60505637af98d453c557147",
+        "2268d09c06ea3a6faeed7dc7f58fb2539daddffe316e86244eff035bec73d952",
+        "30c13307d99e42db0c29b599c26722d47ddec14b3894e8c5be6fc2dcd0634f17",
+        "924b066d706b80ab71caf3d030f65358fdeecda79f19d4c11ee4951bd2233607",
+        "d0aad2eeca4295016c11653ccbf3db096f12be974e2b7c1e1fafb8fc62a88aa2",
+        "8de09fcfb94dda1014c6627ee2285167ca602156400bc6f2affa7f2a12696bdb",
+        "346c6d72342b655552efd4e93790e822040621b5b1c5fbfb743d4685965d4ec8",
+        "1520b9c21d25b90006f2fe0fc8ffd7372e6ee9f45c4aa7f84550b344d1fbddec"
+      ],
+      "uniqueVisibleHashes": 8,
+      "existingValidatorStatus": "PASS",
+      "entry": {
+        "rawChangedPixels": 410,
+        "rawRgbaAbsoluteDifference": 54500,
+        "visibleChangedPixels": 284,
+        "maxAlphaDifference": 6,
+        "maxCompositeDifference": 5.337255,
+        "meanCompositeDifference": 0.004195
+      },
+      "adjacent": [
+        {
+          "rawChangedPixels": 1139,
+          "rawRgbaAbsoluteDifference": 16106,
+          "visibleChangedPixels": 1116,
+          "maxAlphaDifference": 56,
+          "maxCompositeDifference": 51.25098,
+          "meanCompositeDifference": 0.050508
+        },
+        {
+          "rawChangedPixels": 1726,
+          "rawRgbaAbsoluteDifference": 29846,
+          "visibleChangedPixels": 1711,
+          "maxAlphaDifference": 130,
+          "maxCompositeDifference": 135.043137,
+          "meanCompositeDifference": 0.118243
+        },
+        {
+          "rawChangedPixels": 1772,
+          "rawRgbaAbsoluteDifference": 21240,
+          "visibleChangedPixels": 1757,
+          "maxAlphaDifference": 64,
+          "maxCompositeDifference": 63.0,
+          "meanCompositeDifference": 0.07363
+        },
+        {
+          "rawChangedPixels": 1583,
+          "rawRgbaAbsoluteDifference": 16197,
+          "visibleChangedPixels": 1569,
+          "maxAlphaDifference": 48,
+          "maxCompositeDifference": 48.996078,
+          "meanCompositeDifference": 0.048761
+        },
+        {
+          "rawChangedPixels": 1845,
+          "rawRgbaAbsoluteDifference": 24519,
+          "visibleChangedPixels": 1830,
+          "maxAlphaDifference": 101,
+          "maxCompositeDifference": 96.545098,
+          "meanCompositeDifference": 0.098839
+        },
+        {
+          "rawChangedPixels": 1703,
+          "rawRgbaAbsoluteDifference": 20525,
+          "visibleChangedPixels": 1684,
+          "maxAlphaDifference": 77,
+          "maxCompositeDifference": 74.082353,
+          "meanCompositeDifference": 0.082205
+        },
+        {
+          "rawChangedPixels": 1208,
+          "rawRgbaAbsoluteDifference": 10859,
+          "visibleChangedPixels": 1176,
+          "maxAlphaDifference": 28,
+          "maxCompositeDifference": 25.309804,
+          "meanCompositeDifference": 0.034829
+        }
+      ],
+      "exit": {
+        "rawChangedPixels": 538,
+        "rawRgbaAbsoluteDifference": 55678,
+        "visibleChangedPixels": 414,
+        "maxAlphaDifference": 9,
+        "maxCompositeDifference": 7.839216,
+        "meanCompositeDifference": 0.007075
+      },
+      "lastToFirst": {
+        "rawChangedPixels": 360,
+        "rawRgbaAbsoluteDifference": 1236,
+        "visibleChangedPixels": 342,
+        "maxAlphaDifference": 3,
+        "maxCompositeDifference": 2.858824,
+        "meanCompositeDifference": 0.002928
+      },
+      "returnsExactBasePixels": false,
+      "loop": false,
+      "assessment": "MEASURED_ONLY_NO_NEW_PASS_THRESHOLD",
+      "appearance": "HUMAN_REVIEW_REQUIRED",
+      "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+      "productionApproved": false,
+      "runtimeEnabled": false
+    }
+  ],
+  "productionRegistrations": 0,
+  "runtimeConnections": 0,
+  "nativeGui": "DEFERRED_GUI"
+}
