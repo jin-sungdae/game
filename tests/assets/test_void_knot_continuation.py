@@ -1,0 +1,19 @@
+import hashlib
+import json
+import unittest
+from test_assets import ROOT
+from test_creature_new_pose_quality import measure_parts
+
+BATCH = ROOT / 'design/production-batches/action-followup'
+
+class VoidKnotContinuationTests(unittest.TestCase):
+    def test_drake_hit_preserves_contacts_and_moves_local_silhouette(self):
+        folder = BATCH / 'M088/interact-pilot'
+        r = measure_parts(folder)
+        self.assertEqual(r, json.loads((folder / 'frame-validation.json').read_text()))
+        self.assertEqual(r['automated'], 'PASS')
+        self.assertEqual(r['uniquePixelHashes'], 8)
+        self.assertTrue(all(f['protectedPixelChanges'] == 0 for f in r['frames']))
+        self.assertTrue(any(f['silhouetteSupportChangedPixels'] for f in r['frames']))
+        self.assertFalse(r['productionEligible'])
+

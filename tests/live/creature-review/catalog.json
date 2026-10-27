@@ -24991,7 +24991,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "RIG_LAYER_REQUIRED: violet eye ring needs separated eye/ring surfaces or dedicated response keypose. Whole ring rotation and internal pixel distortion do not establish facing stimulus. Preserve BASE and FLOATING proposal.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "ATTACK",
@@ -25116,10 +25118,15 @@
         },
         {
           "action": "INTERACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M088/interact-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "ATTACK",
@@ -25157,17 +25164,99 @@
           "guiStatus": "GUI_NOT_VERIFIED"
         }
       ],
-      "clips": [],
+      "clips": [
+        {
+          "action": "interact",
+          "directory": "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact",
+          "urls": [
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_00.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_01.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_02.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_03.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_04.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_05.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_06.png",
+            "/design/production-batches/action-followup/M088/interact-pilot/rigged/interact/interact_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 150,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ],
+            [
+              22,
+              47,
+              234,
+              218
+            ]
+          ],
+          "pixelHashes": [
+            "8c2e9687949d61c6aad6d7ec242a842da95443231a9833a8dfccd354c53bcd3b",
+            "8e01edd3fd258c20a5a3a1f43959e22df211208ae7410d3911e9fe70ca1475c1",
+            "bb3c92e35df1bf36cd8838d56ce9966a99465c1eeaa2dd54a77d382ec5fb76c2",
+            "37612d789ea51739a2d549185530f327fedaf62a87f5fd42dea18e5f5a3fe8aa",
+            "056c684b8c7f5645bed9a3a919769bdcf34c83a1f3bef43c18ff645314991feb",
+            "b958c2838ed72a2c3cb15ebecd81f2d1bde6a223a268e8cffada68777672008d",
+            "2ff2dbbfa20059f5b44f71eacb1e2efa14284f229b6ee1ddcb54897053561591",
+            "6611f22338cedb0ba81562425aaf2cd69d5180cf5ee8cd5316f4b09c01c76fee"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        }
+      ],
       "coverage": {
         "requiredActions": 15,
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 0,
-        "automatedCandidateActions": 0,
-        "artworkReviewPendingActions": 0,
+        "candidateActions": 1,
+        "automatedCandidateActions": 1,
+        "artworkReviewPendingActions": 1,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 15,
+        "missingFrameSetActions": 14,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -25240,7 +25329,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "KEYPOSE_REQUIRED: red eye orb gaze-away/return requires eye anatomy-preserving keypose or separate pupil layer; peripheral tentacle motion alone does not implement gaze contract.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "INTERACT",
@@ -25393,10 +25484,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M090/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -25414,6 +25510,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M090/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ],
+            [
+              58,
+              21,
+              206,
+              234
+            ]
+          ],
+          "pixelHashes": [
+            "12944a1d922841dfd3f6a91d227f2d81e5ded0ceb54c3bf02a33fdff1ad744a7",
+            "f1aa8ec889910689dafcfbca84156da00a7139b252dba16487d245ae43bd8605",
+            "2cc86014db76c5acd999a1ef6b5d00b527b631f12eaa889f9f289dc41000ad9b",
+            "ba4310b418bbc6921d3db6c98f56f626e0ec2efd8babc379bf3a6a539fce6a05",
+            "73cb337e751f717c7c34a75731e4d5391f1a4563eaa65b52290783608180de00",
+            "4149173808c262784c2fa785ad6e9924701e7a04f51675e4ebf700b3c4959bad",
+            "25256c82493d2aa3421dbf31a5fcd618381a069ab7b46701145a780c9cb2bf09",
+            "1de7c46f2af0bafc85eba31de13e1c16fbef83c3b177370f3279667729a64e02"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch09/M090/rigged/idle",
@@ -25485,11 +25662,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -25590,7 +25767,9 @@
           "animationStatus": "ASSET_REQUIRED",
           "frameCount": 0,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "blockReason": "ANATOMY_IDENTITY_REVIEW_REQUIRED: existing ambiguous extra-leg blocker preserved; winged light stag proposal differs from avian winged BASE. No new rig or Species change.",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "VICTORY",
@@ -25715,10 +25894,15 @@
         },
         {
           "action": "HIT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M092/hit-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "VICTORY",
@@ -25736,6 +25920,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "hit",
+          "directory": "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit",
+          "urls": [
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_00.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_01.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_02.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_03.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_04.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_05.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_06.png",
+            "/design/production-batches/action-followup/M092/hit-pilot/rigged/hit/hit_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ],
+            [
+              55,
+              16,
+              215,
+              233
+            ]
+          ],
+          "pixelHashes": [
+            "fc0a2d9c96a35e3348edd3f78e2719ffc3f1afce99571dca610ac7e2600e824b",
+            "d902589e760fc9b97440fb10081a00a5ba61fabf07eeb12c71263177f90e2570",
+            "90a21a16907665d67f5cf59013a357b84b3ef2475518661fd40f35c2921fd99e",
+            "cdf85318c4c320133eae776c7a836a73a4fa77fdff695cca637288a728d0e4d5",
+            "9bfdb91f95fa8d1dc4a1c8408d09e2b70666301350188d4b469f6c92a62abb3b",
+            "0038e08400c085d2b84ce22898be69c8e6730ad7a862955081ba209eb197af3b",
+            "397ef602a4ab086fab37e96459ed977a453620a9c8e53cece36808573b4c4736",
+            "578f7df3f19cc81aad78cf69854befae68a74eaf27ddb3c3a9852f23462cdc46"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch10/M092/rigged/idle",
@@ -25807,11 +26072,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -26331,10 +26596,15 @@
         },
         {
           "action": "CURSOR_REACT",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "automated": "PASS",
+          "candidatePath": "design/production-batches/action-followup/M096/cursor_react-pilot",
+          "blockReason": "Artwork, natural motion and Production Identity review required; candidate only"
         },
         {
           "action": "INTERACT",
@@ -26380,6 +26650,87 @@
         }
       ],
       "clips": [
+        {
+          "action": "cursor_react",
+          "directory": "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react",
+          "urls": [
+            "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react/cursor_react_00.png",
+            "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react/cursor_react_01.png",
+            "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react/cursor_react_02.png",
+            "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react/cursor_react_03.png",
+            "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react/cursor_react_04.png",
+            "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react/cursor_react_05.png",
+            "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react/cursor_react_06.png",
+            "/design/production-batches/action-followup/M096/cursor_react-pilot/rigged/cursor_react/cursor_react_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 125,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              47,
+              17,
+              218,
+              235
+            ],
+            [
+              47,
+              17,
+              218,
+              235
+            ],
+            [
+              47,
+              17,
+              218,
+              235
+            ],
+            [
+              47,
+              17,
+              218,
+              235
+            ],
+            [
+              47,
+              17,
+              218,
+              235
+            ],
+            [
+              47,
+              17,
+              218,
+              235
+            ],
+            [
+              47,
+              17,
+              218,
+              235
+            ],
+            [
+              47,
+              17,
+              218,
+              235
+            ]
+          ],
+          "pixelHashes": [
+            "0b227d32581ca3b02e861129d74899b81cbfdfc29967f1a55757cfd686d22abb",
+            "2391aadceb25950dfdf8881e45e6501ec51f26d403da7f531a4244481307c906",
+            "0b308cf42d648be46681d18059d4566218c493b241660e600fd0656a878cca5c",
+            "035e9fdbc050751b282b672403227f6d40f85cf0da60a5e1af257cfa42a3e8c5",
+            "41ee366140788b733b8702968d0aef8272f79d0df8c3a48d22284ddc53c23c4e",
+            "2ae1c999f9278975136b7f255184018408e2a69ce65d72866cae7f54a2c68ae4",
+            "54c128a86cf53aa78b8e9dc866033b41e9e529f0361f1185e9dc0722a5f207d1",
+            "963ec3ba945aa53355968bab3b85b7643d652867ad8d12055b0dada0b277ad47"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "idle",
           "directory": "/design/production-batches/monsters/batch10/M096/rigged/idle",
@@ -26451,11 +26802,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -27112,11 +27463,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 150,
-    "automatedCandidateActions": 148,
-    "artworkReviewPendingActions": 149,
+    "candidateActions": 154,
+    "automatedCandidateActions": 152,
+    "artworkReviewPendingActions": 153,
     "validationFailedActions": 39,
-    "missingFrameSetActions": 1585,
+    "missingFrameSetActions": 1581,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
