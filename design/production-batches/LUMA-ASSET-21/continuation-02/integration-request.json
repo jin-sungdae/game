@@ -1,0 +1,111 @@
+{
+  "sessionId": "LUMA-ASSET-21",
+  "previousHead": "54365835045e356c033fd3bc1eb6930a2d11f8b1",
+  "newClips": 3,
+  "newFrames": 24,
+  "newPng": 27,
+  "totalClips": 8,
+  "totalFrames": 64,
+  "productionApprovals": 0,
+  "runtimeConnections": 0,
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "failedCandidateRecovery": false,
+  "newActions": {
+    "M087": "IDLE: counterphase ring flex; no full rotation or hidden surface invention",
+    "M088": "IDLE: outward neutral tendril unfurl, opposite to HIT inward recoil; no PR131 INTERACT reuse",
+    "M090": "REST: standing wing relaxation and return, not sit/sleep/flight"
+  },
+  "terminalContract": "New three clips: last frame byte-decoded RGBA equals BASE; prior five clips unchanged. Motion frames0..6 run unchanged shared part validator; terminal frame independently requires exact equality.",
+  "ledgerSnapshot": [
+    {
+      "id": "M086",
+      "productionSpeciesId": null,
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeStatus": "BLOCKED"
+    },
+    {
+      "id": "M087",
+      "productionSpeciesId": null,
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeStatus": "BLOCKED"
+    },
+    {
+      "id": "M088",
+      "productionSpeciesId": null,
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeStatus": "BLOCKED"
+    },
+    {
+      "id": "M089",
+      "productionSpeciesId": null,
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeStatus": "BLOCKED"
+    },
+    {
+      "id": "M090",
+      "productionSpeciesId": null,
+      "productionStatus": "NOT_PRODUCTION_READY",
+      "runtimeStatus": "BLOCKED"
+    }
+  ],
+  "identityDecision": {
+    "M086": {
+      "catalog": "design/visual-reference-v1/catalog.json: tentacled shadow, playful, EDGE",
+      "artwork": "design/production-batches/monsters/batch09/M086/base-v2.png: coiled serpent/dragon",
+      "approvedMapping": false,
+      "choices": [
+        "Keep catalog identity and commission approved tentacled-shadow artwork",
+        "Keep serpent artwork only after human approves species/behavior/movement mapping change",
+        "Keep both as separate concepts only after explicit species ownership approval"
+      ],
+      "status": "BLOCKED_HUMAN_REVIEW_REQUIRED"
+    },
+    "M087": "Lossless Eye/Ring masks expose unpainted space if translated/rotated independently. New IDLE flexes current ring pixels only; directional eye/hidden surface/eyelid poses remain blocked.",
+    "M089": "LOOK raw retained, no alpha cleanup/normalization/recovery. detachedAlpha2996 at threshold0; changed sclera/iris location and surrounding details need human review; no approved repair path. Existing INTERACT untouched.",
+    "M090": "TURN requires side/back occlusion; MOVE requires foot contact sequence; FLY/HOVER/LAND require complete wing/air/contact states; SLEEP/DEFEAT require eyelid/collapsed pose; ATTACK/VICTORY require distinct gesture; SKILL_CAST requires approved server skill contract. No runtime claim."
+  },
+  "validatorComparison": {
+    "140": {
+      "head": "54365835045e356c033fd3bc1eb6930a2d11f8b1",
+      "capacity": 256,
+      "largeInputBypassBytes": 1048576
+    },
+    "141": {
+      "head": "f6dc8b06e018faba2a6725f6f58fe2b7775d6d78",
+      "capacity": 128,
+      "largeInputBypassBytes": null
+    },
+    "144": {
+      "head": "c3462594ed78ef4cd1e50d2b58d985ea703e3de0",
+      "capacity": 1024,
+      "largeInputBypassBytes": null
+    },
+    "148": {
+      "head": "8fee88fdfddd1e8625451d0d0a57281c0969be69",
+      "capacity": 512,
+      "largeInputBypassBytes": 262144
+    },
+    "common": "All reread file bytes on each call; bytes plus check flags are keys; immutable tuple cache, fresh caller lists. No path/mtime-only stale key. Decoder criteria retained in inspected implementations.",
+    "request": "Coordinator choose one implementation and reconcile tests/memory policy. No shared validator edit in this continuation; no foreign PR overwrite."
+  },
+  "stackedDependencies": {
+    "131Head": "c3ff2748dd2d34ff975295f23d086e7e1d677f12",
+    "preservedExternalActions": [
+      "M088 INTERACT",
+      "M090 HIT"
+    ],
+    "cherryPicked": false,
+    "base": "main",
+    "runtimeDependenciesAdded": false
+  },
+  "integrationRequests": [
+    "Collect new3 plus existing5 into shared Creature Review Catalog without duplicate totals",
+    "Update single shared Completion Ledger only in Integration Track after review",
+    "Resolve M086 identity choices; keep M089 failure and repair3/3",
+    "Unify validator changes across PR140/141/144/148 in Integration Track; retain all mutation/alpha/hash tests",
+    "Only approved assets may be registered or connected; no Spawn/Rarity/Capture/Skill activation"
+  ],
+  "nextResume": "Human inspect ring/tendril neutral cycles and standing wing rest; then approved hidden surfaces, eyelids, directional/contact artwork. Existing five return seams remain measured but not repaired; new three return exactly. Full release and exact-head CI results belong in PR after execution."
+}
