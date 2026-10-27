@@ -1,0 +1,114 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M062",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M062/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "NOT_APPROVED",
+  "clip": {
+    "name": "ATTACK",
+    "frames": 12,
+    "frameDuration": 100,
+    "loop": false
+  },
+  "movableRect": [
+    146,
+    78,
+    201,
+    174
+  ],
+  "parts": [
+    {
+      "name": "muzzle-draw-thrust",
+      "x": 190,
+      "y": 106,
+      "rx": 10,
+      "ry": 11,
+      "dx": 1.5,
+      "dy": -0.8,
+      "samples": [
+        0.02,
+        -0.18,
+        -0.42,
+        -0.6,
+        -0.25,
+        0.45,
+        1,
+        0.72,
+        0.38,
+        0.15,
+        0.04,
+        0
+      ]
+    },
+    {
+      "name": "cheek-anticipation",
+      "x": 163,
+      "y": 106,
+      "rx": 15,
+      "ry": 12,
+      "dx": -0.7,
+      "dy": 0.5,
+      "samples": [
+        0.01,
+        0.08,
+        0.28,
+        0.55,
+        0.87,
+        1,
+        0.7,
+        0.45,
+        0.24,
+        0.1,
+        0.03,
+        0
+      ]
+    },
+    {
+      "name": "upper-trunk-brace",
+      "x": 168,
+      "y": 139,
+      "rx": 20,
+      "ry": 23,
+      "dx": -0.8,
+      "dy": 0.7,
+      "samples": [
+        0.01,
+        0.08,
+        0.28,
+        0.55,
+        0.87,
+        1,
+        0.7,
+        0.45,
+        0.24,
+        0.1,
+        0.03,
+        0
+      ]
+    }
+  ],
+  "anatomyScope": "Muzzle thrust anticipation/release with upper-trunk counterbrace; crown and lower tail protected. Physical pose study only, no projectile, contact or damage invented.",
+  "terminalFrame": {
+    "index": 11,
+    "role": "EXACT_BASE_RETURN",
+    "expectedPixelChanges": 0
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Independent first attempt only; no failed source reuse, counter reset or automatic repair",
+  "wholeImageTransform": false
+}

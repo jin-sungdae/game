@@ -1,0 +1,50 @@
+frontend-build
+animation-content
+presentation
+asset-tests
+optional-assets
+strict-alpha
+required-bases
+automation-policy
+release-static
+tao-integrity
+rust-fmt
+rust-tests-native-link
+rust-clippy
+launch_audit
+single_instance_audit
+bootJar
+Isolated PostgreSQL16 server regression, fresh/persistence/network/DB smoke
+{
+  "berriesUsed": 10,
+  "captureFailures": 5,
+  "captureSuccesses": 32,
+  "charmUsed": 1,
+  "final": {
+    "activeCompanion": {
+      "bond": 12,
+      "evolutionName": "NEBLA",
+      "evolutionStage": 3,
+      "exp": 1500,
+      "level": 6,
+      "playerCompanionId": 1,
+      "species": "MOA"
+    },
+    "player": {
+      "activeSelectionRevision": 0,
+      "gold": 390,
+      "name": "LOCAL_PLAYER",
+      "playerId": 1
+    }
+  },
+  "goldEarned": 750,
+  "goldRemaining": 390,
+  "goldSpent": 360,
+  "interactionsAwarded": 2,
+  "mokoriWins": 8,
+  "neblaWins": 36,
+  "potionUsed": 1
+}
+ALPHA PASS; isolated Spring/PostgreSQL stopped; evidence: /private/tmp/luma-144-release-v2/live
+whitespace
+AUTOMATED_READY MANUAL_QA_REQUIRED /private/tmp/luma-144-release-v2

@@ -1,0 +1,85 @@
+{
+  "files": [
+    {
+      "path": "scripts/validate_assets.py",
+      "sha256": "a5236ac9c89f8f057f22c341f972e9a65125e04fdead603dc4cbc3f89b6effac",
+      "measuredMemory": {
+        "currentBytes": 168,
+        "peakBytes": 84570,
+        "scope": "warm-cache five BASE files, not worst-case memory"
+      }
+    },
+    {
+      "path": "/tmp/luma-144-round3/validator-140.py",
+      "sha256": "bd5f72af014e166973bc17577c857ce4090efac962d640798ad97dcf613a09a1",
+      "measuredMemory": {
+        "currentBytes": 240,
+        "peakBytes": 84642,
+        "scope": "warm-cache five BASE files, not worst-case memory"
+      }
+    },
+    {
+      "path": "/tmp/luma-144-round3/validator-141.py",
+      "sha256": "4a2cf07da5a3f5ce062e529b6d349b3e35552de1f1b6bedb5501e683cabafb10",
+      "measuredMemory": {
+        "currentBytes": 240,
+        "peakBytes": 84642,
+        "scope": "warm-cache five BASE files, not worst-case memory"
+      }
+    },
+    {
+      "path": "/tmp/luma-144-round3/validator-148.py",
+      "sha256": "29260ce5bd1c90c75540f5f64d08f225c98f2aa02738cfd1f07d6b11c79787b7",
+      "measuredMemory": {
+        "currentBytes": 240,
+        "peakBytes": 84642,
+        "scope": "warm-cache five BASE files, not worst-case memory"
+      }
+    }
+  ],
+  "sameResultCases": 56,
+  "mismatches": [],
+  "samePathSameMtimeCorruptionDetected": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "deletionDetected": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "status": "PASS",
+  "comparisonScope": "Errors, bounds, normalized visible Pixel Hash under 8 option combinations; no approval or shared code writes",
+  "implementations": [
+    {
+      "pr": 144,
+      "entries": 1024,
+      "maxInputBytes": null,
+      "inputRetentionCeiling": "No byte bound; entry limit only"
+    },
+    {
+      "pr": 140,
+      "entries": 256,
+      "maxInputBytes": 1048576,
+      "inputRetentionCeilingBytes": 268435456
+    },
+    {
+      "pr": 141,
+      "entries": 128,
+      "maxInputBytes": null,
+      "inputRetentionCeiling": "No byte bound; entry limit only"
+    },
+    {
+      "pr": 148,
+      "entries": 512,
+      "maxInputBytes": 262144,
+      "inputRetentionCeilingBytes": 134217728
+    }
+  ],
+  "invalidation": "All read file contents on every call. New bytes/options produce a new key; old entries remain until LRU eviction or process exit. Delete/read errors are checked before cache. Immutable cached outputs are copied into caller lists.",
+  "integrationRecommendation": "Coordinator should choose one canonical content-keyed cache, including an input byte bound and existing identical decoder. #148 has the tightest explicit input-retention ceiling among byte-bounded options; #141 has the smallest entry count but no byte bound. No other PR or common validator changed in this continuation.",
+  "memoryCaveat": "Input ceilings exclude Python object/result overhead. Tracemalloc warm-cache sample is not a worst-case measurement."
+}

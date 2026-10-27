@@ -1,0 +1,22 @@
+
+> project-luma-spike@0.1.0 test:assets
+> python3 -m unittest discover -s tests/assets -v
+
+test_candidate_versions_never_double_count_actions_or_approve_them (test_action_coverage.ActionCoverageTests) ... ok
+test_declared_missing_frames_and_filename_contracts (test_action_coverage.ActionCoverageTests) ... ok
+test_ledger_catalog_and_legacy_identity_scopes_match (test_action_coverage.ActionCoverageTests) ... ok
+test_ready_claim_without_frames_or_gui_is_not_completion (test_action_coverage.ActionCoverageTests) ... ok
+test_failed_blink_is_retained_and_cannot_count_as_pass (test_action_diversity.ActionDiversityTests) ... ok
+test_failed_interact_and_existing_sleep_remain_separate (test_action_diversity.ActionDiversityTests) ... ok
+test_successful_clips_keep_anatomy_alpha_and_unique_frames (test_action_diversity.ActionDiversityTests) ... ok
+test_failed_keyposes_preserve_raw_output_and_measured_alpha_defects (test_action_production_continuation.ActionProductionContinuationTests) ... ok
+test_ledger_and_manifests_do_not_activate_unapproved_actions (test_action_production_continuation.ActionProductionContinuationTests) ... ok
+test_new_gaze_and_interaction_frames_preserve_fixed_anatomy (test_action_production_continuation.ActionProductionContinuationTests) ... ok
+test_nox_blink_duplicate_frames_remain_failed_without_recovery (test_action_production_continuation.ActionProductionContinuationTests) ... ok
+test_actual_cli_strict_gate_missing_then_complete_delivery (test_alpha_assets.AlphaAssetTests) ... ok
+test_invalid_dimensions_format_and_alpha_channel (test_alpha_assets.AlphaAssetTests) ... ok
+test_only_canonical_pip_animation_manifest_is_allowed (test_alpha_assets.AlphaAssetTests) ... ok
+test_optional_and_strict_fifteen_paths (test_alpha_assets.AlphaAssetTests) ... ok
+test_real_transparency_for_all_png_filters (test_alpha_assets.AlphaAssetTests) ... ok
+test_registry_scale_paths_and_duplicates (test_alpha_assets.AlphaAssetTests) ... ok
+test_wrong_filename_duplicate_and_case (test_alpha_assets.AlphaAssetTests) ...

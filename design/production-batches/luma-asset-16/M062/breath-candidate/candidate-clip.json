@@ -1,0 +1,82 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M062",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M062/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "NOT_APPROVED",
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 180,
+    "loop": true
+  },
+  "movableRect": [
+    127,
+    111,
+    197,
+    184
+  ],
+  "parts": [
+    {
+      "name": "upper-trunk-expansion",
+      "x": 168,
+      "y": 139,
+      "rx": 20,
+      "ry": 23,
+      "dx": 0.8,
+      "dy": -0.6,
+      "samples": [
+        0.03,
+        0.25,
+        0.65,
+        1,
+        0.78,
+        0.4,
+        0.13,
+        0
+      ]
+    },
+    {
+      "name": "near-fin-respiratory-follow",
+      "x": 188,
+      "y": 150,
+      "rx": 8,
+      "ry": 21,
+      "dx": 0.9,
+      "dy": 0.5,
+      "samples": [
+        0.01,
+        0.08,
+        0.3,
+        0.72,
+        1,
+        0.62,
+        0.24,
+        0
+      ]
+    }
+  ],
+  "anatomyScope": "Seahorse upper trunk and side fin subtly expand and settle, keeping head/crown and curled tail fixed. No mammalian chest heave.",
+  "terminalFrame": {
+    "index": 7,
+    "role": "EXACT_BASE_RETURN",
+    "expectedPixelChanges": 0
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Independent first attempt; failed assets untouched; repository limit not reset"
+}
