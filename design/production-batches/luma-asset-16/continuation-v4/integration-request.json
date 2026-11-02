@@ -1,0 +1,94 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "sourceHead": "310718a2140dbc282c3a0d3055683fe9b8ad37bb",
+  "scope": "Session candidates only; shared Ledger/Catalog not changed",
+  "newClips": 4,
+  "newFrames": 48,
+  "totalClips": 31,
+  "totalFrames": 296,
+  "automatedPassingClips": 27,
+  "failedClipsPreserved": 4,
+  "productionApproved": 0,
+  "runtimeConnected": 0,
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "newCandidates": [
+    {
+      "conceptId": "M061",
+      "action": "DEFEAT",
+      "automated": "PASS",
+      "baseReturn": {
+        "changedPixels": 4809,
+        "meanAbsoluteChannelDelta": 1.841629
+      },
+      "humanReview": "REQUIRED; subtle local articulation may not communicate the action adequately"
+    },
+    {
+      "conceptId": "M061",
+      "action": "SLEEP",
+      "automated": "PASS",
+      "baseReturn": {
+        "changedPixels": 0,
+        "meanAbsoluteChannelDelta": 0.0
+      },
+      "humanReview": "REQUIRED; subtle local articulation may not communicate the action adequately"
+    },
+    {
+      "conceptId": "M062",
+      "action": "DEFEAT",
+      "automated": "PASS",
+      "baseReturn": {
+        "changedPixels": 1661,
+        "meanAbsoluteChannelDelta": 0.258942
+      },
+      "humanReview": "REQUIRED; subtle local articulation may not communicate the action adequately"
+    },
+    {
+      "conceptId": "M064",
+      "action": "DEFEAT",
+      "automated": "PASS",
+      "baseReturn": {
+        "changedPixels": 2191,
+        "meanAbsoluteChannelDelta": 0.316086
+      },
+      "humanReview": "REQUIRED; subtle local articulation may not communicate the action adequately"
+    }
+  ],
+  "previousEightReview": {
+    "unchanged": true,
+    "automatedPass": 7,
+    "failed": 1,
+    "notes": "Bell/arm/fin/claw local articulation verified in code and sampled contact sheet. No whole-image transform; seven exact BASE returns; move remains failed. No natural-motion or species approval."
+  },
+  "requests": [
+    "Integrate four new candidates into existing Review Catalog and Ledger without duplicating main M061 INTERACT/M062 HIT. Keep 4 failed clips failed.",
+    "Prefer PR148 content-byte-keyed cache with 512 entries and 256KiB admission threshold from prior comparison; Integration Track should add an aggregate byte budget if required. 128MiB ceiling covers retained input only, not Python/results. Preserve file rereads, immutable-copy results, same-mtime mutation/deletion detection, Bounds and hashes; rerun equivalence after integration. No common validator changes here.",
+    "M061 BLINK has no eyelid anatomy; SpeciesBehavior remains proposed with no approved applicability override. Owner must approve not-applicable mapping.",
+    "M063: choose ray anatomy/new approved ray BASE or explicitly map existing whale-like artwork. M065: choose dolphin anatomy/new approved dolphin BASE or explicitly map existing dragon-like artwork. Preserve IDs and source BASEs.",
+    "TURN needs alternate-facing/occlusion keyposes. M062/M064 BLINK/SLEEP need approved eyelid and skin layers. SKILL_CAST requires approved signature contract. RECOVERY needs approved preceding endpoints; no failed ATTACK recovery.",
+    "DEFEAT terminal poses require anatomy/meaning approval before recovery transition; no direct snap to BASE or automatic runtime binding.",
+    "M062 MOVE coordinate (140,185), alpha1: existing low-alpha BASE pixel loses connecting neighbors after bilinear sampling/rounding. Preserve raw frames; sampler repair requires explicit approval and unchanged validators."
+  ],
+  "identityChoices": {
+    "M063": {
+      "state": "BLOCKED + HUMAN_REVIEW_REQUIRED",
+      "observed": "Catalog round blue ray; BASE whale-like body/flippers; Ledger productionSpeciesId null; mappingApproved false",
+      "choices": [
+        "Retain ray Species concept and commission a separately approved ray BASE, retaining current whale-like BASE as rejected history.",
+        "Retain current whale-like Artwork and ask the design owner to approve a whale Identity and consistent Personality/MovementProfile/SpeciesBehavior mapping. No automatic ID reassignment."
+      ],
+      "requiredDecision": "Owner selects authoritative anatomy and approves explicit concept-to-production mapping."
+    },
+    "M065": {
+      "state": "BLOCKED + HUMAN_REVIEW_REQUIRED",
+      "observed": "Catalog long-finned dolphin; BASE dragon-like torso/crest/fins; Ledger productionSpeciesId null; mappingApproved false",
+      "choices": [
+        "Retain dolphin concept and commission a separately approved dolphin BASE while preserving current source.",
+        "Retain dragon-like Artwork and obtain explicit design approval for its Identity and behavior mapping. No automatic ID reassignment."
+      ],
+      "requiredDecision": "Owner selects authoritative anatomy and approves explicit concept-to-production mapping."
+    }
+  },
+  "nextResume": "Human review of subtle sleep/defeat poses, then approved turn/eyelid/skill/recovery endpoint work. Keep exhausted repairs blocked."
+}
