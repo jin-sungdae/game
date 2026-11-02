@@ -1,0 +1,113 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "conceptId": "M081",
+  "sourceBase": "design/production-batches/monsters/batch09/M081/base-v2.png",
+  "sourceRig": "design/production-batches/luma-asset-20/continuation/rig.cjs",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "parts": [
+    {
+      "x": 206,
+      "y": 103,
+      "rx": 31,
+      "ry": 27,
+      "dx": -1.4,
+      "dy": 2.125,
+      "name": "neck-bow",
+      "samples": [
+        1,
+        0.93,
+        0.78,
+        0.58,
+        0.36,
+        0.18,
+        0.06,
+        0
+      ]
+    },
+    {
+      "x": 173,
+      "y": 153,
+      "rx": 21,
+      "ry": 30,
+      "dx": -0.7,
+      "dy": 1.2,
+      "name": "chest-counterbalance",
+      "samples": [
+        1,
+        0.93,
+        0.78,
+        0.58,
+        0.36,
+        0.18,
+        0.06,
+        0
+      ]
+    },
+    {
+      "x": 65,
+      "y": 148,
+      "rx": 28,
+      "ry": 23,
+      "dx": 1.2,
+      "dy": 0.8,
+      "name": "tail-counterbalance",
+      "samples": [
+        1,
+        0.93,
+        0.78,
+        0.58,
+        0.36,
+        0.18,
+        0.06,
+        0
+      ]
+    }
+  ],
+  "eyes": [
+    {
+      "x": 216,
+      "y": 99,
+      "rx": 3.8,
+      "ry": 2.6,
+      "angle": 0.75,
+      "skin": [
+        203,
+        99
+      ]
+    }
+  ],
+  "eyeClosureSamples": [
+    1,
+    1,
+    0.94,
+    0.8,
+    0.55,
+    0.3,
+    0.1,
+    0
+  ],
+  "clip": {
+    "name": "SLEEP_EXIT",
+    "frames": 8,
+    "frameDuration": 200,
+    "loop": false
+  },
+  "framesDirectory": "design/production-batches/luma-asset-20/living-followup/M081/sleep_exit/rigged/sleep_exit",
+  "intent": "Sustained sleeping state: enter from BASE, keep eyes closed throughout hold, exit back to exact BASE. Head/neck and appendage relaxation, stationary; human anatomy and sleep acceptance pending.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "failureRecovery": false,
+  "exactBaseReturn": true,
+  "logicalAction": "SLEEP",
+  "stateSegment": "sleep_exit"
+}

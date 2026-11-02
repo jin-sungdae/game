@@ -1,0 +1,81 @@
+{
+  "conceptId": "M085",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M085/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 120,
+    "loop": false
+  },
+  "movableRect": [
+    53,
+    143,
+    209,
+    216
+  ],
+  "parts": [
+    {
+      "name": "left-tentacle-flinch",
+      "x": 84,
+      "y": 178,
+      "rx": 25,
+      "ry": 25,
+      "dx": -1.2800000000000002,
+      "dy": -1.36,
+      "samples": [
+        0.01,
+        1,
+        0.72,
+        0.42,
+        0.2,
+        0.09,
+        0.035,
+        0.015
+      ]
+    },
+    {
+      "name": "right-tentacle-delayed-flinch",
+      "x": 183,
+      "y": 190,
+      "rx": 23,
+      "ry": 21,
+      "dx": 1.2800000000000002,
+      "dy": -1.105,
+      "samples": [
+        0.015,
+        0.15,
+        0.84,
+        1,
+        0.55,
+        0.23,
+        0.07,
+        0.02
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate; no native event activation",
+  "anatomyScope": "Hooded tentacle spirit: hood, face and lowest central tentacle fixed; left and right peripheral tentacles gesture in staggered response.",
+  "behaviorContract": "Peripheral tentacles recoil inward in staggered response; face, hood and central attachment protected.",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-20",
+  "sourceRig": "design/production-batches/action-followup/M085/interact-pilot/rig-interact.cjs",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "framesDirectory": "design/production-batches/luma-asset-20/M085/hit/rigged/hit"
+}

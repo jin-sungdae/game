@@ -1,0 +1,27 @@
+{
+  "scope": "18 generated PNG/malformed fixtures x 4 option combinations; parity is bounded to these cases",
+  "cases": 72,
+  "allEquivalent": true,
+  "differences": [],
+  "implementations": {
+    "141": {
+      "entries": 128,
+      "maxInputBytes": null
+    },
+    "140": {
+      "entries": 256,
+      "maxInputBytes": 1048576
+    },
+    "144": {
+      "entries": 1024,
+      "maxInputBytes": null
+    },
+    "148": {
+      "entries": 512,
+      "maxInputBytes": 262144
+    }
+  },
+  "common": "Full file bytes plus transparency/bounds/hash flags; read current bytes each call; immutable cached values and copied public output lists; process local, no shared disk cache.",
+  "memory": "141/144 bound entry count but not retained input byte size. 140 input retention <=256 MiB plus results/overhead; 148 <=128 MiB plus results/overhead. Same bytes may be shared across option keys; bounds are conservative.",
+  "integrationRequest": "Integration Track must select one implementation and consolidate parity/invalidation/large-input tests. Do not stack independent wrappers or overwrite other PRs. This PR leaves shared validator unchanged in this continuation."
+}

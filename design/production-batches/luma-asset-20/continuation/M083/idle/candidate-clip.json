@@ -1,0 +1,99 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "conceptId": "M083",
+  "sourceBase": "design/production-batches/monsters/batch09/M083/base-v2.png",
+  "sourceRig": "design/production-batches/luma-asset-20/M085/idle/rig.cjs",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "parts": [
+    {
+      "name": "left-pincer-joint",
+      "x": 120,
+      "y": 185,
+      "rx": 29,
+      "ry": 27,
+      "dx": -1.2,
+      "dy": -1.3,
+      "samples": [
+        0.015,
+        0.18,
+        0.55,
+        1,
+        0.78,
+        0.42,
+        0.12,
+        0
+      ]
+    },
+    {
+      "name": "right-pincer-joint",
+      "x": 204,
+      "y": 176,
+      "rx": 25,
+      "ry": 27,
+      "dx": -1.3,
+      "dy": 1.1,
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.82,
+        1,
+        0.64,
+        0.25,
+        0
+      ]
+    },
+    {
+      "name": "distal-tail-curl",
+      "x": 139,
+      "y": 68,
+      "rx": 18,
+      "ry": 24,
+      "dx": -0.9,
+      "dy": 0.9,
+      "samples": [
+        0.01,
+        0.06,
+        0.22,
+        0.7,
+        1,
+        0.55,
+        0.2,
+        0
+      ]
+    }
+  ],
+  "eyes": [],
+  "eyeClosureSamples": [
+    0.01,
+    0.2,
+    0.62,
+    1,
+    0.83,
+    0.46,
+    0.14,
+    0
+  ],
+  "clip": {
+    "name": "IDLE",
+    "frames": 8,
+    "frameDuration": 220,
+    "loop": false
+  },
+  "framesDirectory": "design/production-batches/luma-asset-20/continuation/M083/idle/rigged/idle",
+  "intent": "Independent scorpion pincer and distal-tail articulation from valid BASE. Thorax and leg contact roots remain fixed; failed ATTACK source is not used. Small staggered pincer flex and tail-tip response.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "failureRecovery": false,
+  "anatomyScope": "Soft part masks are segmentation weights, not a complete rigid-joint skeleton. Leg locomotion, sting ATTACK and contact gait remain unimplemented."
+}

@@ -1,0 +1,81 @@
+{
+  "conceptId": "M081",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M081/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "RECOVERY",
+    "frames": 8,
+    "frameDuration": 120,
+    "loop": false
+  },
+  "movableRect": [
+    32,
+    122,
+    216,
+    210
+  ],
+  "parts": [
+    {
+      "name": "foreleg-brace-release",
+      "x": 183,
+      "y": 177,
+      "rx": 24,
+      "ry": 28,
+      "dx": -1.7,
+      "dy": -1.1,
+      "samples": [
+        0.95,
+        0.72,
+        0.49,
+        0.3,
+        0.17,
+        0.08,
+        0.03,
+        0.01
+      ]
+    },
+    {
+      "name": "tail-counter-recoil-release",
+      "x": 66,
+      "y": 148,
+      "rx": 28,
+      "ry": 23,
+      "dx": 1.8,
+      "dy": -1.0,
+      "samples": [
+        1,
+        0.84,
+        0.6,
+        0.36,
+        0.18,
+        0.08,
+        0.03,
+        0.01
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate; no native event activation",
+  "anatomyScope": "Corrupt quadruped drake: head crest, torso core and foot contacts fixed; foreleg bracing and tail counter-recoil preserve organic anatomy.",
+  "behaviorContract": "Standalone limb and tail release study. Not a verified HIT-to-RECOVERY transition; native event timing remains blocked.",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-20",
+  "sourceRig": "design/production-batches/action-followup/M081/hit-pilot/rig-hit.cjs",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "framesDirectory": "design/production-batches/luma-asset-20/M081/recovery/rigged/recovery"
+}
