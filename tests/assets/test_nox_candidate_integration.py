@@ -33,6 +33,16 @@ class NoxCandidateIntegrationTests(unittest.TestCase):
 
     def test_other_ledger_state_is_identical_to_pr131(self):
         queue = json.loads((ROOT/'design/creature-production-queue.json').read_text())
+        audit = queue['approvalBottleneckContinuation']['approvalAudit']
+        added = [c for c in audit['clips'] if '/LUMA-ASSET-03/' in c['directory']]
+        self.assertEqual({c['action'] for c in added}, ACTIONS)
+        self.assertEqual(len(added), 3)
+        self.assertTrue(all(c['productionApproval']=='NOT_APPROVED' for c in added))
+        audit['clips'] = [c for c in audit['clips'] if c not in added]
+        for key in ('candidateClips','automatedPngPassClips','artworkReviewPendingClips',
+                    'naturalMotionReviewPendingClips','guiPendingClips'):
+            audit['summary'][key] -= 3
+        audit['summary']['candidateFrames'] -= 24
         queue.pop('animationCoverageSummary')
         for row in queue['creatures']:
             row.pop('animationCoverage')
