@@ -1,0 +1,137 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M064",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M064/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "NOT_APPROVED",
+  "clip": {
+    "name": "CHARGE",
+    "frames": 12,
+    "frameDuration": 140,
+    "loop": false
+  },
+  "movableRect": [
+    82,
+    139,
+    216,
+    196
+  ],
+  "parts": [
+    {
+      "name": "near-claw-draw-in",
+      "x": 149,
+      "y": 175,
+      "rx": 22,
+      "ry": 20,
+      "dx": -1.7,
+      "dy": -1.4,
+      "samples": [
+        0.01,
+        0.08,
+        0.28,
+        0.55,
+        0.87,
+        1,
+        0.7,
+        0.45,
+        0.24,
+        0.1,
+        0.03,
+        0
+      ]
+    },
+    {
+      "name": "far-claw-draw-in",
+      "x": 199,
+      "y": 165,
+      "rx": 15,
+      "ry": 24,
+      "dx": -1.8,
+      "dy": 1.1,
+      "samples": [
+        0.01,
+        0.08,
+        0.28,
+        0.55,
+        0.87,
+        1,
+        0.7,
+        0.45,
+        0.24,
+        0.1,
+        0.03,
+        0
+      ]
+    },
+    {
+      "name": "soft-neck-tension",
+      "x": 132,
+      "y": 153,
+      "rx": 12,
+      "ry": 11,
+      "dx": 0.6,
+      "dy": -0.7,
+      "samples": [
+        0.03,
+        0.18,
+        0.45,
+        0.8,
+        1,
+        0.81,
+        0.52,
+        0.25,
+        0.12,
+        0.06,
+        0.02,
+        0
+      ]
+    },
+    {
+      "name": "abdomen-counterbrace",
+      "x": 164,
+      "y": 169,
+      "rx": 9,
+      "ry": 13,
+      "dx": -0.5,
+      "dy": 0.6,
+      "samples": [
+        0.02,
+        0.05,
+        0.12,
+        0.3,
+        0.61,
+        0.9,
+        1,
+        0.75,
+        0.44,
+        0.18,
+        0.05,
+        0
+      ]
+    }
+  ],
+  "anatomyScope": "Stationary physical bracing study: claws draw toward the soft abdomen, hold tension, then release to BASE. Not a lunge or attack recovery; no failed ATTACK source or skill effect used.",
+  "terminalFrame": {
+    "index": 11,
+    "role": "EXACT_BASE_RETURN",
+    "expectedPixelChanges": 0
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Independent first attempt only; no failed source reuse, counter reset or automatic repair",
+  "wholeImageTransform": false
+}

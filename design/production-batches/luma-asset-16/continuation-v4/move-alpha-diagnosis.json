@@ -1,0 +1,171 @@
+{
+  "frame": 6,
+  "componentSizes": [
+    14877,
+    1
+  ],
+  "detached": [
+    {
+      "coordinate": [
+        140,
+        185
+      ],
+      "frameRgba": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "baseRgba": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "inverseIterations": [
+        [
+          140.3375,
+          184.7046875
+        ],
+        [
+          140.3207723649222,
+          184.7193241806931
+        ],
+        [
+          140.32160639584728,
+          184.71859440363363
+        ],
+        [
+          140.3215648224415,
+          184.71863078036367
+        ]
+      ],
+      "samples": [
+        {
+          "coordinate": [
+            140,
+            184
+          ],
+          "rgba": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "weight": 0.19089077648347091
+        },
+        {
+          "coordinate": [
+            141,
+            184
+          ],
+          "rgba": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "weight": 0.09047844315286106
+        },
+        {
+          "coordinate": [
+            140,
+            185
+          ],
+          "rgba": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "weight": 0.4875444010750271
+        },
+        {
+          "coordinate": [
+            141,
+            185
+          ],
+          "rgba": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "weight": 0.2310863792886409
+        }
+      ],
+      "interpolatedAlpha": 0.718630780363668,
+      "roundedAlpha": 1,
+      "neighbors": [
+        {
+          "coordinate": [
+            139,
+            184
+          ],
+          "alpha": 0,
+          "baseAlpha": 0
+        },
+        {
+          "coordinate": [
+            140,
+            184
+          ],
+          "alpha": 0,
+          "baseAlpha": 0
+        },
+        {
+          "coordinate": [
+            141,
+            184
+          ],
+          "alpha": 0,
+          "baseAlpha": 0
+        },
+        {
+          "coordinate": [
+            139,
+            185
+          ],
+          "alpha": 0,
+          "baseAlpha": 0
+        },
+        {
+          "coordinate": [
+            141,
+            185
+          ],
+          "alpha": 0,
+          "baseAlpha": 1
+        },
+        {
+          "coordinate": [
+            139,
+            186
+          ],
+          "alpha": 0,
+          "baseAlpha": 0
+        },
+        {
+          "coordinate": [
+            140,
+            186
+          ],
+          "alpha": 0,
+          "baseAlpha": 0
+        },
+        {
+          "coordinate": [
+            141,
+            186
+          ],
+          "alpha": 0,
+          "baseAlpha": 0
+        }
+      ]
+    }
+  ],
+  "cause": "The BASE alpha=1 pixel survives inverse bilinear resampling, while its connecting neighbors round to zero; connectivity is lost at the low-alpha boundary. No alpha threshold or pixel deletion applied.",
+  "status": "BLOCKED_REPAIR_LIMIT; HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3
+}

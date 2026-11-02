@@ -1,0 +1,81 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M061",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M061/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "PROPOSED_UNAPPROVED; measured bounds registration only",
+  "sourceFacing": "UNCONFIRMED",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 140,
+    "loop": false
+  },
+  "movableRect": [
+    65,
+    122,
+    195,
+    196
+  ],
+  "parts": [
+    {
+      "name": "near-tentacle-attention",
+      "x": 108,
+      "y": 165,
+      "rx": 22,
+      "ry": 26,
+      "dx": -2.1,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.12,
+        0.46,
+        0.82,
+        1,
+        0.91,
+        0.38,
+        0.03
+      ]
+    },
+    {
+      "name": "far-tentacle-balance",
+      "x": 163,
+      "y": 165,
+      "rx": 20,
+      "ry": 24,
+      "dx": 0.6,
+      "dy": 0.5,
+      "samples": [
+        0.02,
+        0.04,
+        0.12,
+        0.34,
+        0.78,
+        1,
+        0.61,
+        0.05
+      ]
+    }
+  ],
+  "anatomyScope": "Blue jellyfish: preserve bell, face and extreme tentacle tips; deform two middle tentacle sections independently. Gentle FLOATING proposal only.",
+  "motion": "Unilateral attention curl held before release; far tentacle counterbalances without chasing cursor.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "wholeImageTransform": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Inherited limit preserved; independent candidate first attempt, no failed asset repair"
+}

@@ -1,0 +1,156 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "validatedSourceCommit": "4dbe1656b3b435f790e847882e606b2fbe359658",
+  "workingTreeDirtyDuringGate": false,
+  "newClipsThisContinuation": 6,
+  "newFramesThisContinuation": 48,
+  "totalCandidateClips": 19,
+  "totalCandidateFrames": 152,
+  "candidateValidation": {
+    "pass": 16,
+    "fail": 3,
+    "failedOriginalsPreserved": true,
+    "newExactBaseReturnClips": 6
+  },
+  "assetTests": {
+    "status": "PASS",
+    "tests": 231,
+    "seconds": 740.023
+  },
+  "animationRegression": {
+    "status": "PASS",
+    "tests": 236
+  },
+  "frontendBuild": "PASS",
+  "rust": {
+    "pass": 189,
+    "fail": 0,
+    "ignored": 16
+  },
+  "clippy": "PASS",
+  "javaPostgresql": {
+    "tests": 346,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "isolatedRestartAndFaultChecks": "PASS",
+    "ownedServerAndClusterStopped": true
+  },
+  "releaseGate": {
+    "status": "AUTOMATED_READY",
+    "manualGate": "MANUAL_QA_REQUIRED",
+    "head": "4dbe1656b3b435f790e847882e606b2fbe359658",
+    "workingTreeDirty": false,
+    "checks": [
+      {
+        "name": "frontend-build",
+        "status": "PASS",
+        "seconds": 7.55
+      },
+      {
+        "name": "animation-content",
+        "status": "PASS",
+        "seconds": 27.7
+      },
+      {
+        "name": "presentation",
+        "status": "PASS",
+        "seconds": 25.29
+      },
+      {
+        "name": "asset-tests",
+        "status": "PASS",
+        "seconds": 740.93
+      },
+      {
+        "name": "optional-assets",
+        "status": "PASS",
+        "seconds": 25.2
+      },
+      {
+        "name": "strict-alpha",
+        "status": "PASS",
+        "seconds": 30.11
+      },
+      {
+        "name": "required-bases",
+        "status": "PASS",
+        "seconds": 46.96
+      },
+      {
+        "name": "automation-policy",
+        "status": "PASS",
+        "seconds": 6.11
+      },
+      {
+        "name": "release-static",
+        "status": "PASS",
+        "seconds": 0.05
+      },
+      {
+        "name": "tao-integrity",
+        "status": "PASS",
+        "seconds": 0.06
+      },
+      {
+        "name": "rust-fmt",
+        "status": "PASS",
+        "seconds": 0.22
+      },
+      {
+        "name": "rust-tests-native-link",
+        "status": "PASS",
+        "seconds": 132.23
+      },
+      {
+        "name": "rust-clippy",
+        "status": "PASS",
+        "seconds": 58.64
+      },
+      {
+        "name": "launch_audit",
+        "status": "PASS",
+        "seconds": 0.87
+      },
+      {
+        "name": "single_instance_audit",
+        "status": "PASS",
+        "seconds": 1.05
+      },
+      {
+        "name": "bootJar",
+        "status": "PASS",
+        "seconds": 17.58
+      },
+      {
+        "name": "server-fresh-persistence-failures",
+        "status": "PASS"
+      },
+      {
+        "name": "whitespace",
+        "status": "PASS",
+        "seconds": 0.04
+      }
+    ]
+  },
+  "githubCi": {
+    "validatedHead": "4dbe1656b3b435f790e847882e606b2fbe359658",
+    "validationRun": "https://github.com/jin-sungdae/game/actions/runs/40316866713",
+    "desktop-static": "SUCCESS",
+    "server-java": "SUCCESS",
+    "macos-native": "SUCCESS",
+    "review-result": "SUCCESS",
+    "separateWatcherRun": "https://github.com/jin-sungdae/game/actions/runs/40316863054",
+    "snapshot": "FAILURE",
+    "reason": "GitHub repository API unavailable on initial attempt and one retry; local API read success does not prove runner recovery"
+  },
+  "repairPolicy": {
+    "global": "Fixed count removed",
+    "repository": "3 still enforced; unchanged"
+  },
+  "productionApproved": false,
+  "runtimeConnected": false,
+  "gui": "DEFERRED_GUI",
+  "legacyArtifactsChecked": 144,
+  "legacyArtifactChanges": 0
+}

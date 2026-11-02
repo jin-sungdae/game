@@ -1,0 +1,114 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M062",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M062/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "NOT_APPROVED",
+  "clip": {
+    "name": "MOVE",
+    "frames": 12,
+    "frameDuration": 90,
+    "loop": true
+  },
+  "movableRect": [
+    72,
+    112,
+    196,
+    225
+  ],
+  "parts": [
+    {
+      "name": "dorsal-fin-stroke",
+      "x": 112,
+      "y": 154,
+      "rx": 24,
+      "ry": 28,
+      "dx": -1.5,
+      "dy": -1.9,
+      "samples": [
+        0.02,
+        0.5,
+        1,
+        0.4,
+        -0.5,
+        -1,
+        -0.4,
+        0.5,
+        0.9,
+        0.4,
+        0.08,
+        0
+      ]
+    },
+    {
+      "name": "side-fin-counterstroke",
+      "x": 188,
+      "y": 150,
+      "rx": 8,
+      "ry": 21,
+      "dx": 1.2,
+      "dy": 1.5,
+      "samples": [
+        0.01,
+        0.1,
+        0.4,
+        1,
+        0.5,
+        -0.4,
+        -1,
+        -0.5,
+        0.3,
+        0.8,
+        0.22,
+        0
+      ]
+    },
+    {
+      "name": "tail-propulsion-balance",
+      "x": 140,
+      "y": 197,
+      "rx": 28,
+      "ry": 24,
+      "dx": -0.8,
+      "dy": 0.7,
+      "samples": [
+        0.02,
+        0.05,
+        0.12,
+        0.3,
+        0.61,
+        0.9,
+        1,
+        0.75,
+        0.44,
+        0.18,
+        0.05,
+        0
+      ]
+    }
+  ],
+  "anatomyScope": "In-place seahorse propulsion study: opposite-phase dorsal/side fin strokes with delayed curled-tail counterbalance. No whole-image translation or claim of validated trajectory.",
+  "terminalFrame": {
+    "index": 11,
+    "role": "EXACT_BASE_RETURN",
+    "expectedPixelChanges": 0
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Independent first attempt only; no failed source reuse, counter reset or automatic repair",
+  "wholeImageTransform": false
+}

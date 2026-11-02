@@ -1,0 +1,81 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M062",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M062/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "PROPOSED_UNAPPROVED; measured bounds registration only",
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 8,
+    "frameDuration": 180,
+    "loop": true
+  },
+  "movableRect": [
+    70,
+    112,
+    196,
+    225
+  ],
+  "parts": [
+    {
+      "name": "thorax-resting-sway",
+      "x": 162,
+      "y": 145,
+      "rx": 23,
+      "ry": 27,
+      "dx": 0.8,
+      "dy": -0.6,
+      "samples": [
+        0.08,
+        0.32,
+        0.68,
+        1,
+        0.78,
+        0.46,
+        0.19,
+        0.04
+      ]
+    },
+    {
+      "name": "tail-countercurl",
+      "x": 140,
+      "y": 197,
+      "rx": 28,
+      "ry": 24,
+      "dx": -1.2,
+      "dy": 0.9,
+      "samples": [
+        0.55,
+        0.84,
+        1,
+        0.72,
+        0.38,
+        0.1,
+        0.03,
+        0.24
+      ]
+    }
+  ],
+  "anatomyScope": "Coral seahorse: preserve head, coral crown and tail endpoint; reuse thorax and curled-tail rig. Curious FLOATING proposal only.",
+  "motion": "Thorax sways locally while curled tail counters out of phase; fixed face and crown.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "wholeImageTransform": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Inherited limit preserved; independent candidate first attempt, no failed asset repair"
+}

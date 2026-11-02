@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "manualGate": "MANUAL_QA_REQUIRED",
+  "head": "3f0de3b5174a6ba871b0978a681c01ad50accc9e",
+  "workingTreeDirty": false,
+  "checks": [
+    {
+      "name": "frontend-build",
+      "status": "PASS",
+      "seconds": 12.76
+    },
+    {
+      "name": "animation-content",
+      "status": "PASS",
+      "seconds": 23.92
+    },
+    {
+      "name": "presentation",
+      "status": "PASS",
+      "seconds": 24.88
+    }
+  ]
+}
