@@ -101,11 +101,24 @@ def refresh_coverage(data):
     queue['legacyProductionAudit']=data['legacyProductionAudit']
     path.write_text(json.dumps(queue,indent=2,ensure_ascii=False)+'\n')
 
-def build():
+def recorded_candidate_errors(actions, action, candidate_path):
+    """PNG checks cannot erase a recorded failure for the same candidate version."""
+    for record in actions:
+        if record['action'].lower()!=action or record.get('candidatePath')!=candidate_path:
+            continue
+        if record.get('automated') in ('FAIL','VALIDATION_FAILED') or record['animationStatus']=='VALIDATION_FAILED':
+            return ['RECORDED_VALIDATION_FAILED: '+record.get('validationEvidence','Ledger candidate validation')]
+    return []
+
+def build(creature_ids=None):
     queue=json.loads((ROOT/'design/creature-production-queue.json').read_text())
     rows={r['creatureId']:{'id':r['creatureId'],'productionSpeciesId':r.get('productionSpeciesId'),
           'basePath':('/'+r['basePath']) if r.get('basePath') else None,
           'productionStatus':r['productionStatus'],'actions':r['actions'],'clips':[]} for r in queue['creatures']}
+    if creature_ids:
+        existing=json.loads((ROOT/'tests/live/creature-review/catalog.json').read_text())
+        for row in existing['creatures']:
+            if row['id'] not in creature_ids: rows[row['id']]=row
     for directory in sorted((ROOT/'design').glob('**/rigged/*')):
         if not directory.is_dir(): continue
         frames=sorted(directory.glob('*.png'))
@@ -114,7 +127,7 @@ def build():
         monster=re.search(r'/(M\d{3})/',rel)
         companion=re.search(r'/(moa|ruu|nox)/stage(\d+)/',rel)
         identity=monster[1] if monster else f'companion:{companion[1]}:{int(companion[2])}' if companion else None
-        if identity not in rows: continue
+        if identity not in rows or (creature_ids and identity not in creature_ids): continue
         parent=directory.parent.parent
         contract=parent/'candidate-clip.json'
         spec=json.loads(contract.read_text()).get('clip',{}) if contract.exists() else {}
@@ -124,7 +137,8 @@ def build():
         if not evidence.exists(): evidence=parent/f'{action}-rig-evidence.json'
         rig=json.loads(evidence.read_text()) if evidence.exists() else {}
         expected=spec.get('frames') or len(rig.get('frames',[]))
-        errors=[]; hashes=[]; bounds=[]
+        errors=recorded_candidate_errors(rows[identity]['actions'],action,parent.relative_to(ROOT).as_posix())
+        hashes=[]; bounds=[]
         if not expected: errors.append('EXPECTED_FRAME_COUNT_NOT_VERIFIED')
         elif expected!=len(frames): errors.append('FRAME_COUNT_MISMATCH')
         for n,frame in enumerate(frames):
@@ -144,9 +158,10 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--refresh-inventory',action='store_true',help='Refresh only measured Monster PNG counts; never approval or Runtime fields')
     parser.add_argument('--refresh-coverage',action='store_true',help='Refresh derived per-action coverage in the existing Ledger; never approval or Runtime fields')
+    parser.add_argument('--creature',action='append',help='Refresh only these creature IDs; preserve other review records')
     args=parser.parse_args()
     if args.refresh_inventory: refresh_inventory()
-    data=build()
+    data=build(args.creature)
     if args.refresh_coverage: refresh_coverage(data)
     p=ROOT/'tests/live/creature-review/catalog.json';p.write_text(json.dumps(data,indent=2)+'\n')
     clips=[c for r in data['creatures'] for c in r['clips']]
