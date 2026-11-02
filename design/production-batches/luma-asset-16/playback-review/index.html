@@ -1,0 +1,8 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>LUMA M061–M065 동작 검토</title>
+<style>body{font:16px system-ui;background:#20252b;color:#eee;margin:24px}button,select{font:inherit;padding:8px;margin:4px}section{display:flex;gap:20px;flex-wrap:wrap}figure{margin:0}img{width:256px;height:256px;background:repeating-conic-gradient(#777 0% 25%,#999 0% 50%) 0/20px 20px;border:1px solid #ccc}p{max-width:960px;line-height:1.6}#error{color:#ffb8b8}</style>
+<h1>M061–M065 동작 검토</h1><p>후보 전용 · Production 미승인 · Runtime 미연결 · 실패 후보 재생 제외. 동작의 의미와 자연스러움은 사람 검수가 필요합니다.</p>
+<label>후보 <select id="candidate"></select></label><button id="restart">처음부터</button><button id="pause">일시정지</button><button id="wake">깨우기 요청</button>
+<p id="status" aria-live="polite">불러오는 중</p><p id="error"></p>
+<section><figure><figcaption>기존 BASE</figcaption><img id="base" alt="기존 BASE"></figure><figure><figcaption>기존 균일 간격 재생</figcaption><img id="original" alt="기존 후보"></figure><figure><figcaption>행동별 재생 후보</figcaption><img id="revised" alt="재생 개선 후보"></figure></section>
+<p>수면은 유지 구간을 반복하고 깨우기 요청 후 경계에서 종료합니다. 패배는 마지막 자세를 유지합니다. “처음부터”는 검토 도구의 재시작이며 RECOVERY 동작이 아닙니다. 이미지 이동·확대 효과를 추가하지 않습니다.</p>
+<script type="module" src="./review.mjs"></script></html>
