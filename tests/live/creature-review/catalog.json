@@ -3723,10 +3723,16 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "DEFERRED_GUI",
+          "candidateStatus": "CANDIDATE_ONLY",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -3818,10 +3824,16 @@
         },
         {
           "action": "SKILL_CAST",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "DEFERRED_GUI",
+          "candidateStatus": "CANDIDATE_ONLY",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "HIT",
@@ -3837,10 +3849,16 @@
         },
         {
           "action": "VICTORY",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
-          "runtimeStatus": "NOT_VERIFIED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "DEFERRED_GUI",
+          "candidateStatus": "CANDIDATE_ONLY",
+          "automated": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "candidatePath": "design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot",
+          "blockReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
         },
         {
           "action": "DEFEAT",
@@ -3858,6 +3876,249 @@
         }
       ],
       "clips": [
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot/rigged/breath",
+          "urls": [
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot/rigged/breath/breath_00.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot/rigged/breath/breath_01.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot/rigged/breath/breath_02.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot/rigged/breath/breath_03.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot/rigged/breath/breath_04.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot/rigged/breath/breath_05.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot/rigged/breath/breath_06.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/breath-pilot/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 260,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ]
+          ],
+          "pixelHashes": [
+            "8cf118ad1b8ed8f12950d96ed2c71dee3eafa9bf54cb1fa6d74517722d60782a",
+            "e35dae3ed05378e87adfa2415c2832179ed46e5dfbde4d6e6baa5dc614e2f6da",
+            "d2be21e2fb8b0cd6afb2c37e72007784e9411e05571329dac921fd2c6e91c24a",
+            "6202085c5d50ce0717cfaf828d1b3d6e5e165380b54863c210ab1db3c1feb618",
+            "8f717bc50a870d043bf90631ca11b9c8cc88b014ae0bc3e21526b64a1a4bc1df",
+            "3ef0e00f566b06cc2032fb46bdcb77c89a17533cdad68119f984c417d37f432a",
+            "5abc21f7872919f267a9910e3e658156992a0937123e2559e9ffb3572197328d",
+            "b78291c5e4fa444af191fa6a4ab3d5f48e609b797078dc2f4cc1a08c575e0b1c"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "skill_cast",
+          "directory": "/design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot/rigged/skill_cast",
+          "urls": [
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot/rigged/skill_cast/skill_cast_00.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot/rigged/skill_cast/skill_cast_01.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot/rigged/skill_cast/skill_cast_02.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot/rigged/skill_cast/skill_cast_03.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot/rigged/skill_cast/skill_cast_04.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot/rigged/skill_cast/skill_cast_05.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot/rigged/skill_cast/skill_cast_06.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/skill_cast-pilot/rigged/skill_cast/skill_cast_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 160,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ]
+          ],
+          "pixelHashes": [
+            "bd3a478706b3a5ef784191e60c124eb405fc2295df4630ba6f3db71d39af764b",
+            "5073ef0fa21fb160627f36563f010322e1cfc769ce7657b20ca2e6c853f63b72",
+            "c19296fbf6595625a6595ec8955308d0a9d8e18ad24d33c66eb152b215e5f993",
+            "d6f2bea5cf8fdd59be4210bc75c56f0cce1f40c729e2df648f3aaea785015b53",
+            "b618835db5722ae339ed7d46d2719bb1d9de449e94a89c088d036ebb0ac98b49",
+            "ca1eeb39a9b3b630f49070b07a76e3981e3f24186e45db29fa60ca03d8483a42",
+            "e6ab15f1ecfe0298fc0e183689a81aceac797fd76de0deb6852cc663388011b3",
+            "5d1c85b8a707af57771f160c6cee7788af8f369f1769cfcc5de7e297921b61f1"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
+        {
+          "action": "victory",
+          "directory": "/design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/rigged/victory",
+          "urls": [
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/rigged/victory/victory_00.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/rigged/victory/victory_01.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/rigged/victory/victory_02.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/rigged/victory/victory_03.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/rigged/victory/victory_04.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/rigged/victory/victory_05.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/rigged/victory/victory_06.png",
+            "/design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/rigged/victory/victory_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 190,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ],
+            [
+              24,
+              31,
+              233,
+              221
+            ]
+          ],
+          "pixelHashes": [
+            "35df3cbe3edbd2c28fcd95a6be9a87e06b5e69901e3d95120b937c448a29d386",
+            "ed59e4682a753f5191765ef9a351caeae0f0be9016354b0669cf73655b1d81a3",
+            "a16d6d43b1a1b5aa7f0c18726aa2b63c584b213a06cb56af77abd43f8a7b965f",
+            "cecc0255008a6775ba97a51dfdcfe7518006cbed17635677e172c80fe410596d",
+            "6093e6d574d99b75ffaa2dd0b647dccf5ff8d59c9fb13ad40f193a38ed29fb3f",
+            "ea431e52eaee0d08160dd6756859bdad6df9b06f0ee3ee1b688cd4178c6662dc",
+            "78362d73f1fae0d3b0e167c9464f32ffc8b47da15d99b4d1477b78d1218e914c",
+            "e317b34e880c38f8f217c5d8ddba38cdda464e7b442fdaf6b60b72104e0f0ed2"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
+        },
         {
           "action": "blink",
           "directory": "/design/production-batches/action-followup/nox/stage02/blink-pilot/rigged/blink",
@@ -4320,11 +4581,11 @@
         "recordedReadyActions": 1,
         "recordedRuntimeActions": 1,
         "manifestFileSetsPresent": 1,
-        "candidateActions": 6,
-        "automatedCandidateActions": 5,
-        "artworkReviewPendingActions": 6,
+        "candidateActions": 9,
+        "automatedCandidateActions": 8,
+        "artworkReviewPendingActions": 9,
         "validationFailedActions": 2,
-        "missingFrameSetActions": 10,
+        "missingFrameSetActions": 7,
         "guiPendingActions": 16,
         "completeActions": 0
       },
@@ -27463,11 +27724,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 154,
-    "automatedCandidateActions": 152,
-    "artworkReviewPendingActions": 153,
+    "candidateActions": 157,
+    "automatedCandidateActions": 155,
+    "artworkReviewPendingActions": 156,
     "validationFailedActions": 39,
-    "missingFrameSetActions": 1581,
+    "missingFrameSetActions": 1578,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,

@@ -1,0 +1,97 @@
+{
+  "sessionId": "LUMA-ASSET-03",
+  "species": "nox",
+  "evolutionStage": 2,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/nox/stage02/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "VICTORY",
+    "frames": 8,
+    "frameDuration": 190,
+    "loop": false
+  },
+  "movableRect": [
+    85,
+    114,
+    214,
+    191
+  ],
+  "parts": [
+    {
+      "name": "shoulder-release",
+      "x": 151,
+      "y": 137,
+      "rx": 25,
+      "ry": 17,
+      "dx": -1.1,
+      "dy": -1.6,
+      "samples": [
+        0.02,
+        0.19,
+        0.58,
+        1,
+        0.84,
+        0.47,
+        0.18,
+        0.03
+      ]
+    },
+    {
+      "name": "neck-ruff-settle",
+      "x": 185,
+      "y": 137,
+      "rx": 23,
+      "ry": 22,
+      "dx": 0.6,
+      "dy": 0.9,
+      "samples": [
+        0.01,
+        0.04,
+        0.18,
+        0.52,
+        0.92,
+        1,
+        0.54,
+        0.05
+      ]
+    },
+    {
+      "name": "flank-exhale",
+      "x": 137,
+      "y": 160,
+      "rx": 31,
+      "ry": 24,
+      "dx": -0.5,
+      "dy": 0.8,
+      "samples": [
+        0.01,
+        0.07,
+        0.27,
+        0.63,
+        1,
+        0.82,
+        0.38,
+        0.04
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "anatomyScope": "크게 뛰지 않고 어깨 깃을 살짝 펴며 긴장을 푸는 절제된 승리 반응. 골격·얼굴·발 고정.",
+  "rigReuse": "design/production-batches/action-followup/nox/stage02/hit-pilot/rig-hit.cjs",
+  "productionTiming": "UNAPPROVED",
+  "repairIterations": 0,
+  "priorRepairLimit": "3/3 PRESERVED"
+}
