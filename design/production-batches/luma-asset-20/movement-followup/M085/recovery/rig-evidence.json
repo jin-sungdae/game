@@ -1,0 +1,83 @@
+{
+  "sourceBase": "design/production-batches/monsters/batch09/M085/base-v2.png",
+  "sourceBasePixelSha256": "09323ade3575bf8a8c8c5a80573fb5dbbce583e0411292a6ddccaeb5dc962700",
+  "sourceRig": "design/production-batches/luma-asset-20/M085/hit/rig.cjs",
+  "frames": [
+    {
+      "file": "recovery_00.png",
+      "pixelSha256": "2af2e5ef1687964410cd1f3588a7cee18b3c3171a1f5d99d9909ef4cc176ea1e"
+    },
+    {
+      "file": "recovery_01.png",
+      "pixelSha256": "3920ab00cf5bb1031d60d72b531653525f77e702329ccecb14bcbd163234d451"
+    },
+    {
+      "file": "recovery_02.png",
+      "pixelSha256": "494b29d66c973ad29cca4646238f9704ab91aa8f368d4e530170bd11c582f388"
+    },
+    {
+      "file": "recovery_03.png",
+      "pixelSha256": "d9d4b2b3aef8053d12ee921b4a70cd7bc93152e542a17d90456120758cb65727"
+    },
+    {
+      "file": "recovery_04.png",
+      "pixelSha256": "b08c9e6a10e000adfaa687c5542ef553f8302b094dc3fe349df823c3da53369c"
+    },
+    {
+      "file": "recovery_05.png",
+      "pixelSha256": "e2cdb7341bf3d1405677af6fcb0ae4ee17746d1824259805b9a850f8eae8d0a3"
+    },
+    {
+      "file": "recovery_06.png",
+      "pixelSha256": "57bb17c2d2a1f495e8acee6016a88af3c05f0c4b15603c53eae6045610c8261f"
+    },
+    {
+      "file": "recovery_07.png",
+      "pixelSha256": "09323ade3575bf8a8c8c5a80573fb5dbbce583e0411292a6ddccaeb5dc962700"
+    }
+  ],
+  "wholeImageTransform": false,
+  "exactBaseReturnFrame": 7,
+  "eyelidMask": [],
+  "parts": [
+    {
+      "name": "left-tentacle-release",
+      "x": 84,
+      "y": 178,
+      "rx": 25,
+      "ry": 25,
+      "dx": -1.2800000000000002,
+      "dy": -1.36,
+      "samples": [
+        0.015,
+        -0.16,
+        -0.28,
+        -0.19,
+        -0.08,
+        0.035,
+        0.012,
+        0
+      ]
+    },
+    {
+      "name": "right-tentacle-delayed-release",
+      "x": 183,
+      "y": 190,
+      "rx": 23,
+      "ry": 21,
+      "dx": 1.2800000000000002,
+      "dy": -1.105,
+      "samples": [
+        0.02,
+        -0.035,
+        -0.16,
+        -0.25,
+        -0.14,
+        -0.04,
+        0.018,
+        0
+      ]
+    }
+  ],
+  "productionEligible": false
+}

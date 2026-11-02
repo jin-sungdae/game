@@ -934,12 +934,12 @@
     }
   ],
   "counts": {
-    "newPngThisContinuation": 126,
-    "newFramesThisContinuation": 112,
-    "newClipsThisContinuation": 14,
-    "totalPrPng": 180,
-    "totalPrFrames": 160,
-    "totalPrClips": 20,
+    "newPngThisContinuation": 99,
+    "newFramesThisContinuation": 88,
+    "newClipsThisContinuation": 11,
+    "totalPrPng": 279,
+    "totalPrFrames": 248,
+    "totalPrClips": 31,
     "productionAcceptedClips": 0
   },
   "repairIterations": 3,
@@ -958,11 +958,11 @@
   "integrationRequests": [
     {
       "target": "Creature Review Catalog",
-      "request": "Run existing catalog builder after integration; it discovers this session rigged paths without Runtime changes. Review appearance and natural motion for six clips."
+      "request": "Import candidate paths from all session batches, distinguishing PASS, FAIL and logical SLEEP segments. No Production or Runtime approval implied."
     },
     {
       "target": "Completion Ledger",
-      "request": "After human review, reconcile six candidate actions and counts using existing --refresh-inventory/--refresh-coverage. Shared files deliberately not written in this session; this handoff is not a replacement ledger."
+      "request": "Reconcile actual inventory and action coverage through Integration Track; do not count three SLEEP segments as three completed actions. Preserve all failures."
     },
     {
       "target": "Animation Manifest / Production Registry",
@@ -990,7 +990,7 @@
     }
   ],
   "nextResumePoint": "Human review sustained sleep eye closure and loop motion. Resolve authorized repair policy for failed INTERACT endpoints; do not lower uniqueness validator. Next independent keyposes: gait contact cycle, opposite-facing TURN and jump crouch/takeoff/landing. Battle and Skill identities remain unapproved.",
-  "sessionBoundary": "14 additional isolated gesture candidates; 20 total. REST is standing relaxation and SLEEP is doze-and-wake, not sustained sleep or seated resting. No runtime completion claimed.",
+  "sessionBoundary": "Living followup historical batch: 11 clips / 88 frames; cumulative 31 clips / 248 frames. SLEEP three segments count as one logical action per monster. INTERACT two clips failed and are preserved.",
   "productionApproval": "HUMAN_REVIEW_REQUIRED",
   "runtimeConnected": false,
   "gui": "DEFERRED_GUI",
