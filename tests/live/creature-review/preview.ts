@@ -1,4 +1,12 @@
 import catalog from './catalog.json';
+import timing from '../../../design/production-batches/luma-asset-16/playback-review/review-data.json';
+import {reviewPlayback} from './playback.mjs';
+// Session review entries stay isolated from shared Ledger counts and approvals.
+for(const item of timing.clips){
+ const row=catalog.creatures.find(r=>r.id===item.monster);
+ const directory='/'+item.files[0].slice(0,item.files[0].lastIndexOf('/'));
+ if(row&&!row.clips.some(c=>c.directory===directory))row.clips.push({action:item.action.toLowerCase(),directory,urls:item.files.map(p=>'/'+p),frameCount:item.files.length,frameDuration:item.frameDuration,timingSource:'PR144 review-only timing; HUMAN_REVIEW_REQUIRED',automated:'PASS',errors:[],bounds:[],pixelHashes:[],artwork:'HUMAN_REVIEW_REQUIRED',runtimeEnabled:false});
+}
 import queue from '../../../design/creature-production-queue.json';
 const audit=queue.approvalBottleneckContinuation.approvalAudit;
 import {CharacterAnimator} from '../../../src/animation/pilot';
@@ -16,7 +24,7 @@ const reviewTotals=document.createElement('p');reviewTotals.id='approval-summary
 reviewTotals.textContent=`후보 Clip ${counts.candidateClips} · 자동 PNG 통과 ${counts.automatedPngPassClips} · PNG 실패 ${counts.automatedPngFailedClips} · 외형 승인 대기 ${counts.artworkReviewPendingClips} · 자연스러운 움직임 검토 대기 ${counts.naturalMotionReviewPendingClips} · Identity 검토 필요 ${counts.identityReviewRequiredClips} · 명시적 Production 승인 ${counts.productionApprovedClips} · 승인 후 Runtime 연결 대기 ${counts.approvedRuntimePendingClips} · GUI 검증 대기 ${counts.guiPendingClips} (분류 중복 가능)`;
 document.querySelector('#totals')!.after(reviewTotals);
 select.value='M005';let paused=false,reduced=false,elapsed=0,last=performance.now(),generation=0;
-let views:{image:HTMLImageElement;status:HTMLElement;clip:LoadedClip;animator:CharacterAnimator;key:string;bounds:number[][]}[]=[];
+let views:{image:HTMLImageElement;status:HTMLElement;clip:LoadedClip;animator:CharacterAnimator;key:string;bounds:number[][];playback:ReturnType<typeof reviewPlayback>;base:string|null;selected:number|null}[]=[];
 async function show(){const current=++generation;views=[];section.replaceChildren();elapsed=0;
  const row=catalog.creatures.find(r=>r.id===select.value)!;
  const c=row.coverage;
@@ -44,15 +52,22 @@ async function show(){const current=++generation;views=[];section.replaceChildre
   const image=document.createElement('img');image.alt=`${row.id} ${c.action} candidate`;const status=document.createElement('p');const pair=document.createElement('div');pair.className='comparison';
   if(row.basePath){const base=document.createElement('img');base.src=row.basePath;base.alt=`${row.id} BASE`;const label=document.createElement('figure');label.append(base);const caption=document.createElement('figcaption');caption.textContent='기존 BASE (원본 유지)';label.append(caption);pair.append(label);}
   const candidate=document.createElement('figure');candidate.append(image);const caption=document.createElement('figcaption');caption.textContent='후보 · 동일 256px Canvas / bottom-center 기준선';candidate.append(caption);pair.append(candidate);article.append(pair,status);
-  const approval=document.createElement('p');const action=row.actions.find(a=>a.action.toLowerCase()===c.action);approval.textContent=`Ledger: ${action?.animationStatus ?? 'NOT_VERIFIED'} / Runtime: ${action?.runtimeStatus ?? 'NOT_VERIFIED'} / GUI: ${action?.guiStatus ?? 'NOT_VERIFIED'} · 명시적 승인 상태는 위 분류 참조 · 검토 화면은 반복 재생하며 Native one-shot 이벤트 검증을 대신하지 않습니다 · ${action && 'blockReason' in action ? action.blockReason : ''}`;article.append(approval);
-  const manifest={species:'review',stage:1,canvas:{width:256,height:256},anchor:{x:.5,y:1},display:{width:256},animations:{[c.action]:{frames:c.frameCount,frameDuration:c.frameDuration,loop:true}}};
+  const approval=document.createElement('p');const action=row.actions.find(a=>a.action.toLowerCase()===c.action);approval.textContent=`Ledger: ${action?.animationStatus ?? 'NOT_VERIFIED'} / Runtime: ${action?.runtimeStatus ?? 'NOT_VERIFIED'} / GUI: ${action?.guiStatus ?? 'NOT_VERIFIED'} · 명시적 승인 상태는 위 분류 참조 · 검토 전용 재생이며 Native 이벤트 검증을 대신하지 않습니다 · ${action && 'blockReason' in action ? action.blockReason : ''}`;article.append(approval);
+  const manifest={species:'review',stage:1,canvas:{width:256,height:256},anchor:{x:.5,y:1},display:{width:256},animations:{[c.action]:{frames:c.frameCount,frameDuration:c.frameDuration,loop:!['attack','defeat'].includes(c.action)}}};
   const loader=new AssetLoader({json:async()=>manifest,image:url=>new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve({width:img.naturalWidth,height:img.naturalHeight});img.onerror=reject;img.src=url;})});
   const clip=await loader.loadRegistered('review',1,c.directory.slice(0,c.directory.lastIndexOf('/'))+'/manifest.json',c.action);
   if(current!==generation)return;
-  if(clip)views.push({image,status,clip,animator:new CharacterAnimator(),key:c.directory,bounds:c.bounds});else status.textContent='이미지 로딩 실패 — 재생 차단';
+  if(clip){
+   const playback=reviewPlayback(c.directory,c.frameCount);
+   const view={image,status,clip,animator:new CharacterAnimator(),key:c.directory,bounds:c.bounds,playback,base:row.basePath,selected:null as number|null};views.push(view);
+   const frame=document.createElement('input');frame.type='range';frame.min='0';frame.max=String(c.frameCount-1);frame.value='0';frame.setAttribute('aria-label','Frame Selection');frame.oninput=()=>{view.selected=Number(frame.value);playback?.select(view.selected);};
+   const resume=document.createElement('button');resume.textContent='자동 재생';resume.onclick=()=>{view.selected=null;playback?.resume();};article.append(frame,resume);
+   if(playback){const restart=document.createElement('button');restart.textContent='다시 재생';restart.onclick=()=>{view.selected=null;playback.restart();};article.append(restart);
+    if(c.action==='sleep'){const wake=document.createElement('button');wake.textContent='Wake';wake.onclick=()=>playback.wake();article.append(wake);}}
+  }else status.textContent='이미지 로딩 실패 — 재생 차단';
  }
 }
 animation.addEventListener('change',()=>{for(const card of section.querySelectorAll<HTMLElement>('article'))card.hidden=animation.value!=='all'&&card.dataset.action!==animation.value;});
 select.addEventListener('change',()=>void show());document.querySelector('#pause')!.addEventListener('click',()=>paused=!paused);document.querySelector('#reduced')!.addEventListener('click',()=>reduced=!reduced);
-function tick(now:number){if(!paused)elapsed+=Math.min(100,now-last);last=now;for(const v of views){const f=v.animator.sample(v.key,v.clip,elapsed,1,reduced);v.image.src=v.clip.urls[f];v.status.textContent=`Frame ${f+1}/${v.clip.clip.frames} · paused=${paused} · reduced=${reduced} · Alpha Bounds [${v.bounds[f]?.join(', ')}] · Canvas Anchor (128,256)`;}requestAnimationFrame(tick);}
+function tick(now:number){const delta=Math.max(0,Math.min(100,now-last));if(!paused&&!reduced&&!document.hidden)elapsed+=delta;last=now;for(const v of views){const f=v.playback?v.playback.advance(delta,paused||document.hidden,reduced):(v.selected??v.animator.sample(v.key,v.clip,elapsed,1,reduced));v.image.src=v.playback?.base&&v.base?v.base:v.clip.urls[f];v.status.textContent=`${v.playback?.base?'BASE':v.playback?.phase??'legacy'} · Frame ${f+1}/${v.clip.clip.frames} · paused=${paused} · reduced=${reduced} · Alpha Bounds [${v.bounds[f]?.join(', ')}] · Canvas Anchor (128,256)`;}requestAnimationFrame(tick);}
 void show();requestAnimationFrame(tick);
