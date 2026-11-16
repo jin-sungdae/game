@@ -5,7 +5,8 @@ import {reviewPlayback} from './playback.mjs';
 for(const item of timing.clips){
  const row=catalog.creatures.find(r=>r.id===item.monster);
  const directory='/'+item.files[0].slice(0,item.files[0].lastIndexOf('/'));
- if(row&&!row.clips.some(c=>c.directory===directory))row.clips.push({action:item.action.toLowerCase(),directory,urls:item.files.map(p=>'/'+p),frameCount:item.files.length,frameDuration:item.frameDuration,timingSource:'PR144 review-only timing; HUMAN_REVIEW_REQUIRED',automated:'PASS',errors:[],bounds:[],pixelHashes:[],artwork:'HUMAN_REVIEW_REQUIRED',runtimeEnabled:false});
+ const clips: (typeof catalog.creatures)[number]['clips'][number][] | undefined = row?.clips;
+ if(clips&&!clips.some(c=>c.directory===directory))clips.push({action:item.action.toLowerCase(),directory,urls:item.files.map(p=>'/'+p),frameCount:item.files.length,frameDuration:item.frameDuration,timingSource:'PR144 review-only timing; HUMAN_REVIEW_REQUIRED',automated:'PASS',errors:[],bounds:[],pixelHashes:[],artwork:'HUMAN_REVIEW_REQUIRED',runtimeEnabled:false});
 }
 import queue from '../../../design/creature-production-queue.json';
 const audit=queue.approvalBottleneckContinuation.approvalAudit;
@@ -50,7 +51,9 @@ async function show(){const current=++generation;views=[];section.replaceChildre
   const details=document.createElement('pre');details.textContent=c.directory+'\n'+c.timingSource+'\n'+c.errors.join('\n');article.append(title,note,details);section.append(article);
   if(c.automated!=='PASS')continue;
   const image=document.createElement('img');image.alt=`${row.id} ${c.action} candidate`;const status=document.createElement('p');const pair=document.createElement('div');pair.className='comparison';
-  if(row.basePath){const base=document.createElement('img');base.src=row.basePath;base.alt=`${row.id} BASE`;const label=document.createElement('figure');label.append(base);const caption=document.createElement('figcaption');caption.textContent='기존 BASE (원본 유지)';label.append(caption);pair.append(label);}
+  const playback=reviewPlayback(c.directory,c.frameCount,c.frameDuration);
+  const basePath=playback?.basePath??row.basePath;
+  if(basePath){const base=document.createElement('img');base.src=basePath;base.alt=`${row.id} BASE`;const label=document.createElement('figure');label.append(base);const caption=document.createElement('figcaption');caption.textContent='기존 BASE (원본 유지)';label.append(caption);pair.append(label);}
   const candidate=document.createElement('figure');candidate.append(image);const caption=document.createElement('figcaption');caption.textContent='후보 · 동일 256px Canvas / bottom-center 기준선';candidate.append(caption);pair.append(candidate);article.append(pair,status);
   const approval=document.createElement('p');const action=row.actions.find(a=>a.action.toLowerCase()===c.action);approval.textContent=`Ledger: ${action?.animationStatus ?? 'NOT_VERIFIED'} / Runtime: ${action?.runtimeStatus ?? 'NOT_VERIFIED'} / GUI: ${action?.guiStatus ?? 'NOT_VERIFIED'} · 명시적 승인 상태는 위 분류 참조 · 검토 전용 재생이며 Native 이벤트 검증을 대신하지 않습니다 · ${action && 'blockReason' in action ? action.blockReason : ''}`;article.append(approval);
   const manifest={species:'review',stage:1,canvas:{width:256,height:256},anchor:{x:.5,y:1},display:{width:256},animations:{[c.action]:{frames:c.frameCount,frameDuration:c.frameDuration,loop:!['attack','defeat'].includes(c.action)}}};
@@ -58,8 +61,7 @@ async function show(){const current=++generation;views=[];section.replaceChildre
   const clip=await loader.loadRegistered('review',1,c.directory.slice(0,c.directory.lastIndexOf('/'))+'/manifest.json',c.action);
   if(current!==generation)return;
   if(clip){
-   const playback=reviewPlayback(c.directory,c.frameCount);
-   const view={image,status,clip,animator:new CharacterAnimator(),key:c.directory,bounds:c.bounds,playback,base:row.basePath,selected:null as number|null};views.push(view);
+   const view={image,status,clip,animator:new CharacterAnimator(),key:c.directory,bounds:c.bounds,playback,base:basePath,selected:null as number|null};views.push(view);
    const frame=document.createElement('input');frame.type='range';frame.min='0';frame.max=String(c.frameCount-1);frame.value='0';frame.setAttribute('aria-label','Frame Selection');frame.oninput=()=>{view.selected=Number(frame.value);playback?.select(view.selected);};
    const resume=document.createElement('button');resume.textContent='자동 재생';resume.onclick=()=>{view.selected=null;playback?.resume();};article.append(frame,resume);
    if(playback){const restart=document.createElement('button');restart.textContent='다시 재생';restart.onclick=()=>{view.selected=null;playback.restart();};article.append(restart);
