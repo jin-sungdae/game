@@ -1,0 +1,77 @@
+{
+  "conceptId": "M087",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M087/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 8,
+    "frameDuration": 280,
+    "loop": false
+  },
+  "movableRect": [
+    41,
+    57,
+    215,
+    206
+  ],
+  "parts": [
+    {
+      "x": 66,
+      "y": 123,
+      "rx": 20,
+      "ry": 33,
+      "dx": -0.9,
+      "dy": 0.6,
+      "name": "left-ring-neutral-pulse",
+      "samples": [
+        0.04,
+        0.22,
+        0.58,
+        1,
+        0.76,
+        0.31,
+        0.08,
+        0
+      ]
+    },
+    {
+      "x": 195,
+      "y": 155,
+      "rx": 16,
+      "ry": 30,
+      "dx": 0.8,
+      "dy": -0.5,
+      "name": "right-ring-neutral-counterpulse",
+      "samples": [
+        0.025,
+        0.13,
+        0.39,
+        0.72,
+        1,
+        0.45,
+        0.1,
+        0
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Slow counterphase ring flex without gaze or whole-ring rotation; central eye and extreme anchors fixed.",
+  "behaviorContract": "Unapproved anatomical proposal only; no runtime activation",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-21",
+  "terminalContract": "Frame7 exactly equals BASE; motion frames0..6 independently checked without relaxing shared validator"
+}

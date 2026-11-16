@@ -1,0 +1,209 @@
+{
+  "automated": "PASS",
+  "motionFrames": {
+    "automated": "PASS",
+    "frames": [
+      {
+        "file": "idle_00.png",
+        "errors": [],
+        "bounds": [
+          37,
+          29,
+          218,
+          224
+        ],
+        "pixelHash": "bbf2c675bda91a43c253e281dc5cceeed89c1156e86d36950086bb8ba58e2133",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 145,
+        "silhouetteSupportChangedPixels": 16,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "idle_01.png",
+        "errors": [],
+        "bounds": [
+          37,
+          29,
+          218,
+          224
+        ],
+        "pixelHash": "70b16ad45d53c6f6149a44762ea2495e799cff2c70a0da2e38b41b5f060a0dfe",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 296,
+        "silhouetteSupportChangedPixels": 43,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "idle_02.png",
+        "errors": [],
+        "bounds": [
+          37,
+          29,
+          218,
+          224
+        ],
+        "pixelHash": "32e7e68873a785fb55fd3e63ebd3403963b98bb325237b5d9ece0f59d13b13e8",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 478,
+        "silhouetteSupportChangedPixels": 61,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "idle_03.png",
+        "errors": [],
+        "bounds": [
+          37,
+          29,
+          218,
+          224
+        ],
+        "pixelHash": "af6453f8e0c3385158f11c1c1ed2505cc0b49dc4bcd0cab651533ca2cf1d430d",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 631,
+        "silhouetteSupportChangedPixels": 80,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "idle_04.png",
+        "errors": [],
+        "bounds": [
+          37,
+          29,
+          218,
+          224
+        ],
+        "pixelHash": "ffb5c51f02c711870a3fecc3c47af3aecabfd1fa67410ab03d4887decc1b6b12",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 615,
+        "silhouetteSupportChangedPixels": 72,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "idle_05.png",
+        "errors": [],
+        "bounds": [
+          37,
+          29,
+          218,
+          224
+        ],
+        "pixelHash": "825fb272047099a9e684c21d5545a71e628a874f42916fca9edbfb8d566334e1",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 412,
+        "silhouetteSupportChangedPixels": 56,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "idle_06.png",
+        "errors": [],
+        "bounds": [
+          37,
+          29,
+          218,
+          224
+        ],
+        "pixelHash": "a1a8606ec29c8daa412149a48c12f232b5f1d51fd4b51d6a815dcc04858be527",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 236,
+        "silhouetteSupportChangedPixels": 32,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      }
+    ],
+    "sourceSha256": "61e06f24df80551a1655d89aeb77d885ee5e9a38d83850dd97a74fff057768ad",
+    "baseErrors": [],
+    "baseDetachedAlphaPixels": 0,
+    "uniquePixelHashes": 7,
+    "adjacentPixelDifferenceSumsIncludingLoop": [
+      10739,
+      19424,
+      20184,
+      13532,
+      27914,
+      18967,
+      4368
+    ],
+    "loopContract": "ONE_SHOT; boundary measured but seamless cyclic motion is not claimed",
+    "automatedScope": "Existing PNG validator plus local RGBA/support motion, protected anatomy, bounds, anchor, zero detached alpha, no canvas clipping and unique frames",
+    "appearance": "HUMAN_REVIEW_REQUIRED",
+    "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+    "nativeGui": "DEFERRED_GUI",
+    "productionEligible": false
+  },
+  "allFrameErrors": [],
+  "uniquePixelHashes": 8,
+  "entryRgbaL1": 20344,
+  "adjacentRgbaL1": [
+    10739,
+    19424,
+    20184,
+    13532,
+    27914,
+    18967,
+    24638
+  ],
+  "terminalEqualsBase": true,
+  "terminalRgbaL1": 0,
+  "entryWithinObservedAdjacentMaximum": true,
+  "sourceSha256": "61e06f24df80551a1655d89aeb77d885ee5e9a38d83850dd97a74fff057768ad",
+  "appearance": {
+    "sourceBase": "design/production-batches/monsters/batch09/M087/base-v2.png",
+    "baseFileSha256": "61e06f24df80551a1655d89aeb77d885ee5e9a38d83850dd97a74fff057768ad",
+    "keyposeFileSha256": "5ea0296d19c444b71407263dbbe141bb21ee32d9e3b8e331fe3e7219c0bf87c8",
+    "baseBounds": [
+      37,
+      29,
+      218,
+      224
+    ],
+    "candidateBounds": [
+      37,
+      29,
+      218,
+      224
+    ],
+    "canvasAlignedAlphaIoU": 0.995749,
+    "alphaWeightedPaletteL1": 0.01008,
+    "boundsBottomDelta": 0,
+    "scope": "Read-only same-canvas geometry and palette comparison; pose/scale differences affect metrics. No semantic species, head, limb, face, or natural-motion approval inferred.",
+    "identityReview": "HUMAN_REVIEW_REQUIRED"
+  },
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "productionEligible": false,
+  "runtimeEnabled": false
+}

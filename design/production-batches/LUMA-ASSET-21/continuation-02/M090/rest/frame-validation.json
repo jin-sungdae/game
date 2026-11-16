@@ -1,0 +1,209 @@
+{
+  "automated": "PASS",
+  "motionFrames": {
+    "automated": "PASS",
+    "frames": [
+      {
+        "file": "rest_00.png",
+        "errors": [],
+        "bounds": [
+          58,
+          21,
+          206,
+          234
+        ],
+        "pixelHash": "b3f393b3edd113f0951739cebbb3200617252ed421071be68e056dc26736ddc4",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 108,
+        "silhouetteSupportChangedPixels": 13,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "rest_01.png",
+        "errors": [],
+        "bounds": [
+          58,
+          21,
+          206,
+          234
+        ],
+        "pixelHash": "0bfadfa512412f9b90264df6e01faff07be8d647345bc0e21f73194101dc5c19",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 226,
+        "silhouetteSupportChangedPixels": 31,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "rest_02.png",
+        "errors": [],
+        "bounds": [
+          58,
+          21,
+          206,
+          234
+        ],
+        "pixelHash": "2755e71a38ea34e8368d1752a3de1e812021b67c541e4fe4f5f97b8d1c3d6541",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 360,
+        "silhouetteSupportChangedPixels": 48,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "rest_03.png",
+        "errors": [],
+        "bounds": [
+          58,
+          21,
+          206,
+          234
+        ],
+        "pixelHash": "ce3b0acfb76572edb8cd863e0259f0b1aa8f7be5afeac3458bd06dde57ec634d",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 448,
+        "silhouetteSupportChangedPixels": 66,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "rest_04.png",
+        "errors": [],
+        "bounds": [
+          58,
+          21,
+          206,
+          234
+        ],
+        "pixelHash": "603bd8deab49a98fc53c5d8db8eac8d00fa22dc1f4f4d6db3841e79625416e67",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 442,
+        "silhouetteSupportChangedPixels": 68,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "rest_05.png",
+        "errors": [],
+        "bounds": [
+          58,
+          21,
+          206,
+          234
+        ],
+        "pixelHash": "8d1c51a517366b4535aca7473b17b0297a7e57542164b83c3cd583e676a69859",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 325,
+        "silhouetteSupportChangedPixels": 46,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      },
+      {
+        "file": "rest_06.png",
+        "errors": [],
+        "bounds": [
+          58,
+          21,
+          206,
+          234
+        ],
+        "pixelHash": "b642cf8a6e252d1a082fc48994f25d4f945c7b59073bf82910b2de4401aba82d",
+        "protectedPixelChanges": 0,
+        "alphaChangedPixels": 181,
+        "silhouetteSupportChangedPixels": 22,
+        "detachedAlphaPixels": 0,
+        "canvasEdgePixels": 0,
+        "anchorDriftPixels": {
+          "bottom": 0,
+          "boundsCenterX": 0.0
+        }
+      }
+    ],
+    "sourceSha256": "35bb93c3872ee534e43c4c26dd7b2cc2193839a58b1005a1e9d14edabc3935cd",
+    "baseErrors": [],
+    "baseDetachedAlphaPixels": 0,
+    "uniquePixelHashes": 7,
+    "adjacentPixelDifferenceSumsIncludingLoop": [
+      3446,
+      6725,
+      7340,
+      4654,
+      9130,
+      6010,
+      1287
+    ],
+    "loopContract": "ONE_SHOT; boundary measured but seamless cyclic motion is not claimed",
+    "automatedScope": "Existing PNG validator plus local RGBA/support motion, protected anatomy, bounds, anchor, zero detached alpha, no canvas clipping and unique frames",
+    "appearance": "HUMAN_REVIEW_REQUIRED",
+    "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+    "nativeGui": "DEFERRED_GUI",
+    "productionEligible": false
+  },
+  "allFrameErrors": [],
+  "uniquePixelHashes": 8,
+  "entryRgbaL1": 2109,
+  "adjacentRgbaL1": [
+    3446,
+    6725,
+    7340,
+    4654,
+    9130,
+    6010,
+    3394
+  ],
+  "terminalEqualsBase": true,
+  "terminalRgbaL1": 0,
+  "entryWithinObservedAdjacentMaximum": true,
+  "sourceSha256": "35bb93c3872ee534e43c4c26dd7b2cc2193839a58b1005a1e9d14edabc3935cd",
+  "appearance": {
+    "sourceBase": "design/production-batches/monsters/batch09/M090/base-v2.png",
+    "baseFileSha256": "35bb93c3872ee534e43c4c26dd7b2cc2193839a58b1005a1e9d14edabc3935cd",
+    "keyposeFileSha256": "6fdacaf8bac2b1d77e3fb74dc153b1756c23bc24d32a525f8126121496f9800c",
+    "baseBounds": [
+      58,
+      21,
+      206,
+      234
+    ],
+    "candidateBounds": [
+      58,
+      21,
+      206,
+      234
+    ],
+    "canvasAlignedAlphaIoU": 0.995825,
+    "alphaWeightedPaletteL1": 0.00327,
+    "boundsBottomDelta": 0,
+    "scope": "Read-only same-canvas geometry and palette comparison; pose/scale differences affect metrics. No semantic species, head, limb, face, or natural-motion approval inferred.",
+    "identityReview": "HUMAN_REVIEW_REQUIRED"
+  },
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "productionEligible": false,
+  "runtimeEnabled": false
+}
