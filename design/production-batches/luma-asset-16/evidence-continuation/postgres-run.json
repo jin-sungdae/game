@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "head": "4dbe1656b3b435f790e847882e606b2fbe359658",
+  "postgresVersion": "postgres (PostgreSQL) 16.9 (Homebrew)",
+  "db": "new isolated luma_alpha_slice_test",
+  "clockInjection": "last_bond_interaction_at only, after first restart",
+  "progressionSqlWrites": false,
+  "serverRestarts": 2,
+  "worldProcesses": [
+    "fresh",
+    "offline",
+    "progress",
+    "restored"
+  ]
+}
