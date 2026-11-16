@@ -1,0 +1,77 @@
+{
+  "conceptId": "M066",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M066/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 8,
+    "frameDuration": 180,
+    "loop": true
+  },
+  "movableRect": [
+    34,
+    137,
+    225,
+    190
+  ],
+  "parts": [
+    {
+      "name": "front-flipper-paddle",
+      "x": 147,
+      "y": 160,
+      "rx": 24,
+      "ry": 23,
+      "dx": 1.54,
+      "dy": -0.78,
+      "samples": [
+        0.08,
+        0.34,
+        0.72,
+        1,
+        0.85,
+        0.5,
+        0.21,
+        0.04
+      ]
+    },
+    {
+      "name": "rear-flipper-paddle",
+      "x": 64,
+      "y": 165,
+      "rx": 23,
+      "ry": 19,
+      "dx": -1.3299999999999998,
+      "dy": 0.5850000000000001,
+      "samples": [
+        0.65,
+        0.94,
+        0.83,
+        0.47,
+        0.17,
+        0.03,
+        0.13,
+        0.39
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Independent local appendage cycle; natural motion and event interpretation require human review",
+  "anatomyScope": "White shelled aquatic creature with four flippers. Head and upper shell core fixed; front flipper brace followed by rear flipper reaction; extremes/anchor stable.",
+  "behaviorContract": "Candidate only; existing unapproved personality/movement/species behavior unchanged",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-17",
+  "reusedRig": "design/production-batches/action-followup/M066/hit-pilot/rig-hit.cjs"
+}
