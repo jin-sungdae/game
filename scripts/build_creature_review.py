@@ -119,7 +119,7 @@ def build(creature_ids=None):
         existing=json.loads((ROOT/'tests/live/creature-review/catalog.json').read_text())
         for row in existing['creatures']:
             if row['id'] not in creature_ids: rows[row['id']]=row
-    for directory in sorted((ROOT/'design').glob('**/rigged/*')):
+    for directory in sorted((ROOT/'design').glob('**/rigged/*'), key=lambda path: path.as_posix()):
         if not directory.is_dir(): continue
         frames=sorted(directory.glob('*.png'))
         if not frames: continue
