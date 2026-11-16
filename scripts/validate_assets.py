@@ -21,7 +21,9 @@ def png_errors(path, require_transparency=False, bounds=None, pixel_digests=None
         data = path.read_bytes()
     except OSError as exc:
         return [str(exc)]
-    errors, measured_bounds, digests = _png_result(
+    # Check large inputs without retaining their bytes in the process cache.
+    decode = _png_result if len(data) <= 256 * 1024 else _png_result.__wrapped__
+    errors, measured_bounds, digests = decode(
         data, require_transparency, bounds is not None, pixel_digests is not None)
     if bounds is not None:
         bounds.extend(measured_bounds)

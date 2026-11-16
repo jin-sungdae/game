@@ -1,0 +1,77 @@
+{
+  "conceptId": "M059",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M059/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    73,
+    31,
+    192,
+    211
+  ],
+  "parts": [
+    {
+      "x": 128,
+      "y": 177,
+      "rx": 17,
+      "ry": 24,
+      "dx": 1.6,
+      "dy": -2,
+      "name": "ear-or-forearm",
+      "samples": [
+        0.02,
+        0.3,
+        1,
+        0.4,
+        0.85,
+        0.35,
+        0.12,
+        0.04
+      ]
+    },
+    {
+      "x": 87,
+      "y": 177,
+      "rx": 14,
+      "ry": 22,
+      "dx": -1.2,
+      "dy": 0.8,
+      "name": "ear-arm-or-tail",
+      "samples": [
+        0.03,
+        0.1,
+        0.45,
+        1,
+        0.6,
+        0.3,
+        0.1,
+        0.02
+      ]
+    }
+  ],
+  "anatomyScope": "한쪽 앞발의 작은 인사와 꼬리 균형",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 첫 시도; 실패 시 수정 없이 보존",
+  "rigReuse": "design/production-batches/action-followup/M057/hit-pilot/rig-hit.cjs"
+}

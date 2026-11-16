@@ -32,7 +32,7 @@ def ready(ticket):
 
 
 class FollowupTests(unittest.TestCase):
-    def test_dry_run_full_chain_and_draft_resume(self):
+    def test_dry_run_full_chain_and_stacked_pr_resume(self):
         original=state(); dry=copy.deepcopy(original)
         ticket=f.reserve(dry,analysis(),'run1',0)
         f.authorize(dry,ticket['key'],'run1',ready(ticket))

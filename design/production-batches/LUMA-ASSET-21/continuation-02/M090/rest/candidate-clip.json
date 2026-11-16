@@ -1,0 +1,77 @@
+{
+  "conceptId": "M090",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M090/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "REST",
+    "frames": 8,
+    "frameDuration": 360,
+    "loop": false
+  },
+  "movableRect": [
+    64,
+    138,
+    118,
+    210
+  ],
+  "parts": [
+    {
+      "x": 97,
+      "y": 161,
+      "rx": 16,
+      "ry": 19,
+      "dx": 0.9,
+      "dy": 0.8,
+      "name": "wing-upper-relax",
+      "samples": [
+        0.04,
+        0.22,
+        0.58,
+        1,
+        0.76,
+        0.31,
+        0.08,
+        0
+      ]
+    },
+    {
+      "x": 84,
+      "y": 190,
+      "rx": 17,
+      "ry": 14,
+      "dx": 1,
+      "dy": 0.5,
+      "name": "wing-lower-relax",
+      "samples": [
+        0.025,
+        0.13,
+        0.39,
+        0.72,
+        1,
+        0.45,
+        0.1,
+        0
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Standing wing relaxation and recovery only; no sitting/sleep/flight claim. Face, feet and wing root fixed.",
+  "behaviorContract": "Unapproved anatomical proposal only; no runtime activation",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-21",
+  "terminalContract": "Frame7 exactly equals BASE; motion frames0..6 independently checked without relaxing shared validator"
+}

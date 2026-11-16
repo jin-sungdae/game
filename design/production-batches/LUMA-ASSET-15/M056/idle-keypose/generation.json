@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen built-in",
+  "intent": "independent IDLE keypose; not ATTACK recovery",
+  "sourceBase": "design/production-batches/monsters/batch06/M056/base-v2.png",
+  "prompt": "Preserve exact golden armored scorpion anatomy, segmented rigid carapace, legs, claws, curled tail, orange spiral markings, palette and right-facing view. Feet planted, stable body. Slightly articulate near claw and upper tail joint for alert IDLE. No attack, squash, added features, shadow, particles or text. Transparent RGBA, single full sprite with margins. Human identity review required.",
+  "transparentBackground": true,
+  "output": "source.png",
+  "rawSourcePreserved": true,
+  "productionEligible": false,
+  "repairIterations": 3,
+  "repairLimit": 3
+}

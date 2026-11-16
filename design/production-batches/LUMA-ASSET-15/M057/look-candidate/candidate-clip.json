@@ -1,0 +1,77 @@
+{
+  "conceptId": "M057",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M057/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    70,
+    36,
+    198,
+    214
+  ],
+  "parts": [
+    {
+      "x": 99,
+      "y": 64,
+      "rx": 23,
+      "ry": 31,
+      "dx": 3,
+      "dy": -1,
+      "name": "near-ear-or-forearm",
+      "samples": [
+        0.03,
+        0.35,
+        0.85,
+        1,
+        0.8,
+        -0.55,
+        -0.3,
+        0.05
+      ]
+    },
+    {
+      "x": 175,
+      "y": 72,
+      "rx": 17,
+      "ry": 28,
+      "dx": -2,
+      "dy": 0.8,
+      "name": "far-ear-arm-or-tail",
+      "samples": [
+        0.02,
+        0.1,
+        0.45,
+        0.8,
+        1,
+        0.4,
+        -0.3,
+        0.04
+      ]
+    }
+  ],
+  "anatomyScope": "긴 귀를 먼저 기울이고 앞팔을 늦게 안정화하는 주의 전환",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 첫 시도; 실패 시 수정 없이 보존",
+  "rigReuse": "design/production-batches/action-followup/M057/hit-pilot/rig-hit.cjs"
+}

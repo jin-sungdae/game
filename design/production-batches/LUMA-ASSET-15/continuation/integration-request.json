@@ -1,0 +1,24 @@
+{
+  "sessionId": "LUMA-ASSET-15",
+  "previousHead": "826ff6fc1bd77fa1c493b9eff8276b48202f9685",
+  "reviewCandidates": {
+    "M056": 0,
+    "M057": 8,
+    "M058": 10,
+    "M059": 7,
+    "M060": 2
+  },
+  "newClips": 3,
+  "newFramePngs": 24,
+  "totalFramePngs": 280,
+  "failedRawKeyposes": 1,
+  "allBehaviorReview": "Previous basic15+additional6 action review remains; M057 CHARGE and M058 ATTACK/CHARGE are now candidates. M060 ATTACK first attempt failed. Other contact/occlusion/sleep/identity/skill blockers remain.",
+  "failedOriginalsPreserved": true,
+  "baseReturnEvidence": "continuation/base-return.json",
+  "remainingRepairPolicy": "repository policy and executable guard remain3/3; coordinator change required",
+  "commonRiggingRequest": "Zero outer support changes arise from interior masks or subpixel samples quantizing away silhouette changes. Approved revisions need actual silhouette part separation and joint pivots. Blink needs anatomical eyelid layers instead of skin interpolation. No shared tool changes here.",
+  "productionApprovedClips": 0,
+  "runtimeConnected": false,
+  "nextResume": "Finish sequential Release Gate. After repository repair policy alignment, address M056 alpha/joints, failed eyelid/limb candidates, M059 identity, locomotion/turn/sleep/defeat keyposes.",
+  "manualReview": "HUMAN_REVIEW_REQUIRED"
+}

@@ -1,0 +1,49 @@
+{
+  "conceptId": "M057",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch06/M057/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 6,
+    "frameDuration": 85,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 155,
+      "y": 117,
+      "rx": 7,
+      "ry": 8
+    },
+    {
+      "x": 176,
+      "y": 116,
+      "rx": 2,
+      "ry": 5
+    }
+  ],
+  "closure": [
+    0.04,
+    0.32,
+    0.86,
+    1,
+    0.63,
+    0.15
+  ],
+  "rigReuse": "design/production-batches/action-followup/M002/rig-blink.cjs",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3
+}

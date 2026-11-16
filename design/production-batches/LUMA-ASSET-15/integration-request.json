@@ -1,0 +1,667 @@
+{
+  "sessionId": "LUMA-ASSET-15",
+  "baseCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "branch": "codex/assets-m056-m060",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "failedCandidateRepairPerformed": false,
+  "sharedFilesModified": false,
+  "productionApprovedPngs": 0,
+  "productionApprovedClips": 0,
+  "runtimeConnected": false,
+  "monsters": {
+    "M056": {
+      "basePath": "design/production-batches/monsters/batch06/M056/base-v2.png",
+      "baseSha256": "1cbbd19ff079e8a06e57cfbb0c31c727cfc73392caac33100d4d9397c21359bf",
+      "productionSpeciesId": null,
+      "observedForm": "large scorpion",
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "playful"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "GROUND"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "two playful movements followed by a rest; attention centers on the sand habitat of the large scorpion",
+        "preparation": "compress then release the resting pose; preserve the large scorpion silhouette",
+        "transition": "recover from landing before observing; recover the large scorpion resting anatomy",
+        "reaction": "respond with a short bounce then settle; keep the large scorpion characteristic gesture"
+      },
+      "runtimeApproved": false,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED_EXISTING_FAILURE",
+          "reason": "Raw source detached Alpha 4290 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "분리된 전갈 관절 리그 없음. 독립 IDLE 키포즈 raw alpha 3302 detached pixels; 정규화/리깅 중단. 기존 ATTACK 실패도 보존."
+        }
+      ]
+    },
+    "M057": {
+      "basePath": "design/production-batches/monsters/batch06/M057/base-v2.png",
+      "baseSha256": "238ccd8b3d61271ed4a25281c6f9b0b7b89b84d21486d1eb2f8ec57b01904e1f",
+      "productionSpeciesId": null,
+      "observedForm": "long-eared desert beast",
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "alert"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "GROUND"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "frequent attention shifts but sparse displacement; attention centers on the sand habitat of the long-eared desert beast",
+        "preparation": "orient the face first and body second; preserve the long-eared desert beast silhouette",
+        "transition": "finish turning before locomotion resumes; recover the long-eared desert beast resting anatomy",
+        "reaction": "face the stimulus and briefly pause; keep the long-eared desert beast characteristic gesture"
+      },
+      "runtimeApproved": false,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "단단한 갑옷의 호흡 관절 분리 없음; 일반 soft-body 호흡 금지"
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED_VISUAL_FAILED",
+          "reason": "실제 폐안 프레임 확인: 눈꺼풀이 자연스럽게 닫히지 않고 수직 띠/색 번짐을 보임; 3/3 복구 금지"
+        },
+        {
+          "action": "LOOK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "REST",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "휴식/패배용 몸통 접힘과 접지 전환 키포즈 없음; 실패 BLINK를 재사용하거나 REST를 이름만 바꿔 완료하지 않음"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "INTERACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "ATTACK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "signature skill serverCode=null 및 SERVER_CONTRACT_REQUIRED; 승인된 스킬 표현/동작 단계 없음"
+        },
+        {
+          "action": "HIT",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 후보 재제작하지 않음; 승인/자연스러운 움직임/GUI는 미완료"
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED_FIRST_ATTEMPT_FAILED",
+          "reason": "victory_00.png: NO_SILHOUETTE_SUPPORT_MOTION; victory_07.png: NO_SILHOUETTE_SUPPORT_MOTION"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "휴식/패배용 몸통 접힘과 접지 전환 키포즈 없음; 실패 BLINK를 재사용하거나 REST를 이름만 바꿔 완료하지 않음"
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_PENDING_IDENTITY",
+          "reason": "GROUND 제안 및 날개 없는 BASE; 비행/부양/착지 클립 계약 없음"
+        },
+        {
+          "action": "HOVER",
+          "status": "NOT_APPLICABLE_PENDING_IDENTITY",
+          "reason": "GROUND 제안 및 날개 없는 BASE; 비행/부양/착지 클립 계약 없음"
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_PENDING_IDENTITY",
+          "reason": "GROUND 제안 및 날개 없는 BASE; 비행/부양/착지 클립 계약 없음"
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "RECOVERY",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        }
+      ]
+    },
+    "M058": {
+      "basePath": "design/production-batches/monsters/batch06/M058/base-v2.png",
+      "baseSha256": "ed62cc0ac1d66569c39493f5db8c8dd7bf9c049eeedf397a5ccc710c99f93a16",
+      "productionSpeciesId": null,
+      "observedForm": "sand serpent",
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "reserved"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "GROUND"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "sustained rest with occasional careful exploration; attention centers on the sand habitat of the sand serpent",
+        "preparation": "open the resting posture slowly; preserve the sand serpent silhouette",
+        "transition": "slow the final motion into a resting pose; recover the sand serpent resting anatomy",
+        "reaction": "acknowledge interaction with a restrained nod; keep the sand serpent characteristic gesture"
+      },
+      "runtimeApproved": false,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "BREATH",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED_VISUAL_FAILED",
+          "reason": "실제 폐안 프레임 확인: 눈꺼풀이 자연스럽게 닫히지 않고 수직 띠/색 번짐을 보임; 3/3 복구 금지"
+        },
+        {
+          "action": "LOOK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "REST",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "휴식/패배용 몸통 접힘과 접지 전환 키포즈 없음; 실패 BLINK를 재사용하거나 REST를 이름만 바꿔 완료하지 않음"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "INTERACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "목/턱의 공격 신전과 지지 코일 분리 키포즈 없음; 기존 HIT를 공격으로 전용하지 않음"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "signature skill serverCode=null 및 SERVER_CONTRACT_REQUIRED; 승인된 스킬 표현/동작 단계 없음"
+        },
+        {
+          "action": "HIT",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 후보 재제작하지 않음; 승인/자연스러운 움직임/GUI는 미완료"
+        },
+        {
+          "action": "VICTORY",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "휴식/패배용 몸통 접힘과 접지 전환 키포즈 없음; 실패 BLINK를 재사용하거나 REST를 이름만 바꿔 완료하지 않음"
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_PENDING_IDENTITY",
+          "reason": "GROUND 제안 및 날개 없는 BASE; 비행/부양/착지 클립 계약 없음"
+        },
+        {
+          "action": "HOVER",
+          "status": "NOT_APPLICABLE_PENDING_IDENTITY",
+          "reason": "GROUND 제안 및 날개 없는 BASE; 비행/부양/착지 클립 계약 없음"
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_PENDING_IDENTITY",
+          "reason": "GROUND 제안 및 날개 없는 BASE; 비행/부양/착지 클립 계약 없음"
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "RECOVERY",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        }
+      ]
+    },
+    "M059": {
+      "basePath": "design/production-batches/monsters/batch06/M059/base-v2.png",
+      "baseSha256": "2553082b6439f4eb305acb4cbfba83872f6c011a58f6e69ed24d168d9064f4d9",
+      "productionSpeciesId": null,
+      "observedForm": "winged sand sentinel",
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "watchful"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "FLYING"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "repeated scanning before a single move; attention centers on the sand habitat of the winged sand sentinel",
+        "preparation": "pause and recheck the destination; preserve the winged sand sentinel silhouette",
+        "transition": "return to the home orientation before resting; recover the winged sand sentinel resting anatomy",
+        "reaction": "look away briefly before looking back; keep the winged sand sentinel characteristic gesture"
+      },
+      "runtimeApproved": false,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 후보 재제작하지 않음; 승인/자연스러운 움직임/GUI는 미완료"
+        },
+        {
+          "action": "BREATH",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED_VISUAL_FAILED",
+          "reason": "실제 폐안 프레임 확인: 눈꺼풀이 자연스럽게 닫히지 않고 수직 띠/색 번짐을 보임; 3/3 복구 금지"
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED_FIRST_ATTEMPT_FAILED",
+          "reason": "look_00.png: NO_SILHOUETTE_SUPPORT_MOTION; look_01.png: NO_SILHOUETTE_SUPPORT_MOTION; look_07.png: NO_SILHOUETTE_SUPPORT_MOTION"
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음; FLYING 제안과 BASE 신체 구조 충돌"
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음; FLYING 제안과 BASE 신체 구조 충돌"
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED_FIRST_ATTEMPT_FAILED",
+          "reason": "rest_00.png: NO_SILHOUETTE_SUPPORT_MOTION"
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "휴식/패배용 몸통 접힘과 접지 전환 키포즈 없음; 실패 BLINK를 재사용하거나 REST를 이름만 바꿔 완료하지 않음"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "INTERACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "ATTACK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "signature skill serverCode=null 및 SERVER_CONTRACT_REQUIRED; 승인된 스킬 표현/동작 단계 없음"
+        },
+        {
+          "action": "HIT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "VICTORY",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "휴식/패배용 몸통 접힘과 접지 전환 키포즈 없음; 실패 BLINK를 재사용하거나 REST를 이름만 바꿔 완료하지 않음"
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음; FLYING 제안과 BASE 신체 구조 충돌"
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED_IDENTITY",
+          "reason": "FLYING 제안과 날개 없는 BASE 충돌; 날개/부양을 임의 추가하지 않음"
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED_IDENTITY",
+          "reason": "FLYING 제안과 날개 없는 BASE 충돌; 날개/부양을 임의 추가하지 않음"
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED_IDENTITY",
+          "reason": "FLYING 제안과 날개 없는 BASE 충돌; 날개/부양을 임의 추가하지 않음"
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음; FLYING 제안과 BASE 신체 구조 충돌"
+        },
+        {
+          "action": "RECOVERY",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        }
+      ]
+    },
+    "M060": {
+      "basePath": "design/production-batches/monsters/batch06/M060/base-v2.png",
+      "baseSha256": "3376a1a72d7a9dab556ea3be28cdd725d3ca4b86873a6148c61f78075edb6f26",
+      "productionSpeciesId": null,
+      "observedForm": "small desert fox",
+      "personality": {
+        "status": "PROPOSED",
+        "trait": "exploratory"
+      },
+      "movementProfile": {
+        "status": "PROPOSED",
+        "value": "GROUND"
+      },
+      "speciesBehavior": {
+        "status": "PROPOSED",
+        "frequency": "long exploration intervals followed by recovery; attention centers on the sand habitat of the small desert fox",
+        "preparation": "lean toward open space before starting; preserve the small desert fox silhouette",
+        "transition": "look back once at the end of an excursion; recover the small desert fox resting anatomy",
+        "reaction": "inspect the direction of interaction then resume exploration; keep the small desert fox characteristic gesture"
+      },
+      "runtimeApproved": false,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 후보 재제작하지 않음; 승인/자연스러운 움직임/GUI는 미완료"
+        },
+        {
+          "action": "BREATH",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED_VISUAL_FAILED",
+          "reason": "실제 폐안 프레임 확인: 눈꺼풀이 자연스럽게 닫히지 않고 수직 띠/색 번짐을 보임; 3/3 복구 금지"
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED_FIRST_ATTEMPT_FAILED",
+          "reason": "FRAME_COUNT_MISMATCH"
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED_FIRST_ATTEMPT_FAILED",
+          "reason": "FRAME_COUNT_MISMATCH"
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "휴식/패배용 몸통 접힘과 접지 전환 키포즈 없음; 실패 BLINK를 재사용하거나 REST를 이름만 바꿔 완료하지 않음"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED_EXISTING_FAILURE",
+          "reason": "NO_SILHOUETTE_SUPPORT_MOTION: all 8 frames change internal pixels but zero outer support pixels. PNG format/Alpha/Hash pass does not complete the action; originals preserved; no repair at3/3."
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED_FIRST_ATTEMPT_FAILED",
+          "reason": "interact_00.png: NO_SILHOUETTE_SUPPORT_MOTION"
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "목/턱의 공격 신전과 지지 코일 분리 키포즈 없음; 기존 HIT를 공격으로 전용하지 않음"
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "signature skill serverCode=null 및 SERVER_CONTRACT_REQUIRED; 승인된 스킬 표현/동작 단계 없음"
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED_FIRST_ATTEMPT_FAILED",
+          "reason": "FRAME_COUNT_MISMATCH"
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED_FIRST_ATTEMPT_FAILED",
+          "reason": "victory_00.png: NO_SILHOUETTE_SUPPORT_MOTION"
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "휴식/패배용 몸통 접힘과 접지 전환 키포즈 없음; 실패 BLINK를 재사용하거나 REST를 이름만 바꿔 완료하지 않음"
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "FLY",
+          "status": "NOT_APPLICABLE_PENDING_IDENTITY",
+          "reason": "GROUND 제안 및 날개 없는 BASE; 비행/부양/착지 클립 계약 없음"
+        },
+        {
+          "action": "HOVER",
+          "status": "NOT_APPLICABLE_PENDING_IDENTITY",
+          "reason": "GROUND 제안 및 날개 없는 BASE; 비행/부양/착지 클립 계약 없음"
+        },
+        {
+          "action": "LAND",
+          "status": "NOT_APPLICABLE_PENDING_IDENTITY",
+          "reason": "GROUND 제안 및 날개 없는 BASE; 비행/부양/착지 클립 계약 없음"
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "발 접지/관절 분리 및 다른 방향의 가려진 면 키포즈가 없음; 국소 변형이나 전체 이동으로 보행/회전/도약/돌진을 완료하지 않음"
+        },
+        {
+          "action": "RECOVERY",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "외형과 동작 의미의 사람 검토 필요"
+        }
+      ]
+    }
+  },
+  "integrationRequests": [
+    "기존 Creature Review Catalog에 이 세션의 rigged 후보를 집계하되 frame-validation 및 visual-review 실패를 PASS로 승격하지 말 것. 기본 카탈로그는 PNG 구조만 보므로 강한 실패 결과를 함께 반영해야 함.",
+    "통합 담당자가 기존 --refresh-inventory/--refresh-coverage를 실행하고 Completion Ledger에 후보/실패/마지막 검증 커밋을 반영할 것. 이 세션은 공유 파일을 쓰지 않음.",
+    "M056 독립 IDLE raw alpha 실패와 기존 ATTACK 실패, M060 기존 CURSOR_REACT 실패 및 신규 실패를 3/3 HUMAN_REVIEW_REQUIRED로 유지할 것.",
+    "M059 winged sentinel/FLYING과 BASE의 날개 없는 이족 형태 Identity 충돌을 사람이 결정할 것. 다른 종으로 매핑하지 말 것.",
+    "외형·자연스러운 움직임·Species Identity 승인 이후에만 별도 통합 PR에서 Animation Manifest/Production Registry/Runtime 연결 및 Release Gate·Native GUI 검증을 수행할 것."
+  ],
+  "nextAction": "HUMAN_REVIEW_REQUIRED: 실패 복구 금지; 미완료 행동은 분리 관절/폐안/보행/회전/수면/패배 키포즈 및 Identity·Skill 계약 필요"
+}

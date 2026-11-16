@@ -32,7 +32,7 @@ Project LUMA Parallel Development Protocol v1을 모든 병렬 Track에 적용�
 9. Production code 변경 시 기존 동작과 변경 후 동작을 비교 보고한다.
 10. 테스트 결과가 없는 기능이나 실행하지 않은 검증을 PASS로 기록하지 않는다.
 11. GUI 검증이 불가능하거나 미완료인 항목은 `DEFERRED_GUI`로 분리하고 자동 테스트 PASS와 구분한다. 기존 미검증 evidence를 PASS로 바꾸지 않는다.
-12. 각 Track의 PR은 Draft로 생성한다.
+12. Project LUMA 완료까지 각 Track은 Ready for review 상태의 일반 PR을 생성한다. Draft PR 생성은 금지하며 기존 Draft는 Ready for review로 전환한다. 미완성 작업은 같은 일반 PR에서 계속하며, PR 생성만으로 작업을 종료하지 않는다. 병합 판단에는 기존 검증과 사람 승인 조건을 적용한다.
 13. 자동 merge를 하지 않는다.
 14. 최종 통합 시 전체 Release Gate를 재실행한다.
 

@@ -1,0 +1,76 @@
+{
+  "conceptId": "M090",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M090/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 150,
+    "loop": false
+  },
+  "movableRect": [
+    64,
+    138,
+    118,
+    210
+  ],
+  "parts": [
+    {
+      "name": "wing-upper-membrane-greet",
+      "x": 97,
+      "y": 161,
+      "rx": 16,
+      "ry": 19,
+      "dx": -1.7,
+      "dy": -1,
+      "samples": [
+        0.02,
+        0.38,
+        0.85,
+        1,
+        0.68,
+        0.31,
+        0.11,
+        0.025
+      ]
+    },
+    {
+      "name": "wing-lower-membrane-settle",
+      "x": 84,
+      "y": 190,
+      "rx": 17,
+      "ry": 14,
+      "dx": -1.2,
+      "dy": 0.9,
+      "samples": [
+        0.01,
+        0.08,
+        0.32,
+        0.8,
+        1,
+        0.6,
+        0.19,
+        0.03
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Left visible bat-wing membrane flexes as a small grounded greeting; wing root, ears, face and feet fixed. Not FLY/HOVER/LAND or directional TURN.",
+  "behaviorContract": "Anatomical candidate only; existing concept proposal unapproved; no runtime or skill behavior activated",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-21"
+}

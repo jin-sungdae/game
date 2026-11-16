@@ -1,0 +1,148 @@
+{
+  "conceptId": "M059",
+  "action": "BLINK",
+  "automated": "PASS",
+  "errors": [],
+  "sourceBase": "design/production-batches/monsters/batch06/M059/base-v2.png",
+  "sourceSha256": "2553082b6439f4eb305acb4cbfba83872f6c011a58f6e69ed24d168d9064f4d9",
+  "frames": [
+    {
+      "file": "design/production-batches/LUMA-ASSET-15/M059/blink-candidate/rigged/blink/blink_00.png",
+      "sha256": "436cd256cda82c7f08ca53edb40041f5686204fe03ab70b2ca6bcebc7e5d34ae",
+      "pixelSha256": "32a6f58c342ff148689ceb1603fac93167dec648bb90d7cb25a26bbf45d0cd94",
+      "bounds": [
+        75,
+        23,
+        194,
+        232
+      ],
+      "anchorDriftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "changedPixels": 133,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "supportChangedPixels": 0,
+      "previousFrameMeanRgbaDelta": null,
+      "pngErrors": []
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-15/M059/blink-candidate/rigged/blink/blink_01.png",
+      "sha256": "742516b2fab50e08d18184328380d8118dd792adf980290a64685f21d72c3360",
+      "pixelSha256": "70fe9fe70fd9bc985b25116664638a97fbde8498cd809cfe681e4f14f114396b",
+      "bounds": [
+        75,
+        23,
+        194,
+        232
+      ],
+      "anchorDriftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "changedPixels": 148,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "supportChangedPixels": 0,
+      "previousFrameMeanRgbaDelta": 0.052219390869140625,
+      "pngErrors": []
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-15/M059/blink-candidate/rigged/blink/blink_02.png",
+      "sha256": "a812fed7c89800d1c26d2f46847b0e2962aa5f3255d2a965f5dfd36f45dd01b4",
+      "pixelSha256": "78fea3e0e34a486405d4093a45503a98b3c421bec51ccb99db420267f3334c85",
+      "bounds": [
+        75,
+        23,
+        194,
+        232
+      ],
+      "anchorDriftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "changedPixels": 150,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "supportChangedPixels": 0,
+      "previousFrameMeanRgbaDelta": 0.09914779663085938,
+      "pngErrors": []
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-15/M059/blink-candidate/rigged/blink/blink_03.png",
+      "sha256": "eb0702252e8edf0781ce0fa6c06217cefed92f808eac89caff7c8610c953bb08",
+      "pixelSha256": "55f0879cce88eb9c5243485d94ae6b57a2dfffb3b8b2fd6c69299c8377e9e6a0",
+      "bounds": [
+        75,
+        23,
+        194,
+        232
+      ],
+      "anchorDriftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "changedPixels": 150,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "supportChangedPixels": 0,
+      "previousFrameMeanRgbaDelta": 0.02283477783203125,
+      "pngErrors": []
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-15/M059/blink-candidate/rigged/blink/blink_04.png",
+      "sha256": "56af609f2dec3322edc18778fef67ac82f67d484ea4103f61c93d3ca772f391f",
+      "pixelSha256": "501ca7cef5f1e864ebcf197f25bd7e2ba518aa67789af3c2a84ff8dd9d1cf409",
+      "bounds": [
+        75,
+        23,
+        194,
+        232
+      ],
+      "anchorDriftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "changedPixels": 150,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "supportChangedPixels": 0,
+      "previousFrameMeanRgbaDelta": 0.0618743896484375,
+      "pngErrors": []
+    },
+    {
+      "file": "design/production-batches/LUMA-ASSET-15/M059/blink-candidate/rigged/blink/blink_05.png",
+      "sha256": "488bd08052daf40e949a4710f005f23d101b08f730954bd73d3014ab3e8d204c",
+      "pixelSha256": "40ff6785e2e85f54b72a1f7dc8bef370f24ed2f193241cf019871406885be69c",
+      "bounds": [
+        75,
+        23,
+        194,
+        232
+      ],
+      "anchorDriftPixels": {
+        "centerX": 0.0,
+        "bottom": 0
+      },
+      "changedPixels": 146,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "supportChangedPixels": 0,
+      "previousFrameMeanRgbaDelta": 0.09452438354492188,
+      "pngErrors": []
+    }
+  ],
+  "expectedFrames": 6,
+  "actualFrames": 6,
+  "loopSeamMeanRgbaDelta": 0.019924163818359375,
+  "continuityScope": "Numerical delta only; anatomical and perceived continuity require human review",
+  "appearanceScope": "Fixed pixels, local change area and registration only; identity is not automatically approved",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairPerformed": false,
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI"
+}

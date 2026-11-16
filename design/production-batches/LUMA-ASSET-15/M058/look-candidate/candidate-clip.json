@@ -1,0 +1,77 @@
+{
+  "conceptId": "M058",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M058/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    39,
+    112,
+    224,
+    216
+  ],
+  "parts": [
+    {
+      "x": 193,
+      "y": 141,
+      "rx": 25,
+      "ry": 27,
+      "dx": -2.4,
+      "dy": 0.3,
+      "name": "serpent-neck",
+      "samples": [
+        0.03,
+        0.35,
+        0.85,
+        1,
+        0.8,
+        -0.55,
+        -0.3,
+        0.05
+      ]
+    },
+    {
+      "x": 65,
+      "y": 170,
+      "rx": 20,
+      "ry": 31,
+      "dx": -1.7,
+      "dy": 0.9,
+      "name": "segmented-tail",
+      "samples": [
+        0.02,
+        0.1,
+        0.45,
+        0.8,
+        1,
+        0.4,
+        -0.3,
+        0.04
+      ]
+    }
+  ],
+  "anatomyScope": "고정된 얼굴 아래 목 방향과 꼬리의 조심스러운 재정렬",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 첫 시도; 실패 시 수정 없이 보존",
+  "rigReuse": "design/production-batches/action-followup/M057/hit-pilot/rig-hit.cjs"
+}
