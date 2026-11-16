@@ -38,8 +38,8 @@ jobs:
           if-no-files-found: error
   macos-native:
     needs: desktop-static
-    runs-on: macos-14
-    timeout-minutes: 30
+    runs-on: macos-15-intel
+    timeout-minutes: 75
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -66,6 +66,39 @@ jobs:
           swiftc -parse-as-library scripts/gui_qa/record_window.swift -o /tmp/luma-record-window
       - name: Runtime boundary
         run: echo 'PLATFORM_REQUIRED native compile passed; real desktop launch/mouse/typing is MANUAL_REQUIRED, NOT_RUN on hosted CI.'
+      - name: Check out exact PR HEAD for Release Gate
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: release-source
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Prepare exact-HEAD Release Gate
+        working-directory: release-source
+        run: |
+          brew install postgresql@16
+          echo "PG_BIN=$(brew --prefix postgresql@16)/bin" >> "$GITHUB_ENV"
+          echo "JAVA_HOME=$(/usr/libexec/java_home -v 21)" >> "$GITHUB_ENV"
+          npm ci
+      - name: Run full macOS Release Gate
+        working-directory: release-source
+        env:
+          EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_HEAD"
+          test -z "$(git status --porcelain)"
+          export PATH="$JAVA_HOME/bin:$PATH"
+          python3 scripts/validate_alpha_release.py --output "$RUNNER_TEMP/luma-release-gate"
+      - name: Preserve Release Gate evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: luma-macos-release-gate
+          path: ${{ runner.temp }}/luma-release-gate/
+          retention-days: 14
+          if-no-files-found: warn
   server-java:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -78,7 +111,12 @@ jobs:
           db_password="$(openssl rand -hex 24)"
           echo "::add-mask::$db_password"
           echo "LUMA_TEST_DB_PASSWORD=$db_password" >> "$GITHUB_ENV"
-          docker run -d --name luma-ci-db -e POSTGRES_USER=luma -e POSTGRES_DB=luma_game_test -e POSTGRES_PASSWORD="$db_password" -p 127.0.0.1:55439:5432 postgres:17-alpine
+          for attempt in 1 2 3; do
+            if docker pull postgres:17-alpine; then break; fi
+            if [ "$attempt" -eq 3 ]; then exit 1; fi
+            sleep "$((attempt * 5))"
+          done
+          docker run --pull=never -d --name luma-ci-db -e POSTGRES_USER=luma -e POSTGRES_DB=luma_game_test -e POSTGRES_PASSWORD="$db_password" -p 127.0.0.1:55439:5432 postgres:17-alpine
           for attempt in $(seq 1 30); do
             if docker exec luma-ci-db pg_isready -U luma -d luma_game_test; then exit 0; fi
             sleep 1
