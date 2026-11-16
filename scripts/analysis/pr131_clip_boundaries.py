@@ -62,7 +62,7 @@ def measure_clip(code):
     # Reuse the existing strict validator; supplemental metrics do not replace it.
     validation = measure_parts(folder)
     return {'creatureId': spec['conceptId'], 'action': spec['clip']['name'],
-            'candidatePath': str(folder.relative_to(ROOT)),
+            'candidatePath': folder.relative_to(ROOT).as_posix(),
             'sourceBaseSha256': hashlib.sha256(base_path.read_bytes()).hexdigest(),
             'frameSha256': [hashlib.sha256(p.read_bytes()).hexdigest() for p in paths],
             'uniqueVisibleHashes': len({visible_hash(f) for f in frames}),

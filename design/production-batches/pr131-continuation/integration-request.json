@@ -40,7 +40,7 @@
     },
     {
       "pr": 140,
-      "head": "54365835045e356c033fd3bc1eb6930a2d11f8b1",
+      "head": "dff9403d079f290154e4f9268ac6592f109f2aa4",
       "result": "M088 HIT and M090 CURSOR_REACT/INTERACT are distinct actions. No imported assets."
     },
     {
@@ -76,5 +76,12 @@
   "nativeGui": "DEFERRED_GUI",
   "browserPreview": "NOT_RUN",
   "nextTask": "Integration Track reconcile per-action candidates from PR139/140/154 without duplicate import; M001 ATTACK remains blocked pending approved keypose/rig and ownership. Continue available assigned actions only.",
-  "validation": "Exact followup commit Release Gate and CI will be reported on PR131; earlier HEAD evidence is not reused."
+  "validation": "Exact followup commit Release Gate and CI will be reported on PR131; earlier HEAD evidence is not reused.",
+  "mergeReadiness": {
+    "status": "INTEGRATION_BLOCKED",
+    "verifiedSourceHead": "c40da57af74308c25e221af16d37e1475ea7a9b4",
+    "pr155": "Direct descendant of PR131 at the inspected HEAD. After PR131 lands, retarget to main and verify the child-only diff, especially after squash or rebase.",
+    "pr156": "Direct descendant of PR139. The current combined branch conflicts with PR131/155 in the shared Ledger and Catalog. The Integration Coordinator should reconcile candidate keys, preserve failed and unapproved entries, and refresh both aggregates before merging PR156.",
+    "currentPreview": "The PR131 common browser preview loops candidate frames and shows BASE separately. Explicit BASE return, restart and frame selection are not verified on this branch; coordinate phase-aware playback with the separate integration track."
+  }
 }
