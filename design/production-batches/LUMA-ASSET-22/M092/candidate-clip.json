@@ -1,0 +1,26 @@
+{
+  "conceptId": "M092",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "identityReview": "HUMAN_REVIEW_REQUIRED",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BREATH",
+    "frames": 8,
+    "frameDuration": 300,
+    "loop": true,
+    "path": "rigged/breath/breath_NN.png"
+  },
+  "gui": "NOT_VERIFIED",
+  "productionEligible": false,
+  "sessionId": "LUMA-ASSET-22"
+}
