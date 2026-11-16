@@ -1,0 +1,72 @@
+{
+  "conceptId": "M002",
+  "species": null,
+  "evolutionStage": null,
+  "status": "HUMAN_REVIEW_REQUIRED",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M002/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "REST",
+    "frames": 8,
+    "frameDuration": 170,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 173,
+      "y": 105,
+      "rx": 7,
+      "ry": 7
+    },
+    {
+      "x": 192,
+      "y": 107,
+      "rx": 2.5,
+      "ry": 5
+    }
+  ],
+  "parts": [
+    {
+      "name": "ribcage",
+      "x": 138,
+      "y": 163,
+      "rx": 25,
+      "ry": 14,
+      "dx": 0.35,
+      "dy": -0.8,
+      "phase": 0
+    },
+    {
+      "name": "shoulder",
+      "x": 169,
+      "y": 153,
+      "rx": 14,
+      "ry": 15,
+      "dx": -0.2,
+      "dy": -0.5,
+      "phase": -1.047
+    }
+  ],
+  "fixedBodyExpression": "y<=137||y>=180||x<=104||x>=185",
+  "anatomyScope": "기존 눈 리깅 반쯤 감은 자세 + 기존 몸통 호흡 리깅 진폭 감소. BASE 자세 유지; 앉기/수면 자세를 새로 추정하지 않음.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "sessionId": "LUMA-ASSET-04",
+  "rigSource": "design/production-batches/breath-followup/M002/rig-breath.cjs",
+  "rigSourceSha256": "9215a5d0f663289619204323b952516a89b4cd78c228f14fafd2c67f6e622d88",
+  "eyeRigSource": "design/production-batches/action-followup/M002/rig-blink.cjs",
+  "eyeRigSourceSha256": "033d02f4839ea72c729e8e06957bfbd2fcd0e08f385e395b03a3e9108ca82121",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 미완성 REST 최초 후보; 기존 실패 복구 없음",
+  "behaviorContract": "REST 후보 의미 및 타이밍 사람 검토 필요. SpeciesBehavior/MovementProfile 승인이나 Runtime 연결 없음."
+}

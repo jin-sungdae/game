@@ -1,0 +1,72 @@
+{
+  "conceptId": "M004",
+  "species": null,
+  "evolutionStage": null,
+  "status": "HUMAN_REVIEW_REQUIRED",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M004/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "REST",
+    "frames": 8,
+    "frameDuration": 170,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 175,
+      "y": 102,
+      "rx": 5,
+      "ry": 5
+    },
+    {
+      "x": 192.5,
+      "y": 108,
+      "rx": 2.7,
+      "ry": 3.3
+    }
+  ],
+  "parts": [
+    {
+      "name": "trunk-flex",
+      "x": 145,
+      "y": 148,
+      "rx": 23,
+      "ry": 29,
+      "dx": 0.15,
+      "dy": -0.35,
+      "phase": 0
+    },
+    {
+      "name": "leaf-shoulder-root",
+      "x": 111,
+      "y": 117,
+      "rx": 18,
+      "ry": 16,
+      "dx": -0.25,
+      "dy": -0.5,
+      "phase": -1.0471975511965976
+    }
+  ],
+  "fixedBodyExpression": "y>=182||y<=100||x<=80||x>=188||(x>=151&&y<=123)",
+  "anatomyScope": "기존 눈 리깅 반쯤 감은 자세 + 기존 몸통 호흡 리깅 진폭 감소. BASE 자세 유지; 앉기/수면 자세를 새로 추정하지 않음.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "sessionId": "LUMA-ASSET-04",
+  "rigSource": "design/production-batches/breath-followup/M004/rig-breath.cjs",
+  "rigSourceSha256": "dd05ba445c6936ae1a7c6cd2014e82f2f1d286f91d9eabc3cf41815431fc2794",
+  "eyeRigSource": "design/production-batches/action-followup/M004/rig-look.cjs",
+  "eyeRigSourceSha256": "803c418e802fc04a7def5e25bbe4404a2c33cc6379b494e85af2c326078bbd78",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 미완성 REST 최초 후보; 기존 실패 복구 없음",
+  "behaviorContract": "REST 후보 의미 및 타이밍 사람 검토 필요. SpeciesBehavior/MovementProfile 승인이나 Runtime 연결 없음."
+}
