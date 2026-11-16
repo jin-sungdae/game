@@ -79,9 +79,10 @@
   "validation": "Exact followup commit Release Gate and CI will be reported on PR131; earlier HEAD evidence is not reused.",
   "mergeReadiness": {
     "status": "INTEGRATION_BLOCKED",
-    "verifiedSourceHead": "c40da57af74308c25e221af16d37e1475ea7a9b4",
-    "pr155": "Direct descendant of PR131 at the inspected HEAD. After PR131 lands, retarget to main and verify the child-only diff, especially after squash or rebase.",
-    "pr156": "Direct descendant of PR139. The current combined branch conflicts with PR131/155 in the shared Ledger and Catalog. The Integration Coordinator should reconcile candidate keys, preserve failed and unapproved entries, and refresh both aggregates before merging PR156.",
-    "currentPreview": "The PR131 common browser preview loops candidate frames and shows BASE separately. Explicit BASE return, restart and frame selection are not verified on this branch; coordinate phase-aware playback with the separate integration track."
+    "verifiedSourceHead": "ce09df0be50caf11c6c246a3e436a00f532bdc3a",
+    "pr155": "At HEAD 4e98e91, simulating a normal merge of PR131 into main and then PR155 into that merge commit was clean. The resulting child diff adds 45 files, matching the stacked PR file count. Recompute the child diff after the actual merge; squash/rebase was not evaluated.",
+    "pr156": "PR139 11dfc56 to PR156 9581f6b merges cleanly in isolation. Combining PR156 with the simulated main + PR131 + PR155 stack conflicts in the Ledger and Catalog. Integration Coordinator: reconcile Creature/action/version/path and explicit approval/failure records in the Ledger first, run build_creature_review.py --refresh-inventory --refresh-coverage, regenerate approval audit, and compare all candidate keys and file counts against both stacks. Do not infer approvals from passing validators.",
+    "currentPreview": "PR131 renders BASE separately from a looping candidate. The independently stacked PR157 owns the common preview adapter, phase playback, restart, frame selection and browser tests. Verify the four PR131 candidates in the combined checkout before declaring explicit BASE return or one-shot verified.",
+    "ciRecovery": "Actions run 43857514393 cancelled macos-native before runner assignment on two attempts. review-result fails by contract on that cancelled dependency. The GitHub-hosted macos-14 image was retired; move to macos-15-intel preserving Intel architecture and existing checks."
   }
 }
