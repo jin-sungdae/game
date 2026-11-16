@@ -1,0 +1,136 @@
+{
+  "reference": "public/assets/creatures/nox/stage02/base.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "shoulder-release",
+      "x": 151,
+      "y": 137,
+      "rx": 25,
+      "ry": 17,
+      "dx": -1.1,
+      "dy": -1.6,
+      "samples": [
+        0.02,
+        0.19,
+        0.58,
+        1,
+        0.84,
+        0.47,
+        0.18,
+        0.03
+      ]
+    },
+    {
+      "name": "neck-ruff-settle",
+      "x": 185,
+      "y": 137,
+      "rx": 23,
+      "ry": 22,
+      "dx": 0.6,
+      "dy": 0.9,
+      "samples": [
+        0.01,
+        0.04,
+        0.18,
+        0.52,
+        0.92,
+        1,
+        0.54,
+        0.05
+      ]
+    },
+    {
+      "name": "flank-exhale",
+      "x": 137,
+      "y": 160,
+      "rx": 31,
+      "ry": 24,
+      "dx": -0.5,
+      "dy": 0.8,
+      "samples": [
+        0.01,
+        0.07,
+        0.27,
+        0.63,
+        1,
+        0.82,
+        0.38,
+        0.04
+      ]
+    }
+  ],
+  "protectedRegions": "y>=191||y<=114||x<=85||x>=214",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "victory_00.png",
+      "pixelSha256": "f24f8293a2672fbe3b704132c9fede5000fe9bfdc2b5720be33f88aa957dbd9c",
+      "changedPixels": 335,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 6,
+      "maxInverseDisplacementPixels": 0.03883247269118916
+    },
+    {
+      "file": "victory_01.png",
+      "pixelSha256": "aca97a0c7ac17ac4ed348f87a1022ea422ea2342314079666bd9cdfd756e95fd",
+      "changedPixels": 1238,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 91,
+      "maxInverseDisplacementPixels": 0.36848317989575463
+    },
+    {
+      "file": "victory_02.png",
+      "pixelSha256": "3b06422d9ea332d225a29352f905854d22104582ec2533c378e9ba5d9409e1ef",
+      "changedPixels": 2190,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 169,
+      "maxInverseDisplacementPixels": 1.1253847163963315
+    },
+    {
+      "file": "victory_03.png",
+      "pixelSha256": "909dbc7ae3ff83ddf13aefec8f40388c02b85eaafdcd0879d052b07bb2c415e3",
+      "changedPixels": 2749,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 250,
+      "maxInverseDisplacementPixels": 1.9382912066605693
+    },
+    {
+      "file": "victory_04.png",
+      "pixelSha256": "dec51118b1ce5e1a7081af53e90eb34fa97c491466dc323378f48dd6c455cf28",
+      "changedPixels": 2942,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 322,
+      "maxInverseDisplacementPixels": 1.6289551708227639
+    },
+    {
+      "file": "victory_05.png",
+      "pixelSha256": "f01e94e02081f94bec8ddae1be6cefd5b99048ff92129d06d28a27ae95ee26ce",
+      "changedPixels": 2845,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 289,
+      "maxInverseDisplacementPixels": 1.080613159174884
+    },
+    {
+      "file": "victory_06.png",
+      "pixelSha256": "9245ad57098f1f1669073a0cead73e6c60168f5f7cea0e0c94d95195eac62aae",
+      "changedPixels": 2374,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 191,
+      "maxInverseDisplacementPixels": 0.5829021848786476
+    },
+    {
+      "file": "victory_07.png",
+      "pixelSha256": "a4f4e8ffe8d3f26ce17b416c30d89122173c10777d0360af05c613c31448b9c0",
+      "changedPixels": 802,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 66,
+      "maxInverseDisplacementPixels": 0.05824776600088806
+    }
+  ],
+  "repairIterations": 0,
+  "priorRepairIterations": 3,
+  "repairScope": "LUMA-ASSET-03 independent first attempt; prior failures remain blocked at 3/3",
+  "productionEligible": false
+}
