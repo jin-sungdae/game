@@ -1,0 +1,45 @@
+{
+  "automated": {
+    "animationRegression": {
+      "status": "PASS",
+      "tests": 236,
+      "failures": 0
+    },
+    "assetTests": {
+      "status": "INCOMPLETE_TERMINATED",
+      "reason": "15분 이상 실행 후 세션 자원 사용을 제한하기 위해 이 세션 프로세스만 종료. 마지막 실행 test_registry_scale_paths_and_duplicates; PASS/FAIL 판정 없음."
+    },
+    "releaseGate": {
+      "status": "INCOMPLETE_TERMINATED",
+      "completed": [
+        "frontend-build",
+        "animation-content",
+        "presentation"
+      ],
+      "interrupted": "asset-tests",
+      "remaining": "NOT_RUN",
+      "reason": "장시간 Asset Tests 종료. 전체 Release Gate PASS 아님."
+    },
+    "basePngs": {
+      "status": "PASS",
+      "count": 5
+    },
+    "existingM053Idle": {
+      "status": "PASS",
+      "frames": 6
+    },
+    "newCandidates": {
+      "status": "VALIDATION_FAILED",
+      "rawPngs": 2,
+      "completedClips": 0
+    }
+  },
+  "platformRequired": "NOT_VERIFIED",
+  "manualRequired": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "productionApproved": false,
+  "runtimeConnected": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "reviewedCommit": "765bd12"
+}

@@ -1,0 +1,491 @@
+{
+  "status": "PASS",
+  "threshold": 2,
+  "clips": [
+    {
+      "id": "M061 SLEEP",
+      "status": "PASS",
+      "sourceHashesUnchanged": true,
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "meanAbsoluteChannelDelta": 0.14361572265625
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "meanAbsoluteChannelDelta": 0.19298171997070312
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "meanAbsoluteChannelDelta": 0.197723388671875
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "meanAbsoluteChannelDelta": 0.12116622924804688
+        },
+        {
+          "source": 4,
+          "target": 5,
+          "meanAbsoluteChannelDelta": 0.029476165771484375
+        },
+        {
+          "source": 5,
+          "target": 6,
+          "meanAbsoluteChannelDelta": 0.01241302490234375
+        },
+        {
+          "source": 6,
+          "target": 5,
+          "meanAbsoluteChannelDelta": 0.01241302490234375
+        },
+        {
+          "source": 6,
+          "target": 7,
+          "meanAbsoluteChannelDelta": 0.01648712158203125
+        },
+        {
+          "source": 6,
+          "target": 9,
+          "meanAbsoluteChannelDelta": 0.20417022705078125
+        },
+        {
+          "source": 7,
+          "target": 6,
+          "meanAbsoluteChannelDelta": 0.01648712158203125
+        },
+        {
+          "source": 7,
+          "target": 8,
+          "meanAbsoluteChannelDelta": 0.020359039306640625
+        },
+        {
+          "source": 8,
+          "target": 7,
+          "meanAbsoluteChannelDelta": 0.020359039306640625
+        },
+        {
+          "source": 9,
+          "target": 10,
+          "meanAbsoluteChannelDelta": 0.26158905029296875
+        },
+        {
+          "source": 10,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 1.2875747680664062
+        },
+        {
+          "source": 11,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.0
+        }
+      ]
+    },
+    {
+      "id": "M061 DEFEAT",
+      "status": "PASS",
+      "sourceHashesUnchanged": true,
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "meanAbsoluteChannelDelta": 0.035675048828125
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "meanAbsoluteChannelDelta": 0.0682830810546875
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "meanAbsoluteChannelDelta": 0.102996826171875
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "meanAbsoluteChannelDelta": 0.13107681274414062
+        },
+        {
+          "source": 4,
+          "target": 5,
+          "meanAbsoluteChannelDelta": 0.12824249267578125
+        },
+        {
+          "source": 5,
+          "target": 6,
+          "meanAbsoluteChannelDelta": 0.15262985229492188
+        },
+        {
+          "source": 6,
+          "target": 7,
+          "meanAbsoluteChannelDelta": 0.09959793090820312
+        },
+        {
+          "source": 7,
+          "target": 8,
+          "meanAbsoluteChannelDelta": 0.066650390625
+        },
+        {
+          "source": 8,
+          "target": 9,
+          "meanAbsoluteChannelDelta": 0.037143707275390625
+        },
+        {
+          "source": 9,
+          "target": 10,
+          "meanAbsoluteChannelDelta": 0.021739959716796875
+        },
+        {
+          "source": 10,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.015716552734375
+        },
+        {
+          "source": 11,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.0
+        }
+      ]
+    },
+    {
+      "id": "M062 DEFEAT",
+      "status": "PASS",
+      "sourceHashesUnchanged": true,
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "meanAbsoluteChannelDelta": 0.007465362548828125
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "meanAbsoluteChannelDelta": 0.01605987548828125
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "meanAbsoluteChannelDelta": 0.02634429931640625
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "meanAbsoluteChannelDelta": 0.03501129150390625
+        },
+        {
+          "source": 4,
+          "target": 5,
+          "meanAbsoluteChannelDelta": 0.03556060791015625
+        },
+        {
+          "source": 5,
+          "target": 6,
+          "meanAbsoluteChannelDelta": 0.031681060791015625
+        },
+        {
+          "source": 6,
+          "target": 7,
+          "meanAbsoluteChannelDelta": 0.02291107177734375
+        },
+        {
+          "source": 7,
+          "target": 8,
+          "meanAbsoluteChannelDelta": 0.015354156494140625
+        },
+        {
+          "source": 8,
+          "target": 9,
+          "meanAbsoluteChannelDelta": 0.009304046630859375
+        },
+        {
+          "source": 9,
+          "target": 10,
+          "meanAbsoluteChannelDelta": 0.005725860595703125
+        },
+        {
+          "source": 10,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.003688812255859375
+        },
+        {
+          "source": 11,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.0
+        }
+      ]
+    },
+    {
+      "id": "M064 DEFEAT",
+      "status": "PASS",
+      "sourceHashesUnchanged": true,
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "meanAbsoluteChannelDelta": 0.0132598876953125
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "meanAbsoluteChannelDelta": 0.024890899658203125
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "meanAbsoluteChannelDelta": 0.0368804931640625
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "meanAbsoluteChannelDelta": 0.046718597412109375
+        },
+        {
+          "source": 4,
+          "target": 5,
+          "meanAbsoluteChannelDelta": 0.04471588134765625
+        },
+        {
+          "source": 5,
+          "target": 6,
+          "meanAbsoluteChannelDelta": 0.037715911865234375
+        },
+        {
+          "source": 6,
+          "target": 7,
+          "meanAbsoluteChannelDelta": 0.026897430419921875
+        },
+        {
+          "source": 7,
+          "target": 8,
+          "meanAbsoluteChannelDelta": 0.017642974853515625
+        },
+        {
+          "source": 8,
+          "target": 9,
+          "meanAbsoluteChannelDelta": 0.010723114013671875
+        },
+        {
+          "source": 9,
+          "target": 10,
+          "meanAbsoluteChannelDelta": 0.00638580322265625
+        },
+        {
+          "source": 10,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.004199981689453125
+        },
+        {
+          "source": 11,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.0
+        }
+      ]
+    },
+    {
+      "id": "M061 ATTACK",
+      "status": "PASS",
+      "sourceHashesUnchanged": true,
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "meanAbsoluteChannelDelta": 0.3254432678222656
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "meanAbsoluteChannelDelta": 0.1775970458984375
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "meanAbsoluteChannelDelta": 0.1787872314453125
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "meanAbsoluteChannelDelta": 0.27568817138671875
+        },
+        {
+          "source": 4,
+          "target": 5,
+          "meanAbsoluteChannelDelta": 0.4536781311035156
+        },
+        {
+          "source": 5,
+          "target": 6,
+          "meanAbsoluteChannelDelta": 0.3278999328613281
+        },
+        {
+          "source": 6,
+          "target": 7,
+          "meanAbsoluteChannelDelta": 0.20904159545898438
+        },
+        {
+          "source": 7,
+          "target": 8,
+          "meanAbsoluteChannelDelta": 0.21847915649414062
+        },
+        {
+          "source": 8,
+          "target": 9,
+          "meanAbsoluteChannelDelta": 0.15542221069335938
+        },
+        {
+          "source": 9,
+          "target": 10,
+          "meanAbsoluteChannelDelta": 0.08852767944335938
+        },
+        {
+          "source": 10,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.8642921447753906
+        },
+        {
+          "source": 11,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.0
+        }
+      ]
+    },
+    {
+      "id": "M062 ATTACK",
+      "status": "PASS",
+      "sourceHashesUnchanged": true,
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "meanAbsoluteChannelDelta": 0.054615020751953125
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "meanAbsoluteChannelDelta": 0.046977996826171875
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "meanAbsoluteChannelDelta": 0.052978515625
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "meanAbsoluteChannelDelta": 0.06790542602539062
+        },
+        {
+          "source": 4,
+          "target": 5,
+          "meanAbsoluteChannelDelta": 0.09018325805664062
+        },
+        {
+          "source": 5,
+          "target": 6,
+          "meanAbsoluteChannelDelta": 0.07631301879882812
+        },
+        {
+          "source": 6,
+          "target": 7,
+          "meanAbsoluteChannelDelta": 0.05405426025390625
+        },
+        {
+          "source": 7,
+          "target": 8,
+          "meanAbsoluteChannelDelta": 0.05519866943359375
+        },
+        {
+          "source": 8,
+          "target": 9,
+          "meanAbsoluteChannelDelta": 0.04041290283203125
+        },
+        {
+          "source": 9,
+          "target": 10,
+          "meanAbsoluteChannelDelta": 0.0220794677734375
+        },
+        {
+          "source": 10,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.07829666137695312
+        },
+        {
+          "source": 11,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 0.0
+        }
+      ]
+    },
+    {
+      "id": "M061 MOVE",
+      "status": "PASS",
+      "sourceHashesUnchanged": true,
+      "edges": [
+        {
+          "source": 0,
+          "target": 1,
+          "meanAbsoluteChannelDelta": 0.08165740966796875
+        },
+        {
+          "source": 1,
+          "target": 2,
+          "meanAbsoluteChannelDelta": 0.13361740112304688
+        },
+        {
+          "source": 2,
+          "target": 3,
+          "meanAbsoluteChannelDelta": 0.20807266235351562
+        },
+        {
+          "source": 3,
+          "target": 4,
+          "meanAbsoluteChannelDelta": 0.21897125244140625
+        },
+        {
+          "source": 4,
+          "target": 5,
+          "meanAbsoluteChannelDelta": 0.22578811645507812
+        },
+        {
+          "source": 5,
+          "target": 6,
+          "meanAbsoluteChannelDelta": 0.15997695922851562
+        },
+        {
+          "source": 6,
+          "target": 7,
+          "meanAbsoluteChannelDelta": 0.23297500610351562
+        },
+        {
+          "source": 7,
+          "target": 8,
+          "meanAbsoluteChannelDelta": 0.20259857177734375
+        },
+        {
+          "source": 8,
+          "target": 9,
+          "meanAbsoluteChannelDelta": 0.16131973266601562
+        },
+        {
+          "source": 9,
+          "target": 10,
+          "meanAbsoluteChannelDelta": 0.10454177856445312
+        },
+        {
+          "source": 10,
+          "target": 11,
+          "meanAbsoluteChannelDelta": 1.1174812316894531
+        },
+        {
+          "source": 11,
+          "target": 0,
+          "meanAbsoluteChannelDelta": 1.096893310546875
+        }
+      ]
+    }
+  ],
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED"
+}

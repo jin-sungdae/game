@@ -1,0 +1,449 @@
+
+> project-luma-spike@0.1.0 test:presentation
+> sh scripts/test-presentation.sh
+
+TAP version 13
+# Subtest: HP tiers include exact thresholds and retain numbers
+ok 1 - HP tiers include exact thresholds and retain numbers
+  ---
+  duration_ms: 0.574833
+  ...
+# Subtest: entity slots preserve attacker and damage recipient
+ok 2 - entity slots preserve attacker and damage recipient
+  ---
+  duration_ms: 0.083209
+  ...
+# Subtest: reduced motion disables effects and HP transition in actual stylesheet
+ok 3 - reduced motion disables effects and HP transition in actual stylesheet
+  ---
+  duration_ms: 0.444708
+  ...
+# Subtest: visual wrapper never remounts production animation and no guessed capture chance
+ok 4 - visual wrapper never remounts production animation and no guessed capture chance
+  ---
+  duration_ms: 0.322708
+  ...
+# Subtest: server WAIT has compact feedback only while active
+ok 5 - server WAIT has compact feedback only while active
+  ---
+  duration_ms: 0.098
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 74.119333
+TAP version 13
+# Subtest: MOA IDLE presentation
+ok 1 - MOA IDLE presentation
+  ---
+  duration_ms: 0.569291
+  ...
+# Subtest: MOA WALKING presentation
+ok 2 - MOA WALKING presentation
+  ---
+  duration_ms: 0.044416
+  ...
+# Subtest: MOA LOOKING presentation
+ok 3 - MOA LOOKING presentation
+  ---
+  duration_ms: 0.754666
+  ...
+# Subtest: MOA SITTING presentation
+ok 4 - MOA SITTING presentation
+  ---
+  duration_ms: 0.121708
+  ...
+# Subtest: MOA SLEEPING presentation
+ok 5 - MOA SLEEPING presentation
+  ---
+  duration_ms: 0.076
+  ...
+# Subtest: MOA REACTING presentation
+ok 6 - MOA REACTING presentation
+  ---
+  duration_ms: 0.069458
+  ...
+# Subtest: MOA DRAGGING presentation
+ok 7 - MOA DRAGGING presentation
+  ---
+  duration_ms: 0.063042
+  ...
+# Subtest: PIP SPAWNING presentation
+ok 8 - PIP SPAWNING presentation
+  ---
+  duration_ms: 0.127084
+  ...
+# Subtest: PIP ENGAGED presentation
+ok 9 - PIP ENGAGED presentation
+  ---
+  duration_ms: 0.084625
+  ...
+# Subtest: PIP ROAMING presentation
+ok 10 - PIP ROAMING presentation
+  ---
+  duration_ms: 0.278333
+  ...
+# Subtest: PIP DESPAWNING presentation
+ok 11 - PIP DESPAWNING presentation
+  ---
+  duration_ms: 0.080292
+  ...
+# Subtest: unknown states/species are still, without new domain behavior
+ok 12 - unknown states/species are still, without new domain behavior
+  ---
+  duration_ms: 0.284625
+  ...
+# Subtest: same snapshot keeps class and existing nodes; state transitions only change presentation
+ok 13 - same snapshot keeps class and existing nodes; state transitions only change presentation
+  ---
+  duration_ms: 1.41725
+  ...
+# Subtest: only base branch receives motion; frame and CSS fallback retain existing priority
+ok 14 - only base branch receives motion; frame and CSS fallback retain existing priority
+  ---
+  duration_ms: 0.472584
+  ...
+# Subtest: facing belongs to image; base and gameplay transforms use different nodes
+ok 15 - facing belongs to image; base and gameplay transforms use different nodes
+  ---
+  duration_ms: 0.44675
+  ...
+# Subtest: defeat stays server-authoritative; capture retains existing pipeline
+ok 16 - defeat stays server-authoritative; capture retains existing pipeline
+  ---
+  duration_ms: 0.207375
+  ...
+# Subtest: reduced motion removes presentation only; sleep indicator remains static in canvas
+ok 17 - reduced motion removes presentation only; sleep indicator remains static in canvas
+  ---
+  duration_ms: 1.170208
+  ...
+# Subtest: cadence and transforms remain subtle; no CSS world position animation
+ok 18 - cadence and transforms remain subtle; no CSS world position animation
+  ---
+  duration_ms: 0.461
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 103.403667
+TAP version 13
+# Subtest: server enum controls AVAILABLE, LOCKED and MAX_STAGE, not client progression
+ok 1 - server enum controls AVAILABLE, LOCKED and MAX_STAGE, not client progression
+  ---
+  duration_ms: 0.54575
+  ...
+# Subtest: busy, gameplay request and acknowledged presentation prevent another evolve
+ok 2 - busy, gameplay request and acknowledged presentation prevent another evolve
+  ---
+  duration_ms: 0.109708
+  ...
+# Subtest: failure and success feedback are server-derived
+ok 3 - failure and success feedback are server-derived
+  ---
+  duration_ms: 0.067875
+  ...
+# Subtest: stage identity switches only during acknowledged timeline; bootstrap restores directly
+ok 4 - stage identity switches only during acknowledged timeline; bootstrap restores directly
+  ---
+  duration_ms: 0.052875
+  ...
+# Subtest: explicit interaction, reduced motion, diagnostic identity and focus policy
+ok 5 - explicit interaction, reduced motion, diagnostic identity and focus policy
+  ---
+  duration_ms: 1.074417
+  ...
+# Subtest: NEBLA keeps MOKORI during acknowledged glow then reveals Stage3 diagnostic identity
+ok 6 - NEBLA keeps MOKORI during acknowledged glow then reveals Stage3 diagnostic identity
+  ---
+  duration_ms: 1.247583
+  ...
+# Subtest: relationship feedback stays in existing entity panel and reward zero is hidden
+ok 7 - relationship feedback stays in existing entity panel and reward zero is hidden
+  ---
+  duration_ms: 0.786583
+  ...
+# Subtest: ambiguous command remains retryable after committed stage refresh
+ok 8 - ambiguous command remains retryable after committed stage refresh
+  ---
+  duration_ms: 0.296042
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 80.238167
+TAP version 13
+# Subtest: battle shows only potion/charm; companion only berry
+ok 1 - battle shows only potion/charm; companion only berry
+  ---
+  duration_ms: 0.755666
+  ...
+# Subtest: authoritative gold, quantities, names and prices pass through
+ok 2 - authoritative gold, quantities, names and prices pass through
+  ---
+  duration_ms: 0.0885
+  ...
+# Subtest: loading guard respects other domain mutation
+ok 3 - loading guard respects other domain mutation
+  ---
+  duration_ms: 0.048584
+  ...
+# Subtest: failure asks for refresh without automatic retry
+ok 4 - failure asks for refresh without automatic retry
+  ---
+  duration_ms: 0.076459
+  ...
+# Subtest: server feedback HP +7
+ok 5 - server feedback HP +7
+  ---
+  duration_ms: 0.0405
+  ...
+# Subtest: server feedback Bond 4 → 5 ♥
+ok 6 - server feedback Bond 4 → 5 ♥
+  ---
+  duration_ms: 0.026875
+  ...
+# Subtest: server feedback Charm Ready
+ok 7 - server feedback Charm Ready
+  ---
+  duration_ms: 0.591083
+  ...
+# Subtest: compact UI sends explicit identifiers only and never focuses windows
+ok 8 - compact UI sends explicit identifiers only and never focuses windows
+  ---
+  duration_ms: 0.56475
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 181.502416
+TAP version 13
+# Subtest: shop HTML displays server price/gold/owned and three explicit BUY buttons
+ok 1 - shop HTML displays server price/gold/owned and three explicit BUY buttons
+  ---
+  duration_ms: 7.054291
+  ...
+# Subtest: battle inventory excludes berry including a shop round trip context
+ok 2 - battle inventory excludes berry including a shop round trip context
+  ---
+  duration_ms: 0.846291
+  ...
+# Subtest: companion inventory only offers Berry
+ok 3 - companion inventory only offers Berry
+  ---
+  duration_ms: 0.270083
+  ...
+# Subtest: busy and unavailable ownership disable item use
+ok 4 - busy and unavailable ownership disable item use
+  ---
+  duration_ms: 0.667417
+  ...
+# Subtest: server effect feedback and failure are rendered without derived magnitudes
+ok 5 - server effect feedback and failure are rendered without derived magnitudes
+  ---
+  duration_ms: 2.294167
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 124.21325
+TAP version 13
+# Subtest: 30 slots include disabled provisional and Alpha candidates with stable Dex numbers
+ok 1 - 30 slots include disabled provisional and Alpha candidates with stable Dex numbers
+  ---
+  duration_ms: 107.671666
+  ...
+# Subtest: undiscovered model and markup never expose actual name or asset path
+ok 2 - undiscovered model and markup never expose actual name or asset path
+  ---
+  duration_ms: 89.657459
+  ...
+# Subtest: discovery uses supplied server evidence, not catalog membership
+ok 3 - discovery uses supplied server evidence, not catalog membership
+  ---
+  duration_ms: 16.564292
+  ...
+# Subtest: capture count/date come verbatim from Collection and capture implies discovery
+ok 4 - capture count/date come verbatim from Collection and capture implies discovery
+  ---
+  duration_ms: 7.696125
+  ...
+# Subtest: all rarity filters preserve full counts and exact distribution
+ok 5 - all rarity filters preserve full counts and exact distribution
+  ---
+  duration_ms: 5.636833
+  ...
+# Subtest: asset failure and unproduced captured slots remain diagnostic with server counts
+ok 6 - asset failure and unproduced captured slots remain diagnostic with server counts
+  ---
+  duration_ms: 4.525333
+  ...
+# Subtest: empty, unloaded, loading and failed refresh remain distinct
+ok 7 - empty, unloaded, loading and failed refresh remain distinct
+  ---
+  duration_ms: 148.265459
+  ...
+# Subtest: scroll/layout and reduced-motion contract fits existing compact panel
+ok 8 - scroll/layout and reduced-motion contract fits existing compact panel
+  ---
+  duration_ms: 1.347125
+  ...
+# Subtest: Dex reuses nonactivating panel with explicit actions and no focus APIs
+ok 9 - Dex reuses nonactivating panel with explicit actions and no focus APIs
+  ---
+  duration_ms: 5.201459
+  ...
+# Subtest: all five activated species project their own Dex identity, rarity, asset and server count
+ok 10 - all five activated species project their own Dex identity, rarity, asset and server count
+  ---
+  duration_ms: 0.458541
+  ...
+# Subtest: Batch2 captures preserve independent Dex assets, rarity and timestamps
+ok 11 - Batch2 captures preserve independent Dex assets, rarity and timestamps
+  ---
+  duration_ms: 0.128292
+  ...
+# Subtest: final Batch3 discovery and capture projection retains identity and timestamps
+ok 12 - final Batch3 discovery and capture projection retains identity and timestamps
+  ---
+  duration_ms: 0.123958
+  ...
+# Subtest: Dex copy reflects restart-persistent server discovery
+ok 13 - Dex copy reflects restart-persistent server discovery
+  ---
+  duration_ms: 5.854416
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 561.727583
+TAP version 13
+# Subtest: common/debug/unknown remain unchanged; explicit rarity tiers use shared durations
+ok 1 - common/debug/unknown remain unchanged; explicit rarity tiers use shared durations
+  ---
+  duration_ms: 1.363125
+  ...
+# Subtest: cleanup on state exit, battle/capture interruption, restored arrival same contract
+ok 2 - cleanup on state exit, battle/capture interruption, restored arrival same contract
+  ---
+  duration_ms: 0.252166
+  ...
+# Subtest: all fifteen content identities use rarity only with no species/time inference
+ok 3 - all fifteen content identities use rarity only with no species/time inference
+  ---
+  duration_ms: 0.633125
+  ...
+# Subtest: compact opacity layer, reduced motion, no timers/focus or transform collision
+ok 4 - compact opacity layer, reduced motion, no timers/focus or transform collision
+  ---
+  duration_ms: 0.892375
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 210.069625
+TAP version 13
+# Subtest: before asynchronous image loading Stage3 stays diagnostic without another stage image
+ok 1 - before asynchronous image loading Stage3 stays diagnostic without another stage image
+  ---
+  duration_ms: 6.076542
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 122.382375
+TAP version 13
+# Subtest: server phases and separate motion/effect identity; no invented sprites
+ok 1 - server phases and separate motion/effect identity; no invented sprites
+  ---
+  duration_ms: 0.541125
+  ...
+# Subtest: duplicate, reduced motion, hidden and malformed timelines
+ok 2 - duplicate, reduced motion, hidden and malformed timelines
+  ---
+  duration_ms: 0.074
+  ...
+# Subtest: nonadjacent command replay and panel remount never restart a cue
+ok 3 - nonadjacent command replay and panel remount never restart a cue
+  ---
+  duration_ms: 0.067625
+  ...
+# Subtest: observed server phase durations are immutable and malformed input does not throw
+ok 4 - observed server phase durations are immutable and malformed input does not throw
+  ---
+  duration_ms: 0.383
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 150.278042
+TAP version 13
+# Subtest: world listener observes cues without a mounted panel and keeps elapsed time across panel changes
+ok 1 - world listener observes cues without a mounted panel and keeps elapsed time across panel changes
+  ---
+  duration_ms: 1.513292
+  ...
+# Subtest: late initial snapshot cannot rewind a world event or replay its skill cue
+ok 2 - late initial snapshot cannot rewind a world event or replay its skill cue
+  ---
+  duration_ms: 0.104042
+  ...
+# Subtest: failed initial snapshot removes the installed listener before retry
+ok 3 - failed initial snapshot removes the installed listener before retry
+  ---
+  duration_ms: 0.319208
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 67.768125

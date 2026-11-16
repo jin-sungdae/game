@@ -1,0 +1,229 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M044",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M044/base-v2.png",
+  "sourcePixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+  "reuse": "design/production-batches/action-followup/M041/hit-pilot/rig-hit.cjs",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 16,
+    "frameDuration": 220,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "dragon-shoulder-recoil",
+      "x": 175,
+      "y": 151,
+      "rx": 14,
+      "ry": 20,
+      "dx": -1.8,
+      "dy": 1.2,
+      "delay": 0
+    },
+    {
+      "name": "dragon-flank-follow",
+      "x": 135,
+      "y": 158,
+      "rx": 19,
+      "ry": 17,
+      "dx": -1,
+      "dy": 0.6,
+      "delay": 2
+    },
+    {
+      "name": "dragon-tail-counterbalance",
+      "x": 56,
+      "y": 171,
+      "rx": 18,
+      "ry": 17,
+      "dx": 1.1,
+      "dy": -0.8,
+      "delay": 3
+    }
+  ],
+  "eyes": [],
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "e277aa54fba273f68bca08956fb97595499a61e60fb3a6d9a12dd4f8362f0050",
+      "partAmounts": [
+        0.65,
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "018121919990d7bd77884d1317c531e46b8c624f6401f30772d2099b0c87dfd0",
+      "partAmounts": [
+        1,
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "b716f2ca47a6e32c70f1ef8a5b9fb4073d551625fb9d993242ff696e4b6f2ff2",
+      "partAmounts": [
+        0.81,
+        0.65,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "4f7fe97ef22dba48edb2bb764f6988bcbe373c792c7b847f0cc968cd255e9399",
+      "partAmounts": [
+        0.59,
+        1,
+        0.65
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "e23f516cdee153803d6083aa2b13b58d0557f684440691d6eca1152d33b36eb6",
+      "partAmounts": [
+        0.38,
+        0.81,
+        1
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "becdbb40bf1d2f10e6ac06be04e6dfa1e93d27c1149c94146db74224d8d1a85f",
+      "partAmounts": [
+        0.21,
+        0.59,
+        0.81
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "a830b06cb6bf5ca2ed98873e49d1bd325e9ada1de9c05968b3652429a3d89309",
+      "partAmounts": [
+        0.09,
+        0.38,
+        0.59
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_08.png",
+      "pixelSha256": "acc57e2b7bd1ff57b6e8c72f5ad0d8fdc2526c029a5007361a1e64b51c0275e3",
+      "partAmounts": [
+        0.025,
+        0.21,
+        0.38
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_09.png",
+      "pixelSha256": "ed4791b2fe4da76885ba17a9bbdc70c66a9a5e7f63e7b15365ce5e2326065990",
+      "partAmounts": [
+        0,
+        0.09,
+        0.21
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_10.png",
+      "pixelSha256": "ae8a74d1d70b499185fe33e99f28b49e45deb12875c0c882c73a49b4554d286d",
+      "partAmounts": [
+        0,
+        0.025,
+        0.09
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_11.png",
+      "pixelSha256": "bbdb5035d6a18d5e4c5df54f6acbed842be8c860ade0c1893aef8e994c762fb4",
+      "partAmounts": [
+        0,
+        0,
+        0.025
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_12.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_13.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_14.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "hit_15.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    }
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "NOT_VERIFIED",
+  "scope": "Local shoulder recoil and delayed flank/tail response; planted feet and face fixed. No combat/runtime connection"
+}

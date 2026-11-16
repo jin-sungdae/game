@@ -1,0 +1,77 @@
+{
+  "conceptId": "M070",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M070/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 110,
+    "loop": false
+  },
+  "movableRect": [
+    29,
+    109,
+    221,
+    214
+  ],
+  "parts": [
+    {
+      "name": "left-arm-orient",
+      "x": 71,
+      "y": 142,
+      "rx": 29,
+      "ry": 25,
+      "dx": 2.3,
+      "dy": 1.47,
+      "samples": [
+        0.01,
+        0.15,
+        0.67,
+        1,
+        0.91,
+        0.6,
+        0.25,
+        0.035
+      ]
+    },
+    {
+      "name": "right-arm-orient",
+      "x": 191,
+      "y": 147,
+      "rx": 24,
+      "ry": 31,
+      "dx": -1.9549999999999998,
+      "dy": 1.1550000000000002,
+      "samples": [
+        0.015,
+        0.06,
+        0.18,
+        0.42,
+        0.74,
+        0.55,
+        0.23,
+        0.045
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Independent local appendage cycle; natural motion and event interpretation require human review",
+  "anatomyScope": "Tentacled creature keeps face, mantle, lower curls and outer tips stable while left/right arm segments perform staggered greeting. No global transform.",
+  "behaviorContract": "Candidate only; existing unapproved personality/movement/species behavior unchanged",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-17",
+  "reusedRig": "design/production-batches/action-followup/M070/interact-pilot/rig-interact.cjs"
+}

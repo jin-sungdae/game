@@ -1,0 +1,49 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 4,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage04/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 140,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 209.5,
+      "y": 86.5,
+      "rx": 4.5,
+      "ry": 3,
+      "dx": 0.72
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review only; no gameplay frequency change",
+  "anatomyScope": "Side-eye scan; crest, wing roots, chest and all feet stay fixed.",
+  "gaze": [
+    0.04,
+    0.42,
+    0.94,
+    0.68,
+    0.16,
+    -0.42,
+    -0.81,
+    -0.09
+  ],
+  "sessionId": "LUMA-ASSET-02",
+  "reusedRig": "design/production-batches/action-followup/ruu/stage03/rig-look.cjs",
+  "behaviorContract": "Observe forward airspace, scan rear periphery, then return to neutral; no head turn or flight claim."
+}

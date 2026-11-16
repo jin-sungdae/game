@@ -1,0 +1,48 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 3,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage03/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 6,
+    "frameDuration": 80,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 222.5,
+      "y": 94,
+      "rx": 4.5,
+      "ry": 3.5
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated review only; no gameplay frequency change",
+  "anatomyScope": "Narrow side-eye only; crest, muzzle, wing silhouette, legs and tail fixed.",
+  "sessionId": "LUMA-ASSET-02",
+  "reusedRig": "design/production-batches/action-followup/ruu/stage04/rig-blink.cjs",
+  "behaviorContract": "Quick explorer eye reset",
+  "closure": [
+    0.03,
+    0.35,
+    0.65,
+    1,
+    0.54,
+    0.09
+  ],
+  "attempt": 2,
+  "failedAttempt": "design/production-batches/luma-asset-02/ruu/stage03/blink-attempt01-failed"
+}

@@ -1,0 +1,76 @@
+{
+  "conceptId": null,
+  "species": "ruu",
+  "evolutionStage": 4,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/ruu/stage04/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 145,
+    "loop": false
+  },
+  "movableRect": [
+    92,
+    91,
+    177,
+    155
+  ],
+  "parts": [
+    {
+      "name": "upper-covert-greeting",
+      "x": 150,
+      "y": 113,
+      "rx": 18,
+      "ry": 10,
+      "dx": -1.5,
+      "dy": -0.9,
+      "samples": [
+        0.03,
+        0.32,
+        0.85,
+        1,
+        0.62,
+        0.24,
+        0.1,
+        0.04
+      ]
+    },
+    {
+      "name": "lower-feather-delayed-settle",
+      "x": 133,
+      "y": 132,
+      "rx": 19,
+      "ry": 12,
+      "dx": 0.8,
+      "dy": 0.65,
+      "samples": [
+        0.02,
+        0.06,
+        0.22,
+        0.48,
+        0.88,
+        1,
+        0.42,
+        0.07
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "isolated one-shot response; no native gameplay trigger or cooldown change",
+  "anatomyScope": "Local upper and lower wing-covert response; face, crown, wing root contour, feet, tail and alpha silhouette fixed.",
+  "behaviorContract": "Welcoming upper-covert lift followed by slower lower-feather settle; distinct from fast cursor alert. No locomotion or wing extension claim.",
+  "sessionId": "LUMA-ASSET-02",
+  "reusedRig": "design/production-batches/action-followup/ruu/stage04/cursor-react-pilot/rig-cursor_react.cjs"
+}

@@ -1,0 +1,148 @@
+{
+  "sessionId": "LUMA-ASSET-06",
+  "automated": "VALIDATION_FAILED",
+  "errors": [
+    "BASE_RETURN_DISCONTINUITY"
+  ],
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "1c908e67abbcd9709e85ece1e539b305db4750309c2bff2d9fd003eb79fec90f",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.6822891235351562
+    },
+    {
+      "file": "cursor_react_01.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "57c771e27aa7a3ca51c2dce9dd2b2a813fe5e3f18ce12143587b1fd369523c27",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.8011817932128906
+    },
+    {
+      "file": "cursor_react_02.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "356682ccfa897bc150c1ca283dc2544487987bbce877541631588b210acc3539",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.9592857360839844
+    },
+    {
+      "file": "cursor_react_03.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "a318a29b68a999dc6868ee1ae2dac796ed318c741ca20e83d4462da640305fec",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 1.0046272277832031
+    },
+    {
+      "file": "cursor_react_04.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "3a214b03b0d75fdd752b264f775e43617658d55b859078b58388d392dfbcc70d",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 1.0326194763183594
+    },
+    {
+      "file": "cursor_react_05.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "1c6143b6326923c860b1cba08be1b2c1502a336cd505bbfca01fa37d4198ad51",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.9563369750976562
+    },
+    {
+      "file": "cursor_react_06.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "db97e29e1231de4ab7855667b3cfbd77d491693084db345f25b56935dd4b4405",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.82244873046875
+    },
+    {
+      "file": "cursor_react_07.png",
+      "errors": [],
+      "bounds": [
+        36,
+        23,
+        219,
+        226
+      ],
+      "pixelHash": "4296819ad8d4c35495c4131131beae83d0941b09201b7951e1490a2243b5b495",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.7100982666015625
+    }
+  ],
+  "uniquePixelHashes": 8,
+  "adjacentMeanAbsoluteByteDifferences": [
+    0.12576675415039062,
+    0.16706085205078125,
+    0.12464141845703125,
+    0.08565521240234375,
+    0.08036422729492188,
+    0.1393280029296875,
+    0.11663055419921875
+  ],
+  "maxEndpointDifferenceFromBase": 0.7100982666015625,
+  "continuityScope": "Quantitative <=2 byte mean adjacent delta, <=0.15 endpoint delta; visual acceptance separate",
+  "appearance": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "productionEligible": false,
+  "nativeGui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "sourceSha256": "ab27a810759fbc73731fb42fd6cd292e009ce25b5b54f197c4234dcff3e41a95"
+}

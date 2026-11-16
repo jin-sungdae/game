@@ -1,0 +1,133 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "ribcage",
+      "x": 138,
+      "y": 163,
+      "rx": 25,
+      "ry": 14,
+      "dx": -2.2,
+      "dy": 0.8,
+      "samples": [
+        0.015,
+        1,
+        0.76,
+        0.43,
+        0.21,
+        0.09,
+        0.035,
+        0.008
+      ]
+    },
+    {
+      "name": "shoulder",
+      "x": 169,
+      "y": 153,
+      "rx": 14,
+      "ry": 15,
+      "dx": 1,
+      "dy": -0.6,
+      "samples": [
+        0.01,
+        0.18,
+        0.8,
+        1,
+        0.62,
+        0.28,
+        0.09,
+        0.015
+      ]
+    }
+  ],
+  "eyes": [
+    {
+      "x": 173,
+      "y": 105,
+      "rx": 7,
+      "ry": 7
+    },
+    {
+      "x": 192,
+      "y": 107,
+      "rx": 2.5,
+      "ry": 5
+    }
+  ],
+  "closure": [
+    0.01,
+    0.72,
+    0.6,
+    0.38,
+    0.19,
+    0.085,
+    0.03,
+    0.008
+  ],
+  "motion": "impact then delayed secondary recoil and recovery",
+  "protectedRegions": "y<=137||y>=180||x<=104||x>=185",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "6c4c6ebe94e02d2c094301905f0280735d1ffa115b8d67ffae14eadf248637a0",
+      "changedPixels": 186,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.035113838793928064
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "6726b721b7f30da520fd525fb7c795694a1814ec70f1c30caeb964e7ed234f16",
+      "changedPixels": 1180,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 2.339056478951837
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "51f263a37b8febf6cb33d5b64763807d809530dd61ee82eaf3412959846c3f05",
+      "changedPixels": 1253,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.7739509127707043
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "9792cac804df42cdb2ce0f0903cbc5d6fe2fce4e3cbe0fd5f3b51f640377581a",
+      "changedPixels": 1158,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.1636881668562067
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "d122ccf340f163e86a848d8cf423e0b0d50abe83fdeb7bd00e5a6e6c7c983c85",
+      "changedPixels": 972,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7200994290249236
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "94817e00861b3a2f2035aa65c8f253bedc5fe080a3fd0a976a5fb55164fd3de4",
+      "changedPixels": 751,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.3260204693473263
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "f2b7d3d59292f2ee0569a07d0edc40ae8ab6393c13ff8b899e8e120fd1fa8cea",
+      "changedPixels": 506,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.10494004732353451
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "88afac44569594213956363942a54b0e026fb8a1b8176c3f57d6c24dd60b0c37",
+      "changedPixels": 185,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.018727480271355804
+    }
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 미완성 REST 최초 후보; 기존 실패 복구 없음",
+  "productionEligible": false
+}

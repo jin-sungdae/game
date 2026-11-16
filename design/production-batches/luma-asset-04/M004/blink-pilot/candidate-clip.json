@@ -1,0 +1,50 @@
+{
+  "conceptId": "M004",
+  "species": null,
+  "evolutionStage": null,
+  "status": "VALIDATION_FAILED",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M004/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 6,
+    "frameDuration": 95,
+    "loop": true
+  },
+  "eyes": [
+    {
+      "x": 175,
+      "y": 102,
+      "rx": 5,
+      "ry": 5
+    },
+    {
+      "x": 192.5,
+      "y": 108,
+      "rx": 2.7,
+      "ry": 3.3
+    }
+  ],
+  "anatomyScope": "기존 눈 타원 리깅만 변경. 얼굴 윤곽·잎·뿔·몸통·발·알파는 BASE와 동일.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "eyeRigSource": "design/production-batches/action-followup/M004/rig-look.cjs",
+  "sessionId": "LUMA-ASSET-04",
+  "rigSource": "design/production-batches/action-followup/M002/rig-blink.cjs",
+  "rigSourceSha256": "033d02f4839ea72c729e8e06957bfbd2fcd0e08f385e395b03a3e9108ca82121",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "기존 실패 복구 없음; 3/3 유지; 이번 미완성 행동의 독립 첫 제작",
+  "timingScope": "검토 전용 타이밍. Runtime 이벤트·빈도·이동·전투 계약 변경 없음.",
+  "behaviorContract": "기존 Species Identity/Personality/MovementProfile/SpeciesBehavior 미승인 상태 보존. 신규 계약 추정 없음.",
+  "blockReason": "DUPLICATE_PIXELS: 6 frames / 5 unique; 수정 한도 3/3 유지, 원본 보존 및 자동 복구 금지"
+}

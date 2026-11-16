@@ -1,0 +1,56 @@
+{
+  "source": "design/production-batches/monsters/batch01/M004/base-v2.png",
+  "eyes": [
+    {
+      "x": 175,
+      "y": 102,
+      "rx": 5,
+      "ry": 5
+    },
+    {
+      "x": 192.5,
+      "y": 108,
+      "rx": 2.7,
+      "ry": 3.3
+    }
+  ],
+  "frames": [
+    {
+      "file": "blink_00.png",
+      "closure": 0.02,
+      "pixelSha256": "7332e3386c5df79e166f67bad63833035a4dd8a5d78bc1e9aca45d7da14ec33a"
+    },
+    {
+      "file": "blink_01.png",
+      "closure": 0.26,
+      "pixelSha256": "aab3fafe333f94d99f8adcf42743f32b092fd80db67178e268dccc4456074507"
+    },
+    {
+      "file": "blink_02.png",
+      "closure": 0.62,
+      "pixelSha256": "12e763e5ba8ae3aa52256e0b77e0e20673a5a41df8dff865844fa2f8b99ca9b1"
+    },
+    {
+      "file": "blink_03.png",
+      "closure": 1,
+      "pixelSha256": "687c9a38335d17ae0b8fb77afcba614d7ac2ca2bac541696c1a557d0dd89971a"
+    },
+    {
+      "file": "blink_04.png",
+      "closure": 0.48,
+      "pixelSha256": "9d6524c3b2d30735ec6236f920695c6d2571064bf064f14044ef0be8ff3d0a1b"
+    },
+    {
+      "file": "blink_05.png",
+      "closure": 0.04,
+      "pixelSha256": "abd900a581523e068db72846c0d9f1820753a2bb51f03074e1c2566ed432ddd5"
+    }
+  ],
+  "alphaPolicy": "unchanged source alpha",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "사용자 승인: 이번 M004 BLINK 개선만 승인. 기존 3/3 실패 원본 보존; 한정 예외 첫 개선"
+}

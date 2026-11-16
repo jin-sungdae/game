@@ -1,0 +1,114 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M061",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M061/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "NOT_APPROVED",
+  "clip": {
+    "name": "VICTORY",
+    "frames": 12,
+    "frameDuration": 130,
+    "loop": false
+  },
+  "movableRect": [
+    65,
+    122,
+    195,
+    196
+  ],
+  "parts": [
+    {
+      "name": "near-tentacle-flourish",
+      "x": 108,
+      "y": 165,
+      "rx": 22,
+      "ry": 26,
+      "dx": -2.8,
+      "dy": -2.1,
+      "samples": [
+        0.03,
+        0.25,
+        0.65,
+        1,
+        0.72,
+        0.32,
+        0.6,
+        0.95,
+        0.7,
+        0.33,
+        0.08,
+        0
+      ]
+    },
+    {
+      "name": "far-tentacle-answer-flourish",
+      "x": 163,
+      "y": 165,
+      "rx": 20,
+      "ry": 24,
+      "dx": 2.6,
+      "dy": -1.7,
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.65,
+        0.96,
+        0.72,
+        0.4,
+        0.66,
+        1,
+        0.56,
+        0.13,
+        0
+      ]
+    },
+    {
+      "name": "oral-arm-release",
+      "x": 136,
+      "y": 143,
+      "rx": 15,
+      "ry": 18,
+      "dx": 0,
+      "dy": 1.1,
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.65,
+        0.96,
+        0.72,
+        0.4,
+        0.66,
+        1,
+        0.56,
+        0.13,
+        0
+      ]
+    }
+  ],
+  "anatomyScope": "Two staggered outward tentacle flourishes with oral-arm release. Bell and extreme tips fixed; proposed celebration, not Production-approved expression.",
+  "terminalFrame": {
+    "index": 11,
+    "role": "EXACT_BASE_RETURN",
+    "expectedPixelChanges": 0
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Independent first attempt only; no failed source reuse, counter reset or automatic repair",
+  "wholeImageTransform": false
+}
