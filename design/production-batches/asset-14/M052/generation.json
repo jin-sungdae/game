@@ -1,0 +1,16 @@
+{
+  "tool": "built-in image_gen",
+  "sourceBase": "design/production-batches/monsters/batch06/M052/base-v2.png",
+  "purpose": "Independent IDLE candidate; not repair of existing failed ATTACK/TURN",
+  "promptConstraints": {
+    "grid": "4x2, requested 1024x512, transparent RGBA",
+    "identity": "Preserve exact reference species, markings, silhouette and limb count",
+    "motion": "M051: alternating rigid shoulder/elbow/wrist articulation. M052: segmented tail curl and pincer hinges. Stable body and planted feet.",
+    "forbidden": "Whole image translation/zoom, rubber deformation, particles, shadows, detached pixels, labels"
+  },
+  "originalRetained": true,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairsPerformed": 0,
+  "productionEligible": false
+}

@@ -1,0 +1,50 @@
+{
+  "sessionId": "LUMA-ASSET-13",
+  "candidateValidation": {
+    "passedClips": 12,
+    "framePng": 90,
+    "totalPngIncludingSourcesAndKeyposes": 105,
+    "failedRigAttempts": 2,
+    "failedGeneratedSources": 3
+  },
+  "animationRegression": {
+    "command": "npm run test:animation",
+    "status": "PASS",
+    "exitCode": 0
+  },
+  "assetTests": {
+    "command": "npm run test:assets",
+    "status": "RUNNING",
+    "log": "/tmp/luma-asset13-assets.log"
+  },
+  "releaseGate": {
+    "command": "JAVA_HOME=<Java21> PG_BIN=<PostgreSQL16> python3 scripts/validate_alpha_release.py --output /tmp/luma-asset13-release",
+    "status": "RUNNING",
+    "lastObservedStep": "asset-tests",
+    "completedSteps": [
+      "frontend-build",
+      "animation-content",
+      "presentation"
+    ],
+    "log": "/tmp/luma-asset13-release.log"
+  },
+  "manual": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "runtimeConnected": false,
+  "productionApproved": false,
+  "deliveryRegression": {
+    "command": "bundled python3 design/production-batches/LUMA-ASSET-13/test_delivery.py -v",
+    "status": "PASS",
+    "tests": 3,
+    "seconds": 7.643
+  },
+  "candidateValidatedCommit": "7f2e48e",
+  "visualReview": {
+    "status": "HUMAN_REVIEW_REQUIRED",
+    "observations": [
+      "M047 BLINK의 닫힌 눈 모양과 M050의 작은 눈에서 눈꺼풀 자연스러움 확인 필요",
+      "미세 손목/날개/꼬리 변형의 행동 전달력은 자동 수치로 승인하지 않음",
+      "생성 keypose 3장은 Alpha 실패와 외형/자세 우려로 사용하지 않음"
+    ]
+  }
+}

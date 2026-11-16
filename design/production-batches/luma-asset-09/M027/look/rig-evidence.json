@@ -1,0 +1,135 @@
+{
+  "reference": "design/production-batches/monsters/batch03/M027/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "x": 202,
+      "y": 141,
+      "rx": 24,
+      "ry": 27,
+      "dx": -1.6,
+      "dy": -1.2,
+      "name": "neck-listen",
+      "samples": [
+        0,
+        0.65,
+        1,
+        0.78,
+        0.44,
+        0.15,
+        0.03,
+        0
+      ]
+    },
+    {
+      "x": 160,
+      "y": 101,
+      "rx": 25,
+      "ry": 24,
+      "dx": 0.9,
+      "dy": -1.3,
+      "name": "crest-follow",
+      "samples": [
+        0,
+        0.12,
+        0.52,
+        1,
+        0.74,
+        0.35,
+        0.08,
+        0
+      ]
+    },
+    {
+      "x": 51,
+      "y": 139,
+      "rx": 25,
+      "ry": 28,
+      "dx": 1.2,
+      "dy": 0.7,
+      "name": "tail-counter",
+      "samples": [
+        0,
+        0.04,
+        0.18,
+        0.56,
+        1,
+        0.54,
+        0.12,
+        0
+      ]
+    }
+  ],
+  "protectedRegions": "y>=190||y<=70||x<=25||x>=230",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "look_00.png",
+      "pixelSha256": "89638529ec26a705ff6f898ac5b999a0eeb908fc2b845899b79a66f08ab75641",
+      "changedPixels": 0,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "maxInverseDisplacementPixels": 0
+    },
+    {
+      "file": "look_01.png",
+      "pixelSha256": "591100d5e1a320b9a6fbbc3685f8c1f25b1ce75c6817cc7283c62a94d3a4e7c4",
+      "changedPixels": 2445,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 826,
+      "maxInverseDisplacementPixels": 1.2997299905103035
+    },
+    {
+      "file": "look_02.png",
+      "pixelSha256": "d96c7f706fbceca30bd53e54d93dc01d6e0b83e12849544df01ae28922bd9f71",
+      "changedPixels": 3193,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1243,
+      "maxInverseDisplacementPixels": 1.9979953366076586
+    },
+    {
+      "file": "look_03.png",
+      "pixelSha256": "a5695a95a265311089eb616a0ddd2d0bbb4c5ec8f19904f0bb68dc16b0462126",
+      "changedPixels": 3525,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1460,
+      "maxInverseDisplacementPixels": 1.5803245161565462
+    },
+    {
+      "file": "look_04.png",
+      "pixelSha256": "1b444835b838c5eb859fd33f9f3d595ca7b79fcb1c6a1d5f47108ef0c82d70d7",
+      "changedPixels": 3477,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1452,
+      "maxInverseDisplacementPixels": 1.3884998736273912
+    },
+    {
+      "file": "look_05.png",
+      "pixelSha256": "92c8f4998340d043246702f25141e410de4ab1f3fc558f04384166acc8e81910",
+      "changedPixels": 2991,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1199,
+      "maxInverseDisplacementPixels": 0.7493350239803083
+    },
+    {
+      "file": "look_06.png",
+      "pixelSha256": "6713dd8ab19c62678593255dbf241db00e750aff889dd7b3bd41c8b61647292f",
+      "changedPixels": 1860,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 703,
+      "maxInverseDisplacementPixels": 0.16668823990090076
+    },
+    {
+      "file": "look_07.png",
+      "pixelSha256": "89638529ec26a705ff6f898ac5b999a0eeb908fc2b845899b79a66f08ab75641",
+      "changedPixels": 0,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "maxInverseDisplacementPixels": 0
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "Inherited 3/3 preserved; LUMA-ASSET-09 independent first attempt; no failure recovery",
+  "productionEligible": false
+}

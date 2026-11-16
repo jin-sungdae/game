@@ -1,0 +1,51 @@
+{
+  "conceptId": "M003",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M003/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 110,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 175,
+      "y": 106,
+      "rx": 7.5,
+      "ry": 9,
+      "dx": 1.05
+    },
+    {
+      "x": 205,
+      "y": 110,
+      "rx": 3,
+      "ry": 6,
+      "dx": 0.4
+    }
+  ],
+  "anatomyScope": "기존 눈 타원 리깅만 변경. 얼굴 윤곽·잎·뿔·몸통·발·알파는 BASE와 동일.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "eyeRigSource": "design/production-batches/action-followup/M003/rig-blink.cjs",
+  "sessionId": "LUMA-ASSET-04",
+  "rigSource": "design/production-batches/action-followup/M001/rig-look.cjs",
+  "rigSourceSha256": "2ddb81b04f52781a716883a5b12c64694eb438af2d47096b03e79c0afff07676",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "기존 실패 복구 없음; 3/3 유지; 이번 미완성 행동의 독립 첫 제작",
+  "timingScope": "검토 전용 타이밍. Runtime 이벤트·빈도·이동·전투 계약 변경 없음.",
+  "behaviorContract": "기존 Species Identity/Personality/MovementProfile/SpeciesBehavior 미승인 상태 보존. 신규 계약 추정 없음."
+}

@@ -1,0 +1,70 @@
+{
+  "conceptId": "M009",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M009/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "RECOVERY",
+    "frames": 8,
+    "frameDuration": 110,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "near-leaf-collar-recoil",
+      "x": 112,
+      "y": 113,
+      "rx": 16,
+      "ry": 11,
+      "dx": -2.1,
+      "dy": 1.2,
+      "samples": [
+        0.35,
+        0.29,
+        0.22,
+        0.15,
+        0.1,
+        0.065,
+        0.04,
+        0.02
+      ]
+    },
+    {
+      "name": "far-collar-recoil",
+      "x": 185,
+      "y": 121,
+      "rx": 13,
+      "ry": 12,
+      "dx": -1.5,
+      "dy": 0.8,
+      "samples": [
+        0.35,
+        0.29,
+        0.22,
+        0.15,
+        0.1,
+        0.065,
+        0.04,
+        0.02
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "apiCalls": 0,
+  "scope": "stationary local body response; no whole-body pose, combat event or runtime connection",
+  "sequence": "HIT -> RECOVERY; shared boundary pose is intentional"
+}

@@ -1,0 +1,77 @@
+{
+  "conceptId": "M050",
+  "sessionId": "LUMA-ASSET-13",
+  "species": null,
+  "evolutionStage": null,
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M050/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "curled-tail-alert",
+      "x": 57,
+      "y": 157,
+      "rx": 29,
+      "ry": 30,
+      "dx": 1.4,
+      "dy": -2,
+      "samples": [
+        0.01,
+        0.35,
+        0.8,
+        1,
+        0.75,
+        0.4,
+        0.14,
+        0.03
+      ]
+    },
+    {
+      "name": "shoulder-attention",
+      "x": 183,
+      "y": 145,
+      "rx": 23,
+      "ry": 21,
+      "dx": 0.7,
+      "dy": -0.8,
+      "samples": [
+        0.02,
+        0.1,
+        0.4,
+        0.85,
+        1,
+        0.6,
+        0.25,
+        0.04
+      ]
+    }
+  ],
+  "movableRect": [
+    24,
+    120,
+    231,
+    205
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "reusedRig": "design/production-batches/action-followup/M050/hit-pilot/rig-hit.cjs",
+  "behaviorContract": "Isolated proposed body response; no Personality, SpeciesBehavior or MovementProfile activation"
+}

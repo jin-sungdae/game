@@ -1,0 +1,527 @@
+{
+  "sessionId": "LUMA-ASSET-03",
+  "scope": "Read-only source audit and candidate handoff; not a replacement Completion Ledger",
+  "sourceLedger": "design/creature-production-queue.json",
+  "sourceLedgerSha256": "b0a804319729400cf80dac3b195f9bb70dcff18f576bbe2cd0ad160389efec68",
+  "stages": [
+    {
+      "stage": 1,
+      "baseStatus": "BASE_REQUIRED",
+      "blockReason": "Prior PR automatic repair limit; failed candidates preserved",
+      "actions": [
+        {
+          "action": "IDLE",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "BREATH",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "BLINK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "LOOK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "MOVE",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "TURN",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "REST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "SLEEP",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "INTERACT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "ATTACK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "HIT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "VICTORY",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "DEFEAT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "EVOLUTION",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        }
+      ]
+    },
+    {
+      "stage": 2,
+      "baseStatus": "BASE_READY",
+      "blockReason": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "ledgerStatus": "ANIMATION_READY",
+          "disposition": "EXISTING_PRESERVED",
+          "priorReason": null
+        },
+        {
+          "action": "BREATH",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "NEW_CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "priorReason": null
+        },
+        {
+          "action": "BLINK",
+          "ledgerStatus": "VALIDATION_FAILED",
+          "disposition": "FAILED_PRESERVED_NO_RECOVERY",
+          "priorReason": "DUPLICATE_PIXEL_HASH: 5 unique of 6; narrow eye quantization; originals preserved; no recovery at PR limit 3/3"
+        },
+        {
+          "action": "LOOK",
+          "ledgerStatus": "ANIMATION_IN_PROGRESS",
+          "disposition": "EXISTING_PRESERVED",
+          "priorReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "MOVE",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "DISTINCT_KEYPOSE_OR_STAGE_TRANSITION_REQUIRED",
+          "priorReason": null
+        },
+        {
+          "action": "TURN",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "DISTINCT_KEYPOSE_OR_STAGE_TRANSITION_REQUIRED",
+          "priorReason": null
+        },
+        {
+          "action": "REST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "DISTINCT_KEYPOSE_OR_STAGE_TRANSITION_REQUIRED",
+          "priorReason": null
+        },
+        {
+          "action": "SLEEP",
+          "ledgerStatus": "VALIDATION_FAILED",
+          "disposition": "FAILED_PRESERVED_NO_RECOVERY",
+          "priorReason": "ALPHA_DEFECT: 40 detached pixels; curled sleep keypose and original preserved; no recovery or rig at PR limit 3/3"
+        },
+        {
+          "action": "CURSOR_REACT",
+          "ledgerStatus": "ANIMATION_IN_PROGRESS",
+          "disposition": "EXISTING_PRESERVED",
+          "priorReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED"
+        },
+        {
+          "action": "INTERACT",
+          "ledgerStatus": "ANIMATION_IN_PROGRESS",
+          "disposition": "EXISTING_PRESERVED",
+          "priorReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; one-shot clip, repeated preview is inspection only"
+        },
+        {
+          "action": "ATTACK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "DISTINCT_KEYPOSE_OR_STAGE_TRANSITION_REQUIRED",
+          "priorReason": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "NEW_CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "priorReason": null
+        },
+        {
+          "action": "HIT",
+          "ledgerStatus": "ANIMATION_IN_PROGRESS",
+          "disposition": "EXISTING_PRESERVED",
+          "priorReason": "FINAL_APPEARANCE_AND_MOTION_REVIEW_REQUIRED; local physical HIT candidate, no server Battle event or Native trigger connected"
+        },
+        {
+          "action": "VICTORY",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "NEW_CANDIDATE_HUMAN_REVIEW_REQUIRED",
+          "priorReason": null
+        },
+        {
+          "action": "DEFEAT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "DISTINCT_KEYPOSE_OR_STAGE_TRANSITION_REQUIRED",
+          "priorReason": null
+        },
+        {
+          "action": "EVOLUTION",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "DISTINCT_KEYPOSE_OR_STAGE_TRANSITION_REQUIRED",
+          "priorReason": null
+        }
+      ]
+    },
+    {
+      "stage": 3,
+      "baseStatus": "VALIDATION_FAILED",
+      "blockReason": "ALPHA_DEFECT; automatic repair limit3 reached; HUMAN_REVIEW_REQUIRED",
+      "actions": [
+        {
+          "action": "IDLE",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "BREATH",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "BLINK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "LOOK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "MOVE",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "TURN",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "REST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "SLEEP",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": "Existing BASE Alpha defect:18 detached pixels; repair3/3; HUMAN_REVIEW_REQUIRED. No new frame or recovery."
+        },
+        {
+          "action": "INTERACT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "ATTACK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "HIT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "VICTORY",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "DEFEAT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "EVOLUTION",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        }
+      ]
+    },
+    {
+      "stage": 4,
+      "baseStatus": "VALIDATION_FAILED",
+      "blockReason": "ALPHA_DEFECT; automatic repair limit3 reached; HUMAN_REVIEW_REQUIRED",
+      "actions": [
+        {
+          "action": "IDLE",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "BREATH",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "BLINK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "LOOK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "MOVE",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "TURN",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "REST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "SLEEP",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "INTERACT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "ATTACK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "HIT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "VICTORY",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "DEFEAT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "EVOLUTION",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        }
+      ]
+    },
+    {
+      "stage": 5,
+      "baseStatus": "VALIDATION_FAILED",
+      "blockReason": "ALPHA_DEFECT; automatic repair limit3 reached; HUMAN_REVIEW_REQUIRED",
+      "actions": [
+        {
+          "action": "IDLE",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "BREATH",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "BLINK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "LOOK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "MOVE",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "TURN",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "REST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "SLEEP",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "CURSOR_REACT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "INTERACT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "ATTACK",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "SKILL_CAST",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "HIT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "VICTORY",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "DEFEAT",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        },
+        {
+          "action": "EVOLUTION",
+          "ledgerStatus": "ASSET_REQUIRED",
+          "disposition": "BLOCKED_BASE_PRIOR_REPAIR_LIMIT",
+          "priorReason": null
+        }
+      ]
+    }
+  ],
+  "paidApiCalls": 0,
+  "priorRepairLimit": "3/3 UNCHANGED",
+  "newCandidateRepairIterations": 0,
+  "productionEligible": false
+}

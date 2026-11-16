@@ -1,0 +1,78 @@
+{
+  "conceptId": "M021",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M021/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "movableRect": [
+    60,
+    142,
+    185,
+    216
+  ],
+  "parts": [
+    {
+      "name": "작은-꼬리",
+      "x": 82,
+      "y": 166,
+      "rx": 18,
+      "ry": 19,
+      "dx": 0.65,
+      "dy": -0.84,
+      "samples": [
+        0.02,
+        0.18,
+        0.65,
+        1,
+        0.83,
+        0.48,
+        0.2,
+        0.04
+      ]
+    },
+    {
+      "name": "어깨",
+      "x": 132,
+      "y": 187,
+      "rx": 18,
+      "ry": 16,
+      "dx": -0.52,
+      "dy": -0.35,
+      "samples": [
+        0.01,
+        0.04,
+        0.18,
+        0.49,
+        0.91,
+        1,
+        0.57,
+        0.06
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "피격은 빠른 압축과 회복, 상호작용은 느린 반응, 커서 반응은 낮은 진폭의 주의 반응. one-shot 후보.",
+  "anatomyScope": "기존 BASE의 국소 파트만 변형. 얼굴·발·외곽 극점 보호. M023은 코어 고정, 하부 장갑만 반응. 이동·회전·신규 포즈를 주장하지 않음.",
+  "behaviorContract": "승인되지 않은 Species/Personality/MovementProfile/SpeciesBehavior는 NOT_VERIFIED 유지. 정지 반응 후보이며 runtime 정책 없음.",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold change",
+  "sessionId": "LUMA-ASSET-08",
+  "repairIterations": 3,
+  "sourceRig": "design/production-batches/action-followup/M022/interact-pilot"
+}

@@ -1,0 +1,225 @@
+{
+  "reference": "design/production-batches/monsters/batch07/M061/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "left-bell-sag",
+      "x": 91,
+      "y": 107,
+      "rx": 19,
+      "ry": 19,
+      "dx": 0.7,
+      "dy": 1.9,
+      "samples": [
+        0.025,
+        0.08,
+        0.18,
+        0.32,
+        0.49,
+        0.65,
+        0.78,
+        0.87,
+        0.93,
+        0.965,
+        0.987,
+        1
+      ]
+    },
+    {
+      "name": "right-bell-sag",
+      "x": 174,
+      "y": 110,
+      "rx": 17,
+      "ry": 23,
+      "dx": -0.6,
+      "dy": 1.7,
+      "samples": [
+        0.025,
+        0.08,
+        0.18,
+        0.32,
+        0.49,
+        0.65,
+        0.78,
+        0.87,
+        0.93,
+        0.965,
+        0.987,
+        1
+      ]
+    },
+    {
+      "name": "oral-arm-loss-of-support",
+      "x": 136,
+      "y": 131,
+      "rx": 22,
+      "ry": 18,
+      "dx": 0,
+      "dy": 2.1,
+      "samples": [
+        0.015,
+        0.04,
+        0.1,
+        0.21,
+        0.37,
+        0.54,
+        0.7,
+        0.82,
+        0.9,
+        0.95,
+        0.98,
+        1
+      ]
+    },
+    {
+      "name": "near-tentacle-droop",
+      "x": 108,
+      "y": 165,
+      "rx": 22,
+      "ry": 26,
+      "dx": 0.7,
+      "dy": 2.2,
+      "samples": [
+        0.015,
+        0.04,
+        0.1,
+        0.21,
+        0.37,
+        0.54,
+        0.7,
+        0.82,
+        0.9,
+        0.95,
+        0.98,
+        1
+      ]
+    },
+    {
+      "name": "far-tentacle-droop",
+      "x": 163,
+      "y": 165,
+      "rx": 20,
+      "ry": 24,
+      "dx": -0.6,
+      "dy": 2,
+      "samples": [
+        0.015,
+        0.04,
+        0.1,
+        0.21,
+        0.37,
+        0.54,
+        0.7,
+        0.82,
+        0.9,
+        0.95,
+        0.98,
+        1
+      ]
+    }
+  ],
+  "protectedRegions": "y>=196||y<=52||x<=65||x>=195",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "defeat_00.png",
+      "pixelSha256": "8804885ae7a9f8544e3f8652786ca5d64512309666d9d71eabf4cbaff11065c9",
+      "changedPixels": 1684,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 403,
+      "maxInverseDisplacementPixels": 0.05062006390393611
+    },
+    {
+      "file": "defeat_01.png",
+      "pixelSha256": "f8401ca788019bb99b9a38a28387eaab0e4e1146d61434b87639da4271d699ba",
+      "changedPixels": 2593,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 631,
+      "maxInverseDisplacementPixels": 0.16195234863110397
+    },
+    {
+      "file": "defeat_02.png",
+      "pixelSha256": "975ed1be6c00cd02e5e7ca675796a8ec5ad0792899344f89086c5a3a66b1bda8",
+      "changedPixels": 3456,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 902,
+      "maxInverseDisplacementPixels": 0.3640709010197248
+    },
+    {
+      "file": "defeat_03.png",
+      "pixelSha256": "15b6f0590a62cb249fdd5ea8272e39c593e73b2f582ce2ec2035809403175367",
+      "changedPixels": 4037,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1188,
+      "maxInverseDisplacementPixels": 0.6468501877012619
+    },
+    {
+      "file": "defeat_04.png",
+      "pixelSha256": "35129e396ee99da9a3d218b02317ffaff7d3047c322424b50bc445574f089f87",
+      "changedPixels": 4373,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1509,
+      "maxInverseDisplacementPixels": 0.9911663109765345
+    },
+    {
+      "file": "defeat_05.png",
+      "pixelSha256": "132c985257bc36aaafed44b27469395af5b15c061172f5e510a70649e666059a",
+      "changedPixels": 4557,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1758,
+      "maxInverseDisplacementPixels": 1.3133067804859524
+    },
+    {
+      "file": "defeat_06.png",
+      "pixelSha256": "d886762dc1cd2271688c941d871eaf6f2ae0a6174cc8509a4c96d95a35605403",
+      "changedPixels": 4684,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1895,
+      "maxInverseDisplacementPixels": 1.612142888309114
+    },
+    {
+      "file": "defeat_07.png",
+      "pixelSha256": "63199c5894bb822c19d005f0da34d68b85f434660384f5be16651d0c9fe417e7",
+      "changedPixels": 4733,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1972,
+      "maxInverseDisplacementPixels": 1.8906505742515243
+    },
+    {
+      "file": "defeat_08.png",
+      "pixelSha256": "a646e8e44dfc957eb7f878ad53e0fe162202e56b12f15fc7ce248b5fb1634bbc",
+      "changedPixels": 4766,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 2026,
+      "maxInverseDisplacementPixels": 2.076039254034752
+    },
+    {
+      "file": "defeat_09.png",
+      "pixelSha256": "666140dc1a9fd56290a435bde5b2c6e8df33078bf29e3b7d0a83c6e7c40e9c18",
+      "changedPixels": 4790,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 2045,
+      "maxInverseDisplacementPixels": 2.191639442128249
+    },
+    {
+      "file": "defeat_10.png",
+      "pixelSha256": "561fd57f32bfcc4f7ab873dac69a56ececd8dafc3ac0e5d4a38f673698aab7ec",
+      "changedPixels": 4805,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 2056,
+      "maxInverseDisplacementPixels": 2.260879524203115
+    },
+    {
+      "file": "defeat_11.png",
+      "pixelSha256": "87822258ec73bc04bda9c861192db728d37f96eecfc0db4be998290a9f868b72",
+      "changedPixels": 4809,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 2066,
+      "maxInverseDisplacementPixels": 2.306984143494225
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-16 independent first attempt; inherited 3/3 remains locked; no recovery authorized",
+  "productionEligible": false
+}

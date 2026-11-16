@@ -1,0 +1,114 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M061",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M061/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "NOT_APPROVED",
+  "clip": {
+    "name": "ATTACK",
+    "frames": 12,
+    "frameDuration": 95,
+    "loop": false
+  },
+  "movableRect": [
+    65,
+    122,
+    195,
+    196
+  ],
+  "parts": [
+    {
+      "name": "near-tentacle-draw-strike",
+      "x": 108,
+      "y": 165,
+      "rx": 22,
+      "ry": 26,
+      "dx": -3.2,
+      "dy": 1.6,
+      "samples": [
+        0.02,
+        -0.18,
+        -0.42,
+        -0.6,
+        -0.25,
+        0.45,
+        1,
+        0.72,
+        0.38,
+        0.15,
+        0.04,
+        0
+      ]
+    },
+    {
+      "name": "far-tentacle-counterbrace",
+      "x": 163,
+      "y": 165,
+      "rx": 20,
+      "ry": 24,
+      "dx": 2.1,
+      "dy": -1.5,
+      "samples": [
+        0.01,
+        0.08,
+        0.28,
+        0.55,
+        0.87,
+        1,
+        0.7,
+        0.45,
+        0.24,
+        0.1,
+        0.03,
+        0
+      ]
+    },
+    {
+      "name": "oral-arm-anticipation",
+      "x": 136,
+      "y": 140,
+      "rx": 15,
+      "ry": 17,
+      "dx": 0,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.08,
+        0.28,
+        0.55,
+        0.87,
+        1,
+        0.7,
+        0.45,
+        0.24,
+        0.1,
+        0.03,
+        0
+      ]
+    }
+  ],
+  "anatomyScope": "Tentacle strike study: draw middle sections inward, extend with delayed opposite arm brace, then settle exactly to BASE. No contact/damage/skill semantics activated.",
+  "terminalFrame": {
+    "index": 11,
+    "role": "EXACT_BASE_RETURN",
+    "expectedPixelChanges": 0
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Independent first attempt only; no failed source reuse, counter reset or automatic repair",
+  "wholeImageTransform": false
+}

@@ -2,8 +2,8 @@
 Default is strict; --allow-missing permits only wholly empty frame directories.
 """
 import argparse
-from functools import lru_cache
 import hashlib
+from functools import lru_cache
 import json
 import re
 import struct
@@ -15,12 +15,13 @@ COUNTS = dict(idle=6, walk=8, sit=4, look=4, sleep=6, react=6)
 
 
 def png_errors(path, require_transparency=False, bounds=None, pixel_digests=None):
-    # Read on every call: a rewritten file must never reuse stale validation.
+    # Read every call: content-keyed caching detects same-path/same-mtime replacements.
+    # The cache is process-local and bounded; no worktree paths or mutable outputs are shared.
     try:
         data = path.read_bytes()
     except OSError as exc:
         return [str(exc)]
-    errors, measured_bounds, digests = _cached_png_errors(
+    errors, measured_bounds, digests = _png_result(
         data, require_transparency, bounds is not None, pixel_digests is not None)
     if bounds is not None:
         bounds.extend(measured_bounds)
@@ -29,15 +30,15 @@ def png_errors(path, require_transparency=False, bounds=None, pixel_digests=None
     return list(errors)
 
 
-@lru_cache(maxsize=128)
-def _cached_png_errors(data, require_transparency, measure_bounds, measure_digests):
-    bounds = [] if measure_bounds else None
-    pixel_digests = [] if measure_digests else None
-    errors = _decode_png_errors(data, require_transparency, bounds, pixel_digests)
+@lru_cache(maxsize=1024)
+def _png_result(data, require_transparency, need_bounds, need_digests):
+    bounds = [] if need_bounds else None
+    pixel_digests = [] if need_digests else None
+    errors = _decode_png(data, require_transparency, bounds, pixel_digests)
     return tuple(errors), tuple(bounds or ()), tuple(pixel_digests or ())
 
 
-def _decode_png_errors(data, require_transparency=False, bounds=None, pixel_digests=None):
+def _decode_png(data, require_transparency=False, bounds=None, pixel_digests=None):
     errors = []
     try:
         if data[:8] != b'\x89PNG\r\n\x1a\n':

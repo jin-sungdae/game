@@ -1,0 +1,108 @@
+{
+  "reference": "public/assets/creatures/ruu/stage04/base.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "upper-covert-greeting",
+      "x": 150,
+      "y": 113,
+      "rx": 18,
+      "ry": 10,
+      "dx": -1.5,
+      "dy": -0.9,
+      "samples": [
+        0.03,
+        0.32,
+        0.85,
+        1,
+        0.62,
+        0.24,
+        0.1,
+        0.04
+      ]
+    },
+    {
+      "name": "lower-feather-delayed-settle",
+      "x": 133,
+      "y": 132,
+      "rx": 19,
+      "ry": 12,
+      "dx": 0.8,
+      "dy": 0.65,
+      "samples": [
+        0.02,
+        0.06,
+        0.22,
+        0.48,
+        0.88,
+        1,
+        0.42,
+        0.07
+      ]
+    }
+  ],
+  "protectedRegions": "y>=155||y<=91||x<=92||x>=177",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "d591f29fd71e2519fdfbd36520518e5df8bd9426187cfec4ae584ebeb3f9e210",
+      "changedPixels": 291,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.05247643557623766
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "616041db4c41faebcc348038082bd9c4b8ac181fc0bf2a45ee31c4f19a1c7e86",
+      "changedPixels": 648,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.5572118264249714
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "91e9b79a8135fd7f1c3a3ca295f9a86dacd1777660fc28176f72d09db8fe4a73",
+      "changedPixels": 846,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.4833755533384576
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "1021cdd32c343693b2428d34d90fb14cd112b4afc6efe8e67f936be48804f2e6",
+      "changedPixels": 906,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.744753402168759
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "0d3b4be9202a8e3d3bc741ee688ceebf024f2d8c0320992aafbd5b61a57dbede",
+      "changedPixels": 936,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.0780595497820789
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "8cee982cffffdf748bc4446ca83246ea5ff39cc476e1b1538ca62defacc1f1c1",
+      "changedPixels": 892,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.027769393748067
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "60e02d5e09311df26f3d7aeace051fa1997b2fea6e06dff1901547783bc1833f",
+      "changedPixels": 766,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.43185394385732523
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "57d50ee4d670c5ca9d712fe65475297140a73f28951f44637b0b9d99bc375260",
+      "changedPixels": 474,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.0721493568117949
+    }
+  ],
+  "sessionId": "LUMA-ASSET-02",
+  "attempt": 1,
+  "priorRepairLimitPreserved": true,
+  "productionEligible": false
+}

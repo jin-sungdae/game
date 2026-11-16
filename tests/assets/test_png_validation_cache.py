@@ -8,7 +8,7 @@ from test_alpha_assets import rgba_fixture, validator
 
 class PngValidationCacheTests(unittest.TestCase):
     def setUp(self):
-        validator._cached_png_errors.cache_clear()
+        validator._png_result.cache_clear()
         self.temp = tempfile.TemporaryDirectory(prefix='luma-png-cache-')
         self.addCleanup(self.temp.cleanup)
         self.path = Path(self.temp.name) / 'frame.png'
@@ -30,7 +30,7 @@ class PngValidationCacheTests(unittest.TestCase):
         self.path.write_bytes(rgba_fixture(alpha=128))
         other = self.path.with_name('other.png')
         other.write_bytes(self.path.read_bytes())
-        with patch.object(validator, '_decode_png_errors', wraps=validator._decode_png_errors) as decode:
+        with patch.object(validator, '_decode_png', wraps=validator._decode_png) as decode:
             bounds, hashes = [], []
             errors = validator.png_errors(self.path, True, bounds, hashes)
             expected = (list(bounds), list(hashes))
@@ -49,7 +49,7 @@ class PngValidationCacheTests(unittest.TestCase):
                 b = [] if want_bounds else None
                 h1 = [] if want_hash else None
                 h2 = [] if want_hash else None
-                expected = validator._decode_png_errors(data,transparency,a,h1)
+                expected = validator._decode_png(data,transparency,a,h1)
                 self.assertEqual(validator.png_errors(self.path,transparency,b,h2),expected)
                 self.assertEqual(a,b);self.assertEqual(h1,h2)
-        self.assertEqual(validator._cached_png_errors.cache_parameters()['maxsize'],128)
+        self.assertEqual(validator._png_result.cache_parameters()['maxsize'],1024)

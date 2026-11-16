@@ -1,0 +1,80 @@
+{
+  "source": "design/production-batches/monsters/batch10/M092/base-v2.png",
+  "eyes": [
+    {
+      "x": 176,
+      "y": 94,
+      "rx": 8,
+      "ry": 6
+    }
+  ],
+  "frames": [
+    {
+      "file": "blink_00.png",
+      "closure": 0,
+      "pixelSha256": "43e632e4c5a2c48d7ba0d945241ed2d0deca93b89d8a26500b416ddee4219ae8"
+    },
+    {
+      "file": "blink_01.png",
+      "closure": 0.06,
+      "pixelSha256": "867797c58538a2cbc501c465a7299759c99c08a28859782f077b7e84f0033dea"
+    },
+    {
+      "file": "blink_02.png",
+      "closure": 0.18,
+      "pixelSha256": "62a01f9c239c6bde95baf083b5ba0dd9b73883dea6bfcdb20dc22cb0a5e15cfa"
+    },
+    {
+      "file": "blink_03.png",
+      "closure": 0.36,
+      "pixelSha256": "cf34a3d3ceaba3bb89fa6b3efabbf823c5913f28f5a74c37dfba3fade9130c97"
+    },
+    {
+      "file": "blink_04.png",
+      "closure": 0.58,
+      "pixelSha256": "cb0dba9aaab5b6cb995ce83baea2a0b4d4eebb746dc27e51ceffecd5e4d5702a"
+    },
+    {
+      "file": "blink_05.png",
+      "closure": 0.8,
+      "pixelSha256": "b203f80d843c594fb4375b82c84a3ed9985241fc4d7d2ccbf9bbfb6cf3a506dc"
+    },
+    {
+      "file": "blink_06.png",
+      "closure": 1,
+      "pixelSha256": "9b5ec86cfa2ccf7e996d8380795cb7e3863437989ed053f0ca1e4b881dfad7d5"
+    },
+    {
+      "file": "blink_07.png",
+      "closure": 0.82,
+      "pixelSha256": "0540d524679f17b60afc27ccc284afc3664954d4b53fa2fa638024a02eb40ec1"
+    },
+    {
+      "file": "blink_08.png",
+      "closure": 0.6,
+      "pixelSha256": "f172e945a1809a3628c14759f1bf645ece3d6aaed4fdf98d9f66ef7e7ebff697"
+    },
+    {
+      "file": "blink_09.png",
+      "closure": 0.38,
+      "pixelSha256": "104e2157f72476596752c6e2ce3ca5868f7a1d746a536efa476a91abd45d88e1"
+    },
+    {
+      "file": "blink_10.png",
+      "closure": 0.2,
+      "pixelSha256": "5d2dbd8590c9d5b1c6a3e3fa5e14bf528f376eba09a266fb7c63ea53e773cc12"
+    },
+    {
+      "file": "blink_11.png",
+      "closure": 0.08,
+      "pixelSha256": "cba87ce0a76747d6b03185f2eb8542d5d9ab30ef11d34cefcac5ec2f5ada5ee1"
+    }
+  ],
+  "alphaPolicy": "unchanged source alpha",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "inheritedRepairIterations": 3,
+  "repairLimit": 3,
+  "failedCandidateRecovery": false
+}
