@@ -1,0 +1,131 @@
+{
+  "action": "SLEEP",
+  "sourceAtlas": "source-keyposes.png",
+  "cell": {
+    "left": 443,
+    "top": 0,
+    "width": 444,
+    "height": 443
+  },
+  "rawPixelSha256": "d837b55443a322142621fb39a251c9a8098cbb1aff13f75cc9045ae6d1da9c45",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 444,
+    "height": 443,
+    "mainPixels": 77218,
+    "mainBounds": [
+      38,
+      132,
+      433,
+      408
+    ],
+    "detachedPixels": 1468,
+    "detachedComponents": 440,
+    "detachedAlphaHistogram": {
+      "1": 1467,
+      "2": 1
+    },
+    "largestDetached": [
+      {
+        "n": 356,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          312,
+          105,
+          331,
+          144
+        ]
+      },
+      {
+        "n": 142,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          364,
+          128,
+          381,
+          148
+        ]
+      },
+      {
+        "n": 91,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          252,
+          148,
+          264,
+          170
+        ]
+      },
+      {
+        "n": 60,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          276,
+          98,
+          284,
+          112
+        ]
+      },
+      {
+        "n": 58,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          235,
+          69,
+          248,
+          80
+        ]
+      },
+      {
+        "n": 24,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          367,
+          152,
+          377,
+          156
+        ]
+      },
+      {
+        "n": 22,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          356,
+          130,
+          360,
+          136
+        ]
+      },
+      {
+        "n": 17,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          253,
+          174,
+          258,
+          180
+        ]
+      }
+    ]
+  },
+  "edgePixels": 23,
+  "errors": [
+    "RAW_DETACHED_ALPHA",
+    "CELL_EDGE_CLIPPING"
+  ],
+  "status": "VALIDATION_FAILED",
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3
+}

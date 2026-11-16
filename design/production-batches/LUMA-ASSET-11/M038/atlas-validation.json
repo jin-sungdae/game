@@ -1,0 +1,2235 @@
+{
+  "sourceSha256": "c0dfe7e392c79ff4a4d6d42cc37fbc39ab187245d9dbf41f3968b6736ba5199b",
+  "width": 1303,
+  "height": 1207,
+  "results": [
+    {
+      "action": "IDLE",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 0,
+        "top": 0,
+        "width": 325,
+        "height": 301
+      },
+      "rawPixelSha256": "9251c98631ad5f73fe3b1719112635715a2a25605e9221ffa76bd62d10cf13a0",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 325,
+        "height": 301,
+        "mainPixels": 41407,
+        "mainBounds": [
+          17,
+          80,
+          322,
+          289
+        ],
+        "detachedPixels": 18,
+        "detachedComponents": 14,
+        "detachedAlphaHistogram": {
+          "1": 18
+        },
+        "largestDetached": [
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              315,
+              259,
+              316,
+              261
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              315,
+              263,
+              315,
+              264
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              27,
+              19,
+              27,
+              19
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              226,
+              55,
+              226,
+              55
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              234,
+              61,
+              234,
+              61
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              319,
+              210,
+              319,
+              210
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              29,
+              216,
+              29,
+              216
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              307,
+              222,
+              307,
+              222
+            ]
+          }
+        ]
+      },
+      "edgePixels": 0,
+      "errors": [
+        "RAW_DETACHED_ALPHA"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "BREATH",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 325,
+        "top": 0,
+        "width": 326,
+        "height": 301
+      },
+      "rawPixelSha256": "bc5af59daeb5cd5db5e01029c0e412049a3b9551bedca04b2e0bda3d63a36c26",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 301,
+        "mainPixels": 40808,
+        "mainBounds": [
+          14,
+          81,
+          320,
+          289
+        ],
+        "detachedPixels": 22,
+        "detachedComponents": 17,
+        "detachedAlphaHistogram": {
+          "1": 22
+        },
+        "largestDetached": [
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              312,
+              212,
+              313,
+              212
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              12,
+              268,
+              12,
+              269
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              235,
+              281,
+              236,
+              281
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              213,
+              289,
+              214,
+              289
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              218,
+              289,
+              219,
+              289
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              203,
+              86,
+              203,
+              86
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              284,
+              128,
+              284,
+              128
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              299,
+              140,
+              299,
+              140
+            ]
+          }
+        ]
+      },
+      "edgePixels": 0,
+      "errors": [
+        "RAW_DETACHED_ALPHA"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "BLINK",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 651,
+        "top": 0,
+        "width": 326,
+        "height": 301
+      },
+      "rawPixelSha256": "2cb4ec5e621391d24468b3386ac3632b237082a2fad782c20dc96d6305a6188c",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 301,
+        "mainPixels": 41067,
+        "mainBounds": [
+          14,
+          85,
+          321,
+          289
+        ],
+        "detachedPixels": 25,
+        "detachedComponents": 18,
+        "detachedAlphaHistogram": {
+          "1": 25
+        },
+        "largestDetached": [
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              9,
+              270,
+              10,
+              271
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              219,
+              20,
+              219,
+              21
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              15,
+              266,
+              15,
+              267
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              147,
+              279,
+              148,
+              279
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              195,
+              289,
+              196,
+              289
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              221,
+              19,
+              221,
+              19
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              223,
+              19,
+              223,
+              19
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              221,
+              21,
+              221,
+              21
+            ]
+          }
+        ]
+      },
+      "edgePixels": 0,
+      "errors": [
+        "RAW_DETACHED_ALPHA"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "LOOK",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 977,
+        "top": 0,
+        "width": 326,
+        "height": 301
+      },
+      "rawPixelSha256": "d83d5ed3ad4a6a90447853b780aea7cda7c0a4ef0e4b8251425c4996a21e3770",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 301,
+        "mainPixels": 41062,
+        "mainBounds": [
+          10,
+          77,
+          310,
+          290
+        ],
+        "detachedPixels": 27,
+        "detachedComponents": 15,
+        "detachedAlphaHistogram": {
+          "1": 27
+        },
+        "largestDetached": [
+          {
+            "n": 5,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              80,
+              82,
+              80,
+              86
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              84,
+              155,
+              84,
+              158
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              84,
+              80,
+              84,
+              81
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              82,
+              83,
+              82,
+              84
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              84,
+              87,
+              84,
+              88
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              210,
+              91,
+              210,
+              92
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              232,
+              281,
+              233,
+              281
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              78,
+              82,
+              78,
+              82
+            ]
+          }
+        ]
+      },
+      "edgePixels": 0,
+      "errors": [
+        "RAW_DETACHED_ALPHA"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "MOVE",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 0,
+        "top": 301,
+        "width": 325,
+        "height": 302
+      },
+      "rawPixelSha256": "2dca5102e1b75f7d52b5cef9d3427a8c9b1da58afffcc16a7b58c60e0b4d4d9a",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 325,
+        "height": 302,
+        "mainPixels": 41270,
+        "mainBounds": [
+          24,
+          65,
+          324,
+          281
+        ],
+        "detachedPixels": 64,
+        "detachedComponents": 25,
+        "detachedAlphaHistogram": {
+          "1": 63,
+          "2": 1
+        },
+        "largestDetached": [
+          {
+            "n": 23,
+            "minA": 1,
+            "maxA": 2,
+            "bounds": [
+              58,
+              263,
+              77,
+              264
+            ]
+          },
+          {
+            "n": 5,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              148,
+              247,
+              152,
+              247
+            ]
+          },
+          {
+            "n": 5,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              92,
+              262,
+              96,
+              262
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              57,
+              72,
+              57,
+              75
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              59,
+              72,
+              59,
+              75
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              236,
+              25,
+              236,
+              26
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              323,
+              118,
+              323,
+              119
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              79,
+              263,
+              80,
+              263
+            ]
+          }
+        ]
+      },
+      "edgePixels": 83,
+      "errors": [
+        "RAW_DETACHED_ALPHA",
+        "CELL_EDGE_CLIPPING"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "TURN",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 325,
+        "top": 301,
+        "width": 326,
+        "height": 302
+      },
+      "rawPixelSha256": "73c92ad53d1151790c03be09a13db176728e88c2f65c08dd4879785779e8f3e0",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 302,
+        "mainPixels": 40124,
+        "mainBounds": [
+          27,
+          55,
+          316,
+          278
+        ],
+        "detachedPixels": 1555,
+        "detachedComponents": 32,
+        "detachedAlphaHistogram": {
+          "1": 269,
+          "2": 104,
+          "3": 41,
+          "4": 26,
+          "5": 21,
+          "6": 21,
+          "7": 15,
+          "8": 13,
+          "9": 9,
+          "10": 8,
+          "11": 2,
+          "12": 2,
+          "13": 1,
+          "14": 2,
+          "16": 1,
+          "17": 2,
+          "19": 1,
+          "20": 1,
+          "21": 1,
+          "22": 1,
+          "26": 1,
+          "30": 4,
+          "34": 1,
+          "36": 3,
+          "37": 1,
+          "41": 1,
+          "42": 2,
+          "44": 1,
+          "45": 1,
+          "48": 1,
+          "51": 2,
+          "52": 1,
+          "56": 1,
+          "58": 1,
+          "59": 1,
+          "62": 1,
+          "66": 1,
+          "69": 1,
+          "71": 1,
+          "72": 1,
+          "73": 2,
+          "76": 2,
+          "82": 1,
+          "83": 1,
+          "85": 1,
+          "87": 1,
+          "88": 2,
+          "90": 2,
+          "91": 1,
+          "93": 1,
+          "98": 3,
+          "100": 2,
+          "102": 1,
+          "106": 1,
+          "110": 1,
+          "113": 1,
+          "116": 1,
+          "120": 2,
+          "123": 1,
+          "124": 1,
+          "126": 1,
+          "134": 1,
+          "136": 1,
+          "139": 1,
+          "140": 1,
+          "141": 2,
+          "145": 1,
+          "150": 1,
+          "151": 1,
+          "156": 1,
+          "157": 2,
+          "158": 1,
+          "161": 1,
+          "162": 1,
+          "165": 1,
+          "166": 1,
+          "167": 1,
+          "169": 1,
+          "171": 1,
+          "173": 1,
+          "175": 3,
+          "177": 1,
+          "179": 1,
+          "183": 2,
+          "185": 1,
+          "186": 1,
+          "187": 1,
+          "188": 1,
+          "189": 1,
+          "196": 1,
+          "198": 4,
+          "203": 1,
+          "204": 1,
+          "206": 1,
+          "208": 1,
+          "210": 1,
+          "213": 1,
+          "214": 1,
+          "215": 1,
+          "216": 1,
+          "217": 3,
+          "218": 1,
+          "219": 1,
+          "220": 3,
+          "221": 3,
+          "222": 1,
+          "224": 1,
+          "225": 3,
+          "226": 3,
+          "227": 1,
+          "228": 1,
+          "231": 1,
+          "232": 2,
+          "233": 1,
+          "237": 2,
+          "238": 4,
+          "239": 2,
+          "240": 5,
+          "241": 3,
+          "242": 3,
+          "243": 3,
+          "244": 5,
+          "245": 4,
+          "246": 19,
+          "247": 23,
+          "248": 29,
+          "249": 26,
+          "250": 41,
+          "251": 97,
+          "252": 176,
+          "253": 440,
+          "255": 4
+        },
+        "largestDetached": [
+          {
+            "n": 1494,
+            "minA": 1,
+            "maxA": 255,
+            "bounds": [
+              0,
+              125,
+              28,
+              207
+            ]
+          },
+          {
+            "n": 17,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              148,
+              297,
+              157,
+              301
+            ]
+          },
+          {
+            "n": 3,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              46,
+              138,
+              46,
+              140
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              52,
+              134,
+              52,
+              135
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              46,
+              135,
+              46,
+              136
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              58,
+              136,
+              58,
+              137
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              54,
+              138,
+              54,
+              139
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              56,
+              138,
+              56,
+              139
+            ]
+          }
+        ]
+      },
+      "edgePixels": 85,
+      "errors": [
+        "RAW_DETACHED_ALPHA",
+        "CELL_EDGE_CLIPPING"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "REST",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 651,
+        "top": 301,
+        "width": 326,
+        "height": 302
+      },
+      "rawPixelSha256": "26c725eb3d6cdbad43f93a3f9fc51e6e4105680c06b2b47d5a232387a056bf98",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 302,
+        "mainPixels": 38849,
+        "mainBounds": [
+          14,
+          83,
+          321,
+          279
+        ],
+        "detachedPixels": 152,
+        "detachedComponents": 21,
+        "detachedAlphaHistogram": {
+          "1": 152
+        },
+        "largestDetached": [
+          {
+            "n": 68,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              170,
+              19,
+              181,
+              30
+            ]
+          },
+          {
+            "n": 25,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              170,
+              293,
+              174,
+              301
+            ]
+          },
+          {
+            "n": 18,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              279,
+              262,
+              295,
+              263
+            ]
+          },
+          {
+            "n": 13,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              176,
+              295,
+              178,
+              301
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              116,
+              55,
+              116,
+              58
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              114,
+              56,
+              114,
+              59
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              168,
+              21,
+              168,
+              22
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              118,
+              58,
+              118,
+              59
+            ]
+          }
+        ]
+      },
+      "edgePixels": 4,
+      "errors": [
+        "RAW_DETACHED_ALPHA",
+        "CELL_EDGE_CLIPPING"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "SLEEP",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 977,
+        "top": 301,
+        "width": 326,
+        "height": 302
+      },
+      "rawPixelSha256": "0c1d6bb0219f86ee05dacfd5e876079fd5c0d2f7747eaddc3ffe1bcf84ccdb0c",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 302,
+        "mainPixels": 32370,
+        "mainBounds": [
+          26,
+          104,
+          309,
+          275
+        ],
+        "detachedPixels": 201,
+        "detachedComponents": 42,
+        "detachedAlphaHistogram": {
+          "1": 201
+        },
+        "largestDetached": [
+          {
+            "n": 115,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              148,
+              36,
+              162,
+              50
+            ]
+          },
+          {
+            "n": 15,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              313,
+              152,
+              316,
+              156
+            ]
+          },
+          {
+            "n": 11,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              152,
+              69,
+              154,
+              74
+            ]
+          },
+          {
+            "n": 7,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              150,
+              70,
+              150,
+              76
+            ]
+          },
+          {
+            "n": 5,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              311,
+              153,
+              311,
+              157
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              156,
+              70,
+              156,
+              73
+            ]
+          },
+          {
+            "n": 3,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              158,
+              34,
+              158,
+              36
+            ]
+          },
+          {
+            "n": 3,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              164,
+              36,
+              164,
+              38
+            ]
+          }
+        ]
+      },
+      "edgePixels": 0,
+      "errors": [
+        "RAW_DETACHED_ALPHA"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "CURSOR_REACT",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 0,
+        "top": 603,
+        "width": 325,
+        "height": 302
+      },
+      "rawPixelSha256": "97d5066b8f62cb3efdb035050590a62bbbaae917fee8c6ddd859124af0bb8dd1",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 325,
+        "height": 302,
+        "mainPixels": 42704,
+        "mainBounds": [
+          15,
+          40,
+          323,
+          259
+        ],
+        "detachedPixels": 42,
+        "detachedComponents": 28,
+        "detachedAlphaHistogram": {
+          "1": 41,
+          "2": 1
+        },
+        "largestDetached": [
+          {
+            "n": 6,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              317,
+              2,
+              319,
+              4
+            ]
+          },
+          {
+            "n": 5,
+            "minA": 1,
+            "maxA": 2,
+            "bounds": [
+              166,
+              53,
+              170,
+              53
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              321,
+              1,
+              321,
+              2
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              323,
+              1,
+              323,
+              2
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              218,
+              45,
+              218,
+              46
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              161,
+              54,
+              162,
+              54
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              103,
+              249,
+              104,
+              249
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              315,
+              0,
+              315,
+              0
+            ]
+          }
+        ]
+      },
+      "edgePixels": 1,
+      "errors": [
+        "RAW_DETACHED_ALPHA",
+        "CELL_EDGE_CLIPPING"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "INTERACT",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 325,
+        "top": 603,
+        "width": 326,
+        "height": 302
+      },
+      "rawPixelSha256": "b0d7cf3b0fa61861db19768540752b950651b1d3c55eb4da815243b69f00e4e7",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 302,
+        "mainPixels": 36907,
+        "mainBounds": [
+          12,
+          60,
+          304,
+          252
+        ],
+        "detachedPixels": 176,
+        "detachedComponents": 52,
+        "detachedAlphaHistogram": {
+          "1": 145,
+          "2": 7,
+          "3": 5,
+          "4": 5,
+          "5": 4,
+          "6": 1,
+          "16": 1,
+          "23": 1,
+          "45": 1,
+          "79": 2,
+          "113": 1,
+          "116": 1,
+          "124": 1,
+          "129": 1
+        },
+        "largestDetached": [
+          {
+            "n": 94,
+            "minA": 1,
+            "maxA": 129,
+            "bounds": [
+              319,
+              219,
+              325,
+              246
+            ]
+          },
+          {
+            "n": 16,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              148,
+              2,
+              153,
+              8
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              142,
+              7,
+              143,
+              8
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              12,
+              15,
+              12,
+              18
+            ]
+          },
+          {
+            "n": 3,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              36,
+              46,
+              36,
+              48
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              148,
+              0,
+              149,
+              0
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              156,
+              0,
+              157,
+              0
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              8,
+              13,
+              8,
+              14
+            ]
+          }
+        ]
+      },
+      "edgePixels": 28,
+      "errors": [
+        "RAW_DETACHED_ALPHA",
+        "CELL_EDGE_CLIPPING"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "ATTACK",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 651,
+        "top": 603,
+        "width": 326,
+        "height": 302
+      },
+      "rawPixelSha256": "2a60772b62df9322635c59b4e7ceb433a1e6e4d6414e667964171ba51ca69e96",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 302,
+        "mainPixels": 40127,
+        "mainBounds": [
+          0,
+          50,
+          325,
+          251
+        ],
+        "detachedPixels": 190,
+        "detachedComponents": 55,
+        "detachedAlphaHistogram": {
+          "1": 190
+        },
+        "largestDetached": [
+          {
+            "n": 37,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              321,
+              39,
+              325,
+              48
+            ]
+          },
+          {
+            "n": 29,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              154,
+              273,
+              160,
+              281
+            ]
+          },
+          {
+            "n": 12,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              9,
+              140,
+              12,
+              144
+            ]
+          },
+          {
+            "n": 10,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              180,
+              267,
+              183,
+              271
+            ]
+          },
+          {
+            "n": 7,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              307,
+              18,
+              309,
+              22
+            ]
+          },
+          {
+            "n": 7,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              179,
+              50,
+              185,
+              50
+            ]
+          },
+          {
+            "n": 7,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              1,
+              107,
+              2,
+              111
+            ]
+          },
+          {
+            "n": 6,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              178,
+              267,
+              179,
+              271
+            ]
+          }
+        ]
+      },
+      "edgePixels": 76,
+      "errors": [
+        "RAW_DETACHED_ALPHA",
+        "CELL_EDGE_CLIPPING"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "SKILL_CAST",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 977,
+        "top": 603,
+        "width": 326,
+        "height": 302
+      },
+      "rawPixelSha256": "796fdc4352a8460821604cb4d8e24190c125e476ef024be609e6a10f1a60dcb1",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 302,
+        "mainPixels": 37188,
+        "mainBounds": [
+          7,
+          62,
+          309,
+          255
+        ],
+        "detachedPixels": 212,
+        "detachedComponents": 38,
+        "detachedAlphaHistogram": {
+          "1": 144,
+          "2": 28,
+          "3": 13,
+          "4": 11,
+          "5": 2,
+          "6": 6,
+          "7": 3,
+          "8": 1,
+          "9": 3,
+          "10": 1
+        },
+        "largestDetached": [
+          {
+            "n": 139,
+            "minA": 1,
+            "maxA": 10,
+            "bounds": [
+              0,
+              184,
+              5,
+              218
+            ]
+          },
+          {
+            "n": 11,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              0,
+              41,
+              1,
+              47
+            ]
+          },
+          {
+            "n": 6,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              132,
+              299,
+              134,
+              301
+            ]
+          },
+          {
+            "n": 5,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              3,
+              41,
+              3,
+              45
+            ]
+          },
+          {
+            "n": 5,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              128,
+              299,
+              130,
+              301
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              136,
+              299,
+              138,
+              301
+            ]
+          },
+          {
+            "n": 3,
+            "minA": 1,
+            "maxA": 2,
+            "bounds": [
+              158,
+              63,
+              160,
+              63
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              41,
+              58,
+              42,
+              58
+            ]
+          }
+        ]
+      },
+      "edgePixels": 50,
+      "errors": [
+        "RAW_DETACHED_ALPHA",
+        "CELL_EDGE_CLIPPING"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "HIT",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 0,
+        "top": 905,
+        "width": 325,
+        "height": 302
+      },
+      "rawPixelSha256": "9b290cccac9e8916e4b12dd151f6f533e18a1abd0b21e88f47cd027c80299816",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 325,
+        "height": 302,
+        "mainPixels": 39480,
+        "mainBounds": [
+          17,
+          46,
+          323,
+          238
+        ],
+        "detachedPixels": 21,
+        "detachedComponents": 14,
+        "detachedAlphaHistogram": {
+          "1": 21
+        },
+        "largestDetached": [
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              305,
+              18,
+              305,
+              21
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              171,
+              47,
+              171,
+              48
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              176,
+              47,
+              176,
+              48
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              104,
+              218,
+              104,
+              219
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              244,
+              228,
+              244,
+              229
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              309,
+              15,
+              309,
+              15
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              307,
+              17,
+              307,
+              17
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              309,
+              17,
+              309,
+              17
+            ]
+          }
+        ]
+      },
+      "edgePixels": 0,
+      "errors": [
+        "RAW_DETACHED_ALPHA"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "VICTORY",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 325,
+        "top": 905,
+        "width": 326,
+        "height": 302
+      },
+      "rawPixelSha256": "df6cdf861c103ba39633d3c5aa650e7b98a8aa560423944ae5c9ce16857f266a",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 302,
+        "mainPixels": 40558,
+        "mainBounds": [
+          14,
+          10,
+          309,
+          237
+        ],
+        "detachedPixels": 54,
+        "detachedComponents": 31,
+        "detachedAlphaHistogram": {
+          "1": 54
+        },
+        "largestDetached": [
+          {
+            "n": 8,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              22,
+              70,
+              24,
+              74
+            ]
+          },
+          {
+            "n": 6,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              20,
+              66,
+              20,
+              71
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              311,
+              49,
+              312,
+              50
+            ]
+          },
+          {
+            "n": 3,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              22,
+              66,
+              22,
+              68
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              22,
+              46,
+              22,
+              47
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              24,
+              47,
+              24,
+              48
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              22,
+              49,
+              22,
+              50
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              24,
+              67,
+              24,
+              68
+            ]
+          }
+        ]
+      },
+      "edgePixels": 0,
+      "errors": [
+        "RAW_DETACHED_ALPHA"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "DEFEAT",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 651,
+        "top": 905,
+        "width": 326,
+        "height": 302
+      },
+      "rawPixelSha256": "e3a68ad172b05dcf46ab8ca77a1e23fbbb4244f27c9eded23ba5040ef127cad1",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 302,
+        "mainPixels": 33080,
+        "mainBounds": [
+          11,
+          68,
+          318,
+          238
+        ],
+        "detachedPixels": 29,
+        "detachedComponents": 23,
+        "detachedAlphaHistogram": {
+          "1": 29
+        },
+        "largestDetached": [
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              18,
+              1,
+              18,
+              2
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              40,
+              37,
+              40,
+              38
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              38,
+              39,
+              38,
+              40
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              11,
+              212,
+              11,
+              213
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              19,
+              220,
+              19,
+              221
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              151,
+              229,
+              151,
+              230
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              325,
+              80,
+              325,
+              80
+            ]
+          },
+          {
+            "n": 1,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              323,
+              82,
+              323,
+              82
+            ]
+          }
+        ]
+      },
+      "edgePixels": 2,
+      "errors": [
+        "RAW_DETACHED_ALPHA",
+        "CELL_EDGE_CLIPPING"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    },
+    {
+      "action": "CHARGE",
+      "sourceAtlas": "source-keyposes.png",
+      "cell": {
+        "left": 977,
+        "top": 905,
+        "width": 326,
+        "height": 302
+      },
+      "rawPixelSha256": "5c34000c28cb8c5e67c5e655ff5ccec93f4f779c9acb19e8076ae24771ca0f7d",
+      "sourceAlpha": {
+        "threshold": 0,
+        "width": 326,
+        "height": 302,
+        "mainPixels": 34548,
+        "mainBounds": [
+          3,
+          61,
+          311,
+          237
+        ],
+        "detachedPixels": 89,
+        "detachedComponents": 55,
+        "detachedAlphaHistogram": {
+          "1": 89
+        },
+        "largestDetached": [
+          {
+            "n": 8,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              31,
+              104,
+              32,
+              107
+            ]
+          },
+          {
+            "n": 5,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              132,
+              0,
+              134,
+              3
+            ]
+          },
+          {
+            "n": 4,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              198,
+              32,
+              198,
+              35
+            ]
+          },
+          {
+            "n": 3,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              200,
+              31,
+              200,
+              33
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              136,
+              0,
+              136,
+              1
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              53,
+              1,
+              54,
+              1
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              158,
+              1,
+              158,
+              2
+            ]
+          },
+          {
+            "n": 2,
+            "minA": 1,
+            "maxA": 1,
+            "bounds": [
+              51,
+              3,
+              52,
+              3
+            ]
+          }
+        ]
+      },
+      "edgePixels": 5,
+      "errors": [
+        "RAW_DETACHED_ALPHA",
+        "CELL_EDGE_CLIPPING"
+      ],
+      "status": "VALIDATION_FAILED",
+      "normalizationPerformed": false,
+      "riggingPerformed": false,
+      "productionEligible": false,
+      "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+      "repairIterations": 3,
+      "repairLimit": 3
+    }
+  ]
+}
