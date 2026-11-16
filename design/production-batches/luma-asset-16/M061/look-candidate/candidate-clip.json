@@ -1,0 +1,101 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M061",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M061/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "NOT_APPROVED",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 160,
+    "loop": false
+  },
+  "movableRect": [
+    73,
+    68,
+    192,
+    174
+  ],
+  "parts": [
+    {
+      "name": "near-bell-skirt-orient",
+      "x": 89,
+      "y": 109,
+      "rx": 17,
+      "ry": 22,
+      "dx": -1.5,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        0.22,
+        0.75,
+        1,
+        0.93,
+        0.6,
+        0.21,
+        0
+      ]
+    },
+    {
+      "name": "far-bell-skirt-counter",
+      "x": 176,
+      "y": 112,
+      "rx": 14,
+      "ry": 22,
+      "dx": 0.9,
+      "dy": 0.6,
+      "samples": [
+        0.01,
+        0.08,
+        0.24,
+        0.65,
+        1,
+        0.77,
+        0.3,
+        0
+      ]
+    },
+    {
+      "name": "near-oral-arm-follow",
+      "x": 113,
+      "y": 146,
+      "rx": 18,
+      "ry": 22,
+      "dx": -1.1,
+      "dy": -0.5,
+      "samples": [
+        0.01,
+        0.08,
+        0.24,
+        0.65,
+        1,
+        0.77,
+        0.3,
+        0
+      ]
+    }
+  ],
+  "anatomyScope": "Eyeless jellyfish orients the bell skirt and near tentacle toward stimulus; no iris/eyelid invented and no whole-body tilt.",
+  "terminalFrame": {
+    "index": 7,
+    "role": "EXACT_BASE_RETURN",
+    "expectedPixelChanges": 0
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Independent first attempt; failed assets untouched; repository limit not reset"
+}

@@ -1,0 +1,774 @@
+{
+  "sessionId": "LUMA-ASSET-10",
+  "baseCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "automaticRepairAllowed": false,
+  "productionApproval": "HUMAN_REVIEW_REQUIRED",
+  "runtimeConnected": false,
+  "sharedFilesModified": false,
+  "monsters": [
+    {
+      "conceptId": "M031",
+      "basePath": "design/production-batches/monsters/batch04/M031/base-v2.png",
+      "baseSha256": "c44a3689983a14a8ba3efb883fcddf8e3c039f43cc1e61cae34caac417f5f813",
+      "species": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Existing candidate not remade; human appearance/motion review pending",
+          "newFrames": 0
+        },
+        {
+          "action": "BREATH",
+          "status": "CANDIDATE_PRODUCED",
+          "reason": "Existing species-specific ribcage/shoulder rig reused; not a production completion",
+          "newFrames": 8
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Eyelid segmentation/closed-eye keypose missing; preserve existing eyes",
+          "newFrames": 0
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Eye/head articulation and occlusion masks missing",
+          "newFrames": 0
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Independent limb contact/occlusion rig missing",
+          "newFrames": 0
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Alternate view and occlusion-safe turn keyposes missing",
+          "newFrames": 0
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Rest contact pose and limb articulation missing",
+          "newFrames": 0
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Closed-eye and relaxed body keyposes missing",
+          "newFrames": 0
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Head/gaze rig and approved reaction behavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "Interaction body-part rig and behavior approval missing",
+          "newFrames": 0
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Attack anatomy/contact keyposes and behavior approval missing",
+          "newFrames": 0
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Skill Identity unverified; cast anatomy/skill motion contract missing",
+          "newFrames": 0
+        },
+        {
+          "action": "HIT",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Existing candidate not remade; human appearance/motion review pending",
+          "newFrames": 0
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Victory-specific articulated keypose missing",
+          "newFrames": 0
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Collapse/support-contact pose and articulated rig missing",
+          "newFrames": 0
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        }
+      ]
+    },
+    {
+      "conceptId": "M032",
+      "basePath": "design/production-batches/monsters/batch04/M032/base-v2.png",
+      "baseSha256": "23237c557da92af6eb73455850eff10e43548ba9242a0108ebed24db3529ff0c",
+      "species": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Existing candidate not remade; human appearance/motion review pending",
+          "newFrames": 0
+        },
+        {
+          "action": "BREATH",
+          "status": "CANDIDATE_PRODUCED",
+          "reason": "Existing species-specific ribcage/shoulder rig reused; not a production completion",
+          "newFrames": 8
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Eyelid segmentation/closed-eye keypose missing; preserve existing eyes",
+          "newFrames": 0
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Eye/head articulation and occlusion masks missing",
+          "newFrames": 0
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Independent limb contact/occlusion rig missing",
+          "newFrames": 0
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "RAW_ALPHA_DEFECT: 1515 detached pixels before normalization; no resized image, rig or clip; PR repair limit3/3",
+          "newFrames": 0
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Rest contact pose and limb articulation missing",
+          "newFrames": 0
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Closed-eye and relaxed body keyposes missing",
+          "newFrames": 0
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Head/gaze rig and approved reaction behavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "INTERACT",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "Existing candidate not remade; human appearance/motion review pending",
+          "newFrames": 0
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Attack anatomy/contact keyposes and behavior approval missing",
+          "newFrames": 0
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Skill Identity unverified; cast anatomy/skill motion contract missing",
+          "newFrames": 0
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "Recoil articulation missing; no whole-body displacement substitute",
+          "newFrames": 0
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Victory-specific articulated keypose missing",
+          "newFrames": 0
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Collapse/support-contact pose and articulated rig missing",
+          "newFrames": 0
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        }
+      ]
+    },
+    {
+      "conceptId": "M033",
+      "basePath": "design/production-batches/monsters/batch04/M033/base-v2.png",
+      "baseSha256": "a8056b0f58a5acaff494893d2ab7757d922a2c07a33e9882c28599737b7e7f11",
+      "species": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M034; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        }
+      ]
+    },
+    {
+      "conceptId": "M034",
+      "basePath": "design/production-batches/monsters/batch04/M034/base-v2.png",
+      "baseSha256": "e1e9a59bc1873cd97f568e2e3cdf3a1a516e8e5e33b5fa539ce92cab663053b3",
+      "species": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: compare M033; rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        }
+      ]
+    },
+    {
+      "conceptId": "M035",
+      "basePath": "design/production-batches/monsters/batch04/M035/base-v2.png",
+      "baseSha256": "59e82fe4b74ae3e4939dc9a4bbae55c80bef757134608f8f49d61769ec574c53",
+      "species": null,
+      "productionSpeciesId": null,
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Dedicated rigid plate animation needed; no existing rigid plate rig",
+          "newFrames": 0
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "No wings visible; flight capability not established; do not invent anatomy",
+          "newFrames": 0
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Contact/airborne/charge/recovery articulation and approved SpeciesBehavior missing",
+          "newFrames": 0
+        }
+      ]
+    }
+  ],
+  "integrationRequests": [
+    {
+      "id": "ASSET10-01",
+      "owner": "Asset Integration",
+      "request": "Review two BREATH candidates; after human approval update existing Completion Ledger and Creature Review Catalog. Do not count candidate PNG PASS as production approval."
+    },
+    {
+      "id": "ASSET10-02",
+      "owner": "Species Identity",
+      "request": "Resolve M031-M035 productionSpeciesId, Personality, MovementProfile and SpeciesBehavior; specifically distinguish M033/M034 before new identity-dependent art."
+    },
+    {
+      "id": "ASSET10-03",
+      "owner": "Rigging",
+      "request": "Provide articulated eye/head/limb/tail masks and occlusion-safe keyposes for remaining M031/M032 actions; provide rigid plate joint rig for M033-M035. No whole-sprite transforms or elastic plate deformation."
+    },
+    {
+      "id": "ASSET10-04",
+      "owner": "Human Review",
+      "request": "M032 TURN failed raw-alpha reference remains blocked at 3/3. Do not repair, normalize, regenerate or reuse it under this session."
+    },
+    {
+      "id": "ASSET10-05",
+      "owner": "Runtime Integration",
+      "request": "No manifest/registry/runtime activation until explicit artwork, motion and species approval. Reuse approved shared animation resolver only after integration review."
+    }
+  ]
+}

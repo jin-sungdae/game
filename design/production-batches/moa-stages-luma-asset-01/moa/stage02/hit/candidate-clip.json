@@ -1,0 +1,28 @@
+{
+  "sessionId": "LUMA-ASSET-01",
+  "species": "moa",
+  "evolutionStage": 2,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/moa/stage02/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 100,
+    "loop": false
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "appearanceDrift": "MANUAL_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "blockReason": "SOURCE_ALPHA_RESIDUE_REVIEW_REQUIRED"
+}

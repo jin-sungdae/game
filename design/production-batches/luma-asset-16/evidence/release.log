@@ -1,0 +1,23 @@
+frontend-build
+animation-content
+presentation
+asset-tests
+FAIL MANUAL_QA_REQUIRED /private/tmp/luma-asset-16-release
+Traceback (most recent call last):
+  File "/Users/jinseongdae/.codex/worktrees/assets-m061-m065/New project/scripts/validate_alpha_release.py", line 61, in <module>
+    if __name__=='__main__': main()
+  File "/Users/jinseongdae/.codex/worktrees/assets-m061-m065/New project/scripts/validate_alpha_release.py", line 38, in main
+    step('asset-tests',['npm','run','test:assets'])
+  File "/Users/jinseongdae/.codex/worktrees/assets-m061-m065/New project/scripts/validate_alpha_release.py", line 27, in step
+    result=subprocess.run(cmd,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 507, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1126, in communicate
+    self.wait()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1917, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1875, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt

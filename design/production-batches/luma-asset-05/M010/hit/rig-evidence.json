@@ -1,0 +1,107 @@
+{
+  "reference": "design/production-batches/monsters/batch01/M010/base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "shoulder-bark-recoil",
+      "x": 145,
+      "y": 140,
+      "rx": 22,
+      "ry": 15,
+      "dx": -2,
+      "dy": 1.1,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    },
+    {
+      "name": "chest-mane-recoil",
+      "x": 169,
+      "y": 148,
+      "rx": 17,
+      "ry": 22,
+      "dx": -1.3,
+      "dy": 0.7,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    }
+  ],
+  "protectedRegions": "all pixels outside configured part ellipses",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "2e9cf323182e3a3c66a022c1a756992c721127552242518a1682f03a8e6bb88a",
+      "changedPixels": 621,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.06847375122139433
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "efe609ecb4ac305ecb8abbc846eaa8ed2adf64eaa9c0f7221250d72e5e5ae1cb",
+      "changedPixels": 1318,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.6830905824448403
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "07275bbb023f657ef54bd500a516e9a859534d9de60d158da02a85256d17ffd4",
+      "changedPixels": 1525,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 2.0996006883191916
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "f0c073eaa35d47f340d888e84e5c7cd3d5a4e586fe1c2f5d2f7c7674dde62170",
+      "changedPixels": 1537,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 2.2822390060037123
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "abda370b8bdf40bc12877d906a818bfb26762dcd3e12eb550b4bb824703336ef",
+      "changedPixels": 1483,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.7315945600860192
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "5df9c34f48ef2aaf552b71fc161fb66828de5dcd1a2405f9c9cf404106714b70",
+      "changedPixels": 1438,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.3213431835510132
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "74334b765bb6d8b34e285b547c636d99b4394c737e34b78d72be6406270aebac",
+      "changedPixels": 1401,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.0464888356476247
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "6db068b9d9c27d5da931daeeae71291359be9f23c9a33105c0f6e88f18d34989",
+      "changedPixels": 1351,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.7968697258125397
+    }
+  ],
+  "repairIteration": 3,
+  "repairScope": "PR #132; inherited 3/3 unchanged; independent new candidate, no repair",
+  "productionEligible": false
+}

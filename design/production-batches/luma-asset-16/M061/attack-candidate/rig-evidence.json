@@ -1,0 +1,179 @@
+{
+  "reference": "design/production-batches/monsters/batch07/M061/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "near-tentacle-draw-strike",
+      "x": 108,
+      "y": 165,
+      "rx": 22,
+      "ry": 26,
+      "dx": -3.2,
+      "dy": 1.6,
+      "samples": [
+        0.02,
+        -0.18,
+        -0.42,
+        -0.6,
+        -0.25,
+        0.45,
+        1,
+        0.72,
+        0.38,
+        0.15,
+        0.04,
+        0
+      ]
+    },
+    {
+      "name": "far-tentacle-counterbrace",
+      "x": 163,
+      "y": 165,
+      "rx": 20,
+      "ry": 24,
+      "dx": 2.1,
+      "dy": -1.5,
+      "samples": [
+        0.01,
+        0.08,
+        0.28,
+        0.55,
+        0.87,
+        1,
+        0.7,
+        0.45,
+        0.24,
+        0.1,
+        0.03,
+        0
+      ]
+    },
+    {
+      "name": "oral-arm-anticipation",
+      "x": 136,
+      "y": 140,
+      "rx": 15,
+      "ry": 17,
+      "dx": 0,
+      "dy": -1.2,
+      "samples": [
+        0.01,
+        0.08,
+        0.28,
+        0.55,
+        0.87,
+        1,
+        0.7,
+        0.45,
+        0.24,
+        0.1,
+        0.03,
+        0
+      ]
+    }
+  ],
+  "protectedRegions": "y>=196||y<=122||x<=65||x>=195",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "attack_00.png",
+      "pixelSha256": "c76b0d3c328b01e8608ba2f3172beebdf46efd82107785d7b0d6d05ef5bc4b93",
+      "changedPixels": 1233,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 392,
+      "maxInverseDisplacementPixels": 0.07155203361215022
+    },
+    {
+      "file": "attack_01.png",
+      "pixelSha256": "e1692a3aa03372691cb8c339c0186fb6674f6970745b7e5d701e147c2235ca1a",
+      "changedPixels": 2147,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 883,
+      "maxInverseDisplacementPixels": 0.6430312036415422
+    },
+    {
+      "file": "attack_02.png",
+      "pixelSha256": "e3729792584af88a2f9e11f5a284483aba28c1d37090737d4ca93ba55f60a9bd",
+      "changedPixels": 2550,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1278,
+      "maxInverseDisplacementPixels": 1.5008256311338795
+    },
+    {
+      "file": "attack_03.png",
+      "pixelSha256": "f565a7ae0ed606181cc079b5457df9de6098eaf8d327e080f24f64a8275b2d2a",
+      "changedPixels": 2697,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1486,
+      "maxInverseDisplacementPixels": 2.146524635311416
+    },
+    {
+      "file": "attack_04.png",
+      "pixelSha256": "eb197d44ced902973be48bacdf848f0afb6b3e2d56917bca00b0a9b7de69270e",
+      "changedPixels": 2696,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1422,
+      "maxInverseDisplacementPixels": 2.243614495119662
+    },
+    {
+      "file": "attack_05.png",
+      "pixelSha256": "9606ae968ce7bbd6230178f8b8bfa13940d70e8283d6f7302e611d1917a25b54",
+      "changedPixels": 2767,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1549,
+      "maxInverseDisplacementPixels": 2.577183742346625
+    },
+    {
+      "file": "attack_06.png",
+      "pixelSha256": "5ff78994d450bfaef33a6be8be5a03fb3de677d3a3bd75a8c4d8bd479512c44d",
+      "changedPixels": 2794,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1596,
+      "maxInverseDisplacementPixels": 3.5742898895335373
+    },
+    {
+      "file": "attack_07.png",
+      "pixelSha256": "99d1fc646185b403c53bd105bd6cf4e77de733e8a4667dddf0482e7595a1a287",
+      "changedPixels": 2686,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1456,
+      "maxInverseDisplacementPixels": 2.57422865198073
+    },
+    {
+      "file": "attack_08.png",
+      "pixelSha256": "0f1e83c29116795976f63f7e1fec7efe7f9f24601165baf08701392a54a5e9f5",
+      "changedPixels": 2526,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 1244,
+      "maxInverseDisplacementPixels": 1.3582109657461792
+    },
+    {
+      "file": "attack_09.png",
+      "pixelSha256": "e8afa95854cb3be3914ce19adbc918ae41b0d48e449a9d02fc453f04eff9dbae",
+      "changedPixels": 2188,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 906,
+      "maxInverseDisplacementPixels": 0.5357562672926929
+    },
+    {
+      "file": "attack_10.png",
+      "pixelSha256": "bc6b7e52cdd78bda34ae1bc4843fed5e2ef148ff1f87a6ffb8f251cdca5628bd",
+      "changedPixels": 1627,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 563,
+      "maxInverseDisplacementPixels": 0.1430912208058025
+    },
+    {
+      "file": "attack_11.png",
+      "pixelSha256": "da43ebf636a062aa38a8289837efd6042f4c571556087de421eb0e9a437e2674",
+      "changedPixels": 0,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 0,
+      "maxInverseDisplacementPixels": 0
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-16 independent first attempt; inherited 3/3 remains locked; no recovery authorized",
+  "productionEligible": false
+}

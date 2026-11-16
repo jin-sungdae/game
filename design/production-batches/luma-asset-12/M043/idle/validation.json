@@ -1,0 +1,140 @@
+{
+  "status": "BLOCKED",
+  "reason": "Generated plate geometry and face differ from BASE; per-frame body scale/ground contact and plate continuity require authored joint rig. Detached Alpha preserved. No repair at 3/3.",
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bounds": [
+        0,
+        11,
+        255,
+        253
+      ],
+      "pixelSha256": "aef8bb1dc57e2c6690289283436d0c0c5bff9bbe8370413407d1de0a76360a8f",
+      "detachedAlphaPixels": 107
+    },
+    {
+      "file": "idle_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bounds": [
+        0,
+        11,
+        254,
+        256
+      ],
+      "pixelSha256": "f9f31c64353a0b6d022bdb18367090cbbb6a3afb3f5c7726e0967162fc291853",
+      "detachedAlphaPixels": 315
+    },
+    {
+      "file": "idle_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bounds": [
+        3,
+        10,
+        253,
+        256
+      ],
+      "pixelSha256": "bb116859a9ad0500ae6c11813aed0e298c175ff8f40a965c907d5c3c5f2f2ea7",
+      "detachedAlphaPixels": 446
+    },
+    {
+      "file": "idle_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bounds": [
+        0,
+        13,
+        250,
+        256
+      ],
+      "pixelSha256": "c304df236a42f200fd125b44334d8af30b93374f7fdb90e3206526c0b54f14f8",
+      "detachedAlphaPixels": 152
+    },
+    {
+      "file": "idle_04.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bounds": [
+        8,
+        1,
+        256,
+        237
+      ],
+      "pixelSha256": "94492696a01dec397283700dfd69646be1a313d8bcf9a73693cf5cf3aed431fc",
+      "detachedAlphaPixels": 150
+    },
+    {
+      "file": "idle_05.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bounds": [
+        0,
+        1,
+        256,
+        256
+      ],
+      "pixelSha256": "d265d51740de6f8d45aadc1732e473d0df0df0a534c3b89a2ad66c2925e23f52",
+      "detachedAlphaPixels": 201
+    },
+    {
+      "file": "idle_06.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bounds": [
+        0,
+        1,
+        256,
+        238
+      ],
+      "pixelSha256": "058a9ec022bc35a45841c17e7131cb728f103f919bb621beccb8ebb559e7c232",
+      "detachedAlphaPixels": 739
+    },
+    {
+      "file": "idle_07.png",
+      "size": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "bounds": [
+        0,
+        0,
+        251,
+        246
+      ],
+      "pixelSha256": "231792fe2b35c85bb0afc2ccabc4f611fa3f7e3ee07fe5ab72180c5556472cfc",
+      "detachedAlphaPixels": 108
+    }
+  ],
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "appearanceDrift": "VISUAL_FAIL",
+  "frameContinuity": "VISUAL_FAIL",
+  "repairIterations": 3,
+  "repairLimit": 3
+}

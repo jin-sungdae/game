@@ -1,0 +1,101 @@
+{
+  "conceptId": "M001",
+  "species": null,
+  "evolutionStage": null,
+  "status": "HUMAN_REVIEW_REQUIRED",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M001/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 85,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 153,
+      "y": 132,
+      "rx": 9,
+      "ry": 12
+    },
+    {
+      "x": 188,
+      "y": 131,
+      "rx": 4.5,
+      "ry": 10
+    }
+  ],
+  "parts": [
+    {
+      "name": "belly-breath",
+      "x": 147,
+      "y": 192,
+      "rx": 23,
+      "ry": 15,
+      "dx": -2.5,
+      "dy": 1.0,
+      "samples": [
+        0.015,
+        1,
+        0.76,
+        0.43,
+        0.21,
+        0.09,
+        0.035,
+        0.008
+      ]
+    },
+    {
+      "name": "leaf-root",
+      "x": 115,
+      "y": 177,
+      "rx": 20,
+      "ry": 12,
+      "dx": 1.2,
+      "dy": -0.6,
+      "samples": [
+        0.01,
+        0.18,
+        0.8,
+        1,
+        0.62,
+        0.28,
+        0.09,
+        0.015
+      ]
+    }
+  ],
+  "fixedBodyExpression": "y<=165||y>=207||x<=87||x>=181",
+  "anatomyScope": "기존 몸통 마스크의 반동, 잎 뿌리/어깨의 지연 반동, 눈의 빠른 움츠림 후 복귀. 발·윤곽·알파·머리 구조 유지.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "sessionId": "LUMA-ASSET-04",
+  "rigSource": "design/production-batches/luma-asset-04/M001/rest-pilot/rig-rest.cjs",
+  "rigSourceSha256": "52ad5fab4a2ebf0466284b6b4176624ffc67f9d16ad5817f182af83e7ed87493",
+  "eyeRigSource": "design/production-batches/luma-asset-04/M001/blink-pilot/rig-blink.cjs",
+  "eyeRigSourceSha256": "7406be8c9cdadcf7533c13717151ae83ed689005bfe91a50182694d32db09535",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 미제작 HIT 첫 후보. 기존 실패 복구 아님; 3/3 이력 유지. M004 BLINK 예외 미사용.",
+  "behaviorContract": "정지 상태 HIT 시각 후보. 충격 방향/전투 이벤트/피해/스킬 계약 활성화 없음. 최종 동작 의미와 외형은 사람 검토 필요.",
+  "motionPhases": [
+    "near-base",
+    "impact",
+    "recoil",
+    "secondary-followthrough",
+    "recovery",
+    "recovery",
+    "settle",
+    "near-base"
+  ],
+  "returnScope": "마지막 프레임은 BASE 근접. 정확한 BASE 전환은 측정값으로 검토하며 Runtime 완료를 주장하지 않음."
+}

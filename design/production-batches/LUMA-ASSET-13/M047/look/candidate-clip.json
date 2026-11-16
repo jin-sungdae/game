@@ -1,0 +1,46 @@
+{
+  "conceptId": "M047",
+  "species": null,
+  "evolutionStage": null,
+  "sessionId": "LUMA-ASSET-13",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch05/M047/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 143,
+      "y": 105,
+      "rx": 12,
+      "ry": 14,
+      "dx": 1.5
+    },
+    {
+      "x": 180,
+      "y": 110,
+      "rx": 5,
+      "ry": 10,
+      "dx": 0.6
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "reusedRig": "design/production-batches/action-followup/M008/rig-look.cjs"
+}

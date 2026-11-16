@@ -1,0 +1,31 @@
+{
+  "conceptId": "M027",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M027/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 160,
+    "loop": false
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "personality": "NOT_VERIFIED",
+  "speciesBehavior": "NOT_VERIFIED",
+  "movementProfile": "NOT_VERIFIED",
+  "candidateExpressionIntent": "Draconic neck and crest listening; eyes/face remain fixed",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "baseReturn": "EXACT_BASE_FIRST_AND_LAST",
+  "repairScope": "Independent action first attempt; inherited failed artwork recovery unchanged"
+}
