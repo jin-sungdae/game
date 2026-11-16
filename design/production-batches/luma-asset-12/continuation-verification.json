@@ -1,0 +1,196 @@
+{
+  "testedCodeHead": "436317775d73934e929af451046327c67a4866c4",
+  "scope": "All candidate source/frame/test code unchanged after this code commit; metadata-only dirty paths during gate are listed below.",
+  "dirtyPathsDuringGate": [
+    "design/production-batches/luma-asset-12/environment-audit.json",
+    "design/production-batches/luma-asset-12/integration-request.json"
+  ],
+  "releaseGate": {
+    "status": "AUTOMATED_READY",
+    "manualGate": "MANUAL_QA_REQUIRED",
+    "head": "436317775d73934e929af451046327c67a4866c4",
+    "workingTreeDirty": true,
+    "checks": [
+      {
+        "name": "frontend-build",
+        "status": "PASS",
+        "seconds": 9.67
+      },
+      {
+        "name": "animation-content",
+        "status": "PASS",
+        "seconds": 18.75
+      },
+      {
+        "name": "presentation",
+        "status": "PASS",
+        "seconds": 17.82
+      },
+      {
+        "name": "asset-tests",
+        "status": "PASS",
+        "seconds": 266.31
+      },
+      {
+        "name": "optional-assets",
+        "status": "PASS",
+        "seconds": 4.72
+      },
+      {
+        "name": "strict-alpha",
+        "status": "PASS",
+        "seconds": 5.16
+      },
+      {
+        "name": "required-bases",
+        "status": "PASS",
+        "seconds": 5.95
+      },
+      {
+        "name": "automation-policy",
+        "status": "PASS",
+        "seconds": 9.83
+      },
+      {
+        "name": "release-static",
+        "status": "PASS",
+        "seconds": 0.11
+      },
+      {
+        "name": "tao-integrity",
+        "status": "PASS",
+        "seconds": 0.12
+      },
+      {
+        "name": "rust-fmt",
+        "status": "PASS",
+        "seconds": 0.55
+      },
+      {
+        "name": "rust-tests-native-link",
+        "status": "PASS",
+        "seconds": 138.55
+      },
+      {
+        "name": "rust-clippy",
+        "status": "PASS",
+        "seconds": 74.75
+      },
+      {
+        "name": "launch_audit",
+        "status": "PASS",
+        "seconds": 0.73
+      },
+      {
+        "name": "single_instance_audit",
+        "status": "PASS",
+        "seconds": 0.67
+      },
+      {
+        "name": "bootJar",
+        "status": "PASS",
+        "seconds": 9.57
+      },
+      {
+        "name": "server-fresh-persistence-failures",
+        "status": "PASS"
+      },
+      {
+        "name": "whitespace",
+        "status": "PASS",
+        "seconds": 0.16
+      }
+    ]
+  },
+  "checks": {
+    "animationRegression": {
+      "status": "PASS",
+      "tests": 236
+    },
+    "sessionBoundaryTests": {
+      "status": "PASS",
+      "tests": 2
+    },
+    "candidateStructure": {
+      "status": "PASS",
+      "clips": 19,
+      "png": 264
+    },
+    "assetTests": {
+      "status": "PASS",
+      "tests": 232,
+      "seconds": 265.054,
+      "interpreter": "PyPy 8.0.1 Python 3.12.15"
+    },
+    "releaseGate": {
+      "status": "AUTOMATED_READY",
+      "passed": 18,
+      "total": 18,
+      "testedCodeHead": "436317775d73934e929af451046327c67a4866c4",
+      "manualGate": "MANUAL_QA_REQUIRED"
+    },
+    "nativeGui": "DEFERRED_GUI",
+    "existingBatch05": {
+      "status": "PASS",
+      "tests": 1
+    },
+    "requiredBaseRelease": "PASS",
+    "continuationCandidates": {
+      "status": "PASS",
+      "clips": 12,
+      "frames": 200,
+      "baseReturn": "PASS"
+    },
+    "preservationAndBoundary": {
+      "status": "PASS",
+      "tests": 4
+    },
+    "serverRegression": {
+      "tests": 346,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "githubCI": {
+      "codeHead": "436317775d73934e929af451046327c67a4866c4",
+      "run": "https://github.com/jin-sungdae/game/actions/runs/40316216912",
+      "status": "SUCCESS",
+      "scope": "Code commit; subsequent evidence-only commit requires new CI observation"
+    }
+  },
+  "newClips": 12,
+  "newFrames": 200,
+  "totalClips": 32,
+  "totalFrames": 472,
+  "totalPng": 473,
+  "productionApproval": "HUMAN_REVIEW_REQUIRED",
+  "runtimeConnected": false,
+  "nativeGui": "DEFERRED_GUI",
+  "logs": [
+    {
+      "name": "asset-tests",
+      "sha256": "ae112d113a2d2ec117aaab365848c9ac81685431430f5ba3e2b816b37a6f6e53",
+      "tail": "l_phase1.VisualPhase1Tests.test_production_frames_and_missing_actions_are_distinguished) ... ok\ntest_runtime_parser_reused_and_malformed_manifest_rejected (test_visual_phase1.VisualPhase1Tests.test_runtime_parser_reused_and_malformed_manifest_rejected) ... ok\ntest_species_proposals_have_different_habits_even_for_same_profile (test_visual_phase1.VisualPhase1Tests.test_species_proposals_have_different_habits_even_for_same_profile) ... ok\ntest_unsupported_profile_and_duplicate_species_rejected (test_visual_phase1.VisualPhase1Tests.test_unsupported_profile_and_duplicate_species_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 232 tests in 265.054s\n\nOK\n"
+    },
+    {
+      "name": "animation-content",
+      "sha256": "15d3e3ccb17708b833d36bddb1f44346e3e836e597557ba339c113285de4748e",
+      "tail": "-\n  duration_ms: 0.445875\n  ...\n# Subtest: NOVA real static registry, fixed cadence, reduced motion and own-base fallback\nok 5 - NOVA real static registry, fixed cadence, reduced motion and own-base fallback\n  ---\n  duration_ms: 3.854542\n  ...\n1..5\n# tests 5\n# suites 0\n# pass 5\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 187.253833\nTAP version 13\n# Subtest: Active Alpha content + asset + animation coverage is exactly 15/15; provisional excluded\nok 1 - Active Alpha content + asset + animation coverage is exactly 15/15; provisional excluded\n  ---\n  duration_ms: 34.102333\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 190.822292\n"
+    },
+    {
+      "name": "automation-policy",
+      "sha256": "80b827b9be26c3421f0531ecdb62bef3d165f4a0ee58f0070ff9f071d5c93274",
+      "tail": "no_activation_or_protection_policy_mutation) ... ok\ntest_publication_budget_and_task_ownership_are_rechecked (test_unattended_security.UnattendedSecurityTests.test_publication_budget_and_task_ownership_are_rechecked) ... ok\ntest_publication_token_is_after_read_only_preflight_and_scoped (test_unattended_security.UnattendedSecurityTests.test_publication_token_is_after_read_only_preflight_and_scoped) ... ok\ntest_unattended_jobs_never_enter_human_approval_environments (test_unattended_security.UnattendedSecurityTests.test_unattended_jobs_never_enter_human_approval_environments) ... ok\n\n----------------------------------------------------------------------\nRan 148 tests in 9.361s\n\nOK (skipped=1)\n"
+    },
+    {
+      "name": "rust-tests-native-link",
+      "sha256": "565651e9fec093801d6d508ce3631736d3c81e97cc9afbb86373eec31e15bfe6",
+      "tail": "eep_native_bounds_and_facing ... ok\ntest behaviors::monster_tests::all_fifteen_world_traces_preserve_identity_constraints_and_companion ... ok\ntest spawn::tests::all_zones_negative_monitors_sizes_dock_menu_and_determinism ... ok\ntest spawn::runtime::batch3::batch3_both_edges_and_fail_closed_per_species ... ok\ntest behaviors::monster_tests::rarity_arrival_holds_behavior_preserves_identity_and_yields_to_battle ... ok\ntest spawn::runtime::batch3::batch3_assets_metadata_motion_night_and_restart ... ok\ntest backend::tests::release_connection_refused_and_read_timeout_are_bounded_and_sanitized ... ok\n\ntest result: ok. 189 passed; 0 failed; 16 ignored; 0 measured; 0 filtered out; finished in 4.01s\n\n"
+    },
+    {
+      "name": "rust-clippy",
+      "sha256": "eb5bca710cf6586434f0d8cc4182b18c256098e8735741c3fc8e79eba76ab13c",
+      "tail": " Checking tauri-runtime-wry v2.11.4\n    Checking muda v0.19.3\n   Compiling tauri-macros v2.6.3\n    Checking getrandom v0.3.4\n    Checking window-vibrancy v0.6.0\n    Checking ipnet v2.12.2\n    Checking mime v0.3.17\n    Checking embed_plist v1.2.2\n    Checking hyper-util v0.1.20\n    Checking num-traits v0.2.19\n    Checking tower-http v0.6.11\n    Checking http-body-util v0.1.5\n   Compiling luma-spike v0.1.0 (/Users/jinseongdae/.codex/worktrees/assets-m041-m045/New project/src-tauri)\n    Checking iana-time-zone v0.1.65\n    Checking chrono v0.4.45\n    Checking reqwest v0.13.5\n    Checking tauri-plugin-single-instance v2.4.4\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1m 14s\n"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M041",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M041/base-v2.png",
+  "sourcePixelSha256": "06341733f200eb136ab5a62ec083f67e79484f15ba4722ed20556150beee9d96",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 16,
+    "frameDuration": 130,
+    "loop": false
+  },
+  "parts": [],
+  "eyes": [
+    {
+      "x": 196,
+      "y": 102,
+      "rx": 6,
+      "ry": 6,
+      "dx": 0.85
+    }
+  ],
+  "frames": [
+    {
+      "file": "look_00.png",
+      "pixelSha256": "06341733f200eb136ab5a62ec083f67e79484f15ba4722ed20556150beee9d96",
+      "partAmounts": [],
+      "gaze": 0
+    },
+    {
+      "file": "look_01.png",
+      "pixelSha256": "fb1b1dbca019a88b881c1b70b28f23071a4ef8229a0a96d26ba0a8be2fdbeba3",
+      "partAmounts": [],
+      "gaze": 0.12
+    },
+    {
+      "file": "look_02.png",
+      "pixelSha256": "7a4acd8320c862fb33e5fb73b5718d5ca9823b703794c793775d5bd6ce11049e",
+      "partAmounts": [],
+      "gaze": 0.35
+    },
+    {
+      "file": "look_03.png",
+      "pixelSha256": "296f11d62b5782cc4b601c95cfe4808420d67e90f9af41cc5edc480f74eae61b",
+      "partAmounts": [],
+      "gaze": 0.65
+    },
+    {
+      "file": "look_04.png",
+      "pixelSha256": "72206f284e40f56bf473b638cb284cea79abbd321d58b76726914c2de1818462",
+      "partAmounts": [],
+      "gaze": 0.9
+    },
+    {
+      "file": "look_05.png",
+      "pixelSha256": "cb1ab00d92cd18a1394fd3750065ae64962faa2f29e7ed82d731d7ef1705c324",
+      "partAmounts": [],
+      "gaze": 1
+    },
+    {
+      "file": "look_06.png",
+      "pixelSha256": "9ae11c363dd703b8778e244e0c0a25880266dca8c73990fbecbb7ce5f4ca268b",
+      "partAmounts": [],
+      "gaze": 0.72
+    },
+    {
+      "file": "look_07.png",
+      "pixelSha256": "da9c2540f40c67373f1b0f35367d1c8d85630f29feb9f7c12e9a11c189ee3aa2",
+      "partAmounts": [],
+      "gaze": 0.3
+    },
+    {
+      "file": "look_08.png",
+      "pixelSha256": "06341733f200eb136ab5a62ec083f67e79484f15ba4722ed20556150beee9d96",
+      "partAmounts": [],
+      "gaze": 0
+    },
+    {
+      "file": "look_09.png",
+      "pixelSha256": "ef29502ae3542dabfa7f50e1b143ec7df3cceafab306b1181cdcf2dde06909f8",
+      "partAmounts": [],
+      "gaze": -0.25
+    },
+    {
+      "file": "look_10.png",
+      "pixelSha256": "99a77fc014b64c616f59958b70b2aebb464a0b131fbd84dc19535268c8daa206",
+      "partAmounts": [],
+      "gaze": -0.6
+    },
+    {
+      "file": "look_11.png",
+      "pixelSha256": "173b857222d9c08bc62266d8ca4028dffc72c22bc8072fe56b260a6ee8a4239d",
+      "partAmounts": [],
+      "gaze": -0.85
+    },
+    {
+      "file": "look_12.png",
+      "pixelSha256": "a725543e56491ee220e430c5556c98d8eb4101bc395137c2a2fb308ed0daaf61",
+      "partAmounts": [],
+      "gaze": -0.7
+    },
+    {
+      "file": "look_13.png",
+      "pixelSha256": "414ffa10e455493c07ae7be6a1c0646148efddb8244a2d664d75239feb2080bf",
+      "partAmounts": [],
+      "gaze": -0.35
+    },
+    {
+      "file": "look_14.png",
+      "pixelSha256": "f0d0d7b2adf127fd8648b61985a735f477c00a2901a36fe7567c649d50ed573e",
+      "partAmounts": [],
+      "gaze": -0.1
+    },
+    {
+      "file": "look_15.png",
+      "pixelSha256": "06341733f200eb136ab5a62ec083f67e79484f15ba4722ed20556150beee9d96",
+      "partAmounts": [],
+      "gaze": 0
+    }
+  ],
+  "wholeImageTransform": false,
+  "reuse": "design/production-batches/action-followup/M010/rig-look.cjs",
+  "scope": "Stationary eye inspection, not a head turn or locomotion. Original face outline and Alpha fixed.",
+  "entryContract": "BASE_ONLY",
+  "exitContract": "EXACT_BASE",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "DEFERRED_GUI"
+}

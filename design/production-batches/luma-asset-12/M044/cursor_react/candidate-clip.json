@@ -1,0 +1,203 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M044",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M044/base-v2.png",
+  "sourcePixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+  "reuse": "design/production-batches/action-followup/M041/hit-pilot/rig-hit.cjs",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 16,
+    "frameDuration": 220,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "neck-mane-attention",
+      "x": 194,
+      "y": 117,
+      "rx": 14,
+      "ry": 20,
+      "dx": 0.7,
+      "dy": -0.9,
+      "delay": 0
+    },
+    {
+      "name": "tail-tendril-follow",
+      "x": 62,
+      "y": 127,
+      "rx": 20,
+      "ry": 20,
+      "dx": -1.2,
+      "dy": 0.8,
+      "delay": 3
+    }
+  ],
+  "eyes": [],
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_01.png",
+      "pixelSha256": "c1ce08041d6e8491bf367414a36ff4d21f021b24cc76e623b645c347d9cae4d2",
+      "partAmounts": [
+        0.1,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_02.png",
+      "pixelSha256": "f8574c1f9cc035f3733ac8f5e378a1b36229d7e4bf56582f995e713c05d3eaf2",
+      "partAmounts": [
+        0.35,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_03.png",
+      "pixelSha256": "ff1f206e3f65957203c0aa4413c9ee9cc6d41764914dfb334cbb1d6757c7ef5b",
+      "partAmounts": [
+        0.72,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_04.png",
+      "pixelSha256": "e95554e8bac5cd0c0d0385eda903d93cd14fff0c4d8b63238f63a82091f28573",
+      "partAmounts": [
+        1,
+        0.1
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_05.png",
+      "pixelSha256": "3f4abeb12b56dfcb12f6455bf65373b14a36a48438811ba7ba961ac3308ce819",
+      "partAmounts": [
+        0.91,
+        0.35
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_06.png",
+      "pixelSha256": "ad2107fe0627f5c02a4b859e8ee41d73efc0f4fad38e5744e0fc53a25a528f03",
+      "partAmounts": [
+        0.7,
+        0.72
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_07.png",
+      "pixelSha256": "be0600a41208af28f697f023afd70e75505d6ce6523925e5e0321a34fc3cb713",
+      "partAmounts": [
+        0.43,
+        1
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_08.png",
+      "pixelSha256": "63c91f99ec5c2bbde9c80736de1e65b24b0f2d98699bdfbbb7a92ad6b52de729",
+      "partAmounts": [
+        0.2,
+        0.91
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_09.png",
+      "pixelSha256": "de1e503d8dbe44b132a545ea5270749a4f1a9d02bcf616d06a6f72ea4ea1637b",
+      "partAmounts": [
+        0.07,
+        0.7
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_10.png",
+      "pixelSha256": "649d2c33f23d354d1fa77a6a379778b9c7a29804feec31f77985d90bb9ebf7ca",
+      "partAmounts": [
+        0.015,
+        0.43
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_11.png",
+      "pixelSha256": "842ae5edf3c979e643ff46c5f490644e8c48d105d3ba8340a2fb3ecfba20e6e6",
+      "partAmounts": [
+        0,
+        0.2
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_12.png",
+      "pixelSha256": "c2b8564b941e3945a7514daf77395f9f1d9a2b53a23a6cdbc6734c8e4be6d078",
+      "partAmounts": [
+        0,
+        0.07
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_13.png",
+      "pixelSha256": "20bbf922b483d32a1a62ab41fdbd688b7329a18554b6a6c4cd85fd2f59aa32f3",
+      "partAmounts": [
+        0,
+        0.015
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_14.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "cursor_react_15.png",
+      "pixelSha256": "40e9a9701099d151e765b42326052347d71a3e53891f86d78159d97af7e4a7b5",
+      "partAmounts": [
+        0,
+        0
+      ],
+      "eyeClosure": 0
+    }
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "NOT_VERIFIED",
+  "scope": "Stationary attention gesture only; cursor tracking/approach not implemented"
+}
