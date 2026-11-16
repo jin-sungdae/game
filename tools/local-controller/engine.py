@@ -65,8 +65,8 @@ def merge_gate(analysis, review, release, pr, state, production_approved=False):
     if analysis['ci']['status'] != 'PASS': reasons.append('CI_NOT_PASS')
     if not release or release.get('head') != analysis['head'] or release.get('workingTreeDirty') is not False or release.get('status') != 'AUTOMATED_READY' or len(release.get('checks', [])) != 18 or any(c.get('status') != 'PASS' for c in release.get('checks', [])):
         reasons.append('EXACT_HEAD_RELEASE_GATE_REQUIRED')
-    if pr.get('mergeable') is not True or pr.get('mergeable_state') != 'clean' or pr.get('draft'):
-        reasons.append('GITHUB_PROTECTION_OR_DRAFT')
+    if pr.get('mergeable') is not True or pr.get('mergeable_state') != 'clean':
+        reasons.append('GITHUB_PROTECTION')
     dep = analysis.get('dependencyEvidence', {})
     if analysis.get('baseRef', 'main') != 'main': reasons.append('STACKED_BASE_NOT_MAIN')
     if dep.get('status') != 'NOT_DECLARED' and dep.get('merged') is not True: reasons.append('STACKED_DEPENDENCY')

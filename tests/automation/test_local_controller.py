@@ -37,7 +37,8 @@ class LocalControllerTests(unittest.TestCase):
         self.assertTrue(engine.merge_gate(a,self.result(),r,p,s,True)['eligible'])
         for field,value in [('head','c'*40),('workingTreeDirty',True),('checks',[])]:
             self.assertFalse(engine.merge_gate(a,self.result(),{**r,field:value},p,s,True)['eligible'])
-        self.assertFalse(engine.merge_gate(a,self.result(),r,{**p,'draft':True},s,True)['eligible'])
+        self.assertTrue(engine.merge_gate(a,self.result(),r,{**p,'draft':True},s,True)['eligible'])
+        self.assertFalse(engine.merge_gate(a,self.result(),r,{**p,'mergeable_state':'blocked'},s,True)['eligible'])
         self.assertFalse(engine.merge_gate(a,self.result(),r,p,{**s,'lock':'other'},True)['eligible'])
     def test_pending_dependency_and_head_change_block(self):
         a,p,r,s=self.fixtures()

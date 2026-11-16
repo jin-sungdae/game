@@ -52,7 +52,7 @@ Rust는 stable toolchain이며 runner 버전과 toolchain 업데이트는 별도
 
 ## 실제 E2E 절차
 
-foundation에서 별도 `test/foundation-validation` branch를 만들고 foundation 대상 draft PR을 연다. `tests/automation/fixture.json`의 기대값 3을 임시로 4로 바꿔 contract test가 FAIL하도록 한다. 게임/native 코드를 손대지 않는다.
+foundation에서 별도 `test/foundation-validation` branch를 만들고 foundation 대상 일반 PR(Ready for review)을 연다. `tests/automation/fixture.json`의 기대값 3을 임시로 4로 바꿔 contract test가 FAIL하도록 한다. 게임/native 코드를 손대지 않는다.
 
 1. opened → workflow run과 실패 job/JSON 확인.
 2. 해당 test PR에 `@codex`로 이 fixture만 복구하도록 한 번 요청한다. task 생성/commit/push의 실제 응답을 기록한다. integration 미연결이면 BLOCKED로 기록하고 자동 재호출하지 않는다.
