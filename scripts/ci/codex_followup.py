@@ -743,7 +743,7 @@ def main():
             print(pr['html_url'])
             return
         child = api.put('pulls', {'title': 'codex: follow-up for PR #' + str(current['pr']), 'head': branch,
-            'base': pr['head']['ref'], 'draft': True,
+            'base': pr['head']['ref'], 'draft': False,
             'body': 'Bounded Codex proposal. Source HEAD ' + current['head'] + '. Task ' + current['taskId'] +
                     '. Validation job passed; full CI and human review required. GUI DEFERRED_GUI. No automatic merge.'}, method='POST')
         api.put(f"issues/{child['number']}/labels", {'labels': ['luma-codex-owned']}, method='POST')
