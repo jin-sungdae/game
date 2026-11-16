@@ -1,0 +1,81 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M062",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M062/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "PROPOSED_UNAPPROVED; measured bounds registration only",
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "REST",
+    "frames": 8,
+    "frameDuration": 170,
+    "loop": false
+  },
+  "movableRect": [
+    70,
+    112,
+    196,
+    225
+  ],
+  "parts": [
+    {
+      "name": "thorax-release",
+      "x": 162,
+      "y": 145,
+      "rx": 23,
+      "ry": 27,
+      "dx": 1.2,
+      "dy": -0.8,
+      "samples": [
+        1,
+        0.82,
+        0.59,
+        0.38,
+        0.22,
+        0.11,
+        0.045,
+        0.01
+      ]
+    },
+    {
+      "name": "tail-settle",
+      "x": 140,
+      "y": 197,
+      "rx": 28,
+      "ry": 24,
+      "dx": -1.4,
+      "dy": -0.6,
+      "samples": [
+        0.42,
+        0.72,
+        1,
+        0.78,
+        0.49,
+        0.25,
+        0.09,
+        0.02
+      ]
+    }
+  ],
+  "anatomyScope": "Coral seahorse: preserve head, coral crown and tail endpoint; reuse thorax and curled-tail rig. Curious FLOATING proposal only.",
+  "motion": "Unwind thorax tension followed by delayed tail settling, returning to resting base.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "wholeImageTransform": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Inherited limit preserved; independent candidate first attempt, no failed asset repair"
+}

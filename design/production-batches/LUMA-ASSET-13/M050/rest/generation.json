@@ -1,0 +1,12 @@
+{
+  "tool": "built-in image_gen",
+  "sourceBase": "design/production-batches/monsters/batch05/M050/base-v2.png",
+  "promptIntent": "앞다리 굽힘과 뒷다리 접기 REST keypose",
+  "constraints": "Species Identity 유지, 실제 투명 배경, 단일 연결 실루엣, 그림자·입자 금지, 관절 자세만 변경",
+  "appearanceObservation": "얼굴 길이, 눈 크기, 꼬리와 흉부 비율 변화",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "firstIndependentAttempt": true
+}

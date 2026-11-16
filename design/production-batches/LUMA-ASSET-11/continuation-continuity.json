@@ -1,0 +1,242 @@
+{
+  "head": "300693afd4f2fcb07dd71644c108ad2ce68f6077",
+  "scope": "Read-only BASE return diagnostics; no new acceptance threshold, no PNG mutation",
+  "clips": {
+    "breath": {
+      "frames": 8,
+      "firstToBase": {
+        "changedPixels": 212,
+        "absoluteRgbaDifference": 894,
+        "alphaChangedPixels": 0
+      },
+      "lastToBase": {
+        "changedPixels": 858,
+        "absoluteRgbaDifference": 12612,
+        "alphaChangedPixels": 138
+      },
+      "lastToFirst": {
+        "changedPixels": 852,
+        "absoluteRgbaDifference": 11718,
+        "alphaChangedPixels": 138
+      },
+      "consecutive": [
+        {
+          "changedPixels": 769,
+          "absoluteRgbaDifference": 11093,
+          "alphaChangedPixels": 138
+        },
+        {
+          "changedPixels": 819,
+          "absoluteRgbaDifference": 7257,
+          "alphaChangedPixels": 221
+        },
+        {
+          "changedPixels": 967,
+          "absoluteRgbaDifference": 7769,
+          "alphaChangedPixels": 205
+        },
+        {
+          "changedPixels": 894,
+          "absoluteRgbaDifference": 4198,
+          "alphaChangedPixels": 169
+        },
+        {
+          "changedPixels": 850,
+          "absoluteRgbaDifference": 3574,
+          "alphaChangedPixels": 170
+        },
+        {
+          "changedPixels": 867,
+          "absoluteRgbaDifference": 6771,
+          "alphaChangedPixels": 206
+        },
+        {
+          "changedPixels": 997,
+          "absoluteRgbaDifference": 8238,
+          "alphaChangedPixels": 221
+        }
+      ],
+      "exactBaseReturn": false,
+      "naturalReturnContinuity": "HUMAN_REVIEW_REQUIRED",
+      "existingAutomated": "PASS"
+    },
+    "look": {
+      "frames": 8,
+      "firstToBase": {
+        "changedPixels": 64,
+        "absoluteRgbaDifference": 584,
+        "alphaChangedPixels": 0
+      },
+      "lastToBase": {
+        "changedPixels": 79,
+        "absoluteRgbaDifference": 1925,
+        "alphaChangedPixels": 0
+      },
+      "lastToFirst": {
+        "changedPixels": 80,
+        "absoluteRgbaDifference": 2161,
+        "alphaChangedPixels": 0
+      },
+      "consecutive": [
+        {
+          "changedPixels": 80,
+          "absoluteRgbaDifference": 1889,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 76,
+          "absoluteRgbaDifference": 1979,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 75,
+          "absoluteRgbaDifference": 1239,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 81,
+          "absoluteRgbaDifference": 3376,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 83,
+          "absoluteRgbaDifference": 2191,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 78,
+          "absoluteRgbaDifference": 1444,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 83,
+          "absoluteRgbaDifference": 2177,
+          "alphaChangedPixels": 0
+        }
+      ],
+      "exactBaseReturn": false,
+      "naturalReturnContinuity": "HUMAN_REVIEW_REQUIRED",
+      "existingAutomated": "PASS"
+    },
+    "blink": {
+      "frames": 6,
+      "firstToBase": {
+        "changedPixels": 70,
+        "absoluteRgbaDifference": 676,
+        "alphaChangedPixels": 0
+      },
+      "lastToBase": {
+        "changedPixels": 76,
+        "absoluteRgbaDifference": 2828,
+        "alphaChangedPixels": 0
+      },
+      "lastToFirst": {
+        "changedPixels": 76,
+        "absoluteRgbaDifference": 2152,
+        "alphaChangedPixels": 0
+      },
+      "consecutive": [
+        {
+          "changedPixels": 76,
+          "absoluteRgbaDifference": 5810,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 62,
+          "absoluteRgbaDifference": 7924,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 0,
+          "absoluteRgbaDifference": 0,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 44,
+          "absoluteRgbaDifference": 3914,
+          "alphaChangedPixels": 0
+        },
+        {
+          "changedPixels": 76,
+          "absoluteRgbaDifference": 8312,
+          "alphaChangedPixels": 0
+        }
+      ],
+      "exactBaseReturn": false,
+      "naturalReturnContinuity": "HUMAN_REVIEW_REQUIRED",
+      "existingAutomated": "VALIDATION_FAILED"
+    }
+  },
+  "sources": {
+    "M036": {
+      "sha256": "888222c17db31d82c44dfaa49328bd37774f7faaa9e6dd3315f5fb86764d6699",
+      "pixelSha256": [
+        "c8e45d2a349990e4f51ae381c681d94eba1327554f4e91ea7ff979433eefcca7"
+      ],
+      "bounds": [
+        24,
+        37,
+        231,
+        216
+      ],
+      "pngErrors": [],
+      "detachedAlphaPixels": 0
+    },
+    "M037": {
+      "sha256": "9e531e940cceec43483f72181cf9444262e163d4fb200aaaeb721dab39e6763c",
+      "pixelSha256": [
+        "7bae131147af398fd4afe32ae80036d2c15213b751c9b1a306c92624f1fdf518"
+      ],
+      "bounds": [
+        41,
+        64,
+        214,
+        215
+      ],
+      "pngErrors": [],
+      "detachedAlphaPixels": 0
+    },
+    "M038": {
+      "sha256": "8cd47ab7193bcacf13b46454ea5834508a15731989088a9b359f7c55414d9ea7",
+      "pixelSha256": [
+        "26b7fe3148d123d6b07c78bb7cc9ed5ed7aa15472e02606c919db2a1626873f7"
+      ],
+      "bounds": [
+        50,
+        112,
+        208,
+        219
+      ],
+      "pngErrors": [],
+      "detachedAlphaPixels": 0
+    },
+    "M039": {
+      "sha256": "77e8563b8b736e08fb8e11a760df04e14667eb7b1cb431f02f3f6c5d4acebe20",
+      "pixelSha256": [
+        "c9c1ba00f48ba533c8dd3386faee21883b6a1d0721bc9b233f5b8f5f7f17a164"
+      ],
+      "bounds": [
+        42,
+        63,
+        215,
+        198
+      ],
+      "pngErrors": [],
+      "detachedAlphaPixels": 0
+    },
+    "M040": {
+      "sha256": "e5e8f1bde30073f8608c8d4daa73d4df2677cdf3dc0a5870df5d7315b439e8c1",
+      "pixelSha256": [
+        "2ead326a2f54a5dafb4f55d68810003a1bc7b4f4437e36663d7b921468e9a604"
+      ],
+      "bounds": [
+        35,
+        20,
+        222,
+        235
+      ],
+      "pngErrors": [],
+      "detachedAlphaPixels": 0
+    }
+  }
+}

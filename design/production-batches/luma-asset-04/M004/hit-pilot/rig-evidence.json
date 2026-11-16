@@ -1,0 +1,131 @@
+{
+  "reference": "base-v2.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "trunk-flex",
+      "x": 145,
+      "y": 148,
+      "rx": 23,
+      "ry": 29,
+      "dx": -1.7,
+      "dy": 0.6,
+      "samples": [
+        0.015,
+        1,
+        0.76,
+        0.43,
+        0.21,
+        0.09,
+        0.035,
+        0.008
+      ]
+    },
+    {
+      "name": "leaf-shoulder-root",
+      "x": 111,
+      "y": 117,
+      "rx": 18,
+      "ry": 16,
+      "dx": 1.2,
+      "dy": -0.7,
+      "samples": [
+        0.01,
+        0.18,
+        0.8,
+        1,
+        0.62,
+        0.28,
+        0.09,
+        0.015
+      ]
+    }
+  ],
+  "eyes": [
+    {
+      "x": 175,
+      "y": 102,
+      "rx": 5,
+      "ry": 5
+    },
+    {
+      "x": 192.5,
+      "y": 108,
+      "rx": 2.7,
+      "ry": 3.3
+    }
+  ],
+  "closure": [
+    0.01,
+    0.72,
+    0.6,
+    0.38,
+    0.19,
+    0.085,
+    0.03,
+    0.008
+  ],
+  "motion": "impact then delayed secondary recoil and recovery",
+  "protectedRegions": "y>=182||y<=100||x<=80||x>=188||(x>=151&&y<=123)",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "hit_00.png",
+      "pixelSha256": "c3bc59022d9e55232129f1eff94695caafdb756b9a70675c72e523f01b427fe0",
+      "changedPixels": 339,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.027041527034298924
+    },
+    {
+      "file": "hit_01.png",
+      "pixelSha256": "6015ac197d54d5f8ad160c387333f3389ca39700aa92aa6c8692b206901330b7",
+      "changedPixels": 2131,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.8008125119027323
+    },
+    {
+      "file": "hit_02.png",
+      "pixelSha256": "99b60e26f894a3c7b3e40f6b7398601cd4e812ad66cb897a2da9b7fe07d1dae1",
+      "changedPixels": 2237,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.3684409838978533
+    },
+    {
+      "file": "hit_03.png",
+      "pixelSha256": "d9b998ca87d11232b19fe091102c58a6e27d1d502e6907499d9e7e2dbd556fc3",
+      "changedPixels": 2135,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.387264587452242
+    },
+    {
+      "file": "hit_04.png",
+      "pixelSha256": "c5ec1a09989c0785a379fbd0732b0ea791d7b485c68b9ee5f1da8c422f64ccfd",
+      "changedPixels": 1900,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8589120107219856
+    },
+    {
+      "file": "hit_05.png",
+      "pixelSha256": "b320f0e68d1d7186688358b892dc2c5813854a339d9c96e2d7577d3c5c2fcca1",
+      "changedPixels": 1542,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.3884087122873346
+    },
+    {
+      "file": "hit_06.png",
+      "pixelSha256": "3fa3d891dc0d98a33cb70b89c00b6eff044979beb0a4f32c0d3fd4a3813d635e",
+      "changedPixels": 970,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.12501268395821208
+    },
+    {
+      "file": "hit_07.png",
+      "pixelSha256": "e21d705e45e4bb1591e022fa640be6cbdffa5ee8358297132b5dbb70cf966ca9",
+      "changedPixels": 228,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.020838576545682552
+    }
+  ],
+  "repairIteration": 3,
+  "productionEligible": false
+}

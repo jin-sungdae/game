@@ -1,0 +1,917 @@
+{
+  "sessionId": "LUMA-ASSET-13",
+  "baseCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "authoritativeLedger": "design/creature-production-queue.json",
+  "scope": "Integration request only; not a second Completion Ledger",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "productionApproved": false,
+  "runtimeConnected": false,
+  "gui": "DEFERRED_GUI",
+  "monsters": [
+    {
+      "monster": "M046",
+      "basePath": "design/production-batches/monsters/batch05/M046/base-v2.png",
+      "baseSha256": "800e6cf5bc51f448bb32cecb5f33dec27b16d07f890a22b9457626009db5a83f",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 승인 대기 후보 재제작 금지",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "기존 IDLE이 ribcage breathing 리깅 사용; 별도 BREATH 의미/Manifest 매핑은 Integration 검토 필요, 중복 제작하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BLINK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M046/blink",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "LOOK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M046/look",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Raw source detached Alpha 3942 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M046/cursor_react",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "최초 리깅 시도 실패; 3/3 유지, 재시도 없음",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M046/interact",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "생성 원본 분리 Alpha 11035px; 3/3 한도에서 복구하지 않음",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M046/attack",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Skill Identity와 SpeciesBehavior 승인 미확정; 고유 기술 동작 계약 필요",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "HIT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M046/hit",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "전용 이륙·착지 관절 keypose와 승인된 이동 계약 필요",
+          "runtimeConnected": false
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "날개 없는 지상 체형; 비행/부양 정의 없음",
+          "runtimeConnected": false
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "날개 없는 지상 체형; 비행/부양 정의 없음",
+          "runtimeConnected": false
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "전용 이륙·착지 관절 keypose와 승인된 이동 계약 필요",
+          "runtimeConnected": false
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "돌진/기 모으기 의미와 기술 계약 미확정",
+          "runtimeConnected": false
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "기존 HIT 또는 이번 HIT 후보의 회복 구간을 별도 행동으로 중복 집계하지 않음; Runtime phase 매핑 검토 필요",
+          "runtimeConnected": false
+        }
+      ],
+      "newPngCount": 35,
+      "newValidatedClips": 4
+    },
+    {
+      "monster": "M047",
+      "basePath": "design/production-batches/monsters/batch05/M047/base-v2.png",
+      "baseSha256": "497f77d5a792a23e55d444bd7e0a75a282a372ce59f15c66d4a43b051a7d7954",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 승인 대기 후보 재제작 금지",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "기존 IDLE이 ribcage breathing 리깅 사용; 별도 BREATH 의미/Manifest 매핑은 Integration 검토 필요, 중복 제작하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BLINK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M047/blink",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "LOOK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M047/look",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Raw source detached Alpha 695 pixels; no normalization or rigging; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "생성 원본 분리 Alpha 184px; 3/3 한도에서 복구하지 않음",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M047/rest",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "최초 리깅 시도 실패; 3/3 유지, 재시도 없음",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M047/cursor_react",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "INTERACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M047/interact",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Skill Identity와 SpeciesBehavior 승인 미확정; 고유 기술 동작 계약 필요",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "HIT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M047/hit",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "전용 이륙·착지 관절 keypose와 승인된 이동 계약 필요",
+          "runtimeConnected": false
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "FLY 실패 후보 3/3 보존; 비행/착지 계약 승인 없음, HOVER를 대체 복구로 만들지 않음",
+          "runtimeConnected": false
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "FLY 실패 후보 3/3 보존; 비행/착지 계약 승인 없음, HOVER를 대체 복구로 만들지 않음",
+          "runtimeConnected": false
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "FLY 실패 후보 3/3 보존; 비행/착지 계약 승인 없음, HOVER를 대체 복구로 만들지 않음",
+          "runtimeConnected": false
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "돌진/기 모으기 의미와 기술 계약 미확정",
+          "runtimeConnected": false
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "기존 HIT 또는 이번 HIT 후보의 회복 구간을 별도 행동으로 중복 집계하지 않음; Runtime phase 매핑 검토 필요",
+          "runtimeConnected": false
+        }
+      ],
+      "newPngCount": 35,
+      "newValidatedClips": 4
+    },
+    {
+      "monster": "M048",
+      "basePath": "design/production-batches/monsters/batch05/M048/base-v2.png",
+      "baseSha256": "4e55c83b1d21ceaaa46cfb1a8e825e21f21f693aeeb44cf1ee6edc2d459f1dcf",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 거북 콘셉트와 장갑 사족 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Species Identity 확정 전 신체 기반 이동 동작 보류",
+          "runtimeConnected": false
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "Species Identity 확정 전 신체 기반 이동 동작 보류",
+          "runtimeConnected": false
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "Species Identity 확정 전 신체 기반 이동 동작 보류",
+          "runtimeConnected": false
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Species Identity 확정 전 신체 기반 이동 동작 보류",
+          "runtimeConnected": false
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "돌진/기 모으기 의미와 기술 계약 미확정",
+          "runtimeConnected": false
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "기존 HIT 또는 이번 HIT 후보의 회복 구간을 별도 행동으로 중복 집계하지 않음; Runtime phase 매핑 검토 필요",
+          "runtimeConnected": false
+        }
+      ],
+      "newPngCount": 0,
+      "newValidatedClips": 0
+    },
+    {
+      "monster": "M049",
+      "basePath": "design/production-batches/monsters/batch05/M049/base-v2.png",
+      "baseSha256": "8b7debf323657ed1be68d5227e6c4896639f0b206f4829db6c178ce53a3ac61b",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 승인 대기 후보 재제작 금지",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BLINK",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "LOOK",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "INTERACT",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "HIT",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "Species Identity 불일치: 펭귄 콘셉트와 어류형 꼬리·주둥이 BASE",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Species Identity 확정 전 신체 기반 이동 동작 보류",
+          "runtimeConnected": false
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "Species Identity 확정 전 신체 기반 이동 동작 보류",
+          "runtimeConnected": false
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "Species Identity 확정 전 신체 기반 이동 동작 보류",
+          "runtimeConnected": false
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Species Identity 확정 전 신체 기반 이동 동작 보류",
+          "runtimeConnected": false
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "돌진/기 모으기 의미와 기술 계약 미확정",
+          "runtimeConnected": false
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "기존 HIT 또는 이번 HIT 후보의 회복 구간을 별도 행동으로 중복 집계하지 않음; Runtime phase 매핑 검토 필요",
+          "runtimeConnected": false
+        }
+      ],
+      "newPngCount": 0,
+      "newValidatedClips": 0
+    },
+    {
+      "monster": "M050",
+      "basePath": "design/production-batches/monsters/batch05/M050/base-v2.png",
+      "baseSha256": "17c76efd14ee01fb342bb99e30ecb25cfd7a1ff2d557aa3bf82aee84486a35fd",
+      "personality": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "movementProfile": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "speciesBehavior": {
+        "status": "NOT_VERIFIED",
+        "runtimeApproved": false
+      },
+      "productionSpeciesId": null,
+      "actions": [
+        {
+          "action": "IDLE",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 승인 대기 후보 재제작 금지",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BREATH",
+          "status": "BLOCKED",
+          "reason": "기존 IDLE이 ribcage breathing 리깅 사용; 별도 BREATH 의미/Manifest 매핑은 Integration 검토 필요, 중복 제작하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "BLINK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M050/blink",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "LOOK",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M050/look",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "MOVE",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "TURN",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "REST",
+          "status": "BLOCKED",
+          "reason": "생성 원본 분리 Alpha 5250px; 3/3 한도에서 복구하지 않음",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M050/rest",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SLEEP",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M050/cursor_react",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "INTERACT",
+          "status": "CANDIDATE_AUTOMATED_PASS",
+          "reason": "",
+          "candidatePath": "design/production-batches/LUMA-ASSET-13/M050/interact",
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "ATTACK",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "status": "BLOCKED",
+          "reason": "Skill Identity와 SpeciesBehavior 승인 미확정; 고유 기술 동작 계약 필요",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "HIT",
+          "status": "EXISTING_CANDIDATE_PRESERVED",
+          "reason": "기존 승인 대기 후보 재제작 금지",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "VICTORY",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "DEFEAT",
+          "status": "BLOCKED",
+          "reason": "기존 국소 리깅만으로 전신 관절·시점 전환 보장 불가; 종 정체성을 유지하는 전용 관절 keypose 필요. 단순 이동/확대로 완료하지 않음",
+          "candidatePath": null,
+          "productionApproved": false,
+          "runtimeConnected": false
+        },
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "전용 이륙·착지 관절 keypose와 승인된 이동 계약 필요",
+          "runtimeConnected": false
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "날개 없는 지상 체형; 비행/부양 정의 없음",
+          "runtimeConnected": false
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "날개 없는 지상 체형; 비행/부양 정의 없음",
+          "runtimeConnected": false
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "전용 이륙·착지 관절 keypose와 승인된 이동 계약 필요",
+          "runtimeConnected": false
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "돌진/기 모으기 의미와 기술 계약 미확정",
+          "runtimeConnected": false
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "기존 HIT 또는 이번 HIT 후보의 회복 구간을 별도 행동으로 중복 집계하지 않음; Runtime phase 매핑 검토 필요",
+          "runtimeConnected": false
+        }
+      ],
+      "newPngCount": 35,
+      "newValidatedClips": 4
+    }
+  ],
+  "requests": [
+    {
+      "target": "Completion Ledger",
+      "request": "담당 5종의 후보 경로, 검증 결과와 BLOCKED 사유를 검토 후 기존 Ledger에 반영. 완료/승인으로 승격 금지."
+    },
+    {
+      "target": "Creature Review Catalog",
+      "request": "신규 후보를 기존 검토 화면에 추가; 공유 파일을 이 PR에서 직접 수정하지 않음. refresh-inventory/refresh-coverage는 공유 Ledger를 쓰므로 통합 담당자가 실행."
+    },
+    {
+      "target": "Animation Manifest / Production Registry",
+      "request": "Identity, Artwork, natural motion 및 native GUI 승인 후에만 별도 통합. 현재 매핑·등록 요청은 승인 대기."
+    }
+  ]
+}

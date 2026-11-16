@@ -1,0 +1,606 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.25
+   Compiling quote v1.0.47
+   Compiling libc v0.2.189
+   Compiling syn v3.0.6
+   Compiling serde_core v1.0.229
+   Compiling synstructure v0.14.0
+   Compiling zerofrom-derive v0.1.8
+   Compiling zerofrom v0.1.8
+   Compiling yoke-derive v0.8.3
+   Compiling serde_derive v1.0.229
+   Compiling zerovec-derive v0.11.6
+   Compiling displaydoc v0.2.7
+   Compiling memchr v2.8.3
+   Compiling syn v2.0.119
+   Compiling cfg-if v1.0.5
+   Compiling itoa v1.0.18
+   Compiling writeable v0.6.4
+   Compiling litemap v0.8.3
+   Compiling siphasher v1.0.3
+   Compiling utf8_iter v1.0.4
+   Compiling phf_shared v0.13.1
+   Compiling icu_normalizer_data v2.3.0
+   Compiling icu_properties_data v2.3.0
+   Compiling fastrand v2.5.0
+   Compiling phf_generator v0.13.1
+   Compiling stable_deref_trait v1.2.1
+   Compiling shlex v2.0.1
+   Compiling zmij v1.0.23
+   Compiling find-msvc-tools v0.1.12
+   Compiling cc v1.4.6
+   Compiling smallvec v1.16.1
+   Compiling serde v1.0.229
+   Compiling yoke v0.8.3
+   Compiling bytes v1.12.1
+   Compiling zerovec v0.11.8
+   Compiling getrandom v0.4.3
+   Compiling phf_macros v0.13.1
+   Compiling http v1.5.0
+   Compiling time-core v0.1.9
+   Compiling winnow v1.0.4
+   Compiling num-conv v0.2.2
+   Compiling toml_parser v1.1.3+spec-1.1.0
+   Compiling tinystr v0.8.4
+   Compiling phf_codegen v0.13.1
+   Compiling bitflags v2.13.2
+   Compiling deranged v0.5.8
+   Compiling log v0.4.34
+   Compiling ident_case v1.0.1
+   Compiling serde_json v1.0.151
+   Compiling powerfmt v0.2.0
+   Compiling toml_writer v1.1.2+spec-1.1.0
+   Compiling typeid v1.0.3
+   Compiling strsim v0.11.1
+   Compiling darling_core v0.24.1
+   Compiling icu_locale_core v2.3.0
+   Compiling potential_utf v0.1.6
+   Compiling zerotrie v0.2.5
+   Compiling objc2-exception-helper v0.1.1
+   Compiling autocfg v1.5.1
+   Compiling byteorder v1.5.0
+   Compiling thiserror v2.0.20
+   Compiling parking_lot_core v0.9.12
+   Compiling erased-serde v0.4.10
+   Compiling darling_macro v0.24.1
+   Compiling icu_provider v2.3.1
+   Compiling icu_collections v2.3.0
+   Compiling aho-corasick v1.1.5
+   Compiling thiserror-impl v2.0.20
+   Compiling regex-syntax v0.8.11
+   Compiling new_debug_unreachable v1.0.6
+   Compiling scopeguard v1.2.0
+   Compiling version_check v0.9.5
+   Compiling thiserror v1.0.69
+   Compiling unic-char-range v0.9.0
+   Compiling unic-common v0.9.0
+   Compiling fnv v1.0.7
+   Compiling unic-ucd-version v0.9.0
+   Compiling unic-char-property v0.9.0
+   Compiling lock_api v0.4.14
+   Compiling regex-automata v0.4.18
+   Compiling darling v0.24.1
+   Compiling phf v0.13.1
+   Compiling thiserror-impl v1.0.69
+   Compiling string_cache_codegen v0.6.1
+   Compiling alloc-no-stdlib v2.0.4
+   Compiling equivalent v1.0.2
+   Compiling hashbrown v0.17.1
+   Compiling objc2 v0.6.4
+   Compiling base64 v0.23.1
+   Compiling precomputed-hash v0.1.1
+   Compiling indexmap v2.14.2
+   Compiling alloc-stdlib v0.2.4
+   Compiling web_atoms v0.2.6
+   Compiling regex v1.13.1
+   Compiling parking_lot v0.12.5
+   Compiling serde_with_macros v3.23.0
+   Compiling unic-ucd-ident v0.9.0
+   Compiling icu_normalizer v2.3.0
+   Compiling icu_properties v2.3.0
+   Compiling quick-xml v0.42.0
+   Compiling serde_spanned v1.1.1
+   Compiling objc2-encode v4.1.0
+   Compiling anyhow v1.0.104
+   Compiling idna_adapter v1.2.2
+   Compiling string_cache v0.9.0
+   Compiling brotli-decompressor v5.0.3
+   Compiling semver v1.0.28
+   Compiling dtoa v1.0.11
+   Compiling ctor-proc-macro v0.0.7
+   Compiling same-file v1.0.6
+   Compiling dunce v1.0.5
+   Compiling percent-encoding v2.3.2
+   Compiling ctor v0.8.0
+   Compiling form_urlencoded v1.2.2
+   Compiling walkdir v2.5.0
+   Compiling dtoa-short v0.3.5
+   Compiling brotli v8.0.4
+   Compiling idna v1.1.0
+   Compiling tendril v0.5.1
+   Compiling indexmap v1.9.3
+   Compiling selectors v0.36.1
+   Compiling uuid v1.26.1
+   Compiling cssparser-macros v0.6.1
+   Compiling derive_more-impl v2.1.1
+   Compiling toml_datetime v1.1.1+spec-1.1.0
+   Compiling glob v0.3.4
+   Compiling camino v1.2.6
+   Compiling derive_more v2.1.1
+   Compiling toml v1.1.6+spec-1.1.0
+   Compiling cssparser v0.36.0
+   Compiling markup5ever v0.38.0
+   Compiling url v2.5.8
+   Compiling swift-rs v1.0.8
+   Compiling serde_derive_internals v0.29.1
+   Compiling servo_arc v0.4.3
+   Compiling hashbrown v0.12.3
+   Compiling schemars v0.8.22
+   Compiling bit-vec v0.8.0
+   Compiling simd-adler32 v0.3.10
+   Compiling rustc-hash v2.1.3
+   Compiling bit-set v0.8.0
+   Compiling schemars_derive v0.8.22
+   Compiling html5ever v0.38.0
+   Compiling cfb v0.7.3
+   Compiling block2 v0.6.2
+   Compiling objc2-core-foundation v0.3.2
+   Compiling jsonptr v0.6.3
+   Compiling time v0.3.55
+   Compiling cargo-platform v0.1.9
+   Compiling option-ext v0.2.0
+   Compiling crc32fast v1.5.2
+   Compiling dyn-clone v1.0.20
+   Compiling adler2 v2.0.1
+   Compiling base64 v0.21.7
+   Compiling pin-project-lite v0.2.17
+   Compiling foldhash v0.2.0
+   Compiling dom_query v0.27.0
+   Compiling plist v1.10.1
+   Compiling dirs-sys v0.5.0
+   Compiling cargo_metadata v0.19.2
+   Compiling objc2-foundation v0.3.2
+   Compiling serde-untagged v0.1.9
+   Compiling json-patch v3.0.1
+   Compiling infer v0.19.0
+   Compiling urlpattern v0.3.0
+   Compiling serde_with v3.23.0
+   Compiling generic-array v0.14.7
+   Compiling once_cell v1.21.4
+   Compiling tauri-utils v2.9.3
+   Compiling objc2-app-kit v0.3.2
+   Compiling dirs v6.0.0
+   Compiling miniz_oxide v0.9.1
+   Compiling rustc_version v0.4.1
+   Compiling time-macros v0.2.32
+   Compiling toml_datetime v0.7.5+spec-1.1.0
+   Compiling futures-core v0.3.34
+   Compiling core-foundation-sys v0.8.7
+   Compiling typenum v1.20.1
+   Compiling winnow v0.7.15
+   Compiling toml v0.9.12+spec-1.1.0
+   Compiling embed-resource v3.0.11
+   Compiling flate2 v1.1.10
+   Compiling miniz_oxide v0.8.9
+   Compiling fdeflate v0.3.7
+   Compiling mio v1.2.3
+   Compiling socket2 v0.6.5
+   Compiling crossbeam-utils v0.8.23
+   Compiling heck v0.5.0
+   Compiling tokio v1.53.1
+   Compiling tauri-winres v0.3.6
+   Compiling cargo_toml v0.22.3
+   Compiling cookie v0.18.2
+   Compiling dpi v0.1.2
+   Compiling futures-sink v0.3.34
+   Compiling raw-window-handle v0.6.2
+   Compiling tauri-build v2.6.3
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling core-foundation v0.10.1
+   Compiling foreign-types-macros v0.2.4
+   Compiling foreign-types-shared v0.3.1
+   Compiling base64 v0.22.1
+   Compiling bitflags v1.3.2
+   Compiling png v0.17.16
+   Compiling foreign-types v0.5.0
+   Compiling core-graphics-types v0.2.0
+   Compiling digest v0.10.7
+   Compiling crossbeam-channel v0.5.17
+   Compiling objc2-web-kit v0.3.2
+   Compiling http-body v1.1.0
+   Compiling cpufeatures v0.2.17
+   Compiling slab v0.4.12
+   Compiling futures-io v0.3.34
+   Compiling wry v0.55.1
+   Compiling httparse v1.10.1
+   Compiling tauri-runtime v2.11.3
+   Compiling futures-task v0.3.34
+   Compiling futures-util v0.3.34
+   Compiling sha2 v0.10.9
+   Compiling core-graphics v0.25.0
+   Compiling ico v0.5.0
+   Compiling tauri v2.11.5
+   Compiling tracing-core v0.1.36
+   Compiling dispatch2 v0.3.1
+   Compiling tracing-attributes v0.1.31
+   Compiling tower-service v0.3.3
+   Compiling try-lock v0.2.5
+   Compiling unicode-segmentation v1.13.3
+   Compiling tauri-runtime-wry v2.11.4
+   Compiling getrandom v0.3.4
+   Compiling keyboard-types v0.7.0
+   Compiling want v0.3.1
+   Compiling tracing v0.1.44
+   Compiling tao v0.35.3 (/Users/jinseongdae/.codex/worktrees/assets-m061-m065/New project/src-tauri/vendor/tao)
+warning: unused import: `NSString`
+  --> vendor/tao/src/platform_impl/macos/monitor.rs:23:53
+   |
+23 | use objc2_foundation::{ns_string, MainThreadMarker, NSString, NSUInteger};
+   |                                                     ^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `DispatchQueueAttr`
+  --> vendor/tao/src/platform_impl/macos/util/async.rs:11:32
+   |
+11 | use dispatch2::{DispatchQueue, DispatchQueueAttr};
+   |                                ^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated static `objc2_app_kit::NSKeyUp`
+  --> vendor/tao/src/platform_impl/macos/app.rs:38:30
+   |
+38 |     if event_type == appkit::NSKeyUp
+   |                              ^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated static `objc2_app_kit::NSWindowFullScreenButton`: The standard window button for NSWindowFullScreenButton is always nil; use NSWindowZoomButton instead
+  --> vendor/tao/src/platform_impl/macos/window.rs:56:57
+   |
+56 |   NSWindow, NSWindowButton, NSWindowCollectionBehavior, NSWindowFullScreenButton,
+   |                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated static `objc2_app_kit::NSWindowFullScreenButton`: The standard window button for NSWindowFullScreenButton is always nil; use NSWindowZoomButton instead
+   --> vendor/tao/src/platform_impl/macos/window.rs:274:11
+    |
+274 |           NSWindowFullScreenButton,
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated static `objc2_app_kit::NSFilenamesPboardType`: Create multiple pasteboard items with NSPasteboardTypeFileURL or kUTTypeFileURL instead
+   --> vendor/tao/src/platform_impl/macos/window.rs:577:75
+    |
+577 |       ns_window.registerForDraggedTypes(&NSArray::arrayWithObject(appkit::NSFilenamesPboardType));
+    |                                                                           ^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated static `objc2_app_kit::NSFilenamesPboardType`: Create multiple pasteboard items with NSPasteboardTypeFileURL or kUTTypeFileURL instead
+   --> vendor/tao/src/platform_impl/macos/window_delegate.rs:424:61
+    |
+424 |     unsafe { NSPasteboard::propertyListForType(&pb, appkit::NSFilenamesPboardType) }.unwrap();
+    |                                                             ^^^^^^^^^^^^^^^^^^^^^
+
+warning: use of deprecated static `objc2_app_kit::NSFilenamesPboardType`: Create multiple pasteboard items with NSPasteboardTypeFileURL or kUTTypeFileURL instead
+   --> vendor/tao/src/platform_impl/macos/window_delegate.rs:458:61
+    |
+458 |     unsafe { NSPasteboard::propertyListForType(&pb, appkit::NSFilenamesPboardType) }.unwrap();
+    |                                                             ^^^^^^^^^^^^^^^^^^^^^
+
+   Compiling tauri-codegen v2.6.3
+warning: unnecessary `unsafe` block
+   --> vendor/tao/src/platform_impl/macos/app_delegate.rs:140:14
+    |
+140 |   let urls = unsafe {
+    |              ^^^^^^ unnecessary `unsafe` block
+    |
+    = note: `#[warn(unused_unsafe)]` (part of `#[warn(unused)]`) on by default
+
+warning: unnecessary `unsafe` block
+   --> vendor/tao/src/platform_impl/macos/event.rs:165:21
+    |
+165 |     let modifiers = unsafe { NSEvent::modifierFlags(ns_event) };
+    |                     ^^^^^^ unnecessary `unsafe` block
+
+warning: unnecessary `unsafe` block
+   --> vendor/tao/src/platform_impl/macos/event.rs:307:15
+    |
+307 |   let flags = unsafe { NSEvent::modifierFlags(event) };
+    |               ^^^^^^ unnecessary `unsafe` block
+
+warning: unnecessary `unsafe` block
+   --> vendor/tao/src/platform/macos.rs:419:5
+    |
+419 |     unsafe { objc2_app_kit::NSApplication::sharedApplication(mtm).unhide(None) }
+    |     ^^^^^^ unnecessary `unsafe` block
+
+warning: methods `set_badge_count` and `set_badge_label` are never used
+   --> vendor/tao/src/platform_impl/macos/event_loop.rs:127:10
+    |
+ 86 | impl<T: 'static> EventLoopWindowTarget<T> {
+    | ----------------------------------------- methods in this implementation
+...
+127 |   pub fn set_badge_count(&self, count: Option<i64>, _desktop_filename: Option<String>) {
+    |          ^^^^^^^^^^^^^^^
+...
+132 |   pub fn set_badge_label(&self, label: Option<String>) {
+    |          ^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: field `0` is never read
+ --> vendor/tao/src/platform_impl/macos/icon.rs:8:25
+  |
+8 | pub struct PlatformIcon(RgbaIcon);
+  |            ------------ ^^^^^^^^
+  |            |
+  |            field in this struct
+  |
+  = help: consider removing this field
+  = note: `PlatformIcon` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: function `yes` is never used
+   --> vendor/tao/src/platform_impl/macos/util/mod.rs:126:19
+    |
+126 | pub extern "C" fn yes(_: &Object, _: Sel) -> BOOL {
+    |                   ^^^
+
+warning: field `saved_desktop_display_mode` is never read
+   --> vendor/tao/src/platform_impl/macos/window.rs:473:7
+    |
+453 | pub struct SharedState {
+    |            ----------- field in this struct
+...
+473 |   pub saved_desktop_display_mode: Option<(CGDisplay, CGDisplayMode)>,
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: field `inner_rect` is never read
+   --> vendor/tao/src/platform_impl/macos/window.rs:510:7
+    |
+502 | pub struct UnownedWindow {
+    |            ------------- field in this struct
+...
+510 |   pub inner_rect: Option<PhysicalSize<u32>>,
+    |       ^^^^^^^^^^
+
+warning: function `hit_test` is never used
+    --> vendor/tao/src/window.rs:1665:15
+     |
+1665 | pub(crate) fn hit_test(
+     |               ^^^^^^^^
+
+warning: `tao` (lib) generated 18 warnings (run `cargo fix --lib -p tao` to apply 2 suggestions)
+   Compiling futures-channel v0.3.34
+   Compiling png v0.18.1
+   Compiling sync_wrapper v1.0.2
+   Compiling num-traits v0.2.19
+   Compiling serialize-to-javascript-impl v0.1.2
+   Compiling tower-layer v0.3.3
+   Compiling atomic-waker v1.1.2
+   Compiling hyper v1.11.1
+   Compiling muda v0.19.3
+   Compiling tower v0.5.3
+   Compiling serialize-to-javascript v0.1.2
+   Compiling tauri-macros v2.6.3
+   Compiling window-vibrancy v0.6.0
+   Compiling serde_repr v0.1.21
+   Compiling embed_plist v1.2.2
+   Compiling mime v0.3.17
+   Compiling ipnet v2.12.2
+   Compiling hyper-util v0.1.20
+   Compiling tower-http v0.6.11
+   Compiling http-body-util v0.1.5
+   Compiling luma-spike v0.1.0 (/Users/jinseongdae/.codex/worktrees/assets-m061-m065/New project/src-tauri)
+   Compiling iana-time-zone v0.1.65
+   Compiling chrono v0.4.45
+   Compiling reqwest v0.13.5
+   Compiling tauri-plugin-single-instance v2.4.4
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2m 07s
+     Running unittests src/main.rs (src-tauri/target/debug/deps/luma_spike-975d9f42de3f0f2d)
+
+running 205 tests
+test backend::alpha_vertical_slice::live_alpha_vertical_slice ... ignored, actual isolated PostgreSQL16/bootJar; use scripts/analysis/run_alpha_vertical_slice.py
+test backend::companion_interaction::tests::live_companion_bond_worker_slice ... ignored, requires fresh isolated Spring/PostgreSQL; LUMA_GAME_SERVER_URL and LUMA_BOND_LIVE_PHASE=fresh/restored
+test backend::discovery::tests::live_discovery_restart_slice ... ignored, requires isolated live Discovery Spring/PostgreSQL; run before and after actual Spring restart
+test backend::evolution::tests::explicit_request_guard_and_failure_do_not_evolve ... ok
+test backend::evolution::tests::evolution_menu_survives_pip_despawn_and_closes_explicitly ... ok
+test backend::evolution::tests::live_evolution_world_slice ... ignored, requires isolated Spring Boot/PostgreSQL fixture; see docs/evolution-v01.md
+test backend::evolution::tests::live_nebla_natural_production_trace ... ignored, fresh isolated fixed-RNG Spring/PostgreSQL required; no progression SQL writes
+test backend::discovery::tests::malformed_projection_and_masking_are_rejected ... ok
+test backend::evolution::tests::command_requires_real_revision_and_reuses_ambiguous_intent ... ok
+test backend::evolution::tests::acknowledged_command_plays_once_then_next_user_action_has_new_uuid ... ok
+test backend::battle::skill_tests::stale_replay_cannot_rewind_current_hp_or_turn ... ok
+test backend::battle::skill_tests::native_skill_command_uses_server_availability_and_unique_identity ... ok
+test backend::discovery::tests::stale_snapshot_and_late_discovery_never_downgrade_capture ... ok
+test backend::evolution::tests::malformed_identity_fails_closed ... ok
+test backend::evolution::tests::legacy_compatibility_requires_missing_revision_and_original_moa_scope ... ok
+test backend::evolution::tests::receipt_confirmation_does_not_restore_an_old_selection_or_replay_animation ... ok
+test backend::evolution::tests::restart_and_retry_restore_stage_two_without_replaying ... ok
+test backend::evolution::tests::stage_three_acknowledgement_transition_restart_and_retry ... ok
+test backend::companion_interaction::tests::server_ack_only_cooldown_silent_and_feedback_expires ... ok
+test backend::evolution::tests::success_only_timeline_and_position_preservation ... ok
+test backend::companion_interaction::tests::malformed_award_identity_and_timestamp_are_rejected ... ok
+test backend::evolution::tests::retry_presentation_exposes_presence_without_command_identity ... ok
+test backend::items::tests::charm_presentation_has_no_local_effect_application ... ok
+test backend::items::tests::berry_actual_bond_presentation ... ok
+test backend::items::tests::invalid_context_and_codes_fail_closed ... ok
+test backend::evolution::tests::server_status_mapping_never_recalculates_requirements ... ok
+test backend::items::tests::live_berry_evolution_world_slice ... ignored, requires isolated fixture Lv3 Bond4 and >=30G; LUMA_LIVE_TEST_URL and LUMA_GAME_SERVER_URL
+test backend::items::tests::effect_state_deserializes_after_restart ... ok
+test backend::items::tests::live_item_economy_world_slice ... ignored, requires fresh isolated PG/Spring fixture with success RNG; LUMA_LIVE_TEST_URL
+test backend::items::tests::loading_guard_and_no_mutation_retry ... ok
+test backend::items::tests::potion_actual_heal_presentation ... ok
+test backend::items::tests::purchase_server_gold_and_quantity_win ... ok
+test backend::items::tests::shop_inventory_wire_contract ... ok
+test backend::items::tests::malformed_server_values_do_not_apply ... ok
+test backend::items::tests::item_use_post_cannot_supply_effect_magnitude ... ok
+test backend::items::tests::purchase_failure_maps_safe_domain_error ... ok
+test backend::items::tests::purchase_post_contains_only_identifiers_and_quantity ... ok
+test backend::tests::bootstrap_http_and_world_storage ... ok
+test backend::evolution::tests::http_post_has_no_body_and_only_server_success_changes_identity ... ok
+test backend::companion_interaction::tests::http_command_is_bodyless_and_validated ... ok
+test backend::tests::live_battle_capture_reward_world_slice ... ignored, requires isolated live Spring Boot/PostgreSQL, LUMA_LIVE_TEST_URL
+test backend::tests::live_capture_failure_defeat_world_slice ... ignored, requires test-only LiveValidationServer with failure RNG
+test backend::tests::live_postgres_server_to_desktop_world_vertical_slice ... ignored, requires a running Spring Boot server and dedicated test PostgreSQL
+test backend::tests::passive_worker_error_backoff_is_bounded_and_success_restores_existing_poll_interval ... ok
+test backend::tests::loading_guard_server_wins_and_terminal_presentation ... ok
+test backend::tests::battle_response_suspends_original_lease_before_reconciliation ... ok
+test backend::tests::configuration_rejects_remote_origins_and_redirects ... ok
+test backend::tests::battle_start_and_attack_mapping_use_empty_body ... ok
+test backend::tests::post_has_no_client_selection_fields_and_maps_response ... ok
+test backend::tests::resolution_does_not_ignore_a_different_current_encounter ... ok
+test backend::tests::active_battle_suspends_visual_ttl_and_server_resolution_wins ... ok
+test backend::tests::resolution_reconciles_terminal_before_retrying_lost_ignore ... ok
+test backend::tests::unavailable_and_invalid_json_leave_local_companion_running ... ok
+test backend::tests::active_lookup_no_content_expires_server_visual ... ok
+test behaviors::monster_tests::bubu_jump_batch_uses_existing_apex_band_boundaries ... ok
+test backend::tests::capture_collection_and_ignore_mapping ... ok
+test backend::tests::spawn_create_one_empty_post_and_reconcile_is_get_only ... ok
+test backend::tests::debug_pip_cannot_reuse_a_resolved_server_battle ... ok
+test backend::tests::pip_mapping_reuse_expiry_and_debug_separation ... ok
+test backend::tests::unknown_invalid_and_network_response_do_not_mutate_presentation ... ok
+test behaviors::monster_tests::battle_interaction_drag_suspend_resume_terminal_never_resumes ... ok
+test backend::tests::unknown_monster_profile_and_expired_lease_do_not_spawn ... ok
+test behaviors::monster_tests::bubu_jump_batch_playful_short_burst_native_phases_ground_and_facing ... ok
+test behaviors::monster_tests::floating_batch_timid_avoidance_emits_active_completion_and_native_facing ... ok
+test behaviors::monster_tests::noct_edge_batch_timid_avoidance_boundary_reversal_and_facing_retention ... ok
+test behaviors::tests::area_change_and_sleep ... ok
+test behaviors::tests::click_reaction ... ok
+test behaviors::tests::drag_clamps_and_recovers ... ok
+test behaviors::tests::ground_alignment_after_drag_and_visible_frame_change ... ok
+test behaviors::tests::pip_lifecycle ... ok
+test behaviors::tests::pip_waits_for_drag_release_then_reaction_expires ... ok
+test collection_dex::tests::discovery_is_deduplicated_and_capture_preserves_other_records ... ok
+test behaviors::monster_tests::curious_jump_lands_before_pausing_in_stop_radius ... ok
+test collection_dex::tests::unloaded_empty_failure_retry_and_retained_snapshot ... ok
+test companion::tests::cumulative_choice_boundaries_and_zero_weights ... ok
+test companion::tests::cursor_nearby_looks_and_tracks_direction_with_cooldown ... ok
+test behaviors::monster_tests::caplet_sleep_reuses_decisions_keeps_position_and_wakes ... ok
+test companion::tests::decision_memory_changes_only_at_autonomous_boundaries ... ok
+test companion::tests::drag_out_and_back_is_not_a_click ... ok
+test companion::tests::drag_suppresses_automatic_events_and_release_is_idle ... ok
+test companion::tests::excursions_cancel_on_drag_cursor_and_windows ... ok
+test companion::tests::fifteen_stage_policies_have_distinct_preparation_and_recovery ... ok
+test companion::tests::idle_to_each_autonomous_behavior ... ok
+test companion::tests::interaction_and_drag_interrupt_growth_preparation_and_recovery ... ok
+test companion::tests::jump_and_free2d_are_walking_intents_then_idle_on_ground ... ok
+test companion::tests::living_form_coverage_and_stage_policy ... ok
+test companion::tests::living_identity_defers_until_boundary_and_cursor_turn_has_deadband ... ok
+test companion::tests::movement_target_clamps_both_edges_with_center_anchor ... ok
+test companion::tests::only_completed_click_emits_one_relationship_intent ... ok
+test companion::tests::personality_weights_and_sleep_eligibility ... ok
+test companion::tests::personality_rejects_out_of_range_master_values - should panic ... ok
+test companion::tests::preparation_holds_position_then_walk_recovers_before_next_decision ... ok
+test companion::tests::reaction_interrupts_resting_states_and_returns_idle ... ok
+test companion::tests::recent_selection_preserves_sleep_gate_and_single_eligible_action ... ok
+test companion::tests::seeded_excursions_repeat_and_cooldown_prevents_continuous_airborne_motion ... ok
+test companion::tests::sleep_requires_long_quiet_and_does_not_move_or_follow_cursor ... ok
+test companion::tests::species_decisions_differ_without_enabling_missing_art ... ok
+test companion::tests::transition_policy_rejects_autonomous_drag_and_non_idle_decisions ... ok
+test companion::tests::unknown_windows_keep_ground_and_movement_rng_does_not_consume_behavior_rng ... ok
+test behaviors::monster_tests::timid_near_avoids_and_reconciliation_preserves_controller ... ok
+test companion::tests::walking_and_drag_clamp_to_negative_and_changed_work_area ... ok
+test desktop::tests::actual_controller_drag_release_returns_to_safe_ground ... ok
+test desktop::tests::auto_hide_and_metadata_loss_do_not_lower_ground ... ok
+test desktop::tests::full_visible_frame_with_bottom_overlay_uses_dock_and_fallback ... ok
+test desktop::tests::hidden_or_fullscreen_proxy_never_means_ground_eight ... ok
+test desktop::tests::left_and_right_dock_edges_are_reserved ... ok
+test desktop::tests::negative_monitor_and_monitor_change_keep_separate_history ... ok
+test desktop::tests::safe_ground_bounds_for_different_heights_and_drag_down ... ok
+test discovery_sync::tests::bounded_deduplicated_retry_and_refresh ... ok
+test geometry::tests::different_heights_share_ground_and_anchor_roundtrips ... ok
+test geometry::tests::dock_sides_negative_monitors_and_all_edges ... ok
+test geometry::tests::impossible_viewport_is_explicit_and_does_not_panic ... ok
+test geometry::tests::native_projection_is_integral_and_stays_inside_fractional_edges ... ok
+test monster_behavior::tests::bubu_jump_batch_playful_shortburst_decision_unchanged ... ok
+test monster_behavior::tests::caplet_expression_is_deterministic_and_does_not_change_sleepy_policy ... ok
+test monster_behavior::tests::ground_batch_behavior_decisions_keep_existing_profiles ... ok
+test monster_behavior::tests::hysteresis_stop_resume_cooldown_and_terminal ... ok
+test collection_dex::tests::server_encounter_discovers_but_debug_spawn_does_not_and_dex_stays_open ... ok
+test companion::tests::seeded_replay_and_idle_interval_are_deterministic ... ok
+test monster_behavior::tests::living_species_are_distinct_bounded_and_provisional_neutral ... ok
+test monster_behavior::tests::living_ground_speed_still_enters_existing_move_animation ... ok
+test monster_behavior::tests::nova_curious_free2d_approach_and_pause_unchanged ... ok
+test monster_behavior::tests::profiles_and_companion_fallback ... ok
+test monster_behavior::tests::seeded_replay_bias_and_fifteen_controller_tick_budget ... ok
+test monster_behavior::tests::content_profiles_are_independent_of_physics ... ok
+test movement::ambient::tests::all_profiles_obey_windows_cursor_and_constraints ... ok
+test movement::tests::changing_safe_area_cancels_and_lands ... ok
+test movement::tests::completion_static_float_flying_edge_are_deterministic ... ok
+test behaviors::monster_tests::ground_batch_consumers_keep_profiles_ground_facing_and_pause ... ok
+test movement::tests::edge_presentation_source_stays_on_each_side_and_stops_without_corner ... ok
+test movement::tests::facing_deadband_retains_sign_across_stop_jitter_and_invalid_time ... ok
+test movement::tests::free2d_returns_and_all_profiles_stay_inside_different_sizes ... ok
+test movement::tests::free2d_vectors_drive_read_only_speed_and_preserve_vertical_facing ... ok
+test movement::tests::batch1_profiles_fit_existing_entity_bounds ... ok
+test movement::tests::ground_easing_does_not_change_jump_trajectory_or_legacy_motion ... ok
+test movement::tests::ground_preserves_constant_speed ... ok
+test movement::tests::jump_arc_and_exact_ground_return ... ok
+test movement::tests::local_targets_cursor_windows_and_unknown_metadata ... ok
+test movement::tests::jump_animation_tracks_accepted_trajectory_and_cancels_without_false_land ... ok
+test movement::tests::movement_uses_final_desktop_safe_area_not_raw_screen ... ok
+test movement::tests::resized_entity_remains_clamped_and_cancel_stops_motion ... ok
+test movement::tests::opted_in_ground_motion_accelerates_brakes_and_stops_without_overshoot ... ok
+test movement::tests::selection_uses_data_and_allowed_profiles ... ok
+test presentation::animation::companion_tests::only_measured_ground_walking_can_drive_the_supplied_clip ... ok
+test presentation::animation::flight_tests::accepted_vector_telemetry_including_vertical_and_stop ... ok
+test presentation::animation::tests::measured_motion_stationary_jitter_and_discontinuities ... ok
+test presentation::tests::capture_does_not_discard_pending_reward ... ok
+test presentation::tests::bounded_queue_and_adaptive_panel_clamp ... ok
+test presentation::tests::capture_request_success_and_failure_counter ... ok
+test presentation::tests::live_gameplay_visual_sequence ... ignored, requires explicit dedicated live Spring Boot / PostgreSQL test server
+test presentation::tests::level_up_only_from_confirmed_same_companion ... ok
+test presentation::tests::network_error_releases_request_visual ... ok
+test presentation::tests::old_contract_never_guesses_damage ... ok
+test presentation::tests::poll_and_duplicate_do_not_replay ... ok
+test presentation::tests::server_damage_order_and_immutable_hp ... ok
+test presentation::tests::victory_and_reward_expire ... ok
+test qa_seed_tests::opt_in_seed_preserves_default_and_rejects_invalid_input ... ok
+test spawn::assets::tests::missing_corrupt_wrong_species_and_unknown_assets_fail_closed ... ok
+test spawn::dex_adapter::integration_tests::all_movement_wire_profiles_reuse_the_existing_engine_enum ... ok
+test behaviors::monster_tests::unavailable_companion_and_cached_obstacles_fail_safe ... ok
+test spawn::dex_adapter::integration_tests::unsupported_zone_fails_closed_and_lower_corner_has_explicit_mapping ... ok
+test monster_behavior::tests::living_seeded_replay_and_bounded_decision_budget ... ok
+test behaviors::monster_tests::server_monster_facing_follows_accepted_motion_for_all_profiles ... ok
+test spawn::dex_adapter::advanced_contract::readiness_gate_is_independent_of_supported_profiles_and_rarities ... ok
+test backend::evolution::tests::structured_http_retries_identical_payload_for_all_species_and_stages ... ok
+test spawn::dex_adapter::tests::merged_dex_vocabulary_and_pip_compatibility ... ok
+test spawn::runtime::batch1::live_batch1_world_capture_and_collection ... ignored, requires isolated test-only LUMA_TEST_BATCH1 Spring fixture
+test spawn::runtime::advanced::restart_night_restores_same_id_day_resolves_without_new_create_and_backoff ... ok
+test spawn::runtime::advanced::metadata_mismatch_and_unknown_windows_fail_closed_without_discovery ... ok
+test spawn::runtime::batch2::live_batch2_world_capture_and_collection ... ignored, requires isolated test-only LUMA_TEST_BATCH2 Spring fixture
+test spawn::runtime::advanced::edge_left_right_and_blocked_side_preserve_full_bounds ... ok
+test spawn::runtime::advanced::local_night_boundaries_and_any_time_no_server_timezone_mixing ... ok
+test spawn::runtime::advanced::all_advanced_fixtures_route_through_world_with_safe_motion_and_rarity ... ok
+test behaviors::monster_tests::all_fifteen_world_traces_preserve_identity_constraints_and_companion ... ok
+test spawn::runtime::batch3::live_batch3_production ... ignored, requires isolated test-only LUMA_TEST_BATCH3 Spring server and fresh DB
+test spawn::runtime::batch2::missing_asset_unsupported_content_and_unsafe_placement_never_discover ... ok
+test monster_behavior::tests::living_species_preserve_intent_constraints_and_lifecycle ... ok
+test spawn::runtime::batch1::missing_asset_unsupported_content_and_unsafe_placement_never_discover ... ok
+test spawn::runtime::tests::backend_failure_backoff_reconciles_lost_post_before_retry ... ok
+test behaviors::monster_tests::living_all_production_worlds_keep_native_bounds_and_facing ... ok
+test spawn::runtime::tests::live_spawn_encounter_world_slice ... ignored, requires isolated PostgreSQL/Spring fixture and LUMA_GAME_SERVER_URL
+test spawn::runtime::tests::live_spawn_expiration_world_slice ... ignored, requires isolated Spring server; waits for unchanged 60-second server TTL
+test spawn::runtime::tests::debug_is_not_budget_or_discovery_and_authority_replaces_one_visual ... ok
+test spawn::runtime::tests::placement_recovers_locally_and_terminal_reconciliation_releases_budget ... ok
+test spawn::runtime::batch1::all_five_production_placement_movement_identity_and_restart ... ok
+test spawn::runtime::tests::startup_empty_schedule_one_opportunity_and_no_duplicate ... ok
+test spawn::runtime::tests::lease_expiry_never_authorizes_another_post_without_server_confirmation ... ok
+test spawn::runtime::tests::unsupported_content_and_profile_resolve_without_discovery_or_new_post ... ok
+test spawn::runtime::tests::startup_existing_and_restart_restore_without_post ... ok
+test spawn::tests::backend_failure_bounded_backoff_recovery_and_lost_post ... ok
+test spawn::tests::budgets_active_encounter_and_disabled_runtime ... ok
+test spawn::runtime::tests::bounded_placement_retries_keep_identity_and_never_create_another_encounter ... ok
+test spawn::tests::lifecycle_restart_and_authority ... ok
+test spawn::tests::cooldown_seeded_and_no_per_tick_work ... ok
+test spawn::tests::cursor_windows_unknown_and_impossible_placement ... ok
+test spawn::runtime::tests::unknown_environment_does_not_discover_and_battle_occupies_budget ... ok
+test spawn::runtime::tests::confirmed_capture_ignore_expiry_and_defeat_release_budget_after_despawn ... ok
+test spawn::tests::provider_authority_lifetime_and_inactive_conditions ... ok
+test spawn::runtime::batch2::all_five_production_placement_movement_identity_and_restart ... ok
+test spawn::tests::all_zones_negative_monitors_sizes_dock_menu_and_determinism ... ok
+test spawn::runtime::batch3::daytime_night_restore_resolves_same_id_without_create_spam ... ok
+test spawn::runtime::batch3::batch3_both_edges_and_fail_closed_per_species ... ok
+test behaviors::monster_tests::rarity_arrival_holds_behavior_preserves_identity_and_yields_to_battle ... ok
+test spawn::runtime::batch3::batch3_assets_metadata_motion_night_and_restart ... ok
+test backend::tests::release_connection_refused_and_read_timeout_are_bounded_and_sanitized ... ok
+
+test result: ok. 189 passed; 0 failed; 16 ignored; 0 measured; 0 filtered out; finished in 4.01s

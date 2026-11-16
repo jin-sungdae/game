@@ -1,0 +1,38 @@
+{
+  "conceptId": "M021",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M021/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 180,
+    "loop": false
+  },
+  "eyes": [
+    {
+      "x": 177,
+      "y": 136,
+      "rx": 7,
+      "ry": 9,
+      "dx": 0.85
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "독립 one-shot 시선 후보. 외형·정체성·자연스러움은 승인 대기.",
+  "anatomyScope": "기존 안구 내부 국소 시선 이동. Alpha·외곽·머리·귀·몸통·발 고정. 새 눈꺼풀/머리 회전 생성 아님.",
+  "sessionId": "LUMA-ASSET-08",
+  "repairIterations": 3
+}

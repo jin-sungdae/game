@@ -1,0 +1,29 @@
+{
+  "conceptId": "M029",
+  "productionSpeciesId": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch03/M029/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 150,
+    "loop": false
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "personality": "NOT_VERIFIED",
+  "speciesBehavior": "NOT_VERIFIED",
+  "movementProfile": "NOT_VERIFIED",
+  "candidateExpressionIntent": "Listening orientation without inventing a new face view",
+  "repairIterations": 3,
+  "repairLimit": 3
+}

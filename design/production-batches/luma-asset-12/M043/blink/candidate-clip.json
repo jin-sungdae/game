@@ -1,0 +1,93 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M043",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M043/base-v2.png",
+  "sourcePixelSha256": "cb1405fd434916bbb7f5ed8d85dd7ed2c97fef3f4f2d5dd8b211fbfe67d82c23",
+  "reuse": "design/production-batches/action-followup/M002/rig-blink.cjs",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BLINK",
+    "frames": 8,
+    "frameDuration": 90,
+    "loop": false
+  },
+  "parts": [],
+  "eyes": [
+    {
+      "x": 217,
+      "y": 111,
+      "rx": 4,
+      "ry": 3
+    }
+  ],
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "blink_00.png",
+      "pixelSha256": "cb1405fd434916bbb7f5ed8d85dd7ed2c97fef3f4f2d5dd8b211fbfe67d82c23",
+      "partAmounts": [],
+      "eyeClosure": 0
+    },
+    {
+      "file": "blink_01.png",
+      "pixelSha256": "2d36a0c6fb271d342ccb1e7bec0c46cf0e2cddf7c1b39dd19ffaf0bfcbf4ae0f",
+      "partAmounts": [],
+      "eyeClosure": 0.16
+    },
+    {
+      "file": "blink_02.png",
+      "pixelSha256": "cfa42f68597c62e788b01f889e40fb79f21d47acdf1ff3394047a3ae70261002",
+      "partAmounts": [],
+      "eyeClosure": 0.6
+    },
+    {
+      "file": "blink_03.png",
+      "pixelSha256": "2579698f66209b809d31db049b52d119ab70409aca73aa09b69a6966aecea7fe",
+      "partAmounts": [],
+      "eyeClosure": 1
+    },
+    {
+      "file": "blink_04.png",
+      "pixelSha256": "2579698f66209b809d31db049b52d119ab70409aca73aa09b69a6966aecea7fe",
+      "partAmounts": [],
+      "eyeClosure": 0.88
+    },
+    {
+      "file": "blink_05.png",
+      "pixelSha256": "7a8b5fe76635a5fdc59fb651411a2aceb872e1763474a46a6087252e4a186787",
+      "partAmounts": [],
+      "eyeClosure": 0.37
+    },
+    {
+      "file": "blink_06.png",
+      "pixelSha256": "ee9206d8218438052b1e1b57522d1ce239b9d654a1959c8500c2a344932ac8e4",
+      "partAmounts": [],
+      "eyeClosure": 0.08
+    },
+    {
+      "file": "blink_07.png",
+      "pixelSha256": "cb1405fd434916bbb7f5ed8d85dd7ed2c97fef3f4f2d5dd8b211fbfe67d82c23",
+      "partAmounts": [],
+      "eyeClosure": 0
+    }
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "NOT_VERIFIED",
+  "scope": "Local eyelid closure; rigid plates and all non-eye pixels fixed"
+}

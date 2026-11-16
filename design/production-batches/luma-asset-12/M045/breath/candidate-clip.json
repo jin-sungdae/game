@@ -1,0 +1,203 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M045",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M045/base-v2.png",
+  "sourcePixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+  "reuse": "design/production-batches/monsters/batch05/M045/rig-evidence.json",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "BREATH",
+    "frames": 16,
+    "frameDuration": 180,
+    "loop": true
+  },
+  "parts": [
+    {
+      "x": 144,
+      "y": 181,
+      "rx": 17,
+      "ry": 16,
+      "dx": 0.4,
+      "dy": -0.8,
+      "phase": 0,
+      "name": "ribcage-breath"
+    },
+    {
+      "x": 132,
+      "y": 174,
+      "rx": 12,
+      "ry": 11,
+      "dx": -0.2,
+      "dy": -0.4,
+      "phase": -1.047,
+      "name": "shoulder-root"
+    }
+  ],
+  "eyes": [],
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "breath_00.png",
+      "pixelSha256": "baf6ca85189befc49eaf094201452a05fa47b40afe2ccf799159c20eed992851",
+      "partAmounts": [
+        0,
+        0.36237597091712415
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_01.png",
+      "pixelSha256": "27f0f088bc8c14597a3aa1b2b6d5b9e2441bbcf8ce26828bc815fbf1378be5e7",
+      "partAmounts": [
+        0.05518733892931711,
+        0.14973164989022958
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_02.png",
+      "pixelSha256": "4745d736199a4c46d8e48b14127c2a61e0585a4ccdfc22ac6c41e8649227a2df",
+      "partAmounts": [
+        0.212347583639753,
+        0.024666720346968072
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_03.png",
+      "pixelSha256": "f61bdf2e075d0c388cf69096d4f873c5c60108dcbb16fcd45d6c1bf8c70cf47e",
+      "partAmounts": [
+        0.44755451153530984,
+        0.006221184093891504
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_04.png",
+      "pixelSha256": "31795a5d458fdd43217ceed3ab8e0d0c27a874ba68ed5be92e6b22502e0f8806",
+      "partAmounts": [
+        0.7249999999999999,
+        0.09720320681632848
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_05.png",
+      "pixelSha256": "25ced592b2b8ca58f8297fb6c84a1d89a36991b502fbfd7169c89ed7ab8665dc",
+      "partAmounts": [
+        1.0024454884646898,
+        0.2837616003088776
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_06.png",
+      "pixelSha256": "a169754cfb89d02e36270934d48b35f9c1f85604da9eb1510d11f14778eac260",
+      "partAmounts": [
+        1.237652416360247,
+        0.5374945403183466
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_07.png",
+      "pixelSha256": "673b8f743b3ec14c2cd7b53a250ded29936aa1c57d8cb8f1d6510f00978b97ff",
+      "partAmounts": [
+        1.3948126610706828,
+        0.8197734868231227
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_08.png",
+      "pixelSha256": "ea7394e353b0d8caba471dc7e8bd118baf540391606bc837509c2b7316ddd8ec",
+      "partAmounts": [
+        1.45,
+        1.0876240290828758
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_09.png",
+      "pixelSha256": "79b7cb95b22dacd49060c987cc8d00320e69ea647521903fccb5421bf3750474",
+      "partAmounts": [
+        1.394812661070683,
+        1.3002683501097703
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_10.png",
+      "pixelSha256": "74b844797ae68d36b557ff7402af744fa3c3cb803c54e5e21793077c4543f9ce",
+      "partAmounts": [
+        1.2376524163602471,
+        1.4253332796530318
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_11.png",
+      "pixelSha256": "2b0f70100f6e320b30ae5942bdbabc92a9516d4ae0b3365fa6704c02ef04239d",
+      "partAmounts": [
+        1.0024454884646905,
+        1.4437788159061085
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_12.png",
+      "pixelSha256": "f9ceddc829c91dc8bfcd0aaedd9610c744bcb307f919663c266e7ff35cd5c1b2",
+      "partAmounts": [
+        0.7250000000000001,
+        1.3527967931836715
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_13.png",
+      "pixelSha256": "d4ed05f9c67bfb3f9d57d3d14c51330aa3bf8bab9800d806be583e6828ad35ef",
+      "partAmounts": [
+        0.4475545115353097,
+        1.166238399691122
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_14.png",
+      "pixelSha256": "1a0112b00ed5423a47d5157f9d268b3a9897a747c6c701501694207246616ce2",
+      "partAmounts": [
+        0.21234758363975317,
+        0.9125054596816533
+      ],
+      "eyeClosure": 0
+    },
+    {
+      "file": "breath_15.png",
+      "pixelSha256": "24399dea9ec746d51b9d0ce4f9688faba46c31b0948d1ba835dc4ad60947e13c",
+      "partAmounts": [
+        0.05518733892931727,
+        0.6302265131768775
+      ],
+      "eyeClosure": 0
+    }
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "NOT_VERIFIED",
+  "scope": "Local ribcage/shoulder cycle; original face, limbs and silhouette landmarks protected"
+}

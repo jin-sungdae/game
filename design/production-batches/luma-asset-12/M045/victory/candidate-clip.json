@@ -1,0 +1,231 @@
+{
+  "sessionId": "LUMA-ASSET-12",
+  "conceptId": "M045",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M045/base-v2.png",
+  "sourcePixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "VICTORY",
+    "frames": 16,
+    "frameDuration": 180,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "cat-chest-proud-rise",
+      "x": 145,
+      "y": 155,
+      "rx": 17,
+      "ry": 17,
+      "dx": 0.4,
+      "dy": -1.5,
+      "delay": 0
+    },
+    {
+      "name": "cat-ear-prick",
+      "x": 117,
+      "y": 68,
+      "rx": 17,
+      "ry": 23,
+      "dx": -0.5,
+      "dy": -1.2,
+      "delay": 1
+    },
+    {
+      "name": "cat-tail-flourish",
+      "x": 88,
+      "y": 170,
+      "rx": 16,
+      "ry": 20,
+      "dx": -1.6,
+      "dy": -0.8,
+      "delay": 2
+    }
+  ],
+  "eyes": [],
+  "frames": [
+    {
+      "file": "victory_00.png",
+      "pixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+      "partAmounts": [
+        0,
+        0,
+        0
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_01.png",
+      "pixelSha256": "e0916147cd5237a6283cb837e5c25bb24f9e308654f5f0f86276003856ce3dc6",
+      "partAmounts": [
+        0.08,
+        0,
+        0
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_02.png",
+      "pixelSha256": "69400528656e1591c4d8bb16d6a2d983b622df06f12aeab0ce84a48c12215e62",
+      "partAmounts": [
+        0.25,
+        0.08,
+        0
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_03.png",
+      "pixelSha256": "f2d1d290c8207d9184d52802ade5c981e4a236da3d4394538c56940e86e57b94",
+      "partAmounts": [
+        0.58,
+        0.25,
+        0.08
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_04.png",
+      "pixelSha256": "0b49b85a028c785edda85eb4459ef15aee885d822d8ea9e3914abc159cebd9ba",
+      "partAmounts": [
+        0.88,
+        0.58,
+        0.25
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_05.png",
+      "pixelSha256": "aaf57e347076a43768c208424d19ec3a9889d21ae18e13b2a18f5ffd18714c4f",
+      "partAmounts": [
+        1,
+        0.88,
+        0.58
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_06.png",
+      "pixelSha256": "fcccac2c8b961c3d20a4d3c00ba7b0531cfbd576c6beed22b754a41db0190983",
+      "partAmounts": [
+        0.78,
+        1,
+        0.88
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_07.png",
+      "pixelSha256": "5b87bfb238c074bc3168d654f818c9d60bbec93c2dd9ae947113e3f8f4050f40",
+      "partAmounts": [
+        0.42,
+        0.78,
+        1
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_08.png",
+      "pixelSha256": "4215a4bccec85f3b6e7dd65bfd8e978a503f89dac94eaf63fe24dd4bba892dd1",
+      "partAmounts": [
+        0.18,
+        0.42,
+        0.78
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_09.png",
+      "pixelSha256": "778118d6dfc033826238ac23363317b1db302a7fcce7584534da09363c364ddf",
+      "partAmounts": [
+        0.32,
+        0.18,
+        0.42
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_10.png",
+      "pixelSha256": "6dd28b61ddfaed30b97e6f598c2db3bdc99bbae492d1b4550d5a99e07562fe9a",
+      "partAmounts": [
+        0.68,
+        0.32,
+        0.18
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_11.png",
+      "pixelSha256": "d35847b99477f8a4f8e3b59952636eb448e8b50f31c294f6a356070fb3320484",
+      "partAmounts": [
+        0.82,
+        0.68,
+        0.32
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_12.png",
+      "pixelSha256": "6a1b348cf09c7df56db875e2988ed192409a9d533186bc113b4555cdd9bbb571",
+      "partAmounts": [
+        0.6,
+        0.82,
+        0.68
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_13.png",
+      "pixelSha256": "c9aad032d6db8e4594aee2e6ddbd063735865ec7a9587368046c5e5cce93b313",
+      "partAmounts": [
+        0.28,
+        0.6,
+        0.82
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_14.png",
+      "pixelSha256": "a68e982aef2b0a908f15858777e351a248486029666d92442bc13987a8bd9113",
+      "partAmounts": [
+        0.07,
+        0.28,
+        0.6
+      ],
+      "gaze": 0
+    },
+    {
+      "file": "victory_15.png",
+      "pixelSha256": "fa5173943fa86e894a2746944231ac889809d5475f5da79e0e8a26ed00030607",
+      "partAmounts": [
+        0,
+        0,
+        0
+      ],
+      "gaze": 0
+    }
+  ],
+  "wholeImageTransform": false,
+  "reuse": "design/production-batches/monsters/batch05/M045/rig-evidence.json",
+  "scope": "Stationary species-specific double gesture. No jump, battle event or rewards.",
+  "entryContract": "BASE_ONLY",
+  "exitContract": "EXACT_BASE",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "attempt": "INDEPENDENT_FIRST_ATTEMPT_NO_REPAIR",
+  "productionEligible": false,
+  "runtimeEnabled": false,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "MANUAL_REQUIRED",
+  "gui": "DEFERRED_GUI"
+}

@@ -1,0 +1,75 @@
+{
+  "conceptId": "M088",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M088/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "INTERACT",
+    "frames": 8,
+    "frameDuration": 150,
+    "loop": false
+  },
+  "movableRect": [
+    29,
+    60,
+    224,
+    214
+  ],
+  "parts": [
+    {
+      "name": "upper-tendril-incline",
+      "x": 168,
+      "y": 85,
+      "rx": 24,
+      "ry": 22,
+      "dx": -1.1,
+      "dy": 1.3,
+      "samples": [
+        0.02,
+        0.3,
+        0.8,
+        1,
+        0.7,
+        0.4,
+        0.16,
+        0.03
+      ]
+    },
+    {
+      "name": "left-tendril-answer",
+      "x": 57,
+      "y": 178,
+      "rx": 23,
+      "ry": 24,
+      "dx": 1.3,
+      "dy": -1.1,
+      "samples": [
+        0.01,
+        0.05,
+        0.2,
+        0.55,
+        1,
+        0.75,
+        0.32,
+        0.025
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated one-shot candidate, no native event activation",
+  "anatomyScope": "Thorned void knot: central eye and root contacts fixed; two peripheral curled tendrils acknowledge stimulus in sequence.",
+  "behaviorContract": "PROPOSED STATIC restrained interaction; isolated tendril response, no translation or gameplay activation",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes"
+}

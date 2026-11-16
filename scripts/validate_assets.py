@@ -2,8 +2,8 @@
 Default is strict; --allow-missing permits only wholly empty frame directories.
 """
 import argparse
-from functools import lru_cache
 import hashlib
+from functools import lru_cache
 import json
 import re
 import struct
@@ -15,26 +15,30 @@ COUNTS = dict(idle=6, walk=8, sit=4, look=4, sleep=6, react=6)
 
 
 def png_errors(path, require_transparency=False, bounds=None, pixel_digests=None):
-    # Read every time: file replacement, same-size edits and deletions must never use stale evidence.
+    # Read every call: content-keyed caching detects same-path/same-mtime replacements.
+    # The cache is process-local and bounded; no worktree paths or mutable outputs are shared.
     try:
         data = path.read_bytes()
     except OSError as exc:
         return [str(exc)]
-    decode = _png_errors_bytes if len(data) <= 1024 * 1024 else _png_errors_bytes.__wrapped__
-    errors, measured_bounds, measured_digests = decode(
+    errors, measured_bounds, digests = _png_result(
         data, require_transparency, bounds is not None, pixel_digests is not None)
     if bounds is not None:
         bounds.extend(measured_bounds)
     if pixel_digests is not None:
-        pixel_digests.extend(measured_digests)
+        pixel_digests.extend(digests)
     return list(errors)
 
 
-@lru_cache(maxsize=256)
-def _png_errors_bytes(data, require_transparency, want_bounds, want_digests):
-    # Content-keyed, bounded, process-local cache of immutable results, not approval state.
-    bounds = [] if want_bounds else None
-    pixel_digests = [] if want_digests else None
+@lru_cache(maxsize=1024)
+def _png_result(data, require_transparency, need_bounds, need_digests):
+    bounds = [] if need_bounds else None
+    pixel_digests = [] if need_digests else None
+    errors = _decode_png(data, require_transparency, bounds, pixel_digests)
+    return tuple(errors), tuple(bounds or ()), tuple(pixel_digests or ())
+
+
+def _decode_png(data, require_transparency=False, bounds=None, pixel_digests=None):
     errors = []
     try:
         if data[:8] != b'\x89PNG\r\n\x1a\n':
@@ -121,7 +125,7 @@ def _png_errors_bytes(data, require_transparency, want_bounds, want_digests):
                     errors.append('transparent pixels required; fully opaque RGBA is invalid')
     except (OSError, ValueError, struct.error, zlib.error) as exc:
         errors.append(str(exc))
-    return tuple(errors), tuple(bounds) if bounds is not None else (), tuple(pixel_digests) if pixel_digests is not None else ()
+    return errors
 
 
 def validate(root=ROOT, allow_missing=False):

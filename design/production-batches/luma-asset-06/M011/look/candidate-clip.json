@@ -1,0 +1,55 @@
+{
+  "sessionId": "LUMA-ASSET-06",
+  "conceptId": "M011",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch02/M011/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "LOOK",
+    "frames": 8,
+    "frameDuration": 140,
+    "loop": false
+  },
+  "movableRect": [
+    180,
+    104,
+    223,
+    130
+  ],
+  "parts": [
+    {
+      "x": 192,
+      "y": 117,
+      "rx": 10.5,
+      "ry": 11.5,
+      "dx": 0.8
+    },
+    {
+      "x": 217,
+      "y": 119,
+      "rx": 4.5,
+      "ry": 10,
+      "dx": 0.4
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "기존 실패 후보 복구 없음. 독립 신규 후보 최초 제작만 수행. 추가 자동 수정 금지.",
+  "anatomyScope": "기존 gaze rig 재사용. 눈 타원 내부 시선만 수평 이동; 전체 alpha 및 눈 외부 고정.",
+  "identityReview": "HUMAN_REVIEW_REQUIRED",
+  "identityConflict": null,
+  "reusedRig": "design/production-batches/action-followup/M010/rig-look.cjs"
+}

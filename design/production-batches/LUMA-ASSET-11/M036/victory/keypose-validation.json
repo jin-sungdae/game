@@ -1,0 +1,130 @@
+{
+  "action": "VICTORY",
+  "sourceAtlas": "source-keyposes.png",
+  "cell": {
+    "left": 887,
+    "top": 443,
+    "width": 443,
+    "height": 444
+  },
+  "rawPixelSha256": "4f487f3bda69611e26de3643536b5b41173cca58c37debfad3c6655457381e82",
+  "sourceAlpha": {
+    "threshold": 0,
+    "width": 443,
+    "height": 444,
+    "mainPixels": 108122,
+    "mainBounds": [
+      14,
+      24,
+      440,
+      397
+    ],
+    "detachedPixels": 134,
+    "detachedComponents": 98,
+    "detachedAlphaHistogram": {
+      "1": 134
+    },
+    "largestDetached": [
+      {
+        "n": 8,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          438,
+          116,
+          441,
+          118
+        ]
+      },
+      {
+        "n": 4,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          404,
+          106,
+          404,
+          109
+        ]
+      },
+      {
+        "n": 4,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          440,
+          132,
+          441,
+          133
+        ]
+      },
+      {
+        "n": 4,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          25,
+          295,
+          25,
+          298
+        ]
+      },
+      {
+        "n": 3,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          150,
+          42,
+          150,
+          44
+        ]
+      },
+      {
+        "n": 3,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          27,
+          294,
+          27,
+          296
+        ]
+      },
+      {
+        "n": 3,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          199,
+          368,
+          200,
+          369
+        ]
+      },
+      {
+        "n": 2,
+        "minA": 1,
+        "maxA": 1,
+        "bounds": [
+          29,
+          1,
+          29,
+          2
+        ]
+      }
+    ]
+  },
+  "edgePixels": 3,
+  "errors": [
+    "RAW_DETACHED_ALPHA",
+    "CELL_EDGE_CLIPPING"
+  ],
+  "status": "VALIDATION_FAILED",
+  "normalizationPerformed": false,
+  "riggingPerformed": false,
+  "productionEligible": false,
+  "appearanceReview": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3
+}

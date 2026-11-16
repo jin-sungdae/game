@@ -1,0 +1,114 @@
+{
+  "sessionId": "LUMA-ASSET-16",
+  "conceptId": "M062",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch07/M062/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "anchorApproval": "NOT_APPROVED",
+  "clip": {
+    "name": "VICTORY",
+    "frames": 12,
+    "frameDuration": 130,
+    "loop": false
+  },
+  "movableRect": [
+    127,
+    111,
+    197,
+    221
+  ],
+  "parts": [
+    {
+      "name": "upper-trunk-proud-lift",
+      "x": 168,
+      "y": 139,
+      "rx": 20,
+      "ry": 23,
+      "dx": 0.8,
+      "dy": -1.1,
+      "samples": [
+        0.03,
+        0.25,
+        0.65,
+        1,
+        0.72,
+        0.32,
+        0.6,
+        0.95,
+        0.7,
+        0.33,
+        0.08,
+        0
+      ]
+    },
+    {
+      "name": "side-fin-salute",
+      "x": 188,
+      "y": 150,
+      "rx": 8,
+      "ry": 21,
+      "dx": 1.1,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.65,
+        0.96,
+        0.72,
+        0.4,
+        0.66,
+        1,
+        0.56,
+        0.13,
+        0
+      ]
+    },
+    {
+      "name": "curled-tail-flourish",
+      "x": 140,
+      "y": 197,
+      "rx": 25,
+      "ry": 21,
+      "dx": 1.1,
+      "dy": -1.2,
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.65,
+        0.96,
+        0.72,
+        0.4,
+        0.66,
+        1,
+        0.56,
+        0.13,
+        0
+      ]
+    }
+  ],
+  "anatomyScope": "Upper trunk lifts locally while side fin and curled tail answer in two beats. Face/crown stay fixed; distinct celebration candidate, not a relabeled interaction.",
+  "terminalFrame": {
+    "index": 11,
+    "role": "EXACT_BASE_RETURN",
+    "expectedPixelChanges": 0
+  },
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "Independent first attempt only; no failed source reuse, counter reset or automatic repair",
+  "wholeImageTransform": false
+}

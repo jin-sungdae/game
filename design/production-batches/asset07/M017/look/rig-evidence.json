@@ -1,0 +1,67 @@
+{
+  "source": "design/production-batches/monsters/batch02/M017/base-v2.png",
+  "eyes": [
+    {
+      "x": 198,
+      "y": 136,
+      "rx": 7.5,
+      "ry": 7,
+      "dx": 1
+    },
+    {
+      "x": 217,
+      "y": 133,
+      "rx": 3,
+      "ry": 5,
+      "dx": 0.45
+    }
+  ],
+  "frames": [
+    {
+      "file": "look_00.png",
+      "gaze": 0.08,
+      "pixelSha256": "6f0e8dc1c45e55b8b9d89b2f48213c014e7e8fad66e3bc5ffe9589804ea203a6"
+    },
+    {
+      "file": "look_01.png",
+      "gaze": 0.45,
+      "pixelSha256": "37eea34b93834419ed5b96b327a70b781182cf543ec45951987880843571d53d"
+    },
+    {
+      "file": "look_02.png",
+      "gaze": 0.9,
+      "pixelSha256": "ec90732f6358078530d9566102d53d7c6c366c7ea47465603d36b7986666991e"
+    },
+    {
+      "file": "look_03.png",
+      "gaze": 0.62,
+      "pixelSha256": "5b6d2fdf1540e925ff8e50d267f9c22a0f276da309dd5141386d8baa176f09ab"
+    },
+    {
+      "file": "look_04.png",
+      "gaze": -0.08,
+      "pixelSha256": "989311c9a6ce96b708a3acf8383acdb8fc06c79aeb833b9fc6c92c36cc55ec47"
+    },
+    {
+      "file": "look_05.png",
+      "gaze": -0.4,
+      "pixelSha256": "83f76240197f2d62be5e0cc7e000ae6ceb37d7799ed509387e3d8b537e96b6ef"
+    },
+    {
+      "file": "look_06.png",
+      "gaze": -0.78,
+      "pixelSha256": "7c3dbdabf1e7b43941d436d79b08071a561c285b39d5bdf42c872401b6b016b6"
+    },
+    {
+      "file": "look_07.png",
+      "gaze": -0.3,
+      "pixelSha256": "cd9cd7159eacb9b99b8a892e8653a4cd222c7f98cf84dccc8ce8eed204cb62b8"
+    }
+  ],
+  "alphaPolicy": "unchanged",
+  "fixedAnatomy": "all pixels outside eye ellipses",
+  "productionEligible": false,
+  "artwork": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-07; inherited 3/3; independent first attempt"
+}

@@ -1,0 +1,77 @@
+{
+  "conceptId": "M047",
+  "sessionId": "LUMA-ASSET-13",
+  "species": null,
+  "evolutionStage": null,
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "status": "CANDIDATE_ONLY",
+  "sourceBase": "design/production-batches/monsters/batch05/M047/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CURSOR_REACT",
+    "frames": 8,
+    "frameDuration": 125,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "near-wing-root-alert",
+      "x": 102,
+      "y": 158,
+      "rx": 27,
+      "ry": 25,
+      "dx": -1.4,
+      "dy": -1.7,
+      "samples": [
+        0.01,
+        0.35,
+        0.8,
+        1,
+        0.75,
+        0.4,
+        0.14,
+        0.03
+      ]
+    },
+    {
+      "name": "far-wing-root-follow",
+      "x": 181,
+      "y": 161,
+      "rx": 13,
+      "ry": 23,
+      "dx": 0.8,
+      "dy": -0.8,
+      "samples": [
+        0.02,
+        0.1,
+        0.4,
+        0.85,
+        1,
+        0.6,
+        0.25,
+        0.04
+      ]
+    }
+  ],
+  "movableRect": [
+    57,
+    133,
+    198,
+    195
+  ],
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "reusedRig": "design/production-batches/action-followup/M050/hit-pilot/rig-hit.cjs",
+  "behaviorContract": "Isolated proposed body response; no Personality, SpeciesBehavior or MovementProfile activation"
+}
