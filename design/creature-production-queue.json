@@ -844,6 +844,7 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "public/assets/creatures/moa/stage05/base.png",
       "animationCoverage": {
         "requiredActions": 16,
         "recordedReadyActions": 1,
@@ -856,8 +857,7 @@
         "missingFrameSetActions": 11,
         "guiPendingActions": 16,
         "completeActions": 0
-      },
-      "basePath": "public/assets/creatures/moa/stage05/base.png"
+      }
     },
     {
       "creatureId": "companion:ruu:1",
@@ -1342,6 +1342,7 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "public/assets/creatures/ruu/stage03/base.png",
       "animationCoverage": {
         "requiredActions": 16,
         "recordedReadyActions": 1,
@@ -1354,8 +1355,7 @@
         "missingFrameSetActions": 11,
         "guiPendingActions": 16,
         "completeActions": 0
-      },
-      "basePath": "public/assets/creatures/ruu/stage03/base.png"
+      }
     },
     {
       "creatureId": "companion:ruu:4",
@@ -1517,6 +1517,7 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "public/assets/creatures/ruu/stage04/base.png",
       "animationCoverage": {
         "requiredActions": 16,
         "recordedReadyActions": 1,
@@ -1529,8 +1530,7 @@
         "missingFrameSetActions": 12,
         "guiPendingActions": 16,
         "completeActions": 0
-      },
-      "basePath": "public/assets/creatures/ruu/stage04/base.png"
+      }
     },
     {
       "creatureId": "companion:ruu:5",
@@ -1697,6 +1697,7 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "public/assets/creatures/ruu/stage05/base.png",
       "animationCoverage": {
         "requiredActions": 16,
         "recordedReadyActions": 1,
@@ -1709,8 +1710,7 @@
         "missingFrameSetActions": 11,
         "guiPendingActions": 16,
         "completeActions": 0
-      },
-      "basePath": "public/assets/creatures/ruu/stage05/base.png"
+      }
     },
     {
       "creatureId": "companion:nox:1",
@@ -2064,6 +2064,7 @@
         "runtimeApproved": false
       },
       "productionStatus": "NOT_PRODUCTION_READY",
+      "basePath": "public/assets/creatures/nox/stage02/base.png",
       "animationCoverage": {
         "requiredActions": 16,
         "recordedReadyActions": 1,
@@ -2076,8 +2077,7 @@
         "missingFrameSetActions": 7,
         "guiPendingActions": 16,
         "completeActions": 0
-      },
-      "basePath": "public/assets/creatures/nox/stage02/base.png"
+      }
     },
     {
       "creatureId": "companion:nox:3",
@@ -3224,6 +3224,7 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "basePath": "design/production-batches/monsters/batch01/M004/base-v2.png",
       "animationCoverage": {
         "requiredActions": 15,
         "recordedReadyActions": 1,
@@ -3236,8 +3237,7 @@
         "missingFrameSetActions": 11,
         "guiPendingActions": 15,
         "completeActions": 0
-      },
-      "basePath": "design/production-batches/monsters/batch01/M004/base-v2.png"
+      }
     },
     {
       "creatureId": "M005",
@@ -4293,6 +4293,7 @@
       },
       "productionStatus": "NOT_PRODUCTION_READY",
       "validationScope": "Automated asset/ledger checks only; existing artwork failures preserved",
+      "basePath": "design/production-batches/monsters/batch01/M010/base-v2.png",
       "animationCoverage": {
         "requiredActions": 15,
         "recordedReadyActions": 1,
@@ -4305,8 +4306,7 @@
         "missingFrameSetActions": 12,
         "guiPendingActions": 15,
         "completeActions": 0
-      },
-      "basePath": "design/production-batches/monsters/batch01/M010/base-v2.png"
+      }
     },
     {
       "creatureId": "M011",
@@ -12398,7 +12398,7 @@
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
         "candidateActions": 2,
-        "automatedCandidateActions": 2,
+        "automatedCandidateActions": 1,
         "artworkReviewPendingActions": 2,
         "validationFailedActions": 1,
         "missingFrameSetActions": 13,
@@ -17322,24 +17322,51 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "VALIDATION_FAILED",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "candidatePath": "design/production-batches/LUMA-ASSET-22/M092",
+          "automated": "FAIL",
+          "validationEvidence": "design/production-batches/LUMA-ASSET-22/M092/frame-validation.json",
+          "sourcePr": 139,
+          "sourceHead": "11dfc560527734ec729ca3721194ddcc56e3f9e2",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "productionEligible": false,
+          "blockReason": "Existing validation failure preserved; human review required"
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "VALIDATION_FAILED",
+          "frameCount": 12,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "candidatePath": "design/production-batches/LUMA-ASSET-22/M092/blink",
+          "automated": "FAIL",
+          "validationEvidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json",
+          "sourcePr": 139,
+          "sourceHead": "11dfc560527734ec729ca3721194ddcc56e3f9e2",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "productionEligible": false,
+          "blockReason": "Existing validation failure preserved; human review required"
         },
         {
           "action": "LOOK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "CANDIDATE_ONLY",
+          "frameCount": 12,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "candidatePath": "design/production-batches/LUMA-ASSET-22/M092/look",
+          "automated": "PASS",
+          "validationEvidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json",
+          "sourcePr": 139,
+          "sourceHead": "11dfc560527734ec729ca3721194ddcc56e3f9e2",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "productionEligible": false,
+          "blockReason": "Numeric checks only; artwork, identity and natural motion approval required"
         },
         {
           "action": "MOVE",
@@ -17451,11 +17478,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 2,
-        "automatedCandidateActions": 2,
-        "artworkReviewPendingActions": 2,
-        "validationFailedActions": 0,
-        "missingFrameSetActions": 13,
+        "candidateActions": 5,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 5,
+        "validationFailedActions": 2,
+        "missingFrameSetActions": 10,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -17789,24 +17816,51 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "CANDIDATE_ONLY",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "candidatePath": "design/production-batches/LUMA-ASSET-22/M095",
+          "automated": "PASS",
+          "validationEvidence": "design/production-batches/LUMA-ASSET-22/M095/frame-validation.json",
+          "sourcePr": 139,
+          "sourceHead": "11dfc560527734ec729ca3721194ddcc56e3f9e2",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "productionEligible": false,
+          "blockReason": "Numeric checks only; artwork, identity and natural motion approval required"
         },
         {
           "action": "BLINK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "VALIDATION_FAILED",
+          "frameCount": 12,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "candidatePath": "design/production-batches/LUMA-ASSET-22/M095/blink",
+          "automated": "FAIL",
+          "validationEvidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json",
+          "sourcePr": 139,
+          "sourceHead": "11dfc560527734ec729ca3721194ddcc56e3f9e2",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "productionEligible": false,
+          "blockReason": "Existing validation failure preserved; human review required"
         },
         {
           "action": "LOOK",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "CANDIDATE_ONLY",
+          "frameCount": 12,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "candidatePath": "design/production-batches/LUMA-ASSET-22/M095/look",
+          "automated": "PASS",
+          "validationEvidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json",
+          "sourcePr": 139,
+          "sourceHead": "11dfc560527734ec729ca3721194ddcc56e3f9e2",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "productionEligible": false,
+          "blockReason": "Numeric checks only; artwork, identity and natural motion approval required"
         },
         {
           "action": "MOVE",
@@ -17913,11 +17967,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
-        "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "candidateActions": 4,
+        "automatedCandidateActions": 3,
+        "artworkReviewPendingActions": 4,
+        "validationFailedActions": 1,
+        "missingFrameSetActions": 11,
         "guiPendingActions": 15,
         "completeActions": 0
       }
@@ -18767,17 +18821,6 @@
     "naturalMotion": "NOT_VERIFIED",
     "nativeGameGUI": "NOT_VERIFIED"
   },
-  "candidateInventory": {
-    "monsterConceptsWithSource": 100,
-    "sourcePngIncludingRecovery": 102,
-    "allCandidatePng": 676,
-    "candidateIdleClips": 50,
-    "candidateIdleFrames": 296,
-    "productionApprovedPng": 0,
-    "productionCompletedClips": 0,
-    "runtimeConnections": 0,
-    "fullCreaturesComplete": 0
-  },
   "batchReview": {
     "url": "http://127.0.0.1:5187/tests/live/creature-review/",
     "catalog": "tests/live/creature-review/catalog.json",
@@ -18995,21 +19038,6 @@
     "appearance": "HUMAN_REVIEW_REQUIRED",
     "skills": "BLOCKED_UNAPPROVED_CONTRACT",
     "conditionalActions": "JUMP/FLY/HOVER/LAND/CHARGE/RECOVERY need individual anatomy/contract review; no new Production requirement or capability inferred"
-  },
-  "animationCoverageSummary": {
-    "requiredActions": 1740,
-    "recordedReadyActions": 14,
-    "recordedRuntimeActions": 12,
-    "manifestFileSetsPresent": 12,
-    "candidateActions": 157,
-    "automatedCandidateActions": 155,
-    "artworkReviewPendingActions": 156,
-    "validationFailedActions": 39,
-    "missingFrameSetActions": 1578,
-    "guiPendingActions": 1740,
-    "completeActions": 0,
-    "creatures": 115,
-    "completeCreatures": 0
   },
   "animationCoverageScope": "Counts are per action, not per candidate version. File presence is not PNG validation, artwork approval, native runtime or GUI proof. Completion requires all four recorded readiness/runtime/file/GUI conditions.",
   "legacyProductionAudit": [
@@ -22136,20 +22164,6 @@
     },
     "approvalAudit": {
       "scope": "All existing candidate clip versions; categories overlap. Automated PNG catalog checks are not full appearance/motion approval. Registered legacy action records are separately listed without re-approving missing approval fields.",
-      "summary": {
-        "candidateClips": 158,
-        "candidateFrames": 1130,
-        "automatedPngPassClips": 156,
-        "automatedPngFailedClips": 2,
-        "artworkReviewPendingClips": 157,
-        "naturalMotionReviewPendingClips": 157,
-        "identityReviewRequiredClips": 118,
-        "productionApprovedClips": 1,
-        "approvedRuntimePendingClips": 0,
-        "guiPendingClips": 158,
-        "guiPassedClips": 0,
-        "validationFailedActionsIncludingKeyposes": 40
-      },
       "clips": [
         {
           "creatureId": "companion:moa:4",
@@ -24284,7 +24298,7 @@
           "action": "CURSOR_REACT",
           "directory": "/design/production-batches/action-followup/M060/cursor-react-pilot/rigged/cursor_react",
           "frames": 8,
-          "automatedPng": "PASS",
+          "automatedPng": "VALIDATION_FAILED",
           "artworkReview": "HUMAN_REVIEW_REQUIRED",
           "naturalMotion": "HUMAN_REVIEW_REQUIRED",
           "identityReviewRequired": true,
@@ -24517,6 +24531,96 @@
           "runtimeStatus": "BLOCKED",
           "guiStatus": "DEFERRED_GUI",
           "detailedEvidence": "design/production-batches/LUMA-ASSET-03/nox/stage02/victory-pilot/frame-validation.json",
+          "detailedAutomated": "PASS"
+        },
+        {
+          "creatureId": "M092",
+          "action": "BLINK",
+          "directory": "/design/production-batches/LUMA-ASSET-22/M092/blink/rigged/blink",
+          "frames": 12,
+          "automatedPng": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json",
+          "detailedAutomated": "FAIL"
+        },
+        {
+          "creatureId": "M092",
+          "action": "LOOK",
+          "directory": "/design/production-batches/LUMA-ASSET-22/M092/look/rigged/look",
+          "frames": 12,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json",
+          "detailedAutomated": "PASS"
+        },
+        {
+          "creatureId": "M092",
+          "action": "BREATH",
+          "directory": "/design/production-batches/LUMA-ASSET-22/M092/rigged/breath",
+          "frames": 8,
+          "automatedPng": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/LUMA-ASSET-22/M092/frame-validation.json",
+          "detailedAutomated": "FAIL"
+        },
+        {
+          "creatureId": "M095",
+          "action": "BLINK",
+          "directory": "/design/production-batches/LUMA-ASSET-22/M095/blink/rigged/blink",
+          "frames": 12,
+          "automatedPng": "VALIDATION_FAILED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json",
+          "detailedAutomated": "FAIL"
+        },
+        {
+          "creatureId": "M095",
+          "action": "LOOK",
+          "directory": "/design/production-batches/LUMA-ASSET-22/M095/look/rigged/look",
+          "frames": 12,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json",
+          "detailedAutomated": "PASS"
+        },
+        {
+          "creatureId": "M095",
+          "action": "BREATH",
+          "directory": "/design/production-batches/LUMA-ASSET-22/M095/rigged/breath",
+          "frames": 8,
+          "automatedPng": "PASS",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED",
+          "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+          "identityReviewRequired": true,
+          "productionApproval": "NOT_APPROVED",
+          "runtimeStatus": "BLOCKED",
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "detailedEvidence": "design/production-batches/LUMA-ASSET-22/M095/frame-validation.json",
           "detailedAutomated": "PASS"
         }
       ],
@@ -24760,6 +24864,24 @@
           "action": "ATTACK",
           "reason": "Raw Alpha4579 failed before normalization; scorpion articulated ATTACK source preserved; curled void creature proposal remains Identity review; repair3/3; HUMAN_REVIEW_REQUIRED",
           "evidence": "design/production-batches/action-followup/M083/attack-pilot"
+        },
+        {
+          "creatureId": "M092",
+          "action": "BLINK",
+          "reason": "Existing validation failure preserved; human review required",
+          "evidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json"
+        },
+        {
+          "creatureId": "M092",
+          "action": "BREATH",
+          "reason": "Existing validation failure preserved; human review required",
+          "evidence": "design/production-batches/LUMA-ASSET-22/M092/frame-validation.json"
+        },
+        {
+          "creatureId": "M095",
+          "action": "BLINK",
+          "reason": "Existing validation failure preserved; human review required",
+          "evidence": "design/production-batches/LUMA-ASSET-22/continuation-analysis.json"
         }
       ],
       "recordedReadyActions": [
@@ -24848,7 +24970,21 @@
           "runtimeStatus": "BLOCKED"
         }
       ],
-      "approvedUnconnected": []
+      "approvedUnconnected": [],
+      "summary": {
+        "candidateClips": 164,
+        "candidateFrames": 1194,
+        "automatedPngPassClips": 158,
+        "automatedPngFailedClips": 6,
+        "artworkReviewPendingClips": 163,
+        "naturalMotionReviewPendingClips": 163,
+        "identityReviewRequiredClips": 124,
+        "productionApprovedClips": 1,
+        "approvedRuntimePendingClips": 0,
+        "guiPendingClips": 164,
+        "guiPassedClips": 0,
+        "validationFailedActionsIncludingKeyposes": 42
+      }
     },
     "coverageAtCheckpoint": {
       "requiredActions": 1740,
@@ -25596,5 +25732,46 @@
       "guiPassedClips": 0,
       "validationFailedActionsIncludingKeyposes": 40
     }
+  },
+  "pr139Integration": {
+    "sourcePr": 139,
+    "sourceHead": "11dfc560527734ec729ca3721194ddcc56e3f9e2",
+    "owner": "LUMA-ASSET-22 independent Integration Track",
+    "integrationBranch": "codex/integration-pr139-candidates",
+    "status": "APPLIED_IN_INTEGRATION_BRANCH_NOT_MERGED",
+    "candidateClips": 6,
+    "candidateFrames": 64,
+    "numericPassClips": 3,
+    "failedClips": 3,
+    "productionApprovals": 0,
+    "runtimeConnections": 0,
+    "dependency": "PR139 must be merged before this stacked PR; PR131 M092 HIT remains separate and must be preserved during final reconciliation",
+    "nextTask": "Human review of the six candidates and supply approved identity/keyposes/rigs; BLINK recovery requires explicit approval; native GUI DEFERRED_GUI"
+  },
+  "candidateInventory": {
+    "monsterConceptsWithSource": 100,
+    "sourcePngIncludingRecovery": 102,
+    "allCandidatePng": 676,
+    "candidateIdleClips": 50,
+    "candidateIdleFrames": 296,
+    "productionApprovedPng": 0,
+    "productionCompletedClips": 0,
+    "runtimeConnections": 0,
+    "fullCreaturesComplete": 0
+  },
+  "animationCoverageSummary": {
+    "requiredActions": 1740,
+    "recordedReadyActions": 14,
+    "recordedRuntimeActions": 12,
+    "manifestFileSetsPresent": 12,
+    "candidateActions": 163,
+    "automatedCandidateActions": 157,
+    "artworkReviewPendingActions": 162,
+    "validationFailedActions": 42,
+    "missingFrameSetActions": 1572,
+    "guiPendingActions": 1740,
+    "completeActions": 0,
+    "creatures": 115,
+    "completeCreatures": 0
   }
 }

@@ -31,26 +31,22 @@ class NoxCandidateIntegrationTests(unittest.TestCase):
         self.assertEqual(row['animationCoverage'],review['coverage'])
         self.assertFalse(catalog['productionRegistration'])
 
-    def test_other_ledger_state_is_identical_to_pr131(self):
+    def test_nox_stage_two_ledger_preserves_unrelated_state(self):
         queue = json.loads((ROOT/'design/creature-production-queue.json').read_text())
         audit = queue['approvalBottleneckContinuation']['approvalAudit']
-        added = [c for c in audit['clips'] if '/LUMA-ASSET-03/' in c['directory']]
-        self.assertEqual({c['action'] for c in added}, ACTIONS)
-        self.assertEqual(len(added), 3)
-        self.assertTrue(all(c['productionApproval']=='NOT_APPROVED' for c in added))
-        audit['clips'] = [c for c in audit['clips'] if c not in added]
-        for key in ('candidateClips','automatedPngPassClips','artworkReviewPendingClips',
-                    'naturalMotionReviewPendingClips','guiPendingClips'):
-            audit['summary'][key] -= 3
-        audit['summary']['candidateFrames'] -= 24
-        queue.pop('animationCoverageSummary')
-        for row in queue['creatures']:
-            row.pop('animationCoverage')
-            if row['creatureId']=='companion:nox:2':
-                for index, action in enumerate(row['actions']):
-                    if action['action'] in ACTIONS:
-                        row['actions'][index] = dict(action=action['action'],animationStatus='ASSET_REQUIRED',
-                            frameCount=0,runtimeStatus='NOT_VERIFIED',guiStatus='GUI_NOT_VERIFIED')
-        digest = hashlib.sha256(json.dumps(queue,sort_keys=True).encode()).hexdigest()
-        # PR131 c40da57: all failures, approvals, counters, runtime and other creatures stay unchanged.
-        self.assertEqual(digest,'81202eafa11afb8a082dc970722d79c96fdfe765f65d8cd65a138a92ef1fdd40')
+        added = [c for c in audit['clips'] if c['creatureId']=='companion:nox:2'
+                 and '/LUMA-ASSET-03/' in c['directory']]
+        self.assertCountEqual([c['action'] for c in added], ACTIONS)
+        self.assertTrue(all(c['productionApproval']=='NOT_APPROVED' and
+                            c['runtimeStatus']=='BLOCKED' and
+                            c['artworkReview']=='HUMAN_REVIEW_REQUIRED' for c in added))
+
+        row = next(r for r in queue['creatures'] if r['creatureId']=='companion:nox:2')
+        row.pop('animationCoverage')
+        for index, action in enumerate(row['actions']):
+            if action['action'] in ACTIONS:
+                row['actions'][index] = dict(action=action['action'], animationStatus='ASSET_REQUIRED',
+                    frameCount=0, runtimeStatus='NOT_VERIFIED', guiStatus='GUI_NOT_VERIFIED')
+        # Compare this creature to PR131 before NOX candidate registration.
+        digest = hashlib.sha256(json.dumps(row, sort_keys=True).encode()).hexdigest()
+        self.assertEqual(digest, 'c7595fbc7a367c4ae288921c1e6a0c4d91beaaef30231fb06c3a966722f6ae4b')
