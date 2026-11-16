@@ -1,0 +1,153 @@
+{
+  "status": "VALIDATION_FAILED",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "channels": 4,
+  "sourceSha256": "71c44e80ee2f68e566e8eb7eb3f316dab9aaeaae1aff1908429cb7f4217a3e92",
+  "errors": [
+    "REQUESTED_256_CELL_GRID_NOT_DELIVERED",
+    "DETACHED_RAW_ALPHA",
+    "BOUNDS_AND_ANCHOR_VARY"
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "rawCellSize": [
+        444,
+        444
+      ],
+      "bounds": [
+        43,
+        33,
+        441,
+        443
+      ],
+      "pixelSha256": "917f36ebe93088810d45f4f853e9387ce5583e3eeaa053de7b69c597ed5af921",
+      "detachedAlphaPixels": 404,
+      "componentCount": 249
+    },
+    {
+      "index": 1,
+      "rawCellSize": [
+        443,
+        444
+      ],
+      "bounds": [
+        0,
+        25,
+        442,
+        443
+      ],
+      "pixelSha256": "280d64383cf3f8448ae7e8d11cef08460b44044eb52b31d45cabc46e1ea50150",
+      "detachedAlphaPixels": 899,
+      "componentCount": 251
+    },
+    {
+      "index": 2,
+      "rawCellSize": [
+        444,
+        444
+      ],
+      "bounds": [
+        0,
+        23,
+        443,
+        443
+      ],
+      "pixelSha256": "233585be6861da93bcd55305219de5834c8a73ff90f5ba7b34b818858acd2303",
+      "detachedAlphaPixels": 810,
+      "componentCount": 305
+    },
+    {
+      "index": 3,
+      "rawCellSize": [
+        443,
+        444
+      ],
+      "bounds": [
+        0,
+        39,
+        442,
+        443
+      ],
+      "pixelSha256": "94f9cbffe8b05d23b432c7c1addbddd29d0771f49f763c826440d0d8168957b7",
+      "detachedAlphaPixels": 933,
+      "componentCount": 299
+    },
+    {
+      "index": 4,
+      "rawCellSize": [
+        444,
+        443
+      ],
+      "bounds": [
+        27,
+        2,
+        443,
+        422
+      ],
+      "pixelSha256": "8cf08bac86f0c5e43a2f9802f800f1af543f04ec31cd3287a790b755993edee8",
+      "detachedAlphaPixels": 945,
+      "componentCount": 333
+    },
+    {
+      "index": 5,
+      "rawCellSize": [
+        443,
+        443
+      ],
+      "bounds": [
+        0,
+        2,
+        442,
+        426
+      ],
+      "pixelSha256": "3cddebd5063660d77658bdcce6f8a3e369d46764987d8df165c19274bbd029b2",
+      "detachedAlphaPixels": 749,
+      "componentCount": 321
+    },
+    {
+      "index": 6,
+      "rawCellSize": [
+        444,
+        443
+      ],
+      "bounds": [
+        0,
+        0,
+        443,
+        442
+      ],
+      "pixelSha256": "3b269aad836764caccdd9fd4a025b77e2e7a90c2fe1a6024bdf429eaf117a9b5",
+      "detachedAlphaPixels": 1429,
+      "componentCount": 372
+    },
+    {
+      "index": 7,
+      "rawCellSize": [
+        443,
+        443
+      ],
+      "bounds": [
+        0,
+        0,
+        442,
+        422
+      ],
+      "pixelSha256": "5f9a8f1209b2441e792a52bc8a0a9b2db115acfafed036f7ba316020ed4f7a67",
+      "detachedAlphaPixels": 1057,
+      "componentCount": 365
+    }
+  ],
+  "completedClips": 0,
+  "exported256Frames": 0,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairsPerformed": 0,
+  "appearanceDrift": "MANUAL_REQUIRED: markings and proportions vary across raw poses",
+  "frameContinuity": "NOT_ACCEPTED: fixed head/body/foot registration not preserved; no playback validation",
+  "productionEligible": false,
+  "runtimeConnected": false
+}
