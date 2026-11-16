@@ -1,0 +1,179 @@
+{
+  "reference": "design/production-batches/monsters/batch07/M062/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "muzzle-droop",
+      "x": 190,
+      "y": 106,
+      "rx": 10,
+      "ry": 11,
+      "dx": -0.5,
+      "dy": 1.4,
+      "samples": [
+        0.025,
+        0.08,
+        0.18,
+        0.32,
+        0.49,
+        0.65,
+        0.78,
+        0.87,
+        0.93,
+        0.965,
+        0.987,
+        1
+      ]
+    },
+    {
+      "name": "cheek-support-loss",
+      "x": 163,
+      "y": 106,
+      "rx": 15,
+      "ry": 12,
+      "dx": -0.3,
+      "dy": 0.7,
+      "samples": [
+        0.015,
+        0.04,
+        0.1,
+        0.21,
+        0.37,
+        0.54,
+        0.7,
+        0.82,
+        0.9,
+        0.95,
+        0.98,
+        1
+      ]
+    },
+    {
+      "name": "upper-trunk-slump",
+      "x": 168,
+      "y": 139,
+      "rx": 20,
+      "ry": 23,
+      "dx": -0.6,
+      "dy": 1.3,
+      "samples": [
+        0.015,
+        0.04,
+        0.1,
+        0.21,
+        0.37,
+        0.54,
+        0.7,
+        0.82,
+        0.9,
+        0.95,
+        0.98,
+        1
+      ]
+    }
+  ],
+  "protectedRegions": "y>=174||y<=78||x<=146||x>=201",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "defeat_00.png",
+      "pixelSha256": "2a78c43299ad25ef0b32ffb3662e5fe27cdf334e434f8a1e76dbcc14f95b4f05",
+      "changedPixels": 329,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 28,
+      "maxInverseDisplacementPixels": 0.03716386898621885
+    },
+    {
+      "file": "defeat_01.png",
+      "pixelSha256": "4b12ae72a389918307253338f1bfb2d97c32e66769976baa988282a26462e9d9",
+      "changedPixels": 638,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 77,
+      "maxInverseDisplacementPixels": 0.11888588937364797
+    },
+    {
+      "file": "defeat_02.png",
+      "pixelSha256": "589c95c892919d86f72af76e099d86b4bf105efbda10ac0048b3d92b43301c55",
+      "changedPixels": 972,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 122,
+      "maxInverseDisplacementPixels": 0.2671049507377839
+    },
+    {
+      "file": "defeat_03.png",
+      "pixelSha256": "5bbd3393107aa0e390b7b70510702fc4b857f1ab9790d5092d21afa491bf198a",
+      "changedPixels": 1243,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 145,
+      "maxInverseDisplacementPixels": 0.4730176329071643
+    },
+    {
+      "file": "defeat_04.png",
+      "pixelSha256": "df4253c22f7559c189a62aa96ce5e7dfa67d73fe7429200dc1f6f2c8081834a3",
+      "changedPixels": 1410,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 174,
+      "maxInverseDisplacementPixels": 0.7253271821680101
+    },
+    {
+      "file": "defeat_05.png",
+      "pixelSha256": "40c1469a4e4e78a7420d98f886a63aa5ecb9341d2d1337b8452dddc9d77b7240",
+      "changedPixels": 1519,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 214,
+      "maxInverseDisplacementPixels": 0.9630492343625412
+    },
+    {
+      "file": "defeat_06.png",
+      "pixelSha256": "d1706016265fe7e5062c730b2604ce9c0df96fb8d1d7998d36074b9b048cf597",
+      "changedPixels": 1586,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 236,
+      "maxInverseDisplacementPixels": 1.154103613790366
+    },
+    {
+      "file": "defeat_07.png",
+      "pixelSha256": "0940ec135b29ee74d98ef1eb70b7685024b6be4c9d0b4c6a9f7cc7745bae3311",
+      "changedPixels": 1619,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 250,
+      "maxInverseDisplacementPixels": 1.2847109813727275
+    },
+    {
+      "file": "defeat_08.png",
+      "pixelSha256": "ea55e353c908b5d54c4ae9c829382d537464f36044adf1818a42b71a971cabb7",
+      "changedPixels": 1639,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 259,
+      "maxInverseDisplacementPixels": 1.370858340056232
+    },
+    {
+      "file": "defeat_09.png",
+      "pixelSha256": "d42eb4a15f9a0075b275fb45f8835da75c18b87e89bf0e23f823ece0cbaaf23f",
+      "changedPixels": 1651,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 264,
+      "maxInverseDisplacementPixels": 1.420732004399313
+    },
+    {
+      "file": "defeat_10.png",
+      "pixelSha256": "8f084a5dfbffa27bc0e299fe9fdb85fc99df66f650e0351c7b0d0d764d694877",
+      "changedPixels": 1658,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 272,
+      "maxInverseDisplacementPixels": 1.4519299254365807
+    },
+    {
+      "file": "defeat_11.png",
+      "pixelSha256": "e3a76bd85a3f039b3754549a51aca6208f8826e01e422220b80a5f16a078cfea",
+      "changedPixels": 1661,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 272,
+      "maxInverseDisplacementPixels": 1.4703084675432523
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-16 independent first attempt; inherited 3/3 remains locked; no recovery authorized",
+  "productionEligible": false
+}

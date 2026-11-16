@@ -1,0 +1,70 @@
+{
+  "conceptId": "M010",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch01/M010/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "HIT",
+    "frames": 8,
+    "frameDuration": 75,
+    "loop": false
+  },
+  "parts": [
+    {
+      "name": "shoulder-bark-recoil",
+      "x": 145,
+      "y": 140,
+      "rx": 22,
+      "ry": 15,
+      "dx": -2.0,
+      "dy": 1.1,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    },
+    {
+      "name": "chest-mane-recoil",
+      "x": 169,
+      "y": 148,
+      "rx": 17,
+      "ry": 22,
+      "dx": -1.3,
+      "dy": 0.7,
+      "samples": [
+        0.03,
+        0.3,
+        0.92,
+        1,
+        0.76,
+        0.58,
+        0.46,
+        0.35
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "apiCalls": 0,
+  "scope": "stationary local body response; no whole-body pose, combat event or runtime connection",
+  "sequence": "HIT -> RECOVERY; shared boundary pose is intentional"
+}

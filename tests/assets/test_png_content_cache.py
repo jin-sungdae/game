@@ -1,63 +1,53 @@
-"""Cache equivalence and invalidation; the existing decoder remains authoritative."""
-from pathlib import Path
+"""Content cache must preserve validator semantics under mutable test fixtures."""
+import os
 import tempfile
 import unittest
-from unittest.mock import patch
-from test_assets import validator, png
-from test_alpha_assets import rgba_fixture
+from pathlib import Path
+from test_assets import validator, png, ROOT
 
 
 class PngContentCacheTests(unittest.TestCase):
     def setUp(self):
-        self.directory = tempfile.TemporaryDirectory()
-        self.addCleanup(self.directory.cleanup)
-        self.path = Path(self.directory.name) / 'frame.png'
-        validator._cached_png_result.cache_clear()
+        validator._png_result.cache_clear()
 
-    def test_same_bytes_reuse_decoder_and_replay_output_appends(self):
-        data = rgba_fixture(alpha=50, filtering=4)
-        self.path.write_bytes(data)
-        with patch.object(validator, '_decode_png', wraps=validator._decode_png) as decode:
-            expected_bounds, expected_hashes = [], []
-            self.assertEqual(validator.png_errors(self.path, True, expected_bounds, expected_hashes), [])
-            other = self.path.with_name('copy.png'); other.write_bytes(data)
-            bounds, hashes = ['prefix'], ['prefix']
-            self.assertEqual(validator.png_errors(other, True, bounds, hashes), [])
-            self.assertEqual(bounds, ['prefix'] + expected_bounds)
-            self.assertEqual(hashes, ['prefix'] + expected_hashes)
-            self.assertEqual(decode.call_count, 1)
+    def test_same_path_same_mtime_replacement_is_not_stale(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)/'candidate.png'
+            path.write_bytes(png())
+            stamp = path.stat().st_mtime_ns
+            self.assertEqual(validator.png_errors(path), [])
+            data = bytearray(path.read_bytes())
+            data[-1] ^= 1  # Same length, corrupt CRC.
+            path.write_bytes(data)
+            os.utime(path, ns=(stamp,stamp))
+            self.assertIn('PNG CRC mismatch', validator.png_errors(path))
+            path.write_bytes(png())
+            self.assertEqual(validator.png_errors(path), [])
+            path.unlink()
+            self.assertTrue(validator.png_errors(path))
 
-    def test_same_path_changed_content_is_revalidated(self):
-        self.path.write_bytes(rgba_fixture(alpha=50))
-        self.assertEqual(validator.png_errors(self.path, True), [])
-        self.path.write_bytes(rgba_fixture(alpha=255))
-        self.assertIn('transparent pixels required; fully opaque RGBA is invalid',
-                      validator.png_errors(self.path, True))
-        self.path.unlink()
-        self.assertTrue(validator.png_errors(self.path, True))
-        self.path.write_bytes(rgba_fixture(alpha=50))
-        self.assertEqual(validator.png_errors(self.path, True), [])
+    def test_outputs_are_independent_and_modes_remain_separate(self):
+        path = ROOT/'design/production-batches/monsters/batch07/M061/base-v2.png'
+        bounds, hashes = [], []
+        errors = validator.png_errors(path, True, bounds, hashes)
+        expected = (errors[:], bounds[:], hashes[:])
+        errors.append('caller mutation');bounds.clear();hashes.clear()
+        again_bounds, again_hashes = [], []
+        self.assertEqual(validator.png_errors(path, True, again_bounds, again_hashes), expected[0])
+        self.assertEqual((again_bounds, again_hashes), expected[1:])
+        self.assertEqual(validator._png_result.cache_info().hits, 1)
+        self.assertEqual(validator.png_errors(path), [])
+        self.assertEqual(validator._png_result.cache_info().misses, 2)
 
-    def test_option_combinations_equal_uncached_decoder(self):
-        for data in (png(), rgba_fixture(alpha=255, filtering=2), b'not a png'):
-            self.path.write_bytes(data)
-            for transparency in (False, True):
-                for with_bounds in (False, True):
-                    for with_hashes in (False, True):
-                        a = [] if with_bounds else None; b = [] if with_hashes else None
-                        c = [] if with_bounds else None; d = [] if with_hashes else None
-                        expected = validator._decode_png(data, transparency, a, b)
-                        actual = validator.png_errors(self.path, transparency, c, d)
-                        self.assertEqual((actual, c, d), (expected, a, b))
-                        actual.append('caller mutation')
-                        self.assertEqual(validator.png_errors(self.path, transparency,
-                            [] if with_bounds else None, [] if with_hashes else None), expected)
-
-    def test_large_input_not_retained_and_cache_bounded(self):
-        data = b'x' * (256 * 1024 + 1); self.path.write_bytes(data)
-        self.assertEqual(validator.png_errors(self.path), validator._decode_png(data))
-        self.assertEqual(validator._cached_png_result.cache_info().currsize, 0)
-        for i in range(520):
-            self.path.write_bytes(('invalid-'+str(i)).encode())
-            validator.png_errors(self.path)
-        self.assertEqual(validator._cached_png_result.cache_info().currsize, 512)
+    def test_cached_and_direct_decoder_agree_on_real_and_invalid_data(self):
+        data_sets = [png(), png(128,256), b'bad PNG']
+        data_sets.extend((ROOT/f'design/production-batches/monsters/batch07/M{i:03}/base-v2.png').read_bytes() for i in range(61,66))
+        for data in data_sets:
+            for transparency in (False,True):
+                for need_bounds,need_hash in ((False,False),(True,False),(False,True),(True,True)):
+                    bounds=[] if need_bounds else None
+                    hashes=[] if need_hash else None
+                    errors=validator._decode_png(data,transparency,bounds,hashes)
+                    self.assertEqual(validator._png_result(data,transparency,need_bounds,need_hash),
+                                     (tuple(errors),tuple(bounds or ()),tuple(hashes or ())))
+        self.assertEqual(validator._png_result.cache_info().maxsize,1024)

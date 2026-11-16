@@ -1,0 +1,107 @@
+{
+  "reference": "public/assets/creatures/moa/stage04/base.png",
+  "referenceApproval": "User authorized concept-based sequential artwork and part rigging; final artwork review pending",
+  "parts": [
+    {
+      "name": "mature-collar-greeting",
+      "x": 190,
+      "y": 137,
+      "rx": 17,
+      "ry": 18,
+      "dx": 0.65,
+      "dy": -1.1,
+      "samples": [
+        0.04,
+        0.14,
+        0.36,
+        0.68,
+        1,
+        0.7,
+        0.3,
+        0.08
+      ]
+    },
+    {
+      "name": "mantle-settle",
+      "x": 172,
+      "y": 156,
+      "rx": 15,
+      "ry": 12,
+      "dx": -0.35,
+      "dy": 0.6,
+      "samples": [
+        0.02,
+        0.05,
+        0.12,
+        0.28,
+        0.62,
+        0.94,
+        0.52,
+        0.1
+      ]
+    }
+  ],
+  "protectedRegions": "y>=176||y<=110||x<=150||x>=213",
+  "wholeImageTransform": false,
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "pixelSha256": "8136b83d164740e359aa2564bf948950978163aafc22871d8d11e0e3a7ff7208",
+      "changedPixels": 269,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.05110645463922323
+    },
+    {
+      "file": "interact_01.png",
+      "pixelSha256": "d5d09502387a9771147dc3bb87180573f594730194189a94f1eac8afc3249b7a",
+      "changedPixels": 564,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.17882243498687955
+    },
+    {
+      "file": "interact_02.png",
+      "pixelSha256": "a80a368ecdb5e68b1f244447d01712735fc58d5b66dff38a40e3b3b885422374",
+      "changedPixels": 783,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.4590445955740193
+    },
+    {
+      "file": "interact_03.png",
+      "pixelSha256": "45e8172c170ef0fffaa2b985e8100f66b90d31fe8dfd6e28e689d577dbe3504b",
+      "changedPixels": 937,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8665617556892949
+    },
+    {
+      "file": "interact_04.png",
+      "pixelSha256": "cafd2135e3bbb0fa26beae56288013d44cb1986a0a17788bccc356899e1508f9",
+      "changedPixels": 1026,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 1.2759462470768903
+    },
+    {
+      "file": "interact_05.png",
+      "pixelSha256": "d94d7c961a3bbf052b4c9ec623508c2970d227378177acaf9878f526fa5dd9cb",
+      "changedPixels": 1019,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.8920295264851907
+    },
+    {
+      "file": "interact_06.png",
+      "pixelSha256": "4fabb5ac02124ac4b603fbba8ee73886cfd001f7c77ddc226497d83e6ed55e4d",
+      "changedPixels": 893,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.38277192066147775
+    },
+    {
+      "file": "interact_07.png",
+      "pixelSha256": "d25b9d3e36a570c52123092d64faed4dd347dddecf2402a909a735d1d2ca3aaf",
+      "changedPixels": 532,
+      "fixedRegionChanges": 0,
+      "maxInverseDisplacementPixels": 0.10220526275339101
+    }
+  ],
+  "repairIteration": 0,
+  "repairScope": "LUMA-ASSET-01 independent missing action; existing failures untouched",
+  "productionEligible": false
+}

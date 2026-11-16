@@ -1,0 +1,148 @@
+{
+  "automated": "VALIDATION_FAILED",
+  "errors": [
+    "DUPLICATE_DECODED_FRAMES",
+    "ZERO_ADJACENT_DIFFERENCE"
+  ],
+  "baseErrors": [],
+  "baseDetachedPixels": 0,
+  "frames": [
+    {
+      "file": "blink_00.png",
+      "errors": [],
+      "bounds": [
+        24,
+        37,
+        231,
+        216
+      ],
+      "pixelSha256": "09e4bfd90dbe85a43a9f811c6f348fa53c819872038ac8d1f8fe0873080a7c69",
+      "changedPixels": 70,
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 0,
+      "detachedPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "centerX": 0.0
+      }
+    },
+    {
+      "file": "blink_01.png",
+      "errors": [],
+      "bounds": [
+        24,
+        37,
+        231,
+        216
+      ],
+      "pixelSha256": "199c5a6ae556b6dbef1558c235973d09c730b7383a96379c380da65741cb037d",
+      "changedPixels": 76,
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 0,
+      "detachedPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "centerX": 0.0
+      }
+    },
+    {
+      "file": "blink_02.png",
+      "errors": [],
+      "bounds": [
+        24,
+        37,
+        231,
+        216
+      ],
+      "pixelSha256": "a5e36cc2cb73c82da6f486807adb4de2a20c0030eb820302cda2c25558c2fb16",
+      "changedPixels": 76,
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 0,
+      "detachedPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "centerX": 0.0
+      }
+    },
+    {
+      "file": "blink_03.png",
+      "errors": [],
+      "bounds": [
+        24,
+        37,
+        231,
+        216
+      ],
+      "pixelSha256": "a5e36cc2cb73c82da6f486807adb4de2a20c0030eb820302cda2c25558c2fb16",
+      "changedPixels": 76,
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 0,
+      "detachedPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "centerX": 0.0
+      }
+    },
+    {
+      "file": "blink_04.png",
+      "errors": [],
+      "bounds": [
+        24,
+        37,
+        231,
+        216
+      ],
+      "pixelSha256": "c57620e2c4f470ea7e0f34474fd66c71e865ca199417136b7a69540234a3e4c2",
+      "changedPixels": 76,
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 0,
+      "detachedPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "centerX": 0.0
+      }
+    },
+    {
+      "file": "blink_05.png",
+      "errors": [],
+      "bounds": [
+        24,
+        37,
+        231,
+        216
+      ],
+      "pixelSha256": "a59a91ab12c7b47d1519db51636d2788fc8a30d094e7629359c858e593798aa8",
+      "changedPixels": 76,
+      "protectedPixelChanges": 0,
+      "alphaChangedPixels": 0,
+      "detachedPixels": 0,
+      "canvasEdgePixels": 0,
+      "anchorDriftPixels": {
+        "bottom": 0,
+        "centerX": 0.0
+      }
+    }
+  ],
+  "uniquePixelHashes": 5,
+  "adjacentPixelDifferenceSumsIncludingLoop": [
+    5810,
+    7924,
+    0,
+    3914,
+    8312,
+    2152
+  ],
+  "appearanceDrift": "PROTECTED_PIXELS_VERIFIED; LOCAL_APPEARANCE_HUMAN_REVIEW_REQUIRED",
+  "frameContinuity": "NUMERIC_DELTAS_MEASURED; NATURAL_MOTION_HUMAN_REVIEW_REQUIRED",
+  "wholeImageTransform": false,
+  "productionEligible": false,
+  "runtimeConnected": false,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairPerformed": false
+}

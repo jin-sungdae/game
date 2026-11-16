@@ -1,0 +1,146 @@
+{
+  "sessionId": "LUMA-ASSET-06",
+  "automated": "PASS",
+  "errors": [],
+  "frames": [
+    {
+      "file": "interact_00.png",
+      "errors": [],
+      "bounds": [
+        52,
+        44,
+        203,
+        220
+      ],
+      "pixelHash": "b4d6c42811459cb028c9c677e17af66b48422a06cb8dfb0df667e7c1f8d2726e",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.12804794311523438
+    },
+    {
+      "file": "interact_01.png",
+      "errors": [],
+      "bounds": [
+        52,
+        44,
+        203,
+        220
+      ],
+      "pixelHash": "36581c2a0a8923fca2de07e914308830ad6ff4e48d6edcd03fbe60b77eca7e08",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.14091110229492188
+    },
+    {
+      "file": "interact_02.png",
+      "errors": [],
+      "bounds": [
+        52,
+        44,
+        203,
+        220
+      ],
+      "pixelHash": "57a87e6a848e40aa3d1ba986ce044d53f5fef615d0b64099d1d6e53728b4058a",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.1654205322265625
+    },
+    {
+      "file": "interact_03.png",
+      "errors": [],
+      "bounds": [
+        52,
+        44,
+        203,
+        220
+      ],
+      "pixelHash": "a9a9b059e4d5c2bcfe7f514eb0c8ed4e1cf9c34b9d3a6222133222a0ec40b4ac",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.19557571411132812
+    },
+    {
+      "file": "interact_04.png",
+      "errors": [],
+      "bounds": [
+        52,
+        44,
+        203,
+        220
+      ],
+      "pixelHash": "7cdb12aac7e1c19bef7130660c77e246602572f118e98e6da977d4e39156a1d3",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.21057510375976562
+    },
+    {
+      "file": "interact_05.png",
+      "errors": [],
+      "bounds": [
+        52,
+        44,
+        203,
+        220
+      ],
+      "pixelHash": "3a8903435e5f147b14c69870d806a22ba21d4419af8bf70b7c5e4c533e3b8d95",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.19711685180664062
+    },
+    {
+      "file": "interact_06.png",
+      "errors": [],
+      "bounds": [
+        52,
+        44,
+        203,
+        220
+      ],
+      "pixelHash": "5e901ba1810c7423f8bf3aef3167a1e761be849037b984dac8d4c1cd24460953",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.16207504272460938
+    },
+    {
+      "file": "interact_07.png",
+      "errors": [],
+      "bounds": [
+        52,
+        44,
+        203,
+        220
+      ],
+      "pixelHash": "8daea61d159829254d6780c09706f1195ed5014bb43dea8d9b647dfcfb9a22f3",
+      "protectedPixelChanges": 0,
+      "detachedAlphaPixels": 0,
+      "anchorDriftPixels": 0,
+      "meanAbsoluteByteDifferenceFromBase": 0.13272857666015625
+    }
+  ],
+  "uniquePixelHashes": 8,
+  "adjacentMeanAbsoluteByteDifferences": [
+    0.0129241943359375,
+    0.024646759033203125,
+    0.032817840576171875,
+    0.019287109375,
+    0.02393341064453125,
+    0.03595733642578125,
+    0.029460906982421875
+  ],
+  "maxEndpointDifferenceFromBase": 0.13272857666015625,
+  "continuityScope": "Quantitative <=2 byte mean adjacent delta, <=0.15 endpoint delta; visual acceptance separate",
+  "appearance": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "productionEligible": false,
+  "nativeGui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "sourceSha256": "da7aac511ca6088a442b09cdcf36ca1a5f766123425927c3213dfa43bc6cc924"
+}

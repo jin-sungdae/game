@@ -1,0 +1,97 @@
+{
+  "sessionId": "LUMA-ASSET-03",
+  "species": "nox",
+  "evolutionStage": 2,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "public/assets/creatures/nox/stage02/base.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "SKILL_CAST",
+    "frames": 8,
+    "frameDuration": 160,
+    "loop": false
+  },
+  "movableRect": [
+    85,
+    114,
+    214,
+    191
+  ],
+  "parts": [
+    {
+      "name": "neck-ruff-focus",
+      "x": 185,
+      "y": 137,
+      "rx": 23,
+      "ry": 22,
+      "dx": -1.4,
+      "dy": -1.8,
+      "samples": [
+        0.02,
+        0.17,
+        0.48,
+        0.82,
+        1,
+        0.76,
+        0.33,
+        0.04
+      ]
+    },
+    {
+      "name": "flank-gather",
+      "x": 137,
+      "y": 160,
+      "rx": 31,
+      "ry": 24,
+      "dx": 0.9,
+      "dy": -0.8,
+      "samples": [
+        0.01,
+        0.06,
+        0.23,
+        0.58,
+        0.94,
+        1,
+        0.55,
+        0.07
+      ]
+    },
+    {
+      "name": "tail-root-contain",
+      "x": 101,
+      "y": 160,
+      "rx": 16,
+      "ry": 23,
+      "dx": 1.2,
+      "dy": -1,
+      "samples": [
+        0.01,
+        0.03,
+        0.12,
+        0.36,
+        0.72,
+        1,
+        0.65,
+        0.09
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "nativeGui": "DEFERRED_GUI",
+  "anatomyScope": "그림자 깃을 안으로 모으는 집중과 지연된 이완. 이펙트·스킬 효과·전투 판정은 포함하지 않는 후보.",
+  "rigReuse": "design/production-batches/action-followup/nox/stage02/hit-pilot/rig-hit.cjs",
+  "productionTiming": "UNAPPROVED",
+  "repairIterations": 0,
+  "priorRepairLimit": "3/3 PRESERVED"
+}
