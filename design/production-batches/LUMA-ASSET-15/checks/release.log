@@ -1,0 +1,13 @@
+frontend-build
+animation-content
+presentation
+asset-tests
+FAIL MANUAL_QA_REQUIRED /private/tmp/luma-asset15-release
+Traceback (most recent call last):
+  File "/Users/jinseongdae/.codex/worktrees/assets-m056-m060/New project/scripts/validate_alpha_release.py", line 61, in <module>
+    if __name__=='__main__': main()
+  File "/Users/jinseongdae/.codex/worktrees/assets-m056-m060/New project/scripts/validate_alpha_release.py", line 38, in main
+    step('asset-tests',['npm','run','test:assets'])
+  File "/Users/jinseongdae/.codex/worktrees/assets-m056-m060/New project/scripts/validate_alpha_release.py", line 29, in step
+    if result.returncode: raise RuntimeError(f'{name} failed; see {out/name}.log')
+RuntimeError: asset-tests failed; see /private/tmp/luma-asset15-release/asset-tests.log

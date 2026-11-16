@@ -1,0 +1,76 @@
+{
+  "conceptId": "M058",
+  "species": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch06/M058/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "CHARGE",
+    "frames": 8,
+    "frameDuration": 160,
+    "loop": false
+  },
+  "movableRect": [
+    39,
+    112,
+    224,
+    216
+  ],
+  "parts": [
+    {
+      "x": 193,
+      "y": 141,
+      "rx": 25,
+      "ry": 27,
+      "dx": -3,
+      "dy": 2,
+      "name": "neck-preload",
+      "samples": [
+        0.04,
+        0.25,
+        0.6,
+        1,
+        0.92,
+        0.55,
+        0.17,
+        0.025
+      ]
+    },
+    {
+      "x": 65,
+      "y": 170,
+      "rx": 20,
+      "ry": 31,
+      "dx": 2,
+      "dy": 1,
+      "name": "tail-brace",
+      "samples": [
+        0.03,
+        0.55,
+        1,
+        0.85,
+        0.65,
+        0.35,
+        0.1,
+        0.02
+      ]
+    }
+  ],
+  "anatomyScope": "목을 코일 쪽으로 당겨 힘을 모은 뒤 중립 복귀하는 준비 자세. 비행/전체 이동/스킬 활성화 없음.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "naturalMotion": "HUMAN_REVIEW_REQUIRED",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairScope": "독립 신규 행동 첫 시도; 기존 실패 복구 아님",
+  "rigReuse": "design/production-batches/LUMA-ASSET-15/produce.cjs"
+}

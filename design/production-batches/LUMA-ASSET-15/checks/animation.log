@@ -1,0 +1,1444 @@
+
+> project-luma-spike@0.1.0 test:animation
+> sh scripts/test-animation.sh
+
+TAP version 13
+# Subtest: IDLE -> idle
+ok 1 - IDLE -> idle
+  ---
+  duration_ms: 1.142584
+  ...
+# Subtest: WALKING -> walk
+ok 2 - WALKING -> walk
+  ---
+  duration_ms: 0.116625
+  ...
+# Subtest: SITTING -> sit
+ok 3 - SITTING -> sit
+  ---
+  duration_ms: 0.375209
+  ...
+# Subtest: LOOKING -> look
+ok 4 - LOOKING -> look
+  ---
+  duration_ms: 0.098417
+  ...
+# Subtest: SLEEPING -> sleep
+ok 5 - SLEEPING -> sleep
+  ---
+  duration_ms: 0.386792
+  ...
+# Subtest: REACTING -> react
+ok 6 - REACTING -> react
+  ---
+  duration_ms: 0.088458
+  ...
+# Subtest: DRAGGING -> idle
+ok 7 - DRAGGING -> idle
+  ---
+  duration_ms: 0.092417
+  ...
+# Subtest: state change resets, including shared idle drag clip
+ok 8 - state change resets, including shared idle drag clip
+  ---
+  duration_ms: 0.28275
+  ...
+# Subtest: identical snapshots do not reset time
+ok 9 - identical snapshots do not reset time
+  ---
+  duration_ms: 0.195083
+  ...
+# Subtest: loop wraps using elapsed time, including a delayed tick
+ok 10 - loop wraps using elapsed time, including a delayed tick
+  ---
+  duration_ms: 0.277916
+  ...
+# Subtest: react holds final frame and reports completion without changing game state
+ok 11 - react holds final frame and reports completion without changing game state
+  ---
+  duration_ms: 0.128542
+  ...
+# Subtest: LEFT flip
+ok 12 - LEFT flip
+  ---
+  duration_ms: 0.085916
+  ...
+# Subtest: RIGHT normal
+ok 13 - RIGHT normal
+  ---
+  duration_ms: 0.084333
+  ...
+# Subtest: missing manifest fallback
+ok 14 - missing manifest fallback
+  ---
+  duration_ms: 0.755208
+  ...
+# Subtest: missing frame rejects whole clip
+ok 15 - missing frame rejects whole clip
+  ---
+  duration_ms: 142.133625
+  ...
+# Subtest: complete clip loads with canonical filenames and caches requests
+ok 16 - complete clip loads with canonical filenames and caches requests
+  ---
+  duration_ms: 0.268167
+  ...
+# Subtest: inconsistent frame canvas falls back
+ok 17 - inconsistent frame canvas falls back
+  ---
+  duration_ms: 37.226792
+  ...
+# Subtest: missing clip falls back
+ok 18 - missing clip falls back
+  ---
+  duration_ms: 4.875417
+  ...
+# Subtest: bottom-center fit is unchanged by frame/direction and stays within panel
+ok 19 - bottom-center fit is unchanged by frame/direction and stays within panel
+  ---
+  duration_ms: 9.672833
+  ...
+# Subtest: manifest rejects incompatible anchor or invalid timing
+ok 20 - manifest rejects incompatible anchor or invalid timing
+  ---
+  duration_ms: 22.180666
+  ...
+# Subtest: moa stage01 manifest resolves
+ok 21 - moa stage01 manifest resolves
+  ---
+  duration_ms: 0.2565
+  ...
+# Subtest: moa missing assets fall back and failure is cached
+ok 22 - moa missing assets fall back and failure is cached
+  ---
+  duration_ms: 0.356875
+  ...
+# Subtest: ruu stage01 manifest resolves
+ok 23 - ruu stage01 manifest resolves
+  ---
+  duration_ms: 3.887917
+  ...
+# Subtest: ruu missing assets fall back and failure is cached
+ok 24 - ruu missing assets fall back and failure is cached
+  ---
+  duration_ms: 0.24725
+  ...
+# Subtest: nox stage01 manifest resolves
+ok 25 - nox stage01 manifest resolves
+  ---
+  duration_ms: 0.577292
+  ...
+# Subtest: nox missing assets fall back and failure is cached
+ok 26 - nox missing assets fall back and failure is cached
+  ---
+  duration_ms: 0.128542
+  ...
+# Subtest: unknown species/stage returns fallback without IO or throwing
+ok 27 - unknown species/stage returns fallback without IO or throwing
+  ---
+  duration_ms: 0.413625
+  ...
+# Subtest: MOKORI resolves stage02; missing frames never load stage01
+ok 28 - MOKORI resolves stage02; missing frames never load stage01
+  ---
+  duration_ms: 0.829458
+  ...
+# Subtest: NEBLA missing animation is cached and never requests earlier stages
+ok 29 - NEBLA missing animation is cached and never requests earlier stages
+  ---
+  duration_ms: 0.092083
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 517.442708
+TAP version 13
+# Subtest: registered species/stage base resolution and unknown fallback
+ok 1 - registered species/stage base resolution and unknown fallback
+  ---
+  duration_ms: 0.742208
+  ...
+# Subtest: animation > base > CSS priority
+ok 2 - animation > base > CSS priority
+  ---
+  duration_ms: 0.335334
+  ...
+# Subtest: PIP registry is independent; unknown and prototype names fail closed
+ok 3 - PIP registry is independent; unknown and prototype names fail closed
+  ---
+  duration_ms: 0.077708
+  ...
+# Subtest: base success is cached; concurrent callers share IO
+ok 4 - base success is cached; concurrent callers share IO
+  ---
+  duration_ms: 0.131333
+  ...
+# Subtest: 404/decode failure, invalid dimensions and PIP missing cache CSS fallback
+ok 5 - 404/decode failure, invalid dimensions and PIP missing cache CSS fallback
+  ---
+  duration_ms: 0.196708
+  ...
+# Subtest: MOA/PIP scale fits attack extent and bottom-center survives RIGHT/LEFT
+ok 6 - MOA/PIP scale fits attack extent and bottom-center survives RIGHT/LEFT
+  ---
+  duration_ms: 0.393084
+  ...
+# Subtest: base is static, uses common bottom anchor and remains inside gameplay wrappers
+ok 7 - base is static, uses common bottom anchor and remains inside gameplay wrappers
+  ---
+  duration_ms: 9.408834
+  ...
+# Subtest: missing MOKORI base is cached CSS fallback, never stage01
+ok 8 - missing MOKORI base is cached CSS fallback, never stage01
+  ---
+  duration_ms: 0.147209
+  ...
+# Subtest: NEBLA failed stage03 load stays diagnostic and never borrows MOKORI
+ok 9 - NEBLA failed stage03 load stays diagnostic and never borrows MOKORI
+  ---
+  duration_ms: 0.978417
+  ...
+# Subtest: delivered NEBLA resolves its own base before and after loader restart
+ok 10 - delivered NEBLA resolves its own base before and after loader restart
+  ---
+  duration_ms: 7.541458
+  ...
+# Subtest: corrupt companion stages fail closed without borrowing another stage
+ok 11 - corrupt companion stages fail closed without borrowing another stage
+  ---
+  duration_ms: 0.186917
+  ...
+# Subtest: mature MOA artwork preserves the seeded database names
+ok 12 - mature MOA artwork preserves the seeded database names
+  ---
+  duration_ms: 0.161791
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 209.523
+TAP version 13
+# Subtest: all thirty slots validate with unique codes/numbers and exact rarity distribution
+ok 1 - all thirty slots validate with unique codes/numbers and exact rarity distribution
+  ---
+  duration_ms: 2.240375
+  ...
+# Subtest: vocabulary parsers accept every supported value and reject invalid types/unknowns
+ok 2 - vocabulary parsers accept every supported value and reject invalid types/unknowns
+  ---
+  duration_ms: 0.800959
+  ...
+# Subtest: movement wire vocabulary matches existing Rust serde enum, including FREE_2D
+ok 3 - movement wire vocabulary matches existing Rust serde enum, including FREE_2D
+  ---
+  duration_ms: 0.846958
+  ...
+# Subtest: PIP metadata and production asset stay compatible with existing gameplay
+ok 4 - PIP metadata and production asset stay compatible with existing gameplay
+  ---
+  duration_ms: 0.599625
+  ...
+# Subtest: unknown/prototype names and canonical Alpha versus provisional delivery paths
+ok 5 - unknown/prototype names and canonical Alpha versus provisional delivery paths
+  ---
+  duration_ms: 0.222667
+  ...
+# Subtest: bounds reject nonfinite/fractional values, malformed identities and incomplete definitions
+ok 6 - bounds reject nonfinite/fractional values, malformed identities and incomplete definitions
+  ---
+  duration_ms: 0.821125
+  ...
+# Subtest: duplicate identity and Dex number are rejected independently
+ok 7 - duplicate identity and Dex number are rejected independently
+  ---
+  duration_ms: 0.077083
+  ...
+# Subtest: enabled content must have confirmed production metadata
+ok 8 - enabled content must have confirmed production metadata
+  ---
+  duration_ms: 0.107667
+  ...
+# Subtest: Alpha candidates cover silhouettes, movement, rarity and desktop spawn diversity
+ok 9 - Alpha candidates cover silhouettes, movement, rarity and desktop spawn diversity
+  ---
+  duration_ms: 0.124
+  ...
+# Subtest: Dex masks undiscovered names/assets and capture supersedes discovery
+ok 10 - Dex masks undiscovered names/assets and capture supersedes discovery
+  ---
+  duration_ms: 0.253375
+  ...
+# Subtest: documentation includes exactly the same 30 design slots and Alpha flags
+ok 11 - documentation includes exactly the same 30 design slots and Alpha flags
+  ---
+  duration_ms: 0.954709
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 87.315625
+TAP version 13
+# Subtest: exact fifteen delivery paths, PIP unchanged, provisional content remains separate
+ok 1 - exact fifteen delivery paths, PIP unchanged, provisional content remains separate
+  ---
+  duration_ms: 1.908583
+  ...
+# Subtest: missing own base never falls back to PIP or Companion; valid image uses same URL
+ok 2 - missing own base never falls back to PIP or Companion; valid image uses same URL
+  ---
+  duration_ms: 10.720625
+  ...
+# Subtest: registered same-monster animation > same base > diagnostic; frame failure falls through
+ok 3 - registered same-monster animation > same base > diagnostic; frame failure falls through
+  ---
+  duration_ms: 7.217375
+  ...
+# Subtest: visual scale bounds fail safely and cannot enlarge native presentation envelope
+ok 4 - visual scale bounds fail safely and cannot enlarge native presentation envelope
+  ---
+  duration_ms: 52.786917
+  ...
+# Subtest: bottom center and RIGHT source survive facing and source switch without new scheduling
+ok 5 - bottom center and RIGHT source survive facing and source switch without new scheduling
+  ---
+  duration_ms: 1.270084
+  ...
+# Subtest: confirmed content and delivery identities match; successful image loads never activate gameplay
+ok 6 - confirmed content and delivery identities match; successful image loads never activate gameplay
+  ---
+  duration_ms: 0.485291
+  ...
+# Subtest: release real fifteen bases select same-monster base, never diagnostic
+ok 7 - release real fifteen bases select same-monster base, never diagnostic
+  ---
+  duration_ms: 3.761125
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 397.025791
+TAP version 13
+# Subtest: exact 15 confirmed Alpha identities and all approved profile mappings
+ok 1 - exact 15 confirmed Alpha identities and all approved profile mappings
+  ---
+  duration_ms: 28.282583
+  ...
+# Subtest: only SHADE LUNET NOCT have Alpha night conditions
+ok 2 - only SHADE LUNET NOCT have Alpha night conditions
+  ---
+  duration_ms: 0.090958
+  ...
+# Subtest: static economic projections exactly match single server Domain defaults
+ok 3 - static economic projections exactly match single server Domain defaults
+  ---
+  duration_ms: 13.956542
+  ...
+# Subtest: only validated Batch 1 is ready and enabled; other Alpha remains diagnostic
+ok 4 - only validated Batch 1 is ready and enabled; other Alpha remains diagnostic
+  ---
+  duration_ms: 2.210084
+  ...
+# Subtest: the other fifteen stable slots remain provisional non-Alpha and not playable
+ok 5 - the other fifteen stable slots remain provisional non-Alpha and not playable
+  ---
+  duration_ms: 0.286417
+  ...
+# Subtest: battle personality is required for Alpha and separate from ambient behavior
+ok 6 - battle personality is required for Alpha and separate from ambient behavior
+  ---
+  duration_ms: 0.940042
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 286.249792
+TAP version 13
+# Subtest: moa own base NOT_SUPPLIED without image requests
+ok 1 - moa own base NOT_SUPPLIED without image requests
+  ---
+  duration_ms: 2.352458
+  ...
+# Subtest: moa missing, decode failure, wrong canvas or wrong identity reject whole animation
+ok 2 - moa missing, decode failure, wrong canvas or wrong identity reject whole animation
+  ---
+  duration_ms: 4.238083
+  ...
+# Subtest: moa full clip cached, same character paths, timings and bottom canvas
+ok 3 - moa full clip cached, same character paths, timings and bottom canvas
+  ---
+  duration_ms: 0.473666
+  ...
+# Subtest: moa IDLE MOVE hysteresis, REACT completion and presentation priority
+ok 4 - moa IDLE MOVE hysteresis, REACT completion and presentation priority
+  ---
+  duration_ms: 0.168
+  ...
+# Subtest: PIP own base NOT_SUPPLIED without image requests
+ok 5 - PIP own base NOT_SUPPLIED without image requests
+  ---
+  duration_ms: 0.056959
+  ...
+# Subtest: PIP missing, decode failure, wrong canvas or wrong identity reject whole animation
+ok 6 - PIP missing, decode failure, wrong canvas or wrong identity reject whole animation
+  ---
+  duration_ms: 0.343459
+  ...
+# Subtest: PIP full clip cached, same character paths, timings and bottom canvas
+ok 7 - PIP full clip cached, same character paths, timings and bottom canvas
+  ---
+  duration_ms: 0.114875
+  ...
+# Subtest: PIP IDLE MOVE hysteresis, REACT completion and presentation priority
+ok 8 - PIP IDLE MOVE hysteresis, REACT completion and presentation priority
+  ---
+  duration_ms: 0.055916
+  ...
+# Subtest: only pilot opts in, all Active Alpha covered and stage2/3 unchanged
+ok 9 - only pilot opts in, all Active Alpha covered and stage2/3 unchanged
+  ---
+  duration_ms: 0.131875
+  ...
+# Subtest: drag and invalid speed cannot drive walking playback
+ok 10 - drag and invalid speed cannot drive walking playback
+  ---
+  duration_ms: 0.066
+  ...
+# Subtest: phase integrates bounded speed, same identity retained, reduced motion pins frame0
+ok 11 - phase integrates bounded speed, same identity retained, reduced motion pins frame0
+  ---
+  duration_ms: 0.083917
+  ...
+# Subtest: 16 subscribers share one RAF; last unsubscribe cancels; restart fresh
+ok 12 - 16 subscribers share one RAF; last unsubscribe cancels; restart fresh
+  ---
+  duration_ms: 0.128541
+  ...
+# Subtest: stable React entity, independent transform layers and native authority preserved
+ok 13 - stable React entity, independent transform layers and native authority preserved
+  ---
+  duration_ms: 1.387791
+  ...
+# Subtest: StrictMode effect setup-cleanup-setup and 100 mount cycles retain a single clock
+ok 14 - StrictMode effect setup-cleanup-setup and 100 mount cycles retain a single clock
+  ---
+  duration_ms: 2.6595
+  ...
+# Subtest: subscription created during a tick cannot start a second RAF chain
+ok 15 - subscription created during a tick cannot start a second RAF chain
+  ---
+  duration_ms: 0.637791
+  ...
+# Subtest: MOA IDLE MOVE REACT approved; explicit unsupplied state stays closed
+ok 16 - MOA IDLE MOVE REACT approved; explicit unsupplied state stays closed
+  ---
+  duration_ms: 2.362834
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1087.215708
+TAP version 13
+# Subtest: candidate complete SLEEP clip uses existing loader and animator; missing frame fails closed
+ok 1 - candidate complete SLEEP clip uses existing loader and animator; missing frame fails closed
+  ---
+  duration_ms: 497.341375
+  ...
+# Subtest: existing behavior resolver preserves sleep identity and suppression
+ok 2 - existing behavior resolver preserves sleep identity and suppression
+  ---
+  duration_ms: 1.605958
+  ...
+# Subtest: approved CAPLET pilot loads only SLEEP and keeps unknown identity inactive
+ok 3 - approved CAPLET pilot loads only SLEEP and keeps unknown identity inactive
+  ---
+  duration_ms: 2.021542
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2086.671666
+TAP version 13
+# Subtest: Rust World sleep trace selects registered sleep and preserves world anchor until wake
+ok 1 - Rust World sleep trace selects registered sleep and preserves world anchor until wake
+  ---
+  duration_ms: 6.398416
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 919.708625
+TAP version 13
+# Subtest: M003 candidate uses real frames and existing clock only in isolated review
+ok 1 - M003 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 8.213333
+  ...
+# Subtest: M006 candidate uses real frames and existing clock only in isolated review
+ok 2 - M006 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 4.66675
+  ...
+# Subtest: ruu/stage03 candidate uses real frames and existing clock only in isolated review
+ok 3 - ruu/stage03 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 5.330792
+  ...
+# Subtest: M004 candidate uses real frames and existing clock only in isolated review
+ok 4 - M004 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.256666
+  ...
+# Subtest: nox/stage02 candidate uses real frames and existing clock only in isolated review
+ok 5 - nox/stage02 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 65.562916
+  ...
+# Subtest: M008 candidate uses real frames and existing clock only in isolated review
+ok 6 - M008 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 8.669375
+  ...
+# Subtest: ruu/stage04 candidate uses real frames and existing clock only in isolated review
+ok 7 - ruu/stage04 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 3.927208
+  ...
+# Subtest: M009 candidate uses real frames and existing clock only in isolated review
+ok 8 - M009 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 12.205167
+  ...
+# Subtest: ruu/stage05 candidate uses real frames and existing clock only in isolated review
+ok 9 - ruu/stage05 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 71.129792
+  ...
+# Subtest: M010 candidate uses real frames and existing clock only in isolated review
+ok 10 - M010 candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 25.17025
+  ...
+# Subtest: ruu/stage03/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 11 - ruu/stage03/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 122.78425
+  ...
+# Subtest: M001/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 12 - M001/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 52.641875
+  ...
+# Subtest: nox/stage02/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 13 - nox/stage02/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 45.0645
+  ...
+# Subtest: M002/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 14 - M002/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 112.625875
+  ...
+# Subtest: moa/stage05/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 15 - moa/stage05/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 44.325
+  ...
+# Subtest: ruu/stage04/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+ok 16 - ruu/stage04/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 11.501834
+  ...
+# Subtest: M003/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 17 - M003/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 3.536333
+  ...
+# Subtest: M004/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+ok 18 - M004/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.451917
+  ...
+# Subtest: M006/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 19 - M006/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 4.991167
+  ...
+# Subtest: ruu/stage05/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 20 - ruu/stage05/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.284833
+  ...
+# Subtest: M009/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 21 - M009/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.112625
+  ...
+# Subtest: M011/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 22 - M011/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 4.373792
+  ...
+# Subtest: M012/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+ok 23 - M012/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.346583
+  ...
+# Subtest: moa/stage05/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+ok 24 - moa/stage05/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 3.156166
+  ...
+# Subtest: M013/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 25 - M013/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 7.112625
+  ...
+# Subtest: M014/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 26 - M014/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 75.049625
+  ...
+# Subtest: ruu/stage03/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 27 - ruu/stage03/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 2.880459
+  ...
+# Subtest: nox/stage02/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 28 - nox/stage02/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 2.673959
+  ...
+# Subtest: moa/stage04/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 29 - moa/stage04/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.199292
+  ...
+# Subtest: M018/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 30 - M018/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.560667
+  ...
+# Subtest: ruu/stage04/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 31 - ruu/stage04/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 5.5015
+  ...
+# Subtest: moa/stage05/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 32 - moa/stage05/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 15.422875
+  ...
+# Subtest: M022/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 33 - M022/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 4.10075
+  ...
+# Subtest: ruu/stage05/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 34 - ruu/stage05/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 5.34125
+  ...
+# Subtest: M023/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 35 - M023/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 4.01525
+  ...
+# Subtest: ruu/stage05/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+ok 36 - ruu/stage05/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.244167
+  ...
+# Subtest: M024/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 37 - M024/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 3.498542
+  ...
+# Subtest: M027/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 38 - M027/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 26.934458
+  ...
+# Subtest: M029/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+ok 39 - M029/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 8.102292
+  ...
+# Subtest: nox/stage02/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+ok 40 - nox/stage02/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.336917
+  ...
+# Subtest: moa/stage04/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+ok 41 - moa/stage04/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 14.121459
+  ...
+# Subtest: M031/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 42 - M031/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 9.775375
+  ...
+# Subtest: M032/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 43 - M032/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.143208
+  ...
+# Subtest: ruu/stage03/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+ok 44 - ruu/stage03/cursor-react-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 8.987042
+  ...
+# Subtest: M041/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 45 - M041/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 8.838041
+  ...
+# Subtest: M045/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 46 - M045/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 7.660542
+  ...
+# Subtest: M050/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 47 - M050/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 8.369
+  ...
+# Subtest: M057/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 48 - M057/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 10.159583
+  ...
+# Subtest: M058/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 49 - M058/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 3.497667
+  ...
+# Subtest: M061/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 50 - M061/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 3.494708
+  ...
+# Subtest: M062/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 51 - M062/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 3.274791
+  ...
+# Subtest: M066/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 52 - M066/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 6.393209
+  ...
+# Subtest: M069/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 53 - M069/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 8.792
+  ...
+# Subtest: M070/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 54 - M070/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 422.537875
+  ...
+# Subtest: M081/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 55 - M081/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 8.447833
+  ...
+# Subtest: M082/hit-pilot candidate uses real frames and existing clock only in isolated review
+ok 56 - M082/hit-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 4.053958
+  ...
+# Subtest: M085/interact-pilot candidate uses real frames and existing clock only in isolated review
+ok 57 - M085/interact-pilot candidate uses real frames and existing clock only in isolated review
+  ---
+  duration_ms: 4.099291
+  ...
+# Subtest: candidate files cannot activate CAPLET MOVE/TURN or RUU LOOK; native sleep remains stationary
+ok 58 - candidate files cannot activate CAPLET MOVE/TURN or RUU LOOK; native sleep remains stationary
+  ---
+  duration_ms: 0.912541
+  ...
+1..58
+# tests 58
+# suites 0
+# pass 58
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2369.829041
+TAP version 13
+# Subtest: static MOA IDLE lookup never uses fetch, keeps unavailable states and own-base fallback
+ok 1 - static MOA IDLE lookup never uses fetch, keeps unavailable states and own-base fallback
+  ---
+  duration_ms: 7.141
+  ...
+# Subtest: document-start request observer counts rejected manifest attempts and resources
+ok 2 - document-start request observer counts rejected manifest attempts and resources
+  ---
+  duration_ms: 1.864042
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 247.568667
+TAP version 13
+# Subtest: blink bounded varied intervals, three frames then breath, deterministic RNG
+ok 1 - blink bounded varied intervals, three frames then breath, deterministic RNG
+  ---
+  duration_ms: 0.759459
+  ...
+# Subtest: MOVE REACT suppression and reduced motion cancel; fresh idle reschedules without catchup
+ok 2 - MOVE REACT suppression and reduced motion cancel; fresh idle reschedules without catchup
+  ---
+  duration_ms: 39.345875
+  ...
+# Subtest: static breath and blink loaded atomically per clip; missing blink uses own base, no fetch
+ok 3 - static breath and blink loaded atomically per clip; missing blink uses own base, no fetch
+  ---
+  duration_ms: 22.270041
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 485.5865
+TAP version 13
+# Subtest: MOVE pilot is explicit, atomic and isolated from approved IDLE and REACT
+ok 1 - MOVE pilot is explicit, atomic and isolated from approved IDLE and REACT
+  ---
+  duration_ms: 8.083208
+  ...
+# Subtest: real resolver hysteresis selects MOVE; frame order and bounded slow/normal rates
+ok 2 - real resolver hysteresis selects MOVE; frame order and bounded slow/normal rates
+  ---
+  duration_ms: 1.514375
+  ...
+# Subtest: MOVE cancels due/in-progress blink; IDLE resumes breath and fresh interval; priority suppresses MOVE
+ok 3 - MOVE cancels due/in-progress blink; IDLE resumes breath and fresh interval; priority suppresses MOVE
+  ---
+  duration_ms: 0.257417
+  ...
+# Subtest: walking intent without measured motion stays idle; unavailable air clips never reuse walk
+ok 4 - walking intent without measured motion stays idle; unavailable air clips never reuse walk
+  ---
+  duration_ms: 0.1405
+  ...
+# Subtest: companion native snapshot stops WALK before the next animation clock and gates behavior
+ok 5 - companion native snapshot stops WALK before the next animation clock and gates behavior
+  ---
+  duration_ms: 0.180625
+  ...
+# Subtest: companion reaction requires a real native edge and cannot leak into rest or battle
+ok 6 - companion reaction requires a real native edge and cannot leak into rest or battle
+  ---
+  duration_ms: 0.971959
+  ...
+# Subtest: all fifteen companion identities load only supplied clips; missing actions never borrow idle
+ok 7 - all fifteen companion identities load only supplied clips; missing actions never borrow idle
+  ---
+  duration_ms: 2.649583
+  ...
+# Subtest: cached manifest and frames never authorize a different species or evolution stage
+ok 8 - cached manifest and frames never authorize a different species or evolution stage
+  ---
+  duration_ms: 1.543167
+  ...
+# Subtest: RUU stage three IDLE is atomic, identity-bound, and uses the existing clock
+ok 9 - RUU stage three IDLE is atomic, identity-bound, and uses the existing clock
+  ---
+  duration_ms: 1.372042
+  ...
+# Subtest: RUU mature stages select their own six-frame clips atomically and reset stage phase
+ok 10 - RUU mature stages select their own six-frame clips atomically and reset stage phase
+  ---
+  duration_ms: 122.063916
+  ...
+# Subtest: NOX stage two owns six-frame IDLE and fails closed for other stages/actions
+ok 11 - NOX stage two owns six-frame IDLE and fails closed for other stages/actions
+  ---
+  duration_ms: 87.003792
+  ...
+# Subtest: MOA mature stages preserve legacy names and keep missing actions unavailable
+ok 12 - MOA mature stages preserve legacy names and keep missing actions unavailable
+  ---
+  duration_ms: 34.543292
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 850.748458
+TAP version 13
+# Subtest: REACT opt-in is atomic, static and own-character only; missing frame isolates failure
+ok 1 - REACT opt-in is atomic, static and own-character only; missing frame isolates failure
+  ---
+  duration_ms: 180.592541
+  ...
+# Subtest: six 80ms frames play once; reduced motion pins neutral; current velocity controls completion
+ok 2 - six 80ms frames play once; reduced motion pins neutral; current velocity controls completion
+  ---
+  duration_ms: 131.065375
+  ...
+# Subtest: repeated same reaction does not queue; new native edge restarts bounded window; priorities cancel
+ok 3 - repeated same reaction does not queue; new native edge restarts bounded window; priorities cancel
+  ---
+  duration_ms: 0.31575
+  ...
+# Subtest: invalid REACT metadata or frame canvas fails closed without manifest fetch
+ok 4 - invalid REACT metadata or frame canvas fails closed without manifest fetch
+  ---
+  duration_ms: 0.538625
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1355.58975
+TAP version 13
+# Subtest: PIP pilot static lookup: own IDLE4 MOVE8 REACT6, no Blink or MOA fallback
+ok 1 - PIP pilot static lookup: own IDLE4 MOVE8 REACT6, no Blink or MOA fallback
+  ---
+  duration_ms: 2.891583
+  ...
+# Subtest: missing/invalid PIP clip falls back atomically to PIP base and leaves other clips available
+ok 2 - missing/invalid PIP clip falls back atomically to PIP base and leaves other clips available
+  ---
+  duration_ms: 1.644083
+  ...
+# Subtest: PIP measured GROUND motion selects MOVE under ROAMING, stop returns IDLE; higher presentation wins
+ok 3 - PIP measured GROUND motion selects MOVE under ROAMING, stop returns IDLE; higher presentation wins
+  ---
+  duration_ms: 0.853959
+  ...
+# Subtest: PIP sequences on the existing animator and deterministic REACT completion
+ok 4 - PIP sequences on the existing animator and deterministic REACT completion
+  ---
+  duration_ms: 0.679125
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 494.489834
+TAP version 13
+# Subtest: native phases select frames without elapsed playback, ground gate fails closed
+ok 1 - native phases select frames without elapsed playback, ground gate fails closed
+  ---
+  duration_ms: 1.532167
+  ...
+# Subtest: registered JUMP production; IDLE REACT BLINK unavailable; all failures own base
+ok 2 - registered JUMP production; IDLE REACT BLINK unavailable; all failures own base
+  ---
+  duration_ms: 2.51725
+  ...
+# Subtest: existing priority and cleanup suppress jump for encounter and presentation
+ok 3 - existing priority and cleanup suppress jump for encounter and presentation
+  ---
+  duration_ms: 0.174042
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 224.481583
+TAP version 13
+# Subtest: FLYING observes full velocity magnitude; stationary hover and hysteresis
+ok 1 - FLYING observes full velocity magnitude; stationary hover and hysteresis
+  ---
+  duration_ms: 1.410791
+  ...
+# Subtest: arrival battle capture despawn lifecycle and invalid signal fail closed
+ok 2 - arrival battle capture despawn lifecycle and invalid signal fail closed
+  ---
+  duration_ms: 0.267958
+  ...
+# Subtest: all supplied states use own registry, original filenames and approved Alpha timing
+ok 3 - all supplied states use own registry, original filenames and approved Alpha timing
+  ---
+  duration_ms: 1.817084
+  ...
+# Subtest: missing frame/manifest, wrong identity/canvas/timing fail closed for every flight clip
+ok 4 - missing frame/manifest, wrong identity/canvas/timing fail closed for every flight clip
+  ---
+  duration_ms: 1.720708
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 248.034625
+TAP version 13
+# Subtest: FLOAT follows native excursion through slow apex and ends directly, fixed visual rate
+ok 1 - FLOAT follows native excursion through slow apex and ends directly, fixed visual rate
+  ---
+  duration_ms: 1.442333
+  ...
+# Subtest: higher priority and invalid telemetry suspend; no invented settling phase
+ok 2 - higher priority and invalid telemetry suspend; no invented settling phase
+  ---
+  duration_ms: 0.216333
+  ...
+# Subtest: PUFF own static clips and reduced motion; unsupported states remain unavailable
+ok 3 - PUFF own static clips and reduced motion; unsupported states remain unavailable
+  ---
+  duration_ms: 0.768666
+  ...
+# Subtest: missing/invalid manifest or frame returns null for own-base fallback
+ok 4 - missing/invalid manifest or frame returns null for own-base fallback
+  ---
+  duration_ms: 1.934333
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 546.60375
+TAP version 13
+# Subtest: STATIC has no movement or synthetic PEEK regardless of speed/facing; input unchanged
+ok 1 - STATIC has no movement or synthetic PEEK regardless of speed/facing; input unchanged
+  ---
+  duration_ms: 1.28975
+  ...
+# Subtest: arrival/rarity and all non-roaming lifecycle states suppress immediately, resume IDLE
+ok 2 - arrival/rarity and all non-roaming lifecycle states suppress immediately, resume IDLE
+  ---
+  duration_ms: 5.341291
+  ...
+# Subtest: IDLE order and 2500ms loop; PEEK asset non-loop coverage without production trigger
+ok 3 - IDLE order and 2500ms loop; PEEK asset non-loop coverage without production trigger
+  ---
+  duration_ms: 54.588
+  ...
+# Subtest: invalid identity/timing/loop/registry and missing frame fail closed to own base
+ok 4 - invalid identity/timing/loop/registry and missing frame fail closed to own base
+  ---
+  duration_ms: 0.953584
+  ...
+# Subtest: bundled metadata resolves real supplied filenames; invalid offsets are rejected
+ok 5 - bundled metadata resolves real supplied filenames; invalid offsets are rejected
+  ---
+  duration_ms: 9.070791
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1374.274167
+TAP version 13
+# Subtest: EDGE reads accepted speed with hysteresis, stop/resume and fixed smoke cadence
+ok 1 - EDGE reads accepted speed with hysteresis, stop/resume and fixed smoke cadence
+  ---
+  duration_ms: 3.98325
+  ...
+# Subtest: lifecycle and invalid motion suppress; no corner signal is invented
+ok 2 - lifecycle and invalid motion suppress; no corner signal is invented
+  ---
+  duration_ms: 0.189583
+  ...
+# Subtest: real registry/files order, cycles, reduced motion and deterministic TURN asset coverage
+ok 3 - real registry/files order, cycles, reduced motion and deterministic TURN asset coverage
+  ---
+  duration_ms: 11.2255
+  ...
+# Subtest: missing/invalid asset resolves null for SHADE own-base; prefix cannot escape bundle
+ok 4 - missing/invalid asset resolves null for SHADE own-base; prefix cannot escape bundle
+  ---
+  duration_ms: 2.503375
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1093.451375
+TAP version 13
+# Subtest: FREE_2D reads accepted speed with hysteresis, stop/resume and fixed flame cadence
+ok 1 - FREE_2D reads accepted speed with hysteresis, stop/resume and fixed flame cadence
+  ---
+  duration_ms: 2.201167
+  ...
+# Subtest: lifecycle and invalid motion suppress; no high-speed state is invented
+ok 2 - lifecycle and invalid motion suppress; no high-speed state is invented
+  ---
+  duration_ms: 0.224958
+  ...
+# Subtest: real registry/files order, cycles, reduced motion and deterministic INTENSE asset coverage
+ok 3 - real registry/files order, cycles, reduced motion and deterministic INTENSE asset coverage
+  ---
+  duration_ms: 9.024959
+  ...
+# Subtest: missing/invalid asset resolves null for EMBER own-base; prefix cannot escape bundle
+ok 4 - missing/invalid asset resolves null for EMBER own-base; prefix cannot escape bundle
+  ---
+  duration_ms: 2.2825
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 809.400791
+TAP version 13
+# Subtest: explicit consumers share FLOATING dispatch, not per-character resolvers
+ok 1 - explicit consumers share FLOATING dispatch, not per-character resolvers
+  ---
+  duration_ms: 215.247375
+  ...
+# Subtest: PUFF static identity, sequence, cadence and reduced motion
+ok 2 - PUFF static identity, sequence, cadence and reduced motion
+  ---
+  duration_ms: 59.597541
+  ...
+# Subtest: PUFF same resolver holds slow apex, completes/cancels, suppresses lifecycle
+ok 3 - PUFF same resolver holds slow apex, completes/cancels, suppresses lifecycle
+  ---
+  duration_ms: 1.089458
+  ...
+# Subtest: PUFF invalid/missing clip leaves only own-base fallback
+ok 4 - PUFF invalid/missing clip leaves only own-base fallback
+  ---
+  duration_ms: 1.651833
+  ...
+# Subtest: WISP static identity, sequence, cadence and reduced motion
+ok 5 - WISP static identity, sequence, cadence and reduced motion
+  ---
+  duration_ms: 3.771375
+  ...
+# Subtest: WISP same resolver holds slow apex, completes/cancels, suppresses lifecycle
+ok 6 - WISP same resolver holds slow apex, completes/cancels, suppresses lifecycle
+  ---
+  duration_ms: 0.299334
+  ...
+# Subtest: WISP invalid/missing clip leaves only own-base fallback
+ok 7 - WISP invalid/missing clip leaves only own-base fallback
+  ---
+  duration_ms: 1.238084
+  ...
+# Subtest: LUNET static identity, sequence, cadence and reduced motion
+ok 8 - LUNET static identity, sequence, cadence and reduced motion
+  ---
+  duration_ms: 3.913666
+  ...
+# Subtest: LUNET same resolver holds slow apex, completes/cancels, suppresses lifecycle
+ok 9 - LUNET same resolver holds slow apex, completes/cancels, suppresses lifecycle
+  ---
+  duration_ms: 0.31025
+  ...
+# Subtest: LUNET invalid/missing clip leaves only own-base fallback
+ok 10 - LUNET invalid/missing clip leaves only own-base fallback
+  ---
+  duration_ms: 1.538792
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 884.482208
+TAP version 13
+# Subtest: SHADE and NOCT explicitly share EDGE dispatch
+ok 1 - SHADE and NOCT explicitly share EDGE dispatch
+  ---
+  duration_ms: 1.834417
+  ...
+# Subtest: SHADE same resolver hysteresis, lifecycle and world read-only contract
+ok 2 - SHADE same resolver hysteresis, lifecycle and world read-only contract
+  ---
+  duration_ms: 0.216
+  ...
+# Subtest: SHADE real static registry/files, frame order, fixed cycles and reduced motion
+ok 3 - SHADE real static registry/files, frame order, fixed cycles and reduced motion
+  ---
+  duration_ms: 5.140208
+  ...
+# Subtest: SHADE missing and invalid assets retain own-base fallback
+ok 4 - SHADE missing and invalid assets retain own-base fallback
+  ---
+  duration_ms: 2.7755
+  ...
+# Subtest: NOCT same resolver hysteresis, lifecycle and world read-only contract
+ok 5 - NOCT same resolver hysteresis, lifecycle and world read-only contract
+  ---
+  duration_ms: 30.556958
+  ...
+# Subtest: NOCT real static registry/files, frame order, fixed cycles and reduced motion
+ok 6 - NOCT real static registry/files, frame order, fixed cycles and reduced motion
+  ---
+  duration_ms: 4.070417
+  ...
+# Subtest: NOCT missing and invalid assets retain own-base fallback
+ok 7 - NOCT missing and invalid assets retain own-base fallback
+  ---
+  duration_ms: 2.143583
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 397.982
+TAP version 13
+# Subtest: four consumers use existing resolver and profile-driven clip contract
+ok 1 - four consumers use existing resolver and profile-driven clip contract
+  ---
+  duration_ms: 104.857792
+  ...
+# Subtest: PIP static registry, IDLE4/MOVE8 frame order and rate integration
+ok 2 - PIP static registry, IDLE4/MOVE8 frame order and rate integration
+  ---
+  duration_ms: 7.942792
+  ...
+# Subtest: PIP stationary, sleepy speed, passive pause, curious approach and bounded rate
+ok 3 - PIP stationary, sleepy speed, passive pause, curious approach and bounded rate
+  ---
+  duration_ms: 1.225791
+  ...
+# Subtest: PIP missing/invalid clips fail to own base, never another identity
+ok 4 - PIP missing/invalid clips fail to own base, never another identity
+  ---
+  duration_ms: 5.317875
+  ...
+# Subtest: MOSSY static registry, IDLE4/MOVE8 frame order and rate integration
+ok 5 - MOSSY static registry, IDLE4/MOVE8 frame order and rate integration
+  ---
+  duration_ms: 4.780958
+  ...
+# Subtest: MOSSY stationary, sleepy speed, passive pause, curious approach and bounded rate
+ok 6 - MOSSY stationary, sleepy speed, passive pause, curious approach and bounded rate
+  ---
+  duration_ms: 0.368417
+  ...
+# Subtest: MOSSY missing/invalid clips fail to own base, never another identity
+ok 7 - MOSSY missing/invalid clips fail to own base, never another identity
+  ---
+  duration_ms: 2.234625
+  ...
+# Subtest: PEBB static registry, IDLE4/MOVE8 frame order and rate integration
+ok 8 - PEBB static registry, IDLE4/MOVE8 frame order and rate integration
+  ---
+  duration_ms: 4.852667
+  ...
+# Subtest: PEBB stationary, sleepy speed, passive pause, curious approach and bounded rate
+ok 9 - PEBB stationary, sleepy speed, passive pause, curious approach and bounded rate
+  ---
+  duration_ms: 0.320875
+  ...
+# Subtest: PEBB missing/invalid clips fail to own base, never another identity
+ok 10 - PEBB missing/invalid clips fail to own base, never another identity
+  ---
+  duration_ms: 36.009458
+  ...
+# Subtest: TIKKI static registry, IDLE4/MOVE8 frame order and rate integration
+ok 11 - TIKKI static registry, IDLE4/MOVE8 frame order and rate integration
+  ---
+  duration_ms: 63.504458
+  ...
+# Subtest: TIKKI stationary, sleepy speed, passive pause, curious approach and bounded rate
+ok 12 - TIKKI stationary, sleepy speed, passive pause, curious approach and bounded rate
+  ---
+  duration_ms: 0.076416
+  ...
+# Subtest: TIKKI missing/invalid clips fail to own base, never another identity
+ok 13 - TIKKI missing/invalid clips fail to own base, never another identity
+  ---
+  duration_ms: 2.091291
+  ...
+# Subtest: profile rather than character name controls four-frame IDLE; unknown profile cannot bypass legacy contract
+ok 14 - profile rather than character name controls four-frame IDLE; unknown profile cannot bypass legacy contract
+  ---
+  duration_ms: 1.433167
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 660.858875
+TAP version 13
+# Subtest: MELLO/BUBU share JUMP dispatch and existing same-render ground snapshot path
+ok 1 - MELLO/BUBU share JUMP dispatch and existing same-render ground snapshot path
+  ---
+  duration_ms: 1.930833
+  ...
+# Subtest: MELLO original eight-frame pack and slots, no timer-driven playback
+ok 2 - MELLO original eight-frame pack and slots, no timer-driven playback
+  ---
+  duration_ms: 6.382833
+  ...
+# Subtest: MELLO ground contact rejects airborne LAND and stale grounded DESCEND immediately
+ok 3 - MELLO ground contact rejects airborne LAND and stale grounded DESCEND immediately
+  ---
+  duration_ms: 0.108292
+  ...
+# Subtest: MELLO missing/invalid pack falls to own base only
+ok 4 - MELLO missing/invalid pack falls to own base only
+  ---
+  duration_ms: 4.021958
+  ...
+# Subtest: BUBU original eight-frame pack and slots, no timer-driven playback
+ok 5 - BUBU original eight-frame pack and slots, no timer-driven playback
+  ---
+  duration_ms: 3.768083
+  ...
+# Subtest: BUBU ground contact rejects airborne LAND and stale grounded DESCEND immediately
+ok 6 - BUBU ground contact rejects airborne LAND and stale grounded DESCEND immediately
+  ---
+  duration_ms: 0.065625
+  ...
+# Subtest: BUBU missing/invalid pack falls to own base only
+ok 7 - BUBU missing/invalid pack falls to own base only
+  ---
+  duration_ms: 2.783125
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 295.077916
+TAP version 13
+# Subtest: EMBER/NOVA share FREE_2D consumer contract; NOVA has no INTENSE delivery
+ok 1 - EMBER/NOVA share FREE_2D consumer contract; NOVA has no INTENSE delivery
+  ---
+  duration_ms: 3.88475
+  ...
+# Subtest: EMBER vectors, hysteresis and completion use same read-only resolver
+ok 2 - EMBER vectors, hysteresis and completion use same read-only resolver
+  ---
+  duration_ms: 1.318959
+  ...
+# Subtest: EMBER real static registry, fixed cadence, reduced motion and own-base fallback
+ok 3 - EMBER real static registry, fixed cadence, reduced motion and own-base fallback
+  ---
+  duration_ms: 3.15425
+  ...
+# Subtest: NOVA vectors, hysteresis and completion use same read-only resolver
+ok 4 - NOVA vectors, hysteresis and completion use same read-only resolver
+  ---
+  duration_ms: 0.248291
+  ...
+# Subtest: NOVA real static registry, fixed cadence, reduced motion and own-base fallback
+ok 5 - NOVA real static registry, fixed cadence, reduced motion and own-base fallback
+  ---
+  duration_ms: 5.695458
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 357.286209
+TAP version 13
+# Subtest: Active Alpha content + asset + animation coverage is exactly 15/15; provisional excluded
+ok 1 - Active Alpha content + asset + animation coverage is exactly 15/15; provisional excluded
+  ---
+  duration_ms: 121.65175
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 269.655833
