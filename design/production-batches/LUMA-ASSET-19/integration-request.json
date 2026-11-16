@@ -1,0 +1,1450 @@
+{
+  "sessionId": "LUMA-ASSET-19",
+  "baseCommit": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "branch": "codex/assets-m076-m080",
+  "status": "BLOCKED",
+  "fullCreatureProductionComplete": false,
+  "newPngCount": 0,
+  "newClipCount": 0,
+  "requiredActionsReviewed": 75,
+  "optionalActionsReviewed": 30,
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "repairAttemptsThisSession": 0,
+  "failedCandidatesRecovered": false,
+  "productionApproval": "HUMAN_REVIEW_REQUIRED",
+  "runtimeConnected": false,
+  "macOS": "DEFERRED_GUI",
+  "windows": "DEFERRED_GUI",
+  "rigReuseAssessment": "Existing weighted inverse RGBA displacement reviewed (M001 rig-look.cjs); not a rigid joint layer rig. No new renderer or invented species anatomy.",
+  "inventory": {
+    "allCandidatePng": 676,
+    "sourcePngIncludingRecovery": 102
+  },
+  "inventoryMethod": "Existing read-only inventory_counts/coverage functions; mutating refresh flags omitted to preserve shared Ledger and catalog.",
+  "protectedSourceSha256": {
+    "design/creature-production-queue.json": "b0a804319729400cf80dac3b195f9bb70dcff18f576bbe2cd0ad160389efec68",
+    "design/production-completion-ledger.json": "ae4d4062b0bdc36095af1f6141abea8675505b61592e7a8bd3b5d3cfa5e31aac",
+    "design/monster-identity-review.json": "d701dd23d862838018c292e756fdc6196262f046e4cb22af37dc11451d9482a1",
+    "design/visual-reference-v1/catalog.json": "6bae98c45ecea2314382cdb8e491c6b4afe662c8fcdd0624be73f55304aaea48"
+  },
+  "monsters": [
+    {
+      "creatureId": "M076",
+      "observedForm": "rune ring",
+      "basePath": "design/production-batches/monsters/batch08/M076/base-v2.png",
+      "baseStatus": "BASE_CANDIDATE",
+      "baseMeasurement": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "f1934a1de952f3de05db782d4d794a9a1e5b082f1a6bb32811963c6d38b7c82e",
+        "sha256": "27177d5731826c7b7ea3275eab95a8c2dbe9bb2a14818bcc6a8d545c88977b74",
+        "bounds": [
+          52,
+          16,
+          205,
+          237
+        ],
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 6
+      },
+      "anchor": {
+        "expected": {
+          "x": 0.5,
+          "y": 1
+        },
+        "status": "NOT_VERIFIED_NO_CLIP_MANIFEST"
+      },
+      "appearanceDrift": "HUMAN_REVIEW_REQUIRED",
+      "frameContinuity": "NOT_RUN_NO_FRAME_SET",
+      "productionSpeciesId": null,
+      "personality": {
+        "proposal": {
+          "status": "PROPOSED",
+          "trait": "playful"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "movementProfile": {
+        "proposal": {
+          "status": "PROPOSED",
+          "value": "STATIC"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "speciesBehavior": {
+        "proposal": {
+          "status": "PROPOSED",
+          "frequency": "two playful movements followed by a rest; attention centers on the mechanical habitat of the rune ring",
+          "preparation": "compress then release the resting pose; preserve the rune ring silhouette",
+          "transition": "recover from landing before observing; recover the rune ring resting anatomy",
+          "reaction": "respond with a short bounce then settle; keep the rune ring characteristic gesture"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "anatomyAssessment": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+      "trackedSourceFiles": [
+        "design/production-batches/action-followup/M076/turn-pilot/generation.json",
+        "design/production-batches/action-followup/M076/turn-pilot/keypose-tool-reference.png",
+        "design/production-batches/action-followup/M076/turn-pilot/keypose-validation.json",
+        "design/production-batches/action-followup/M076/turn-pilot/source-alpha.json",
+        "design/production-batches/monsters/batch08/M076/base-measurement.json",
+        "design/production-batches/monsters/batch08/M076/base-v1.png",
+        "design/production-batches/monsters/batch08/M076/base-v2.png",
+        "design/production-batches/monsters/batch08/M076/cleanup-validation.json",
+        "design/production-batches/monsters/batch08/M076/source-base-v1.png"
+      ],
+      "existingRigFiles": [],
+      "existingClipFiles": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 1,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Separate rigid joint/core layers and pivots for a mechanical resting cycle.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Mechanical cycle definition and independent core/vent layers; organic plate scaling is unsuitable.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Defined eye/shutter anatomy and closed/open artwork; do not invent eyelids on rings.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Independent head/sensor rig and covered backing for directed attention.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Locomotion/contact definition plus joint layers; whole-image translation is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "VALIDATION_FAILED",
+          "status": "BLOCKED",
+          "reason": "Raw Alpha392 failed before normalization; vertical-axis ring TURN needs actual side surfaces; repair3/3; HUMAN_REVIEW_REQUIRED",
+          "requiredInput": "Side surfaces, rigid pivots and occluded backing; no whole-image mirror or rotation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Articulated settling pose with defined mechanical resting state.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Defined dormant anatomy and articulated transition; dimming alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Directed sensor/body articulation with anticipation and return.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Species-specific joint gesture with return to resting anatomy.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Articulated anticipation, strike and recovery; preserve server-authoritative contract.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Defined mechanical cast gesture and skill motif; glow alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Rigid recoil articulation with covered backing; no organic plate deformation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Distinct articulated victory gesture and stable ending.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Defined disabled posture and rigid contact geometry.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        }
+      ],
+      "optionalActions": [
+        {
+          "action": "JUMP",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "STATIC proposal has no approved jumping/landing mechanism.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "FLY",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "No approved flight/hover anatomy; proposed profile is STATIC",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "HOVER",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "No approved flight/hover anatomy; proposed profile is STATIC",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "LAND",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "STATIC proposal has no approved jumping/landing mechanism.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Flattened rune ring: overlapping segments/core, no separated pivot layers or side surfaces. Existing TURN failed at repair 3/3.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        }
+      ]
+    },
+    {
+      "creatureId": "M077",
+      "observedForm": "crowned automaton",
+      "basePath": "design/production-batches/monsters/batch08/M077/base-v2.png",
+      "baseStatus": "VALIDATION_FAILED",
+      "baseMeasurement": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "43f1b7cf74f330a35840a9495ae58c431e7f3f0a5f5fa030f537db124356b757",
+        "sha256": "6b1a4cba88caee973f8c6e1d3e015b2403281ae4d1864a7c12950322f434e9c9",
+        "bounds": [
+          65,
+          16,
+          206,
+          237
+        ],
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 6
+      },
+      "anchor": {
+        "expected": {
+          "x": 0.5,
+          "y": 1
+        },
+        "status": "NOT_VERIFIED_NO_CLIP_MANIFEST"
+      },
+      "appearanceDrift": "EXISTING_VALIDATION_FAILED",
+      "frameContinuity": "NOT_RUN_NO_FRAME_SET",
+      "productionSpeciesId": null,
+      "personality": {
+        "proposal": {
+          "status": "PROPOSED",
+          "trait": "alert"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "movementProfile": {
+        "proposal": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "speciesBehavior": {
+        "proposal": {
+          "status": "PROPOSED",
+          "frequency": "frequent attention shifts but sparse displacement; attention centers on the mechanical habitat of the crowned automaton",
+          "preparation": "orient the face first and body second; preserve the crowned automaton silhouette",
+          "transition": "finish turning before locomotion resumes; recover the crowned automaton resting anatomy",
+          "reaction": "face the stimulus and briefly pause; keep the crowned automaton characteristic gesture"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "anatomyAssessment": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+      "trackedSourceFiles": [
+        "design/production-batches/monsters/batch08/M077/base-measurement.json",
+        "design/production-batches/monsters/batch08/M077/base-v1.png",
+        "design/production-batches/monsters/batch08/M077/base-v2.png",
+        "design/production-batches/monsters/batch08/M077/cleanup-validation.json",
+        "design/production-batches/monsters/batch08/M077/source-base-v1.png"
+      ],
+      "existingRigFiles": [],
+      "existingClipFiles": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Separate rigid joint/core layers and pivots for a mechanical resting cycle.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Mechanical cycle definition and independent core/vent layers; organic plate scaling is unsuitable.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Defined eye/shutter anatomy and closed/open artwork; do not invent eyelids on rings.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Independent head/sensor rig and covered backing for directed attention.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Locomotion/contact definition plus joint layers; whole-image translation is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Side surfaces, rigid pivots and occluded backing; no whole-image mirror or rotation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Articulated settling pose with defined mechanical resting state.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Defined dormant anatomy and articulated transition; dimming alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Directed sensor/body articulation with anticipation and return.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Species-specific joint gesture with return to resting anatomy.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Articulated anticipation, strike and recovery; preserve server-authoritative contract.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Defined mechanical cast gesture and skill motif; glow alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "IDENTITY_REVIEW_REQUIRED: rabbit-shaped mechanical quadruped BASE conflicts with crowned upright automaton proposal and existing APPEARANCE_DRIFT. Preserve failed BASE and do not rig HIT.",
+          "requiredInput": "Rigid recoil articulation with covered backing; no organic plate deformation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Distinct articulated victory gesture and stable ending.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Defined disabled posture and rigid contact geometry.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        }
+      ],
+      "optionalActions": [
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "FLY",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "No approved flight/hover anatomy; proposed profile is GROUND",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "HOVER",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "No approved flight/hover anatomy; proposed profile is GROUND",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Preserved failed BASE depicts a rabbit-like quadruped rather than the crowned upright automaton; identity decision precedes any derived animation.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        }
+      ]
+    },
+    {
+      "creatureId": "M078",
+      "observedForm": "stone guardian",
+      "basePath": "design/production-batches/monsters/batch08/M078/base-v2.png",
+      "baseStatus": "BASE_CANDIDATE",
+      "baseMeasurement": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "79c9a52259c5f7311bfd5e7a94b770539b17d2475f5f10d68d88ded82826db62",
+        "sha256": "5efc383b3c6b39c898030b6aa54e2f9d81ac89dbae37bb9c8b1304c224ca925e",
+        "bounds": [
+          22,
+          32,
+          238,
+          226
+        ],
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 6
+      },
+      "anchor": {
+        "expected": {
+          "x": 0.5,
+          "y": 1
+        },
+        "status": "NOT_VERIFIED_NO_CLIP_MANIFEST"
+      },
+      "appearanceDrift": "HUMAN_REVIEW_REQUIRED",
+      "frameContinuity": "NOT_RUN_NO_FRAME_SET",
+      "productionSpeciesId": null,
+      "personality": {
+        "proposal": {
+          "status": "PROPOSED",
+          "trait": "reserved"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "movementProfile": {
+        "proposal": {
+          "status": "PROPOSED",
+          "value": "GROUND"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "speciesBehavior": {
+        "proposal": {
+          "status": "PROPOSED",
+          "frequency": "sustained rest with occasional careful exploration; attention centers on the mechanical habitat of the stone guardian",
+          "preparation": "open the resting posture slowly; preserve the stone guardian silhouette",
+          "transition": "slow the final motion into a resting pose; recover the stone guardian resting anatomy",
+          "reaction": "acknowledge interaction with a restrained nod; keep the stone guardian characteristic gesture"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "anatomyAssessment": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+      "trackedSourceFiles": [
+        "design/production-batches/monsters/batch08/M078/base-measurement.json",
+        "design/production-batches/monsters/batch08/M078/base-v1.png",
+        "design/production-batches/monsters/batch08/M078/base-v2.png",
+        "design/production-batches/monsters/batch08/M078/cleanup-validation.json",
+        "design/production-batches/monsters/batch08/M078/source-base-v1.png"
+      ],
+      "existingRigFiles": [],
+      "existingClipFiles": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Separate rigid joint/core layers and pivots for a mechanical resting cycle.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Mechanical cycle definition and independent core/vent layers; organic plate scaling is unsuitable.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Defined eye/shutter anatomy and closed/open artwork; do not invent eyelids on rings.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Independent head/sensor rig and covered backing for directed attention.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Locomotion/contact definition plus joint layers; whole-image translation is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Side surfaces, rigid pivots and occluded backing; no whole-image mirror or rotation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Articulated settling pose with defined mechanical resting state.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Defined dormant anatomy and articulated transition; dimming alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Directed sensor/body articulation with anticipation and return.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Species-specific joint gesture with return to resting anatomy.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Articulated anticipation, strike and recovery; preserve server-authoritative contract.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Defined mechanical cast gesture and skill motif; glow alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "RIG_LAYER_REQUIRED: quadruped rigid armor overlaps shoulder/hip pivots; flattened BASE has no independent plates or occluded backing. Weighted organic displacement cannot demonstrate rigid joint motion.",
+          "requiredInput": "Rigid recoil articulation with covered backing; no organic plate deformation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Distinct articulated victory gesture and stable ending.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Defined disabled posture and rigid contact geometry.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        }
+      ],
+      "optionalActions": [
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "FLY",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "No approved flight/hover anatomy; proposed profile is GROUND",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "HOVER",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "No approved flight/hover anatomy; proposed profile is GROUND",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Flattened quadruped armor overlaps shoulder/hip joints; independent plates, limb pivots and occluded backing are absent.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        }
+      ]
+    },
+    {
+      "creatureId": "M079",
+      "observedForm": "oval gate",
+      "basePath": "design/production-batches/monsters/batch08/M079/base-v2.png",
+      "baseStatus": "BASE_CANDIDATE",
+      "baseMeasurement": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "2af00399a06b3867f2fdf166f6b5c63ba4c091385483d3c7183c3f1bf2cf5969",
+        "sha256": "edd17cd5c3384c27d7c734aa27aa29be9e86dd7c39d0ed3e21e145185fad3cac",
+        "bounds": [
+          57,
+          16,
+          203,
+          239
+        ],
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 6
+      },
+      "anchor": {
+        "expected": {
+          "x": 0.5,
+          "y": 1
+        },
+        "status": "NOT_VERIFIED_NO_CLIP_MANIFEST"
+      },
+      "appearanceDrift": "HUMAN_REVIEW_REQUIRED",
+      "frameContinuity": "NOT_RUN_NO_FRAME_SET",
+      "productionSpeciesId": null,
+      "personality": {
+        "proposal": {
+          "status": "PROPOSED",
+          "trait": "watchful"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "movementProfile": {
+        "proposal": {
+          "status": "PROPOSED",
+          "value": "STATIC"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "speciesBehavior": {
+        "proposal": {
+          "status": "PROPOSED",
+          "frequency": "repeated scanning before a single move; attention centers on the mechanical habitat of the oval gate",
+          "preparation": "pause and recheck the destination; preserve the oval gate silhouette",
+          "transition": "return to the home orientation before resting; recover the oval gate resting anatomy",
+          "reaction": "look away briefly before looking back; keep the oval gate characteristic gesture"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "anatomyAssessment": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+      "trackedSourceFiles": [
+        "design/production-batches/monsters/batch08/M079/base-measurement.json",
+        "design/production-batches/monsters/batch08/M079/base-v1.png",
+        "design/production-batches/monsters/batch08/M079/base-v2.png",
+        "design/production-batches/monsters/batch08/M079/cleanup-validation.json",
+        "design/production-batches/monsters/batch08/M079/source-base-v1.png"
+      ],
+      "existingRigFiles": [],
+      "existingClipFiles": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Separate rigid joint/core layers and pivots for a mechanical resting cycle.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Mechanical cycle definition and independent core/vent layers; organic plate scaling is unsuitable.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Defined eye/shutter anatomy and closed/open artwork; do not invent eyelids on rings.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Independent head/sensor rig and covered backing for directed attention.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Locomotion/contact definition plus joint layers; whole-image translation is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "RIG_LAYER_REQUIRED: oval gate side bosses overlap main frame. Actual TURN requires side surfaces, not a whole-image mirror/rotation.",
+          "requiredInput": "Side surfaces, rigid pivots and occluded backing; no whole-image mirror or rotation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Articulated settling pose with defined mechanical resting state.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Defined dormant anatomy and articulated transition; dimming alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Directed sensor/body articulation with anticipation and return.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Species-specific joint gesture with return to resting anatomy.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Articulated anticipation, strike and recovery; preserve server-authoritative contract.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Defined mechanical cast gesture and skill motif; glow alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Rigid recoil articulation with covered backing; no organic plate deformation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Distinct articulated victory gesture and stable ending.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Defined disabled posture and rigid contact geometry.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        }
+      ],
+      "optionalActions": [
+        {
+          "action": "JUMP",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "STATIC proposal has no approved jumping/landing mechanism.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "FLY",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "No approved flight/hover anatomy; proposed profile is STATIC",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "HOVER",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "No approved flight/hover anatomy; proposed profile is STATIC",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "LAND",
+          "status": "APPLICABILITY_REVIEW_REQUIRED",
+          "reason": "STATIC proposal has no approved jumping/landing mechanism.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Flattened oval gate side bosses overlap frame; side surfaces and separated mechanical pivots are absent.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        }
+      ]
+    },
+    {
+      "creatureId": "M080",
+      "observedForm": "orbital ring",
+      "basePath": "design/production-batches/monsters/batch08/M080/base-v2.png",
+      "baseStatus": "BASE_CANDIDATE",
+      "baseMeasurement": {
+        "status": "ARTWORK_READY",
+        "errors": [],
+        "pixelSha256": "b1cc1e71f142f7577d1850063bf9a8af6cc712fdb166fc1e4e4dc0e262cbc6f6",
+        "sha256": "edc509aa01364ed9a4ce18684b405bb5e93458ca1eadb772dfc198c4d10f9e89",
+        "bounds": [
+          45,
+          20,
+          210,
+          232
+        ],
+        "width": 256,
+        "height": 256,
+        "bitDepth": 8,
+        "colorType": 6
+      },
+      "anchor": {
+        "expected": {
+          "x": 0.5,
+          "y": 1
+        },
+        "status": "NOT_VERIFIED_NO_CLIP_MANIFEST"
+      },
+      "appearanceDrift": "HUMAN_REVIEW_REQUIRED",
+      "frameContinuity": "NOT_RUN_NO_FRAME_SET",
+      "productionSpeciesId": null,
+      "personality": {
+        "proposal": {
+          "status": "PROPOSED",
+          "trait": "exploratory"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "movementProfile": {
+        "proposal": {
+          "status": "PROPOSED",
+          "value": "FLOATING"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "speciesBehavior": {
+        "proposal": {
+          "status": "PROPOSED",
+          "frequency": "long exploration intervals followed by recovery; attention centers on the mechanical habitat of the orbital ring",
+          "preparation": "lean toward open space before starting; preserve the orbital ring silhouette",
+          "transition": "look back once at the end of an excursion; recover the orbital ring resting anatomy",
+          "reaction": "inspect the direction of interaction then resume exploration; keep the orbital ring characteristic gesture"
+        },
+        "ledger": {
+          "status": "NOT_VERIFIED",
+          "runtimeApproved": false
+        }
+      },
+      "anatomyAssessment": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+      "trackedSourceFiles": [
+        "design/production-batches/monsters/batch08/M080/base-measurement.json",
+        "design/production-batches/monsters/batch08/M080/base-v1.png",
+        "design/production-batches/monsters/batch08/M080/base-v2.png",
+        "design/production-batches/monsters/batch08/M080/cleanup-validation.json",
+        "design/production-batches/monsters/batch08/M080/source-base-v1.png"
+      ],
+      "existingRigFiles": [],
+      "existingClipFiles": [],
+      "coverage": {
+        "requiredActions": 15,
+        "recordedReadyActions": 0,
+        "recordedRuntimeActions": 0,
+        "manifestFileSetsPresent": 0,
+        "candidateActions": 0,
+        "automatedCandidateActions": 0,
+        "artworkReviewPendingActions": 0,
+        "validationFailedActions": 0,
+        "missingFrameSetActions": 15,
+        "guiPendingActions": 15,
+        "completeActions": 0
+      },
+      "actions": [
+        {
+          "action": "IDLE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Separate rigid joint/core layers and pivots for a mechanical resting cycle.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BREATH",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Mechanical cycle definition and independent core/vent layers; organic plate scaling is unsuitable.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "BLINK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Defined eye/shutter anatomy and closed/open artwork; do not invent eyelids on rings.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "LOOK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Independent head/sensor rig and covered backing for directed attention.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "MOVE",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Locomotion/contact definition plus joint layers; whole-image translation is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "TURN",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "RIG_LAYER_REQUIRED: orbital core is attached to horizontal spindle and ring; rotation would expose unavailable occluded surfaces. Preserve existing ring anatomy review.",
+          "requiredInput": "Side surfaces, rigid pivots and occluded backing; no whole-image mirror or rotation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "REST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Articulated settling pose with defined mechanical resting state.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SLEEP",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Defined dormant anatomy and articulated transition; dimming alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "CURSOR_REACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Directed sensor/body articulation with anticipation and return.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "INTERACT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Species-specific joint gesture with return to resting anatomy.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "ATTACK",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Articulated anticipation, strike and recovery; preserve server-authoritative contract.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "SKILL_CAST",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Defined mechanical cast gesture and skill motif; glow alone is insufficient.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "HIT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Rigid recoil articulation with covered backing; no organic plate deformation.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "VICTORY",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Distinct articulated victory gesture and stable ending.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        },
+        {
+          "action": "DEFEAT",
+          "previousStatus": "ASSET_REQUIRED",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Defined disabled posture and rigid contact geometry.",
+          "newFrames": 0,
+          "newClips": 0,
+          "failureRecoveryAttempted": false
+        }
+      ],
+      "optionalActions": [
+        {
+          "action": "JUMP",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "FLY",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "HOVER",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "LAND",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "CHARGE",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        },
+        {
+          "action": "RECOVERY",
+          "status": "BLOCKED",
+          "reason": "Orbital core connects to spindle/ring; occluded surfaces and separated pivots are absent, with existing ring anatomy review unresolved.",
+          "requiredInput": "Approve applicability and supply articulated contact/flight/charge/recovery poses before producing frames."
+        }
+      ]
+    }
+  ],
+  "integrationRequests": [
+    {
+      "id": "IR19-1",
+      "owner": "Artwork/identity reviewer",
+      "request": "Resolve M077 crowned automaton versus quadruped BASE and M080 ring anatomy; approve species mapping and mechanical behavior definitions. Preserve failed sources and 3/3 cap."
+    },
+    {
+      "id": "IR19-2",
+      "owner": "Rig/artwork integration",
+      "request": "Supply species-specific independent rigid masks, pivot coordinates, covered backing and side/closed/rest poses for M076/M078/M079/M080; M077 only after identity resolution."
+    },
+    {
+      "id": "IR19-3",
+      "owner": "Completion Ledger integration",
+      "request": "Reconcile this 75-action audit and 30 optional-action reviews using existing refresh inventory/coverage tools; keep every completion/approval flag unchanged until evidence exists."
+    },
+    {
+      "id": "IR19-4",
+      "owner": "Animation/Production integration",
+      "request": "No clip available for Manifest, Production Registry or Runtime registration. After artwork/motion approval, validate anchors/continuity and perform macOS/Windows GUI QA before integration."
+    }
+  ],
+  "nextResumePoint": "After IR19-1/IR19-2 inputs, inspect M078 independent rigid joint layers and produce one IDLE cycle, validate, then advance through the remaining independent actions. M076 TURN remains blocked at repair 3/3; do not reset retry budget."
+}
