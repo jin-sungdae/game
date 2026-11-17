@@ -1,0 +1,116 @@
+{
+  "reference": "design/production-batches/monsters/batch09/M085/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "left-tentacle-drift",
+      "x": 84,
+      "y": 178,
+      "rx": 25,
+      "ry": 25,
+      "dx": 0.8800000000000001,
+      "dy": -0.8800000000000001,
+      "samples": [
+        0.15,
+        0.42,
+        0.78,
+        1,
+        0.86,
+        0.55,
+        0.25,
+        0.08
+      ]
+    },
+    {
+      "name": "right-tentacle-counterflow",
+      "x": 183,
+      "y": 190,
+      "rx": 23,
+      "ry": 21,
+      "dx": -0.8800000000000001,
+      "dy": -0.7150000000000001,
+      "samples": [
+        0.8,
+        0.48,
+        0.2,
+        0.06,
+        0.15,
+        0.43,
+        0.78,
+        1
+      ]
+    }
+  ],
+  "protectedRegions": "y>=216||y<=143||x<=53||x>=209",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "idle_00.png",
+      "pixelSha256": "c10259de2b7ce14fcf2e7b689d1a123c86b31d5dc29a985f94edd6c116df9ffc",
+      "changedPixels": 1607,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 741,
+      "maxInverseDisplacementPixels": 0.9054940309204911
+    },
+    {
+      "file": "idle_01.png",
+      "pixelSha256": "0e1dfebc0ec725a71fed1ace5f9605e851f33ea6552535bc117c193e3aae84f8",
+      "changedPixels": 1675,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 799,
+      "maxInverseDisplacementPixels": 0.5432673092108247
+    },
+    {
+      "file": "idle_02.png",
+      "pixelSha256": "b582ddc5b9dcc4ed2488a2c46c966ca362f6efd379913d912f11aa1826b7e9eb",
+      "changedPixels": 1641,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 758,
+      "maxInverseDisplacementPixels": 0.9697962088437048
+    },
+    {
+      "file": "idle_03.png",
+      "pixelSha256": "a71b234b861bb9618ee018b28295dc4a8b8d550b1f80dd34ce38dff7ff9a31ed",
+      "changedPixels": 1467,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 673,
+      "maxInverseDisplacementPixels": 1.244335552283212
+    },
+    {
+      "file": "idle_04.png",
+      "pixelSha256": "5bebed64f5cc0322d1e0436ac209c24fcca9fda03213220a2a05833d1bc1d39d",
+      "changedPixels": 1608,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 733,
+      "maxInverseDisplacementPixels": 1.0696670753843278
+    },
+    {
+      "file": "idle_05.png",
+      "pixelSha256": "db7dca1c5616c8e594a0cb2d58bd0738770976ae63883390f6bd587b8a3ba60b",
+      "changedPixels": 1699,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 809,
+      "maxInverseDisplacementPixels": 0.6829480902707898
+    },
+    {
+      "file": "idle_06.png",
+      "pixelSha256": "26b95023a5978959a8dbab17b24603a2c4b3aeef7d8e46e134e6cd632ffaff29",
+      "changedPixels": 1666,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 796,
+      "maxInverseDisplacementPixels": 0.8827272390070096
+    },
+    {
+      "file": "idle_07.png",
+      "pixelSha256": "da62ed6cc7257482c3c59bd252523fff552ce8eac2605e0d2f3a1b543b9cdd10",
+      "changedPixels": 1525,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 710,
+      "maxInverseDisplacementPixels": 1.133132223308933
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-20 independent first attempt; inherited repair3/3 preserved; no failure recovery",
+  "productionEligible": false
+}

@@ -1,0 +1,35 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "newClips": 1,
+  "newFrames": 8,
+  "newPng": 9,
+  "totalPrClips": 32,
+  "totalPrFrames": 256,
+  "totalPrPng": 288,
+  "passClips": 30,
+  "failedClips": 2,
+  "productionAcceptedClips": 0,
+  "runtimeConnections": 0,
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "failureRecoveryAttempts": 0,
+  "candidate": "design/production-batches/luma-asset-20/movement-followup/M085/recovery",
+  "logicalAction": "RECOVERY",
+  "review": "HUMAN_REVIEW_REQUIRED",
+  "integrationRequests": [
+    "Catalog: append M085 RECOVERY candidate and HIT-to-RECOVERY continuity evidence.",
+    "Ledger: M085 RECOVERY candidate only; SLEEP remains one logical action per monster. Do not mark Production complete.",
+    "Validator: reuse living-followup/validator-integration-request.json comparison; PR140/144 blobs unchanged at refreshed HEAD. Integration Track owns shared implementation."
+  ],
+  "blocked": {
+    "MOVE": "Foot lift/contact and tentacle support gait poses unavailable in stationary rig.",
+    "TURN": "Opposite-facing anatomy and occlusion keyposes unavailable.",
+    "JUMP": "Crouch, airborne and landing contact poses unavailable.",
+    "CHARGE": "Anticipation and propulsion poses and behavior approval unavailable.",
+    "INTERACT M081/M082": "Identical BASE endpoints; failure preserved, repair3/3.",
+    "M083 ATTACK": "Original detached alpha4579 preserved.",
+    "M084": "Original BASE failure preserved."
+  },
+  "nextResumePoint": "Review M085 HIT -> RECOVERY -> BASE and sustained SLEEP; provide approved contact/opposite-facing/jump poses for movement. Explicit repair approval needed before INTERACT regeneration."
+}

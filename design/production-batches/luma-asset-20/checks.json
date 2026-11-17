@@ -1,0 +1,48 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "candidateValidation": "PASS: 6 clips, 54 PNG including 6 keyposes",
+  "assetTests": "INTERRUPTED_TIME_LIMIT / NOT_VERIFIED",
+  "animationRegression": {
+    "status": "PASS",
+    "tests": 236
+  },
+  "presentation": {
+    "status": "PASS",
+    "tests": 69
+  },
+  "frontendBuild": "PASS",
+  "releaseGate": "FAIL: asset-tests interrupted at session time limit; remaining gates NOT_RUN",
+  "releaseEvidencePath": "/tmp/luma-asset-20-release",
+  "gui": "DEFERRED_GUI",
+  "productionApproval": "HUMAN_REVIEW_REQUIRED",
+  "runtimeConnected": false,
+  "releaseResult": {
+    "status": "FAIL",
+    "manualGate": "MANUAL_QA_REQUIRED",
+    "head": "24ac67656f2e90a12631e5d985a10274ff1fb01a",
+    "workingTreeDirty": false,
+    "checks": [
+      {
+        "name": "frontend-build",
+        "status": "PASS",
+        "seconds": 26.99
+      },
+      {
+        "name": "animation-content",
+        "status": "PASS",
+        "seconds": 43.56
+      },
+      {
+        "name": "presentation",
+        "status": "PASS",
+        "seconds": 85.27
+      },
+      {
+        "name": "asset-tests",
+        "status": "FAIL",
+        "seconds": 753.01
+      }
+    ]
+  },
+  "validationScope": "Candidate assets validated before commit 24ac676; subsequent changes evidence only. Full gate not passed."
+}

@@ -1,0 +1,63 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "conceptId": "M085",
+  "sourceBase": "design/production-batches/monsters/batch09/M085/base-v2.png",
+  "sourceRig": "design/production-batches/luma-asset-20/M085/idle/rig.cjs",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "parts": [],
+  "eyes": [
+    {
+      "x": 152.5,
+      "y": 127.5,
+      "rx": 5.5,
+      "ry": 7.8,
+      "angle": 0,
+      "skin": [
+        144,
+        127
+      ]
+    },
+    {
+      "x": 168,
+      "y": 132,
+      "rx": 2.5,
+      "ry": 5,
+      "angle": 0.2,
+      "skin": [
+        165,
+        134
+      ]
+    }
+  ],
+  "eyeClosureSamples": [
+    0.01,
+    0.2,
+    0.62,
+    1,
+    0.83,
+    0.46,
+    0.14,
+    0
+  ],
+  "clip": {
+    "name": "BLINK",
+    "frames": 8,
+    "frameDuration": 90,
+    "loop": false
+  },
+  "framesDirectory": "design/production-batches/luma-asset-20/continuation/M085/blink/rigged/blink",
+  "intent": "Upper and lower eyelids close over the original eyes, reopening to exact BASE.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "failureRecovery": false
+}

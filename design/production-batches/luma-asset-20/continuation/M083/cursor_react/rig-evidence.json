@@ -1,0 +1,102 @@
+{
+  "sourceBase": "design/production-batches/monsters/batch09/M083/base-v2.png",
+  "sourceBasePixelSha256": "418147ea52bdb92ee699d51f43c6efe575c7efc6c2213e5b2e423201e425c278",
+  "sourceRig": "design/production-batches/luma-asset-20/M085/idle/rig.cjs",
+  "frames": [
+    {
+      "file": "cursor_react_00.png",
+      "pixelSha256": "3fe3a788c65a4274d71ff734e4d248b8dfbea2bb116ab1233eedbac1410e3d47"
+    },
+    {
+      "file": "cursor_react_01.png",
+      "pixelSha256": "846163e8f52824d8d09ec96c1f93365a4115524e65b828964a04828811c630e3"
+    },
+    {
+      "file": "cursor_react_02.png",
+      "pixelSha256": "56483a34d6e5d6476d26f51b9558bb19daebab7b5492af8a7242b94343261748"
+    },
+    {
+      "file": "cursor_react_03.png",
+      "pixelSha256": "f26cd3688316cfd4a53b6071d15dc0eaad02a39c4a72fad82aea0df1126944c4"
+    },
+    {
+      "file": "cursor_react_04.png",
+      "pixelSha256": "6050ae25cf059896cdde503ba8f996392b9686905b53224ffa44c92baf176505"
+    },
+    {
+      "file": "cursor_react_05.png",
+      "pixelSha256": "4bee6bb8c4709bcd296183fd80397047e3e5a02b4b81dc94c9ba87d1c6abf849"
+    },
+    {
+      "file": "cursor_react_06.png",
+      "pixelSha256": "ca8c03c3bad80ec1e74cdd25aa5f55cd709bf430d5936b44fa072178bba52fd6"
+    },
+    {
+      "file": "cursor_react_07.png",
+      "pixelSha256": "418147ea52bdb92ee699d51f43c6efe575c7efc6c2213e5b2e423201e425c278"
+    }
+  ],
+  "wholeImageTransform": false,
+  "exactBaseReturnFrame": 7,
+  "eyelidMask": [],
+  "parts": [
+    {
+      "name": "left-pincer-joint",
+      "x": 120,
+      "y": 185,
+      "rx": 29,
+      "ry": 27,
+      "dx": -1.2,
+      "dy": -1.3,
+      "samples": [
+        0.02,
+        0.8,
+        1,
+        0.65,
+        0.3,
+        0.12,
+        0.04,
+        0
+      ]
+    },
+    {
+      "name": "right-pincer-joint",
+      "x": 204,
+      "y": 176,
+      "rx": 25,
+      "ry": 27,
+      "dx": -1.3,
+      "dy": 1.1,
+      "samples": [
+        0.01,
+        0.2,
+        0.9,
+        1,
+        0.55,
+        0.2,
+        0.07,
+        0
+      ]
+    },
+    {
+      "name": "distal-tail-curl",
+      "x": 139,
+      "y": 68,
+      "rx": 18,
+      "ry": 24,
+      "dx": -0.9,
+      "dy": 0.9,
+      "samples": [
+        0.015,
+        0.06,
+        0.3,
+        0.85,
+        1,
+        0.6,
+        0.2,
+        0
+      ]
+    }
+  ],
+  "productionEligible": false
+}

@@ -1,0 +1,98 @@
+{
+  "sessionId": "LUMA-ASSET-20",
+  "conceptId": "M085",
+  "sourceBase": "design/production-batches/monsters/batch09/M085/base-v2.png",
+  "sourceRig": "design/production-batches/luma-asset-20/M085/idle/rig.cjs",
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "parts": [
+    {
+      "x": 155,
+      "y": 133,
+      "rx": 22,
+      "ry": 15,
+      "dx": -1.5,
+      "dy": 1.2,
+      "name": "neck-bow",
+      "samples": [
+        0.01,
+        0.2,
+        0.62,
+        1,
+        0.83,
+        0.46,
+        0.14,
+        0
+      ]
+    },
+    {
+      "x": 149,
+      "y": 158,
+      "rx": 18,
+      "ry": 28,
+      "dx": 0,
+      "dy": 1.6,
+      "name": "chest-counterbalance",
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0
+      ]
+    },
+    {
+      "x": 183,
+      "y": 190,
+      "rx": 23,
+      "ry": 21,
+      "dx": -1.4,
+      "dy": 1.2,
+      "name": "tail-counterbalance",
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0
+      ]
+    }
+  ],
+  "eyes": [],
+  "eyeClosureSamples": [
+    0.01,
+    0.2,
+    0.62,
+    1,
+    0.83,
+    0.46,
+    0.14,
+    0
+  ],
+  "clip": {
+    "name": "REST",
+    "frames": 8,
+    "frameDuration": 350,
+    "loop": false
+  },
+  "framesDirectory": "design/production-batches/luma-asset-20/continuation/M085/rest/rigged/rest",
+  "intent": "Standing rest gesture for quadrupeds; face/central tentacle relaxation for M085. No sitting or gait claimed.",
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "gui": "DEFERRED_GUI",
+  "failureRecovery": false
+}

@@ -1,0 +1,114 @@
+{
+  "sourceBase": "design/production-batches/monsters/batch09/M082/base-v2.png",
+  "sourceBasePixelSha256": "4d61c9626c3aa80c3e95701fedb26487ab6158eff0f9170de3387a0bb0164d55",
+  "sourceRig": "design/production-batches/luma-asset-20/M085/idle/rig.cjs",
+  "frames": [
+    {
+      "file": "sleep_00.png",
+      "pixelSha256": "ea2ee6f1d97daae14d749d7ef0a0283da5a6c5855f9f1251e011314e2887b964"
+    },
+    {
+      "file": "sleep_01.png",
+      "pixelSha256": "2d0a517162c2384bc459148877ba46612ce8d7f52fcf0f9eaed027c3fd7f1b2e"
+    },
+    {
+      "file": "sleep_02.png",
+      "pixelSha256": "0615f540d639d9eb4eab15a08f66f15e2ce16630fe26b65a7a8e28400b5fabe6"
+    },
+    {
+      "file": "sleep_03.png",
+      "pixelSha256": "d05d84e8c446778bf8d26b8874e1880054e9f657d831e7a8408051e88faeb87b"
+    },
+    {
+      "file": "sleep_04.png",
+      "pixelSha256": "cca3867ad44b8377e752ef3d4c2a1de2ab3b427ac239da43f9a1d92133968bb6"
+    },
+    {
+      "file": "sleep_05.png",
+      "pixelSha256": "285d7110d0c75e106fb3f571235d471419f6500d30c97714f183f74d0933eae4"
+    },
+    {
+      "file": "sleep_06.png",
+      "pixelSha256": "65b64ab2c42d0d2a5447264114d210c5d37a83417e48063e4760c1a409e252d3"
+    },
+    {
+      "file": "sleep_07.png",
+      "pixelSha256": "4d61c9626c3aa80c3e95701fedb26487ab6158eff0f9170de3387a0bb0164d55"
+    }
+  ],
+  "wholeImageTransform": false,
+  "exactBaseReturnFrame": 7,
+  "eyelidMask": [
+    {
+      "x": 211,
+      "y": 75,
+      "rx": 4.8,
+      "ry": 3,
+      "angle": 0.75,
+      "skin": [
+        206,
+        78
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "x": 207,
+      "y": 78,
+      "rx": 25,
+      "ry": 23,
+      "dx": -1.3,
+      "dy": 2.25,
+      "name": "neck-bow",
+      "samples": [
+        0.01,
+        0.2,
+        0.62,
+        1,
+        0.83,
+        0.46,
+        0.14,
+        0
+      ]
+    },
+    {
+      "x": 183,
+      "y": 131,
+      "rx": 21,
+      "ry": 37,
+      "dx": -0.7,
+      "dy": 1.2,
+      "name": "chest-counterbalance",
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0
+      ]
+    },
+    {
+      "x": 66,
+      "y": 107,
+      "rx": 28,
+      "ry": 24,
+      "dx": 1.1,
+      "dy": 0.8,
+      "name": "tail-counterbalance",
+      "samples": [
+        0.02,
+        0.08,
+        0.3,
+        0.8,
+        1,
+        0.6,
+        0.22,
+        0
+      ]
+    }
+  ],
+  "productionEligible": false
+}

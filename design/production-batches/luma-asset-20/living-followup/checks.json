@@ -1,0 +1,151 @@
+{
+  "release": {
+    "status": "AUTOMATED_READY",
+    "manualGate": "MANUAL_QA_REQUIRED",
+    "head": "dc722be16b33d0f4fa502472e5fa01c26984f202",
+    "workingTreeDirty": true,
+    "checks": [
+      {
+        "name": "frontend-build",
+        "status": "PASS",
+        "seconds": 2.61
+      },
+      {
+        "name": "animation-content",
+        "status": "PASS",
+        "seconds": 7.33
+      },
+      {
+        "name": "presentation",
+        "status": "PASS",
+        "seconds": 10.9
+      },
+      {
+        "name": "asset-tests",
+        "status": "PASS",
+        "seconds": 420.62
+      },
+      {
+        "name": "optional-assets",
+        "status": "PASS",
+        "seconds": 14.43
+      },
+      {
+        "name": "strict-alpha",
+        "status": "PASS",
+        "seconds": 12.76
+      },
+      {
+        "name": "required-bases",
+        "status": "PASS",
+        "seconds": 14.26
+      },
+      {
+        "name": "automation-policy",
+        "status": "PASS",
+        "seconds": 3.56
+      },
+      {
+        "name": "release-static",
+        "status": "PASS",
+        "seconds": 0.07
+      },
+      {
+        "name": "tao-integrity",
+        "status": "PASS",
+        "seconds": 0.06
+      },
+      {
+        "name": "rust-fmt",
+        "status": "PASS",
+        "seconds": 0.19
+      },
+      {
+        "name": "rust-tests-native-link",
+        "status": "PASS",
+        "seconds": 4.44
+      },
+      {
+        "name": "rust-clippy",
+        "status": "PASS",
+        "seconds": 1.62
+      },
+      {
+        "name": "launch_audit",
+        "status": "PASS",
+        "seconds": 0.54
+      },
+      {
+        "name": "single_instance_audit",
+        "status": "PASS",
+        "seconds": 0.41
+      },
+      {
+        "name": "bootJar",
+        "status": "PASS",
+        "seconds": 4.28
+      },
+      {
+        "name": "server-fresh-persistence-failures",
+        "status": "PASS"
+      },
+      {
+        "name": "whitespace",
+        "status": "PASS",
+        "seconds": 0.04
+      }
+    ]
+  },
+  "assetTests": {
+    "passed": 231,
+    "seconds": 419.852
+  },
+  "regressionCounts": {
+    "animation-content": 236,
+    "presentation": 69
+  },
+  "ciSnapshot": {
+    "headRefOid": "dc722be16b33d0f4fa502472e5fa01c26984f202",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-27T03:42:36Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/jin-sungdae/game/actions/runs/40444841922/job/121993873721",
+        "name": "desktop-static",
+        "startedAt": "2026-10-27T03:34:49Z",
+        "status": "COMPLETED",
+        "workflowName": "LUMA PR Validation"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-27T03:37:04Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/jin-sungdae/game/actions/runs/40444841922/job/121993873941",
+        "name": "server-java",
+        "startedAt": "2026-10-27T03:34:49Z",
+        "status": "COMPLETED",
+        "workflowName": "LUMA PR Validation"
+      },
+      {
+        "__typename": "CheckRun",
+        "completedAt": "0001-01-01T00:00:00Z",
+        "conclusion": "",
+        "detailsUrl": "https://github.com/jin-sungdae/game/actions/runs/40444841922/job/121996250344",
+        "name": "macos-native",
+        "startedAt": "2026-10-27T03:42:38Z",
+        "status": "IN_PROGRESS",
+        "workflowName": "LUMA PR Validation"
+      }
+    ]
+  },
+  "candidateResults": {
+    "passedClips": 9,
+    "failedClips": 2,
+    "reason": "INTERACT duplicate BASE endpoints; failures preserved"
+  },
+  "scope": "Runtime release gate PASS does not approve unregistered candidates. Dirty state was report wording and boundary-check evidence only; no image/algorithm changes after candidate validation. Final evidence commit CI must be checked separately.",
+  "gui": "DEFERRED_GUI",
+  "productionApproved": 0,
+  "runtimeConnected": 0
+}

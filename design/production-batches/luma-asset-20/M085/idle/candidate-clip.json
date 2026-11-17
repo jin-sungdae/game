@@ -1,0 +1,81 @@
+{
+  "conceptId": "M085",
+  "species": null,
+  "evolutionStage": null,
+  "status": "CANDIDATE_ONLY",
+  "runtimeEnabled": false,
+  "productionEligible": false,
+  "sourceBase": "design/production-batches/monsters/batch09/M085/base-v2.png",
+  "canvas": {
+    "width": 256,
+    "height": 256
+  },
+  "anchor": {
+    "x": 0.5,
+    "y": 1
+  },
+  "sourceFacing": "RIGHT",
+  "clip": {
+    "name": "IDLE",
+    "frames": 8,
+    "frameDuration": 180,
+    "loop": true
+  },
+  "movableRect": [
+    53,
+    143,
+    209,
+    216
+  ],
+  "parts": [
+    {
+      "name": "left-tentacle-drift",
+      "x": 84,
+      "y": 178,
+      "rx": 25,
+      "ry": 25,
+      "dx": 0.8800000000000001,
+      "dy": -0.8800000000000001,
+      "samples": [
+        0.15,
+        0.42,
+        0.78,
+        1,
+        0.86,
+        0.55,
+        0.25,
+        0.08
+      ]
+    },
+    {
+      "name": "right-tentacle-counterflow",
+      "x": 183,
+      "y": 190,
+      "rx": 23,
+      "ry": 21,
+      "dx": -0.8800000000000001,
+      "dy": -0.7150000000000001,
+      "samples": [
+        0.8,
+        0.48,
+        0.2,
+        0.06,
+        0.15,
+        0.43,
+        0.78,
+        1
+      ]
+    }
+  ],
+  "artworkReview": "HUMAN_REVIEW_REQUIRED",
+  "timingScope": "Isolated loop candidate; no native activation",
+  "anatomyScope": "Hooded tentacle spirit: hood, face and lowest central tentacle fixed; left and right peripheral tentacles gesture in staggered response.",
+  "behaviorContract": "Stationary hooded spirit with counterphased peripheral tentacles. Hood, face and central tip fixed; no generic body breathing or whole-image hover.",
+  "alphaPolicy": "Existing local RGBA inverse sampler; no alpha cleanup or threshold changes",
+  "sessionId": "LUMA-ASSET-20",
+  "sourceRig": "design/production-batches/action-followup/M085/interact-pilot/rig-interact.cjs",
+  "gui": "DEFERRED_GUI",
+  "repairIterations": 3,
+  "repairLimit": 3,
+  "framesDirectory": "design/production-batches/luma-asset-20/M085/idle/rigged/idle"
+}

@@ -1,0 +1,17 @@
+{
+  "baseline": "c0fc7bfe8d8103de8d87c7d18705f986c526df3e",
+  "protectedFilesUnchanged": {
+    "AGENTS.md": true,
+    "design/creature-production-queue.json": true,
+    "tests/live/creature-review/catalog.json": true,
+    "src/entities/monsters.json": true,
+    "scripts/validate_assets.py": true
+  },
+  "main": "509269bd003e29aac74bfa6de12e1fe37e6b3bdd",
+  "stackedDependencies": "PR141/140/144/148 base main; no open PR base codex/assets-m081-m085 observed",
+  "speciesMapping": "M081-M085 productionSpeciesId null; personality/movement/speciesBehavior NOT_VERIFIED",
+  "skillContract": "SkillDefinitions.all() returns List.of(); no approved production skills",
+  "catalog": "Shared catalog does not include latest session candidates; Review import requested, not performed",
+  "runtimeManifest": "No approved productionSpeciesId mapping, no manifest assignment created",
+  "gui": "DEFERRED_GUI"
+}

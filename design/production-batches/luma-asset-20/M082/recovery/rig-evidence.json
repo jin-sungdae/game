@@ -1,0 +1,116 @@
+{
+  "reference": "design/production-batches/monsters/batch09/M082/base-v2.png",
+  "referenceApproval": "User authorized sequential candidate production and existing part rigging; final appearance/motion pending",
+  "parts": [
+    {
+      "name": "rear-hock-brace-release",
+      "x": 102,
+      "y": 188,
+      "rx": 22,
+      "ry": 19,
+      "dx": -1.2,
+      "dy": -1.6,
+      "samples": [
+        0.95,
+        0.72,
+        0.49,
+        0.3,
+        0.17,
+        0.08,
+        0.03,
+        0.01
+      ]
+    },
+    {
+      "name": "tail-tip-counterflex-release",
+      "x": 66,
+      "y": 107,
+      "rx": 28,
+      "ry": 24,
+      "dx": 1.4,
+      "dy": 1.2,
+      "samples": [
+        1,
+        0.84,
+        0.6,
+        0.36,
+        0.18,
+        0.08,
+        0.03,
+        0.01
+      ]
+    }
+  ],
+  "protectedRegions": "y>=210||y<=90||x<=28||x>=216",
+  "wholeImageTransform": false,
+  "silhouetteMotion": true,
+  "frames": [
+    {
+      "file": "recovery_00.png",
+      "pixelSha256": "dda943d6f9320efe8f887d623ed51456b61936c3cb1f268757dfce9bf74fb922",
+      "changedPixels": 1871,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 811,
+      "maxInverseDisplacementPixels": 1.8960940204546572
+    },
+    {
+      "file": "recovery_01.png",
+      "pixelSha256": "cf5f9ab63268182f42331c05c6fd0a93c6f435433833f771b9f2e1cef7326ab0",
+      "changedPixels": 1818,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 789,
+      "maxInverseDisplacementPixels": 1.5486996760906038
+    },
+    {
+      "file": "recovery_02.png",
+      "pixelSha256": "e3e78d4d2d71d47ebb8ffffc4dbe9d1afae0b3b49ed44ad3cf1f2f849561c2bf",
+      "changedPixels": 1740,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 724,
+      "maxInverseDisplacementPixels": 1.1057835361704107
+    },
+    {
+      "file": "recovery_03.png",
+      "pixelSha256": "1ed64d58b1333057fad5ec98da633ffb30b79f13bc3a03a73aeefff3aae260ca",
+      "changedPixels": 1624,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 621,
+      "maxInverseDisplacementPixels": 0.6625379246647983
+    },
+    {
+      "file": "recovery_04.png",
+      "pixelSha256": "841318d7bd309697a75179f728a91ad1f134c68c8b8943c30cee8d8edfa2b74d",
+      "changedPixels": 1425,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 481,
+      "maxInverseDisplacementPixels": 0.3397038589191539
+    },
+    {
+      "file": "recovery_05.png",
+      "pixelSha256": "6b7479ea2b288f82601b002313b60bac14ad61bf1719a9d20d6b78074bf169a4",
+      "changedPixels": 1133,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 356,
+      "maxInverseDisplacementPixels": 0.15996908928376002
+    },
+    {
+      "file": "recovery_06.png",
+      "pixelSha256": "8400f8278d965dc8f74ca92b433604186e356ceaef2a8fbe404233bd239e3c9c",
+      "changedPixels": 754,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 254,
+      "maxInverseDisplacementPixels": 0.05999836931107154
+    },
+    {
+      "file": "recovery_07.png",
+      "pixelSha256": "6c8d4cd48dd7acbe04929b07cb622de0005bdcdb0b759dd02a910bf8d78e46b0",
+      "changedPixels": 416,
+      "fixedRegionChanges": 0,
+      "alphaChangedPixels": 135,
+      "maxInverseDisplacementPixels": 0.01999993960070299
+    }
+  ],
+  "repairIterations": 3,
+  "repairScope": "LUMA-ASSET-20 independent first attempt; inherited repair3/3 preserved; no failure recovery",
+  "productionEligible": false
+}
