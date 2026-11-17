@@ -24853,10 +24853,11 @@
         },
         {
           "action": "BREATH",
-          "animationStatus": "ASSET_REQUIRED",
-          "frameCount": 0,
+          "animationStatus": "ANIMATION_IN_PROGRESS",
+          "frameCount": 8,
           "runtimeStatus": "BLOCKED",
-          "guiStatus": "GUI_NOT_VERIFIED"
+          "guiStatus": "GUI_NOT_VERIFIED",
+          "artworkReview": "HUMAN_REVIEW_REQUIRED"
         },
         {
           "action": "BLINK",
@@ -25036,6 +25037,87 @@
           ],
           "artwork": "HUMAN_REVIEW_REQUIRED",
           "runtimeEnabled": false
+        },
+        {
+          "action": "breath",
+          "directory": "/design/production-batches/luma-asset-20/M085/breath/rigged/breath",
+          "urls": [
+            "/design/production-batches/luma-asset-20/M085/breath/rigged/breath/breath_00.png",
+            "/design/production-batches/luma-asset-20/M085/breath/rigged/breath/breath_01.png",
+            "/design/production-batches/luma-asset-20/M085/breath/rigged/breath/breath_02.png",
+            "/design/production-batches/luma-asset-20/M085/breath/rigged/breath/breath_03.png",
+            "/design/production-batches/luma-asset-20/M085/breath/rigged/breath/breath_04.png",
+            "/design/production-batches/luma-asset-20/M085/breath/rigged/breath/breath_05.png",
+            "/design/production-batches/luma-asset-20/M085/breath/rigged/breath/breath_06.png",
+            "/design/production-batches/luma-asset-20/M085/breath/rigged/breath/breath_07.png"
+          ],
+          "frameCount": 8,
+          "frameDuration": 220,
+          "timingSource": "candidate contract",
+          "automated": "PASS",
+          "errors": [],
+          "bounds": [
+            [
+              63,
+              26,
+              212,
+              230
+            ],
+            [
+              63,
+              26,
+              212,
+              230
+            ],
+            [
+              63,
+              26,
+              212,
+              230
+            ],
+            [
+              63,
+              26,
+              212,
+              230
+            ],
+            [
+              63,
+              26,
+              212,
+              230
+            ],
+            [
+              63,
+              26,
+              212,
+              230
+            ],
+            [
+              63,
+              26,
+              212,
+              230
+            ],
+            [
+              63,
+              26,
+              212,
+              230
+            ]
+          ],
+          "pixelHashes": [
+            "20c3669de539d7a98a33621f630a93f98f6ef779c3bcc3a7a17c765436c14c60",
+            "8fc0c0170e4629c631e29fdf96f1eba38445fbfd3a5970436b5853e8c955a93b",
+            "4a9b7741ed66af6737ca4d986ac4bd4dd97dd9f94194806a0b82e3f2c6240091",
+            "3aa5a7fc0bbd759c3becd5eba636e5e175459bde50392126faa7a9b7d16470cc",
+            "ba5eb8bac35ae3b95be6a9b6c446a1f82f8407ad43081763def2b40cd40e44a0",
+            "ca43a1b0e552f6729d84e744a2e1a5bb63bbcf69cb1a647530f86b60f7ffb7da",
+            "669937d86f7e37197cea18b1a5332b847a7262bb35a75b4cefaa7edef7d37f5a",
+            "f6e2a21bb65147c7002250b220736d41a2a4259d0c7339e5d19ac9a337dec144"
+          ],
+          "artwork": "HUMAN_REVIEW_REQUIRED",
+          "runtimeEnabled": false
         }
       ],
       "coverage": {
@@ -25043,11 +25125,11 @@
         "recordedReadyActions": 0,
         "recordedRuntimeActions": 0,
         "manifestFileSetsPresent": 0,
-        "candidateActions": 1,
-        "automatedCandidateActions": 1,
-        "artworkReviewPendingActions": 1,
+        "candidateActions": 2,
+        "automatedCandidateActions": 2,
+        "artworkReviewPendingActions": 2,
         "validationFailedActions": 0,
-        "missingFrameSetActions": 14,
+        "missingFrameSetActions": 13,
         "guiPendingActions": 15,
         "completeActions": 0
       },
@@ -28402,11 +28484,11 @@
     "recordedReadyActions": 14,
     "recordedRuntimeActions": 12,
     "manifestFileSetsPresent": 12,
-    "candidateActions": 163,
-    "automatedCandidateActions": 157,
-    "artworkReviewPendingActions": 162,
+    "candidateActions": 164,
+    "automatedCandidateActions": 158,
+    "artworkReviewPendingActions": 163,
     "validationFailedActions": 42,
-    "missingFrameSetActions": 1572,
+    "missingFrameSetActions": 1571,
     "guiPendingActions": 1740,
     "completeActions": 0,
     "creatures": 115,
