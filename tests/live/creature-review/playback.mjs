@@ -10,6 +10,14 @@ const followupCandidates = new Map([
 
 // Review-only adapter. Recipes are bound to exact candidate paths, never Species alone.
 export function reviewPlayback(directory, count, frameDuration = 0) {
+  if (directory === '/design/production-batches/luma-asset-20/M085/breath/rigged/breath') {
+    if (count !== 8 || !Number.isFinite(frameDuration) || frameDuration <= 0) return null;
+    const frames = Array.from({ length: count }, (_, frame) => ({ frame, ms: frameDuration }));
+    return new ReviewPlayback({
+      initial: 'breath',
+      phases: { breath: { frames, next: 'breath' } },
+    }, sourceRoot + 'batch09/M085/base-v2.png');
+  }
   const basePath = directory.startsWith(followupRoot) ? followupCandidates.get(directory.slice(followupRoot.length)) : undefined;
   if (basePath) {
     if (count !== 8 || !Number.isFinite(frameDuration) || frameDuration <= 0) return null;

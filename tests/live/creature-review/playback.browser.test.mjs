@@ -36,5 +36,28 @@ try {
   await card.getByText(/one-shot · Frame 1\/8/).waitFor();
   await page.click('#pause');
  }
+ await page.selectOption('#creature','M085');
+ await page.selectOption('#animation','breath');
+ const breath=page.locator('article[data-action="breath"]');
+ const base=breath.locator('img[alt$=" BASE"]');
+ const sprite=breath.locator('img[alt$=" candidate"]');
+ await breath.getByText(/breath · Frame 8\/8/).waitFor();
+ await breath.getByText(/breath · Frame 1\/8/).waitFor();
+ await page.click('#pause');
+ await breath.getByRole('button',{name:'다시 재생',exact:true}).click();
+ await breath.getByText(/breath · Frame 1\/8 .*paused=true/).waitFor();
+ await page.click('#reduced');
+ await page.click('#pause');
+ await breath.getByText(/breath · Frame 1\/8 .*reduced=true/).waitFor();
+ await breath.getByRole('slider').fill('4');
+ await breath.getByText(/selected · Frame 5\/8/).waitFor();
+ await sprite.evaluate(img=>img.decode());
+ await base.evaluate(img=>img.decode());
+ assert.match(await sprite.getAttribute('src'),/breath_04\.png$/);
+ assert.match(await base.getAttribute('src'),/M085\/base-v2\.png$/);
+ assert.equal(await sprite.evaluate(img=>img.naturalWidth),256);
+ await breath.getByRole('button',{name:'자동 재생'}).click();
+ await page.click('#reduced');
+ await breath.getByText(/breath · Frame 2\/8/).waitFor();
  assert.deepEqual(errors,[]);console.log('PASS: common Review sleep, terminal, one-shot, pause, reduced and frame selection');
 }finally{await browser.close();}
